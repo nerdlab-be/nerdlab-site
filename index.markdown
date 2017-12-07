@@ -1,6 +1,6 @@
 ---
 title: Fablab in Gent
-position: 0
+position: 5
 layout: home
 section: home
 ---
