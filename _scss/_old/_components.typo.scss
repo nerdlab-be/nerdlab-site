@@ -5,10 +5,19 @@
 */
 
 .c-typo-lead {
-    @include ms1;
+    strong {
+        font-family: $alpha-font-family;
+        font-weight: $gamma-font-weight;
+    }
+
+    p {
+      @include ms1;
+    }
 
     @include mq(bp3) {
+      p {
         @include ms3;
+      }
     }
 }
 
