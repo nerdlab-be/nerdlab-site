@@ -39,22 +39,12 @@ exclude:
 - gulp*
 - ".jekyll-metadata"
 - ".*"
+url: http://nerdlab.be/
+google_analytics: UA-48840590-1
 author: Nerdlab
 description: Nerdlab is een open collectief van makers. We bouwen installaties en
   machines, organiseren evenementen en veroveren de wereld. Oh, en daarnaast hebben
-  we ook een fablab in Gent waar iedereen welkom is.
-url: http://nerdlab.be/
-labels:
-  copyright-year: 2017
-  copyright-author: Nerdlab
-social:
-  twitter_image: 
-  facebook_image: 
-  twitter_username: 
-  facebook_username: 
-  instagram_username: 
-  youtube_username: 
-google_analytics: 
+  we ook een lab in Gent waar iedereen welkom is.
 navigation:
 - title: Lab
   url: lab/
@@ -64,3 +54,23 @@ navigation:
   url: agenda/
 - title: Kom langs
   url: word-nerd/
+labels:
+  copyright-year: 2017
+  copyright-author: Nerdlab
+Info:
+  Naam: Nerdlab
+  Straat: Nieuwland
+  Nummer: 67
+  Postcode: 9000
+  Plaats: Gent
+  Email: info@nerdlab.be
+Social:
+  Titel: 'Volg ons:'
+  Twitter link: https://twitter.com/NerdLab9000
+  Facebook link: https://www.facebook.com/Nerdlab
+  Instagram link: https://www.instagram.com/nerdlab9000
+Newsletter:
+  Intro: Laat hier je mailadres achter zodat we je af en toe nieuws over Nerdlab kunnen
+    sturen.
+  Placeholder: naam@voorbeeld.com
+  Button label: Schrijf in

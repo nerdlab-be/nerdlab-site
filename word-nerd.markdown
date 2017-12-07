@@ -7,3 +7,4 @@ Intro text: Nerd worden doet geen pijn, is gratis en helemaal niet moeilijk. Kom
   Je bent verzekerd voor wat je doet en krijgt drankjes aan een prima prijs.
 layout: contact
 ---
+
