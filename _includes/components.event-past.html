@@ -1,0 +1,25 @@
+<article class="s-content o-media o-media--past">
+    <div class="o-grid o-grid--gutter o-flex-bp3 o-flex--wrap">
+        <div class="o-grid__item u-1-of-2-bp4">
+            <p class="u-mb-alpha u-text-align-right-bp4">
+                {{ item.date }}
+            </p>
+        </div>
+        <div class="o-grid__item u-1-of-2-bp4">
+            <h2 class="u-ms0">
+                {{ item.title }}
+            </h2>
+        </div>
+    </div>
+    {% if item.description != "" %}
+        <div class="o-grid o-grid--gutter o-flex-bp3 o-flex--wrap">
+            <div class="o-grid__item u-1-of-2-bp4 u-push-1-of-2-bp4">
+                <div class="s-content u-max-width-md">
+                    <p>
+                        {{ item.description }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</article>

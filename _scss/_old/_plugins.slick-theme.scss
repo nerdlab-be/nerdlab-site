@@ -1,0 +1,63 @@
+/*
+    Plugin: Slick theme
+    ---
+    Slick custom theme
+*/
+
+.p-slick-theme {
+    //position: relative;
+    //
+    //.slick-arrow {
+    //    position: absolute;
+    //    top: 0;
+    //    bottom: 0;
+    //    background-color: #fff;
+    //    text-indent: -9999px;
+    //    padding: 0;
+    //    border: 0;
+    //    width: 4rem;
+    //    z-index: 2;
+    //
+    //    @include mq(bp3,max) {
+    //        display: none !important;
+    //    }
+    //}
+    //
+    //.slick-list {
+    //    z-index: 1;
+    //}
+    //
+    //.slick-prev {
+    //    left: 0;
+    //}
+    //
+    //.slick-next {
+    //    right: 0;
+    //}
+}
+
+.p-slick-theme__img {
+    display: block;
+    width: calc(100vw - #{$columns-gutter * 2rem});
+    max-width: $grid-max-width;
+    cursor: pointer;
+    @include margin-right($columns-gutter);
+
+    @include mq(bp3) {
+        width: calc(100vw - #{$columns-gutter * 6rem});
+        @include margin-lr($columns-gutter / 2,$columns-gutter / 2);
+    }
+
+    @include mq(bp5) {
+        width: calc(100vw - #{$columns-gutter * 8rem});
+        @include margin-lr($columns-gutter,$columns-gutter);
+    }
+
+    &.slick-current {
+        cursor: default;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

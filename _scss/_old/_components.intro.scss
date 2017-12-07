@@ -1,0 +1,49 @@
+/*
+    Components: Intro
+    ---
+    Site intro
+*/
+
+.c-intro {
+    background-color: palette(color-beta);
+
+    @include mq(bp3) {
+        min-height: 20rem;
+        height: calc(90vh - 5rem);
+    }
+
+    @include mq(bp4) {
+        display: flex;
+        align-items: flex-end;
+        height: calc(90vh - 7.5rem);
+        background-size: 445px 766px;
+
+        .o-container {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+}
+
+.c-intro__text {
+    @include ms3;
+}
+
+.c-intro__img {
+    position: relative;
+
+    img {
+        position: relative;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(palette(color-alpha),.075);
+        display: block;
+    }
+}

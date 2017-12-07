@@ -1,6 +1,5 @@
 ---
-title: '404'
+title: Pagina niet gevonden
 permalink: "/404.html"
-position: 5
-layout: '404'
+layout: 404
 ---

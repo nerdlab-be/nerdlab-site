@@ -1,0 +1,21 @@
+/*
+    Components: Typo
+    ---
+    Special typographic cases
+*/
+
+.c-typo-lead {
+    @include ms1;
+
+    @include mq(bp3) {
+        @include ms3;
+    }
+}
+
+.c-typo-project-title {
+    font-weight: $alpha-font-weight;
+
+    @include mq(bp3) {
+        @include margin-bottom(2);
+    }
+}

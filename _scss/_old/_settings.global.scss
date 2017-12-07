@@ -1,0 +1,161 @@
+//
+//  Settings: Chopstick settings
+//  ---
+//  Your default settings
+//
+
+// ---
+// Typography
+// ---
+
+// manual modular scale font sizes
+// based on http://modularscale.com/scale/?px1=16&px2=18&ra1=1.333&ra2=0
+
+$ms-3                       : 11 !default;
+$ms-2                       : 12 !default;
+$ms-1                       : 14 !default;
+$ms0                        : 16 !default;
+$ms1                        : 18 !default;
+$ms2                        : 21 !default;
+$ms3                        : 23 !default;
+$ms4                        : 28 !default;
+$ms5                        : 31 !default;
+$ms6                        : 37 !default;
+$ms7                        : 42 !default;
+$ms8                        : 50 !default;
+$ms9                        : 56 !default;
+$ms10                       : 67 !default;
+$ms11                       : 75 !default;
+$ms12                       : 89 !default;
+$ms13                       : 100 !default;
+
+// Basic font settings
+
+//$alpha-font-family          : 'Maison Neue', sans-serif;
+//$beta-font-family           : 'Maison Neue Mono', monospace;
+
+//$alpha-font-family          : 'nimbus-sans', sans-serif;
+//$beta-font-family           : 'nimbus-sans', monospace;
+
+//$alpha-font-family          : 'acumin-pro', sans-serif;
+//$beta-font-family           : 'acumin-pro', monospace;
+
+//$alpha-font-family          : 'futura-pt', sans-serif;
+//$alpha-font-family          : 'FF DIN Pro', sans-serif;
+//$alpha-font-family          : 'Suisse', sans-serif;
+//$alpha-font-family          : 'Lab Grotesque', sans-serif;
+$alpha-font-family          : 'Graphik', sans-serif;
+//$alpha-font-family          : 'Cooper Hewitt', sans-serif;
+//$alpha-font-family          : 'nudista-web', sans-serif;
+//$alpha-font-family          : 'lores-12', sans-serif;
+$beta-font-family           : 'Suisse Mono', monospace;
+//$beta-font-family           : 'futura-pt', sans-serif;
+//$beta-font-family           : 'lores-21-serif', monospace;
+
+//$alpha-font-family          : 'nudista-web', sans-serif;
+//$beta-font-family           : 'purista-web', monospace;
+
+//$alpha-font-family          : 'Nitti Grotesk', sans-serif;
+//$beta-font-family           : 'Nitti', monospace;
+
+//$alpha-font-family          : 'Input Sans Narrow', sans-serif;
+//$beta-font-family           : 'Input Mono', monospace;
+
+$alpha-font-size            : $ms0;
+
+$alpha-font-weight          : 400;
+$beta-font-weight           : 600;
+$gamma-font-weight          : 700;
+
+$alpha-line-height          : 1.6;
+
+$alpha-leading              : 1.6;
+$beta-leading               : 2;
+
+// ---
+// UI
+// ---
+
+$radius                     : 0;
+$border-width               : 1px;
+$border-style               : solid;
+
+
+// ---
+// Z-indexes
+// ---
+
+$z-indexes: (
+    alpha                   : 1,
+    beta                    : 2,
+    gamma                   : 3,
+    delta                   : 4,
+    jota                    : 5
+) !default;
+
+// ---
+// Breakpoints
+// ---
+
+$breakpoints: (
+    bp1                     : 320/16*1em,
+    bp2                     : 480/16*1em,
+    bp3                     : 680/16*1em,
+    bp4                     : 960/16*1em,
+    bp5                     : 1140/16*1em,
+    bp6                     : 1440/16*1em,
+    bp7                     : 1681/16*1em
+) !default;
+
+// ---
+// Grid
+// ---
+
+// 1 times the $alpha-font-size. It's calculated in rem in _tools.spacing.scss
+$columns-gutter             : 1.6 !default;
+
+// Define the amount of columns in the grid
+$columns: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    10,
+    12
+) !default;
+
+// want to use flexbox?
+$flexbox: true !default;
+
+// ---
+// Increments
+// ---
+
+$increments: (
+    alpha                   : 0,
+    beta                    : .8,
+    gamma                   : 1.6,
+    delta                   : 2.4,
+    jota                    : 3.2
+) !default;
+
+// ---
+// Animations
+// ---
+
+$animation-duration-alpha   : .1s;
+$animation-duration-beta    : .2s;
+$animation-duration-gamma   : .3s;
+$animation-duration-delta   : .4s;
+$animation-easing-alpha     : $ease-in-out-sine;
+$animation-easing-beta      : $ease-in-out-back;
+
+// ---
+// Tools
+// ---
+
+$debug-mode                 : false !default; // toggles the debug mode
