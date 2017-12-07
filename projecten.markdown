@@ -1,6 +1,6 @@
 ---
 title: Projecten
-position: 3
+position: 2
 layout: projecten
 section: inventions
 ---

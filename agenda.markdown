@@ -1,6 +1,6 @@
 ---
 title: Agenda
-position: 2
+position: 3
 layout: agenda
 section: agenda
 ---
