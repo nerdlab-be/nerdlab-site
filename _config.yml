@@ -19,12 +19,12 @@ defaults:
     path: ''
     type: Agenda
   values:
-    title:
+    title: 
 - scope:
     path: ''
     type: CTA
   values:
-    title:
+    title: 
 permalink: pretty
 markdown: kramdown
 exclude:
@@ -48,13 +48,13 @@ labels:
   copyright-year: 2017
   copyright-author: Nerdlab
 social:
-  twitter_image:
-  facebook_image:
-  twitter_username:
-  facebook_username:
-  instagram_username:
-  youtube_username:
-google_analytics:
+  twitter_image: 
+  facebook_image: 
+  twitter_username: 
+  facebook_username: 
+  instagram_username: 
+  youtube_username: 
+google_analytics: 
 navigation:
 - title: Lab
   url: lab/

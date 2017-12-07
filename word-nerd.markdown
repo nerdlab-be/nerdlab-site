@@ -7,3 +7,4 @@ Intro text: Nerd worden doet geen pijn, is gratis en helemaal niet moeilijk. Kom
 Locatie text: "**Nerdlab** \nNieuwland 67 \n9000 Gent \n[info@nerdlab.be](mailto:info@nerdlab.be)"
 layout: contact
 ---
+
