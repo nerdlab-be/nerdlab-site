@@ -16,11 +16,7 @@ Projecten:
 - Hoge image: "/uploads/machien-2-square.jpg"
   Brede image: "/uploads/machien-7.jpg"
   Titel: Machien
-  Text: Honderden schakels om iets heel eenvoudig te doen, dat zijn Rube Goldberg
-    machines. Denk aan een domino blokjes die omvallen, maar dan met brandende koorden
-    en vliegende televisies. De heren van OK GO, verheven dit bouwen tot kunst en
-    we geven ze geen ongelijk. Machien doen we graag samen met heel veel mensen van
-    allerlei pluimage. Die ene keer was dat vooral samen met Het Entrepot.
+  Text: 
   Fotograaf: Kasper Vandermaesen Photography
 - Hoge image: "/uploads/byob-3.jpg"
   Brede image: "/uploads/byob-2.jpg"
