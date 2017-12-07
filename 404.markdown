@@ -1,7 +1,7 @@
 ---
 title: Pagina niet gevonden
 permalink: "/404.html"
-position: 1
+position: 2
 layout: 404
 ---
 

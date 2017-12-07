@@ -1,6 +1,6 @@
 ---
 title: Word nerd
-position: 4
+position: 5
 layout: word-nerd
 section: word-nerd
 ---
