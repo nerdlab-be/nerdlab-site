@@ -12,7 +12,7 @@ Projecten:
     LAN party’s is so 00’s. Multiplayer gaming speelt zich vooral online af en het gezeul met pc’s en schermen is niet echt een beeld om naar uit te kijken. LAN party’s zijn echter ook een bron van pure nostalgie: je favoriete games die je tien jaar (of langer) geleden met je vrienden dat ene weekend eens kon samen spelen.
 
     Enter de LAN-party flightcase! Een uniek concept waarbij een schare oude pc’s (denk Windows XP) netjes in houten – makkelijk vervoerbare – cases worden gestopt en samen in een grote flightcase de magie van de LAN parties van weleer zal doen herleven! Momenteel zitten we aan ons eerste prototype te werken, maar binnenkort kunnen we daadwerkelijk gaan gamen. Kom gerust eenhandje toesteken!
-  Fotograaf:
+  Fotograaf: 
 - Hoge image: "/uploads/machien-2-square.jpg"
   Brede image: "/uploads/machien-7.jpg"
   Titel: Machien
@@ -36,7 +36,7 @@ Projecten:
     bleven. We bouwden een rugzak (naar het protonpack van ghostbusters) met een gps-tracker
     en gprs module om altijd haar locatie doorgaf. Op die manier lifte ‘EkkO’ doorheen
     Europa waar ze door verschillende organisaties werd ontvangen.
-  Fotograaf:
+  Fotograaf: 
 - Hoge image: "/uploads/game-o-tron-1-square.jpg"
   Brede image: "/uploads/game-o-tron-2.jpg"
   Titel: Game-o-tron 9000
@@ -45,7 +45,8 @@ Projecten:
     gegeven en kreeg ze een flatscreen en stevige processor in de plaats. Ze heeft
     nog nood aan nieuwe knoppen, een likje verf en een beamer die ook de omgeving
     van sfeer voorziet.
-  Fotograaf:
+  Fotograaf: 
 CTA: Contact
 layout: projecten
 ---
+
