@@ -40,11 +40,7 @@ Projecten:
 - Hoge image: "/uploads/game-o-tron-1-square.jpg"
   Brede image: "/uploads/game-o-tron-2.jpg"
   Titel: Game-o-tron 9000
-  Text: Deze schoonheid was in de jaren 90 gastvrouw voor een NEO GEO met de arcade
-    versie van Die Hard. Na een mooie carriere heeft scherm én moederbord de geest
-    gegeven en kreeg ze een flatscreen en stevige processor in de plaats. Ze heeft
-    nog nood aan nieuwe knoppen, een likje verf en een beamer die ook de omgeving
-    van sfeer voorziet.
+  Text: 
   Fotograaf: 
 CTA: Contact
 layout: projecten
