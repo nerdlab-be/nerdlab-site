@@ -19,7 +19,12 @@ layout: default
     <div id="map" class="c-map gmap"></div>
     <div class="c-map-content">
         <div class="u-max-width-md s-content">
-            {{ page['Locatie text'] | markdownify }}
+            <p class="u-max-width-md s-content">
+              <strong class="c-nerdlab u-color-neutral-xxxx-dark">{{ page.Locatie.Titel }}</strong> <br>
+              {{ page.Locatie.Straat }} {{ page.Locatie.Nummer }} <br>
+              {{ page.Locatie.Postcode }} {{ page.Locatie.Plaats }} <br>
+              <a class="c-footer__link" href="mailto:{{ page.Locatie.Email }}">{{ page.Locatie.Email }}</a>
+          </p>
         </div>
     </div>
 </div>

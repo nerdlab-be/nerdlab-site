@@ -12,6 +12,5 @@ Locatie:
   Postcode: 9000
   Plaats: Gent
   Email: info@nerdlab.be
-layout: word-nerd
+layout: contact
 ---
-
