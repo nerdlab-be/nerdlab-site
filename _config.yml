@@ -5,6 +5,9 @@ collections:
   agenda:
     title: Agenda
     output: false
+  cta:
+    title: CTA
+    output: true
   posts:
     title: Posts
     output: true
