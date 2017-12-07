@@ -5,6 +5,9 @@ collections:
   agenda:
     title: Agenda
     output: false
+  posts:
+    title: Posts
+    output: true
   uploads:
     title: Uploads
     output: true
@@ -13,7 +16,7 @@ defaults:
     path: ''
     type: Agenda
   values:
-    title:
+    title: 
 permalink: pretty
 markdown: kramdown
 exclude:
@@ -29,19 +32,21 @@ exclude:
 - ".jekyll-metadata"
 - ".*"
 author: Nerdlab
-description: 'Nerdlab is een open collectief van makers. We bouwen installaties en machines, organiseren evenementen en veroveren de wereld. Oh, en daarnaast hebben we ook een fablab in Gent waar iedereen welkom is.'
+description: Nerdlab is een open collectief van makers. We bouwen installaties en
+  machines, organiseren evenementen en veroveren de wereld. Oh, en daarnaast hebben
+  we ook een fablab in Gent waar iedereen welkom is.
 url: http://nerdlab.be/
 labels:
   copyright-year: 2017
   copyright-author: Nerdlab
 social:
-  twitter_image:
-  facebook_image:
-  twitter_username:
-  facebook_username:
-  instagram_username:
-  youtube_username:
-google_analytics:
+  twitter_image: 
+  facebook_image: 
+  twitter_username: 
+  facebook_username: 
+  instagram_username: 
+  youtube_username: 
+google_analytics: 
 navigation:
 - title: Page
   url: page/
