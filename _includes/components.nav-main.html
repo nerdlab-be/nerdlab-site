@@ -1,16 +1,9 @@
 <nav class="c-nav-main js-nav">
     <ul class="o-list c-nav-main__list">
-        <li class="c-nav-main__item {% if page.url contains "fablab" %}is-selected{% endif %}">
-            <a href="{{site.baseurl}}/fablab" class="c-nav-main__link js-nav-trigger-up">Fablab</a>
+        {% for item in site.navigation %}
+        <li class="c-nav-main__item {% if page.url contains item.url %} is-selected{% endif %}">
+          <a href="/{{ item.url }}" class="c-nav-main__link js-nav-trigger-up">{{ item.title | capitalize }}</a>
         </li>
-        <li class="c-nav-main__item {% if page.url contains "projecten" %}is-selected{% endif %}">
-            <a href="{{site.baseurl}}/projecten" class="c-nav-main__link js-nav-trigger-up">Projecten</a>
-        </li>
-        <li class="c-nav-main__item {% if page.url contains "agenda" %}is-selected{% endif %}">
-            <a href="{{site.baseurl}}/agenda" class="c-nav-main__link js-nav-trigger-up">Agenda</a>
-        </li>
-        <li class="c-nav-main__item {% if page.url contains "word-nerd" %}is-selected{% endif %}">
-            <a href="{{site.baseurl}}/word-nerd" class="c-nav-main__link c-nav-main__link--button js-nav-trigger-up">Kom langs</a>
-        </li>
+        {% endfor %}
     </ul>
 </nav>

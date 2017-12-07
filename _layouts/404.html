@@ -6,11 +6,8 @@ layout: error
     <div class="o-container">
 
             <div class="s-content u-max-width-sm u-text-align-center u-align-horizontal">
-                <h1 class="u-color-beta-base u-mb-beta">404</h1>
-                <p>
-                    Oei, er is precies iets misgelopen. De pagina die je zocht bestaat niet.
-                    Neem anders eens een kijkje op onze <a href="/">homepage</a>.
-                </p>
+                <h1 class="u-color-beta-base u-mb-beta">{{ page['Error title'] }}</h1>
+                {{ page['Intro text'] | markdownify }}
             </div>
 
     </div>

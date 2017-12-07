@@ -2,24 +2,24 @@
 {% for item in cta %}
   {% if item.title == page.CTA %}
     <div class="c-row c-row--md c-row--cta u-z-delta">
-        <div class="c-background-image c-background-image--fallback" style="background-image: url('{{ site.baseurl }}/uploads/home-3.jpg');"></div>
+        <div class="c-background-image c-background-image--fallback" style="background-image: url('{{ site.baseurl }}{{ item.Video['Poster asset'] }}');"></div>
         <video class="c-background-video" autoplay loop muted preload="true">
-            <source src="{{ site.baseurl }}/uploads/nerdlab.webm" type="video/webm">
-            <source src="{{ site.baseurl }}/uploads/nerdlab.mp4" type="video/mp4">
+            <source src="{{ site.baseurl }}{{ item.Video['webm asset'] }}" type="video/webm">
+            <source src="{{ site.baseurl }}{{ item.Video['mp4 asset'] }}" type="video/mp4">
         </video>
         <p class="c-background-video__meta">
-            Video: LUCA School of Arts - campus C-mine
+            {{ item.Meta }}
         </p>
         <div class="o-container">
             <div class="o-grid o-grid--gutter o-flex">
                 <div class="o-grid__item u-1-of-2-bp6">
                     <div class="u-max-width-md">
-                        <p class="c-cta__text c-typo-lead u-color-neutral-xxxxx-light">
-                            Zin om samen met ons een drone te maken die je naar school of werk vliegt? Of gewoon eens een pint te komen drinken in ons Nerdlab?
-                        </p>
+                        <div class="c-cta-lead u-color-neutral-xxxxx-light">
+                            {{ item.Text | markdownify }}
+                        </div>
                         <p>
-                            <a href="/word-nerd" class="c-button c-button--lg c-button--cta">
-                                Kom eens langs
+                            <a href="{{ item.Button.Link }}" class="c-button c-button--lg c-button--cta">
+                                {{ item.Button.Label }}
                             </a>
                         </p>
                     </div>

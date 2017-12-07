@@ -62,11 +62,6 @@
         text-decoration: none;
         @include text-dimensions($alpha-font-size,1,0,1,1);
 
-        @include mq(bp3) {
-            //@include padding-tb($alpha-leading,$alpha-leading);
-            @include padding-tb(1,1);
-            //@include padding-tb($alpha-leading/1.5,$alpha-leading/1.5);
-        }
 
         &,
         &:visited {
@@ -84,43 +79,30 @@
 
         .is-exiting & {
             color: palette(color-neutral,xxx-dark);
-            //color: palette(color-neutral,light);
 
             &:focus {
                 color: palette(color-beta);
-                //color: palette(color-neutral,xxx-dark);
             }
         }
-    }
 
-    .c-nav-main__link--button {
+
+
+        @include mq(bp3) {
+            @include padding-tb(1,1);
+        }
 
         @include mq(bp4) {
-            border: 1px solid palette(color-neutral,xx-light);
-            //border: 1px solid palette(color-alpha,xx-light);
-            border-radius: 4rem;
-            @include padding-lr(1.75,1.75);
-
-            &,
-            &:visited {
-                //color: palette(color-alpha);
+            .c-nav-main__item:last-child & {
+              border: 1px solid palette(color-neutral,xx-light);
+              border-radius: 4rem;
+              @include padding-lr(1.75,1.75);
             }
 
-            &:hover,
-            &:focus,
-            .is-selected & {
-                //color: palette(color-beta);
-                //border-color: palette(color-beta,xx-light);
-            }
-
-            .is-exiting & {
+            .is-exiting .c-nav-main__item:last-child & {
                 border-color: palette(color-neutral,xx-light);
                 color: palette(color-neutral,xxx-dark);
-                //color: palette(color-alpha);
-                //border: 1px solid palette(color-alpha,xx-light);
 
                 &:focus {
-                    //border-color: palette(color-beta,xx-light);
                     color: palette(color-beta);
                 }
             }

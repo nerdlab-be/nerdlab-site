@@ -21,6 +21,23 @@
     }
 }
 
+.c-cta-lead {
+    strong {
+        font-family: $alpha-font-family;
+        font-weight: $gamma-font-weight;
+    }
+
+    p {
+      @include ms1;
+    }
+
+    @include mq(bp3) {
+      p {
+        @include ms3;
+      }
+    }
+}
+
 .c-typo-project-title {
     font-weight: $alpha-font-weight;
 

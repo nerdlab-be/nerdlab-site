@@ -56,5 +56,11 @@ social:
   youtube_username:
 google_analytics:
 navigation:
-- title: Page
-  url: page/
+- title: Lab
+  url: lab/
+- title: Projecten
+  url: projecten/
+- title: Agenda
+  url: agenda/
+- title: Kom langs
+  url: word-nerd/

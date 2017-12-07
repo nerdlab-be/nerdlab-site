@@ -7,14 +7,16 @@ layout: default
         <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
             <div class="o-grid__item u-1-of-2-bp6">
                 <div class="s-content u-max-width-md">
-                    <p class="c-typo-lead">
-                        We bouwen samen dingen in <strong class="c-nerdlab">Nerdlab</strong>. Fijne dingen. Uitdagende dingen. Spring gerust binnen, want jouw hulp kunnen we ongetwijfeld gebruiken! Al was het maar als proefkonijn.
-                    </p>
+                    <div class="c-typo-lead">
+                        {{ page['Intro text'] | markdownify }}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+{% for item in page.Projecten %}
 <div class="c-row c-row--md c-row--border-top u-bgcolor-neutral-xxxxx-light">
     <div class="o-container">
         <div class="o-grid o-grid--gutter o-flex o-flex--wrap o-flex--horizontal-rev">
@@ -22,29 +24,33 @@ layout: default
                 <div class="o-flex o-flex--wrap o-flex--vertical-rev-bp4">
                     <div class="s-content u-max-width-md u-mb-gamma-bp3 u-mb-alpha-bp4">
                         <h2>
-                            Retro LAN-party flightcases
+                            {{ item.Titel }}
                         </h2>
-                        <p>
-                            LAN party’s is so 00’s. Multiplayer gaming speelt zich vooral online af en het gezeul met pc’s en schermen is niet echt een beeld om naar uit te kijken. LAN party’s zijn echter ook een bron van pure nostalgie: je favoriete games die je tien jaar (of langer) geleden met je vrienden dat ene weekendeens kon samen spelen.
-                        </p>
-                        <p>
-                            Enter de LAN-party flightcase! Een uniek concept waarbij een schare oude pc’s (denk Windows XP) netjes in houten – makkelijk vervoerbare – cases worden gestopt en samen in een grote flightcase de magie van de LAN parties van weleer zal doen herleven! Momenteel zitten we aan ons eerste prototype te werken, maar binnenkort kunnen we daadwerkelijk gaan gamen. Kom gerust eenhandje toesteken!
-                        </p>
+                        {{ item.Text | markdownify }}
+
                     </div>
                     <p class="u-mb-jota-bp3">
-                        <img src="{{ site.baseurl }}/uploads/lan-party-2.jpg" alt="">
+                        <img src="{{ site.baseurl }}{{ item['Brede image'] }}" alt="">
                     </p>
                 </div>
             </div>
             <div class="o-grid__item u-1-of-2-bp4">
                 <p>
-                    <img src="{{ site.baseurl }}/uploads/lan-party-1.jpg" alt="">
+                    <img src="{{ site.baseurl }}{{ item['Hoge image'] }}" alt="">
                 </p>
+                {% if item.Fotograaf %}
+                <p class="u-ms-2 u-color-neutral-base">
+                    © {{ item.Fotograaf }}
+                </p>
+                {% endif %}
             </div>
         </div>
     </div>
 </div>
-<div class="c-row c-row--md c-row--border-top u-bgcolor-neutral-xxxxx-light">
+{% endfor %}
+
+
+<!-- <div class="c-row c-row--md c-row--border-top u-bgcolor-neutral-xxxxx-light">
     <div class="o-container">
         <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
             <div class="o-grid__item u-1-of-2-bp4">
@@ -153,5 +159,6 @@ layout: default
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
 {% include components.cta.html %}
