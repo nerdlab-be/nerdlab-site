@@ -1,5 +1,5 @@
 ---
-title: Fablab in Gent
+title: Fablab
 layout: fablab
 section: fablab
 ---

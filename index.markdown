@@ -1,5 +1,5 @@
 ---
-title: Fablab in Gent
+title: Nerdlab
 position: 0
 layout: home
 section: home
