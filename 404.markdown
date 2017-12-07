@@ -2,6 +2,8 @@
 title: Pagina niet gevonden
 permalink: "/404.html"
 position: 5
+Intro text: Oei, er is precies iets misgelopen. De pagina die je zocht bestaat niet.
+  Neem anders eens een kijkje op onze [homepage](/).
 layout: 404
 ---
 
