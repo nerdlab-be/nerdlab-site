@@ -34,7 +34,7 @@ Projecten:
   Titel: EKKO
   Text: Een Europees project waarbij de verschillende partners gewoon in hun hoofdkwartier
     bleven. We bouwden een rugzak (naar het protonpack van ghostbusters) met een gps-tracker
-    en gprs module om altijd haar locatie doorgaf. Op die manier lifte 'EkkO' doorheen
+    en gprs module om altijd haar locatie doorgaf. Op die manier lifte ‘EkkO’ doorheen
     Europa waar ze door verschillende organisaties werd ontvangen.
   Fotograaf: 
 - Hoge image: "/uploads/game-o-tron-1-square.jpg"
