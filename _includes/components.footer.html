@@ -6,18 +6,18 @@
                     <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
                         <div class="o-grid__item u-1-of-2-bp2">
                             <p class="u-max-width-md s-content">
-                                <strong class="c-nerdlab u-color-neutral-xxxx-dark">Nerdlab</strong> <br>
-                                Nieuwland 67 <br>
-                                9000 Gent <br>
-                                <a class="c-footer__link" href="mailto:info@nerdlab.be">info@nerdlab.be</a>
+                                <strong class="c-nerdlab u-color-neutral-xxxx-dark">{{ site.Info.Naam }}</strong> <br>
+                                {{ site.Info.Straat }} {{ site.Info.Nummer }} <br>
+                                {{ site.Info.Postcode }} {{ site.Info.Plaats }} <br>
+                                <a class="c-footer__link" href="mailto:{{ site.Info.Email }}">{{ site.Info.Email }}</a>
                             </p>
                         </div>
                         <div class="o-grid__item u-1-of-2-bp2">
-                            <p class="u-mb-alpha">Volg ons</p>
+                            <p class="u-mb-alpha">{{ site.Social.Titel }}</p>
                             <ul class="o-list c-footer-list s-content">
-                                <li><a class="c-footer__link" href="https://twitter.com/NerdLab9000">Twitter</a></li>
-                                <li><a class="c-footer__link" href="https://www.facebook.com/Nerdlab">Facebook</a></li>
-                                <li><a class="c-footer__link" href="https://www.instagram.com/nerdlab9000">Instagram</a></li>
+                                <li><a class="c-footer__link" href="{{ site.info['Twitter link'] }}">Twitter</a></li>
+                                <li><a class="c-footer__link" href="{{ site.info['Facebook link'] }}">Facebook</a></li>
+                                <li><a class="c-footer__link" href="{{ site.info['Instagram link'] }}">Instagram</a></li>
                             </ul>
                         </div>
                     </div>
@@ -26,8 +26,7 @@
             <div class="o-grid__item u-1-of-2-bp4">
                 <div class="c-footer__subscribe u-max-width-md">
                     <p class="c-subscribe-text">
-                        Laat hier je mailadres achter zodat we je af en toe nieuws over Nerdlab kunnen sturen.
-                        <!-- (dat doen we niet zo heel vaak en we geven je mailadres ook niet door aan onze buurvrouw of de baas van Google). -->
+                        {{ site.Newsletter.Intro }}
                     </p>
                     <div class="u-mb-gamma">
                         {% include components.subscribe-form.html %}
