@@ -21,7 +21,7 @@ Body:
     In **Nerdlab** maken we dingen. Gameconsoles, soundsystems, (3D) printers, zandbakken of andere machines. We vinden nieuwe dingen uit door oude dingen kapot te maken, te kijken wat er in zit en ermee aan de slag te gaan. We zoeken uit hoe iets werkt en we leren het elkaar. Daarvoor hebben we boren, zagen, electronica, drank en een hele berg rommel. Die uitvindingen zijn niet altijd nuttig (meestal zelfs niet). En dat is niet erg, want uit dat proces ontstaat kennis, inspiratie en een netwerk van getalenteerde mensen.
 
     We zijn niet de eerste die dit doen. Niel Gershenfield bedacht de term Fablab voor een plaats waar mensen terechtkunnen voor tools en kennis om hun ideeën te materialiseren. Naast zagen, boren, weerstanden en condensatoren kan je ook aan de slag met onze 3D printer, CNC of één van onze arduino’s. We blijven gestaag bouwen aan het machinepark. Naast materiaal zijn er specialisten ter plaatse die met je mee op zoek gaan of je basiskennis aanscherpen tijdens een workshop.
-CTA: Contact home
+CTA: Contact
 layout: fablab
 ---
 
