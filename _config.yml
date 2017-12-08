@@ -17,7 +17,7 @@ collections:
 defaults:
 - scope:
     path: ''
-    type: Agenda
+    type: agenda
   values:
     when: ''
     link: ''
