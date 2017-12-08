@@ -46,7 +46,7 @@ description: Nerdlab is een open collectief van makers. We bouwen installaties e
   machines, organiseren evenementen en veroveren de wereld. Oh, en daarnaast hebben
   we ook een lab in Gent waar iedereen welkom is.
 navigation:
-- title: Lab
+- title: Het Lab
   url: lab/
 - title: Projecten
   url: projecten/
