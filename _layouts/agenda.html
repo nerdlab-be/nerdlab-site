@@ -6,7 +6,9 @@ layout: default
     <div class="o-container">
         {% assign sorted_agenda = site.agenda | sort:"position" %}
         {% for item in sorted_agenda %}
+            {% unless item.published == false %}
             {% include components.event.html %}
+            {% endunless %}
         {% endfor %}
     </div>
 </div>

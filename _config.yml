@@ -19,12 +19,21 @@ defaults:
     path: ''
     type: Agenda
   values:
-    title: 
+    when: ''
+    link: ''
 - scope:
     path: ''
     type: CTA
   values:
-    title: 
+    Text: ''
+    Meta: ''
+    Button:
+      Label: ''
+      Link: ''
+    Video:
+      Poster asset: ''
+      mp4 asset: ''
+      webm asset: ''
 permalink: pretty
 markdown: kramdown
 exclude:
