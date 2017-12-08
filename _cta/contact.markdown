@@ -1,8 +1,8 @@
 ---
 title: Contact
 date: 2017-12-07 14:24:00 Z
-Text: Zin om samen met ons een drone te maken die je naar school of werk vliegt? Of
-  gewoon eens een pint te komen drinken in ons Nerdlab?
+Text: Heb je een project waar je vast mee zit of zin om samen met ons mee in een project
+  te duiken?
 Meta: 'Video: LUCA School of Arts - campus C-mine'
 Button:
   Label: Kom eens langs
