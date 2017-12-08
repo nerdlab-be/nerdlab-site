@@ -23,7 +23,7 @@ defaults:
     link: ''
 - scope:
     path: ''
-    type: CTA
+    type: cta
   values:
     Text: ''
     Meta: ''
