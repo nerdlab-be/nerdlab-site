@@ -1,7 +1,0 @@
----
-title: hidden
-date: 2017-12-08 12:58:00 Z
-published: false
----
-
-thing
