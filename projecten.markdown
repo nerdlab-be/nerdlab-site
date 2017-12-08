@@ -27,8 +27,8 @@ Projecten:
     onder de vleugels van [Digipolis](https://www.digipolis.be/) bieden we een traject
     aan waar technische-, sociale- en creatieve vaardigheden centraal staan. '
   Fotograaf: 
-- Hoge image: "/uploads/byob-3.jpg"
-  Brede image: "/uploads/byob-2.jpg"
+- Hoge image: "/uploads/IMG_0692_web%20(c)%20Michiel%20Devijver.jpg"
+  Brede image: "/uploads/IMG_0622_web%20(c)%20Michiel%20Devijver.jpg"
   Titel: BYOB
   Text: Bring Your Own Beamer is een internationaal kunstconcept waar digitale makers
     hun werk komen presenteren via hun zelf meegebrachte beamer. Wij organiseren jaarlijks
