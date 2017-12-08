@@ -68,7 +68,7 @@ Projecten:
     nog nood aan nieuwe knoppen, een likje verf en een beamer die ook de omgeving
     van sfeer voorziet.
   Fotograaf: 
-CTA: Contact
+CTA: 
 layout: projecten
 ---
 
