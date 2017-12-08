@@ -48,7 +48,7 @@ description: Nerdlab is een open collectief van makers. We bouwen installaties e
 navigation:
 - title: Agenda
   url: agenda/
-- title: Het Lab
+- title: Ons Lab
   url: lab/
 - title: Dit doen we
   url: projecten/
