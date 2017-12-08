@@ -1,7 +1,7 @@
 ---
 title: Het Lab
 position: 1
-Intro text: "**Nerdlab** is een fablab, een plek met machines en kennis. Een plaats
+Intro text: "**Nerdlab** is een makerslab, een plek met machines en kennis. Een plaats
   voor makers, een omgeving om je wildste ideeën te bouwen."
 Carousel Images:
 - Image: "/uploads/fablab-1.jpg"
