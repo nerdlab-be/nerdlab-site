@@ -52,8 +52,6 @@ navigation:
   url: lab/
 - title: Dit doen we
   url: projecten/
-- title: Zelf een lab starten?
-  url: zelf-lab-opstarten/
 - title: Contact
   url: word-nerd/
 labels:
