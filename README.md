@@ -1,32 +1,27 @@
-# Nerdlab website
+<p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
 
-## How to use
+## About Craft CMS
 
-### Dependencies
-This project needs the following tools to be installed properly:
-- [Ruby](https://www.ruby-lang.org/en/) (v2.3.0) or [RVM](https://rvm.io/)
-- [Bundler](https://bundler.io/)
-- [Node.js](https://nodejs.org/en/) (v7.2.1) or [NVM](https://github.com/creationix/nvm)
-- [Gulp](http://gulpjs.com/)
+Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike. It is optimized for bespoke web and application development, offering developers a clean slate to build out exactly what they want, rather than wrestling with a theme.
 
-#### Install
-To install run `bundle install && npm install`
+Learn more about Craft at [craftcms.com](https://craftcms.com).
 
-#### Run
-There are several options to run or build the site.
+## How to Install Craft 3
 
-##### Using the Gulp CLI
-To build a development version of the site run `gulp`.
+See the Craft 3 documentation for [installation](https://github.com/craftcms/docs/blob/master/en/installation.md) and [updating](https://github.com/craftcms/docs/blob/master/en/upgrade.md) instructions.
 
-To run a [browser-sync](https://www.browsersync.io/) server and watch changes run `gulp watch`.
+## Resources
 
-To build a production ready version of the site run `gulp build`.
+#### Official Resources
+- [Craft 3 Documentation](https://github.com/craftcms/docs)
+- [Craft 3 Class Reference](https://docs.craftcms.com/api/v3/)
+- [Craft 3 Plugins](https://plugins.craftcms.com)
+- [Demo site](https://demo.craftcms.com/)
+- [Craft Slack](https://craftcms.com/community#slack)
+- [Craft CMS Stack Exchange](http://craftcms.stackexchange.com/)
 
-## Need help
-This website uses Jekyll to generate the html and process the `.scss` files. More information about these tools can be found on the following sites:
-- [Jekyll documentation](http://jekyllrb.com/docs/home/)
-- [Gulp documentation](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
-
-## Credits
-- [InuitCSS](https://github.com/inuitcss/inuitcss) by [@csswizardry](https://twitter.com/csswizardry).
-- [Chopstick boilerplate](https://github.com/getchopstick/chopstick-boilerplate/).
+#### Community Resources
+- [Mijingo](https://mijingo.com/craft) – Video courses and other learning resources
+- [Envato Tuts+](https://webdesign.tutsplus.com/categories/craft-cms/courses) – Video courses
+- [Straight Up Craft](http://straightupcraft.com/) – Articles, tutorials, and more
+- [pluginfactory.io](https://pluginfactory.io/) – Craft plugin scaffold generator

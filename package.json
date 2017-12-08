@@ -1,18 +1,9 @@
 {
-  "name": "nerdlab.be",
+  "name": "craft-boilerplate",
   "version": "0.1.0",
-  "description": "Nerdlab website using jekyll, inuitcss and siteleaf",
+  "private": true,
   "main": "gulpfile.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Dietr/inuit-boilerplate.git"
-  },
-  "author": "",
-  "license": "Unlicense",
-  "bugs": {
-    "url": "https://github.com/Dietr/inuit-boilerplate/issues"
-  },
-  "homepage": "https://github.com/Dietr/inuit-boilerplate#readme",
+  "author": "Dieter Peirs",
   "devDependencies": {
     "autoprefixer": "^6.5.0",
     "babel-core": "^6.17.0",
@@ -37,13 +28,13 @@
     "run-sequence": "^1.2.2"
   },
   "dependencies": {
-    "fg-loadcss": "^1.2.0",
-    "fg-loadjs": "^1.0.0",
+    "animejs": "^2.2.0",
     "inuitcss": "^6.0.0-beta.4",
     "inuitcss-plugin-flexlayout": "^1.0.2",
     "inuitcss-plugin-responsive-wrapper": "^1.0.1",
     "inuitcss-plugin-row": "^1.0.2",
-    "jquery": "^3.1.1",
+    "jquery": ">=1.11.0",
+    "jquery-match-height": "^0.7.2",
     "lazysizes": "^3.0.0-rc2",
     "picturefill": "^3.0.2",
     "sass-mq": "^3.3.1",

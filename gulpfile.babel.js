@@ -33,22 +33,19 @@ import del from 'del';
 
 
 // Config
+const reload = browserSync.reload;
 const config = {
   browsersync: {
-    server: {
-      baseDir: '_site',
-      reloadDelay: 2000,
-      debounce: 200,
-      notify: true,
-      ghostMode: {
-        clicks: true,
-        location: true,
-        forms: true,
-        scroll: false
-      }
+    proxy: "nerdlab-site.dev",
+    baseDir: '_site',
+    notify: true,
+    ghostMode: {
+      clicks: true,
+      location: true,
+      forms: true,
+      scroll: false
     }
   },
-  buildmessage: '<span style="color: rgba(#fff,.3)">Building</span> jekyll',
   symbols: {
     title: '%f symbol',
     svgClassname: 'c-symbol-set',
@@ -76,62 +73,33 @@ const config = {
     mediaMerging: false,
     keepSpecialComments: 0
   },
-  criticalcss: {
-    base: './',
-    src: '_site/index.html',
-    css: 'css/screen.css',
-    dest: '_includes/atom.critical.css',
-    dimensions: [{
-      height: 736,
-      width: 414
-    }, {
-      height: 900,
-      width: 1600
-    }],
-    minify: true
-  },
   jsConcat: 'scripts.js',
-  minifyjsConcat: 'scripts.min.js',
-  criticaljsConcat: 'atom.enhance.js'
+  minifyjsConcat: 'scripts.min.js'
 };
 
 
 const paths = {
-  vendor: 'vendor/',
-  scssSrc: '_scss/**/*.scss',
-  cssSrc: 'css/',
-  cssDist: '_site/css/',
+  vendor: 'web/assets/vendor/',
+  scssSrc: 'web/assets/_scss/**/*.scss',
+  cssDist: 'web/assets/css/',
   jsSrc: [
-    'vendor/jquery/dist/jquery.min.js',
-    'vendor/svgxuse/svgxuse.js',
-    'js/_plugins/*.js',
-    'js/_scripts/*.js'
+    'web/assets/vendor/jquery/dist/jquery.min.js',
+    'web/assets/vendor/svgxuse/svgxuse.js',
+    'web/assets/vendor/picturefill/dist/picturefill.js',
+    'web/assets/vendor/lazysizes/lazysizes.js',
+    'web/assets/vendor/jquery-match-height/jquery.matchHeight.js',
+    'web/assets/vendor/animejs/anime.min.js',
+    'web/assets/js/_plugins/*.js',
+    'web/assets/js/_scripts/*.js'
   ],
-  jsDist: 'js/',
-  jsJekyllDist: '_site/js/',
-  criticaljsSrc: [
-    'vendor/fg-loadjs/loadJS.js',
-    'vendor/fg-loadcss/src/cssrelpreload.js',
-    'vendor/fg-loadcss/src/loadCSS.js',
-    'vendor/fg-loadcss/src/onloadCSS.js'
-  ],
-  criticaljsDist: '_includes/',
-  symbolsSrc: '_artwork/symbols/*.svg',
-  symbolsDist: 'img/svg/',
-  cssWatch: '_scss/**/*.scss',
-  criticalcssWatch: 'css/screen.min*',
-  jsWatch: 'js/_scripts/**/*.js',
-  symbolsWatch: '_artwork/symbols/*.svg',
+  jsDist: 'web/assets/js/',
+  symbolsSrc: 'web/assets/_artwork/symbols/*.svg',
+  symbolsDist: 'web/assets/images/svg/',
+  cssWatch: 'web/assets/_scss/**/*.scss',
+  jsWatch: 'web/assets/js/_scripts/**/*.js',
+  symbolsWatch: 'web/assets/_artwork/symbols/*.svg',
   siteWatch: [
-    'img/**/*.png',
-    'img/**/*.jpg',
-    'img/**/*.svg',
-    '**/*.markdown',
-    '**/*.html',
-    '_posts/*.md',
-    '_data/*.yaml',
-    '_config.yml',
-    '!_site/**/*.*'
+    'templates/**/*.html',
   ]
 }
 
@@ -200,7 +168,6 @@ gulp.task('css', () => {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.cssDist))
     .pipe(browserSync.stream())
-    .pipe(gulp.dest(paths.cssSrc));
 });
 
 // Production css > 'gulp productioncss'
@@ -212,13 +179,7 @@ gulp.task('productioncss', () => {
     .pipe(rename((path) => {
       path.basename += ".min";
     }))
-    .pipe(gulp.dest(paths.cssSrc));
-});
-
-
-// Generate critical css > 'gulp criticalcss'
-gulp.task('criticalcss', () => {
-  critical.generate(config.criticalcss);
+    .pipe(gulp.dest(paths.cssDist));
 });
 
 
@@ -234,9 +195,8 @@ gulp.task('criticalcss', () => {
 gulp.task('js', () => {
   return gulp.src(paths.jsSrc)
     .pipe(concat(config.jsConcat))
-    .pipe(gulp.dest(paths.jsJekyllDist))
-    .pipe(browserSync.stream())
-    .pipe(gulp.dest(paths.jsDist));
+    .pipe(gulp.dest(paths.jsDist))
+    .pipe(browserSync.stream());
 });
 
 
@@ -247,35 +207,6 @@ gulp.task('productionjs', () => {
     .pipe(uglify())
     .pipe(gulp.dest(paths.jsDist));
 });
-
-
-// Concatenate and minify critical js > 'gulp criticaljs'
-gulp.task('criticaljs', () => {
-  return gulp.src(paths.criticaljsSrc)
-    .pipe(concat(config.criticaljsConcat))
-    .pipe(uglify())
-    .pipe(gulp.dest(paths.criticaljsDist));
-});
-
-
-
-
-
-// ---
-// Jekyll
-// ---
-
-
-// Jekyll staging build > 'gulp jekyll'
-gulp.task('jekyll', shell.task([
-  'bundle exec jekyll build --incremental',
-]))
-
-
-// // Jekyll production build > 'gulp jekyllBuild'
-gulp.task('jekyllBuild', shell.task([
-  'JEKYLL_ENV=production bundle exec jekyll build',
-]))
 
 
 
@@ -292,12 +223,6 @@ gulp.task('browsersync', () =>  {
 });
 
 
-// Browsersync reload after Jekyll build > 'gulp browsersyncReload'
-gulp.task('browsersyncReload', ['jekyll'], () => {
-  browserSync.reload();
-});
-
-
 
 
 
@@ -310,7 +235,6 @@ gulp.task('browsersyncReload', ['jekyll'], () => {
 gulp.task('default', function(callback) {
   sequence(
     'assets',
-    'jekyll',
   callback);
 });
 
@@ -318,8 +242,12 @@ gulp.task('default', function(callback) {
 // Build task > 'gulp build'
 gulp.task('build', function(callback) {
   sequence(
-    'production',
-    'jekyllBuild',
+    'dependencies',
+    [
+      'productioncss',
+      'productionjs',
+      'symbols'
+    ],
   callback);
 });
 
@@ -339,9 +267,7 @@ gulp.task('production', function(callback) {
     'dependencies',
     [
       'productioncss',
-      'criticalcss',
       'productionjs',
-      'criticaljs',
       'symbols'
     ],
   callback);
@@ -353,5 +279,5 @@ gulp.task('watch', ['default','browsersync'],() => {
   gulp.watch(paths.jsWatch, ['js']);
   gulp.watch(paths.cssWatch, ['css']);
   gulp.watch(paths.symbolsWatch, ['symbols']);
-  gulp.watch(paths.siteWatch, ['browsersyncReload']);
+  gulp.watch(paths.siteWatch).on("change", reload);
 });

@@ -1,9 +1,0 @@
-<nav class="c-nav-main js-nav">
-    <ul class="o-list c-nav-main__list">
-        {% for item in site.navigation %}
-        <li class="c-nav-main__item {% if page.url contains item.url %} is-selected{% endif %}">
-          <a href="/{{ item.url }}" class="c-nav-main__link js-nav-trigger-up">{{ item.title | capitalize }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</nav>
