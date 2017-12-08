@@ -5,6 +5,13 @@ Intro text: We bouwen samen dingen in **Nerdlab**. Fijne dingen. Uitdagende ding
   Spring gerust binnen, want jouw hulp kunnen we ongetwijfeld gebruiken! Al was het
   maar als proefkonijn.
 Projecten:
+- Hoge image: "/uploads/byob-3.jpg"
+  Brede image: "/uploads/byob-2.jpg"
+  Titel: BYOB
+  Text: Bring Your Own Beamer is een internationaal kunstconcept waar digitale makers
+    hun werk komen presenteren via hun zelf meegebrachte beamer. Wij organiseren jaarlijks
+    de grootste editie in België met een 80 tal makers en 1500 bezoekers.
+  Fotograaf: Vicky Bogaert
 - Titel: Retro LAN-party flightcases
   Hoge image: "/uploads/lan-party-1.jpg"
   Brede image: "/uploads/lan-party-2.jpg"
@@ -22,13 +29,6 @@ Projecten:
     we geven ze geen ongelijk. Machien doen we graag samen met heel veel mensen van
     allerlei pluimage. Die ene keer was dat vooral samen met Het Entrepot.
   Fotograaf: Kasper Vandermaesen Photography
-- Hoge image: "/uploads/byob-3.jpg"
-  Brede image: "/uploads/byob-2.jpg"
-  Titel: BYOB
-  Text: Bring Your Own Beamer is een internationaal kunstconcept waar digitale makers
-    hun werk komen presenteren via hun zelf meegebrachte beamer. Wij organiseren jaarlijks
-    de grootste editie in België met een 80 tal makers en 1500 bezoekers.
-  Fotograaf: Vicky Bogaert
 - Hoge image: "/uploads/ekko-1-square.jpg"
   Brede image: "/uploads/ekko-2.jpg"
   Titel: EKKO
