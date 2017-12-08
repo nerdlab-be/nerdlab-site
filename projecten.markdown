@@ -5,6 +5,23 @@ Intro text: We bouwen samen dingen in **Nerdlab**. Fijne dingen. Uitdagende ding
   Spring gerust binnen, want jouw hulp kunnen we ongetwijfeld gebruiken! Al was het
   maar als proefkonijn.
 Projecten:
+- Hoge image: "/uploads/21689277_1474015486233172_6724994547228606464_n.jpg"
+  Brede image: "/uploads/21107716_772905649556154_6990988279961092096_n.jpg"
+  Titel: STOOM
+  Text: Tijdens een jaartraject kijken wat er ontstaat als kunst en technologie botsen.
+    Aan de hand van laagdrempelige workshops kijken we hoe je met een beamer kan mappen,
+    zoeken we de limieten van VR en gaan we aan de slag met licht.
+  Fotograaf: 
+- Hoge image: 
+  Brede image: 
+  Titel: Maak de stad
+  Text: 
+  Fotograaf: 
+- Hoge image: 
+  Brede image: 
+  Titel: STEAM Power
+  Text: 
+  Fotograaf: 
 - Hoge image: "/uploads/byob-3.jpg"
   Brede image: "/uploads/byob-2.jpg"
   Titel: BYOB
