@@ -12,15 +12,21 @@ Projecten:
     Aan de hand van laagdrempelige workshops kijken we hoe je met een beamer kan mappen,
     zoeken we de limieten van VR en gaan we aan de slag met licht.
   Fotograaf: 
-- Hoge image: 
-  Brede image: 
+- Hoge image: "/uploads/tumblr_ougxlsjxu61w8imfzo6_1280.jpg"
+  Brede image: "/uploads/tumblr_ougxlsjxu61w8imfzo9_1280.jpg"
   Titel: Maak de stad
-  Text: 
+  Text: In de wijkbibliotheken van Gent bouwden we samen met een hoop joelende 8 tot
+    14 jarigen een ideale stad. We gingen aan de slag met een lasercutter om gebouwen
+    te snijden, maakten kleine robotjes voor in de straten en fleurden de boel om
+    met streetart.
   Fotograaf: 
-- Hoge image: 
-  Brede image: 
+- Hoge image: "/uploads/22405542_766766360192145_202973194781822891_n.jpg"
+  Brede image: "/uploads/22281628_766766460192135_6144517589570733880_n.jpg"
   Titel: STEAM Power
-  Text: 
+  Text: 'Tijdens de opleiding "STEAM Power" leiden we jeugdwerkers op tot volwaardige
+    fablabinstructeurs. Samen met [JES](http://jes.be/) en [Ingegno](http://ingegno.be/)
+    onder de vleugels van [Digipolis](https://www.digipolis.be/) bieden we een traject
+    aan waar technische-, sociale- en creatieve vaardigheden centraal staan. '
   Fotograaf: 
 - Hoge image: "/uploads/byob-3.jpg"
   Brede image: "/uploads/byob-2.jpg"
