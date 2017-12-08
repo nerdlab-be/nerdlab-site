@@ -48,7 +48,7 @@ exclude:
 - gulp*
 - ".jekyll-metadata"
 - ".*"
-url: http://nerdlab.be/
+url: https://nerdlab.be/
 google_analytics: UA-48840590-1
 author: Nerdlab
 description: Nerdlab is een open collectief van makers. We bouwen installaties en
