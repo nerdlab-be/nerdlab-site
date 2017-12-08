@@ -1,9 +1,8 @@
 ---
 title: Projecten
 position: 2
-Intro text: We bouwen samen dingen in **Nerdlab**. Fijne dingen. Uitdagende dingen.
-  Spring gerust binnen, want jouw hulp kunnen we ongetwijfeld gebruiken! Al was het
-  maar als proefkonijn.
+Intro text: 'We bouwen niet enkel dingen in **Nerdlab**. We organiseren ook trajecten
+  waar we kinderen en andere jonge mensen creatief laten zijn met technologie. '
 Projecten:
 - Hoge image: "/uploads/21689277_1474015486233172_6724994547228606464_n.jpg"
   Brede image: "/uploads/21107716_772905649556154_6990988279961092096_n.jpg"
