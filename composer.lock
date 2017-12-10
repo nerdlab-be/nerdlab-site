@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "86c62a4f48569a4c7b8bb8eb1dc375e5",
+    "content-hash": "bbec639b50946b1fce0a5c0a09c9e9d7",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -766,6 +766,41 @@
             ],
             "description": "An SVG sanitizer for PHP",
             "time": "2017-08-31T00:10:18+00:00"
+        },
+        {
+            "name": "ether/simplemap",
+            "version": "v3.1.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/e3cbea8e7933ea20594dcbbce5c306f2c94e1f78",
+                "reference": "e3cbea8e7933ea20594dcbbce5c306f2c94e1f78",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.20",
+                "webonyx/graphql-php": "^0.10.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "handle": "simplemap",
+                "name": "SimpleMap",
+                "developer": "Ether Creative",
+                "developerUrl": "https://ethercreative.co.uk",
+                "class": "ether\\simplemap\\SimpleMap",
+                "schemaVersion": "3.0.0"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ether\\simplemap\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A beautifully simple Google Map field type.",
+            "support": {
+                "email": "tam@ethercreative.co.uk"
+            }
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -2221,6 +2256,43 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "webonyx/graphql-php",
+            "version": "v0.10.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webonyx/graphql-php/zipball/7cc863df37b2270ec2b57cb9d322da064d832a59",
+                "reference": "7cc863df37b2270ec2b57cb9d322da064d832a59",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=5.5,<8.0-DEV"
+            },
+            "suggest": {
+                "psr/http-message": "To use standard GraphQL server",
+                "react/promise": "To leverage async resolving on React PHP platform"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/deprecated.php"
+                ],
+                "psr-4": {
+                    "GraphQL\\": "src/"
+                }
+            },
+            "license": [
+                "BSD"
+            ],
+            "description": "A PHP port of GraphQL reference implementation",
+            "homepage": "https://github.com/webonyx/graphql-php",
+            "keywords": [
+                "api",
+                "graphql"
+            ],
+            "time": "2017-08-30T16:33:58+00:00"
         },
         {
             "name": "yiisoft/yii2",

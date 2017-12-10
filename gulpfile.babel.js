@@ -27,6 +27,9 @@ import uglify from 'gulp-uglify';
 import critical from 'critical';
 import gnf from 'gulp-npm-files';
 import del from 'del';
+import ftp from 'vinyl-ftp';
+import gutil from 'gulp-util';
+import gulpconfig from './gulpconfig.js';
 
 
 
@@ -225,6 +228,39 @@ gulp.task('browsersync', () =>  {
 
 
 
+// ---
+// FTP
+// ---
+
+
+gulp.task( 'staging', function () {
+  var conn = ftp.create( {
+    host: gulpconfig.config.host,
+    user: gulpconfig.config.user,
+    password: gulpconfig.config.pass,
+    parallel: 10,
+    log: gutil.log
+  });
+
+  var globs = [
+    'config/**',
+    'modules/**',
+    'storage/rebrand/**',
+    'templates/**',
+    'web/**',
+    '!web/cpresources/**',
+    'composer.json',
+    'composer.lock'
+  ];
+
+  return gulp.src( globs, { base: '.', buffer: false } )
+    .pipe( conn.newer( gulpconfig.config.destination ) ) // only upload newer files
+    .pipe( conn.dest( gulpconfig.config.destination ) );
+});
+
+
+
+
 
 // ---
 // Main tasks
@@ -272,6 +308,20 @@ gulp.task('production', function(callback) {
     ],
   callback);
 });
+
+
+// Deploy staging task > 'gulp deployStaging'
+gulp.task('deployStaging', function(callback) {
+  sequence(
+    'production',
+    [
+      'staging'
+    ],
+  callback);
+});
+
+
+
 
 
 // Watch task > 'gulp watch'
