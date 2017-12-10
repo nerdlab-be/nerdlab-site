@@ -1,4 +1,5 @@
 var config = {
+  proxy: 'site.dev',
   host: 'host',
   user: 'user',
   password: 'password',

@@ -1,8 +1,24 @@
-<p align="center"><a href="https://craftcms.com/" target="_blank"><img width="312" height="90" src="https://craftcms.com/craftcms.svg" alt="Craft CMS"></a></p>
+# Nerdlab sites
 
-## About Craft CMS
+## Setup
 
-Craft is a content-first CMS that aims to make life enjoyable for developers and content managers alike. It is optimized for bespoke web and application development, offering developers a clean slate to build out exactly what they want, rather than wrestling with a theme.
+Requirements:
+- [Server requirements](https://github.com/craftcms/docs/blob/master/en/requirements.md)
+- NodeJS 7.2.1 or [NVM](https://github.com/creationix/nvm)
+- [Gulp](https://gulpjs.com/)
+
+Setup:
+- Run 'composer install'
+- Create a '.env' file from '.env-example'
+- Run 'npm install'
+- Create a 'gulpconfig.js' file from 'gulpfile.example.js'
+
+Gulp tasks (see gulpfile.babel.js for details):
+- 'gulp watch': run a watch task with browsersync, scss, js concat, etc.
+- 'gulp build': build production assets (css, js)
+- 'gulp staging': upload files to staging server
+
+## Craft CMS
 
 Learn more about Craft at [craftcms.com](https://craftcms.com).
 

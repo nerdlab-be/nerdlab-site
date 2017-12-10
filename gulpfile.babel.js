@@ -39,8 +39,7 @@ import gulpconfig from './gulpconfig.js';
 const reload = browserSync.reload;
 const config = {
   browsersync: {
-    proxy: "nerdlab-site.dev",
-    baseDir: '_site',
+    proxy: gulpconfig.config.proxy,
     notify: true,
     ghostMode: {
       clicks: true,
@@ -297,31 +296,15 @@ gulp.task('assets', function(callback) {
 });
 
 
-// Production task > 'gulp production'
-gulp.task('production', function(callback) {
-  sequence(
-    'dependencies',
-    [
-      'productioncss',
-      'productionjs',
-      'symbols'
-    ],
-  callback);
-});
-
-
 // Deploy staging task > 'gulp deployStaging'
 gulp.task('deployStaging', function(callback) {
   sequence(
-    'production',
+    'build',
     [
       'staging'
     ],
   callback);
 });
-
-
-
 
 
 // Watch task > 'gulp watch'
