@@ -1,6 +1,7 @@
 ---
 title: Versnisage Maak de Stad
 date: 2017-12-09 14:11:00 Z
+published: false
 when: 9 December 2017
 link: https://www.facebook.com/events/1507162442713625/
 ---
