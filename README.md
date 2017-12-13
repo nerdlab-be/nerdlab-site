@@ -17,6 +17,7 @@ Gulp tasks (see gulpfile.babel.js for details):
 - 'gulp watch': run a watch task with browsersync, scss, js concat, etc.
 - 'gulp build': build production assets (css, js)
 - 'gulp staging': upload files to staging server
+- 'gulp deployStaging': build file and upload to staging server
 
 ## Craft CMS
 

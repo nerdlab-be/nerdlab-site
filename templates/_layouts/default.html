@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+
+{% include generic.head.html %}
+<body>
+    <div class="c-scene" id="js-smoothstate">
+        {% include components.header.html %}
+        <div class="c-main">
+            {{ content }}
+            {% include components.footer.html %}
+        </div>
+    </div>
+    {% include generic.javascript.html %}
+</body>
+</html>

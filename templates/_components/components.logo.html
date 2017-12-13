@@ -1,0 +1,14 @@
+{% if page.section != 'home' %}
+    <p class="c-logo">
+{% else %}
+    <h1 class="c-logo">
+{% endif %}
+        <a href="/{{site.baseurl}}" class="c-logo__link js-nav-trigger-up">
+            <span class="c-logo__label is-accessible-hidden">{{ site.title }}</span>
+            <span class="c-logo__mark"></span>
+        </a>
+{% if page.section != 'home' %}
+    </p>
+{% else %}
+    </h1>
+{% endif %}
