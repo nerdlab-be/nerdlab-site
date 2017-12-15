@@ -63,6 +63,8 @@ navigation:
   url: projecten/
 - title: Contact
   url: word-nerd/
+- title: Jobs
+  url: https://medium.com/@hannesdh/gezocht-versterking-52ac175a606
 labels:
   copyright-year: 2017
   copyright-author: Nerdlab
