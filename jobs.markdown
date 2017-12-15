@@ -5,7 +5,7 @@ Body:
 - Body text: |-
     Om dat volgend jaar nog groter en beter te doen zoeken we een:
     ## Community- en projectmanager (m/v/x)
-- Body 2 text: |-
+
     ### Wat moet er gebeuren?
     We hebben communities te managen:
 
@@ -18,7 +18,8 @@ Body:
     We krijgen bijna wekelijks nieuwe aanvragen binnen van scholen, cultuurcentra en bedrijven. De vragen die uitgroeien tot een project moeten worden georganiseerd met freelancers of vrijwilligers.
 
     Het lab en de financiële administratie moet het jaar gezond doorkomen.
-- Body  text link: 
+
+    Alle details op [https://medium.com/@hannesdh/gezocht-versterking-52ac175a606](https://medium.com/@hannesdh/gezocht-versterking-52ac175a606)
 layout: lab
 ---
 
