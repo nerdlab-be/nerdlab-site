@@ -61,6 +61,8 @@ navigation:
   url: lab/
 - title: Onze projecten
   url: projecten/
+- title: Jobs
+  url: jobs/
 - title: Contact
   url: word-nerd/
 labels:
