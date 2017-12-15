@@ -19,5 +19,6 @@ Body:
 
     Het lab en de financiële administratie moet het jaar gezond doorkomen.
 - Body  text link: 
+layout: lab
 ---
 
