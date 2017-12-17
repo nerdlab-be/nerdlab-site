@@ -24,6 +24,8 @@ Body:
 
     Het lab en de financiële administratie moet het jaar gezond doorkomen.
 
+    Deze job doe je niet alleen maar samen met een collega en de vrijwilligersploeg.
+
     Alle details op [https://medium.com/@hannesdh/gezocht-versterking-52ac175a606](https://medium.com/@hannesdh/gezocht-versterking-52ac175a606)
 layout: lab
 ---
