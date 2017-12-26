@@ -1,0 +1,84 @@
+/*
+    Components: Subscribe
+    ---
+    Subscribe form
+*/
+
+.c-subscribe-form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+}
+
+.c-subscribe-form__input {
+    background-color: transparent;
+    //background-color: rgba(palette(color-neutral,xxxx-light),.25);
+    //padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    border-width: 0 0 1px 0;
+    //border-style: dotted;
+    border-color: palette(color-neutral,xx-light);
+    //border-color: palette(color-alpha);
+    //color: palette(color-alpha,xx-light);
+    //border-color: palette(color-neutral,xxxx-light);
+    //color: palette(color-neutral,xxxx-light);
+    //border: none;
+    //flex-basis: 80%;
+    flex-grow: 1;
+    width: auto;
+
+    &:focus {
+        //color: palette(color-neutral,xxxx-light);
+        //border-color: palette(color-neutral,xxxx-light);
+        //color: palette(color-neutral,xxxx-light);
+    }
+
+    &::-webkit-input-placeholder {
+        //color: rgba(palette(color-neutral,xxxx-light),.5);
+        color: rgba(palette(color-neutral,xxxx-dark),.25);
+    }
+
+    &::-moz-placeholder {
+        //color: rgba(palette(color-neutral,xxxx-light),.5);
+        color: rgba(palette(color-neutral,xxxx-dark),.25);
+    }
+
+    &:-ms-input-placeholder {
+        //color: rgba(palette(color-neutral,xxxx-light),.5);
+        color: rgba(palette(color-neutral,xxxx-dark),.25);
+    }
+}
+
+.c-subscribe-form__buton {
+    //position: absolute;
+    //bottom: 0;
+    //right: 0;
+    //background-color: palette(color-beta);
+    //font-weight: $jota-font-weight;
+    //font-weight: $gamma-font-weight;
+    border-color: palette(color-neutral,xx-light);
+    color: palette(color-alpha);
+    //color: palette(color-neutral,xx-dark);
+    //border-color: palette(color-alpha,xx-light);
+    //color: palette(color-alpha,xxx-light);
+    background-color: transparent;
+    border-width: 0 0 1px;
+    //border: none;
+    padding-right: 0;
+    //border: none;
+    border-radius: 0;
+    //padding-left: 0;
+    //padding-top: 0;
+    //border-color: palette(color-beta,xx-light);
+    //color: palette(color-beta,xx-light);
+    //flex-basis: auto;
+
+    &:hover,
+    &:focus {
+        //color: palette(color-neutral,xxxx-light);
+        //border-color: palette(color-neutral,x-light);
+        color: palette(color-beta);
+    }
+}

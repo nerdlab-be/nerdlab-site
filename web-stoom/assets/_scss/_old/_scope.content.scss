@@ -1,0 +1,29 @@
+/*
+    Scope: Content
+    ---
+    Content specific styles
+*/
+
+.s-content {
+
+    strong,
+    h2 {
+        color: palette(color-neutral,xxxx-dark);
+    }
+
+    a {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            content: '';
+            display: block;
+            height: 1px;
+            position: absolute;
+            bottom: .1em;
+            left: 1px;
+            right: 1px;
+            background-color: currentColor;
+        }
+    }
+}

@@ -1,0 +1,168 @@
+/*
+    Components: Row
+    ---
+    Creates a horizontal row with padding
+*/
+
+.c-row {
+    position: relative;
+    @include clearfix;
+    @include padding-tb($alpha-leading,0);
+    @include padding-lr($columns-gutter,$columns-gutter);
+
+    @include mq(bp2) {
+        @include padding-lr($columns-gutter * 2, $columns-gutter * 2);
+    }
+
+    @include mq(bp3) {
+        @include padding-lr($columns-gutter * 3, $columns-gutter * 3);
+    }
+
+    @include mq(bp5) {
+        @include padding-lr($columns-gutter * 4, $columns-gutter * 4);
+    }
+
+    //@include mq(bp6) {
+    //    @include padding-lr($columns-gutter * 5, $columns-gutter * 5);
+    //}
+}
+
+.c-row--sm {
+    @include mq(bp2) {
+        @include padding-tb($alpha-leading * 2, $alpha-leading);
+    }
+}
+
+.c-row--md {
+    @include mq(bp2) {
+        @include padding-tb($alpha-leading * 2, $alpha-leading);
+    }
+
+    @include mq(bp3) {
+        @include padding-tb($alpha-leading * 3, $alpha-leading * 2);
+    }
+
+    @include mq(bp5) {
+        @include padding-tb($alpha-leading * 4, $alpha-leading * 3);
+    }
+
+    @include mq(bp7) {
+        @include padding-tb($alpha-leading * 5, $alpha-leading * 4);
+    }
+}
+
+.c-row--border-top {
+    border-top: 1px solid palette(color-neutral,xxx-light);
+}
+
+.c-row--border-bottom {
+    border-bottom: 1px solid palette(color-neutral,xxx-light);
+}
+
+.c-row--intro {
+    @include mq(bp3) {
+        display: flex;
+        align-items: flex-end;
+        height: calc(100vh - 14rem);
+
+        .o-container {
+            width: 100%;
+        }
+    }
+}
+
+.c-row--full {
+    height: 100vh;
+}
+
+.c-row--404 {
+    //background: transparent url() 0 0 no-repeat;
+    background-image: url('../img/svg/doodles.svg');
+    background-position: 50% 50%;
+    background-size: 150%;
+
+    @include mq(bp2) {
+        background-size: 100%;
+    }
+
+    @include mq(bp4) {
+        background-size: 75%;
+    }
+
+    @include mq(bp6) {
+        background-size: 62.5%;
+    }
+}
+
+
+.c-row--cta {
+    overflow: hidden;
+    background-color: palette(color-neutral,x-dark);
+
+    .c-background-image {
+        //display: none;
+        opacity: .5;
+
+        @include mq(bp3) {
+            display: block;
+            opacity: .5;
+        }
+    }
+
+    .c-background-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: .5;
+        //display: none;
+    }
+
+    //@include mq(bp2) {
+    //    @include margin-lr($columns-gutter * 2, $columns-gutter * 2);
+    //}
+    //
+    //@include mq(bp3) {
+    //    @include margin-lr($columns-gutter * 3, $columns-gutter * 3);
+    //}
+    //
+    //@include mq(bp5) {
+    //    @include margin-lr($columns-gutter * 4, $columns-gutter * 4);
+    //}
+
+    @include mq(bp3) {
+        display: flex;
+        align-items: flex-end;
+        //align-items: center;
+        height: 50vh;
+        //background-image: linear-gradient(145deg, palette(color-alpha,xx-dark), palette(color-beta));
+        //background-image: linear-gradient(145deg, palette(color-alpha), palette(color-alpha,xx-dark));
+
+        .o-container {
+            width: 100%;
+        }
+    }
+
+    @include mq(bp4) {
+        //height: 75vh;
+        height: calc(100vh - 7rem);
+    }
+}
+
+.c-row--empty {
+    padding: 0;
+}
+
+.c-row--map {
+    padding: 0;
+    //padding-left: 0;
+    //padding-right: 0;
+    min-height: 50vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include mq(bp4) {
+        height: 75vh;
+    }
+}

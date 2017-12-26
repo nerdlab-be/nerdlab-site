@@ -1,0 +1,81 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "inuitcss-plugin-responsive-wrapper@^1.0.1",
+        "scope": null,
+        "escapedName": "inuitcss-plugin-responsive-wrapper",
+        "name": "inuitcss-plugin-responsive-wrapper",
+        "rawSpec": "^1.0.1",
+        "spec": ">=1.0.1 <2.0.0",
+        "type": "range"
+      },
+      "/Users/dieterpeirs/3-Sites/nerdlab-site"
+    ]
+  ],
+  "_from": "inuitcss-plugin-responsive-wrapper@>=1.0.1 <2.0.0",
+  "_id": "inuitcss-plugin-responsive-wrapper@1.0.1",
+  "_inCache": true,
+  "_location": "/inuitcss-plugin-responsive-wrapper",
+  "_nodeVersion": "7.2.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/inuitcss-plugin-responsive-wrapper-1.0.1.tgz_1481736936854_0.4060502862557769"
+  },
+  "_npmUser": {
+    "name": "dietr",
+    "email": "accounts@dieterpeirs.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "inuitcss-plugin-responsive-wrapper@^1.0.1",
+    "scope": null,
+    "escapedName": "inuitcss-plugin-responsive-wrapper",
+    "name": "inuitcss-plugin-responsive-wrapper",
+    "rawSpec": "^1.0.1",
+    "spec": ">=1.0.1 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/inuitcss-plugin-responsive-wrapper/-/inuitcss-plugin-responsive-wrapper-1.0.1.tgz",
+  "_shasum": "0d911b265761956625ce024716f472f139f2016b",
+  "_shrinkwrap": null,
+  "_spec": "inuitcss-plugin-responsive-wrapper@^1.0.1",
+  "_where": "/Users/dieterpeirs/3-Sites/nerdlab-site",
+  "author": {
+    "name": "Dieter Peirs"
+  },
+  "bugs": {
+    "url": "https://github.com/Dietr/inuitcss-plugin-responsive-wrapper/issues"
+  },
+  "dependencies": {},
+  "description": "A responsive wrapper replacement for the default InuitCSS wrapper object.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "0d911b265761956625ce024716f472f139f2016b",
+    "tarball": "https://registry.npmjs.org/inuitcss-plugin-responsive-wrapper/-/inuitcss-plugin-responsive-wrapper-1.0.1.tgz"
+  },
+  "gitHead": "c194329ff3f834fd886c746209f5a41efafc3ac8",
+  "homepage": "https://github.com/Dietr/inuitcss-plugin-responsive-wrapper",
+  "license": "Apache-2.0",
+  "main": "_objects.responsive-wrapper.scss",
+  "maintainers": [
+    {
+      "name": "dietr",
+      "email": "accounts@dieterpeirs.com"
+    }
+  ],
+  "name": "inuitcss-plugin-responsive-wrapper",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dietr/inuitcss-plugin-responsive-wrapper.git"
+  },
+  "scripts": {},
+  "version": "1.0.1"
+}
