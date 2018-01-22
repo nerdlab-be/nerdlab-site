@@ -1,6 +1,7 @@
 ---
 title: Jobs
 date: 2017-12-15 16:09:00 Z
+published: false
 Intro text: |
   Om dat volgend jaar nog groter en beter te doen zoeken we een:
   ## Community- en projectmanager (m/v/x)
