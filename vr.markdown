@@ -7,7 +7,7 @@ Concept text: "Een jaar lang experimenteren we wel een dansgroep en VR. Met alle
   van dien. We hebben plaats voor 20 jonge makers van allerlei pluimage om mee te
   leren, te spelen en te bouwen aan een 360° film en interactieve beleving. \nWij
   zorgen voor de strafste docenten en de meest frisse pintjes."
-CTA: 
+CTA: Stoom VR
 layout: projecten
 ---
 
