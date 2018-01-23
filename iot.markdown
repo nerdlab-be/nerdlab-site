@@ -15,33 +15,33 @@ Data:
     status is al lang voorbij  de basic Tamagotchi maar heeft nog lang geen menselijke
     schijn als Samantha uit Her. We ontwerpen zelf een persoonlijkheid en bouwen een
     Facebook chatbot.
-  Link:
+  Link: 
 - Titel: Arduino thinking
   Datum: Maandag 12 maart om 19u
   Text: Automatisch Febrèze spuiten als een stoel het plots warm krijgt of je schoonvader
     SMS’en als het laatste blad van de eikenboom is gevallen. Dagelijkse toepassingen
     met een eenvoudig stukje electronica, we verklappen alle geheimen.
-  Link:
+  Link: 
 - Titel: Design thinking
   Datum: Maandag 19 maart om 19u
   Text: Dé manier om heel complexe problemen op te delen en een veel oplossingen te
     vinden. Zo brengen we Kim Jung Un op andere gedachten en helpen we cash geld de
     wereld uit. Uiteindelijk gaan we op zoek naar hoe we moeten communiceren met een
     stoel.
-  Link:
+  Link: 
 - Titel: Sensory Thinking
   Datum: Maandag 26 Maart om 19u
   Text: Je kan met een parkeersensor meten of de koffie bijna op is, maar ook een
     krokodillenval. We spelen met alle mogelijk sensoren en kijken welke data we er
     kunnen uithalen. Wie wil geen bananenkleursensor zelf kunnen maken?
-  Link:
+  Link: 
 - Titel: Datavisualisatie
   Datum: Maandag 23 april om 19u
   Text: Koelkasten, telefoons, auto’s, liften en zelfs stoelen verzamelen data en
     slaan deze op in de cloud. Deze berg aan informatie is pas interessant als we
     ze op een begrijpbare manier kunnen weergeven. Dat gaan we op zijn minst proberen.
     Met veel post-its en wasco’s.
-  Link:
+  Link: 
 layout: projecten
 ---
 

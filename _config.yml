@@ -84,4 +84,4 @@ Newsletter:
   Placeholder: naam@voorbeeld.com
   Button label: Schrijf in
 plugins:
-  - jekyll-redirect-from
+- jekyll-redirect-from
