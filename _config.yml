@@ -83,3 +83,5 @@ Newsletter:
     sturen.
   Placeholder: naam@voorbeeld.com
   Button label: Schrijf in
+plugins:
+  - jekyll-redirect-from
