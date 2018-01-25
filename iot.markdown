@@ -8,14 +8,14 @@ Intro text: |-
 
   Verwacht je aan wekelijkse workshops, talks, een hackathon, drank en veel fun.
 Carousel Images:
-- Image: "/uploads/IMG_20180108_161243.jpg"
+- Image: "/uploads/IMG_7410.jpg"
+- Image: "/uploads/IMG_20170321_204123.jpg"
 - Image: "/uploads/stoel.jpg"
+- Image: "/uploads/IMG_20180108_161243.jpg"
 - Image: "/uploads/IMG_20161207_192952.jpg"
 - Image: "/uploads/1_0M9YwVeaWsUTo8BKWd4Rqw.jpeg"
 - Image: "/uploads/IMG_20170111_192414.jpg"
 - Image: "/uploads/home-3.jpg"
-- Image: "/uploads/IMG_7410.jpg"
-- Image: "/uploads/IMG_20170321_204123.jpg"
 layout: projecten
 ---
 
