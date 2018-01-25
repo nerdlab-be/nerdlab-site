@@ -3,7 +3,7 @@ title: VR 101
 date: 2018-01-23 09:11:00 Z
 categories:
 - VR
-position: 4
+position: 9
 when: Dinsdag 27 februari 2018
 link: https://www.facebook.com/events/1893001784062755/
 ---

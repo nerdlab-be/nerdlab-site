@@ -3,7 +3,7 @@ title: Design thinking
 date: 2018-01-23 09:13:00 Z
 categories:
 - iot
-position: 7
+position: 6
 when: Maandag 19 maart 2018
 link: https://www.facebook.com/events/189704321774737/
 ---
