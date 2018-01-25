@@ -59,6 +59,10 @@ navigation:
   url: agenda/
 - title: Ons Lab
   url: lab/
+- title: IoT
+  url: iot/
+- title: VR
+  url: vr/
 - title: Onze projecten
   url: projecten/
 - title: Contact

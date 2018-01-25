@@ -15,12 +15,17 @@ layout: default
         </div>
     </div>
 </div>
+
 <div class="c-row u-pt-0 u-pl-0 u-pr-0 u-bgcolor-neutral-xxxxx-light u-z-delta">
-    <div class="p-slick-theme js-gallery">
-        {% for item in page['Carousel Images'] %}
-            <img class="p-slick-theme__img" src="{{ item.Image }}" alt="Lab">
-        {% endfor %}
-    </div>
+  <div class="p-slick-theme js-gallery">
+    {% for item in page['Carousel Images'] %}
+      <div class="p-slick-theme__img">
+        <div class="o-crop">
+          <img class=" o-crop__content" src="{{ item.Image }}" alt="Lab">
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 </div>
 
 {% for item in page.Body %}

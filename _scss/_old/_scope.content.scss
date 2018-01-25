@@ -26,4 +26,8 @@
             background-color: currentColor;
         }
     }
+
+  .c-button:after {
+    display: none;
+  }
 }

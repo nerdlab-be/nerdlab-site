@@ -161,3 +161,37 @@
             margin-bottom: 0;
         }
     }
+
+.o-crop {
+  position: relative; /* [1] */
+  display: block;
+  overflow: hidden; /* [2] */
+  padding-bottom: (9/16) * 100%;
+}
+
+.o-crop--16\:9 {
+  padding-bottom: (9/16) * 100%;
+}
+
+  .o-crop__content {
+    position: absolute;
+    top:  0; /* [1] */
+    left: 0; /* [1] */
+    max-width: none; /* [2] */
+    width: 100%;
+  }
+
+.u-faded {
+  color: palette(color-neutral,dark);
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 2.3;
+}
+
+.u-divider-mobile {
+  margin-top: 2em;
+
+  @include mq(bp5) {
+    margin-top: 0;
+  }
+}

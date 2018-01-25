@@ -16,7 +16,7 @@ Carousel Images:
 - Image: "/uploads/home-3.jpg"
 - Image: "/uploads/IMG_7410.jpg"
 - Image: "/uploads/IMG_20170321_204123.jpg"
-layout: projecten
+layout: iot
 ---
 
 tja, laat een stoel spreken
