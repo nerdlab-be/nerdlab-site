@@ -3,7 +3,7 @@ title: Arduino thinking
 date: 2018-01-23 09:12:00 Z
 categories:
 - iot
-position: 8
+position: 9
 when: Maandag 12 maart 2018
 link: https://www.facebook.com/events/225486244661901/
 ---

@@ -1,7 +1,7 @@
 ---
 title: Interactieve VR
 date: 2018-01-25 09:29:00 Z
-position: 9
+position: 10
 when: Dinsdag 6 maart 2018
 link: https://www.facebook.com/events/2009463549325250/
 ---
