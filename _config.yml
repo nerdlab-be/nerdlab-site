@@ -57,7 +57,7 @@ description: Nerdlab is een open collectief van makers. We bouwen installaties e
 navigation:
 - title: Agenda
   url: agenda/
-- title: Ons Lab
+- title: Het Lab
   url: lab/
 - title: Interface of things
   url: iot/
@@ -65,7 +65,7 @@ navigation:
   url: vr/
 - title: STEAM power
   url: train-the-trainer/
-- title: Onze projecten
+- title: Projecten
   url: projecten/
 - title: Contact
   url: word-nerd/
