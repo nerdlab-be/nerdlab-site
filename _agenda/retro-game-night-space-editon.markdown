@@ -2,7 +2,6 @@
 title: 'Retro Game Night: space editon'
 date: 2018-01-17 10:18:00 Z
 published: false
-categories:
 when: 17 januari 2018
 link: https://www.facebook.com/events/160575621215659/
 ---
