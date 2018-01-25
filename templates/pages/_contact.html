@@ -1,0 +1,267 @@
+{#
+ # Contact
+ # ------------------------
+-#}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+<div class="c-row c-row--md u-z-delta">
+    <div class="o-container">
+        <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
+            <div class="o-grid__item u-1-of-2-bp6">
+                <div class="s-content u-max-width-md">
+                    <div class="c-typo-lead">
+                        <p>Lid worden doet geen pijn, is gratis en helemaal niet moeilijk. Kom langs op woensdagavond of één van de andere <a href="https://www.facebook.com/Nerdlab/about/">openingsmomenten</a>. Je bent verzekerd voor wat je doet en krijgt drankjes aan een prima prijs.</p>
+
+<p>Heb je vragen over STOOM, Maak de Stad, STEAM Power of heb je zelf een idee voor een project? Mail Hannes via <a href="mailto:hannes@nerdlab.be">hannes@nerdlab.be</a></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="c-row c-row--map">
+    <div id="map" class="c-map gmap"></div>
+    <div class="c-map-content">
+        <div class="u-max-width-md s-content">
+            <p class="u-max-width-md s-content">
+              <strong class="c-nerdlab u-color-neutral-xxxx-dark">Nerdlab</strong> <br>
+              Nieuwland 67 <br>
+              9000 Gent <br>
+              <a class="c-footer__link" href="mailto:info@nerdlab.be">info@nerdlab.be</a>
+          </p>
+        </div>
+    </div>
+</div>
+
+    <script>
+        function initMap() {
+
+            var myLatlng = {lat: 51.0626986, lng: 3.730424200000016};
+            var dragging = true;
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: myLatlng,
+                disableDefaultUI: true,
+                scrollwheel: false,
+                draggable: dragging,
+                draggableCursor: 'default',
+                draggingCursor: 'move',
+                styles: [
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "saturation": 36
+                            },
+                            {
+                                "color": "#323233"
+                            },
+                            {
+                                "lightness": 40
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 16
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "all",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#fafafc"
+                            },
+                            {
+                                "lightness": 20
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#fafafc"
+                            },
+                            {
+                                "lightness": 17
+                            },
+                            {
+                                "weight": 1.2
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f2f2f5"
+                            },
+                            {
+                                "lightness": 20
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f2f2f5"
+                            },
+                            {
+                                "lightness": 21
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#dedee1"
+                            },
+                            {
+                                "lightness": 21
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 17
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 29
+                            },
+                            {
+                                "weight": 0.2
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 18
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "lightness": 16
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#f0f0f2"
+                            },
+                            {
+                                "lightness": 19
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#e6e6e8"
+                            },
+                            {
+                                "lightness": 17
+                            }
+                        ]
+                    }
+                ]
+            });
+
+            var contentString =
+                '<p class="c-map__content s-content">'+
+                '<strong class="c-nerdlab u-color-neutral-xxxx-dark">Nerdlab</strong> <br>'+
+                'Nieuwland 67 <br>'+
+                '9000 Gent <br>'+
+                '</p>';
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            // var rocketIcon = '<p>&#x2122;</p>';
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'Nerdlab',
+                // icon: rocketIcon
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: 10,
+                    strokeWeight: 2,
+                    strokeColor: '#FF0000',
+                    fillColor: '#FF0000'
+                }
+            });
+
+            // marker.addListener('click', function() {
+            //     infowindow.open(map, marker);
+            // });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAe5X4MjHJA17x0Uainh91mGi2EJwF3mH0&callback=initMap"></script>
+{% endblock %}

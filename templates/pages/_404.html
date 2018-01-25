@@ -1,0 +1,18 @@
+{#
+ # 404
+ # ------------------------
+-#}
+
+{% extends "_layouts/site" %}
+
+{% set title = "Page Not Found"|t %}
+
+{% if entry is not defined %}
+  {% set entry = craft.entries.uri('404').first() %}
+{% endif %}
+
+{% block main %}
+
+
+
+{% endblock %}

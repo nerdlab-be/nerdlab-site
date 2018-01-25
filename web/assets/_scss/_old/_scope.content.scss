@@ -26,4 +26,57 @@
             background-color: currentColor;
         }
     }
+
+  .c-button:after {
+    display: none;
+  }
+}
+
+.s-content-alt {
+  h2,
+  h3 {
+    @include margin-bottom($alpha-leading / 2);
+  }
+
+  strong,
+  h2 {
+    color: palette(color-neutral,xxxx-dark);
+  }
+
+  h2 {
+    @include ms2;
+  }
+
+  h3 {
+    @include ms0;
+  }
+
+  p:first-of-type {
+    @include ms1;
+  }
+
+  p {
+    @include ms0;
+    @include margin-bottom($alpha-leading * 2)
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      bottom: .1em;
+      left: 1px;
+      right: 1px;
+      background-color: currentColor;
+    }
+  }
+
+  .c-button:after {
+    display: none;
+  }
 }

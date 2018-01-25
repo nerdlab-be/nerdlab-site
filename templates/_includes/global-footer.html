@@ -1,0 +1,72 @@
+<footer class="c-row c-row--md c-footer">
+  <div class="o-container">
+    <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
+      <div class="o-grid__item u-1-of-2-bp4">
+        <div class="c-main-section">
+          <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
+            <div class="o-grid__item u-1-of-2-bp2">
+              <p class="u-max-width-md s-content">
+                <strong class="c-nerdlab u-color-neutral-xxxx-dark">Nerdlab</strong><br>
+                Nieuwland 67 <br>
+                9000 Gent <br>
+                <a class="c-footer__link" href="mailto:info@nerdlab.be">info@nerdlab.be</a>
+              </p>
+            </div>
+            <div class="o-grid__item u-1-of-2-bp2">
+              <p class="u-mb-alpha">Volg ons:</p>
+              <ul class="o-list c-footer-list s-content">
+                <li><a class="c-footer__link" href="https://twitter.com/NerdLab9000">Twitter</a></li>
+                <li><a class="c-footer__link" href="https://www.facebook.com/Nerdlab">Facebook</a></li>
+                <li><a class="c-footer__link" href="https://www.instagram.com/nerdlab9000">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="o-grid__item u-1-of-2-bp4">
+        <div class="c-footer__subscribe u-max-width-md">
+          <p class="c-subscribe-text">
+            Laat hier je mailadres achter zodat we je af en toe nieuws over Nerdlab kunnen sturen.
+          </p>
+          <div class="u-mb-gamma">
+            <form class="c-subscribe-form" action="//nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=14a5daee70" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <input class="c-input-text c-input-text--lg c-subscribe-form__input" type="email" value="" placeholder="naam@voorbeeld.com" name="EMAIL" class="required email" id="mce-EMAIL">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_26083caa15a40f691a214b23c_14a5daee70" tabindex="-1" value=""></div>
+              <input class="c-subscribe-form__buton c-button c-button--lg" type="submit" value="Schrijf in" name="subscribe" id="mc-embedded-subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{#
+<footer role="contentinfo" class="c-color-white">
+  <div class="o-wrapper o-wrapper--huge c-ui c-ui--footer">
+    <p class="c-brand-type js-logo-watch">
+      {% include "_elements/elements.logo-icon-white.html" %}
+      {% include "_elements/elements.logo-text.html" %}
+      <span class="u-hidden-visually">{{ siteName }}</span>
+    </p>
+
+    <div class="o-layout o-layout--small">
+      <div class="o-layout__item u-1/2@small">
+        {% include '_components/components.social-links.html' with { options: { handle: footerContent } } %}
+      </div>
+      <div class="o-layout__item u-1/2@small">
+        <ul class="o-list-bare c-list">
+          <li class="c-list__item">
+            <a href="{{ url('site-credits') }}" class="c-link c-link--faded">{{ footerContent.siteCreditsLabel }}</a>
+          </li>
+          <li class="c-list__item">
+            <a href="{{ url('legal') }}" class="c-link c-link--faded">{{ footerContent.disclaimerLabel }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+#}

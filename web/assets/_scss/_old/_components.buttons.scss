@@ -44,7 +44,7 @@
 
     &:hover,
     &:focus {
-        text-decoration: none;
+      text-decoration: none;
     }
 
     &:active {
@@ -101,16 +101,17 @@
 .c-button--alpha {
     background-color: palette(color-alpha);
     border-color: palette(color-alpha);
+    border-width: 2px;
 
     &,
     &:visited {
-        color: palette(color-neutral,x-light);
+        color: palette(color-neutral,xxxxx-light);
     }
 
     &:hover,
     &:focus {
-        background-color: palette(color-alpha,light);
-        color: palette(color-neutral,x-light);
+        background-color: palette(color-neutral,xxxxx-light);
+        color: palette(color-alpha);
     }
 
     &:active {
@@ -125,13 +126,13 @@
 
     &,
     &:visited {
-        color: palette(color-neutral,x-light);
+        color: palette(color-neutral,xxxx-light);
     }
 
     &:hover,
     &:focus {
         background-color: palette(color-beta,light);
-        color: palette(color-neutral,x-light);
+        color: palette(color-neutral,xxxx-light);
     }
 
     &:active {

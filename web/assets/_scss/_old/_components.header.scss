@@ -21,9 +21,12 @@
     }
 
     @include mq(bp3) {
-        box-shadow: none;
-        height: $alpha-leading * 5.675rem;
-        @include padding-tb($alpha-leading * 1);
+      @include padding-tb($alpha-leading * 1);
+    }
+
+    @include mq(bp4) {
+      box-shadow: none;
+      height: $alpha-leading * 5.675rem;
     }
 
     @include mq(bp5) {
@@ -33,7 +36,7 @@
     &.is-shrinken {
         box-shadow: 0 0 50px rgba(palette(color-neutral,xxxx-dark),.125);
 
-        @include mq(bp3) {
+        @include mq(bp4) {
             height: $alpha-leading * 4.375rem;
         }
     }
@@ -41,7 +44,7 @@
     .is-exiting & {
         box-shadow: none;
 
-        @include mq(bp3) {
+        @include mq(bp4) {
             height: $alpha-leading * 5.675rem;
         }
 
@@ -54,7 +57,7 @@
 .c-header {
     position: relative;
 
-    @include mq(bp3) {
+    @include mq(bp4) {
         display: flex;
         justify-content: space-between;
         align-items: center;

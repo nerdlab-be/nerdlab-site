@@ -1,0 +1,36 @@
+{#
+  Navigation
+  ================
+#}
+
+{#
+  {% set navigationOptions = {
+    handle: ''
+  } %}
+
+  {% include '_components/components.navigation.html' with { options: navigationOptions } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  handle: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<ul class="o-list-bare c-nav-list">
+  {% for block in options.handle %}
+  {% set entries = block.entryLink %}
+  {% for entry in entries %}
+  {% set active = bodyClass == entry.section.handle %}
+  <li class="c-nav-list__item{{ active ? ' is-active' : '' }}">
+    <a href="{{ entry.url}}" class="c-nav__link{% if block.highlighted %} c-nav__link--highlighted{% endif %}">{{ block.entryTitle }}<span aria-hidden="true" class="c-nav__label js-nav-label"></span></a>
+  </li>
+  {% endfor %}
+  {% endfor %}
+</ul>
