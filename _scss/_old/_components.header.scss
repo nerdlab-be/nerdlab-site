@@ -21,9 +21,12 @@
     }
 
     @include mq(bp3) {
+      @include padding-tb($alpha-leading * 1);
+    }
+
+    @include mq(bp4) {
       box-shadow: none;
       height: $alpha-leading * 5.675rem;
-      @include padding-tb($alpha-leading * 1);
     }
 
     @include mq(bp5) {
