@@ -1,0 +1,48 @@
+{#
+  CTA
+  ================
+#}
+
+{#
+  {% include '_components/components.cta.html' with { options: { handle: '' } } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  handle: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<div class="c-row c-row--md c-row--cta u-z-delta">
+  <div class="c-background-image c-background-image--fallback" style="background-image: url('/assets/img/uploads/home-3.jpg');"></div>
+    <video class="c-background-video" autoplay loop muted preload="true">
+      <source src="/assets/img/uploads/nerdlab.webm" type="video/webm">
+      <source src="/assets/img/uploads/nerdlab.mp4" type="video/mp4">
+    </video>
+    <p class="c-background-video__meta">
+      Video: LUCA School of Arts - campus C-mine
+    </p>
+    <div class="o-container">
+      <div class="o-grid o-grid--gutter o-flex">
+        <div class="o-grid__item u-1-of-2-bp6">
+          <div class="u-max-width-md">
+            <div class="c-cta-lead u-color-neutral-xxxxx-light">
+              <p>Heb je een project waar je vast mee zit of zin om samen met ons mee in een project te duiken?</p>
+            </div>
+            <p>
+              <a href="/word-nerd/" class="c-button c-button--lg c-button--cta">
+                Kom eens langs
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

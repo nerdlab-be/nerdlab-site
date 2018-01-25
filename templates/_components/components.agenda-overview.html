@@ -1,0 +1,48 @@
+{#
+  CTA
+  ================
+#}
+
+{#
+  {% include '_components/components.agenda-overview.html' with { options: { category: '' } } %}
+
+  @TODO: add category option
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  category: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<article class="s-content o-media">
+  <div class="o-grid o-grid--gutter o-flex-bp3 o-flex--wrap">
+    <div class="o-grid__item u-1-of-2-bp4">
+      <p class="u-mb-alpha u-text-align-right-bp4 u-faded">
+        Vrijdag 23 februari 2018
+      </p>
+    </div>
+    <div class="o-grid__item u-1-of-2-bp4">
+      <h2 class="u-ms0">
+        <a href="https://www.facebook.com/events/579959852357580/">
+          VR Cinéma
+        </a>
+      </h2>
+    </div>
+  </div>
+  <div class="o-grid o-grid--gutter o-flex-bp3 o-flex--wrap">
+    <div class="o-grid__item u-1-of-2-bp4 u-push-1-of-2-bp4">
+      <div class="s-content u-max-width-md">
+        <p>
+          We beginnen het verhaal gezellig om vrijdagavond met een drankje. Een avondje naar de VR cinéma waar je de grote variatie in films kan ontdekken. 360° Film maker Wim Forceville begeleid ons door de beste voorbeelden en leidt de brainstorm voor onze eerste eigen productie.  <a href="https://www.facebook.com/events/579959852357580/">Meer info</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</article>

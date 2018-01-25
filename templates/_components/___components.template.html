@@ -1,0 +1,28 @@
+{#
+  Component template
+  ================
+#}
+
+{#
+  {% set componentOptions = {
+    styles: '',
+  } %}
+
+  {% include '_components/components.component.html' with { options: componentOptions } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  styles: '',
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<div class="{{ options.styles }}">
+  {# Module #}
+</div>

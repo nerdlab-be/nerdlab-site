@@ -1,0 +1,13 @@
+{% if entry.title == "Homepage" %}
+  <h1 class="c-logo">
+    <span class="c-logo__label is-accessible-hidden">{{ siteName }}</span>
+    <span class="c-logo__mark"></span>
+  </h1>
+  {% else %}
+  <p class="c-logo">
+    <a href="{{ siteUrl }}" alt="Homepage" class="c-logo__link js-nav-trigger-up">
+      <span class="c-logo__label is-accessible-hidden">{{ siteName }}</span>
+      <span class="c-logo__mark"></span>
+    </a>
+  </p>
+{% endif %}

@@ -1,0 +1,40 @@
+{#
+  Gallery
+  ================
+#}
+
+{#
+  {% include '_components/components.gallery.html' with { options: { type: '' } } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  type: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<div class="c-row u-pt-0 u-pl-0 u-pr-0 u-bgcolor-neutral-xxxxx-light u-z-delta">
+  <div class="p-slick-theme js-gallery">
+    <div class="p-slick-theme__img">
+      <div class="o-crop">
+        <img class=" o-crop__content" src="/assets/img/uploads/IMG_7410.jpg" alt="Lab">
+      </div>
+    </div>
+    <div class="p-slick-theme__img">
+      <div class="o-crop">
+        <img class=" o-crop__content" src="/assets/img/uploads/IMG_20170321_204123.jpg" alt="Lab">
+      </div>
+    </div>
+    <div class="p-slick-theme__img">
+      <div class="o-crop">
+        <img class=" o-crop__content" src="/assets/img/uploads/stoel.jpg" alt="Lab">
+      </div>
+    </div>
+  </div>
+</div>
