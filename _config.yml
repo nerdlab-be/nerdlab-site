@@ -63,6 +63,8 @@ navigation:
   url: iot/
 - title: Virtual reality
   url: vr/
+- title: STEAM power
+  url: train-the-trainer/
 - title: Onze projecten
   url: projecten/
 - title: Contact
