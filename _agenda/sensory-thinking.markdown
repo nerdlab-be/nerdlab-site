@@ -3,6 +3,7 @@ title: Sensory Thinking
 date: 2018-01-23 09:13:00 Z
 categories:
 - iot
+position: 5
 when: Maandag 26 maart 2018
 link: https://www.facebook.com/events/140869936605541/
 ---
