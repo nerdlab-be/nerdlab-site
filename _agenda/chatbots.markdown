@@ -3,7 +3,7 @@ title: Chatbots
 date: 2018-01-23 09:12:00 Z
 categories:
 - iot
-position: 8
+position: 10
 when: Maandag 5 maart 2018
 link: https://www.facebook.com/events/323018868190677/
 ---
