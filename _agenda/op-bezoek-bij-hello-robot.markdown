@@ -2,7 +2,6 @@
 title: Op bezoek bij Hello, Robot
 date: 2018-01-23 13:01:00 Z
 published: false
-categories:
 when: 23 januari 2018
 link: https://www.eventbrite.com/e/gent-m-45-robots-onderwijs-tickets-39290076677
 ---

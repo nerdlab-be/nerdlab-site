@@ -2,7 +2,6 @@
 title: Buildersday Winter 17
 date: 2017-12-08 14:14:00 Z
 published: false
-categories:
 when: 9 December 2017
 link: https://www.facebook.com/events/490341734679540/
 ---
