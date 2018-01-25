@@ -2,8 +2,9 @@
 title: VR 101
 date: 2018-01-23 09:11:00 Z
 categories:
-- two
+- VR
 when: Dinsdag 27 februari 2018
+link: https://www.facebook.com/events/1893001784062755/
 ---
 
 Al eens gezocht hoe je zelf een stuk VR film kan maken? Welk materiaal je nodig hebt om dat te doen?
