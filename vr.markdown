@@ -9,6 +9,13 @@ Concept text: "Een jaar lang experimenteren we wel een dansgroep en VR. Met alle
   zorgen voor de strafste docenten en de meest frisse pintjes.\n\nWil je het programma
   kennen en zien hoe eenvoudig het is om in te schrijven?"
 CTA: Stoom VR
+Carousel Images:
+- Image: "/uploads/BYOBGent_(c)VickyBogaert047.JPG"
+- Image: "/uploads/17661729_1857369777856224_8186121225664200704_n%20(1).jpg"
+- Image: "/uploads/BYOBGent_(c)VickyBogaert079.JPG"
+- Image: "/uploads/16716085_1352841584737407_8649567043175026796_o.jpg"
+- Image: "/uploads/IMG_0622_web%20(c)%20Michiel%20Devijver.jpg"
+- Image: "/uploads/machien-4.jpg"
 layout: vr
 ---
 
