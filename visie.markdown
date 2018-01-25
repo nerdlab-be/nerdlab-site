@@ -1,6 +1,7 @@
 ---
 title: Visie
 date: 2018-01-25 12:50:00 Z
+layout: visie
 ---
 
 # Titel 1
