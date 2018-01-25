@@ -1,8 +1,9 @@
 ---
 title: VR 101
 date: 2018-01-23 09:11:00 Z
+tags:
+- two
 when: Dinsdag 27 februari 2018
-tag: two
 ---
 
 Al eens gezocht hoe je zelf een stuk VR film kan maken? Welk materiaal je nodig hebt om dat te doen?
