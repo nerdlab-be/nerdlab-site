@@ -6,7 +6,7 @@ layout: visie
 
 # Titel 1
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed felis vel augue vestibulum mattis sed efficitur mauris. Nunc id ornare eros. Maecenas tincidunt vel nibh a lobortis. Sed sed purus nec turpis ullamcorper cursus.
-
+[BYOBGent_(c)VickyBogaert047.JPG](/uploads/BYOBGent_(c)VickyBogaert047.JPG)
 ## Titel 2
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed felis vel augue vestibulum mattis sed efficitur mauris. Nunc id ornare eros. Maecenas tincidunt vel nibh a lobortis. Sed sed purus nec turpis ullamcorper cursus.
 
