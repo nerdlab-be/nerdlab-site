@@ -17,7 +17,7 @@ $logo-width:     $logo-height * $logo-ratio;
     backface-visibility: hidden;
     height: 5rem;
 
-    @include mq(bp3) {
+    @include mq(bp4) {
         height: auto;
     }
 }

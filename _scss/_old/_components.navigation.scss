@@ -7,23 +7,14 @@
 .c-nav-main {
     display: none;
 
-    .has-visible-nav & {
-        //display: block;
-    }
-
-    @include mq(bp3) {
-        position: relative;
-        bottom: auto;
-        left: auto;
-        right: auto;
-        display: flex !important;
-        height: auto !important;
-        flex-basis: 75%;
-    }
-
     @include mq(bp4) {
-        flex-basis: 50%;
-        @include padding-left($columns-gutter);
+      position: relative;
+      bottom: auto;
+      left: auto;
+      right: auto;
+      display: flex !important;
+      height: auto !important;
+      @include padding-left($columns-gutter);
     }
 }
 
@@ -32,7 +23,7 @@
         text-align: right;
         @include padding-bottom(1);
 
-        @include mq(bp3) {
+        @include mq(bp4) {
             width: 100%;
             display: flex;
             align-items: center;
@@ -40,21 +31,14 @@
             padding-bottom: 0;
             justify-content: flex-end;
         }
-
-        @include mq(bp4) {
-            justify-content: space-between;
-        }
     }
 
     .c-nav-main__item {
-        & + & {
-            @include mq(bp3) {
-                @include margin-left($columns-gutter);
-            }
-            @include mq(bp4) {
-                margin-left: 0;
-            }
-        }
+      & + & {
+          @include mq(bp4) {
+              @include margin-left($columns-gutter * 1.5);
+          }
+      }
     }
 
     .c-nav-main__link {
@@ -62,11 +46,9 @@
         text-decoration: none;
         @include text-dimensions($alpha-font-size,1,0,1,1);
 
-
         &,
         &:visited {
             color: palette(color-neutral,xxx-dark);
-            //color: palette(color-neutral,light);
         }
 
         &:hover,
@@ -74,7 +56,6 @@
         .is-selected & {
             text-decoration: none;
             color: palette(color-beta);
-            //color: palette(color-neutral,xxx-dark);
         }
 
         .is-exiting & {
@@ -85,9 +66,7 @@
             }
         }
 
-
-
-        @include mq(bp3) {
+        @include mq(bp4) {
             @include padding-tb(1,1);
         }
 
@@ -128,7 +107,7 @@
         color: palette(color-neutral);
     }
 
-    @include mq(bp3) {
+    @include mq(bp4) {
         display: none;
     }
 }
