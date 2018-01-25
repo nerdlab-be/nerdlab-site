@@ -59,10 +59,10 @@ navigation:
   url: agenda/
 - title: Het Lab
   url: lab/
-- title: Interface of things
-  url: iot/
 - title: Virtual reality
   url: vr/
+- title: Interface of things
+  url: iot/
 - title: Projecten
   url: projecten/
 - title: Contact
