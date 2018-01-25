@@ -59,16 +59,16 @@ navigation:
   url: agenda/
 - title: Ons Lab
   url: lab/
-- title: IoT
+- title: Interface of things
   url: iot/
-- title: VR
+- title: Virtual reality
   url: vr/
 - title: Onze projecten
   url: projecten/
 - title: Contact
   url: word-nerd/
 labels:
-  copyright-year: 2017
+  copyright-year: 2018
   copyright-author: Nerdlab
 Info:
   Naam: Nerdlab
