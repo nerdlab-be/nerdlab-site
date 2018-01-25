@@ -3,7 +3,7 @@ title: VR Cinéma
 date: 2018-01-23 09:09:00 Z
 categories:
 - VR
-position: 9
+position: 10
 when: Vrijdag 23 februari 2018
 link: https://www.facebook.com/events/579959852357580/
 ---
