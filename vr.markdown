@@ -9,7 +9,7 @@ Concept text: "Een jaar lang experimenteren we wel een dansgroep en VR. Met alle
   zorgen voor de strafste docenten en de meest frisse pintjes.\n\nWil je het programma
   kennen en zien hoe eenvoudig het is om in te schrijven?"
 CTA:
-  Text: Stoom VR
+  Text: Data & inschrijvingen
   URL: http://stoom.nerdlab.be/
 Carousel Images:
 - Image: "/uploads/BYOBGent_(c)VickyBogaert047.JPG"
