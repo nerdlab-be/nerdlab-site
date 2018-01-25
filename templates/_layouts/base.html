@@ -26,7 +26,7 @@
   <link rel="canonical" href="{{ entry.url }}">
 
   {# CSS #}
-  {% if craft.config.devMode == true %}
+  {% if craft.app.config.general.devMode == true %}
     <link rel="stylesheet" type="text/css" href="/assets/css/screen.css">
   {% else %}
     <link rel="stylesheet" type="text/css" href="/assets/css/screen.min.css">
@@ -34,13 +34,11 @@
   {% endblock %}
 </head>
 <body>
-  <div class="c-scene" id="js-smoothstate">
-    {% block body %}{% endblock %}
-  </div>
+  {% block body %}{% endblock %}
 
   {# Global javascript #}
   {% block foot %}
-    {% if craft.config.devMode == true %}
+    {% if craft.app.config.general.devMode == true %}
       <script src="/assets/js/scripts.js"></script>
     {% else %}
       <script src="/assets/js/scripts.min.js"></script>
