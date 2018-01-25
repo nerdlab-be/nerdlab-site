@@ -12,8 +12,8 @@ layout: default
           </div>
           {{ page['Concept text'] | markdownify }}
           <p>
-            <a href="#!" class="c-button c-button--lg c-button--alpha">
-                {{ page.CTA }}
+            <a href="{{ page.CTA.URL }}" class="c-button c-button--lg c-button--alpha">
+                {{ page.CTA.Text }}
             </a>
           </p>
         </div>
