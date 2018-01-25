@@ -1,7 +1,7 @@
 ---
 title: Design thinking
 date: 2018-01-23 09:13:00 Z
-tags:
+categories:
 - two
 when: Maandag 19 maart 2018
 ---

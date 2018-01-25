@@ -1,7 +1,7 @@
 ---
 title: Chatbots
 date: 2018-01-23 09:12:00 Z
-tags:
+categories:
 - one
 when: Maandag 5 maart 2018
 ---

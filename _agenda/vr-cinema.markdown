@@ -1,7 +1,7 @@
 ---
 title: VR Cinéma
 date: 2018-01-23 09:09:00 Z
-tags:
+categories:
 - two
 when: Vrijdag 23 februari 2018
 ---

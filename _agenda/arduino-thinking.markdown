@@ -1,7 +1,7 @@
 ---
 title: Arduino thinking
 date: 2018-01-23 09:12:00 Z
-tags:
+categories:
 - one
 when: Maandag 12 maart 2018
 ---
