@@ -2510,6 +2510,7 @@ d.slice(e-c+1,e+c+2).addClass("slick-active").attr("aria-hidden","false")),0===a
 //
 // Smoothstate only works if history is supported so we use a Modernizr wrapper
 if (Modernizr.history) {
+
     $(function() {
         'use strict';
         var options = {

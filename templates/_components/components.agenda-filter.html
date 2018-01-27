@@ -4,13 +4,14 @@
 #}
 
 {#
-  {% include '_components/components.agenda-overview.html' with { options: { layout: '' } } %}
+  {% include '_components/components.agenda-overview.html' with { options: { tag: '', layout: '' } } %}
 
   @TODO: add category option
 #}
 
 {# -- Set Defaults -- #}
 {% set defaults = {
+  tag: '',
   layout: ''
 } %}
 
@@ -24,8 +25,10 @@
 {% paginate craft.entries.section('agendaDetail').limit(20) as pageInfo, pageEntries %}
 
 {% for entry in pageEntries %}
+{% set currentTags = entry.tags.one() %}
 
 {% if options.layout == "compact" %}
+{% if currentTags == options.tag %}
 <article class="s-content o-media">
   <p class="u-mb-alpha u-faded">
     {{ entry.date |date('l d F Y') }}
@@ -47,7 +50,9 @@
     </p>
   </div>
 </article>
+{% endif %}
 {% else %}
+{% if currentTags == options.tag %}
 <article class="s-content o-media">
   <div class="o-grid o-grid--gutter o-flex-bp3 o-flex--wrap">
     <div class="o-grid__item u-1-of-2-bp4">
@@ -79,5 +84,6 @@
     </div>
   </div>
 </article>
+{% endif %}
 {% endif %}
 {% endfor %}

@@ -32,6 +32,15 @@
   }
 }
 
+.s-content-inline {
+  display: block;
+  @include margin-bottom($alpha-leading);
+
+  p {
+    display: inline;
+  }
+}
+
 .s-content-alt {
   h2,
   h3 {

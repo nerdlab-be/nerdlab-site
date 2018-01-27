@@ -3,16 +3,22 @@
  # ------------------------
 -#}
 
-{% extends "_layouts/site" %}
+{% extends "_layouts/404" %}
 
-{% set title = "Page Not Found"|t %}
+{% set title = "404"|t %}
 
 {% if entry is not defined %}
   {% set entry = craft.entries.uri('404').first() %}
 {% endif %}
 
-{% block main %}
-
-
-
+{% block body %}
+<div class="c-row c-row--full c-row--404 o-flex o-flex--align-center u-bgcolor-neutral-xxxxx-light">
+  <div class="o-container">
+    <div class="s-content u-max-width-sm u-text-align-center u-align-horizontal">
+        <h1 class="u-color-beta-base u-mb-beta">{{ entry.title }}</h1>
+        {# Intro #}
+        {% include '_components/components.intro.html' %}
+    </div>
+  </div>
+</div>
 {% endblock %}

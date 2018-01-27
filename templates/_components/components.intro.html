@@ -9,14 +9,31 @@
 
 {# -- Module -- #}
 <div class="s-content u-max-width-md">
-  <div class="c-typo-lead">
-    <p>Tijd om stevig aan de slag te gaan met <strong>VR</strong>? Goesting om in bende aan een voorstelling te bouwen? Dan is het tijd voor <strong>STOOM</strong>!</p>
-  </div>
-  <p>Een jaar lang experimenteren we wel een dansgroep en VR. Met alle gevolgen van dien. We hebben plaats voor 20 jonge makers van allerlei pluimage om mee te leren, te spelen en te bouwen aan een 360° film en interactieve beleving. Wij zorgen voor de strafste docenten en de meest frisse pintjes.</p>
-  <p>Wil je het programma kennen en zien hoe eenvoudig het is om in te schrijven?</p>
-  <p>
-    <a href="http://stoom.nerdlab.be/" class="c-button c-button--lg c-button--alpha">
-        Data & inschrijvingen
-    </a>
-  </p>
+  {% set intro = entry.intro.all() %}
+  {% for block in intro %}
+  {% switch block.type %}
+  {% case "introParagraph" %}
+    <div class="c-typo-lead">
+      {{ block.introParagraph }}
+    </div>
+  {% case "paragraph" %}
+    {{ block.paragraph }}
+  {% case "subtitle" %}
+    <h2>{{ block.subtitle }}</h2>
+  {% case "button" %}
+    <p>
+      {% if block.buttonLink | length %}
+      {% for link in block.buttonLink.all() %}
+      <a href="{{ link.url }}" class="c-button c-button--lg c-button--alpha">
+        {{ block.buttonTitle }}
+      </a>
+      {% endfor %}
+      {% else %}
+      <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha">
+        {{ block.buttonTitle }}
+      </a>
+      {% endif %}
+    </p>
+  {% endswitch %}
+  {% endfor %}
 </div>
