@@ -28,7 +28,7 @@
     "verbb/cp-nav": "2.0.2",
     "ether/simplemap": "v3.2.0",
     "nystudio107/craft3-minify": "1.2.6",
-    "barrelstrength/sprout-active": "v2.0.1"
+    "barrelstrength/sprout-active": "v2.0.2"
   },
   "autoload": {
     "psr-4": {

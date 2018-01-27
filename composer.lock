@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5cecc7cdf12a4612d413a8e8689cafc9",
+    "content-hash": "432b9afa1eea0644b0390b006ee00c40",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/sprout-active/zipball/503e01ac4c1ff72663d8e96ddf70b29602d91761",
-                "reference": "503e01ac4c1ff72663d8e96ddf70b29602d91761",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-active/zipball/0b60f64b7817faee50e56f771b4e8a8599195cb4",
+                "reference": "0b60f64b7817faee50e56f771b4e8a8599195cb4",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "docs": "https://sprout.barrelstrengthdesign.com/craft-plugins/active/docs",
                 "rss": "https://github.com/barrelstrength/sprout-active/commits/v2.atom"
             },
-            "time": "2017-11-23T05:56:48+00:00"
+            "time": "2018-01-27T02:59:20+00:00"
         },
         {
             "name": "cebe/markdown",
