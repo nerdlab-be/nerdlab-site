@@ -28,9 +28,9 @@
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="http://nerdlab-site.localhost/assets/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/screen.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="http://nerdlab-site.localhost/assets/css/screen.min.css">
+    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/screen.min.css">
   {% endif %}
   {% endblock %}
 </head>
@@ -40,9 +40,9 @@
   {# Global javascript #}
   {% block foot %}
     {% if craft.app.config.general.devMode == true %}
-      <script src="http://nerdlab-site.localhost/assets/js/scripts.js"></script>
+      <script src="http://nerdlab.localhost/assets/js/scripts.js"></script>
     {% else %}
-      <script src="http://nerdlab-site.localhost/assets/js/scripts.min.js"></script>
+      <script src="http://nerdlab.localhost/assets/js/scripts.min.js"></script>
     {% endif %}
   {% endblock %}
 </body>

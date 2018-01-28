@@ -10,7 +10,7 @@
         "spec": ">=6.0.0-beta.4 <7.0.0",
         "type": "range"
       },
-      "/Users/dieterpeirs/3-Sites/nerdlab-site"
+      "/Users/dieterpeirs/3-Sites/nerdlab"
     ]
   ],
   "_from": "inuitcss@>=6.0.0-beta.4 <7.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "f0d128ae00f85f14005ebbc109e99ed7ddfce29f",
   "_shrinkwrap": null,
   "_spec": "inuitcss@^6.0.0-beta.4",
-  "_where": "/Users/dieterpeirs/3-Sites/nerdlab-site",
+  "_where": "/Users/dieterpeirs/3-Sites/nerdlab",
   "author": {
     "name": "Harry Roberts",
     "email": "csswizardry@gmail.com"

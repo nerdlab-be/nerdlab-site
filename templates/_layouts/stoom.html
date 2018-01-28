@@ -27,22 +27,23 @@
   <link rel="canonical" href="{{ entry.url }}">
 
   {# CSS #}
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700|Eczar:500,600" rel="stylesheet">
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/stoom.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/screen.min.css">
+    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/stoom.min.css">
   {% endif %}
   {% endblock %}
 </head>
-<body>
+<body class="js-body c-color">
   {% block body %}{% endblock %}
 
   {# Global javascript #}
   {% block foot %}
     {% if craft.app.config.general.devMode == true %}
-      <script src="http://nerdlab.localhost/assets/js/scripts.js"></script>
+      <script src="http://nerdlab.localhost/assets/js/stoom.js"></script>
     {% else %}
-      <script src="http://nerdlab.localhost/assets/js/scripts.min.js"></script>
+      <script src="http://nerdlab.localhost/assets/js/stoom.min.js"></script>
     {% endif %}
   {% endblock %}
 </body>

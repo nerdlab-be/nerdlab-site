@@ -10,7 +10,7 @@
         "spec": ">=1.0.2 <2.0.0",
         "type": "range"
       },
-      "/Users/dieterpeirs/3-Sites/nerdlab-site"
+      "/Users/dieterpeirs/3-Sites/nerdlab"
     ]
   ],
   "_from": "inuitcss-plugin-row@>=1.0.2 <2.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "d3c6742791506240c2b08f9af8d92ffdb2469575",
   "_shrinkwrap": null,
   "_spec": "inuitcss-plugin-row@^1.0.2",
-  "_where": "/Users/dieterpeirs/3-Sites/nerdlab-site",
+  "_where": "/Users/dieterpeirs/3-Sites/nerdlab",
   "author": {
     "name": "Dieter Peirs"
   },
