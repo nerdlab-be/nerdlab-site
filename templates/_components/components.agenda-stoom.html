@@ -1,0 +1,75 @@
+{#
+  Agenda (Stoom)
+  ================
+#}
+
+{#
+  {% include '_components/components.agenda-stoom.html' with { options: { tag: '', layout: '' } } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  tag: '',
+  layout: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<div class="c-row c-row--large js-two" id="agenda">
+  <div class="o-container">
+    <h2 class="c-subtitle">
+      Agenda
+    </h2>
+    <div class="o-grid o-grid--gutter-sm">
+      <div class="o-grid__item u-3-of-5-bp3 u-push-1-of-5-bp3">
+        <div class="c-card c-card--alpha" data-mh="agenda">
+          <h3 class="c-title-card u-text-center">Apocalyps</h3>
+          <p class="c-date-large u-text-center">14/02, 21/02, 7/03</p>
+          <p>
+            We beginnen bij het begin: Welk verhaal gaan we vertellen, en welke skills hebben we daarvoor nodig. Hoe gaan we video’s monteren, stitchen, en hoe krijgen we onze beelden in die VR-bril? Als we de basis onder de knie hebben gaan we aan de slag met het verhaal en het artwork. We gaan spelen met de interactie tussen beeld en publiek om uiteindelijk te landen bij een eigengemaakte VR productie. Klinkt alsof we de realiteit naar onze hand zullen zetten - en dat is exact wat we van plan zijn.
+            Machtig.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o-grid o-grid--gutter-sm">
+      <div class="o-grid__item u-3-of-5-bp3 u-push-1-of-5-bp3">
+        <div class="c-card c-card--alpha" data-mh="agenda">
+          <h3 class="c-title-card u-text-center">Migratie</h3>
+          <p class="c-date-large u-text-center">3, 10, 17, 24 april, 1, 8, 15, 22, 29 mei.</p>
+          <p>In module twee van Stoom focussen we op het bouwen van een Mantisbot. Met behulp van easy electronics leren we assembleren en gaan erna programmeren. De Mantisbot stelt ons in staat om 360 video-opnames te maken van de danscrew uit hoeken die we onszelf niet kunnen voorstellen. Met die beelden gaan we aan de slag om met het tweede deel van de story en het artwork aan de slag te gaan. Deel twee van onze VR-ervaring is klaar.</p>
+          <p class="u-text-center"><a href="#practical" class="c-date-small js-smoothscroll" onclick="ga('send', 'event', 'Inschrijven', 'Migratie');">no clue</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="o-grid o-grid--gutter-sm">
+      <div class="o-grid__item u-3-of-5-bp3 u-push-1-of-5-bp3">
+        <div class="c-card c-card--alpha" data-mh="agenda">
+          <div class="c-card__image">
+            <img src="http://nerdlab.localhost/images/21151296_1885480711772987_2986098449627018871_n.jpg" alt="Arrival">
+          </div>
+          <h3 class="c-title-card u-text-center">Arrival</h3>
+          <p class="c-date-large u-text-center">5, 12, 19, 26 juni & 7, 14, 21, 28 augustus</p>
+          <p>
+            Drones en dans. Drones zijn zotte machines die ons in staat stellen om vanuit hoogtes die we zelf niet kunnen indenken te capteren. We bouwen een stukje aan onze drone zodat we in staat zijn 360 luchtopnames te maken.
+            Dancing with drones. A whole new level.
+          </p>
+          <p class="u-text-center"><a href="#practical" class="c-date-small js-smoothscroll" onclick="ga('send', 'event', 'Inschrijven', 'Arrival');">?</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="o-grid o-grid--gutter-sm">
+      <div class="o-grid__item u-3-of-5-bp3 u-push-1-of-5-bp3">
+        <div class="c-card c-card--alpha" data-mh="agenda">
+          <h3 class="c-title-card u-text-center">Regeneration</h3>
+          <p>?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

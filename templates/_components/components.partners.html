@@ -1,0 +1,25 @@
+{#
+  Partners
+  ================
+#}
+
+{#
+  {% include '_components/components.partners.html' %}
+#}
+
+{# -- Module -- #}
+<div class="c-row c-row--large js-four" id="partners">
+  <div class="o-container o-container--sm c-relative">
+    <div class="o-flex-alt o-flex-alt--center">
+      {% for block in entry.partners.all() %}
+      <div class="o-flex-alt__item u-1-of-2 u-1-of-3-bp4 u-text-center">
+        <p>
+          {% for image in block.partnerLogo.all() %}
+          <a href="{{ block.partnerURL }}" class="c-link-logo" style="background-image: url('http:{{ image.url }}')">{{ image.title }}</a>
+          {% endfor %}
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
