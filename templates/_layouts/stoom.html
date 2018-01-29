@@ -6,6 +6,12 @@
  #
 -#}
 
+{# Set the `bodyClass` variable to the entry's section handle if there is one,
+   or the first URI segment (this is used by the parent template) #}
+{% if bodyClass is not defined %}
+  {% set bodyClass = entry is defined ? entry.section.handle : craft.request.firstSegment %}
+{% endif %}
+
 {% minify %}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
@@ -36,7 +42,65 @@
   {% endblock %}
 </head>
 <body class="js-body c-color">
+  {# Header #}
+  <header class="c-row c-row--header js-header">
+    <div class="o-grid o-grid--gutter">
+      <div class="o-grid__item u-1-of-3-bp5">
+        <h1 class="c-logo">Stoom</h1>
+      </div>
+      <div class="o-grid__item u-2-of-3-bp5">
+        <nav>
+          <ul class="c-nav">
+            {% set content = interface.navigation.all() %}
+            {% for block in content %}
+            {% set links = block.itemLink.all() %}
+            {% for link in links %}
+            {% set active = bodyClass == link.section.handle %}
+            <li class="c-nav__item">
+              <a href="{{ link.url }}{{ block.itemID }}" class="c-nav__link js-smoothscroll">{{ block.itemTitle }}</a>
+            </li>
+            {% endfor %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
   {% block body %}{% endblock %}
+
+  {# Footer #}
+  <footer class="c-row c-row--large">
+    <div class="o-container c-relative">
+      <div class="o-grid o-grid--gutter">
+        <div class="o-grid__item u-1-of-2-bp4">
+          <div class="o-grid o-grid--gutter">
+            <div class="o-grid__item u-1-of-2-bp2">
+              <div class="c-editor">
+                {{ interface.address }}
+              </div>
+            </div>
+            <div class="o-grid__item u-1-of-2-bp2">
+              <p class="u-mb-alpha">{{ interface.socialTitle }}</p>
+              <ul class="o-list">
+                {% for block in interface.social.all() %}
+                  <li><a class="c-link" href="{{ block.linkURL }}">{{ block.linkTitle }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="o-grid__item u-1-of-2-bp4">
+          <div class="c-footer__subscribe">
+
+            <div class="c-editor">
+              {{ interface.about }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   {# Global javascript #}
   {% block foot %}

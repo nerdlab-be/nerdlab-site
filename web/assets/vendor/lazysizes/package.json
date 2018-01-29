@@ -10,7 +10,7 @@
         "spec": ">=3.0.0-rc2 <4.0.0",
         "type": "range"
       },
-      "/Users/dieterpeirs/3-Sites/nerdlab"
+      "/Users/dieterpeirs/3-Sites/nerdlab-site"
     ]
   ],
   "_from": "lazysizes@>=3.0.0-rc2 <4.0.0",
@@ -44,7 +44,7 @@
   "_shasum": "b1bacb5a0f28113ffa7b389ce2f35f1cff19d9b9",
   "_shrinkwrap": null,
   "_spec": "lazysizes@^3.0.0-rc2",
-  "_where": "/Users/dieterpeirs/3-Sites/nerdlab",
+  "_where": "/Users/dieterpeirs/3-Sites/nerdlab-site",
   "author": {
     "name": "Alexander Farkas",
     "email": "info@corrupt-system.de"

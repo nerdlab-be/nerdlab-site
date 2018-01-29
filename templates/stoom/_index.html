@@ -6,33 +6,6 @@
 {% extends "_layouts/stoom" %}
 
 {% block body %}
-<div class="c-row c-row--header js-header">
-  <div class="o-grid o-grid--gutter">
-    <div class="o-grid__item u-1-of-3-bp5">
-      <h1 class="c-logo">Stoom</h1>
-    </div>
-    <div class="o-grid__item u-2-of-3-bp5">
-      <nav>
-        <ul class="c-nav">
-          <li class="c-nav__item">
-            <a href="#concept" class="c-nav__link js-smoothscroll" onclick="ga('send', 'event', 'Navigatie', 'Concept');">Concept</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#agenda" class="c-nav__link js-smoothscroll" onclick="ga('send', 'event', 'Navigatie', 'Agenda');">Agenda</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#practical" class="c-nav__link js-smoothscroll" onclick="ga('send', 'event', 'Navigatie', 'Praktisch');">Praktisch</a>
-          </li>
-          <li class="c-nav__item">
-            <a href="#partners" class="c-nav__link js-smoothscroll" onclick="ga('send', 'event', 'Navigatie', 'Partners');">Partners</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  </div>
-</div>
-
 {# Hero #}
 <div class="c-row c-row--full js-hero" id="hero">
   <div class="o-grid c-illustration js-illustration u-text-center ">
@@ -97,10 +70,33 @@
   <div class="c-row__content">
     <div class="o-grid o-grid--gutter">
       <div class="o-grid__item u-2-of-3-bp5 u-push-1-of-3-bp5">
-        <h1 class="c-page-intro">
-          Heb jij zin om ongedwongen dingen te maken? Wil jij op een fijne manier leren van de beste? Welkom bij STOOM!
-        </h1>
-        <p><a href="#practical" class="c-button c-button--lg c-button--alpha js-smoothscroll" onclick="ga('send', 'event', 'Inschrijven', 'DoeMee');">Doe mee!</a></p>
+        {% set intro = entry.intro.all() %}
+        {% for block in intro %}
+        {% switch block.type %}
+        {% case "introParagraph" %}
+          <div class="c-page-intro">
+            {{ block.introParagraph }}
+          </div>
+        {% case "paragraph" %}
+          {{ block.paragraph }}
+        {% case "subtitle" %}
+          <h2>{{ block.subtitle }}</h2>
+        {% case "button" %}
+          <p>
+            {% if block.buttonLink | length %}
+            {% for link in block.buttonLink.all() %}
+            <a href="{{ link.url }}" class="c-button c-button--lg c-button--alpha">
+              {{ block.buttonTitle }}
+            </a>
+            {% endfor %}
+            {% else %}
+            <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha js-smoothscroll">
+              {{ block.buttonTitle }}
+            </a>
+            {% endif %}
+          </p>
+        {% endswitch %}
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -273,44 +269,4 @@
     </div>
   </div>
 </div>
-
-{# Footer #}
-<footer class="c-row c-row--large u-text-center">
-  <div class="o-container c-relative">
-    <div class="o-grid o-grid--gutter">
-      <div class="o-grid__item u-4-of-6-bp3 u-push-1-of-6-bp3">
-        <h4><a href="http://nerdlab.be/" class="c-nerdlab">Nerdlab</a></h4>
-        <div class="c-editor">
-          <p><strong><a href="http://nerdlab.be/">Nerdlab</a></strong> is een <strong>open collectief</strong> van <strong>makers</strong>. We bouwen installaties en machines, organiseren evenementen en veroveren de wereld. Oh, en daarnaast hebben we ook een fablab in Gent waar iedereen welkom is.</p>
-        </div>
-        <ul class="c-list-inline">
-          <li class="c-list-inline__item">
-            <a href="https://www.facebook.com/Nerdlab" class="c-link">
-              <svg role="img" class="c-symbol c-symbol-facebook">
-                <use xlink:href="http://nerdlab.localhost/assets/img/svg/svg-symbols-stoom.svg#facebook"></use>
-              </svg>
-              Facebook
-            </a>
-          </li>
-          <li class="c-list-inline__item">
-            <a href="https://twitter.com/NerdLab9000" class="c-link">
-              <svg role="img" class="c-symbol c-symbol-twitter">
-                <use xlink:href="http://nerdlab.localhost/assets/img/svg/svg-symbols-stoom.svg#twitter"></use>
-              </svg>
-              Twitter
-            </a>
-          </li>
-          <li class="c-list-inline__item">
-            <a href="https://www.instagram.com/nerdlab9000/" class="c-link">
-              <svg role="img" class="c-symbol c-symbol-instagram">
-                <use xlink:href="http://nerdlab.localhost/assets/img/svg/svg-symbols-stoom.svg#instagram"></use>
-              </svg>
-              Instagram
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
 {% endblock %}
