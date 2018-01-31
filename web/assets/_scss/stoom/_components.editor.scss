@@ -123,27 +123,33 @@
 
 
 .c-editor--special {
-    p {
-        position: relative;
-    }
+  margin-top: 1em;
+  margin-bottom: 2em;
+
+  p {
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  p + p {
+    margin-top: 1em;
+  }
 
     @include mq(bp4) {
         p {
-            @include text-dimensions($ms3,1.5,6);
+          @include text-dimensions($ms3,1.5);
+          margin-bottom: 0;
         }
 
-        p:last-child {
-            @include margin-bottom(3);
-        }
 
-        p:nth-child(even) {
-            position: relative;
-            left: 20%;
-        }
-
-        p:nth-child(odd) {
-            position: relative;
-            left: -20%;
-        }
+        // p:nth-child(even) {
+        //     position: relative;
+        //     left: 20%;
+        // }
+        //
+        // p:nth-child(odd) {
+        //     position: relative;
+        //     left: -20%;
+        // }
     }
 }

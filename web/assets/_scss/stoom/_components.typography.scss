@@ -27,15 +27,33 @@
 }
 
 .c-lead {
+  @include text-dimensions($ms4,1.3,2);
+  max-width: 32em;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $beta-font-family;
+
+  @include mq(bp3) {
+      @include text-dimensions($ms4,1.3,4);
+  }
+}
+
+div.c-lead {
+  p {
     @include text-dimensions($ms4,1.3,2);
     max-width: 32em;
     margin-left: auto;
     margin-right: auto;
     font-family: $beta-font-family;
 
-    @include mq(bp3) {
-        @include text-dimensions($ms4,1.3,4);
+
+  }
+
+  @include mq(bp3) {
+    p {
+      @include text-dimensions($ms4,1.3,4);
     }
+  }
 }
 
 .c-subtitle {

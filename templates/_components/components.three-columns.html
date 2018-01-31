@@ -10,63 +10,57 @@
 {# -- Module -- #}
 <div class="c-row c-row--large js-three" id="practical">
   <div class="o-container c-relative">
+    {% for block in entry.subscribe.all() %}
+    {% switch block.type %}
+    {% case "subscribeTitle" %}
     <h2 class="c-subtitle">
-      Doe mee!
+      {{ block.subscribeTitle }}
     </h2>
-    <p class="u-text-center c-lead">
-      Zin gekregen om mee te doen? Ideaal! Het enige wat je nodig hebt is een laptop en een paspoort waarop staat dat je tussen 16 en 25 jaar oud bent.
-    </p>
+    {% case "subscribeIntro" %}
+    <div class="u-text-center c-lead">
+      {{ block.subscribeIntro }}
+    </div>
+    {% case "options" %}
     <div class="o-grid o-grid--gutter">
       <div class="o-grid__item u-1-of-3-bp3 c-card-divider">
         <div class="c-card c-card--beta">
-          <h3 class="u-text-center c-card__title">1 kwartaal</h3>
+          <h3 class="u-text-center c-card__title">{{ block.optionOneSubtitle }}</h3>
           <div data-mh="price" class="u-mb-epsilon">
-            <p>Wie zich inschrijft voor één kwartaal betaalt €35 euro. Daarin zit een waarborg van €25 die we terugbetalen als je effectief iets toont op een evenement.</p>
+            {{ block.optionOneParagraph }}
           </div>
           <p class="u-text-center">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSea6ru1-r8-lpqlmmpsBAgrIBCkENQDwyFg_B_syE3Dx-HB7w/viewform" class="c-button c-button--lg c-button--alpha" onclick="ga('send', 'event', 'Inschrijven', 'GaNaarForm');">Schrijf je in</a>
+            <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha">{{ block.buttonTitle }}</a>
           </p>
         </div>
       </div>
       <div class="o-grid__item u-1-of-3-bp3 c-card-divider">
         <div class="c-card c-card--beta">
-          <h3 class="u-text-center c-card__title">Volledig jaar</h3>
+          <h3 class="u-text-center c-card__title">{{ block.optionTwoSubtitle }}</h3>
           <div data-mh="price" class="u-mb-epsilon">
-            <p>Wie zich inschrijft voor het volledige jaar betaalt €100. Daarin zit een waarborg van €60 die je terugkrijgt als je op het ganse traject mee loopt.</p>
+            {{ block.optionTwoParagraph }}
           </div>
           <p class="u-text-center">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSea6ru1-r8-lpqlmmpsBAgrIBCkENQDwyFg_B_syE3Dx-HB7w/viewform" class="c-button c-button--lg c-button--alpha" onclick="ga('send', 'event', 'Inschrijven', 'GaNaarForm');">Schrijf je in</a>
+            <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha">{{ block.buttonTitle }}</a>
           </p>
         </div>
       </div>
       <div class="o-grid__item u-1-of-3-bp3 c-card-divider">
         <div class="c-card c-card--beta">
-          <h3 class="u-text-center c-card__title">Losse workshop</h3>
+          <h3 class="u-text-center c-card__title">{{ block.optionThreeSubtitle }}</h3>
           <div data-mh="price" class="u-mb-epsilon">
-            <p>Een losse workshop volgen kan ook, en kost €10. Eens langskomen op een werkmoment kan altijd en is gratis.</p>
+            {{ block.optionThreeParagraph }}
           </div>
           <p class="u-text-center">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSea6ru1-r8-lpqlmmpsBAgrIBCkENQDwyFg_B_syE3Dx-HB7w/viewform" class="c-button c-button--lg c-button--alpha" onclick="ga('send', 'event', 'Inschrijven', 'GaNaarForm');">Schrijf je in</a>
+            <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha">{{ block.buttonTitle }}</a>
           </p>
         </div>
       </div>
     </div>
+    {% case "subscribeFooter" %}
     <div class="u-text-center u-mt-delta">
-      <p class="u-mt-epsilon u-mb-epsilon">
-        <a href="mailto:marlies@nerdlab.be" class="c-link">
-          <svg role="img" class="c-symbol c-symbol-contact">
-            <use xlink:href="http://nerdlab.localhost/assets/img/svg/svg-symbols-stoom.svg#contact"></use>
-          </svg>
-          Stel vragen aan Marlies
-        </a>
-        of
-        <a href="https://nerdlab-stoom.github.io/documentatie/" class="c-link">
-          <svg role="img" class="c-symbol c-symbol-github">
-            <use xlink:href="http://nerdlab.localhost/assets/img/svg/svg-symbols-stoom.svg#github"></use>
-          </svg>
-          Volg het Stoom project op Github
-        </a>
-      </p>
+      {{ block.subscribeFooter }}
     </div>
+    {% endswitch %}
+    {% endfor %}
   </div>
 </div>

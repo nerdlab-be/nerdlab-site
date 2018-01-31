@@ -5,46 +5,122 @@
 */
 
 .o-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $grid-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $grid-max-width;
 }
 
-// No gutters
+// Grid
 
 .o-grid {
-    @include clearfix;
+  display: flex; /* [3] */
+  align-items: stretch; /* [3] */
+  flex-wrap: wrap; /* [3] */
+  margin:  0; /* [2] */
+  padding: 0; /* [2] */
+  list-style: none; /* [1] */
 }
 
-// Default gutter
-
 .o-grid--gutter {
-    @include margin-lr(-($grid-gutter),-($grid-gutter));
+  @include margin-lr(-($grid-gutter),-($grid-gutter));
 }
 
 .o-grid--gutter-sm {
-    @include margin-lr(-($grid-gutter/2),-($grid-gutter/2));
+  @include margin-lr(-($grid-gutter/2),-($grid-gutter/2));
 }
 
 .o-grid--gutter-lg {
-    @include margin-lr(-($grid-gutter*2),-($grid-gutter*2));
+  @include margin-lr(-($grid-gutter*2),-($grid-gutter*2));
 }
 
-    // Grid item, takes the full width by default
 
-    .o-grid__item {
-        float: left;
-        width: 100%;
+  /**
+   * 1. By default, all layout items are full-width (mobile first).
+   * 2. Gutters provided by left padding:
+   */
 
-        .o-grid--gutter > & {
-            @include padding-lr($grid-gutter,$grid-gutter);
-        }
+  .o-grid__item {
+    width: 100%; /* [1] */
 
-        .o-grid--gutter-sm > & {
-            @include padding-lr($grid-gutter/2,$grid-gutter/2);
-        }
-
-        .o-grid--gutter-lg > & {
-            @include padding-lr($grid-gutter*2,$grid-gutter*2);
-        }
+    .o-grid--gutter > & {
+      @include padding-lr($grid-gutter,$grid-gutter);
     }
+
+    .o-grid--gutter-sm > & {
+      @include padding-lr($grid-gutter/2,$grid-gutter/2);
+    }
+
+    .o-grid--gutter-lg > & {
+      @include padding-lr($grid-gutter*2,$grid-gutter*2);
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+/* Vertical alignment modifiers.
+   ========================================================================== */
+
+/**
+ * Align all grid items to the middles of each other.
+ */
+
+.o-grid--middle {
+
+  > .o-grid__item {
+    align-self: center;
+  }
+
+}
+
+
+/**
+ * Align all grid items to the bottoms of each other.
+ */
+
+.o-grid--bottom {
+
+  > .o-grid__item {
+    align-self: flex-end;
+  }
+
+}
+
+
+
+
+
+/* Fill order modifiers.
+   ========================================================================== */
+
+/**
+ * Fill up the layout system from the centre.
+ */
+
+.o-grid--center {
+  justify-content: center;
+}
+
+
+/**
+ * Fill up the layout system from the right-hand side.
+ */
+
+.o-grid--right {
+  justify-content: flex-end;
+}
+
+
+/**
+ * Reverse the rendered order of the grid system.
+ */
+
+.o-grid--reverse {
+  flex-direction: row-reverse;
+}
