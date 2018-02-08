@@ -5,7 +5,7 @@ categories:
 - iot
 position: 10
 when: Maandag 26 maart 2018
-link: https://www.facebook.com/events/140869936605541/
+link: 'https://docs.google.com/forms/d/e/1FAIpQLSeJxJZZSuAh6dn7P5VczzPFI6YVX3b4JVMMowHkhJvCYTtXKg/viewform?usp=sf_link '
 ---
 
 Je kan met een parkeersensor meten of de koffie bijna op is, maar ook een krokodillenval. We spelen met alle mogelijk sensoren en kijken welke data we er kunnen uithalen. Wie wil geen bananenkleursensor zelf kunnen maken?
