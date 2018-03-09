@@ -1,4 +1,4 @@
-{% if craft.config.devMode == true %}
+{% if craft.app.config.general.devMode == true %}
 {% else %}
   {% if settings.googleAnalyticsCode | length %}
     <script>
