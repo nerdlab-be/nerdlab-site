@@ -19,7 +19,7 @@
     <div class="o-grid o-grid--gutter-sm">
       <div class="o-grid__item u-3-of-5-bp3 u-push-1-of-5-bp3">
         <div class="c-card c-card--alpha" data-mh="agenda">
-          {% if entry.photo |length %}
+          {% if entry.photo | length %}
           <div class="c-card__image">
             {% for image in entry.photo.all() %}
             <img src="{{ image.url }}" alt="{{ image.title }}">

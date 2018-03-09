@@ -15,23 +15,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {# Metadata #}
-  <title>
-    {% if title is defined %}
-      {{ title }} -
-    {% endif %}
-    {{ siteName }}
-  </title>
+  {# SEO #}
+  {% hook "seo" %}
 
-  {# Canonical link #}
-  <link rel="canonical" href="{{ entry.url }}">
+  {# Modernizr #}
+  <script src="http://staging.nerdlab.be/assets/js/modernizr-custom.js"></script>
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="http://staging.nerdlab.be/assets/css/screen.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/screen.min.css">
+    <link rel="stylesheet" type="text/css" href="http://staging.nerdlab.be/assets/css/screen.min.css">
   {% endif %}
+
+  {# Analytics #}
+  {% include "_globals/globals.analytics" %}
   {% endblock %}
 </head>
 <body>
@@ -40,9 +38,9 @@
   {# Global javascript #}
   {% block foot %}
     {% if craft.app.config.general.devMode == true %}
-      <script src="http://nerdlab.localhost/assets/js/scripts.js"></script>
+      <script src="http://staging.nerdlab.be/assets/js/scripts.js"></script>
     {% else %}
-      <script src="http://nerdlab.localhost/assets/js/scripts.min.js"></script>
+      <script src="http://staging.nerdlab.be/assets/js/scripts.min.js"></script>
     {% endif %}
   {% endblock %}
 </body>

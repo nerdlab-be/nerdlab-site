@@ -16,9 +16,9 @@
 {% endif %}
 
 {% block body %}
-  {% include "_globals/globals.header" %}
-
   <div class="c-scene" id="js-smoothstate">
+    {% include "_globals/globals.header" %}
+
     <main role="main" id="main" class="c-main">
       {% block main %}{% endblock %}
     </main>
