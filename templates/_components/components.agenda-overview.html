@@ -21,11 +21,14 @@
 {% endif %}
 
 {# -- Module -- #}
-{% paginate craft.entries.section('agendaDetail').limit(20) as pageInfo, pageEntries %}
+<!-- {% paginate craft.entries.section('agendaDetail').limit(20) as pageInfo, pageEntries %} -->
 
-{% for entry in pageEntries %}
+{% set pageEntries = craft.entries.section('agendaDetail').orderBy('date asc') %}
+
+{% for entry in pageEntries.all() %}
 
 {% if options.layout == "compact" %}
+{% if entry.date|date('Ymd') >= now|date('Ymd') %}
 <article class="s-content o-media">
   <p class="u-mb-alpha u-faded">
     {{ entry.date |date('l d F Y') }}
@@ -47,7 +50,9 @@
     </p>
   </div>
 </article>
+{% endif %}
 {% else %}
+{% if entry.date|date('Ymd') >= now|date('Ymd') %}
 <article class="s-content o-media">
   <div class="o-grid o-grid--gutter o-flex-bp3 o-flex--wrap">
     <div class="o-grid__item u-1-of-2-bp4">
@@ -79,5 +84,6 @@
     </div>
   </div>
 </article>
+{% endif %}
 {% endif %}
 {% endfor %}
