@@ -1,0 +1,48 @@
+{#
+ # The base layout template
+ # ------------------------
+ #
+ # This template defines the base HTML structure for our site.
+ #
+-#}
+
+{% minify %}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<head>
+  {% block head %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {# SEO #}
+  {% hook "seo" %}
+
+  {# Modernizr #}
+  <script src="https://nerdlab.be/assets/js/modernizr-custom.js"></script>
+
+  {# CSS #}
+  {% if craft.app.config.general.devMode == true %}
+    <link rel="stylesheet" type="text/css" href="https://nerdlab.be/assets/css/screen.css">
+  {% else %}
+    <link rel="stylesheet" type="text/css" href="https://nerdlab.be/assets/css/screen.min.css">
+  {% endif %}
+
+  {# Analytics #}
+  {% include "_globals/globals.analytics" %}
+  {% endblock %}
+</head>
+<body>
+  {% block body %}{% endblock %}
+
+  {# Global javascript #}
+  {% block foot %}
+    {% if craft.app.config.general.devMode == true %}
+      <script src="https://nerdlab.be/assets/js/scripts.js"></script>
+    {% else %}
+      <script src="https://nerdlab.be/assets/js/scripts.min.js"></script>
+    {% endif %}
+  {% endblock %}
+</body>
+</html>
+{% endminify %}

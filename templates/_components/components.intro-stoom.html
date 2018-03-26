@@ -1,0 +1,46 @@
+{#
+  Intro (stoom)
+  ================
+#}
+
+{#
+  {% include '_components/components.intro-stoom.html' %}
+#}
+
+{# -- Module -- #}
+<div class="c-row c-row--full js-hero" id="hero">
+  {% include '_elements/elements.stoom-background.html' %}
+  <div class="c-row__content">
+    <div class="o-grid o-grid--gutter">
+      <div class="o-grid__item u-2-of-3-bp5 u-push-1-of-3-bp5">
+        {% set intro = entry.intro.all() %}
+        {% for block in intro %}
+        {% switch block.type %}
+        {% case "introParagraph" %}
+          <div class="c-page-intro">
+            {{ block.introParagraph }}
+          </div>
+        {% case "paragraph" %}
+          {{ block.paragraph }}
+        {% case "subtitle" %}
+          <h2>{{ block.subtitle }}</h2>
+        {% case "button" %}
+          <p>
+            {% if block.buttonLink | length %}
+            {% for link in block.buttonLink.all() %}
+            <a href="{{ link.url }}" class="c-button c-button--lg c-button--alpha">
+              {{ block.buttonTitle }}
+            </a>
+            {% endfor %}
+            {% else %}
+            <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha js-smoothscroll">
+              {{ block.buttonTitle }}
+            </a>
+            {% endif %}
+          </p>
+        {% endswitch %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

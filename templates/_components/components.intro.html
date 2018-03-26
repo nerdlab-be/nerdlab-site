@@ -1,0 +1,39 @@
+{#
+  Intro
+  ================
+#}
+
+{#
+  {% include '_components/components.intro.html' %}
+#}
+
+{# -- Module -- #}
+<div class="s-content u-max-width-md">
+  {% set intro = entry.intro.all() %}
+  {% for block in intro %}
+  {% switch block.type %}
+  {% case "introParagraph" %}
+    <div class="c-typo-lead">
+      {{ block.introParagraph }}
+    </div>
+  {% case "paragraph" %}
+    {{ block.paragraph }}
+  {% case "subtitle" %}
+    <h2>{{ block.subtitle }}</h2>
+  {% case "button" %}
+    <p>
+      {% if block.buttonLink | length %}
+      {% for link in block.buttonLink.all() %}
+      <a href="{{ link.url }}" class="c-button c-button--lg c-button--alpha">
+        {{ block.buttonTitle }}
+      </a>
+      {% endfor %}
+      {% else %}
+      <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha">
+        {{ block.buttonTitle }}
+      </a>
+      {% endif %}
+    </p>
+  {% endswitch %}
+  {% endfor %}
+</div>

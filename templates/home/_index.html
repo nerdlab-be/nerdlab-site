@@ -1,0 +1,22 @@
+{#
+ # The homepage template
+ # ------------------------
+-#}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+<div class="c-row c-row--md u-z-delta">
+  <div class="o-container">
+    <div class="o-grid o-grid--gutter o-flex">
+      <div class="o-grid__item u-1-of-2-bp6">
+        {# Intro #}
+        {% include '_components/components.intro.html' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# CTA #}
+{% include '_components/components.cta.html' with { options: { handle: '' } } %}
+{% endblock %}

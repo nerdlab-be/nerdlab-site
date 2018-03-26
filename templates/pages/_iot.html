@@ -1,0 +1,30 @@
+{#
+ # IoT
+ # ------------------------
+-#}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+
+<div class="c-row c-row--md">
+  <div class="o-container">
+    <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
+      <div class="o-grid__item u-1-of-2-bp5">
+        {# Intro #}
+        {% include '_components/components.intro.html' %}
+      </div>
+      <div class="o-grid__item u-1-of-2-bp5 u-divider-mobile">
+        <div class="s-content u-max-width-md">
+          {# Agenda overview #}
+          {% include '_components/components.agenda-filter.html' with { options: { tag: 'iot', layout: 'compact' } } %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Gallery #}
+{% include '_components/components.gallery.html' %}
+
+{% endblock %}

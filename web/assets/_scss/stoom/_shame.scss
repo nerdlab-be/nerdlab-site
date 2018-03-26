@@ -1,0 +1,29 @@
+/*
+    Shame
+    ---
+    Hacks and quick fixes
+*/
+
+// Bring content to the front
+.c-relative {
+    position: relative;
+    z-index: 1;
+}
+
+// Add a smaller container
+.o-container--sm {
+    max-width: map-get($breakpoints,bp3);
+}
+
+.o-flex-alt {
+    display: flex;
+    @include padding-lr(-($grid-gutter),-($grid-gutter));
+}
+
+.o-flex-alt--center {
+    justify-content: center;
+}
+
+    .o-flex-alt__item {
+        @include padding-lr($grid-gutter,$grid-gutter);
+    }

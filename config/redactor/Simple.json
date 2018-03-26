@@ -1,0 +1,8 @@
+{
+  "buttons": ["bold", "italic", "link"],
+  "toolbarFixed": true,
+  "pastePlainText": true,
+  "removeNewlines": true,
+  "pasteBlockTags": [],
+  "pasteInlineTags": []
+}

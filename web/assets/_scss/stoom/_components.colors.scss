@@ -1,0 +1,20 @@
+.c-color {
+    color: palette(color-neutral,x-dark);
+    background-color: palette(color-neutral,x-light);
+    transition: background-color .3s linear;
+}
+
+.c-color--alpha {
+    color: palette(color-beta,dark);
+    background-color: tint(palette(color-beta),80);
+}
+
+.c-color--beta {
+    color: palette(color-alpha,dark);
+    background-color: tint(palette(color-alpha),80);
+}
+
+.c-color--gamma {
+    color: palette(color-neutral,x-dark);
+    background-color: palette(color-neutral,x-light);
+}

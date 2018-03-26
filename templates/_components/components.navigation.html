@@ -1,0 +1,39 @@
+{#
+  Navigation
+  ================
+#}
+
+{#
+  {% include '_components/components.navigation.html' with { options: { handle: '' } } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  handle: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<button class="c-nav-main-trigger js-nav-trigger-button js-nav-trigger">
+  <span class="c-nav-main-trigger__icon"></span>
+  <span class="is-accessible-hidden">Menu</span>
+</button>
+<nav class="c-nav-main js-nav">
+  <ul class="o-list c-nav-main__list">
+    {% set content = options.handle.all() %}
+    {% for block in content %}
+    {% set links = block.itemLink.all() %}
+    {% for link in links %}
+    {% set active = bodyClass == link.section.handle %}
+    <li class="c-nav-main__item{{ active ? ' is-selected' : '' }}">
+      <a href="{{ link.url }}{{ block.itemID }}" class="c-nav-main__link js-nav-trigger-up">{{ block.itemTitle }}</a>
+    </li>
+    {% endfor %}
+    {% endfor %}
+  </ul>
+</nav>

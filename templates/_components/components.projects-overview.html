@@ -1,0 +1,67 @@
+{#
+  Projects overview
+  ================
+#}
+
+{#
+  {% include '_components/components.projects-overview.html' %}
+#}
+
+{# -- Module -- #}
+{% paginate craft.entries.section('projectDetail').limit(20) as pageInfo, pageEntries %}
+
+{% for entry in pageEntries %}
+<div class="c-row c-row--md c-row--border-top u-bgcolor-neutral-xxxxx-light">
+  <div class="o-container">
+    <div class="o-grid o-grid--gutter o-flex o-flex--wrap {{ cycle(['o-flex--horizontal-rev', ''], loop.index0) }}">
+      <div class="o-grid__item u-1-of-2-bp4">
+        <div class="o-flex o-flex--wrap o-flex--vertical-rev-bp4">
+          <div class="s-content u-max-width-md u-mb-gamma-bp3 u-mb-alpha-bp4">
+            <h2>
+              {{ entry.title }}
+            </h2>
+            {% set intro = entry.intro.all() %}
+            {% for block in intro %}
+            {% switch block.type %}
+            {% case "introParagraph" %}
+              {{ block.introParagraph }}
+            {% endswitch %}
+            {% endfor %}
+          </div>
+            {% for item in entry.projectHeader.all() %}
+            {% switch item.type %}
+            {% case "rightPhoto" %}
+            {% if item.photo | length %}
+            {% for type in item.photo.all() %}
+            <p class="u-mb-jota-bp3">
+              <img src="{{ type.url }}" alt="{{ type.title }}">
+            </p>
+            {% endfor %}
+            {% endif %}
+            {% endswitch %}
+            {% endfor %}
+        </div>
+      </div>
+      <div class="o-grid__item u-1-of-2-bp4">
+        {% for item in entry.projectHeader.all() %}
+        {% switch item.type %}
+        {% case "leftPhoto" %}
+        {% if item.photo | length %}
+        {% for type in item.photo.all() %}
+        <p>
+          <img src="{{ type.url }}" alt="{{ type.title }}">
+        </p>
+        {% if type.credits | length %}
+        <p class="u-ms-2 u-color-neutral-base">
+          {{ type.credits }}
+        </p>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endswitch %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

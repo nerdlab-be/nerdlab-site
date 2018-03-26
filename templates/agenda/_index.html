@@ -1,0 +1,20 @@
+{#
+ # Agenda
+ # ------------------------
+-#}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+
+<div class="c-row c-row--md u-bgcolor-neutral-xxxxx-light u-z-gamma">
+  <div class="o-container">
+    {# Agenda overview #}
+    {% include '_components/components.agenda-overview.html' %}
+  </div>
+</div>
+
+{# CTA #}
+{% include '_components/components.cta.html' %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{#
+  Agenda (Stoom)
+  ================
+#}
+
+{#
+  {% include '_components/components.agenda-stoom.html' %}
+#}
+
+{# -- Module -- #}
+<div class="c-row c-row--large js-two" id="agenda">
+  <div class="o-container">
+    <h2 class="c-subtitle">
+      {{ entry.agendaTitle }}
+    </h2>
+    {% paginate craft.entries.section('agendaStoom').limit(20) as pageInfo, pageEntries %}
+
+    {% for entry in pageEntries %}
+    <div class="o-grid o-grid--gutter-sm">
+      <div class="o-grid__item u-3-of-5-bp3 u-push-1-of-5-bp3">
+        <div class="c-card c-card--alpha" data-mh="agenda">
+          {% if entry.photo | length %}
+          <div class="c-card__image">
+            {% for image in entry.photo.all() %}
+            <img src="{{ image.url }}" alt="{{ image.title }}">
+            {% endfor %}
+          </div>
+          {% endif %}
+          <h3 class="c-title-card u-text-center">{{ entry.title }}</h3>
+          <p class="c-date-large u-text-center">{{ entry.dates }}</p>
+          {{ entry.paragraph }}
+          {% for item in entry.button.all() %}
+          <p>
+          {% if item.buttonLink | length %}
+            {% for link in item.buttonLink.all() %}
+            <a href="{{ link.url() }}" class="c-date-small js-smoothscroll">
+              {{ item.buttonTitle }}
+            </a>
+            {% endfor %}
+          {% else %}
+            <a href="{{ item.buttonURL }}" class="c-date-small js-smoothscroll">
+              {{ item.buttonTitle }}
+            </a>
+          {% endif %}
+          </p>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

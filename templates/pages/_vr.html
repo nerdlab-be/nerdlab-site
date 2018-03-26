@@ -1,0 +1,23 @@
+{#
+ # Virtual reality
+ # ------------------------
+-#}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+<div class="c-row c-row--md">
+  <div class="o-container">
+    <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
+      <div class="o-grid__item u-1-of-2-bp6">
+        {# Intro #}
+        {% include '_components/components.intro.html' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Gallery #}
+{% include '_components/components.gallery.html' %}
+
+{% endblock %}

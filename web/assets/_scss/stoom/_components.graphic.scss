@@ -1,0 +1,125 @@
+.c-graphic {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    @include padding-lr(0,1);
+}
+
+    .c-graphic__item-holder {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .c-graphic__item {
+        position: absolute;
+        left: 0;
+        opacity: .3;
+        width: 100%;
+
+        .c-color & {
+            svg g {
+                stroke: palette(color-alpha);
+            }
+        }
+
+        .c-color--alpha & {
+            opacity: .3;
+
+            svg g {
+                stroke: palette(color-beta);
+            }
+        }
+
+        .c-color--beta & {
+            opacity: .2;
+
+            svg g {
+                stroke: palette(color-alpha);
+            }
+        }
+
+        .c-color--gamma & {
+            opacity: .2;
+
+            svg g {
+                stroke: palette(color-neutral);
+            }
+        }
+
+        svg {
+            width: 80%;
+        }
+
+        svg > g {
+            stroke-width: 24px !important;
+            stroke: palette(color-neutral,x-dark);
+        }
+
+        @include mq(bp3) {
+            svg > g {
+                stroke-width: 16px !important;
+            }
+        }
+
+        @include mq(bp5) {
+            svg > g {
+                stroke-width: 12px !important;
+            }
+        }
+    }
+
+    .c-graphic__item--one {
+        top: 40%;
+    }
+
+    .c-graphic__item--two {
+        top: 10%;
+        left: -18%;
+    }
+
+    .c-graphic__item--three {
+        top: 20%;
+        left: -30%;
+    }
+
+    .c-graphic__item--four {
+        top: 40%;
+        left: -20%;
+    }
+
+    .c-graphic__item--five {
+        top: 60%;
+        left: -10%;
+    }
+
+.c-illustration {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    @include padding-lr(0,1);
+}
+
+    .c-illustration__item-holder {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .c-illustration__item {
+        position: absolute;
+        left: 10%;
+        top: 5%;
+        opacity: .2;
+        width: 100%;
+
+        @include mq(bp2) {
+            left: 35%;
+            top: 10%;
+        }
+    }

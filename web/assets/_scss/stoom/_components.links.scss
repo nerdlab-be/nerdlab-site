@@ -1,0 +1,37 @@
+.c-link {
+    font-weight: 700;
+
+    &,
+    &:visited {
+        color: palette(color-alpha);
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: palette(color-alpha,light);
+    }
+
+    .c-color--gamma & {
+        &,
+        &:visited {
+            color: palette(color-neutral,x-dark);
+        }
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: palette(color-neutral,dark);
+        }
+    }
+}
+
+.c-link-logo {
+    text-indent: -999999px;
+    display: block;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include margin-tb(2,2);
+}
