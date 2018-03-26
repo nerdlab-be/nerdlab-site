@@ -24,7 +24,7 @@
 
 {% set pageEntries = craft.entries.section('agendaDetail').orderBy('date asc') %}
 
-{% for entry in pageEntries %}
+{% for entry in pageEntries.all() %}
 {% set currentTags = entry.tags.one() %}
 
 {% if options.layout == "compact" %}
