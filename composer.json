@@ -30,7 +30,8 @@
     "nystudio107/craft3-minify": "1.2.6",
     "barrelstrength/sprout-active": "2.0.5",
     "nystudio107/craft-minify": "1.2.8",
-    "ether/seo": "3.2.2"
+    "ether/seo": "3.2.2",
+    "pennebaker/craft-architect": "2.2.6"
   },
   "autoload": {
     "psr-4": {
