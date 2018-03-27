@@ -20,26 +20,12 @@ $inuit-font-size-h4:  20px !default;
 $inuit-font-size-h5:  18px !default;
 $inuit-font-size-h6:  16px !default;
 
-h1 {
-  @include inuit-font-size($inuit-font-size-h1);
-}
-
-h2 {
-  @include inuit-font-size($inuit-font-size-h2);
-}
-
-h3 {
-  @include inuit-font-size($inuit-font-size-h3);
-}
-
-h4 {
-  @include inuit-font-size($inuit-font-size-h4);
-}
-
-h5 {
+h1,h2,h3,h4,h5,h6 {
   @include inuit-font-size($inuit-font-size-h5);
-}
+  margin-bottom: $unit-small;
+  font-weight: $font-bold;
 
-h6 {
-  @include inuit-font-size($inuit-font-size-h6);
+  @include mq(medium) {
+    margin-bottom: $unit;
+  }
 }

@@ -1,0 +1,35 @@
+/*
+    Plugin: Slick theme
+    ---
+    Slick custom theme
+*/
+
+.p-slick-theme {
+
+}
+
+// .p-slick-theme__img {
+//     display: block;
+//     width: calc(100vw - #{$columns-gutter * 2rem});
+//     max-width: $grid-max-width;
+//     cursor: pointer;
+//     @include margin-right($columns-gutter);
+//
+//     @include mq(bp3) {
+//         width: calc(100vw - #{$columns-gutter * 6rem});
+//         @include margin-lr($columns-gutter / 2,$columns-gutter / 2);
+//     }
+//
+//     @include mq(bp5) {
+//         width: calc(100vw - #{$columns-gutter * 8rem});
+//         @include margin-lr($columns-gutter,$columns-gutter);
+//     }
+//
+//     &.slick-current {
+//         cursor: default;
+//     }
+//
+//     &:focus {
+//         outline: none;
+//     }
+// }

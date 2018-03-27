@@ -15,7 +15,7 @@
       <div class="o-flex-alt__item u-1-of-2 u-1-of-3-bp4 u-text-center">
         <p>
           {% for image in block.partnerLogo.all() %}
-          <a href="{{ block.partnerURL }}" class="c-link-logo" style="background-image: url('http:{{ image.url }}')">{{ image.title }}</a>
+          <a href="{{ block.partnerURL }}" class="c-link-logo" style="background-image: url('{{ image.url }}')">{{ image.title }}</a>
           {% endfor %}
         </p>
       </div>

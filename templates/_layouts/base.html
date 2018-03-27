@@ -19,13 +19,13 @@
   {% hook "seo" %}
 
   {# Modernizr #}
-  <script src="https://nerdlab.be/assets/js/modernizr-custom.js"></script>
+  <script src="{{ alias('@web')}}/assets/js/modernizr-custom.js"></script>
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="https://nerdlab.be/assets/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="{{ alias('@web')}}/assets/css/screen.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="https://nerdlab.be/assets/css/screen.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ alias('@web')}}/assets/css/screen.min.css">
   {% endif %}
 
   {# Analytics #}
@@ -38,9 +38,9 @@
   {# Global javascript #}
   {% block foot %}
     {% if craft.app.config.general.devMode == true %}
-      <script src="https://nerdlab.be/assets/js/scripts.js"></script>
+      <script src="{{ alias('@web')}}/assets/js/scripts.js"></script>
     {% else %}
-      <script src="https://nerdlab.be/assets/js/scripts.min.js"></script>
+      <script src="{{ alias('@web')}}/assets/js/scripts.min.js"></script>
     {% endif %}
   {% endblock %}
 </body>

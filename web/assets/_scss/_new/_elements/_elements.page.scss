@@ -15,8 +15,28 @@
  */
 
 html {
+  font-family: $font-primary;
   font-size: ($inuit-global-font-size / 16px) * 1em; /* [1] */
   line-height: $inuit-global-line-height / $inuit-global-font-size; /* [1] */
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
+  background-color: $white;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern';
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+
+  @include mq(huge) {
+    // font-size: $font-h5;
+  }
+}
+
+::-moz-selection {
+  background-color: $color-primary-xlight;
+  color: $color-primary-dark;
+}
+
+::selection {
+  background-color: $color-primary-xlight;
+  color: $color-primary-dark;
 }

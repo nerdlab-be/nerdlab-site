@@ -70,40 +70,41 @@
  */
 
 // SETTINGS
-@import "_settings/settings.config";
-@import "_settings/settings.core";
-@import "_settings/settings.global";
+@import "_new/_settings/settings.config";
+@import "_new/_settings/settings.core";
+@import "_new/_settings/settings.global";
+@import "_new/_settings/settings.colors";
 
 
 
 
 
 // TOOLS
-@import "_tools/tools.font-size";
-@import "_tools/tools.clearfix";
-@import "_tools/tools.hidden";
-@import "_tools/tools.aliases";
-@import "_tools/tools.mq";
+@import "_new/_tools/tools.font-size";
+@import "_new/_tools/tools.clearfix";
+@import "_new/_tools/tools.hidden";
+@import "_new/_tools/tools.aliases";
+@import "_new/_tools/tools.mq";
 
 
 
 
 
 // GENERIC
-@import "_generic/generic.box-sizing";
-@import "_generic/generic.normalize";
-@import "_generic/generic.reset";
-@import "_generic/generic.shared";
+@import "_new/_generic/generic.box-sizing";
+@import "_new/_generic/generic.normalize";
+@import "_new/_generic/generic.reset";
+@import "_new/_generic/generic.shared";
 
 
 
 
 
 // ELEMENTS
-@import "_elements/elements.page";
-@import "_elements/elements.headings";
-@import "_elements/elements.images";
-@import "_elements/elements.tables";
+@import "_new/_elements/elements.page";
+@import "_new/_elements/elements.headings";
+@import "_new/_elements/elements.images";
+@import "_new/_elements/elements.tables";
 
 
 
@@ -112,45 +113,52 @@
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
-@import "_objects/objects.wrapper";
-@import "_objects/objects.layout";
-@import "_objects/objects.media";
-@import "_objects/objects.flag";
-@import "_objects/objects.list-bare";
-@import "_objects/objects.list-inline";
-@import "_objects/objects.box";
-@import "_objects/objects.block";
-@import "_objects/objects.ratio";
-@import "_objects/objects.crop";
-@import "_objects/objects.table";
-@import "_objects/objects.pack";
+@import "_new/_objects/objects.wrapper";
+@import "_new/_objects/objects.layout";
+@import "_new/_objects/objects.media";
+@import "_new/_objects/objects.flag";
+@import "_new/_objects/objects.list-bare";
+@import "_new/_objects/objects.list-inline";
+@import "_new/_objects/objects.box";
+@import "_new/_objects/objects.block";
+@import "_new/_objects/objects.ratio";
+@import "_new/_objects/objects.crop";
+@import "_new/_objects/objects.table";
+@import "_new/_objects/objects.pack";
 
 
 
 
 
 // COMPONENTS
-//
-// Build and include your project’s UI components here.
-@import "_components/example.components.buttons";
+@import "_new/_components/components.main";
+@import "_new/_components/components.navigation";
 
+
+
+
+
+// PLUGINS
+@import "_new/_plugins/plugins.googlemaps";
+@import "_new/_plugins/plugins.slick";
+@import "_new/_plugins/plugins.slick-theme";
 
 
 
 
 // UTILITIES
-@import "_utilities/utilities.clearfix";
+@import "_new/_utilities/utilities.clearfix";
 
 // Be aware that enabling offsets produces a large chunk of classes which might
 // bloat your CSS, depending of the amount of breakpoints you defined.
 // Only set this to `true` if you are absolutely sure about what you are doing.
 $inuit-offsets: false;
-@import "_utilities/utilities.widths";
-@import "_utilities/utilities.headings";
-@import "_utilities/utilities.spacings";
-@import "_utilities/utilities.responsive-spacings";
-@import "_utilities/utilities.print";
-@import "_utilities/utilities.hide";
+@import "_new/_utilities/utilities.widths";
+@import "_new/_utilities/utilities.headings";
+@import "_new/_utilities/utilities.spacings";
+@import "_new/_utilities/utilities.responsive-spacings";
+@import "_new/_utilities/utilities.print";
+@import "_new/_utilities/utilities.hide";
 
 // SHAME
-@import "shame.scss";
+@import "_new/shame.scss";

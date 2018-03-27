@@ -1,0 +1,164 @@
+/* ==========================================================================
+   #NAVIGATION
+   ========================================================================== */
+
+.c-nav-main {
+  display: none;
+
+  @include mq(medium) {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    display: flex !important;
+    height: auto !important;
+    padding-left: $unit;
+  }
+}
+
+  .c-nav-main__list {
+    margin-bottom: 0;
+    text-align: right;
+    padding-bottom: $unit;
+
+    @include mq(medium) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      padding-bottom: 0;
+      justify-content: flex-end;
+    }
+  }
+
+  .c-nav-main__item {
+    & + & {
+      @include mq(medium) {
+        margin-left: $unit * 1.5;
+      }
+    }
+  }
+
+  .c-nav-main__link {
+    display: block;
+    text-decoration: none;
+    @include font-size($font-h6,1);
+
+    &,
+    &:visited {
+      color: $color-neutral-dark;
+    }
+
+    &:hover,
+    &:focus,
+    .is-selected & {
+      text-decoration: none;
+      color: $color-secondary;
+    }
+
+    .is-exiting & {
+      color: $color-neutral-dark;
+
+      &:focus {
+        color: $color-secondary;
+      }
+    }
+
+    @include mq(medium) {
+      padding-top: $unit;
+      padding-bottom: $unit;
+
+      .c-nav-main__item:last-child & {
+        border: 1px solid $color-neutral-xlight;
+        border-radius: 4rem;
+        padding-left: $unit;
+        padding-right: $unit;
+      }
+
+      .is-exiting .c-nav-main__item:last-child & {
+        border-color: $color-neutral-xlight;
+        color: $color-neutral-dark;
+
+        &:focus {
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+
+.c-nav-main-trigger {
+  user-select: none;
+  display: block;
+  color: $color-primary;
+  outline: 0;
+  border: 0;
+  height: 5rem;
+  background-color: transparent;
+  padding: 0;
+  margin-left: auto;
+  position: absolute;
+  top: 0;
+  right: $unit;
+  padding-left: $unit;
+  padding-right: $unit;
+
+  &.is-active {
+    color: $color-neutral;
+  }
+
+  @include mq(medium) {
+    display: none;
+  }
+}
+
+$trigger-line-height:        3px;
+$trigger-line-offset:        8px;
+$trigger-color:              $color-neutral;
+$trigger-active-color:       $color-neutral-dark;
+$trigger-animation-duration: $global-duration;
+
+  .c-nav-main-trigger__icon {
+    position: relative;
+    display: block;
+    width: $unit;
+    height: $trigger-line-height;
+    background-color: $trigger-color;
+    transition-property: all;
+    transition-duration: $trigger-animation-duration;
+    border-radius: 1px;
+
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: $trigger-line-height;
+      position: absolute;
+      background-color: $trigger-color;
+      transition-property: all;
+      transition-duration: $trigger-animation-duration;
+      border-radius: 1px;
+    }
+
+    &:before {
+      transform: translateY($trigger-line-offset * -1);
+    }
+
+    &:after {
+      transform: translateY($trigger-line-offset);
+    }
+
+    .c-nav-main-trigger.is-active & {
+      transform: rotate(45deg);
+
+      &:before {
+        width: 100%;
+        transform: rotate(90deg);
+      }
+
+      &:after {
+        width: 100%;
+        transform: rotate(90deg);
+      }
+    }
+  }
