@@ -8,12 +8,12 @@
 #}
 
 {# -- Module -- #}
-<div class="c-row u-pt-0 u-pl-0 u-pr-0 u-bgcolor-neutral-xxxxx-light u-z-delta">
+<div class="o-row o-row-tiny">
   <div class="p-slick-theme js-gallery">
     {% for block in entry.gallery.all() %}
     <div class="p-slick-theme__img">
-      <div class="o-crop">
-        <img class=" o-crop__content" src="{{ block.url }}" alt="{{ block.title }}">
+      <div class="o-crop o-crop--16:9">
+        <img class="o-crop__content o-crop__content--center" src="{{ block.url }}" alt="{{ block.title }}">
       </div>
     </div>
     {% endfor %}

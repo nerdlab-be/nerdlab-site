@@ -8,14 +8,12 @@
 #}
 
 {# -- Module -- #}
-<div class="s-content u-max-width-md">
+<div class="c-content c-content--intro">
   {% set intro = entry.intro.all() %}
   {% for block in intro %}
   {% switch block.type %}
   {% case "introParagraph" %}
-    <div class="c-typo-lead">
-      {{ block.introParagraph }}
-    </div>
+    {{ block.introParagraph }}
   {% case "paragraph" %}
     {{ block.paragraph }}
   {% case "subtitle" %}
@@ -29,7 +27,7 @@
       </a>
       {% endfor %}
       {% else %}
-      <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha">
+      <a href="{{ block.buttonURL }}" class="c-btn c-btn--large c-btn--primary">
         {{ block.buttonTitle }}
       </a>
       {% endif %}

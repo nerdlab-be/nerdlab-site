@@ -1,0 +1,13 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.c-header {
+  position: relative;
+  z-index: $z-index-alpha;
+}
+
+.c-header__items {
+  display: flex;
+  justify-content: space-between;
+}

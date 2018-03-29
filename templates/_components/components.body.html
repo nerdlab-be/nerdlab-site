@@ -8,47 +8,43 @@
 #}
 
 {# -- Module -- #}
-<div class="c-row c-row--md c-row--top u-z-beta">
-  <div class="o-container">
-    <div class="c-main-section">
-      <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
-        <div class="o-grid__item u-1-of-2-bp4">
-          <div class="u-max-width-md s-content">
-            <div class="c-typo-lead u-color-beta-base">
-              {% for block in entry.body.all() %}
-              {% switch block.type %}
-              {% case "lead" %}
-              {{ block.lead }}
-              {% endswitch %}
-              {% endfor %}
-            </div>
-          </div>
+<div class="o-row-large">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@medium u-1/2@large">
+        <div class="c-lead">
+          {% for block in entry.body.all() %}
+          {% switch block.type %}
+          {% case "lead" %}
+          {{ block.lead }}
+          {% endswitch %}
+          {% endfor %}
         </div>
-        <div class="o-grid__item u-1-of-2-bp4">
-          <div class="u-max-width-md s-content">
-            {% for block in entry.body.all() %}
-            {% switch block.type %}
-            {% case "paragraph" %}
-            {{ block.paragraph }}
-            {% case "subtitle" %}
-            <h3>{{ block.subtitle }}</h3>
-            {% case "button" %}
-            <p>
-              {% if block.buttonLink | length %}
-              {% for link in block.buttonLink.all() %}
-              <a href="{{ link.url }}" class="c-button c-button--lg c-button--alpha">
-                {{ block.buttonTitle }}
-              </a>
-              {% endfor %}
-              {% else %}
-              <a href="{{ block.buttonURL }}" class="c-button c-button--lg c-button--alpha">
-                {{ block.buttonTitle }}
-              </a>
-              {% endif %}
-            </p>
-            {% endswitch %}
+      </div>
+      <div class="o-layout__item u-2/3@medium u-1/2@large">
+        <div class="c-content">
+          {% for block in entry.body.all() %}
+          {% switch block.type %}
+          {% case "paragraph" %}
+          {{ block.paragraph }}
+          {% case "subtitle" %}
+          <h3>{{ block.subtitle }}</h3>
+          {% case "button" %}
+          <p>
+            {% if block.buttonLink | length %}
+            {% for link in block.buttonLink.all() %}
+            <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
+              {{ block.buttonTitle }}
+            </a>
             {% endfor %}
-          </div>
+            {% else %}
+            <a href="{{ block.buttonURL }}" class="c-btn c-btn--large c-btn--primary">
+              {{ block.buttonTitle }}
+            </a>
+            {% endif %}
+          </p>
+          {% endswitch %}
+          {% endfor %}
         </div>
       </div>
     </div>

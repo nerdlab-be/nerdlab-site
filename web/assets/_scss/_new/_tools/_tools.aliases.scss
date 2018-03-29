@@ -3,8 +3,8 @@
 //   Map Inuit aliases to project aliases ======================================================================== */
 
 // Mixins
-@mixin font-size($font-size, $line-height: auto, $important: false) {
-  @include inuit-font-size($font-size, $line-height, $important)
+@mixin font-size($font-size, $line-height: auto, $modifier: 0, $important: false) {
+  @include inuit-font-size($font-size, $line-height, $modifier, $important)
 }
 
 // Units
@@ -28,5 +28,4 @@ $font-tiny: $inuit-font-size-tiny;
 // Font settings
 $font-primary: $inuit-font-family-primary;
 $font-regular: $inuit-font-weight-regular;
-$font-medium: $inuit-font-weight-medium;
 $font-bold: $inuit-font-weight-bold;

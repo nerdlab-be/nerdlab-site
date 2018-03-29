@@ -1,3 +1,35 @@
 ///* ========================================================================
 //   #SHAME
 //   Quick fixes ======================================================================== */
+
+.u-divider {
+  margin-top: $unit-large;
+
+  & + & {
+    margin-top: $unit-large;
+    padding-top: $unit-large;
+    border-top: 1px solid $color-neutral-xlight;
+  }
+
+  @include mq(large) {
+    & + & {
+      margin-top: $unit-huge;
+      padding-top: $unit-huge;
+    }
+  }
+}
+
+.u-divider-small {
+  & + & {
+    margin-top: $unit;
+    padding-top: $unit;
+    border-top: 1px solid $color-neutral-xlight;
+  }
+}
+
+.o-layout--spacer {
+  .o-layout__item {
+    padding-top: $unit-small;
+    padding-bottom: $unit-small;
+  }
+}

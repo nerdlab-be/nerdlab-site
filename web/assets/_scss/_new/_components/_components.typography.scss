@@ -1,0 +1,53 @@
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+
+.c-h1 {
+  color: $color-neutral-dark;
+  @include font-size($font-h3,1.25);
+
+  @include mq(small) {
+    @include font-size($font-h2,1.25);
+  }
+
+  @include mq(medium) {
+    @include font-size($font-h1,1.25);
+  }
+}
+
+.c-h2 {
+  color: $color-neutral-dark;
+  @include font-size($font-h4,1.25);
+
+  @include mq(medium) {
+    @include font-size($font-h3,1.25);
+  }
+}
+
+.c-h3 {
+  color: $color-neutral-dark;
+  @include font-size($font-h5,1.25);
+
+  @include mq(medium) {
+    @include font-size($font-h4,1.25);
+  }
+}
+
+.c-lead {
+  color: $color-secondary;
+  @include font-size($font-h6);
+
+  @include mq(small) {
+    @include font-size($font-h4);
+  }
+
+  @include mq(large) {
+    @include font-size($font-h3, auto, +1);
+  }
+}
+
+.c-faded {
+  color: $color-neutral-light;
+  text-transform: uppercase;
+  @include font-size(14px);
+}

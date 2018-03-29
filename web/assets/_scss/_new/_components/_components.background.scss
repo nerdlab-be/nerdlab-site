@@ -1,0 +1,78 @@
+/* ==========================================================================
+   #BACKGROUND
+   ========================================================================== */
+
+.c-background {
+  overflow: hidden;
+  position: relative;
+  background-color: $color-neutral;
+  padding-bottom: $unit-large + $unit;
+
+  @include mq(medium) {
+    display: flex;
+    align-items: flex-end;
+    height: 50vh;
+    padding-bottom: $unit-huge;
+
+    .o-wrapper {
+      width: 100%;
+    }
+  }
+
+  @include mq(large) {
+    height: calc(100vh - 7rem);
+  }
+}
+
+  .c-background__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .5;
+
+    @include mq(medium) {
+      display: block;
+      opacity: .5;
+    }
+  }
+
+  .c-background__image--fallback {
+    .videoautoplay & {
+      display: none;
+    }
+  }
+
+  .c-background__video {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .5;
+
+    .videoautoplay & {
+      display: block;
+    }
+  }
+
+  .c-background__video__meta {
+    position: absolute;
+    bottom: 0;
+    left: $unit;
+    color: rgba($white,.75);
+    @include font-size($font-tiny);
+
+    @include mq(small) {
+      left: auto;
+      right: $unit;
+    }
+  }
+
+  .c-background__body {
+    position: relative;
+  }

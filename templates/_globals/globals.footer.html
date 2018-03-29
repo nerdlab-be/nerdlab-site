@@ -1,40 +1,38 @@
-<footer class="c-row c-row--md c-footer">
-  <div class="o-container">
-    <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
-      <div class="o-grid__item u-1-of-2-bp4">
+<footer class="o-row-large">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-1/2@medium">
         <div class="c-main-section">
-          <div class="o-grid o-grid--gutter o-flex o-flex--wrap">
-            <div class="o-grid__item u-1-of-2-bp2">
-              <div class="u-max-width-md s-content">
+          <div class="o-layout">
+            <div class="o-layout__item u-1/2@small">
+              <div class="c-content">
                 {{ interface.address }}
               </div>
             </div>
-            <div class="o-grid__item u-1-of-2-bp2">
-              <p class="u-mb-alpha">{{ interface.socialTitle }}</p>
-              <ul class="o-list c-footer-list s-content">
+            <div class="o-layout__item u-1/2@small  c-content">
+              <p class="u-margin-bottom-none">{{ interface.socialTitle }}</p>
+              <ul class="o-list-bare">
                 {% for block in interface.social.all() %}
-                  <li><a class="c-footer__link" href="{{ block.linkURL }}">{{ block.linkTitle }}</a></li>
+                  <li><a href="{{ block.linkURL }}">{{ block.linkTitle }}</a></li>
                 {% endfor %}
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="o-grid__item u-1-of-2-bp4">
-        <div class="c-footer__subscribe u-max-width-md">
-          {% for block in interface.newsletter.all() %}
-          <div class="c-subscribe-text">
-            {{ block.paragraph }}
-          </div>
-          <div class="u-mb-gamma">
-            <form class="c-subscribe-form" action="//nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=14a5daee70" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <input class="c-input-text c-input-text--lg c-subscribe-form__input" type="email" value="" placeholder="{{ block.placeholder }}" name="EMAIL" class="required email" id="mce-EMAIL">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_26083caa15a40f691a214b23c_14a5daee70" tabindex="-1" value=""></div>
-              <input class="c-subscribe-form__buton c-button c-button--lg" type="submit" value="{{ block.submit }}" name="subscribe" id="mc-embedded-subscribe">
-            </form>
-          </div>
+      <div class="o-layout__item u-1/2@medium">
+        {% for block in interface.newsletter.all() %}
+        <div class="c-content">
+          {{ block.paragraph }}
+        </div>
+        <div class="u-mb-gamma">
+          <form class="c-subscribe-form" action="//nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=14a5daee70" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <input class="c-input-text c-input-text--large c-subscribe-form__input" type="email" value="" placeholder="{{ block.placeholder }}" name="EMAIL" class="required email" id="mce-EMAIL">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_26083caa15a40f691a214b23c_14a5daee70" tabindex="-1" value=""></div>
+            <input class="c-subscribe-form__btn c-btn c-btn--large" type="submit" value="{{ block.submit }}" name="subscribe" id="mc-embedded-subscribe">
+          </form>
           {% endfor %}
         </div>
       </div>

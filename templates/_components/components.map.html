@@ -8,14 +8,12 @@
 #}
 
 {# -- Module -- #}
-<div class="c-row c-row--map">
-  <div id="map" class="c-map gmap"></div>
-  <div class="c-map-content">
-    <div class="u-max-width-md s-content">
-      <p class="u-max-width-md s-content">
-        {{ interface.address }}
-      </p>
-    </div>
+<div class="c-map">
+  <div id="map" class="c-map__background gmap"></div>
+  <div class="c-map__content">
+    <p class="c-content">
+      {{ interface.address }}
+    </p>
   </div>
 </div>
 

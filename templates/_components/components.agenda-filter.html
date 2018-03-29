@@ -4,13 +4,12 @@
 #}
 
 {#
-  {% include '_components/components.agenda-filter.html' with { options: { tag: '', layout: '' } } %}
+  {% include '_components/components.agenda-filter.html' with { options: { tag: '' } } %}
 #}
 
 {# -- Set Defaults -- #}
 {% set defaults = {
-  tag: '',
-  layout: ''
+  tag: ''
 } %}
 
 {% if options is defined %}
@@ -20,26 +19,25 @@
 {% endif %}
 
 {# -- Module -- #}
-<!-- {% paginate craft.entries.section('agendaDetail').limit(20) as pageInfo, pageEntries %} -->
-
 {% set pageEntries = craft.entries.section('agendaDetail').orderBy('date asc') %}
 
 {% for entry in pageEntries.all() %}
-{% set currentTags = entry.tags.one() %}
+{% for item in entry.tags.all() %}
+{% set currentTags = item %}
 
-{% if options.layout == "compact" %}
+
 {% if entry.date|date('Ymd') >= now|date('Ymd') %}
 {% if currentTags == options.tag %}
-<article class="s-content o-media">
-  <p class="u-mb-alpha u-faded">
+<article class="u-divider-small">
+  <p class="c-faded u-margin-bottom-small">
     {{ entry.date |date('l d F Y') }}
   </p>
-  <h2 class="u-ms0">
-    <a href="{{ entry.eventURL }}">
-      {{ entry.title }}
-    </a>
-  </h2>
-  <div class="s-content s-content-inline u-max-width-md">
+  <div class="c-content c-content--small">
+    <h2 class="c-h3">
+      <a href="{{ entry.eventURL }}">
+        {{ entry.title }}
+      </a>
+    </h2>
     {% for block in entry.body.all() %}
     {% switch block.type %}
     {% case "lead" %}
@@ -53,41 +51,5 @@
 </article>
 {% endif %}
 {% endif %}
-{% else %}
-{% if entry.date|date('Ymd') >= now|date('Ymd') %}
-{% if currentTags == options.tag %}
-<article class="s-content o-media">
-  <div class="o-grid o-grid--gutter o-flex-bp3 o-flex--wrap">
-    <div class="o-grid__item u-1-of-2-bp4">
-      <p class="u-mb-alpha u-text-align-right-bp4 u-faded">
-        {{ entry.date |date('l d F Y') }}
-      </p>
-    </div>
-    <div class="o-grid__item u-1-of-2-bp4">
-      <h2 class="u-ms0">
-        <a href="{{ entry.eventURL }}">
-          {{ entry.title }}
-        </a>
-      </h2>
-    </div>
-  </div>
-  <div class="o-grid o-grid--gutter o-flex-bp3 o-flex--wrap">
-    <div class="o-grid__item u-1-of-2-bp4 u-push-1-of-2-bp4">
-      <div class="s-content s-content-inline u-max-width-md">
-        {% for block in entry.body.all() %}
-        {% switch block.type %}
-        {% case "lead" %}
-        {{ block.lead }}
-        {% endswitch %}
-        {% endfor %}
-        <p>
-          <a href="{{ entry.eventURL }}">Meer info</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</article>
-{% endif %}
-{% endif %}
-{% endif %}
+{% endfor %}
 {% endfor %}

@@ -1,0 +1,53 @@
+{#
+  Portfolio overview
+  ================
+#}
+
+{#
+  {% include '_components/components.projects-overview.html' %}
+#}
+
+{# -- Module -- #}
+{% paginate craft.entries.section('projectDetail').limit(20) as pageInfo, pageEntries %}
+
+<div class="o-row-large u-padding-top-none">
+  <div class="o-wrapper o-wrapper--huge">
+    <p class="c-lead">{{ entry.subtitle }}</p>
+    <div class="o-layout">
+      {% for entry in pageEntries %}
+      {% if entry.featured == false %}
+      <div class="o-layout__item u-divider">
+        <div class="o-layout {{ cycle([' o-layout--reverse', ''], loop.index0) }}">
+          <div class="o-layout__item u-1/2@medium">
+            {% for item in entry.projectHeader.limit(1).all() %}
+            <div class="o-crop o-crop--1:1 u-margin-bottom-small">
+              <img src="{{ item.url }}" alt="{{ item.title }}" class="o-crop__content">
+            </div>
+            {% endfor %}
+          </div>
+          <div class="o-layout__item u-1/2@medium">
+            <div class="c-content c-content--small">
+              {% for item in entry.projectHeader.limit(1).offset(1).all() %}
+              <div class="o-crop o-crop--16:9 u-margin-bottom">
+                <img src="{{ item.url }}" alt="{{ item.title }}" class="o-crop__content o-crop__content-center">
+              </div>
+              {% endfor %}
+              <h3 class="c-h3 u-margin-bottom-small">
+                {{ entry.title }}
+              </h3>
+              {% set intro = entry.intro.all() %}
+              {% for block in intro %}
+              {% switch block.type %}
+              {% case "introParagraph" %}
+                {{ block.introParagraph }}
+              {% endswitch %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

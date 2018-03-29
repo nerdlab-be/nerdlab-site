@@ -8,3 +8,32 @@
 .gmap img {
     max-width: none !important;
 }
+
+// Custom map
+.c-map {
+  position: relative;
+}
+
+  .c-map__background {
+    min-height: 50vh;
+    z-index: $z-index-alpha;
+
+    @include mq(medium) {
+      height: 75vh;
+    }
+  }
+
+  .c-map__content {
+    position: absolute;
+    z-index: $z-index-beta;
+    width: 50%;
+    padding-left: $unit;
+    padding-right: $unit;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+
+    p {
+      margin-bottom: 0;
+    }
+  }

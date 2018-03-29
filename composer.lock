@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "00e7b40490a4f3e42a9dbe69715ea346",
+    "content-hash": "b4ad2646a876e8d6258ba93f4030dfb3",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
@@ -371,11 +371,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.0-RC16.1",
+            "version": "3.0.0-RC17",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/44fff955bb76c383c582bcd6e5ded80ac69a2dec",
-                "reference": "44fff955bb76c383c582bcd6e5ded80ac69a2dec",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/bcce9c47fe2449128253d89cb390162deb7c80c2",
+                "reference": "bcce9c47fe2449128253d89cb390162deb7c80c2",
                 "shasum": ""
             },
             "require": {
@@ -445,7 +445,7 @@
                 "docs": "https://github.com/craftcms/docs",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2018-03-25T23:47:20+00:00"
+            "time": "2018-03-28T18:16:57+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1027,11 +1027,11 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.0",
+            "version": "6.3.2",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f4db5a78a5ea468d4831de7f0bf9d9415e348699",
-                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/68d0ea14d5a3f42a20e87632a5f84931e2709c90",
+                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90",
                 "shasum": ""
             },
             "require": {
@@ -1039,18 +1039,13 @@
                 "guzzlehttp/psr7": "^1.4",
                 "php": ">=5.5"
             },
-            "require-dev": {
-                "ext-curl": "*",
-                "phpunit/phpunit": "^4.0 || ^5.0",
-                "psr/log": "^1.0"
-            },
             "suggest": {
                 "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.2-dev"
+                    "dev-master": "6.3-dev"
                 }
             },
             "autoload": {
@@ -1061,7 +1056,6 @@
                     "GuzzleHttp\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1083,7 +1077,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-06-22T18:50:49+00:00"
+            "time": "2018-03-26T16:33:04+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1497,11 +1491,11 @@
         },
         {
             "name": "mmikkel/cp-field-inspect",
-            "version": "1.0.2",
+            "version": "1.0.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/9f82dabec47232f4f59b47185c728b5eb2e3e7dd",
-                "reference": "9f82dabec47232f4f59b47185c728b5eb2e3e7dd",
+                "url": "https://api.github.com/repos/mmikkel/CpFieldInspect-Craft/zipball/426d9638f8eca0f6a9f1beedb8a945726840d436",
+                "reference": "426d9638f8eca0f6a9f1beedb8a945726840d436",
                 "shasum": ""
             },
             "require": {
@@ -1514,7 +1508,7 @@
                 "schemaVersion": "1.0.0",
                 "hasCpSettings": false,
                 "hasCpSection": false,
-                "changelogUrl": "https://raw.githubusercontent.com/mmikkel/cp-field-inspect/master/CHANGELOG.md",
+                "changelogUrl": "https://raw.githubusercontent.com/mmikkel/CpFieldInspect-Craft/master/CHANGELOG.md",
                 "class": "mmikkel\\cpfieldinspect\\CpFieldInspect"
             },
             "autoload": {
@@ -1540,9 +1534,10 @@
                 "craftcms"
             ],
             "support": {
-                "docs": "https://github.com/mmikkel/cp-field-inspect/blob/master/README.md",
-                "issues": "https://github.com/mmikkel/cp-field-inspect/issues"
-            }
+                "docs": "https://github.com/mmikkel/CpFieldInspect-Craft/blob/master/README.md",
+                "issues": "https://github.com/mmikkel/CpFieldInspect-Craft/issues"
+            },
+            "time": "2018-03-28T07:58:02+00:00"
         },
         {
             "name": "monolog/monolog",

@@ -10,17 +10,18 @@
 {# -- Module -- #}
 {% paginate craft.entries.section('projectDetail').limit(20) as pageInfo, pageEntries %}
 
-<div class="o-row-large u-padding-top-none">
+<div class="o-row-large u-padding-bottom-none">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--small o-layout--spacer">
-      {% for entry in pageEntries %}
-      {% if entry.featured %}
-      <div class="o-layout__item u-1/2@medium u-1/3@large">
+      {% for block in pageEntries %}
+      {% if block.featured %}
+      {% if entry.title != block.title %}
+      <div class="o-layout__item u-1/2@medium">
         <div class="c-card">
           <div class="c-card__image">
-            {% for item in entry.projectHeader.limit(1).all() %}
+            {% for item in block.projectHeader.limit(1).all() %}
             <div class="o-crop o-crop--3:1">
-              <a href="{{ entry.url }}" alt="{{ entry.title }}">
+              <a href="{{ block.url }}" alt="{{ block.title }}">
                 <img src="{{ item.url }}" alt="{{ item.title }}" class="o-crop__content o-crop__content--center">
               </a>
             </div>
@@ -28,9 +29,9 @@
           </div>
           <div class="c-card__content c-content c-content--small">
             <h2 class="c-h2 u-margin-bottom-small">
-              {{ entry.title }}
+              {{ block.title }}
             </h2>
-            {% set intro = entry.intro.all() %}
+            {% set intro = block.intro.all() %}
             {% for block in intro %}
             {% switch block.type %}
             {% case "introParagraph" %}
@@ -40,11 +41,12 @@
           </div>
           <div class="c-card__footer c-content">
             <p>
-              <a href="{{ entry.url }}" alt="{{ entry.title }}" class="c-btn c-btn--primary c-btn--large">Bekijk project</a>
+              <a href="{{ block.url }}" alt="{{ block.title }}" class="c-btn c-btn--primary c-btn--large">Bekijk project</a>
             </p>
           </div>
         </div>
       </div>
+      {% endif %}
       {% endif %}
       {% endfor %}
     </div>

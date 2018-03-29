@@ -5,7 +5,7 @@
 @keyframes mainTransitionIn {
   0% {
     opacity: 0;
-    transform: translateY($unit * 1rem);
+    transform: translateY($unit * 1);
   }
 
   100% {
@@ -22,7 +22,7 @@
 
   100% {
     opacity: 0;
-    transform: translateY($unit * 1rem);
+    transform: translateY($unit * 1);
   }
 }
 
@@ -32,15 +32,6 @@
   animation-duration: $global-duration;
   animation-name: mainTransitionIn;
   animation-timing-function: $global-easing;
-  margin-top: $unit * 3;
-
-  @include mq(medium) {
-    margin-top: $unit * 4;
-  }
-
-  @include mq(large) {
-    margin-top: $unit * 5;
-  }
 
   .is-exiting & {
     animation-name: mainTransitionOut;
@@ -57,13 +48,5 @@
 
   .is-exiting & {
     animation-name: mainTransitionOut;
-  }
-}
-
-.c-main-section {
-  @include mq(medium) {
-    & + & {
-      padding-top: $unit;
-    }
   }
 }

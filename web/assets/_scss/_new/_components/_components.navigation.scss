@@ -3,7 +3,13 @@
    ========================================================================== */
 
 .c-nav-main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: none;
+  padding: $unit-huge $unit $unit;
+  background-color: rgba($white,.95);
 
   @include mq(medium) {
     position: relative;
@@ -12,29 +18,39 @@
     right: auto;
     display: flex !important;
     height: auto !important;
-    padding-left: $unit;
+    padding: 0;
   }
 }
 
   .c-nav-main__list {
-    margin-bottom: 0;
     text-align: right;
+    margin-bottom: 0;
     padding-bottom: $unit;
 
     @include mq(medium) {
-      width: 100%;
       display: flex;
-      align-items: center;
-      text-align: left;
-      padding-bottom: 0;
       justify-content: flex-end;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 0;
     }
   }
 
   .c-nav-main__item {
     & + & {
-      @include mq(medium) {
-        margin-left: $unit * 1.5;
+      margin-top: $unit * 1.5;
+    }
+
+    @include mq(medium) {
+      & + & {
+        margin-top: 0;
+        margin-left: $unit;
+      }
+    }
+
+    @include mq(large) {
+      & + & {
+        margin-left: $unit-large;
       }
     }
   }
@@ -42,11 +58,11 @@
   .c-nav-main__link {
     display: block;
     text-decoration: none;
-    @include font-size($font-h6,1);
+    @include font-size($font-small,1);
 
     &,
     &:visited {
-      color: $color-neutral-dark;
+      color: $color-neutral;
     }
 
     &:hover,
@@ -57,7 +73,7 @@
     }
 
     .is-exiting & {
-      color: $color-neutral-dark;
+      color: $color-neutral;
 
       &:focus {
         color: $color-secondary;
@@ -65,40 +81,50 @@
     }
 
     @include mq(medium) {
-      padding-top: $unit;
-      padding-bottom: $unit;
+      padding-top: $unit/1.3;
+      padding-bottom: $unit/1.3;
 
       .c-nav-main__item:last-child & {
         border: 1px solid $color-neutral-xlight;
-        border-radius: 4rem;
-        padding-left: $unit;
-        padding-right: $unit;
+        border-radius: $unit-large;
+        padding-left: $unit * 1.3;
+        padding-right: $unit * 1.3;
       }
 
       .is-exiting .c-nav-main__item:last-child & {
         border-color: $color-neutral-xlight;
-        color: $color-neutral-dark;
+        color: $color-neutral;
 
         &:focus {
           color: $color-secondary;
         }
       }
     }
+
+    @include mq(large) {
+      @include font-size($font-h6,1);
+    }
   }
+
+// Mobile nav trigger
+$trigger-line-height:        3px;
+$trigger-line-offset:        8px;
+$trigger-color:              $color-neutral;
+$trigger-active-color:       $color-neutral-dark;
+$trigger-animation-duration: $global-duration;
 
 .c-nav-main-trigger {
   user-select: none;
   display: block;
-  color: $color-primary;
+  color: $color-neutral;
   outline: 0;
   border: 0;
-  height: 5rem;
+  height: $unit-large;
   background-color: transparent;
-  padding: 0;
   margin-left: auto;
   position: absolute;
-  top: 0;
-  right: $unit;
+  top: $unit;
+  right: 0;
   padding-left: $unit;
   padding-right: $unit;
 
@@ -110,12 +136,6 @@
     display: none;
   }
 }
-
-$trigger-line-height:        3px;
-$trigger-line-offset:        8px;
-$trigger-color:              $color-neutral;
-$trigger-active-color:       $color-neutral-dark;
-$trigger-animation-duration: $global-duration;
 
   .c-nav-main-trigger__icon {
     position: relative;
@@ -150,6 +170,12 @@ $trigger-animation-duration: $global-duration;
 
     .c-nav-main-trigger.is-active & {
       transform: rotate(45deg);
+
+      &,
+      &:before,
+      &:after {
+        background-color: $trigger-active-color;
+      }
 
       &:before {
         width: 100%;
