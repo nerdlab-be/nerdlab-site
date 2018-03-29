@@ -59,7 +59,8 @@
     }
   }
 
-  .c-background__video__meta {
+  .c-background__video__meta,
+  .c-background__image__meta {
     position: absolute;
     bottom: 0;
     left: $unit;

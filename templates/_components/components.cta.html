@@ -27,7 +27,7 @@
   {% case "photo" %}
   {% for type in item.photo.all() %}
     <div class="c-background__image" style="background-image: url('{{ type.url }}');"></div>
-    <p class="c-background-video__meta">
+    <p class="c-background__image__meta">
       {{ type.credits }}
     </p>
   {% endfor %}
