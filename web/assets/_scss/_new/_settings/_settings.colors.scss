@@ -47,6 +47,7 @@ $black                      : #111111;
 // Brand colors
 
 $color-neutral              : shade(#4b4c4d,20%);
+$color-neutral-xxlight       : tint($color-neutral,93%);
 $color-neutral-xlight       : tint($color-neutral,85%);
 $color-neutral-light        : tint($color-neutral,30%);
 $color-neutral-dark         : shade($color-neutral,60%);

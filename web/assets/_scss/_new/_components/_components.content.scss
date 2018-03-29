@@ -82,6 +82,11 @@
 }
 
 .c-content--cta {
+  strong,
+  h2 {
+    color: $white;
+  }
+
   p:first-child {
     @include font-size($font-h6, auto);
     color: $white
