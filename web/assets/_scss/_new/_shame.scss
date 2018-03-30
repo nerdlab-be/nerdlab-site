@@ -67,3 +67,38 @@
     width: 100%;
   }
 }
+
+.c-illustration {
+  position: relative;
+  padding-bottom: 0;
+  overflow: hidden;
+  // padding-bottom: $unit-huge*2;
+
+  @include mq(medium) {
+    padding-bottom: $unit-huge;
+  }
+}
+
+  .c-illustration__left {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $unit;
+
+    @include mq(small) {
+      width: 80%;
+    }
+
+    @include mq(medium) {
+      position: absolute;
+      width: 70%;
+      left: -20%;
+      bottom: 0;
+      max-height: 100%
+    }
+
+    @include mq(large) {
+      width: 50%;
+      left: 0;
+    }
+  }

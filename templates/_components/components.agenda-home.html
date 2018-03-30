@@ -23,7 +23,7 @@
 
 {% for item in pageEntries.all() if item.date|date('Ymd') >= now|date('Ymd') %}
 {% if loop.first %}
-<div class="o-row-large u-border-top">
+<div class="o-row-large u-border-top c-illustration">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
       <div class="o-layout__item u-1/2@medium u-push-1/2@medium">
@@ -57,6 +57,9 @@
         </article>
       </div>
     </div>
+  </div>
+  <div class="c-illustration__left">
+    <img src="/assets/images/jpg/illu-test4.jpg" alt="illustration">
   </div>
 </div>
 {% endif %}
