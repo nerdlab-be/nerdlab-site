@@ -29,14 +29,18 @@
 {% if entry.date|date('Ymd') >= now|date('Ymd') %}
 {% if currentTags == options.tag %}
 <article class="u-divider-small">
-  <p class="c-faded u-margin-bottom-small">
+  <p class="c-faded u-margin-bottom-tiny">
     {{ entry.date |date('l d F Y') }}
   </p>
   <div class="c-content c-content--small">
-    <h2 class="c-h3">
+    <h2 class="c-h3 c-h3--highlight u-margin-bottom-small">
+      {% if entry.eventURL | length %}
       <a href="{{ entry.eventURL }}">
         {{ entry.title }}
       </a>
+      {% else %}
+      {{ entry.title }}
+      {% endif %}
     </h2>
     {% for block in entry.body.all() %}
     {% switch block.type %}
@@ -44,9 +48,11 @@
     {{ block.lead }}
     {% endswitch %}
     {% endfor %}
+    {% if entry.eventURL | length %}
     <p>
       <a href="{{ entry.eventURL }}">Meer info</a>
     </p>
+    {% endif %}
   </div>
 </article>
 {% endif %}

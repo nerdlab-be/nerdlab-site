@@ -1,0 +1,63 @@
+{#
+  Agenda
+  ================
+#}
+
+{#
+  {% include '_components/components.agenda-overview.html' with { options: { layout: '' } } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  layout: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+{% set pageEntries = craft.entries.section('agendaDetail').orderBy('date asc') %}
+
+{% for item in pageEntries.all() if item.date|date('Ymd') >= now|date('Ymd') %}
+{% if loop.first %}
+<div class="o-row-large u-border-top">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-1/2@medium u-push-1/2@medium">
+        <h2 class="c-h2">Binnenkort</h2>
+        <article class="u-divider-small">
+          <p class="c-faded u-margin-bottom-tiny">
+            {{ item.date |date('l d F Y') }}
+          </p>
+          <div class="c-content c-content--small">
+            <h2 class="c-h3 c-h3--highlight u-margin-bottom-small">
+              {% if item.eventURL | length %}
+              <a href="{{ item.eventURL }}">
+                {{ item.title }}
+              </a>
+              {% else %}
+                {{ item.title }}
+              {% endif %}
+            </h2>
+            {% for block in item.body.all() %}
+            {% switch block.type %}
+            {% case "lead" %}
+            {{ block.lead }}
+            {% endswitch %}
+            {% endfor %}
+            {% if item.eventURL | length %}
+            <p>
+              <a href="{{ item.eventURL }}">Meer info</a>
+            </p>
+            {% endif %}
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% endfor %}

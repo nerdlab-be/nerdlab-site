@@ -163,7 +163,7 @@
 // Be aware that enabling offsets produces a large chunk of classes which might
 // bloat your CSS, depending of the amount of breakpoints you defined.
 // Only set this to `true` if you are absolutely sure about what you are doing.
-$inuit-offsets: false;
+$inuit-offsets: true;
 @import "_new/_utilities/utilities.widths";
 @import "_new/_utilities/utilities.headings";
 @import "_new/_utilities/utilities.spacings";

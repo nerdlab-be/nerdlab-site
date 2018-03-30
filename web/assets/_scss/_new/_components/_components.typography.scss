@@ -33,6 +33,11 @@
   }
 }
 
+.c-h3--highlight,
+.c-content .c-h3--highlight {
+  color: $color-primary;
+}
+
 .c-h4 {
   color: $color-secondary;
   @include font-size($font-h6,1.25);
