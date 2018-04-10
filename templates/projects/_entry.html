@@ -6,9 +6,9 @@
 {% extends "_layouts/site" %}
 
 {% block main %}
-<div class="o-row-large">
+<div class="o-row-intro">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout o-layout--spacer">
+    <div class="o-layout o-layout--large o-layout--spacer">
       <div class="o-layout__item u-1/2@large">
         {# Intro #}
         <h1 class="c-h1">{{ entry.title }}</h1>
@@ -27,7 +27,7 @@
   <div class="p-slick-theme js-gallery">
     {% for item in entry.projectHeader.all() %}
     <div class="p-slick-theme__img">
-      <div class="o-crop o-crop--16:9">
+      <div class="o-crop o-crop--21:9">
         <img class="o-crop__content o-crop__content--center" src="{{ item.url }}" alt="{{ item.title }}">
       </div>
     </div>
