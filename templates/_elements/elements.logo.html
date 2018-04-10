@@ -1,13 +1,13 @@
-{% if entry.title == "Homepage" %}
+{% if entry.title == "Home" %}
   <h1 class="c-logo">
-    <span class="c-logo__label u-hidden-visually">{{ siteName }}</span>
     <span class="c-logo__mark"></span>
+    <span class="c-logo__label u-hidden-visually">{{ siteName }}</span>
   </h1>
   {% else %}
   <p class="c-logo">
     <a href="{{ siteUrl }}" alt="Homepage" class="c-logo__link js-nav-trigger-up">
       <span class="c-logo__mark"></span>
-      <span class="c-logo__label">{{ siteName }}</span>
+      <!-- <span class="c-logo__label">{{ siteName }}</span> -->
     </a>
   </p>
 {% endif %}
