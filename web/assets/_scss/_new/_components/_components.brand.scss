@@ -3,7 +3,7 @@
    ========================================================================== */
 
 $logo-ratio:     3.3333;
-$logo-height:    1.7rem;
+$logo-height:    1.6rem;
 $logo-width:     $logo-height * $logo-ratio;
 
 .c-logo,
@@ -20,12 +20,10 @@ $logo-width:     $logo-height * $logo-ratio;
 }
 
   .c-logo__mark {
-    position: relative;
-    top: 1rem;
     display: block;
     width: $logo-width/1.2;
     height: $logo-height/1.2;
-    // margin-bottom: $unit-small/1.2;
+    margin-bottom: $unit-small/1.2;
     background: transparent url('../img/svg/glasses.svg') 50% 50% no-repeat;
     background-size: contain;
     transform: rotate(-10deg);
