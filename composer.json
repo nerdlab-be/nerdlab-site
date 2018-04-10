@@ -20,19 +20,18 @@
   },
   "require": {
     "php": ">=7.0.0",
-    "craftcms/cms": "3.0.0-RC17",
+    "craftcms/cms": "3.0.1",
     "vlucas/phpdotenv": "^2.4.0",
     "roave/security-advisories": "dev-master",
-    "craftcms/redactor": "1.0.1",
+    "craftcms/redactor": "1.1.0",
     "mmikkel/cp-field-inspect": "1.0.4",
     "verbb/cp-nav": "2.0.3",
     "ether/simplemap": "3.3.3",
-    "nystudio107/craft3-minify": "1.2.6",
-    "barrelstrength/sprout-active": "2.0.5",
+    "barrelstrength/sprout-active": "2.0.6",
     "nystudio107/craft-minify": "1.2.8",
-    "ether/seo": "3.2.2",
-    "pennebaker/craft-architect": "2.2.6",
-    "dolphiq/sitemap": "v1.0.9"
+    "pennebaker/craft-architect": "2.2.8",
+    "dolphiq/sitemap": "v1.0.9",
+    "ether/seo": "3.2.3"
   },
   "autoload": {
     "psr-4": {

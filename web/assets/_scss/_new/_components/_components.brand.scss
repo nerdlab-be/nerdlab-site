@@ -50,3 +50,18 @@ $logo-width:     $logo-height * $logo-ratio;
   font-family: $font-primary;
   font-weight: $font-bold;
 }
+
+.c-logo-vlaanderen {
+  display: block;
+  width: 150px;
+
+  @include mq(small) {
+    margin-left: auto;
+    width: 150px;
+  }
+
+  @include mq(medium) {
+    margin-left: auto;
+    width: 180px;
+  }
+}
