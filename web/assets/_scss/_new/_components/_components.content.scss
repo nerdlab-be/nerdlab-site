@@ -24,10 +24,6 @@
     color: $color-primary;
     text-decoration: none;
 
-    // &:visited {
-    //   color: $color-primary-dark;
-    // }
-
     &:hover,
     &:focus {
       color: $color-secondary;
@@ -106,11 +102,69 @@
 }
 
 .c-content--small {
+  p + h2 {
+    margin-top: $unit-large;
+  }
+
+  p + h3 {
+    margin-top: $unit;
+  }
+
+  p,
+  ul,
+  ol {
+    @include font-size($font-tiny);
+  }
+
+  @include mq(small) {
+    p,
+    ul,
+    ol {
+      @include font-size($font-small,1.5);
+    }
+  }
+
   @include mq(large) {
     p,
     ul,
     ol {
       @include font-size($font-h6);
+    }
+  }
+}
+
+.c-content--footer {
+  p {
+    color: $color-neutral-light;
+    @include font-size($font-tiny);
+    margin-bottom: 0;
+  }
+
+  a:not(.c-btn) {
+    color: $color-neutral-light;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $color-neutral;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      bottom: .2ex;
+      left: 1px;
+      right: 1px;
+      background-color: currentColor;
+      opacity: .5;
+    }
+  }
+
+  @include mq(small) {
+    p {
+      text-align: right;
     }
   }
 }

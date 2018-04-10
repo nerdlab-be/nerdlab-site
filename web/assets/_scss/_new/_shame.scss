@@ -2,6 +2,24 @@
 //   #SHAME
 //   Quick fixes ======================================================================== */
 
+.u-order-one {
+  order: 1;
+  margin-bottom: $unit-large;
+
+  @include mq(medium) {
+    order: 2;
+    margin-bottom: 0;
+  }
+}
+
+.u-order-two {
+  order: 2;
+
+  @include mq(medium) {
+    order: 1;
+  }
+}
+
 .u-divider {
   margin-top: $unit-large;
 
@@ -102,3 +120,8 @@
       left: 0;
     }
   }
+
+.c-footer {
+  margin-top: $unit;
+  padding-top: $unit;
+}

@@ -29,9 +29,15 @@
       <div class="o-layout__item u-1/2@medium u-push-1/2@medium">
         <h2 class="c-h2">Binnenkort</h2>
         <article class="u-divider-small">
+          {% if item.customDate | length() %}
+          <p class="c-faded u-margin-bottom-tiny">
+            {{ item.customDate | upper }}
+          </p>
+          {% else %}
           <p class="c-faded u-margin-bottom-tiny">
             {{ item.date |date('l d F Y') }}
           </p>
+          {% endif %}
           <div class="c-content c-content--small">
             <h2 class="c-h3 c-h3--highlight u-margin-bottom-small">
               {% if item.eventURL | length %}
@@ -59,7 +65,7 @@
     </div>
   </div>
   <div class="c-illustration__left">
-    <img src="/assets/images/jpg/illu-test4.jpg" alt="illustration">
+    <img src="/assets/images/jpg/illu-test5.jpg" alt="illustration">
   </div>
 </div>
 {% endif %}

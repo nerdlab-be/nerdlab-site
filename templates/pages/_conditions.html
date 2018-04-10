@@ -1,18 +1,17 @@
 {#
-  Body
-  ================
-#}
+ # Algemene voorwaarden
+ # ------------------------
+-#}
 
-{#
-  {% include '_components/components.Body.html' %}
-#}
+{% extends "_layouts/site" %}
 
-{# -- Module -- #}
+{% block main %}
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
-      <div class="o-layout__item u-2/3@medium u-1/2@large">
-        <div class="c-lead">
+      <div class="o-layout__item u-3/4@medium u-2/3@large">
+        <h1 class="c-h1">{{ entry.title }}</h1>
+        <div class="c-lead u-margin-bottom-large">
           {% for block in entry.body.all() %}
           {% switch block.type %}
           {% case "lead" %}
@@ -20,19 +19,17 @@
           {% endswitch %}
           {% endfor %}
         </div>
-      </div>
-      <div class="o-layout__item u-2/3@medium u-1/2@large">
-        <div class="c-content">
+        <div class="c-content c-content--small">
           {% for block in entry.body.all() %}
           {% switch block.type %}
           {% case "paragraph" %}
           {{ block.paragraph }}
           {% case "subtitle" %}
-          <h2 class="c-h2">{{ block.subtitle }}</h2>
+          <h2 class="c-h3">{{ block.subtitle }}</h2>
           {% case "subtitleSmall" %}
-          <h3 class="c-h3">{{ block.subtitleSmall }}</h3>
+          <h3 class="c-h4">{{ block.subtitleSmall }}</h3>
           {% case "subtitleTiny" %}
-          <h4 class="c-h4">{{ block.subtitleTiny }}</h4>
+          <h4 class="c-h5">{{ block.subtitleTiny }}</h4>
           {% case "button" %}
           <p>
             {% if block.buttonLink | length %}
@@ -54,3 +51,8 @@
     </div>
   </div>
 </div>
+
+{# CTA #}
+{% include '_components/components.cta.html' %}
+
+{% endblock %}

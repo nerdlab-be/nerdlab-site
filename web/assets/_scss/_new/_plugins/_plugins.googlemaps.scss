@@ -12,6 +12,8 @@
 // Custom map
 .c-map {
   position: relative;
+  border-bottom: 1px solid $color-neutral-xxlight;
+  border-top: 1px solid $color-neutral-xxlight;
 }
 
   .c-map__background {

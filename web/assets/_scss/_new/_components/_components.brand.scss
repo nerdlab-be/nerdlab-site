@@ -54,14 +54,14 @@ $logo-width:     $logo-height * $logo-ratio;
 .c-logo-vlaanderen {
   display: block;
   width: 150px;
+  margin-top: $unit;
 
   @include mq(small) {
-    margin-left: auto;
     width: 150px;
+    margin-top: 0;
   }
 
   @include mq(medium) {
-    margin-left: auto;
     width: 180px;
   }
 }

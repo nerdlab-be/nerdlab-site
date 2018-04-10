@@ -29,9 +29,15 @@
 {% if entry.date|date('Ymd') >= now|date('Ymd') %}
 {% if currentTags == options.tag %}
 <article class="u-divider-small">
+  {% if entry.customDate | length() %}
+  <p class="c-faded u-margin-bottom-tiny">
+    {{ entry.customDate | upper }}
+  </p>
+  {% else %}
   <p class="c-faded u-margin-bottom-tiny">
     {{ entry.date |date('l d F Y') }}
   </p>
+  {% endif %}
   <div class="c-content c-content--small">
     <h2 class="c-h3 c-h3--highlight u-margin-bottom-small">
       {% if entry.eventURL | length %}
