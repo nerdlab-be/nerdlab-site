@@ -125,3 +125,49 @@
   margin-top: $unit;
   padding-top: $unit;
 }
+
+.c-404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/images/svg/doodles.svg');
+  background-size: 150%;
+  background-position: 50% 50%;
+  height: 100vh;
+  width: 100vw;
+
+  @include mq(small) {
+    background-size: 75%;
+    background-size: 100%;
+  }
+
+  @include mq(medium) {
+    background-size: 75%;
+  }
+
+  @include mq(large) {
+    background-size: 62.5%;
+  }
+}
+
+  .c-404__wrapper {
+    padding-right: $unit;
+    padding-left: $unit;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 320px;
+    text-align: center;
+
+    @include mq(small) {
+      max-width: 400px;
+    }
+
+    @include mq(medium) {
+      padding-right: $unit-large;
+      padding-left: $unit-large;
+    }
+
+    @include mq(large) {
+      max-width: 500px;
+    }
+  }

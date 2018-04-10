@@ -2,6 +2,20 @@
    #TYPOGRAPHY
    ========================================================================== */
 
+.c-h1-big {
+  color: $color-secondary;
+  @include font-size($font-h1,1.25);
+  margin-bottom: $unit-tiny;
+
+  @include mq(small) {
+    @include font-size($font-h1,1.25);
+  }
+
+  @include mq(medium) {
+    @include font-size(60px,1.25);
+  }
+}
+
 .c-h1 {
   color: $color-neutral-dark;
   @include font-size($font-h3,1.25);
