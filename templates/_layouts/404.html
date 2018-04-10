@@ -19,7 +19,7 @@
   {% hook "seo" %}
 
   {# Modernizr #}
-  <script src="https://nerdlab.be/assets/js/modernizr-custom.js"></script>
+  <script src="{{ alias('@web')}}/assets/js/modernizr-custom.js"></script>
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
