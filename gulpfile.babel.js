@@ -89,6 +89,7 @@ const paths = {
     'web/assets/vendor/svgxuse/svgxuse.js',
     'web/assets/vendor/picturefill/dist/picturefill.js',
     'web/assets/vendor/lazysizes/lazysizes.js',
+    'web/assets/vendor/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
     'web/assets/vendor/jquery-match-height/jquery.matchHeight.js',
     'web/assets/vendor/animejs/anime.min.js',
     'web/assets/js/_plugins/*.js',

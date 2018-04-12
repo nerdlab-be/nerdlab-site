@@ -13,7 +13,8 @@
   width: calc(100vw - #{$unit * 2});
   max-width: $inuit-wrapper-width-huge;
   cursor: pointer;
-  margin-right: $unit;
+  margin-left: $unit/4;
+  margin-right: $unit/4;
 
   @include mq(medium) {
     width: calc(100vw - #{$unit * 4});

@@ -21,7 +21,15 @@
           <div class="o-layout__item u-1/2@medium">
             {% for item in entry.projectHeader.limit(1).all() %}
             <div class="o-crop o-crop--1:1 u-margin-bottom-small">
-              <img src="{{ item.url }}" alt="{{ item.title }}" class="o-crop__content">
+              <img
+                class="o-crop__content lazyload fade-in"
+                src="{{ item.url(thumb) }}"
+                data-sizes="auto"
+                data-srcset="{{ item.url(small) }} 240w,
+                             {{ item.url(medium) }} 401w,
+                             {{ item.url(large) }} 601w,
+                             {{ item.url(xlarge) }} 901w"
+                alt="{{ item.title }}">
             </div>
             {% endfor %}
           </div>
@@ -29,7 +37,15 @@
             <div class="c-content c-content--small">
               {% for item in entry.projectHeader.limit(1).offset(1).all() %}
               <div class="o-crop o-crop--16:9 u-margin-bottom">
-                <img src="{{ item.url }}" alt="{{ item.title }}" class="o-crop__content o-crop__content-center">
+                <img
+                  class="o-crop__content o-crop__content-center lazyload fade-in"
+                  src="{{ item.url(thumb) }}"
+                  data-sizes="auto"
+                  data-srcset="{{ item.url(small) }} 240w,
+                               {{ item.url(medium) }} 401w,
+                               {{ item.url(large) }} 601w,
+                               {{ item.url(xlarge) }} 901w"
+                  alt="{{ item.title }}">
               </div>
               {% endfor %}
               <h3 class="c-h3 u-margin-bottom-small">

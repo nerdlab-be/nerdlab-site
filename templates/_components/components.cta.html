@@ -26,14 +26,14 @@
   {% switch item.type %}
   {% case "photo" %}
   {% for type in item.photo.all() %}
-    <div class="c-background__image" style="background-image: url('{{ type.url }}');"></div>
+    <div class="c-background__image lazyload fade-in-cta" style="background-image: url('{{ type.url(thumb) }}');" data-bg="{{ type.url(huge) }}"></div>
     <p class="c-background__image__meta">
       {{ type.credits }}
     </p>
   {% endfor %}
   {% case "video" %}
   {% for type in item.placeholder.all() %}
-  <div class="c-background__image c-background__image--fallback" style="background-image: url('{{ type.url }}');"></div>
+  <div class="c-background__image c-background__image--fallback lazyload fade-in-cta" style="background-image: url('{{ type.url(thumb) }}');" data-bg="{{ type.url(huge) }}"></div>
   {% endfor %}
   <video class="c-background__video" autoplay loop muted preload="true">
     {% for type in item.webm.all() %}

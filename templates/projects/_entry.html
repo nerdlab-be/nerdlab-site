@@ -27,8 +27,17 @@
   <div class="p-slick-theme js-gallery">
     {% for item in entry.projectHeader.all() %}
     <div class="p-slick-theme__img">
-      <div class="o-crop o-crop--21:9">
-        <img class="o-crop__content o-crop__content--center" src="{{ item.url }}" alt="{{ item.title }}">
+      <div class="o-crop o-crop--19:9">
+        <img
+          class="o-crop__content o-crop__content--center lazyload fade-in"
+          src="{{ item.url(thumb) }}"
+          data-sizes="auto"
+          data-srcset="{{ item.url(small) }} 240w,
+                       {{ item.url(medium) }} 401w,
+                       {{ item.url(large) }} 601w,
+                       {{ item.url(xlarge) }} 901w,
+                       {{ item.url(huge) }} 1281w"
+          alt="{{ item.title }}">
       </div>
     </div>
     {% endfor %}

@@ -22,7 +22,14 @@
             {% for item in block.projectHeader.limit(1).all() %}
             <div class="o-crop o-crop--3:1">
               <a href="{{ block.url }}" alt="{{ block.title }}">
-                <img src="{{ item.url }}" alt="{{ item.title }}" class="o-crop__content o-crop__content--center">
+                <img
+                  class="o-crop__content o-crop__content-center lazyload fade-in"
+                  src="{{ item.url(thumb) }}"
+                  data-sizes="auto"
+                  data-srcset="{{ item.url(small) }} 240w,
+                               {{ item.url(medium) }} 401w,
+                               {{ item.url(large) }} 601w"
+                  alt="{{ item.title }}">
               </a>
             </div>
             {% endfor %}
