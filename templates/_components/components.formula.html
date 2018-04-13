@@ -1,0 +1,34 @@
+{#
+  Formula
+  ================
+#}
+
+{#
+  {% include '_components/components.formula.html' %}
+#}
+
+{# -- Module -- #}
+{% set formula = entry.formula.all() %}
+{% for block in formula %}
+<div class="o-row-large c-illustration u-border-top">
+  <div class="o-wrapper o-wrapper--huge c-background__body">
+    <div class="o-layout o-layout--middle{{ cycle([' o-layout--reverse', ''], loop.index0) }}">
+      <div class="o-layout__item u-1/2@medium">
+        <div class="c-content c-content--small">
+          <h2 class="c-h2 u-margin-bottom-small">{{ block.heading }}</h2>
+          {{ block.body }}
+          <p>
+            <a href="{{ block.linkHref }}" class="">
+              {{ block.linkText }}
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="{{ cycle(['c-illustration__left', 'c-illustration__right'], loop.index0) }}">
+    <img
+      src="/assets/images/jpg/{{ cycle(['dag-thumb.jpg', 'week-thumb.jpg', 'custom-thumb.jpg'], loop.index0) }}" alt="{{ cycle(['de-dag', 'de-week', 'custom'], loop.index0) }}" data-src="/assets/images/jpg/{{ cycle(['dag.jpg', 'week.jpg', 'custom.jpg'], loop.index0) }}" class="lazyload fade-in">
+  </div>
+</div>
+{% endfor %}

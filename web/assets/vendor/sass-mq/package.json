@@ -10,7 +10,7 @@
         "spec": ">=3.3.1 <4.0.0",
         "type": "range"
       },
-      "/Users/dieterpeirs/3-Sites/nerdlab-site"
+      "/Users/dieterpeirs/3-Sites/nerdlab"
     ]
   ],
   "_from": "sass-mq@>=3.3.1 <4.0.0",
@@ -38,6 +38,7 @@
     "type": "range"
   },
   "_requiredBy": [
+    "#USER",
     "/",
     "/inuitcss"
   ],
@@ -45,7 +46,7 @@
   "_shasum": "3472e04c31a432bcd55b3b604edc72ae9a4def1a",
   "_shrinkwrap": null,
   "_spec": "sass-mq@^3.3.1",
-  "_where": "/Users/dieterpeirs/3-Sites/nerdlab-site",
+  "_where": "/Users/dieterpeirs/3-Sites/nerdlab",
   "bugs": {
     "url": "https://github.com/sass-mq/sass-mq/issues"
   },

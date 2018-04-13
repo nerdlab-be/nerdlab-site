@@ -6,11 +6,21 @@
 {% extends "_layouts/site" %}
 
 {% block main %}
-
-<div class="c-row c-row--md u-bgcolor-neutral-xxxxx-light u-z-gamma">
-  <div class="o-container">
-    {# Agenda overview #}
-    {% include '_components/components.agenda-overview.html' %}
+<div class="o-row-intro">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout o-layout--large o-layout--spacer">
+      <div class="o-layout__item u-1/2@large">
+        {# Title #}
+        <h1 class="c-h1">{{ entry.title }}</h1>
+        {% include '_components/components.intro.html' %}
+      </div>
+      <div class="o-layout__item u-1/2@large">
+        <div class="s-content u-max-width-md">
+          {# Agenda overview #}
+          {% include '_components/components.agenda-overview.html' %}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -12,12 +12,35 @@
 {% endif %}
 
 {% block body %}
-<div class="c-row c-row--full c-row--404 o-flex o-flex--align-center u-bgcolor-neutral-xxxxx-light">
-  <div class="o-container">
-    <div class="s-content u-max-width-sm u-text-align-center u-align-horizontal">
-        <h1 class="u-color-beta-base u-mb-beta">{{ entry.title }}</h1>
-        {# Intro #}
-        {% include '_components/components.intro.html' %}
+<div class="o-row c-404">
+  <div class="c-404__wrapper">
+    <h1 class="c-h1-big">{{ entry.title }}</h1>
+    <div class="c-content c-content--small">
+      {% set intro = entry.intro.all() %}
+      {% for block in intro %}
+      {% switch block.type %}
+      {% case "introParagraph" %}
+        {{ block.introParagraph }}
+      {% case "paragraph" %}
+        {{ block.paragraph }}
+      {% case "subtitle" %}
+        <h2>{{ block.subtitle }}</h2>
+      {% case "button" %}
+        <p>
+          {% if block.buttonLink | length %}
+          {% for link in block.buttonLink.all() %}
+          <a href="{{ link.url }}" class="c-button c-button--lg c-button--alpha">
+            {{ block.buttonTitle }}
+          </a>
+          {% endfor %}
+          {% else %}
+          <a href="{{ block.buttonURL }}" class="c-btn c-btn--large c-btn--primary">
+            {{ block.buttonTitle }}
+          </a>
+          {% endif %}
+        </p>
+      {% endswitch %}
+      {% endfor %}
     </div>
   </div>
 </div>

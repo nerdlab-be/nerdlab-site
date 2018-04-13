@@ -1,0 +1,29 @@
+{#
+ # Portfolio detail
+ # ------------------------
+-#}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+<div class="o-row-intro">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
+        {# Intro #}
+        <h1 class="c-h1">{{ entry.title }}</h1>
+        {% include '_components/components.intro.html' %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{# Formula #}
+{% include '_components/components.formula.html' %}
+
+{# Features #}
+{% include '_components/components.features.html' %}
+
+{# CTA #}
+{% include '_components/components.cta.html' %}
+{% endblock %}

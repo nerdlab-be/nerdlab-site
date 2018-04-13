@@ -1,0 +1,64 @@
+{#
+  Portfolio overview
+  ================
+#}
+
+{#
+  {% include '_components/components.projects-overview.html' %}
+#}
+
+{# -- Module -- #}
+{% paginate craft.entries.section('projectDetail').limit(3) as pageInfo, pageEntries %}
+
+<div class="o-row-large u-border-top">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout o-layout--small">
+        <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
+          <div class="c-lead">{{ entry.projectsIntro }}</div>
+        </div>
+    </div>
+    <div class="o-layout o-layout--small o-layout--spacer">
+      {% for entry in pageEntries %}
+      {% if entry.featured %}
+      <div class="o-layout__item u-1/2@medium u-1/3@large">
+        <div class="c-card">
+          <div class="c-card__image">
+            {% for item in entry.projectHeader.limit(1).all() %}
+            <div class="o-crop o-crop--3:1">
+              <a href="{{ entry.url }}" alt="{{ entry.title }}">
+                <img
+                  class="o-crop__content o-crop__content-center lazyload fade-in"
+                  src="{{ item.url(thumb) }}"
+                  data-sizes="auto"
+                  data-srcset="{{ item.url(small) }} 240w,
+                               {{ item.url(medium) }} 401w,
+                               {{ item.url(large) }} 601w"
+                  alt="{{ item.title }}">
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="c-card__content c-content c-content--small">
+            <h2 class="c-h2 u-margin-bottom-small">
+              {{ entry.title }}
+            </h2>
+            {% set intro = entry.intro.all() %}
+            {% for block in intro %}
+            {% switch block.type %}
+            {% case "introParagraph" %}
+              {{ block.introParagraph }}
+            {% endswitch %}
+            {% endfor %}
+          </div>
+          <div class="c-card__footer c-content">
+            <p>
+              <a href="{{ entry.url }}" alt="{{ entry.title }}" class="c-btn c-btn--primary c-btn--large">{{ labels.labelViewProject }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

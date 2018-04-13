@@ -1,0 +1,25 @@
+.c-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-bottom-left-radius: $unit-small;
+  border-bottom-right-radius: $unit-small;
+  border-radius: $unit-tiny/2;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba($color-neutral-dark,0.1), 0 6px 6px rgba($color-neutral-dark,0.15);
+  background-color: $white;
+}
+
+  .c-card__image {
+    flex-grow: 0;
+  }
+
+  .c-card__content {
+    padding: $unit;
+    flex-grow: 1;
+  }
+
+  .c-card__footer {
+    flex-grow: 0;
+    padding: 0 $unit $unit;
+  }

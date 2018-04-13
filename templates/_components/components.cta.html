@@ -21,21 +21,21 @@
 {# -- Module -- #}
 {% set doormat = entry.doormat.all() %}
 {% for block in doormat %}
-<div class="c-row c-row--md c-row--cta u-z-delta">
+<div class="o-row-large c-background">
   {% for item in block.media.all() %}
   {% switch item.type %}
   {% case "photo" %}
   {% for type in item.photo.all() %}
-    <div class="c-background-image" style="background-image: url('{{ type.url }}');"></div>
-    <p class="c-background-video__meta">
+    <div class="c-background__image lazyload fade-in-cta" style="background-image: url('{{ type.url(thumb) }}');" data-bg="{{ type.url(huge) }}"></div>
+    <p class="c-background__image__meta">
       {{ type.credits }}
     </p>
   {% endfor %}
   {% case "video" %}
   {% for type in item.placeholder.all() %}
-  <div class="c-background-image c-background-image--fallback" style="background-image: url('{{ type.url }}');"></div>
+  <div class="c-background__image c-background__image--fallback lazyload fade-in-cta" style="background-image: url('{{ type.url(thumb) }}');" data-bg="{{ type.url(huge) }}"></div>
   {% endfor %}
-  <video class="c-background-video" autoplay loop muted preload="true">
+  <video class="c-background__video" autoplay loop muted preload="true">
     {% for type in item.webm.all() %}
     <source src="{{ type.url }}" type="video/webm">
     {% endfor %}
@@ -44,34 +44,33 @@
     {% endfor %}
   </video>
   {% for type in item.placeholder.all() %}
-  <p class="c-background-video__meta">
+  <p class="c-background__video__meta">
     {{ type.credits }}
   </p>
   {% endfor %}
   {% endswitch %}
   {% endfor %}
-  <div class="o-container">
-    <div class="o-grid o-grid--gutter o-flex">
-      <div class="o-grid__item u-1-of-2-bp6">
-        <div class="u-max-width-md">
-          <div class="c-cta-lead u-color-neutral-xxxxx-light">
+  <div class="o-wrapper o-wrapper--huge c-background__body">
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@small u-1/2@huge">
+          <div class="c-content c-content--cta">
             {{ block.paragraph }}
-          </div>
-          {% for item in block.button.all() %}
-          <p>
-          {% if item.buttonLink | length %}
-            {% for link in item.buttonLink.all() %}
-            <a href="{{ link.url() }}" class="c-button c-button--lg c-button--cta">
-              {{ item.buttonTitle }}
-            </a>
+            {% for item in block.button.all() %}
+            <p>
+            {% if item.buttonLink | length %}
+              {% for link in item.buttonLink.all() %}
+              <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+                {{ item.buttonTitle }}
+              </a>
+              {% endfor %}
+            {% else %}
+              <a href="{{ item.buttonURL }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+                {{ item.buttonTitle }}
+              </a>
+            {% endif %}
+            </p>
             {% endfor %}
-          {% else %}
-            <a href="{{ item.buttonURL }}" class="c-button c-button--lg c-button--cta">
-              {{ item.buttonTitle }}
-            </a>
-          {% endif %}
-          </p>
-          {% endfor %}
+          </div>
         </div>
       </div>
     </div>

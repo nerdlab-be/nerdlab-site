@@ -59,12 +59,10 @@ var chopstick =
             lazyLoad: 'progressive',
 
             responsive: [{
-
                 breakpoint: 767,
                 settings: {
                     centerMode: true
                 }
-
             }]
         });
     }
