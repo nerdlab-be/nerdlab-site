@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "90c34fcdf78ccca59ab96a5aff4277aa",
+    "content-hash": "6371f69ffe26e1489e83dbcf5d9776f3",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
@@ -117,6 +117,42 @@
                 "markdown-extra"
             ],
             "time": "2017-07-16T21:13:23+00:00"
+        },
+        {
+            "name": "clubstudioltd/craft-asset-rev",
+            "version": "6.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/clubstudioltd/craft-asset-rev/zipball/c7468e84b23213d858385aa462427ab8ca9b8bb5",
+                "reference": "c7468e84b23213d858385aa462427ab8ca9b8bb5",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.29"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Asset Rev",
+                "handle": "assetrev",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://github.com/clubstudioltd/craft-asset-rev/blob/master/CHANGELOG.md",
+                "documentationUrl": "https://github.com/clubstudioltd/craft-asset-rev",
+                "downloadUrl": "https://github.com/clubstudioltd/craft-asset-rev/archive/v6.zip",
+                "developer": "Club Studio Ltd",
+                "developerUrl": "https://clubstudio.co.uk",
+                "class": "club\\assetrev\\AssetRev"
+            },
+            "autoload": {
+                "psr-4": {
+                    "club\\assetrev\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A plugin to aid cache-busting in Craft 3",
+            "time": "2017-11-08T14:00:15+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -741,63 +777,6 @@
                 "parser"
             ],
             "time": "2014-09-09T13:34:57+00:00"
-        },
-        {
-            "name": "dolphiq/sitemap",
-            "version": "1.0.9",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Dolphiq/craft3-plugin-sitemap/zipball/2cf2341e10710fb54c4decfcdc02bc90e7423553",
-                "reference": "2cf2341e10710fb54c4decfcdc02bc90e7423553",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^3.0.0-RC11",
-                "jaybizzle/crawler-detect": "1.*"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "name": "XML Sitemap",
-                "handle": "sitemap",
-                "schemaVersion": "1.0.2",
-                "developer": "Dolphiq",
-                "developerUrl": "https://dolphiq.nl/",
-                "hasCpSettings": true,
-                "hasCpSection": false,
-                "components": {
-                    "sitemapService": "dolphiq\\sitemap\\services\\SitemapService"
-                },
-                "documentationUrl": "https://github.com/Dolphiq/craft3-plugin-sitemap/blob/master/README.md",
-                "changelogUrl": "https://github.com/Dolphiq/craft3-plugin-sitemap/blob/master/CHANGELOG.md",
-                "class": "dolphiq\\sitemap\\Sitemap"
-            },
-            "autoload": {
-                "psr-4": {
-                    "dolphiq\\sitemap\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dolphiq",
-                    "email": "info@dolphiq.nl",
-                    "homepage": "https://dolphiq.nl/"
-                }
-            ],
-            "description": "Craft 3 plugin that provides an easy way to provide and manage a XML sitemap for search engines like Google and Bing",
-            "keywords": [
-                "cms",
-                "craft",
-                "craft-plugin",
-                "craftcms",
-                "seo",
-                "sitemap",
-                "sitemap.xml",
-                "webmaster tools"
-            ],
-            "time": "2018-02-21T22:58:12+00:00"
         },
         {
             "name": "egulias/email-validator",

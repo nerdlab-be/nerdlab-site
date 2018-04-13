@@ -37,7 +37,7 @@
       <div class="o-layout__item u-1/2@small c-content c-content--footer">
         {% set conditions = craft.entries.section('conditions') %}
         {% for page in conditions.all() %}
-        <p class="c-small">©{{ 'now'|date('Y') }} Nerdlab, <a href="{{ page.url }}">{{ page.title }}</a></p>
+        <p class="c-small">©{{ 'now'|date('Y') }} {{ siteName }}, <a href="{{ page.url }}">{{ page.title }}</a></p>
         {% endfor %}
       </div>
       <div class="o-layout__item u-1/2@small">

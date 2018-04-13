@@ -51,7 +51,7 @@
     {% endfor %}
     {% if entry.eventURL | length %}
     <p>
-      <a href="{{ entry.eventURL }}">Meer info</a>
+      <a href="{{ entry.eventURL }}">{{ labels.labelMoreInfo }}</a>
     </p>
     {% endif %}
   </div>
@@ -59,7 +59,7 @@
 {% else %}
 {% if loop.last %}
 <p class="c-faded">
-  Er zijn momenteel geen evenementen gepland.
+  {{ labels.labelNoEvents }}
 </p>
 {% endif %}
 {% endif %}

@@ -27,7 +27,7 @@
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
       <div class="o-layout__item u-1/2@medium u-push-1/2@medium">
-        <h2 class="c-h2">Binnenkort</h2>
+        <h2 class="c-h2">{{ labels.labelUpcomingEvent }}</h2>
         <article class="u-divider-small">
           {% if item.customDate | length() %}
           <p class="c-faded u-margin-bottom-tiny">
@@ -56,7 +56,7 @@
             {% endfor %}
             {% if item.eventURL | length %}
             <p>
-              <a href="{{ item.eventURL }}">Meer info</a>
+              <a href="{{ item.eventURL }}">{{ labels.labelMoreInfo }}</a>
             </p>
             {% endif %}
           </div>
