@@ -10,6 +10,7 @@
 {# -- Module -- #}
 {% set formula = entry.features.all() %}
 
+{% if formula|length() %}
 <div class="o-row-large u-border-top">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--spacer">
@@ -24,3 +25,4 @@
     </div>
   </div>
 </div>
+{% endif %}
