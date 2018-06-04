@@ -19,7 +19,7 @@
 {% endif %}
 
 {# -- Module -- #}
-{% set pageEntries = craft.entries.section('agendaDetail').orderBy('date asc') %}
+{% set pageEntries = craft.entries.section('events').orderBy('date asc') %}
 
 {% for entry in pageEntries.all() %}
 {% if entry.date|date('Ymd') >= now|date('Ymd') %}

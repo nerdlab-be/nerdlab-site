@@ -4,7 +4,7 @@
  */
 
 // Multisite
-define('CRAFT_SITE','mutationFestival2018');
+define('CRAFT_SITE','mutationFest2018');
 
 // Set path constants
 define('CRAFT_VENDOR_PATH', '/vendor');

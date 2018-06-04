@@ -27,7 +27,7 @@
     </div>
   </div>
   <div class="{{ cycle(['c-illustration__left', 'c-illustration__right'], loop.index0) }}">
-    {% if entry.type == "productDetail" %}
+    {% if entry.type == "product" %}
     <img
       src="/assets/images/jpg/{{ cycle(['dag-thumb.jpg', 'week-thumb.jpg', 'custom-thumb.jpg'], loop.index0) }}" alt="{{ cycle(['de-dag', 'de-week', 'custom'], loop.index0) }}" data-src="/assets/images/jpg/{{ cycle(['dag.jpg', 'week.jpg', 'custom.jpg'], loop.index0) }}" class="lazyload fade-in">
     {% elseif entry.type == "byob" %}

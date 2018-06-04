@@ -8,13 +8,12 @@
 #}
 
 {# -- Module -- #}
-{% paginate craft.entries.section('projectDetail').limit(3) as pageInfo, pageEntries %}
+{% paginate craft.entries.section('projects').limit(3) as pageInfo, pageEntries %}
 
 <div class="o-row-large u-padding-bottom-none">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--small o-layout--spacer">
       {% for block in pageEntries %}
-      {% if block.featured %}
       {% if entry.title != block.title %}
       <div class="o-layout__item u-1/2@medium">
         <div class="c-card">
@@ -53,7 +52,6 @@
           </div>
         </div>
       </div>
-      {% endif %}
       {% endif %}
       {% endfor %}
     </div>

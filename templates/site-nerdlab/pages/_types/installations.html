@@ -1,8 +1,3 @@
-{#
- # Lab
- # ------------------------
--#}
-
 {% extends "_layouts/site" %}
 
 {% block main %}
@@ -12,19 +7,8 @@
       <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
         {# Intro #}
         <h1 class="c-h1">{{ entry.title }}</h1>
-        {% include '_components/components.intro.html' %}
       </div>
     </div>
   </div>
 </div>
-
-{# Gallery #}
-{% include '_components/components.gallery.html' %}
-
-{# Body #}
-{% include '_components/components.body.html' %}
-
-{# CTA #}
-{% include '_components/components.cta.html' %}
-
 {% endblock %}

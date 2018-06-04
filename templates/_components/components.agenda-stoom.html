@@ -13,7 +13,7 @@
     <h2 class="c-subtitle">
       {{ entry.agendaTitle }}
     </h2>
-    {% paginate craft.entries.section('agendaStoom').limit(20) as pageInfo, pageEntries %}
+    {% paginate craft.entries.section('eventsStoom').limit(20) as pageInfo, pageEntries %}
 
     {% for entry in pageEntries %}
     <div class="o-grid o-grid--gutter-sm">
