@@ -1,0 +1,31 @@
+{% set days = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'] %}
+{% set storeHours = entry.storeHours[1:]|merge(entry.storeHours[0:1]) %}
+{#
+  Openingsuren
+  ================
+#}
+
+{#
+  {% include '_components/components.hours.html' %}
+#}
+
+{# -- Module -- #}
+<div class="c-hours">
+  <h3 class="c-h4">Openingsuren</h3>
+  <p class="c-hours__current">
+    {{ entry.storeHours[now|date('w')].open < now and entry.storeHours[now|date('w')].close > now ? '<strong>Nu open</strong>' : 'Nu gesloten' }}
+  </p>
+  <ul class="o-list-bare c-hours__list">
+    {% for dayHours in storeHours %}
+    {% if dayHours.open == dayHours.close %}
+    <li>
+      <strong>{{- days[loop.index0] }}:</strong> Gesloten
+    </li>
+    {% else %}
+    <li>
+      <strong>{{- days[loop.index0] }}:</strong> {{ dayHours.open|date('H:i') }} - {{ dayHours.close|date('H:i') -}}
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>

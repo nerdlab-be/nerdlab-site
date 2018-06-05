@@ -24,7 +24,7 @@ $logo-width:     $logo-height * $logo-ratio;
     width: $logo-width/1.2;
     height: $logo-height/1.2;
     margin-bottom: $unit-small/1.2;
-    background: transparent url('../img/svg/glasses.svg') 50% 50% no-repeat;
+    background: transparent url('/assets/img/svg/glasses.svg') 50% 50% no-repeat;
     background-size: contain;
     transform: rotate(-10deg);
     transition: transform $global-transition;

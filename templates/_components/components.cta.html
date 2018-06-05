@@ -53,24 +53,23 @@
   <div class="o-wrapper o-wrapper--huge c-background__body">
     <div class="o-layout">
       <div class="o-layout__item u-2/3@small u-1/2@huge">
-          <div class="c-content c-content--cta">
-            {{ block.paragraph }}
-            {% for item in block.button.all() %}
-            <p>
-            {% if item.buttonLink | length %}
-              {% for link in item.buttonLink.all() %}
-              <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
-                {{ item.buttonTitle }}
-              </a>
-              {% endfor %}
-            {% else %}
-              <a href="{{ item.buttonURL }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
-                {{ item.buttonTitle }}
-              </a>
-            {% endif %}
-            </p>
+        <div class="c-content c-content--cta">
+          {{ block.paragraph }}
+          {% for item in block.button.all() %}
+          <p>
+          {% if item.buttonLink | length %}
+            {% for link in item.buttonLink.all() %}
+            <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+              {{ item.buttonTitle }}
+            </a>
             {% endfor %}
-          </div>
+          {% else %}
+            <a href="{{ item.buttonURL }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+              {{ item.buttonTitle }}
+            </a>
+          {% endif %}
+          </p>
+          {% endfor %}
         </div>
       </div>
     </div>

@@ -32,7 +32,9 @@
     "pennebaker/craft-architect": "2.2.8",
     "ether/seo": "3.2.8",
     "rias/craft-schema": "1.0.3",
-    "clubstudioltd/craft-asset-rev": "v6.0.0"
+    "clubstudioltd/craft-asset-rev": "v6.0.0",
+    "craftcms/store-hours": "2.0.6",
+    "rias/craft-position-fieldtype": "1.0.13"
   },
   "autoload": {
     "psr-4": {

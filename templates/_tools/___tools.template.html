@@ -1,0 +1,28 @@
+{#
+  Tool template
+  =============
+#}
+
+{#
+  {% set toolOptions = {
+    styles: '',
+  } %}
+
+  {% include '_tools/_tools.tool.html' with { options: toolOptions } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  styles: '',
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<div class="{{ options.styles }}">
+  {# Module #}
+</div>

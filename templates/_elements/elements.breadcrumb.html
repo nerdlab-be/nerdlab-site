@@ -1,0 +1,33 @@
+{#
+  Breadcrumb
+  ================
+#}
+
+{#
+  {% include '_elements/elements.breadcrumb.html' %}
+#}
+
+{# -- Module -- #}
+{% if entry.level == '1' %}
+  {% set pages = craft.entries.section('pages').descendantOf( entry.id ).descendantDist(1) %}
+  {% set parentLink = entry %}
+{% elseif entry.level == '2' %}
+  {% if entry.children.one() == TRUE %}
+    {% set pages = craft.entries.section('pages').descendantOf( entry.id ) %}
+    {% set parentLink = entry.parent %}
+  {% else %}
+    {% set pages = craft.entries.section('pages').descendantOf( entry.parent ) %}
+    {% set parentLink = entry.parent %}
+  {% endif %}
+{% elseif entry.level == '3' %}
+  {% set pages = craft.entries.section('pages').descendantOf( entry.parent ) %}
+  {% set parentLink = entry.parent %}
+{% endif %}
+
+{% if parentLink.title != entry.title %}
+<p class="c-breadcrumb">
+  <a href="{{ parentLink.url() }}" alt="{{ parentLink }}" class="c-breadcrumb__link">
+    {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parentLink }}
+  </a>
+</p>
+{% endif %}

@@ -168,3 +168,28 @@
     }
   }
 }
+
+.c-content--lead {
+  p {
+    @include font-size($font-h6);
+    font-weight: $font-regular;
+    color: $color-secondary;
+  }
+
+
+  @include mq(small) {
+    p {
+      @include font-size($font-h4);
+    }
+  }
+
+  @include mq(medium) {
+    margin-top: -$unit-tiny/2;
+  }
+
+  @include mq(large) {
+    p {
+      @include font-size($font-h3, auto, +1);
+    }
+  }
+}

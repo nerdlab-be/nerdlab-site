@@ -35,9 +35,9 @@
   {# CSS #}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700|Eczar:500,600" rel="stylesheet">
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/stoom.css">
+    <link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/stoom.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="http://nerdlab.localhost/assets/css/stoom.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ rev('stoom.min.css') }}">
   {% endif %}
   {% endblock %}
 </head>
@@ -105,9 +105,9 @@
   {# Global javascript #}
   {% block foot %}
     {% if craft.app.config.general.devMode == true %}
-      <script src="http://nerdlab.localhost/assets/js/stoom.js"></script>
+      <script src="{{ alias('@web') }}/assets/js/stoom.js"></script>
     {% else %}
-      <script src="http://nerdlab.localhost/assets/js/stoom.min.js"></script>
+      <script src="{{ rev('/assets/js/stoom.min.js') }}"></script>
     {% endif %}
   {% endblock %}
 </body>

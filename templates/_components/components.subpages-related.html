@@ -1,0 +1,73 @@
+{#
+  Related subpages
+  ================
+#}
+
+{#
+  {% include '_components/components.subpages-related.html' %}
+#}
+
+{# -- Module -- #}
+{% if entry.level == '2' %}
+  {% set parent = craft.entries.slug(craft.app.request.getSegment(1)).one() %}
+  {% set subnav =  parent.getDescendants(1)  %}
+{% elseif entry.level == '3' %}
+  {% set parent = craft.entries.slug(craft.app.request.getSegment(2)).one() %}
+  {% set subnav =  parent.getDescendants(1)  %}
+{% endif %}
+
+<div class="o-row-large u-border-top">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout o-layout--small o-layout--spacer">
+      <div class="o-layout__item">
+        <p class="c-lead">{{ parent }} ook voor volgende zaken:</p>
+      </div>
+      {# set the parent #}
+      {# don't show if nothing's under it #}
+      {% if parent.hasDescendants %}
+      {% for page in subnav.all() %}
+      {% if page.title == entry.title %}
+      {% else %}
+      <div class="o-layout__item u-1/2@medium">
+        <div class="c-card">
+          <div class="c-card__image">
+            {% for item in page.projectHeader.limit(1).all() %}
+            <div class="o-crop o-crop--3:1">
+              <a href="{{ page.url }}" alt="{{ page.title }}">
+                <img
+                  class="o-crop__content o-crop__content-center lazyload fade-in"
+                  src="{{ item.url(thumb) }}"
+                  data-sizes="auto"
+                  data-srcset="{{ item.url(small) }} 240w,
+                               {{ item.url(medium) }} 401w,
+                               {{ item.url(large) }} 601w"
+                  alt="{{ item.title }}">
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="c-card__content c-content c-content--small">
+            <h2 class="c-h2 u-margin-bottom-small">
+              {{ page.title }}
+            </h2>
+            {% set intro = page.intro.all() %}
+            {% for block in intro %}
+            {% switch block.type %}
+            {% case "introParagraph" %}
+              {{ block.introParagraph }}
+            {% endswitch %}
+            {% endfor %}
+          </div>
+          <div class="c-card__footer c-content">
+            <p>
+              <a href="{{ page.url }}" alt="{{ page.title }}" class="c-btn c-btn--primary c-btn--large">{{ labels.labelMoreInfo }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>

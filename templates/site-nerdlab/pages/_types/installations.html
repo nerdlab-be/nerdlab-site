@@ -5,10 +5,23 @@
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
       <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
-        {# Intro #}
+        {# Breadcrumb #}
+        {% include "_elements/elements.breadcrumb.html" %}
+        {# Page title #}
         <h1 class="c-h1">{{ entry.title }}</h1>
+        {# Intro #}
+        {% include '_components/components.intro.html' %}
       </div>
     </div>
   </div>
 </div>
+
+{# Portfolio #}
+{% include '_components/components.portfolio.html' with { options: { tag: entry.title } } %}
+
+{# CTA #}
+{% include '_components/components.cta.html' %}
+
+{# Related pages #}
+{% include '_components/components.subpages-related.html' %}
 {% endblock %}

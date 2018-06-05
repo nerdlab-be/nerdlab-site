@@ -1,0 +1,16 @@
+/* ==========================================================================
+   #BREADCRUMB
+   ========================================================================== */
+
+.c-breadcrumb {
+  margin-bottom: $unit-small;
+}
+
+  .c-breadcrumb__link {
+    text-decoration: none;
+    font-weight: 600;
+    &,
+    &:visited {
+      color: $color-primary;
+    }
+  }

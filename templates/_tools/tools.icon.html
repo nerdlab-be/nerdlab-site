@@ -1,0 +1,35 @@
+{#
+  Icon
+  ====
+#}
+
+{#
+  {% set iconOptions = {
+    icon: 'arrow-left',
+    styles: 'c-icon--left',
+  } %}
+
+  {% include '_tools/tools.icon.html' with { options: iconOptions } %}
+  or the shorter version:
+  {% include '_tools/tools.icon.html' with { options: { icon: 'arrow-right' } } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  icon: '',
+  styles: '',
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+<svg
+class="c-icon {{ options.styles }}" role="img" aria-hidden="true">
+  <use
+    xlink:href="/assets/images/svg/svg-symbols.svg#{{ options.icon }}">
+  </use>
+</svg>

@@ -24,6 +24,28 @@
 {# Body #}
 {% include '_components/components.body.html' %}
 
+{# Portfolio overview #}
+{% include '_components/components.portfolio.html' with { options: { tag: entry.title } } %}
+
+{# Agenda #}
+<div class="o-row-large u-border-top">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout o-layout--spacer">
+      <div class="o-layout__item u-1/2@medium">
+        <div class="c-content c-content--lead">
+          {{ entry.paragraph }}
+        </div>
+      </div>
+      <div class="o-layout__item u-1/2@medium">
+        <div class="s-content u-max-width-md">
+          {# Agenda filter #}
+          {% include '_components/components.agenda-filter.html' with { options: { tag: entry.title } } %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 {# CTA #}
 {% include '_components/components.cta.html' %}
 

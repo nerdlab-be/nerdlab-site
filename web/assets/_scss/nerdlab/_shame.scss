@@ -226,3 +226,9 @@
 .o-crop {
   background-color: $color-neutral-xxlight;
 }
+
+.u-alternate:nth-child(odd) {
+  .u-alternate__layout {
+    flex-direction: row-reverse;
+  }
+}

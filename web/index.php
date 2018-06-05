@@ -4,7 +4,7 @@
  */
 
 // Set path constants
-// define('CRAFT_BASE_PATH', dirname(__DIR__));
+define('CRAFT_BASE_PATH', dirname(__DIR__));
 define('CRAFT_VENDOR_PATH', '/vendor');
 $root = dirname(__DIR__);
 

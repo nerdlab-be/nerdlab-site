@@ -1,0 +1,67 @@
+{#
+  Workshops
+  ================
+#}
+
+{#
+  {% include '_components/components.workshops.html' %}
+#}
+
+{# -- Module -- #}
+{% paginate craft.entries.section('workshops').limit(20) as pageInfo, pageEntries %}
+
+{% for workshop in pageEntries %}
+<div class="o-row-large u-padding-top-none u-alternate">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item ">
+        <div class="o-layout u-alternate__layout">
+          <div class="o-layout__item u-1/2@medium">
+            {% for item in workshop.projectHeader.limit(1).all() %}
+            <div class="o-crop o-crop--1:1 u-margin-bottom-small">
+              <img
+                class="o-crop__content lazyload fade-in"
+                src="{{ item.url(thumb) }}"
+                data-sizes="auto"
+                data-srcset="{{ item.url(small) }} 240w,
+                             {{ item.url(medium) }} 401w,
+                             {{ item.url(large) }} 601w"
+                alt="{{ item.title }}">
+            </div>
+            {% endfor %}
+          </div>
+          <div class="o-layout__item u-1/2@medium">
+            <div class="c-content c-content--small">
+              {% for item in workshop.projectHeader.limit(1).offset(1).all() %}
+              <div class="o-crop o-crop--16:9 u-margin-bottom">
+                <img
+                  class="o-crop__content o-crop__content-center lazyload fade-in"
+                  src="{{ item.url(thumb) }}"
+                  data-sizes="auto"
+                  data-srcset="{{ item.url(small) }} 240w,
+                               {{ item.url(medium) }} 401w,
+                               {{ item.url(large) }} 601w"
+                  alt="{{ item.title }}">
+              </div>
+              {% endfor %}
+              <h3 class="c-h3 u-margin-bottom-small">
+                <a href="{{ workshop.url() }}">{{ workshop.title }}</a>
+              </h3>
+              {% set intro = workshop.intro.all() %}
+              {% for block in intro %}
+              {% switch block.type %}
+              {% case "introParagraph" %}
+                {{ block.introParagraph }}
+              {% endswitch %}
+              {% endfor %}
+              <p>
+                <a href="{{ workshop.url }}" alt="{{ workshop.title }}" class="c-btn c-btn--primary c-btn--large">{{ labels.labelMoreInfo }}</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

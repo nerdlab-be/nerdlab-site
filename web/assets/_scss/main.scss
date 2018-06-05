@@ -70,42 +70,42 @@
  */
 
 // SETTINGS
-@import "_new/_settings/settings.config";
-@import "_new/_settings/settings.core";
-@import "_new/_settings/settings.global";
-@import "_new/_settings/settings.colors";
-@import "_new/_settings/settings.font";
+@import "nerdlab/_settings/settings.config";
+@import "nerdlab/_settings/settings.core";
+@import "nerdlab/_settings/settings.global";
+@import "nerdlab/_settings/settings.colors";
+@import "nerdlab/_settings/settings.font";
 
 
 
 
 
 // TOOLS
-@import "_new/_tools/tools.font-size";
-@import "_new/_tools/tools.clearfix";
-@import "_new/_tools/tools.hidden";
-@import "_new/_tools/tools.aliases";
-@import "_new/_tools/tools.mq";
+@import "nerdlab/_tools/tools.font-size";
+@import "nerdlab/_tools/tools.clearfix";
+@import "nerdlab/_tools/tools.hidden";
+@import "nerdlab/_tools/tools.aliases";
+@import "nerdlab/_tools/tools.mq";
 
 
 
 
 
 // GENERIC
-@import "_new/_generic/generic.box-sizing";
-@import "_new/_generic/generic.normalize";
-@import "_new/_generic/generic.reset";
-@import "_new/_generic/generic.shared";
+@import "nerdlab/_generic/generic.box-sizing";
+@import "nerdlab/_generic/generic.normalize";
+@import "nerdlab/_generic/generic.reset";
+@import "nerdlab/_generic/generic.shared";
 
 
 
 
 
 // ELEMENTS
-@import "_new/_elements/elements.page";
-@import "_new/_elements/elements.headings";
-@import "_new/_elements/elements.images";
-@import "_new/_elements/elements.tables";
+@import "nerdlab/_elements/elements.page";
+@import "nerdlab/_elements/elements.headings";
+@import "nerdlab/_elements/elements.images";
+@import "nerdlab/_elements/elements.tables";
 
 
 
@@ -114,64 +114,67 @@
 // OBJECTS
 //
 // Uncomment and add to this section as necessary.
-@import "_new/_objects/objects.responsive-wrapper";
-@import "_new/_objects/objects.row";
-@import "_new/_objects/objects.flexlayout";
-@import "_new/_objects/objects.media";
-@import "_new/_objects/objects.flag";
-@import "_new/_objects/objects.list-bare";
-@import "_new/_objects/objects.list-inline";
-@import "_new/_objects/objects.box";
-@import "_new/_objects/objects.block";
-@import "_new/_objects/objects.ratio";
-@import "_new/_objects/objects.crop";
-@import "_new/_objects/objects.table";
-@import "_new/_objects/objects.pack";
+@import "nerdlab/_objects/objects.responsive-wrapper";
+@import "nerdlab/_objects/objects.row";
+@import "nerdlab/_objects/objects.flexlayout";
+@import "nerdlab/_objects/objects.media";
+@import "nerdlab/_objects/objects.flag";
+@import "nerdlab/_objects/objects.list-bare";
+@import "nerdlab/_objects/objects.list-inline";
+@import "nerdlab/_objects/objects.box";
+@import "nerdlab/_objects/objects.block";
+@import "nerdlab/_objects/objects.ratio";
+@import "nerdlab/_objects/objects.crop";
+@import "nerdlab/_objects/objects.table";
+@import "nerdlab/_objects/objects.pack";
 
 
 
 
 
 // COMPONENTS
-@import "_new/_components/components.main";
-@import "_new/_components/components.header";
-@import "_new/_components/components.brand";
-@import "_new/_components/components.navigation";
-@import "_new/_components/components.typography";
-@import "_new/_components/components.content";
-@import "_new/_components/components.buttons";
-@import "_new/_components/components.input";
-@import "_new/_components/components.form";
-@import "_new/_components/components.background";
-@import "_new/_components/components.card";
+@import "nerdlab/_components/components.main";
+@import "nerdlab/_components/components.header";
+@import "nerdlab/_components/components.brand";
+@import "nerdlab/_components/components.navigation";
+@import "nerdlab/_components/components.breadcrumb";
+@import "nerdlab/_components/components.typography";
+@import "nerdlab/_components/components.icons";
+@import "nerdlab/_components/components.content";
+@import "nerdlab/_components/components.buttons";
+@import "nerdlab/_components/components.input";
+@import "nerdlab/_components/components.form";
+@import "nerdlab/_components/components.background";
+@import "nerdlab/_components/components.card";
+@import "nerdlab/_components/components.hours";
 
 
 
 
 
 // PLUGINS
-@import "_new/_plugins/plugins.googlemaps";
-@import "_new/_plugins/plugins.slick";
-@import "_new/_plugins/plugins.slick-theme";
-@import "_new/_plugins/plugins.lazysizes";
+@import "nerdlab/_plugins/plugins.googlemaps";
+@import "nerdlab/_plugins/plugins.slick";
+@import "nerdlab/_plugins/plugins.slick-theme";
+@import "nerdlab/_plugins/plugins.lazysizes";
 
 
 
 
 
 // UTILITIES
-@import "_new/_utilities/utilities.clearfix";
+@import "nerdlab/_utilities/utilities.clearfix";
 
 // Be aware that enabling offsets produces a large chunk of classes which might
 // bloat your CSS, depending of the amount of breakpoints you defined.
 // Only set this to `true` if you are absolutely sure about what you are doing.
 $inuit-offsets: true;
-@import "_new/_utilities/utilities.widths";
-@import "_new/_utilities/utilities.headings";
-@import "_new/_utilities/utilities.spacings";
-@import "_new/_utilities/utilities.responsive-spacings";
-@import "_new/_utilities/utilities.print";
-@import "_new/_utilities/utilities.hide";
+@import "nerdlab/_utilities/utilities.widths";
+@import "nerdlab/_utilities/utilities.headings";
+@import "nerdlab/_utilities/utilities.spacings";
+@import "nerdlab/_utilities/utilities.responsive-spacings";
+@import "nerdlab/_utilities/utilities.print";
+@import "nerdlab/_utilities/utilities.hide";
 
 // SHAME
-@import "_new/shame.scss";
+@import "nerdlab/shame.scss";

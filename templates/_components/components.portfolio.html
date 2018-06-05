@@ -1,25 +1,37 @@
 {#
-  Portfolio overview
+  Portfolio
   ================
 #}
 
 {#
-  {% include '_components/components.projects-overview.html' %}
+  {% include '_components/components.portfolio.html' with { options: { tag: '' } } %}
 #}
 
-{# -- Module -- #}
-{% paginate craft.entries.section('projectDetail').limit(20) as pageInfo, pageEntries %}
+{# -- Set Defaults -- #}
+{% set defaults = {
+  tag: ''
+} %}
 
-<div class="o-row-large u-border-top">
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+{% paginate craft.entries.section('portfolio').limit(20) as pageInfo, pageEntries %}
+
+{% for portfolio in pageEntries %}
+{% for item in portfolio.tags.all() %}
+{% set currentTags = item %}
+{% if currentTags == options.tag %}
+<div class="o-row-large u-padding-top-none u-alternate">
   <div class="o-wrapper o-wrapper--huge">
-    <p class="c-lead">{{ entry.subtitle }}</p>
     <div class="o-layout">
-      {% for entry in pageEntries %}
-      {% if entry.featured == false %}
-      <div class="o-layout__item u-divider">
-        <div class="o-layout {{ cycle([' o-layout--reverse', ''], loop.index0) }}">
+      <div class="o-layout__item ">
+        <div class="o-layout u-alternate__layout">
           <div class="o-layout__item u-1/2@medium">
-            {% for item in entry.projectHeader.limit(1).all() %}
+            {% for item in portfolio.projectHeader.limit(1).all() %}
             <div class="o-crop o-crop--1:1 u-margin-bottom-small">
               <img
                 class="o-crop__content lazyload fade-in"
@@ -34,7 +46,7 @@
           </div>
           <div class="o-layout__item u-1/2@medium">
             <div class="c-content c-content--small">
-              {% for item in entry.projectHeader.limit(1).offset(1).all() %}
+              {% for item in portfolio.projectHeader.limit(1).offset(1).all() %}
               <div class="o-crop o-crop--16:9 u-margin-bottom">
                 <img
                   class="o-crop__content o-crop__content-center lazyload fade-in"
@@ -47,9 +59,9 @@
               </div>
               {% endfor %}
               <h3 class="c-h3 u-margin-bottom-small">
-                {{ entry.title }}
+                {{ portfolio.title }}
               </h3>
-              {% set intro = entry.intro.all() %}
+              {% set intro = portfolio.intro.all() %}
               {% for block in intro %}
               {% switch block.type %}
               {% case "introParagraph" %}
@@ -60,8 +72,9 @@
           </div>
         </div>
       </div>
-      {% endif %}
-      {% endfor %}
     </div>
   </div>
 </div>
+{% endif %}
+{% endfor %}
+{% endfor %}

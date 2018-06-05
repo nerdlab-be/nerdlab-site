@@ -19,13 +19,13 @@
   {% hook "seo" %}
 
   {# Modernizr #}
-  <script src="{{ alias('@web')}}/assets/js/modernizr-custom.js"></script>
+  <script src="{{ alias('@web') }}/assets/js/modernizr-custom.js"></script>
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="{{ alias('@web')}}/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/main.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="{{ alias('@web')}}/assets/css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ rev('main.min.css') }}">
   {% endif %}
 
   {# Analytics #}
@@ -97,9 +97,9 @@
   {# Global javascript #}
   {% block foot %}
     {% if craft.app.config.general.devMode == true %}
-      <script src="{{ alias('@web')}}/assets/js/scripts.js"></script>
+      <script src="{{ alias('@web') }}/assets/js/scripts.js"></script>
     {% else %}
-      <script src="{{ alias('@web')}}/assets/js/scripts.min.js"></script>
+      <script src="{{ rev('scripts.min.js') }}"></script>
     {% endif %}
   {% endblock %}
 </body>

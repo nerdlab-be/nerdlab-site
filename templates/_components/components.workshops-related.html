@@ -1,0 +1,58 @@
+{#
+  Workshops
+  ================
+#}
+
+{#
+  {% include '_components/components.workshops.html' %}
+#}
+
+{# -- Module -- #}
+{% paginate craft.entries.section('workshops').limit(20) as pageInfo, pageEntries %}
+
+<div class="o-row-large">
+  <div class="o-wrapper o-wrapper--huge">
+    <p class="c-lead">
+      Meer workshops
+    </p>
+    <div class="o-layout o-layout--small o-layout--spacer">
+      {% for workshop in pageEntries %}
+      {% if workshop.title == entry.title %}
+      {% else %}
+      <div class="o-layout__item u-1/2@medium u-1/3@large">
+        <div class="c-card">
+          <div class="c-card__image">
+            {% for item in workshop.projectHeader.limit(1).all() %}
+            <div class="o-crop o-crop--3:1">
+              <a href="{{ workshop.url }}" alt="{{ workshop.title }}">
+                <img
+                  class="o-crop__content o-crop__content-center lazyload fade-in"
+                  src="{{ item.url(thumb) }}"
+                  data-sizes="auto"
+                  data-srcset="{{ item.url(small) }} 240w,
+                               {{ item.url(medium) }} 401w,
+                               {{ item.url(large) }} 601w"
+                  alt="{{ item.title }}">
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="c-card__content c-content c-content--small">
+            <h3 class="c-h3 u-margin-bottom-small">
+              <a href="{{ workshop.url() }}">{{ workshop.title }}</a>
+            </h3>
+            {% set intro = workshop.intro.all() %}
+            {% for block in intro %}
+            {% switch block.type %}
+            {% case "introParagraph" %}
+              {{ block.introParagraph }}
+            {% endswitch %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

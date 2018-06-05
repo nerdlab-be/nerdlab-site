@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8a3cf7af7b7e941e17068b72ca82295f",
+    "content-hash": "1f3643fefbaa939aedcb276ae415981c",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
@@ -642,6 +642,59 @@
                 "yii2"
             ],
             "time": "2017-12-15T16:00:57+00:00"
+        },
+        {
+            "name": "craftcms/store-hours",
+            "version": "2.0.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/2383bec180f414b2219e7eea054a9176162c7344",
+                "reference": "2383bec180f414b2219e7eea054a9176162c7344",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.20"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Store Hours",
+                "handle": "store-hours",
+                "schemaVersion": "1.0.2",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/store-hours/v2/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/store-hours/archive/v2.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\storehours\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "This plugin adds a new “Store Hours” field type to Craft, for collecting the opening and closing hours of a business for each day of the week.",
+            "keywords": [
+                "cms",
+                "craftcms",
+                "hours",
+                "html",
+                "json",
+                "store",
+                "yii2"
+            ],
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/store-hours/issues?state=open",
+                "source": "https://github.com/craftcms/store-hours",
+                "docs": "https://github.com/craftcms/store-hours",
+                "rss": "https://github.com/craftcms/store-hours/commits/v2.atom"
+            },
+            "time": "2017-12-05T01:05:58+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -2078,6 +2131,56 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "rias/craft-position-fieldtype",
+            "version": "1.0.13",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rias500/craft-position-fieldtype/zipball/92d74abf65f1723fec7852bc607c9e903717fcfc",
+                "reference": "92d74abf65f1723fec7852bc607c9e903717fcfc",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Position Fieldtype",
+                "handle": "position-fieldtype",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/Rias500/craft-position-fieldtype/master/CHANGELOG.md",
+                "class": "rias\\positionfieldtype\\PositionFieldtype"
+            },
+            "autoload": {
+                "psr-4": {
+                    "rias\\positionfieldtype\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rias",
+                    "homepage": "https://rias.be"
+                }
+            ],
+            "description": "Brings back the Position fieldtype from Craft 2",
+            "keywords": [
+                "cms",
+                "craft",
+                "craft-plugin",
+                "craftcms",
+                "position fieldtype"
+            ],
+            "support": {
+                "docs": "https://github.com/Rias500/craft-position-fieldtype/blob/master/README.md",
+                "issues": "https://github.com/Rias500/craft-position-fieldtype/issues"
+            },
+            "time": "2018-05-21T09:41:49+00:00"
         },
         {
             "name": "rias/craft-schema",

@@ -29,8 +29,8 @@ import gnf from 'gulp-npm-files';
 import del from 'del';
 import ftp from 'vinyl-ftp';
 import gutil from 'gulp-util';
+import rev from 'gulp-rev';
 import gulpconfig from './gulpconfig.js';
-
 
 
 
@@ -84,6 +84,7 @@ const paths = {
   vendor: 'web/assets/vendor/',
   scssSrc: 'web/assets/_scss/**/*.scss',
   cssDist: 'web/assets/css/',
+  revDist: 'web/build/',
   jsSrc: [
     'web/assets/vendor/jquery/dist/jquery.min.js',
     'web/assets/vendor/svgxuse/svgxuse.js',
@@ -96,7 +97,7 @@ const paths = {
     'web/assets/js/_scripts/*.js'
   ],
   jsDist: 'web/assets/js/',
-  symbolsSrc: 'web/assets/_artwork/symbols/*.svg',
+  symbolsSrc: '_artwork/symbols/*.svg',
   symbolsDist: 'web/assets/images/svg/',
   cssWatch: 'web/assets/_scss/**/*.scss',
   jsWatch: 'web/assets/js/_scripts/**/*.js',
@@ -182,7 +183,15 @@ gulp.task('productioncss', () => {
     .pipe(rename((path) => {
       path.basename += ".min";
     }))
-    .pipe(gulp.dest(paths.cssDist));
+    .pipe(gulp.dest(paths.cssDist))
+    .pipe(rev())
+    .pipe(gulp.dest(paths.revDist))
+    .pipe(rev.manifest({
+      base: paths.revDist,
+      path: 'web/build/manifest.json',
+      merge: true
+    }))
+    .pipe(gulp.dest(paths.revDist));
 });
 
 
@@ -208,7 +217,15 @@ gulp.task('productionjs', () => {
   return gulp.src(paths.jsSrc)
     .pipe(concat(config.minifyjsConcat))
     .pipe(uglify())
-    .pipe(gulp.dest(paths.jsDist));
+    .pipe(gulp.dest(paths.jsDist))
+    .pipe(rev())
+    .pipe(gulp.dest(paths.revDist))
+    .pipe(rev.manifest({
+      base: paths.revDist,
+      path: 'web/build/manifest.json',
+      merge: true
+    }))
+    .pipe(gulp.dest(paths.revDist));
 });
 
 
