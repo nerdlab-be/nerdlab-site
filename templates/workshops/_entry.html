@@ -11,10 +11,9 @@
     <div class="o-layout o-layout--large o-layout--spacer">
       <div class="o-layout__item u-1/2@large">
         {# Breadcrumb #}
-        {% set parent = craft.entries.id(397).one() %}
         <p class="c-breadcrumb">
-          <a href="{{ parent.url() }}" alt="{{ parent.title }}" class="c-breadcrumb__link">
-            {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parent.title }}
+          <a href="/{{ craft.request.getSegment(1) }}/{{ craft.request.getSegment(2) }}" alt="{{ craft.request.getSegment(2) |capitalize }}" class="c-breadcrumb__link">
+            {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ craft.request.getSegment(2) |capitalize }}
           </a>
         </p>
         {# Page title #}
