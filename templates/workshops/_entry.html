@@ -12,8 +12,8 @@
       <div class="o-layout__item u-1/2@large">
         {# Breadcrumb #}
         <p class="c-breadcrumb">
-          <a href="/{{ craft.request.getSegment(1) }}/{{ craft.request.getSegment(2) }}" alt="{{ craft.request.getSegment(2) |capitalize }}" class="c-breadcrumb__link">
-            {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ craft.request.getSegment(2) |capitalize }}
+          <a href="/{{ craft.app.request.getSegment(1) }}/{{ craft.app.request.getSegment(2) }}" alt="{{ craft.app.request.getSegment(2) |capitalize }}" class="c-breadcrumb__link">
+            {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ craft.app.request.getSegment(2) |capitalize }}
           </a>
         </p>
         {# Page title #}

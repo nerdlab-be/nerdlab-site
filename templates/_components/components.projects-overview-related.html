@@ -13,16 +13,19 @@
 <div class="o-row-large u-padding-bottom-none">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--small o-layout--spacer">
+      <div class="o-layout__item">
+        <p class="c-lead">{{ labels.labelOtherProjects }}</p>
+      </div>
       {% for block in pageEntries %}
       {% if entry.title != block.title %}
-      <div class="o-layout__item u-1/2@medium">
+      <div class="o-layout__item u-1/2@medium u-1/3@large">
         <div class="c-card">
           <div class="c-card__image">
             {% for item in block.projectHeader.limit(1).all() %}
             <div class="o-crop o-crop--3:1">
               <a href="{{ block.url }}" alt="{{ block.title }}">
                 <img
-                  class="o-crop__content o-crop__content-center lazyload fade-in"
+                  class="o-crop__content o-crop__content--center lazyload fade-in"
                   src="{{ item.url(thumb) }}"
                   data-sizes="auto"
                   data-srcset="{{ item.url(small) }} 240w,
@@ -34,9 +37,9 @@
             {% endfor %}
           </div>
           <div class="c-card__content c-content c-content--small">
-            <h2 class="c-h2 u-margin-bottom-small">
-              {{ block.title }}
-            </h2>
+            <h3 class="c-h3 u-margin-bottom-small">
+              <a href="{{ block.url }}">{{ block.title }}</a>
+            </h3>
             {% set intro = block.intro.all() %}
             {% for block in intro %}
             {% switch block.type %}
@@ -44,11 +47,6 @@
               {{ block.introParagraph }}
             {% endswitch %}
             {% endfor %}
-          </div>
-          <div class="c-card__footer c-content">
-            <p>
-              <a href="{{ block.url }}" alt="{{ block.title }}" class="c-btn c-btn--primary c-btn--large">{{ labels.labelViewProject }}</a>
-            </p>
           </div>
         </div>
       </div>

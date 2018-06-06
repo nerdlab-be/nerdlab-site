@@ -6,8 +6,14 @@
   border-bottom-right-radius: $unit-small;
   border-radius: $unit-tiny/2;
   overflow: hidden;
-  box-shadow: 0 10px 20px rgba($color-neutral-dark,0.1), 0 3px 6px rgba($color-neutral-dark,0.1);
+  box-shadow: 0 3px 20px rgba($color-neutral-dark,0.1);
   background-color: $white;
+}
+
+.c-card--spacer {
+  & + & {
+    margin-top: $unit;
+  }
 }
 
   .c-card__image {

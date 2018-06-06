@@ -49,7 +49,7 @@
               {% for item in portfolio.projectHeader.limit(1).offset(1).all() %}
               <div class="o-crop o-crop--16:9 u-margin-bottom">
                 <img
-                  class="o-crop__content o-crop__content-center lazyload fade-in"
+                  class="o-crop__content o-crop__content--center lazyload fade-in"
                   src="{{ item.url(thumb) }}"
                   data-sizes="auto"
                   data-srcset="{{ item.url(small) }} 240w,

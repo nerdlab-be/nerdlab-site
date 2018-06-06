@@ -145,6 +145,24 @@ $inuit-crops: (
 
 }
 
+.o-crop--1\:1\@medium {
+  @include mq(medium) {
+    padding-bottom: (1/1) * 100%;
+  }
+}
+
+.o-crop--4\:3\@large {
+  @include mq(medium) {
+    padding-bottom: (3/4) * 100%;
+  }
+}
+
+.o-crop--16\:9\@large {
+  @include mq(large) {
+    padding-bottom: (9/16) * 100%;
+  }
+}
+
 
 
 
