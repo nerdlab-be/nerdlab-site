@@ -33,8 +33,10 @@
             {% endfor %}
           </div>
           <div class="c-card__content c-content c-content--small">
-            <h2 class="c-h2 u-margin-bottom-small">
-              {{ entry.title }}
+            <h2 class="c-h3 u-margin-bottom-small">
+              <a href="{{ entry.url }}" alt="{{ entry.title }}">
+                {{ entry.title }}
+              </a>
             </h2>
             {% set intro = entry.intro.all() %}
             {% for block in intro %}

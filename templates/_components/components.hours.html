@@ -11,10 +11,7 @@
 
 {# -- Module -- #}
 <div class="c-hours">
-  <h3 class="c-h4">Openingsuren</h3>
-  <p class="c-hours__current">
-    {{ entry.storeHours[now|date('w')].open < now and entry.storeHours[now|date('w')].close > now ? '<strong>Nu open</strong>' : 'Nu gesloten' }}
-  </p>
+  <h3 class="c-h3">Openingsuren</h3>
   <ul class="o-list-bare c-hours__list">
     {% for dayHours in storeHours %}
     {% if dayHours.open == dayHours.close %}

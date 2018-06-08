@@ -5,25 +5,12 @@
 .c-hours {
   color: $color-neutral;
   margin-top: $unit-large;
-  @include font-size($font-tiny);
-
-  @include mq(medium) {
-    // margin-top: $unit-tiny;
-  }
+  @include font-size($font-small);
 }
-
-  .c-hours__current {
-    margin-bottom: $unit-small;
-    text-align: center;
-    background-color: $color-neutral-xxlight;
-    border-radius: $unit-tiny;
-    display: block;
-    padding-top: $unit-tiny;
-    padding-bottom: $unit-tiny;
-  }
 
   .c-hours__list {
     margin-bottom: 0;
+
     strong {
       font-weight: $font-regular;
     }
@@ -35,6 +22,8 @@
 
     li + li {
       border-top: 1px dotted $color-neutral-xlight;
+      padding-top: $unit-tiny/2;
+      margin-top: $unit-tiny/2;
     }
 
     li.is-now {

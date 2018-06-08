@@ -8,6 +8,10 @@
   overflow: hidden;
   box-shadow: 0 3px 20px rgba($color-neutral-dark,0.1);
   background-color: $white;
+
+  .o-layout {
+    position: relative;
+  }
 }
 
 .c-card--spacer {
@@ -28,4 +32,22 @@
   .c-card__footer {
     flex-grow: 0;
     padding: 0 $unit $unit;
+  }
+
+  .c-card__background {
+    display: block;
+    width: 100%;
+    min-height: 150px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include mq(small) {
+      min-height: 200px;
+    }
+
+    @include mq(medium) {
+      min-height: 300px;
+    }
   }

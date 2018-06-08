@@ -19,7 +19,8 @@
   }
 
   @include mq(large) {
-    height: calc(100vh - 7rem);
+    padding-top: $unit-huge*2;
+    // height: calc(100vh - 7rem);
   }
 }
 
