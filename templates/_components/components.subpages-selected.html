@@ -1,33 +1,33 @@
 {#
-  Workshops
+  Selected pages
   ================
 #}
 
 {#
-  {% include '_components/components.workshops.html' %}
+  {% include '_components/components.subpages-selected.html' %}
 #}
 
 {# -- Module -- #}
-{% if entry.selectedWorkshops | length() %}
+{% if entry.highlightedPages | length() %}
 <div class="o-row-large u-border-top">
   <div class="o-wrapper o-wrapper--huge">
       <h2 class="c-lead">
-        Workshops:
+        {{ entry.subtitle }}
       </h2>
-      {% for workshop in entry.selectedWorkshops.all() %}
+      {% for page in entry.highlightedPages.all() %}
       <div class="c-card c-card--spacer u-alternate">
         <div class="o-layout o-layout--flush o-layout--middle u-alternate__layout">
           <div class="o-layout__item u-1/3@medium u-1/2@large">
-            {% for item in workshop.projectHeader.limit(1).all() %}
-            <a href="{{ workshop.url() }}" class="c-card__background" style="background-image: url('{{ item.url(large) }}');" alt="{{ workshop.title }}"></a>
+            {% for item in page.projectHeader.limit(1).all() %}
+            <a href="{{ page.url() }}" class="c-card__background" style="background-image: url('{{ item.url(large) }}');" alt="{{ page.title }}"></a>
             {% endfor %}
           </div>
           <div class="o-layout__item u-2/3@medium u-1/2@large">
             <div class="c-card__content c-content c-content--small">
               <h2 class="c-h2 u-margin-bottom-small">
-                {{ workshop.title }}
+                {{ page.title }}
               </h2>
-              {% set intro = workshop.intro.all() %}
+              {% set intro = page.intro.all() %}
               {% for block in intro %}
               {% switch block.type %}
               {% case "introParagraph" %}
@@ -35,7 +35,7 @@
               {% endswitch %}
               {% endfor %}
               <p>
-                <a href="{{ workshop.url }}" alt="{{ workshop.title }}" class="c-btn c-btn--primary c-btn--large">{{ labels.labelMoreInfo }}</a>
+                <a href="{{ page.url }}" alt="{{ page.title }}" class="c-btn c-btn--primary c-btn--large">{{ labels.labelMoreInfo }}</a>
               </p>
             </div>
           </div>
