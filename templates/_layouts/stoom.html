@@ -39,9 +39,13 @@
   {% else %}
     <link rel="stylesheet" type="text/css" href="{{ rev('stoom.min.css') }}">
   {% endif %}
+  {# Analytics #}
+  {% include "_globals/globals.analytics-head" %}
   {% endblock %}
 </head>
 <body class="js-body c-color">
+  {# Analytics #}
+  {% include "_globals/globals.analytics-body" %}
   {# Header #}
   <header class="c-row c-row--header js-header">
     <div class="o-grid o-grid--gutter">

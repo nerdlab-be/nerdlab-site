@@ -29,10 +29,12 @@
   {% endif %}
 
   {# Analytics #}
-  {% include "_globals/globals.analytics" %}
+  {% include "_globals/globals.analytics-head" %}
   {% endblock %}
 </head>
 <body>
+  {# Analytics #}
+  {% include "_globals/globals.analytics-body" %}
   {% block body %}{% endblock %}
 
   {# Global javascript #}
