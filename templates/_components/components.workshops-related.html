@@ -39,7 +39,7 @@
           </div>
           <div class="c-card__content c-content c-content--small">
             <h3 class="c-h3 u-margin-bottom-small">
-              <a href="{{ workshop.url() }}">{{ workshop.title }}</a>
+              <a href="{{ workshop.url() }}" alt="{{ workshop.title }}">{{ workshop.title }}</a>
             </h3>
             {% set intro = workshop.intro.all() %}
             {% for block in intro %}
