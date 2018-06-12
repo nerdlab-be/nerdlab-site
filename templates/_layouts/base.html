@@ -29,10 +29,11 @@
   {% endif %}
 
   {# Analytics #}
-  {% include "_globals/globals.analytics" %}
+  {% include "_globals/globals.analytics-head" %}
   {% endblock %}
 </head>
 <body>
+  {% include "_globals/globals.analytics-body" %}
   {# @var schema \Spatie\SchemaOrg\Schema #}
   {% set schema = craft.schema %}
   {{ schema

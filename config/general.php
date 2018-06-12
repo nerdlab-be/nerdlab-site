@@ -26,18 +26,21 @@ return [
     ],
 
     // Dev environment settings
-    '.localhost' => [
+    '.test' => [
         // Base site URL
         'siteUrl' => null,
 
         // Dev Mode (see https://craftcms.com/support/dev-mode)
-        'devMode' => true,
+        'devMode' => true
     ],
 
     // Staging environment settings
     'staging' => [
         // Base site URL
         'siteUrl' => null,
+
+        // Dev Mode (see https://craftcms.com/support/dev-mode)
+        'devMode' => true
     ],
 
     // Production environment settings

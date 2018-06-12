@@ -14,7 +14,7 @@
   <div class="o-wrapper o-wrapper--huge">
       {% for workshop in pageEntries %}
       <div class="c-card c-card--spacer u-alternate">
-        <div class="o-layout o-layout--flush o-layout--middle u-alternate__layout">
+        <div class="o-layout o-layout--flush u-alternate__layout">
           <div class="o-layout__item u-1/3@medium u-1/2@large">
             {% for item in workshop.projectHeader.limit(1).all() %}
             <a href="{{ workshop.url() }}" class="c-card__background" style="background-image: url('{{ item.url(large) }}');" alt="{{ workshop.title }}"></a>
