@@ -11,7 +11,7 @@
 {% set formula = entry.features.all() %}
 
 {% if formula|length() %}
-<div class="o-row-large u-border-top">
+<div class="o-row-large u-border-top" id="features">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--spacer">
       {% for block in formula %}

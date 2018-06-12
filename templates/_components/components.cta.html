@@ -21,7 +21,7 @@
 {# -- Module -- #}
 {% set doormat = entry.doormat.all() %}
 {% for block in doormat %}
-<div class="o-row-large c-background">
+<div class="o-row-large c-background" id="action">
   {% for item in block.media.all() %}
   {% switch item.type %}
   {% case "photo" %}
