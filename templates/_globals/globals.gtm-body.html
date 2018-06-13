@@ -1,7 +1,7 @@
 {% if craft.app.config.general.devMode == true %}
 {% else %}
-  {% if settings.googleAnalyticsCode | length %}
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.googleAnalyticsCode }}"
+  {% if settings.gtmCode | length %}
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.gtmCode }}"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   {% endif %}
 {% endif %}
