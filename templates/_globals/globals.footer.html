@@ -10,7 +10,7 @@
         <p class="u-margin-bottom-none">{{ interface.socialTitle }}</p>
         <ul class="o-list-bare">
           {% for block in interface.social.all() %}
-            <li><a href="{{ block.linkURL }}">{{ block.linkTitle }}</a></li>
+            <li><a href="{{ block.linkURL }}" target="_blank">{{ block.linkTitle }}</a></li>
           {% endfor %}
         </ul>
       </div>
