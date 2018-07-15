@@ -1,5 +1,7 @@
 {
   "main.min.css": "main-5f4c385b9a.min.css",
+  "mutation.min.css": "mutation-4b13e9fe52.min.css",
+  "mutation/_settings/settings.global.min.css": "mutation/_settings/settings-d41d8cd98f.global.min.css",
   "scripts.min.js": "scripts-ecc269d214.min.js",
   "stoom.min.css": "stoom-8bb73d942f.min.css"
 }

@@ -1,0 +1,15 @@
+<footer class="o-row-large u-padding-top-none">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout o-layout--middle o-layout--reverse">
+      <div class="o-layout__item u-1/2@small c-content c-content--footer">
+        {% set conditions = craft.entries.section('conditions') %}
+        {% for page in conditions.all() %}
+        <p class="c-small">©{{ 'now'|date('Y') }} {{ siteName }}, <a href="{{ page.url }}">{{ page.title }}</a></p>
+        {% endfor %}
+      </div>
+      <div class="o-layout__item u-1/2@small">
+        <img src="/assets/images/svg/vlaanderen-logo.svg" alt="Vlaanderen - verbeelding werkt" class="c-logo-vlaanderen">
+      </div>
+    </div>
+  </div>
+</footer>
