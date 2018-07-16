@@ -1,0 +1,50 @@
+/* ==========================================================================
+   #LINKS
+   ========================================================================== */
+
+.c-link {
+  transition: color $global-duration $global-easing;
+
+  .c-theme-primary &,
+  .c-theme-primary-tint &,
+  .c-theme-neutral & {
+    &,
+    &:active {
+      color: $color-primary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-primary-light;
+    }
+  }
+
+  .c-theme-secondary & {
+    &,
+    &:active {
+      color: $color-secondary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-secondary-light;
+    }
+  }
+
+  .c-theme-neutral-light & {
+    &,
+    &:active {
+      color: $color-neutral-light;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-primary-light;
+    }
+  }
+}
+
+.c-link--bare {
+  text-decoration: none;
+  font-weight: $font-bold;
+}

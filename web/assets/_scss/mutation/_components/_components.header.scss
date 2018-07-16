@@ -1,0 +1,27 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.c-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+  .c-header__tagline {
+    padding-top: $unit-small;
+    color: $color-neutral-light;
+    font-weight: $font-regular;
+
+    span {
+      display: block;
+    }
+  }
+
+  .c-header__link {
+    display: block;
+    padding-top: $unit-tiny/6;
+
+    @include mq(small) {
+      padding-top: $unit-small;
+    }
+  }

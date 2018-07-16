@@ -101,7 +101,7 @@ const paths = {
   symbolsDist: 'web/assets/images/svg/',
   cssWatch: 'web/assets/_scss/**/*.scss',
   jsWatch: 'web/assets/js/_scripts/**/*.js',
-  symbolsWatch: 'web/assets/_artwork/symbols/*.svg',
+  symbolsWatch: '_artwork/symbols/*.svg',
   siteWatch: [
     'templates/**/*.html',
   ]

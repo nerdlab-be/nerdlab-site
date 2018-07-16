@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+.c-footer {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(small) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+  .c-footer__logo {
+    width: 150px;
+  }
+
+  .c-footer__text {
+    margin-top: $unit-small;
+  }

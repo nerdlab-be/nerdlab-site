@@ -219,3 +219,14 @@
 .o-layout--reverse {
   flex-direction: row-reverse;
 }
+
+/* Spacer.
+   ========================================================================== */
+
+.o-layout--spacer {
+  margin-bottom: -$unit-large;
+
+  > .o-layout__item {
+    margin-bottom: $unit-large;
+  }
+}

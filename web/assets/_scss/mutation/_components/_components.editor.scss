@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #EDITOR
+   ========================================================================== */
+
+.c-editor {
+  position: relative;
+
+  p,ul,ol {
+    margin-bottom: 0;
+  }
+
+  p + p {
+    margin-top: $unit;
+  }
+
+  p {
+    @include font-size($font-h6);
+  }
+
+  @include mq(medium) {
+    p {
+      @include font-size($font-h5);
+    }
+  }
+}
+
+.c-editor--bold {
+  p {
+    font-weight: $font-bold;
+  }
+}
+
+.c-editor--large {
+  p {
+    @include font-size($font-h4);
+  }
+
+  @include mq(medium) {
+    p {
+      @include font-size($font-h3);
+    }
+  }
+}

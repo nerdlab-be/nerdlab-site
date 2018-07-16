@@ -1,0 +1,30 @@
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+
+.c-section-title {
+  font-weight: $font-regular;
+  @include font-size($font-h6);
+  margin-bottom: $unit-small;
+}
+
+.c-list {
+  @include font-size($font-h5);
+  margin-bottom: 0;
+}
+
+  .c-list__item {
+    & + & {
+      margin-top: $unit-small;
+    }
+  }
+
+.c-list--large {
+  font-weight: $font-bold;
+  @include font-size($font-h1);
+}
+
+.c-small {
+  @include font-size($font-tiny);
+  margin-bottom: 0;
+}

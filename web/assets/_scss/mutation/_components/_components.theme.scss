@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #THEME
+   ========================================================================== */
+
+.c-theme-neutral {
+  color: $color-neutral;
+  background-color: $white;
+}
+
+.c-theme-neutral-light {
+  color: $color-neutral-light;
+  background-color: $white;
+}
+
+.c-theme-primary {
+  color: $color-primary;
+  background-color: $white;
+}
+
+.c-theme-primary-tint {
+  color: $color-primary;
+  background-color: $color-primary-xlight;
+}
+
+.c-theme-secondary {
+  color: $color-secondary;
+  background-color: $white;
+}
+
+.c-theme-secondary-negative {
+  color: $white;
+  background-color: $color-secondary;
+}

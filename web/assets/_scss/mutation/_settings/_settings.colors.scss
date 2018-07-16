@@ -28,7 +28,7 @@ $green                      : #2ECC40;
 $olive                      : #3D9970;
 $lime                       : #01FF70;
 
-$yellow                     : #FFDC00;
+$yellow                     : #E9C200;
 $orange                     : #FF851B;
 $red                        : #FF4136;
 $fuchsia                    : #F012BE;
@@ -46,20 +46,18 @@ $black                      : #111111;
 
 // Brand colors
 
-$color-neutral              : shade(#4b4c4d,20%);
-$color-neutral-xxlight       : tint($color-neutral,93%);
-$color-neutral-xlight       : tint($color-neutral,85%);
-$color-neutral-light        : tint($color-neutral,30%);
-$color-neutral-dark         : shade($color-neutral,60%);
+$color-neutral              : #243242;
+$color-neutral-xlight       : #E0E4E6;
+$color-neutral-light        : #73788C;
+$color-neutral-dark         : shade($color-neutral,20%);
 
-$color-primary              : #36F;
-$color-primary-xlight       : tint($color-primary,80%);
-$color-primary-light        : tint($color-primary,25%);
+$color-primary              : #E53958;
+$color-primary-xlight       : #FDE3D3;
+$color-primary-light        : tint($color-primary,20%);
 $color-primary-dark         : shade($color-primary,20%);
 
-$color-secondary            : #f33;
-$color-secondary-xlight     : tint($color-secondary,97%);
-$color-secondary-light      : tint($color-secondary,10%);
+$color-secondary            : #5239AC;
+$color-secondary-light      : #BF77A5;
 $color-secondary-dark       : shade($color-secondary,10%);
 
 
@@ -68,14 +66,14 @@ $color-secondary-dark       : shade($color-secondary,10%);
 
 // UI colors
 
-$color-success              : #2ECC40;
+$color-success              : #9ABE46;
 $color-success-light        : tint($color-success,10%);
 $color-success-dark         : shade($color-success,10%);
 
-$color-error                : #FF4136;
+$color-error                : #E53958;
 $color-error-light          : tint($color-error,10%);
 $color-error-dark           : shade($color-error,10%);
 
-$color-notice               : #FF851B;
+$color-notice               : #E9C200;
 $color-notice-light         : tint($color-notice,10%);
 $color-notice-dark          : shade($color-notice,10%);

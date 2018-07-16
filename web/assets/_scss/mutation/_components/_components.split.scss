@@ -1,0 +1,22 @@
+/* ==========================================================================
+   #SPLIT
+   ========================================================================== */
+
+.c-split {
+  position: relative;
+}
+
+  .c-split__ghost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color-neutral;
+    color: $white;
+    clip-path: inset(2px 0 0 50%);
+  }
+
+  .c-split__main {
+    position: relative;
+    clip-path: inset(0 50% 0 0);
+  }
