@@ -23,8 +23,8 @@ $inuit-wrapper-breakpoint: medium !default;
 // Breakpoints (https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862#.necmuodfd)
 
 $mq-breakpoints: (
-  small:  600px,
-  medium:  900px,
+  small: 600px,
+  medium: 900px,
   large: 1200px,
   huge: 1420px,
   xhuge: 1500px
@@ -38,7 +38,7 @@ $mq-breakpoints: (
 
 // Font styles
 
-$inuit-font-family-primary: 'Graphik', sans-serif, sans-serif;
+$inuit-font-family-primary: 'PxGrotesk', sans-serif, sans-serif;
 $inuit-font-weight-regular: 400;
 $inuit-font-weight-bold: 700;
 
@@ -48,11 +48,12 @@ $inuit-font-weight-bold: 700;
 
 // Heading sizes
 
-$inuit-font-size-huge: 42px;
-$inuit-font-size-h1: 37px;
-$inuit-font-size-h2: 31px;
+$inuit-font-size-huge: 80px;
+$inuit-font-size-h1: 56px;
+$inuit-font-size-h2: 42px;
+$inuit-font-size-h3-big: 32px;
 $inuit-font-size-h3: 28px;
-$inuit-font-size-h4: 23px;
+$inuit-font-size-h4: 24px;
 $inuit-font-size-h5: 21px;
 $inuit-font-size-h6: 18px;
 $inuit-font-size-small: 16px;

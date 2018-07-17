@@ -30,14 +30,44 @@
   }
 }
 
-.c-editor--large {
+.c-editor--medium {
   p {
-    @include font-size($font-h4);
+    @include font-size($font-h5);
+  }
+
+  @include mq(small) {
+    p {
+      @include font-size($font-h4);
+    }
   }
 
   @include mq(medium) {
     p {
       @include font-size($font-h3);
+    }
+  }
+}
+
+.c-editor--large {
+  p {
+    @include font-size($font-h5);
+  }
+
+  @include mq(small) {
+    p {
+      @include font-size($font-h4);
+    }
+  }
+
+  @include mq(medium) {
+    p {
+      @include font-size($font-h3);
+    }
+  }
+
+  @include mq(large) {
+    p {
+      @include font-size($font-h3-big);
     }
   }
 }

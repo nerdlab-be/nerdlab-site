@@ -6,17 +6,20 @@
   position: relative;
 }
 
-  .c-split__ghost {
+  .c-split__background {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: $color-neutral;
-    color: $white;
-    clip-path: inset(2px 0 0 50%);
-  }
 
-  .c-split__main {
-    position: relative;
-    clip-path: inset(0 50% 0 0);
+    @include mq(medium) {
+      display: block;
+      width: 33%;
+      left: 67%;
+      top: 0;
+      height: calc(100% + #{$unit-large});
+      background-color: $color-neutral;
+    }
+
+    @include mq(large) {
+      width: 50%;
+      left: 50%;
+    }
   }

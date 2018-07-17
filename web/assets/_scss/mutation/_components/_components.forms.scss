@@ -15,14 +15,22 @@
   width: 100%;
   font: inherit; /* [3] */
   margin: 0; /* [4] */
-  padding: $unit $unit;
+  padding: ($unit - $unit-tiny) $unit ($unit + $unit-tiny);
   transition: $global-transition;
   border-radius: $global-radius;
   background-color: $color-secondary-dark;
   border: 0;
   outline: 0;
   color: $white;
-  @include font-size($font-h3);
+  @include font-size($font-h4);
+
+  @include mq(medium) {
+    @include font-size($font-h3);
+  }
+
+  @include mq(large) {
+    @include font-size($font-h3-big);
+  }
 }
 
 .c-input-wrapper {

@@ -27,7 +27,7 @@
 
     &:hover,
     &:focus {
-      color: $color-secondary-light;
+      color: tint($color-secondary,30);
     }
   }
 

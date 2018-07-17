@@ -6,11 +6,24 @@
   font-weight: $font-regular;
   @include font-size($font-h6);
   margin-bottom: $unit-small;
+  padding-top: $unit-tiny;
+
+  @include mq(medium) {
+    @include font-size($font-h5);
+  }
 }
 
 .c-list {
   @include font-size($font-h5);
   margin-bottom: 0;
+
+  @include mq(small) {
+    @include font-size($font-h4);
+  }
+
+  @include mq(medium) {
+    @include font-size($font-h3);
+  }
 }
 
   .c-list__item {
@@ -21,10 +34,18 @@
 
 .c-list--large {
   font-weight: $font-bold;
-  @include font-size($font-h1);
+  @include font-size($font-h2,1);
+
+  @include mq(small) {
+    @include font-size($font-h1,1);
+  }
+
+  @include mq(large) {
+    @include font-size($font-huge,1);
+  }
 }
 
 .c-small {
-  @include font-size($font-tiny);
+  @include font-size($font-small);
   margin-bottom: 0;
 }

@@ -18,12 +18,20 @@
   text-align: center; /* [4] */
   margin: 0; /* [4] */
   cursor: pointer; /* [5] */
-  padding: $unit $unit;
+  padding: ($unit - $unit-tiny/2) $unit ($unit + $unit-tiny/2);
   transition: $global-transition;
   border-radius: $global-radius;
   border: 0;
-  @include font-size($font-h3);
+  @include font-size($font-h4);
   font-weight: $font-bold;
+
+  @include mq(medium) {
+    @include font-size($font-h3);
+  }
+
+  @include mq(large) {
+    @include font-size($font-h3-big);
+  }
 }
 
 

@@ -5,23 +5,48 @@
 .c-header {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+
+  @include mq(small) {
+    flex-direction: row;
+  }
 }
 
   .c-header__tagline {
-    padding-top: $unit-small;
+    padding-top: $unit-tiny;
     color: $color-neutral-light;
     font-weight: $font-regular;
+    @include font-size($font-h5);
 
     span {
       display: block;
+    }
+
+    @include mq(small) {
+      padding-top: $unit-small;
+      @include font-size($font-h4);
+    }
+
+    @include mq(medium) {
+      @include font-size($font-h3);
+    }
+
+    @include mq(large) {
+      @include font-size($font-h2);
     }
   }
 
   .c-header__link {
     display: block;
     padding-top: $unit-tiny/6;
+    @include font-size($font-h6);
 
     @include mq(small) {
-      padding-top: $unit-small;
+      padding-top: $unit-tiny/2;
+      @include font-size($font-h5);
+    }
+
+    @include mq(large) {
+      @include font-size($font-h4);
     }
   }

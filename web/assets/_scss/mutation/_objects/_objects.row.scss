@@ -67,4 +67,9 @@ $inuit-row-breakpoint: medium !default;
 .o-row-huge {
   padding-top: $inuit-global-spacing-unit-huge;
   padding-bottom: $inuit-global-spacing-unit-huge;
+
+  @include mq($inuit-row-breakpoint) {
+    padding-top: $inuit-global-spacing-unit-huge + $unit-large;
+    padding-bottom: $inuit-global-spacing-unit-huge + $unit-large;
+  }
 }
