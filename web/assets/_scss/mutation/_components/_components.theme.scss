@@ -2,6 +2,16 @@
    #THEME
    ========================================================================== */
 
+.c-theme-intro {
+  color: $white;
+  background-color: $color-neutral;
+
+  @include mq(medium) {
+    color: $color-neutral;
+    background-color: $white;
+  }
+}
+
 .c-theme-neutral {
   color: $color-neutral;
   background-color: $white;

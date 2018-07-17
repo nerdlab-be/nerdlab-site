@@ -6,20 +6,64 @@
 {% extends "_layouts/mutation" %}
 
 {% block main %}
-{% set dateLocation = entry.dateLocation.all() %}
-<div class="o-row c-theme-neutral">
-  <div class="o-wrapper o-wrapper--large">
-
+<div class="c-illustration-grid c-theme-neutral" role="presentation" aria-hidden="true">
+  <div class="c-illustration-grid__item">
+    <div class="c-letter c-letter--offset-top">
+      <img src="/assets/images/svg/mutationM.svg" alt="" role="presentation" aria-hidden="true">
+    </div>
+  </div>
+  <div class="c-illustration-grid__item">
+    <div class="c-letter">
+      <img src="/assets/images/svg/mutationU.svg" alt="" role="presentation" aria-hidden="true">
+    </div>
+  </div>
+  <div class="c-illustration-grid__item">
+    <div class="c-letter">
+      <img src="/assets/images/svg/mutationT1.svg" alt="" role="presentation" aria-hidden="true">
+    </div>
+  </div>
+  <div class="c-illustration-grid__item">
+    <div class="c-letter">
+      <img src="/assets/images/svg/mutationA.svg" alt="" role="presentation" aria-hidden="true">
+    </div>
+  </div>
+</div>
+<div class="c-illustration-grid c-illustration-grid--reverse c-theme-neutral" role="presentation" aria-hidden="true">
+  <div class="c-illustration-grid__item">
+    <div class="c-letter">
+      <img src="/assets/images/svg/mutationT2.svg" alt="" role="presentation" aria-hidden="true">
+    </div>
+  </div>
+  <div class="c-illustration-grid__item">
+    <div class="c-letter c-letter--offset-bottom">
+      <img src="/assets/images/svg/mutationI.svg" alt="" role="presentation" aria-hidden="true">
+    </div>
+  </div>
+  <div class="c-illustration-grid__item">
+    <div class="c-letter">
+      <img src="/assets/images/svg/mutationO.svg" alt="" role="presentation" aria-hidden="true">
+    </div>
+  </div>
+  <div class="c-illustration-grid__item">
+    <div class="c-letter">
+      <img src="/assets/images/svg/mutationN.svg" alt="" role="presentation" aria-hidden="true">
+    </div>
   </div>
 </div>
 
 {% set intro = entry.mutationAbout.all() %}
-<div class="c-split">
+<div class="c-split c-illustration">
   <span class="c-split__background" aria-hidden="true" role="presentation"></span>
-  <div class="o-row-large c-theme-neutral">
+  <span class="c-illustration__right-top" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationM.svg" alt="">
+  </span>
+  <span class="c-illustration__right-bottom" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationO2.svg" alt="">
+  </span>
+  <div class="o-row-large c-theme-intro">
     <div class="o-wrapper o-wrapper--huge">
       <div class="o-layout">
-        <div class="o-layout__item u-2/3@medium u-1/2@large">
+        <div class="o-layout__item u-4/5@small u-2/3@medium u-1/2@large">
           {% for item in intro %}
           {% switch item.type %}
           {% case "heading" %}
@@ -39,7 +83,22 @@
 </div>
 
 {% set lineup = entry.mutationLineup.all() %}
-<div class="o-row-huge c-theme-primary-tint">
+<div class="o-row-huge-top c-theme-primary-tint c-illustration">
+  <span class="c-illustration__top-center" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationU.svg" alt="">
+  </span>
+  <span class="c-illustration__top-left" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationO.svg" alt="">
+  </span>
+  <span class="c-illustration__top-right" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationT.svg" alt="">
+  </span>
+  <span class="c-illustration__bottom-left" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationTriangle.svg" alt="">
+  </span>
+  <span class="c-illustration__bottom-right" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationCross.svg" alt="">
+  </span>
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
       <div class="o-layout__item u-1/3@medium">
@@ -69,7 +128,13 @@
 </div>
 
 {% set subscribe = entry.mutationSubscribe.all() %}
-<div class="o-row-huge c-theme-secondary-negative">
+<div class="o-row-large c-theme-secondary-negative c-illustration">
+  <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationO3.svg" alt="">
+  </span>
+  <span class="c-illustration__right-center" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationU2.svg" alt="">
+  </span>
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout u-margin-bottom-large">
       <div class="o-layout__item u-2/3@medium">
@@ -111,7 +176,13 @@
 
 {% set social = entry.mutationSocial.all() %}
 {% set partners = entry.mutationPartners.all() %}
-<div class="o-row-large c-theme-primary">
+<div class="o-row-large c-theme-primary c-illustration">
+  <span class="c-illustration__center-bottom" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationM2.svg" alt="">
+  </span>
+  <span class="c-illustration__top-right-alt" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationI.svg" alt="">
+  </span>
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--spacer">
       <div class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
@@ -163,10 +234,13 @@
 </div>
 
 {% set nerdlab = entry.mutationNerdlab.all() %}
-<div class="o-row-large c-theme-secondary">
+<div class="o-row-large c-theme-secondary c-illustration">
+  <span class="c-illustration__center-center" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationO4.svg" alt="">
+  </span>
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--reverse">
-      <div class="o-layout__item u-2/3@medium u-1/2@large">
+      <div class="o-layout__item u-4/5@small u-2/3@medium u-1/2@large">
         {% for item in nerdlab %}
         {% switch item.type %}
         {% case "heading" %}

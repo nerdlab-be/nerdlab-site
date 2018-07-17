@@ -16,6 +16,10 @@
 
   .c-footer__logo {
     width: 150px;
+
+    @include mq(large) {
+      width: 180px;
+    }
   }
 
   .c-footer__text {

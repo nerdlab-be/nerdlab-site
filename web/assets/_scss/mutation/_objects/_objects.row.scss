@@ -73,3 +73,18 @@ $inuit-row-breakpoint: medium !default;
     padding-bottom: $inuit-global-spacing-unit-huge + $unit-large;
   }
 }
+
+.o-row-huge-top {
+  padding-top: $inuit-global-spacing-unit-huge;
+  padding-bottom: $inuit-global-spacing-unit-huge + $unit-large;
+
+  @include mq(medium) {
+    padding-top: $inuit-global-spacing-unit-huge + $unit-huge*2;
+    padding-bottom: $inuit-global-spacing-unit-huge + $unit-large;
+  }
+
+  @include mq(large) {
+    padding-top: $inuit-global-spacing-unit-huge + $unit-huge*3;
+    padding-bottom: $inuit-global-spacing-unit-huge + $unit-huge;
+  }
+}
