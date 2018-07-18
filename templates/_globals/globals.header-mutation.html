@@ -1,16 +1,32 @@
 <header class="o-row c-theme-neutral">
   <div class="o-wrapper o-wrapper--huge">
     <div class="c-header">
-      <div>
-        {% include '_elements/elements.logo-mutation.html' %}
-        <h2 class="c-header__tagline">
-          <span>{{ labels.mutationDate }}</span>
-          <span>{{ labels.mutationLocation }}</span>
-        </h2>
+      <div class="c-header__group">
+        <div>
+          {% include '_elements/elements.logo-mutation.html' %}
+          <h2 class="c-header__tagline">
+            <span>{{ labels.mutationDate }}</span>
+            <span>{{ labels.mutationLocation }}</span>
+          </h2>
+        </div>
+        <nav class="c-header__link">
+          <a href="{{ currentSite.baseUrl }}#subscribe" class="c-link c-link--bare">{{ labels.mutationLink }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+        </nav>
       </div>
-      <nav class="c-header__link">
-        <a href="{{ currentSite.baseUrl }}#subscribe" class="c-link c-link--bare">Blijf op de hoogte {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-      </nav>
+      <ul class="o-list-inline c-nav-language c-header__language">
+      {% for site in currentSite.group.sites %}
+        {% set current = (currentSite.name == site.name) ? 'is-active' : '' %}
+        <li class="o-list-inline__item">
+          <a href="{{ alias(site.baseUrl) }}" class="c-nav-language__link {{ current }}">
+            {% if loop.first %}
+            NL
+            {% else %}
+            EN
+            {% endif %}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
     </div>
   </div>
 </header>
