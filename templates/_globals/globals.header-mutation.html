@@ -3,11 +3,9 @@
     <div class="c-header">
       <div>
         {% include '_elements/elements.logo-mutation.html' %}
-        {% set dateLocation = entry.dateLocation.all() %}
         <h2 class="c-header__tagline">
-          {% for item in dateLocation %}
-          <span>{{ item.text }}</span>
-          {% endfor %}
+          <span>{{ labels.mutationDate }}</span>
+          <span>{{ labels.mutationLocation }}</span>
         </h2>
       </div>
       <nav class="c-header__link">
