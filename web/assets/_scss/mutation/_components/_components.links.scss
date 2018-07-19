@@ -31,6 +31,18 @@
     }
   }
 
+  .c-theme-secondary-negative & {
+    &,
+    &:active {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: tint($color-secondary,60);
+    }
+  }
+
   .c-theme-neutral-light & {
     &,
     &:active {

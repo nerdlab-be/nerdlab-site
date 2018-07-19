@@ -9,12 +9,72 @@
     margin-bottom: 0;
   }
 
-  p + p {
+  p + p,
+  p + h1,
+  p + h2,
+  p + h3,
+  p + h4,
+  ul + p,
+  p + ul,
+  ul + h1,
+  ul + h2,
+  ul + h3,
+  ul + h4 {
     margin-top: $unit;
   }
 
   p {
     @include font-size($font-h6);
+  }
+
+  ul {
+
+  }
+
+  ul li + li {
+    margin-top:  $unit-tiny;
+  }
+
+  a {
+    transition: color $global-duration $global-easing;
+
+    .c-theme-primary &,
+    .c-theme-primary-tint &,
+    .c-theme-neutral & {
+      &,
+      &:active {
+        color: $color-primary;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color-primary-light;
+      }
+    }
+
+    .c-theme-secondary & {
+      &,
+      &:active {
+        color: $color-secondary;
+      }
+
+      &:hover,
+      &:focus {
+        color: tint($color-secondary,30);
+      }
+    }
+
+    .c-theme-neutral-light & {
+      &,
+      &:active {
+        color: $color-neutral-light;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color-primary-light;
+      }
+    }
   }
 
   @include mq(medium) {

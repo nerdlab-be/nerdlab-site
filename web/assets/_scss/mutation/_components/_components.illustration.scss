@@ -239,6 +239,22 @@
     }
   }
 
+  .c-illustration__bottom-bottom {
+    position: absolute;
+    width: 60px;
+    bottom: -30px;
+    left: 0;
+
+    img {
+      width: 100%;
+    }
+
+    @include mq(medium) {
+      width: 80px;
+      bottom: -40px;
+    }
+  }
+
   .c-illustration__right-center {
     position: absolute;
     width: 30px;
