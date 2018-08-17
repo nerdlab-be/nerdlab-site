@@ -1,4 +1,3 @@
-{% set days = ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag'] %}
 {% set storeHours = entry.storeHours[1:]|merge(entry.storeHours[0:1]) %}
 {#
   Openingsuren
@@ -13,16 +12,15 @@
 <div class="c-hours">
   <h3 class="c-h3">Openingsuren</h3>
   <ul class="o-list-bare c-hours__list">
-    {% for dayHours in storeHours %}
-    {% if dayHours.open == dayHours.close %}
+    {% for day in storeHours %}
     <li>
-      <strong>{{- days[loop.index0] }}:</strong> Gesloten
+      <strong>{{ day.name | capitalize }}:</strong>
+      {% if day.isBlank %}
+        Gesloten
+      {% else %}
+        {{ day.open|time('H:i') }} - {{ day.close|time('H:i') }}
+      {% endif %}
     </li>
-    {% else %}
-    <li>
-      <strong>{{- days[loop.index0] }}:</strong> {{ dayHours.open|date('H:i') }} - {{ dayHours.close|date('H:i') -}}
-    </li>
-    {% endif %}
     {% endfor %}
   </ul>
 </div>
