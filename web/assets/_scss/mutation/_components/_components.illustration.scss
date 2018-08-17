@@ -2,6 +2,57 @@
    #ILLUSTRATION
    ========================================================================== */
 
+.js-hero-watch .s-m-left {
+  transform: scale(0);
+}
+
+.js-hero-watch .s-m-right {
+  transform: scale(0);
+}
+
+.js-hero-watch .s-t-middle {
+  transform: scaleX(0);
+}
+
+.js-hero-watch .s-t-center {
+  transform: scaleY(0);
+}
+
+.js-hero-watch .s-talt-top {
+  transform: scaleY(0);
+}
+
+.js-hero-watch .s-talt-center {
+  transform: scaleY(0);
+}
+
+.js-hero-watch .s-i-1,
+.js-hero-watch .s-i-2,
+.js-hero-watch .s-i-3,
+.js-hero-watch .s-i-4,
+.js-hero-watch .s-i-5,
+.js-hero-watch .s-i-6,
+.js-hero-watch .s-i-7,
+.js-hero-watch .s-i-8 {
+  transform: scale(0);
+}
+
+.js-hero-watch .s-o-bottom {
+  transform: tranlateY(100px);
+}
+
+.js-hero-watch .s-o-top {
+  transform: tranlateY(100px);
+}
+
+.js-hero-watch .s-n-left {
+  transform: scale(0);
+}
+
+.js-hero-watch .s-n-right {
+  transform: scaleY(0);
+}
+
 .s-talt-top {
   transform-origin: center top;
 }
