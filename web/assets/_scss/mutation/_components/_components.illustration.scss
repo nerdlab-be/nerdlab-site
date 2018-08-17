@@ -2,6 +2,58 @@
    #ILLUSTRATION
    ========================================================================== */
 
+.s-talt-top {
+  transform-origin: center top;
+}
+
+.s-talt-center {
+  transform-origin: center bottom;
+}
+
+.s-n-right,
+.s-n-left {
+  transform-origin: left bottom;
+}
+
+.s-i-1,
+.s-i-2,
+.s-i-3,
+.s-i-4,
+.s-i-5,
+.s-i-6,
+.s-i-7,
+.s-i-8 {
+  transform-origin: center center;
+}
+
+.s-o2-left,
+.s-o2-right,
+.s-o2-center,
+.s-o3-center,
+.s-o3 {
+  transform-origin: center;
+}
+
+.s-o3-center,
+.s-o3 {
+  transform: scale(0);
+}
+
+.s-triangle {
+  transform-origin: left bottom;
+}
+
+.s-m2-left {
+  transform-origin: left center;
+  transform: scale(0);
+}
+
+.s-m2-right {
+  transform-origin: right center;
+  transform: scale(0);
+}
+
+
 .c-illustration-grid {
   position: relative;
   display: flex;
@@ -22,7 +74,8 @@
   z-index: $z-index-beta;
   padding-bottom: 100%;
 
-  img {
+  img,
+  svg {
     position: absolute;
     display: block;
     width: 100%;
@@ -48,8 +101,10 @@
     top: $unit-huge;
     display: none;
 
-    img {
+    img,
+    svg {
       width: 100%;
+      display: block;
     }
 
     @include mq(small) {
@@ -73,8 +128,10 @@
     bottom: $unit-large;
     display: none;
 
-    img {
+    img,
+    svg {
       width: 100%;
+      display: block;
     }
 
     @include mq(medium) {
@@ -94,8 +151,10 @@
     width: 30vw;
     right: $unit;
 
-    img {
+    img,
+    svg   {
       width: 100%;
+      display: block;
     }
 
     @include mq(medium) {
@@ -115,8 +174,10 @@
     top: $unit + $unit-small;
     left: $unit-huge;
 
-    img {
+    img,
+    svg {
       width: 100%;
+      display: block;
     }
 
     @include mq(medium) {
@@ -136,8 +197,10 @@
     top: $unit-huge*2;
     right: 0;
 
-    img {
+    img,
+    svg {
       width: 100%;
+      display: block;
     }
 
     @include mq(small) {
@@ -164,8 +227,10 @@
     bottom: 0;
     left: 0;
 
-    img {
-      width: 100%;
+    img,
+    svg {
+      height: 100%;
+      display: block;
     }
 
     @include mq(small) {
@@ -187,8 +252,10 @@
     bottom: $unit-large + $unit;
     right: $unit-large + $unit;
 
-    img {
+    img,
+    svg   {
       width: 100%;
+      display: block;
     }
 
     @include mq(small) {
@@ -213,8 +280,10 @@
     top: -15px;
     left: 33%;
 
-    img {
+    img,
+    svg   {
       width: 100%;
+      display: block;
     }
 
     @include mq(medium) {
@@ -229,8 +298,10 @@
     top: -30px;
     left: 0;
 
-    img {
+    img,
+    svg   {
       width: 100%;
+      display: block;
     }
 
     @include mq(medium) {
@@ -245,8 +316,10 @@
     bottom: -30px;
     left: 0;
 
-    img {
+    img,
+    svg   {
       width: 100%;
+      display: block;
     }
 
     @include mq(medium) {
@@ -261,8 +334,10 @@
     top: $unit-large;
     right: $unit-large;
 
-    img {
+    img,
+    svg   {
       width: 100%;
+      display: block;
     }
 
     @include mq(small) {
@@ -281,8 +356,10 @@
     top: $unit-large;
     right: $unit-large;
 
-    img {
+    img,
+    svg   {
       width: 100%;
+      display: block;
     }
 
     @include mq(small) {
@@ -310,8 +387,10 @@
     top: 0;
     right: $unit-large;
 
-    img {
+    img,
+    svg   {
       width: 100%;
+      display: block;
     }
 
     @include mq(small) {
