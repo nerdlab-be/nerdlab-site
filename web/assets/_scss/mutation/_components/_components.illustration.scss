@@ -18,6 +18,14 @@
   transform: scaleY(0);
 }
 
+.js-hero-watch .s-u {
+  opacity: 0;
+}
+
+.js-hero-watch .s-a {
+  opacity: 0;
+}
+
 .js-hero-watch .s-talt-top {
   transform: scaleY(0);
 }
@@ -38,11 +46,11 @@
 }
 
 .js-hero-watch .s-o-bottom {
-  transform: tranlateY(100px);
+  transform: translateY(100px);
 }
 
 .js-hero-watch .s-o-top {
-  transform: tranlateY(100px);
+  transform: translateY(100px);
 }
 
 .js-hero-watch .s-n-left {

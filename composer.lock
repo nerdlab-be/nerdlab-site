@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ad5ffea5d91c09e21d5dc483b1c14c29",
+    "content-hash": "6bb7d1b325b2ea4117cca5660c247734",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
@@ -1740,6 +1740,59 @@
                 "di container"
             ],
             "time": "2016-02-10T18:59:20+00:00"
+        },
+        {
+            "name": "nystudio107/craft-cookies",
+            "version": "1.1.10",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nystudio107/craft-cookies/zipball/e552e2a5f4e797c5cf537397224aaf689c363751",
+                "reference": "e552e2a5f4e797c5cf537397224aaf689c363751",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Cookies",
+                "handle": "cookies",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "changelogUrl": "https://raw.githubusercontent.com/nystudio107/craft-cookies/v1/CHANGELOG.md",
+                "class": "nystudio107\\cookies\\Cookies",
+                "components": {
+                    "cookies": "nystudio107\\cookies\\services\\CookiesService"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "nystudio107\\cookies\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nystudio107",
+                    "homepage": "https://nystudio107.com/"
+                }
+            ],
+            "description": "A simple plugin for setting and getting cookies from within Craft CMS templates.",
+            "keywords": [
+                "cms",
+                "cookies",
+                "craft",
+                "craft-plugin",
+                "craftcms"
+            ],
+            "support": {
+                "docs": "https://github.com/nystudio107/craft-cookies/blob/v1/README.md",
+                "issues": "https://github.com/nystudio107/craft-cookies/issues"
+            },
+            "time": "2018-07-22T06:44:45+00:00"
         },
         {
             "name": "nystudio107/craft-minify",

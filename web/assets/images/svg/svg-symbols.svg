@@ -2,6 +2,10 @@
     <symbol id="back" viewBox="0 0 44 44">
       <title>back</title><path d="M40.89 19.639H12.154l13.199-13.2L22 3.11 3.11 22 22 40.89l3.33-3.33-13.176-13.199H40.89z" fill-rule="evenodd"/>
     </symbol>
+    <symbol id="close" viewBox="0 0 44 44">
+      <title>close symbol</title>
+      <path fill-rule="evenodd" d="M34.833 11.752l-2.585-2.585L22 19.415 11.752 9.167l-2.585 2.585L19.415 22 9.167 32.248l2.585 2.585L22 24.585l10.248 10.248 2.585-2.585L24.585 22z"/>
+    </symbol>
     <symbol id="forward" viewBox="0 0 44 44">
       <title>forward</title><path d="M3.11 19.639h28.736l-13.199-13.2L22 3.11 40.89 22 22 40.89l-3.33-3.33 13.176-13.199H3.11z" fill-rule="evenodd"/>
     </symbol></svg>

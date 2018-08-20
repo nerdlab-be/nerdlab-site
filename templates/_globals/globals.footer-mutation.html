@@ -4,7 +4,8 @@
       <img src="/assets/images/svg/vlaanderen-logo-light.svg" alt="Vlaanderen - verbeelding werkt" class="c-footer__logo">
       {% set conditions = craft.entries.section('conditions') %}
       {% set credits = craft.entries.section('siteCredits') %}
-      <p class="c-small c-footer__text">©{{ 'now'|date('Y') }} Nerdlab, {% for page in conditions.all() %}<a href="{{ page.url }}" class="c-link">{{ page.title }}</a>{% endfor %}{% for item in credits.all() %} – <a href="{{ item.url }}" class="c-link">{{ item.title }}</a>{% endfor %}</p>
+      {% set privacy = craft.entries.section('privacyPolicy') %}
+      <p class="c-small c-footer__text">©{{ 'now'|date('Y') }} Nerdlab, {% for page in conditions.all() %}<a href="{{ page.url }}" class="c-link">{{ page.title }}</a>{% endfor %}, {% for page in privacy.all() %}<a href="{{ page.url }}" class="c-link">{{ page.title }}</a>{% endfor %}{% for item in credits.all() %} – <a href="{{ item.url }}" class="c-link">{{ item.title }}</a>{% endfor %}</p>
     </div>
   </div>
 </footer>

@@ -36,7 +36,8 @@
     <div class="o-layout o-layout--middle o-layout--reverse">
       <div class="o-layout__item u-1/2@small c-content c-content--footer">
         {% set conditions = craft.entries.section('conditions') %}
-        <p class="c-small">©{{ 'now'|date('Y') }} {{ siteName }}, {% for page in conditions.all() %}<a href="{{ page.url }}">{{ page.title }}</a>{% endfor %}</p>
+        {% set privacy = craft.entries.section('privacyPolicy') %}
+        <p class="c-small">©{{ 'now'|date('Y') }} {{ siteName }}, {% for page in conditions.all() %}<a href="{{ page.url }}">{{ page.title }}</a>{% endfor %}, {% for page in privacy.all() %}<a href="{{ page.url }}">{{ page.title }}</a>{% endfor %}</p>
       </div>
       <div class="o-layout__item u-1/2@small">
         <img src="/assets/images/svg/vlaanderen-logo.svg" alt="Vlaanderen - verbeelding werkt" class="c-logo-vlaanderen">

@@ -2786,11 +2786,6 @@ heroWatcher.enterViewport(function() {
   if (heroElement.hasClass('is-visible')) {
   } else {
     heroWatcherIntro();
-  }
-});
-
-heroWatcher.exitViewport(function() {
-  if (heroElement.hasClass('is-visible')) {} else {
     heroElement.addClass('is-visible');
   }
 });
@@ -2813,6 +2808,12 @@ function heroWatcherIntro() {
       scale: [0,1],
       offset: 400,
       duration: 500
+    })
+    .add({
+      targets: '.js-hero-watch .s-u',
+      opacity: [0,1],
+      offset: 0,
+      duration: 10,
     })
     .add({
       targets: '.js-hero-watch .s-u',
@@ -2841,6 +2842,12 @@ function heroWatcherIntro() {
       targets: '.js-hero-watch .s-t-center',
       scaleY: [0,1],
       offset: 300
+    })
+    .add({
+      targets: '.js-hero-watch .s-a',
+      opacity: [0,1],
+      offset: 0,
+      duration: 10,
     })
     .add({
       targets: '.js-hero-watch .s-a',
@@ -3213,3 +3220,23 @@ function footerWatcherIntro() {
       duration: 500
     })
 }
+
+$(document).ready(function(){
+  var privacy = $('.js-privacy');
+  var privacyButton = $('.js-privacy__button');
+
+  function setCookie(c_name,value,exdays) {
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value=escape(value) + ((exdays==null) ? "" : ("; expires="+exdate.toUTCString()));
+    document.cookie=c_name + "=" + c_value;
+  }
+
+  function setPrivacy(e) {
+    privacyButton.blur();
+    privacy.toggleClass('u-hidden');
+    setCookie('PrivacyNotice','Nerdlab cookie notice');
+  }
+
+  privacyButton.on('click', setPrivacy);
+});

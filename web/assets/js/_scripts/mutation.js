@@ -5,11 +5,6 @@ heroWatcher.enterViewport(function() {
   if (heroElement.hasClass('is-visible')) {
   } else {
     heroWatcherIntro();
-  }
-});
-
-heroWatcher.exitViewport(function() {
-  if (heroElement.hasClass('is-visible')) {} else {
     heroElement.addClass('is-visible');
   }
 });
@@ -32,6 +27,12 @@ function heroWatcherIntro() {
       scale: [0,1],
       offset: 400,
       duration: 500
+    })
+    .add({
+      targets: '.js-hero-watch .s-u',
+      opacity: [0,1],
+      offset: 0,
+      duration: 10,
     })
     .add({
       targets: '.js-hero-watch .s-u',
@@ -60,6 +61,12 @@ function heroWatcherIntro() {
       targets: '.js-hero-watch .s-t-center',
       scaleY: [0,1],
       offset: 300
+    })
+    .add({
+      targets: '.js-hero-watch .s-a',
+      opacity: [0,1],
+      offset: 0,
+      duration: 10,
     })
     .add({
       targets: '.js-hero-watch .s-a',
