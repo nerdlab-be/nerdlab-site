@@ -44,7 +44,7 @@
       <div class="o-wrapper o-wrapper--huge">
         <div class="c-privacy-notice">
           {% set cookies = craft.entries.section('cookieStatement') %}
-          <p>{{ labels.labelCookieNotice }} {% for page in cookies.all() %}<a href="{{ page.url }}" class="c-link c-link--negative">Learn more</a>{% endfor %}</p>
+          <p>{{ labels.labelCookieNotice }} {% for page in cookies.all() %}<a href="{{ page.url }}" class="c-link c-link--negative">{{ labels.labelMoreInfo }}</a>{% endfor %}</p>
           <p>
             <button class="c-button c-button--cookie js-privacy__button">{% include '_tools/tools.icon.html' with { options: { icon: 'close' } } %} <span class="u-hidden-visually">{{ labels.labelClose }}</span></button>
           </p>
