@@ -1,5 +1,5 @@
 {#
- # Privacy policy
+ # Privacy
  # ------------------------
 -#}
 
@@ -9,21 +9,13 @@
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--large">
-      <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge  c-theme-secondary">
-        <h1 class="c-section-title">{{ entry.title }}</h1>
-        <div class="c-editor c-editor--large u-margin-bottom-large">
+      <div class="o-layout__item u-3/4@medium u-2/3@large c-theme-neutral-alt">
+        <h1 class="c-title">{{ entry.title }}</h1>
+        <div class="c-editor u-margin-bottom-large">
           {% for block in entry.body.all() %}
           {% switch block.type %}
           {% case "lead" %}
           {{ block.lead }}
-          {% endswitch %}
-          {% endfor %}
-        </div>
-      </div>
-      <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge c-theme-neutral-alt">
-        <div class="c-editor">
-          {% for block in entry.body.all() %}
-          {% switch block.type %}
           {% case "paragraph" %}
           {{ block.paragraph }}
           {% case "subtitle" %}

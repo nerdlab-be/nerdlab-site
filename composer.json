@@ -20,10 +20,10 @@
   },
   "require": {
     "php": ">=7.0.0",
-    "craftcms/cms": "3.0.20",
+    "craftcms/cms": "3.0.21",
     "vlucas/phpdotenv": "^2.4.0",
     "roave/security-advisories": "dev-master",
-    "craftcms/redactor": "2.1.5",
+    "craftcms/redactor": "2.1.6",
     "mmikkel/cp-field-inspect": "1.0.4",
     "verbb/cp-nav": "2.0.4",
     "ether/simplemap": "3.3.3",
