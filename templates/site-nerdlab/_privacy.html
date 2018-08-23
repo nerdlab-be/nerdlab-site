@@ -1,0 +1,49 @@
+{#
+ # Privacy
+ # ------------------------
+-#}
+
+{% extends "_layouts/site" %}
+
+{% block main %}
+<div class="o-row-intro">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout o-layout--large">
+      <div class="o-layout__item u-3/4@medium u-2/3@large">
+        <h1 class="c-h1">{{ entry.title }}</h1>
+        <div class="c-content c-content--intro u-margin-bottom-large">
+          {% for block in entry.body.all() %}
+          {% switch block.type %}
+          {% case "lead" %}
+          {{ block.lead }}
+          {% case "paragraph" %}
+          {{ block.paragraph }}
+          {% case "subtitle" %}
+          <h2 class="c-h3" id="{{ block.subtitle | url_encode }}">{{ block.subtitle }}</h2>
+          {% case "subtitleSmall" %}
+          <h3 class="c-h4">{{ block.subtitleSmall }}</h3>
+          {% case "subtitleTiny" %}
+          <h4 class="c-h5">{{ block.subtitleTiny }}</h4>
+          {% case "button" %}
+          <p>
+            {% if block.buttonLink | length %}
+            {% for link in block.buttonLink.all() %}
+            <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
+              {{ block.buttonTitle }}
+            </a>
+            {% endfor %}
+            {% else %}
+            <a href="{{ block.buttonURL }}" class="c-btn c-btn--large c-btn--primary">
+              {{ block.buttonTitle }}
+            </a>
+            {% endif %}
+          </p>
+          {% endswitch %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

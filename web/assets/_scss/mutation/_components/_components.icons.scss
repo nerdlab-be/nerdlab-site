@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+
+.c-icon {
+  display: inline-block;
+  width: .8em;
+  height: .8em;
+  bottom: .15ex;
+  position: relative;
+  vertical-align: middle;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  margin-left: $unit-tiny/2;
+  margin-right: $unit-tiny/2;
+}

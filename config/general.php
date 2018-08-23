@@ -22,7 +22,11 @@ return [
         'cpTrigger' => 'admin',
 
         // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => getenv('SECURITY_KEY')
+        'securityKey' => getenv('SECURITY_KEY'),
+
+        // Disable DB backups
+        'backupCommand' => false,
+        'backupOnUpdate' => false
     ],
 
     // Dev environment settings

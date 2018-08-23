@@ -56,7 +56,7 @@ $logo-width:     $logo-height * $logo-ratio;
   width: 150px;
   margin-top: $unit;
 
-  @include mq(small) {
+  @include mq(medium) {
     width: 150px;
     margin-top: 0;
   }

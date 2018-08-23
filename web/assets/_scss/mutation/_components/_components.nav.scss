@@ -1,0 +1,51 @@
+/* ==========================================================================
+   #NAVIGATION
+   ========================================================================== */
+
+.c-nav-language {
+  display: block;
+  margin-left: $unit-small;
+
+  li {
+    margin-left: $unit;
+  }
+
+  li:first-child {
+    // border-left: 1px dotted $color-neutral-xlight;
+    padding-left: $unit;
+    margin-left: $unit-small;
+  }
+
+  @include mq(small) {
+    li:first-child {
+      border-left: 1px dotted $color-neutral-xlight;
+    }
+  }
+}
+
+  .c-nav-language__link {
+    display: block;
+    padding-bottom: $unit-tiny;
+    transition: color $global-duration $global-easing;
+    text-decoration: none;
+
+    &,
+    &:active {
+      color: $color-neutral-light;
+    }
+
+    &:hover,
+    &:focus {
+      color: tint($color-neutral-light,20);
+    }
+
+    &.is-active {
+      color: $color-neutral;
+      font-weight: $font-bold;
+
+      &:hover,
+      &:focus {
+        color: $color-neutral;
+      }
+    }
+  }

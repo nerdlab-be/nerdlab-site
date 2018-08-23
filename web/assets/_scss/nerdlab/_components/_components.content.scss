@@ -162,7 +162,7 @@
     }
   }
 
-  @include mq(small) {
+  @include mq(medium) {
     p {
       text-align: right;
     }

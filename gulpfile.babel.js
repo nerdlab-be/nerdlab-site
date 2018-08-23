@@ -92,7 +92,6 @@ const paths = {
     'web/assets/vendor/lazysizes/lazysizes.js',
     'web/assets/vendor/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
     'web/assets/vendor/jquery-match-height/jquery.matchHeight.js',
-    'web/assets/vendor/animejs/anime.min.js',
     'web/assets/js/_plugins/*.js',
     'web/assets/js/_scripts/*.js'
   ],
@@ -101,7 +100,7 @@ const paths = {
   symbolsDist: 'web/assets/images/svg/',
   cssWatch: 'web/assets/_scss/**/*.scss',
   jsWatch: 'web/assets/js/_scripts/**/*.js',
-  symbolsWatch: 'web/assets/_artwork/symbols/*.svg',
+  symbolsWatch: '_artwork/symbols/*.svg',
   siteWatch: [
     'templates/**/*.html',
   ]

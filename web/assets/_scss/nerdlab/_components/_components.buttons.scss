@@ -53,6 +53,32 @@
 
 }
 
+.c-button--cookie {
+  @include font-size($font-h6);
+  border: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: $unit;
+  background-color: transparent;
+  transition: color $global-duration $global-easing;
+
+  &,
+  &:active {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: .8;
+  }
+
+  @include mq(medium) {
+    @include font-size($font-h4);
+  }
+}
+
+
 
 
 
