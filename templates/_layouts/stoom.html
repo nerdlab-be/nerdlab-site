@@ -111,9 +111,9 @@
   {# Global javascript #}
   {% block foot %}
     {% if craft.app.config.general.devMode == true %}
-      <script src="{{ alias('@web') }}/assets/js/stoom.js"></script>
+      <script src="{{ alias('@web') }}/assets/js/scripts.js"></script>
     {% else %}
-      <script src="{{ rev('/assets/js/stoom.min.js') }}"></script>
+      <script src="{{ rev('stoom.min.js') }}"></script>
     {% endif %}
   {% endblock %}
 </body>
