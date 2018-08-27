@@ -186,7 +186,11 @@
         {% switch item.type %}
         {% case "line" %}
           <li class="c-list__item">
+            {% if item.externalLink %}
+            <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            {% else %}
             {{ item.text }}
+            {% endif %}
           </li>
         {% endswitch %}
         {% endfor %}
