@@ -3,11 +3,23 @@
    ========================================================================== */
 
 // A list of aspect ratios that get generated as modifier classes.
+// You should predefine it with only the ratios and names your project needs.
+//
+// The map keys are the strings used in the generated class names, and they can
+// follow any convention, as long as they are properly escaped strings. i.e.:
+//
+//   $inuit-ratios: (
+//     "2\\:1"         : (2:1),
+//     "4-by-3"        : (4:3),
+//     "full-hd"       : (16:9),
+//     "card-image"    : (2:3),
+//     "golden-ratio"  : (1.618:1) -> non-integers are okay
+//   ) !default;
 
 $inuit-ratios: (
-  (2:1),
-  (4:3),
-  (16:9),
+  "2\\:1"   : (2:1),
+  "4\\:3"   : (4:3),
+  "16\\:9"  : (16:9)
 ) !default;
 
 
@@ -18,13 +30,12 @@ $inuit-ratios: (
  *
  * http://alistapart.com/article/creating-intrinsic-ratios-for-video
  *
- * 1. Default cropping is a 1:1 ratio (i.e. a perfect square).
+ * 1. Default is a 1:1 ratio (i.e. a perfect square).
  */
 
 .o-ratio {
   position: relative;
   display: block;
-  overflow: hidden;
 
   &:before {
     content: "";
@@ -34,7 +45,6 @@ $inuit-ratios: (
   }
 
 }
-
 
   .o-ratio__content,
   .o-ratio > iframe,
@@ -50,7 +60,7 @@ $inuit-ratios: (
 
 
 
-/* stylelint-disable */
+
 
 /* Ratio variants.
    ========================================================================== */
@@ -58,23 +68,23 @@ $inuit-ratios: (
 /**
  * Generate a series of ratio classes to be used like so:
  *
- *   <div class="o-ratio  o-ratio--16:9">
+ *   <div class="o-ratio  o-ratio--golden-ratio">
  *
  */
 
-@each $ratio in $inuit-ratios {
+@each $ratio-name, $ratio-value in $inuit-ratios {
 
-  @each $antecedent, $consequent in $ratio {
+  @each $antecedent, $consequent in $ratio-value {
 
     @if (type-of($antecedent) != number) {
-      @error "`#{$antecedent}` needs to be a number."
+      @error "`#{$antecedent}` needs to be a number.";
     }
 
     @if (type-of($consequent) != number) {
-      @error "`#{$consequent}` needs to be a number."
+      @error "`#{$consequent}` needs to be a number.";
     }
 
-    .o-ratio--#{$antecedent}\:#{$consequent}:before {
+    .o-ratio--#{$ratio-name}:before {
       padding-bottom: ($consequent/$antecedent) * 100%;
     }
 
@@ -82,4 +92,26 @@ $inuit-ratios: (
 
 }
 
-/* stylelint-enable */
+
+
+
+
+/* Contain modifier.
+   ========================================================================== */
+
+/**
+ * Only works with image content.
+ * Contains the image to the boundaries, without cropping or stretching it.
+ */
+
+.o-ratio--img-contain {
+
+  > .o-ratio__content:before {
+    height: auto;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+  }
+
+}

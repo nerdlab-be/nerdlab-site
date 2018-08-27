@@ -4,9 +4,9 @@
  */
 
 // Set path constants
-define('CRAFT_BASE_PATH', dirname(__DIR__));
+define('CRAFT_BASE_PATH', dirname('../craft/vendor'));
 define('CRAFT_VENDOR_PATH', '/vendor');
-$root = dirname(__DIR__);
+$root = dirname('../craft/vendor');
 
 // Load Composer's autoloader
 require_once $root.'/vendor/autoload.php';
@@ -18,6 +18,5 @@ if (file_exists($root.'/.env')) {
 }
 
 // Load and run Craft
-// define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
 $app = require $root.'/vendor/craftcms/cms/bootstrap/web.php';
 $app->run();

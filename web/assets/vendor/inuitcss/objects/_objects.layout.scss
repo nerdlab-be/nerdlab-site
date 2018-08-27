@@ -59,7 +59,7 @@ $inuit-use-markup-fix: false !default;
 
 
 
-/* Default/mandatory classes.
+/* Default/mandatory classes
    ========================================================================== */
 
 /**
@@ -81,7 +81,6 @@ $inuit-use-markup-fix: false !default;
   }
 
 }
-
 
   /**
    * 1. Required in order to combine fluid widths with fixed gutters.
@@ -113,7 +112,7 @@ $inuit-use-markup-fix: false !default;
 
 
 
-/* Gutter size modifiers.
+/* Gutter size modifiers
    ========================================================================== */
 
 .o-layout--flush {
@@ -168,7 +167,8 @@ $inuit-use-markup-fix: false !default;
 
 
 
-/* Vertical alignment modifiers.
+
+/* Vertical alignment modifiers
    ========================================================================== */
 
 /**
@@ -199,7 +199,7 @@ $inuit-use-markup-fix: false !default;
 
 /**
  * Stretch all grid items of each row to have an equal-height.
- * Please be aware that this modifier class doesn't take any effect in IE9 and
+ * Please be aware that this modifier class doesn’t take any effect in IE9 and
  * below and other older browsers due to the lack of `display: flex` support.
  */
 
@@ -211,13 +211,25 @@ $inuit-use-markup-fix: false !default;
     display: flex;
   }
 
+  &.o-layout--center {
+    justify-content: center;
+  }
+
+  &.o-layout--right {
+    justify-content: flex-end;
+  }
+
+  &.o-layout--left {
+    justify-content: flex-start;
+  }
+
 }
 
 
 
 
 
-/* Fill order modifiers.
+/* Fill order modifiers
    ========================================================================== */
 
 /**
@@ -280,7 +292,7 @@ $inuit-use-markup-fix: false !default;
 
 
 
-/* Auto-widths modifier.
+/* Auto-widths modifier
    ========================================================================== */
 
 /**

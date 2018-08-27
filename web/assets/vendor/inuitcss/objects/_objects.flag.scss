@@ -21,7 +21,6 @@
   border-spacing: 0; /* [3] */
 }
 
-
   /**
    * Items within a flag object. There should only ever be one of each.
    *
@@ -34,7 +33,6 @@
     vertical-align: middle; /* [1] */
   }
 
-
   /**
    * Flag images have a space between them and the body of the object.
    *
@@ -46,9 +44,22 @@
     width: 1px; /* [1] */
     padding-right: $inuit-global-spacing-unit;
 
-
     /**
      * 1. Fixes problem with images disappearing.
+     *
+     *    The direct child selector '>' needs to remain in order for nested flag
+     *    objects to not inherit their parent’s formatting. In case the image tag
+     *    is wrapped into another tag, e.g. an anchor for linking reasons, it will
+     *    disappear. In that case try wrapping the whole o-flag__img object into
+     *    an anchor tag.
+     *
+     *    E.g.:
+     *
+     *      <a href="/">
+     *        <div class="o-flag__img">
+     *          <img src="./link/to/image.jpg" alt="image alt text">
+     *        </div>
+     *      </a>
      */
 
     > img {
@@ -56,7 +67,6 @@
     }
 
   }
-
 
   /**
    * The container for the main content of the flag object.
@@ -78,7 +88,7 @@
 
 
 
-/* Size variants.
+/* Size variants
    ========================================================================== */
 
 .o-flag--flush {
@@ -165,7 +175,8 @@
 
 
 
-/* Reversed flag.
+
+/* Reversed flag
    ========================================================================== */
 
 /**
@@ -193,7 +204,7 @@
 
 
 
-/* Alignment variants.
+/* Alignment variants
    ========================================================================== */
 
 /**

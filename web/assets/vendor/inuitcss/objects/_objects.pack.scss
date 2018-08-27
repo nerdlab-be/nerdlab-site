@@ -18,7 +18,6 @@
   table-layout: fixed; /* [3] */
 }
 
-
   /**
    * 1. Cause children to adopt table-like structure.
    * 2. Default item alignment is with the tops of each other.
@@ -29,7 +28,7 @@
     vertical-align: top; /* [2] */
 
 
-    /* Vertical alignment variants.
+    /* Vertical alignment variants
        ====================================================================== */
 
     .o-pack--middle > & {
@@ -46,7 +45,7 @@
 
 
 
-/* Unequal-width items.
+/* Unequal-width items
    ========================================================================== */
 
 .o-pack--auto {
@@ -57,7 +56,7 @@
 
 
 
-/* Size variants.
+/* Size variants
    ========================================================================== */
 
 .o-pack--tiny {
