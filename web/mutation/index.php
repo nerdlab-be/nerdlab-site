@@ -7,9 +7,9 @@
 define('CRAFT_SITE','mutationnl');
 
 // Set path constants
+define('CRAFT_BASE_PATH', dirname('../../craft/vendor'));
 define('CRAFT_VENDOR_PATH', '/vendor');
 $root = dirname('../../craft/vendor');
-define('CRAFT_BASE_PATH', dirname('../../craft/vendor'));
 
 // Load Composer's autoloader
 require_once $root.'/vendor/autoload.php';
