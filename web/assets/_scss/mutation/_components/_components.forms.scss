@@ -4,7 +4,7 @@
 
 .c-label {
   display: block;
-  color: $yellow;
+  color: $color-neutral-light;
   @include font-size($font-tiny);
   font-weight: $font-bold;
   margin-bottom: $unit-tiny;
@@ -18,10 +18,10 @@
   padding: ($unit - $unit-tiny) $unit ($unit + $unit-tiny);
   transition: $global-transition;
   border-radius: $global-radius;
-  background-color: $color-secondary-dark;
+  background-color: $white;
   border: 0;
   outline: 0;
-  color: $white;
+  color: $color-neutral;
   @include font-size($font-h4);
 
   @include mq(medium) {
@@ -42,7 +42,7 @@
     position: absolute;
     bottom: $unit-small;
     left: -$unit-small;
-    background-color: $white;
+    background-color: $color-neutral-light;
     width: 100%;
     height: 2px;
     z-index: 1;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ac13562c79d030450c3c844bd43c9f04",
+    "content-hash": "4f2f0dc996ae138cfee9f30e14d21656",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
@@ -397,11 +397,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.22",
+            "version": "3.0.23.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/de45c0bef138486f6efc907d15444912205bc11a",
-                "reference": "de45c0bef138486f6efc907d15444912205bc11a",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/cc01e227395a251258552760ccbd9ee68218d4c0",
+                "reference": "cc01e227395a251258552760ccbd9ee68218d4c0",
                 "shasum": ""
             },
             "require": {
@@ -472,7 +472,7 @@
                 "docs": "https://github.com/craftcms/docs",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2018-08-28T16:31:41+00:00"
+            "time": "2018-09-05T04:36:33+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -633,11 +633,11 @@
         },
         {
             "name": "craftcms/store-hours",
-            "version": "2.1.0.1",
+            "version": "2.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/53f42f2638ad8219f3b8840d32f45b0acd0fcf13",
-                "reference": "53f42f2638ad8219f3b8840d32f45b0acd0fcf13",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/ac8ef94ee160bdb82464bfbd47f0e81dcdcf51e4",
+                "reference": "ac8ef94ee160bdb82464bfbd47f0e81dcdcf51e4",
                 "shasum": ""
             },
             "require": {
@@ -682,7 +682,7 @@
                 "docs": "https://github.com/craftcms/store-hours",
                 "rss": "https://github.com/craftcms/store-hours/commits/v2.atom"
             },
-            "time": "2018-07-19T20:38:07+00:00"
+            "time": "2018-09-03T13:05:48+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -922,11 +922,11 @@
         },
         {
             "name": "ether/seo",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/seo/zipball/0c16162f94f2859168641f6e4f5a6906978f5d3b",
-                "reference": "0c16162f94f2859168641f6e4f5a6906978f5d3b",
+                "url": "https://api.github.com/repos/ethercreative/seo/zipball/b917148fc1976999806528d9da710723affe4bf5",
+                "reference": "b917148fc1976999806528d9da710723affe4bf5",
                 "shasum": ""
             },
             "require": {
@@ -954,15 +954,15 @@
                 "issues": "https://github.com/ethercreative/seo",
                 "docs": "https://github.com/ethercreative/seo/blob/v3/README.md"
             },
-            "time": "2018-06-25T15:22:34+00:00"
+            "time": "2018-09-03T21:43:28+00:00"
         },
         {
             "name": "ether/simplemap",
-            "version": "3.3.3",
+            "version": "3.3.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/d7c951ef091144d3fc341ca8e4acb410a008851c",
-                "reference": "d7c951ef091144d3fc341ca8e4acb410a008851c",
+                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/be90293f603dac8521b54eeb3835c1a00c686ad9",
+                "reference": "be90293f603dac8521b54eeb3835c1a00c686ad9",
                 "shasum": ""
             },
             "require": {
@@ -989,7 +989,7 @@
             "support": {
                 "email": "tam@ethercreative.co.uk"
             },
-            "time": "2018-03-13T20:23:51+00:00"
+            "time": "2018-09-05T14:31:25+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",

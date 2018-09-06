@@ -3485,6 +3485,43 @@ function subscribeWatcherIntro() {
     })
 }
 
+var expoElement = $('.js-expo-watch');
+var expoWatcher = scrollMonitor.create( expoElement, -80 );
+
+expoWatcher.enterViewport(function() {
+  if (expoElement.hasClass('is-visible')) {
+  } else {
+    expoWatcherIntro();
+  }
+});
+
+expoWatcher.exitViewport(function() {
+  if (expoElement.hasClass('is-visible')) {} else {
+    expoElement.addClass('is-visible');
+  }
+});
+
+function expoWatcherIntro() {
+  var expoIn = anime.timeline({
+    duration: 900,
+    delay: function(el, i) { return i * 250 },
+    loop: 0,
+    easing: 'easeInOutSine'
+  });
+
+  expoIn
+    .add({
+      targets: '.js-expo-watch .s-o3-center',
+      scale: [0,1],
+      duration: 300
+    })
+    .add({
+      targets: '.js-expo-watch .s-o3',
+      scale: [0,1],
+      offset: 200
+    })
+}
+
 var socialElement = $('.js-social-watch');
 var socialWatcher = scrollMonitor.create( socialElement, -80 );
 
@@ -3566,6 +3603,42 @@ function socialWatcherIntro() {
       scale: [0,1],
       offset: 450,
       duration: 500
+    })
+}
+
+var extraElement = $('.js-extra-watch');
+var extraWatcher = scrollMonitor.create( extraElement, -80 );
+
+extraWatcher.enterViewport(function() {
+  if (extraElement.hasClass('is-visible')) {
+  } else {
+    extraWatcherIntro();
+  }
+});
+
+extraWatcher.exitViewport(function() {
+  if (extraElement.hasClass('is-visible')) {} else {
+    extraElement.addClass('is-visible');
+  }
+});
+
+function extraWatcherIntro() {
+  var extraIn = anime.timeline({
+    duration: 900,
+    delay: function(el, i) { return i * 250 },
+    loop: 0,
+    easing: 'easeInOutSine'
+  });
+
+  extraIn
+    .add({
+      targets: '.js-extra-watch .s-m2-left',
+      scale: [0,1]
+    })
+    .add({
+      targets: '.js-extra-watch .s-m2-right',
+      scale: [0,1],
+      offset: 100
     })
 }
 

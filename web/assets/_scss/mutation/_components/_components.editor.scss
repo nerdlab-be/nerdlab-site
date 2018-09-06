@@ -25,6 +25,7 @@
 
   p {
     @include font-size($font-h6);
+    max-width: 35em;
   }
 
   ul {

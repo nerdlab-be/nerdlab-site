@@ -22,7 +22,7 @@
       </div>
       <div class="o-layout__item u-2/3@medium">
         {% set credits = entry.siteCredits.all() %}
-        <ul class="o-list-bare c-list c-list--medium">
+        <ul class="o-list-bare c-list c-list--credits">
         {% for item in credits %}
           <li class="c-list__item">
             <a href="{{ item.href }}" class="c-link c-link--bare" target="_blank">{{ item.target }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' }} %}</a>

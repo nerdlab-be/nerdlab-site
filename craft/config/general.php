@@ -26,7 +26,7 @@ return [
 
         // Disable DB backups
         'backupCommand' => false,
-        'backupOnUpdate' => false
+        'backupOnUpdate' => false,
     ],
 
     // Dev environment settings

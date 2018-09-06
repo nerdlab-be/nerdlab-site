@@ -20,11 +20,30 @@
 .c-theme-neutral-alt {
   color: $color-neutral;
   background-color: $white;
+
+  .c-theme-neutral-tint & {
+    background-color: tint($color-neutral-xlight,40);
+  }
 }
 
 .c-theme-neutral-light {
   color: $color-neutral-light;
   background-color: $white;
+}
+
+.c-theme-neutral-tint {
+  color: $color-neutral;
+  background-color: tint($color-neutral-xlight,40);
+}
+
+.c-theme-neutral-light-negative {
+  color: $color-neutral-light;
+  background-color: $color-neutral-light;
+}
+
+.c-theme-neutral-negative {
+  color: $white;
+  background-color: $color-neutral;
 }
 
 .c-theme-primary {
@@ -37,12 +56,23 @@
   background-color: $color-primary-xlight;
 }
 
+.c-theme-primary-negative {
+  color: $white;
+  background-color: $color-primary;
+}
+
+
 .c-theme-secondary {
   color: $color-secondary;
   background-color: $white;
+
+  .c-theme-neutral-tint & {
+    background-color: tint($color-neutral-xlight,40);
+  }
 }
 
 .c-theme-secondary-negative {
   color: $white;
   background-color: $color-secondary;
 }
+

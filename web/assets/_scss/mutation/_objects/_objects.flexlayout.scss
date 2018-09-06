@@ -230,3 +230,11 @@
     margin-bottom: $unit-large;
   }
 }
+
+.o-layout--spacer-small {
+  margin-bottom: -$unit-small;
+
+  > .o-layout__item {
+    margin-bottom: $unit-small;
+  }
+}

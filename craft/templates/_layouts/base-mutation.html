@@ -54,7 +54,7 @@
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/mutation.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/mutation.css">
   {% else %}
     <link rel="stylesheet" type="text/css" href="{{ rev('mutation.min.css') }}">
   {% endif %}
@@ -154,7 +154,7 @@
   {# Global javascript #}
   {% block foot %}
     {% if craft.app.config.general.devMode == true %}
-      <script src="{{ alias('@web') }}/assets/js/scripts.js"></script>
+      <script src="/assets/js/scripts.js"></script>
     {% else %}
       <script src="{{ rev('scripts.min.js') }}"></script>
     {% endif %}

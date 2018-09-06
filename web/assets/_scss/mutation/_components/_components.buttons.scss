@@ -48,12 +48,12 @@
 
   &,
   &:active {
-    color: $white;
+    color: $color-neutral;
   }
 
   &:hover,
   &:focus {
-    color: $yellow;
+    color: $color-neutral-light;
   }
 }
 

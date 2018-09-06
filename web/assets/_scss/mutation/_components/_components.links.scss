@@ -19,6 +19,18 @@
     }
   }
 
+  .c-theme-primary-negative &, {
+    &,
+    &:active {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: tint($color-primary,80);
+    }
+  }
+
   .c-theme-secondary & {
     &,
     &:active {
@@ -31,7 +43,7 @@
     }
   }
 
-  .c-theme-secondary-negative & {
+  .c-theme-secondary-negative &, {
     &,
     &:active {
       color: $white;
@@ -54,7 +66,20 @@
       color: $color-primary-light;
     }
   }
+
+  .c-theme-neutral-negative & {
+    &,
+    &:active {
+      color: $white;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-neutral-xlight;
+    }
+  }
 }
+
 
 .c-link--bare {
   text-decoration: none;

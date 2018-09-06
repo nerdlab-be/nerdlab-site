@@ -294,14 +294,37 @@
 
     @include mq(small) {
       width: 100px;
+
     }
 
     @include mq(medium) {
-      width: 200px;
+      left: 35%;
     }
 
     @include mq(large) {
-      width: 250px;
+      width: 150px;
+    }
+  }
+
+  .c-illustration__bottom-right-alt {
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    right: 0;
+
+    img,
+    svg {
+      height: 100%;
+      display: block;
+    }
+
+    @include mq(small) {
+      width: 100px;
+
+    }
+
+    @include mq(large) {
+      width: 150px;
     }
   }
 

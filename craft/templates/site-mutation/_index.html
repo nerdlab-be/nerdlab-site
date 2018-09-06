@@ -157,7 +157,7 @@
   </span>
   <span class="c-illustration__bottom-left" role="presentation" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-      <polygon class="s-triangle" fill="#6AC0C4" fill-rule="evenodd" points="0 120 120 0 120 120"/>
+      <polygon class="s-triangle" fill="#262D40" fill-rule="evenodd" points="0 120 120 0 120 120"/>
     </svg>
   </span>
   <span class="c-illustration__bottom-right" role="presentation" aria-hidden="true">
@@ -169,22 +169,52 @@
     </svg>
   </span>
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout">
-      <div class="o-layout__item u-1/3@medium">
+    {% for item in lineup %}
+    {% switch item.type %}
+    {% case "heading" %}
+    <h2 class="c-title u-margin-bottom">
+      {{ item.heading }}
+    </h2>
+    {% endswitch %}
+    {% endfor %}
+    <div class="o-layout o-layout--spacer">
+      <div class="o-layout__item u-1/2@medium">
         {% for item in lineup %}
         {% switch item.type %}
-        {% case "heading" %}
-        <h2 class="c-section-title">
-          {{ item.heading }}
-        </h2>
+        {% case "expertSubtitle" %}
+        <h3 class="c-tag c-tag--back u-margin-bottom">
+          {{ item.subtitle }}
+        </h3>
         {% endswitch %}
         {% endfor %}
-      </div>
-      <div class="o-layout__item u-2/3@medium">
         <ul class="o-list-bare c-list c-list--large">
         {% for item in lineup %}
         {% switch item.type %}
-        {% case "line" %}
+        {% case "expert" %}
+          <li class="c-list__item">
+            {% if item.externalLink %}
+            <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            {% else %}
+            {{ item.text }}
+            {% endif %}
+          </li>
+        {% endswitch %}
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="o-layout__item u-1/2@medium">
+        {% for item in lineup %}
+        {% switch item.type %}
+        {% case "potentialSubtitle" %}
+        <h3 class="c-tag c-tag--back u-margin-bottom">
+          {{ item.subtitle }}
+        </h3>
+        {% endswitch %}
+        {% endfor %}
+        <ul class="o-list-bare c-list c-list--large">
+        {% for item in lineup %}
+        {% switch item.type %}
+        {% case "potential" %}
           <li class="c-list__item">
             {% if item.externalLink %}
             <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
@@ -200,13 +230,188 @@
   </div>
 </div>
 
-{% set subscribe = entry.mutationSubscribe.all() %}
-<div class="o-row-large c-theme-secondary-negative c-illustration js-subscribe-watch" id="subscribe">
+{% set workshops = entry.mutationWorkshops.all() %}
+{% set make = entry.mutationMake.all() %}
+{% if workshops | length() %}
+<div class="o-row-large c-theme-primary-negative c-illustration">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout o-layout--large o-layout--spacer">
+      <div class="o-layout__item u-1/2@medium">
+        {% for item in workshops %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-section-title">
+          {{ item.heading }}
+        </h2>
+        {% case "paragraph" %}
+        <div class="c-editor c-editor--bold u-margin-bottom u-margin-bottom-large@large">
+          {{ item.paragraph }}
+        </div>
+        {% endswitch %}
+        {% endfor %}
+        <ul class="o-list-bare c-list">
+        {% for item in workshops %}
+        {% switch item.type %}
+        {% case "item" %}
+          <li class="c-list__item">
+            {% if item.externalLink %}
+            <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            {% else %}
+            {{ item.text }}
+            {% endif %}
+          </li>
+        {% endswitch %}
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="o-layout__item u-1/2@medium">
+        {% for item in make %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-section-title">
+          {{ item.heading }}
+        </h2>
+        {% case "paragraph" %}
+        <div class="c-editor c-editor--bold u-margin-bottom u-margin-bottom-large@large">
+          {{ item.paragraph }}
+        </div>
+        {% endswitch %}
+        {% endfor %}
+        <ul class="o-list-bare c-list">
+        {% for item in make %}
+        {% switch item.type %}
+        {% case "item" %}
+          <li class="c-list__item">
+            {% if item.externalLink %}
+            <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            {% else %}
+            {{ item.text }}
+            {% endif %}
+          </li>
+        {% endswitch %}
+        {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% set expo = entry.mutationExpo.all() %}
+{% if expo | length() %}
+<div class="o-row-large c-theme-neutral-negative c-illustration  js-expo-watch">
   <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
       <g fill="none" fill-rule="evenodd">
-        <path class="s-o3-center" fill="#9ABE46" d="M57.0988109,0 C88.6125076,0 114.197622,25.5851143 114.197622,57.0988109 C114.197622,88.6125076 88.6125076,114.197622 57.0988109,114.197622 C25.5851143,114.197622 0,88.6125076 0,57.0988109 C0,25.5851143 25.5851143,0 57.0988109,0 Z"/>
-        <path class="s-o3" fill="#243242" d="M57.0988109,37.3240407 C68.0128462,37.3240407 76.8735812,46.1847756 76.8735812,57.0988109 C76.8735812,68.0128462 68.0128462,76.8735812 57.0988109,76.8735812 C46.1847756,76.8735812 37.3240407,68.0128462 37.3240407,57.0988109 C37.3240407,46.1847756 46.1847756,37.3240407 57.0988109,37.3240407 Z"/>
+        <path class="s-o3-center" fill="#ffffff" d="M57.0988109,0 C88.6125076,0 114.197622,25.5851143 114.197622,57.0988109 C114.197622,88.6125076 88.6125076,114.197622 57.0988109,114.197622 C25.5851143,114.197622 0,88.6125076 0,57.0988109 C0,25.5851143 25.5851143,0 57.0988109,0 Z"/>
+        <path class="s-o3" fill="#FF4136" d="M57.0988109,37.3240407 C68.0128462,37.3240407 76.8735812,46.1847756 76.8735812,57.0988109 C76.8735812,68.0128462 68.0128462,76.8735812 57.0988109,76.8735812 C46.1847756,76.8735812 37.3240407,68.0128462 37.3240407,57.0988109 C37.3240407,46.1847756 46.1847756,37.3240407 57.0988109,37.3240407 Z"/>
+      </g>
+    </svg>
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
+    {% for item in expo %}
+    {% switch item.type %}
+    {% case "heading" %}
+    <h2 class="c-section-title">
+      {{ item.heading }}
+    </h2>
+    {% case "paragraph" %}
+    <div class="c-editor c-editor--bold u-margin-bottom u-margin-bottom-large@large">
+      {{ item.paragraph }}
+    </div>
+    {% endswitch %}
+    {% endfor %}
+    <ul class="c-para o-layout o-layout--spacer-small">
+      {% for item in expo %}
+      {% switch item.type %}
+      {% case "item" %}
+        <li class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
+          {% if item.externalLink %}
+          <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+          {% else %}
+          {{ item.text }}
+          {% endif %}
+        </li>
+      {% endswitch %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+{% set extra = entry.mutationExtra.all() %}
+{% if extra | length() %}
+<div class="o-row-large c-theme-secondary c-illustration js-extra-watch">
+  <span class="c-illustration__center-bottom" role="presentation" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <g fill="none" fill-rule="evenodd">
+        <polygon class="s-m2-left" fill="#E0E4E6" points="54.631 60 -1 115.631 -1 4.369"/>
+        <polygon class="s-m2-right" fill="#E53958" points="54.631 60 88.975 94.344 88.975 25.656"/>
+      </g>
+    </svg>
+  </span>
+  <span class="c-illustration__bottom-right-alt" role="presentation" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <polygon class="s-triangle" fill="#9ABE46" fill-rule="evenodd" points="0 120 120 0 120 120"/>
+    </svg>
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
+    {% for item in extra %}
+    <h2 class="c-section-title">
+      {{ item.heading }}
+    </h2>
+    <div class="o-layout{% if item|last %}{% else %} u-margin-bottom-large u-margin-bottom-large@large{% endif %}">
+      <div class="o-layout__item u-1/3@medium">
+        <h3 class="c-para-large">{{ item.subHeading }}</h3>
+      </div>
+      <div class="o-layout__item u-2/3@medium">
+        <div class="c-editor c-editor--bold c-editor--large u-margin-bottom">
+          {{ item.paragraph }}
+          {% if item.externalLink %}
+          <p><a href="{{ item.externalLinkHref }}" class="c-link c-link--bare" target="_blank"> {{ item.externalLink}} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% set tickets = entry.mutationTickets.all() %}
+{% if tickets | length() %}
+<div class="o-row-large c-theme-secondary-negative c-illustration js-subscribe-watch" id="tickets">
+  <div class="o-wrapper o-wrapper--huge">
+    {% for item in tickets %}
+    {% switch item.type %}
+    {% case "heading" %}
+    <h2 class="c-section-title u-margin-bottom">
+      {{ item.heading }}
+    </h2>
+    {% endswitch %}
+    {% endfor %}
+    <ul class="o-list-bare c-list c-list--medium">
+      {% for item in tickets %}
+      {% switch item.type %}
+      {% case "ticket" %}
+      <li class="c-list__item">
+        <strong>{{ item.heading }}{% if item.price %}: {{ item.price }}{% endif %}</strong> {% if item.ticketLink %}<a href="{{ item.ticketLink }}" class="c-link c-link--bare" target="_blank">{{ "Buy tickets"|t }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>{% else %}<span>{{ "Free"|t }}</span>{% endif %}
+      </li>
+      {% endswitch %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+{% set subscribe = entry.mutationSubscribe.all() %}
+{% if subscribe | length() %}
+<div class="o-row-large c-theme-neutral-tint c-illustration js-subscribe-watch" id="subscribe">
+  <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <g fill="none" fill-rule="evenodd">
+        <path class="s-o3-center" fill="#E9C200" d="M57.0988109,0 C88.6125076,0 114.197622,25.5851143 114.197622,57.0988109 C114.197622,88.6125076 88.6125076,114.197622 57.0988109,114.197622 C25.5851143,114.197622 0,88.6125076 0,57.0988109 C0,25.5851143 25.5851143,0 57.0988109,0 Z"/>
+        <path class="s-o3" fill="#262D40" d="M57.0988109,37.3240407 C68.0128462,37.3240407 76.8735812,46.1847756 76.8735812,57.0988109 C76.8735812,68.0128462 68.0128462,76.8735812 57.0988109,76.8735812 C46.1847756,76.8735812 37.3240407,68.0128462 37.3240407,57.0988109 C37.3240407,46.1847756 46.1847756,37.3240407 57.0988109,37.3240407 Z"/>
       </g>
     </svg>
   </span>
@@ -249,19 +454,11 @@
     <!--End mc_embed_signup-->
   </div>
 </div>
-
+{% endif %}
 
 {% set social = entry.mutationSocial.all() %}
 {% set partners = entry.mutationPartners.all() %}
-<div class="o-row-large c-theme-primary c-illustration js-social-watch">
-  <span class="c-illustration__center-bottom" role="presentation" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-      <g fill="none" fill-rule="evenodd">
-        <polygon class="s-m2-left" fill="#E9C200" points="54.631 60 -1 115.631 -1 4.369"/>
-        <polygon class="s-m2-right" fill="#E0E4E6" points="54.631 60 88.975 94.344 88.975 25.656"/>
-      </g>
-    </svg>
-  </span>
+<div class="o-row-large c-theme-secondary c-illustration js-social-watch">
   <span class="c-illustration__top-right-alt" role="presentation" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
       <g fill="#9ABE46" fill-rule="evenodd" transform="translate(36 2)">
@@ -327,7 +524,7 @@
 </div>
 
 {% set nerdlab = entry.mutationNerdlab.all() %}
-<div class="o-row-large c-theme-secondary c-illustration js-footer-watch">
+<div class="o-row-large c-theme-primary c-illustration js-footer-watch">
   <span class="c-illustration__center-center" role="presentation" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
       <g fill="none" fill-rule="evenodd" transform="translate(1 2.4)">
