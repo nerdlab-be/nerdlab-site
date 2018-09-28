@@ -132,3 +132,13 @@
     }
   }
 }
+
+.c-editor--line-up {
+  margin-top: $unit-small;
+  // padding-top: $unit-small;
+  // border-top: 2px solid $white;
+
+  @include mq(medium) {
+    margin-top: $unit;
+  }
+}

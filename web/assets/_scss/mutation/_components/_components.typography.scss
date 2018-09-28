@@ -105,8 +105,21 @@
   font-weight: $font-bold;
   @include font-size($font-h2,1);
 
+  .c-list__item + .c-list__item {
+    margin-top: $unit-small;
+    padding-top: $unit-small;
+    border-top: 2px solid $white;
+  }
+
   @include mq(small) {
     @include font-size($font-h1,1);
+  }
+
+  @include mq(medium) {
+    .c-list__item + .c-list__item {
+      margin-top: $unit;
+      padding-top: $unit-small;
+    }
   }
 
   @include mq(large) {
