@@ -53,7 +53,8 @@
       }
     }
 
-    .c-theme-secondary & {
+    .c-theme-secondary &,
+    .c-theme-neutral-tint & {
       &,
       &:active {
         color: $color-secondary;
@@ -88,6 +89,22 @@
 .c-editor--bold {
   p {
     font-weight: $font-bold;
+  }
+}
+
+.c-editor--small {
+  a {
+    font-weight: $font-bold;
+  }
+
+  p {
+    @include font-size($font-small);
+  }
+
+  @include mq(medium) {
+    p {
+      @include font-size($font-h6);
+    }
   }
 }
 
@@ -135,8 +152,6 @@
 
 .c-editor--line-up {
   margin-top: $unit-small;
-  // padding-top: $unit-small;
-  // border-top: 2px solid $white;
 
   @include mq(medium) {
     margin-top: $unit;

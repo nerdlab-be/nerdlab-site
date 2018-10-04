@@ -134,7 +134,8 @@
   </div>
 </div>
 
-{% set lineup = entry.mutationLineup.all() %}
+{% set talks = craft.entries.section('mutationTalks').all() %}
+{% set localHeroes = craft.entries.section('mutationLocalHeroes').all() %}
 <div class="o-row-huge-top c-theme-primary-tint c-illustration js-program-watch">
   <span class="c-illustration__top-center" role="presentation" aria-hidden="true">
     <img src="/assets/images/svg/illustrationU.svg" alt="">
@@ -169,66 +170,76 @@
     </svg>
   </span>
   <div class="o-wrapper o-wrapper--large">
-    {% for item in lineup %}
-    {% switch item.type %}
-    {% case "heading" %}
     <h2 class="c-title u-margin-bottom">
-      {{ item.heading }}
+      {{ 'Program' | t }}
     </h2>
-    {% endswitch %}
-    {% endfor %}
     <div class="o-layout">
       <div class="o-layout__item u-margin-bottom-large u-margin-bottom-huge@medium">
-        {% for item in lineup %}
-        {% switch item.type %}
-        {% case "expertSubtitle" %}
         <h3 class="c-tag c-tag--back u-margin-bottom">
-          {{ item.subtitle }}
+          {{ 'Experts' | t }}
         </h3>
-        {% endswitch %}
-        {% endfor %}
         <ul class="o-list-bare c-list c-list--large">
-        {% for item in lineup %}
-        {% switch item.type %}
-        {% case "expert" %}
+          {% if talks | length %}
+          {% for item in talks %}
           <li class="c-list__item">
-            {% if item.externalLink %}
-            <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-            {% else %}
-            {{ item.text }}
-            {% endif %}
-            {% if item.paragraph | length() %}
-            <div class="c-editor c-editor--line-up">
-              {{ item.paragraph }}
-            </div>
-            {% endif %}
+            {% set intro = item.intro.all() %}
+            {% for block in intro %}
+              {% switch block.type %}
+                {% case "button" %}
+                  {% if block.buttonURL | length %}
+                  <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+                  {% else %}
+                  {{ item.title }}
+                  {% endif %}
+              {% endswitch %}
+            {% endfor %}
+            {% for block in intro %}
+              {% switch block.type %}
+                {% case "introParagraph" %}
+                  <div class="c-editor c-editor--line-up">
+                    {{ block.introParagraph }}
+                  </div>
+              {% endswitch %}
+            {% endfor %}
           </li>
-        {% endswitch %}
-        {% endfor %}
+          {% endfor %}
+          {% else %}
+          <li class="c-list__item">{{ 'Soon' | t }}</li>
+          {% endif %}
         </ul>
       </div>
       <div class="o-layout__item u-margin-bottom-large u-margin-bottom-huge@medium">
-        {% for item in lineup %}
-        {% switch item.type %}
-        {% case "potentialSubtitle" %}
         <h3 class="c-tag c-tag--back u-margin-bottom">
-          {{ item.subtitle }}
+          {{ 'Local heroes' | t }}
         </h3>
-        {% endswitch %}
-        {% endfor %}
         <ul class="o-list-bare c-list c-list--large">
-        {% for item in lineup %}
-        {% switch item.type %}
-        {% case "potential" %}
+          {% if localHeroes | length %}
+          {% for item in localHeroes %}
           <li class="c-list__item">
-            {% if item.externalLink %}
-            <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-            {% else %}
-            {{ item.text }}
-            {% endif %}
+            {% set intro = item.intro.all() %}
+            {% for block in intro %}
+              {% switch block.type %}
+                {% case "button" %}
+                  {% if block.buttonURL | length %}
+                  <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+                  {% else %}
+                  {{ item.title }}
+                  {% endif %}
+              {% endswitch %}
+            {% endfor %}
+            {% for block in intro %}
+              {% switch block.type %}
+                {% case "introParagraph" %}
+                  <div class="c-editor c-editor--line-up">
+                    {{ block.introParagraph }}
+                  </div>
+              {% endswitch %}
+            {% endfor %}
           </li>
-        {% endswitch %}
-        {% endfor %}
+          {% endfor %}
+          {% else %}
+          <li class="c-list__item">{{ 'Soon' | t }}</li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -236,7 +247,9 @@
 </div>
 
 {% set workshops = entry.mutationWorkshops.all() %}
+{% set workshopsDetail = craft.entries.section('mutationWorkshops').all() %}
 {% set make = entry.mutationMake.all() %}
+{% set makeDetail = craft.entries.section('mutationHowDoYouMakeIt').all() %}
 {% if workshops | length() %}
 <div class="o-row-large c-theme-primary-negative c-illustration">
   <div class="o-wrapper o-wrapper--huge">
@@ -255,18 +268,25 @@
         {% endswitch %}
         {% endfor %}
         <ul class="o-list-bare c-list">
-        {% for item in workshops %}
-        {% switch item.type %}
-        {% case "item" %}
+          {% if workshopsDetail | length() %}
+          {% for item in workshopsDetail %}
           <li class="c-list__item">
-            {% if item.externalLink %}
-            <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-            {% else %}
-            {{ item.text }}
-            {% endif %}
+            {% set intro = item.intro.all() %}
+            {% for block in intro %}
+              {% switch block.type %}
+                {% case "button" %}
+                  {% if block.buttonURL | length %}
+                  <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+                  {% else %}
+                  {{ item.title }}
+                  {% endif %}
+              {% endswitch %}
+            {% endfor %}
           </li>
-        {% endswitch %}
-        {% endfor %}
+          {% endfor %}
+          {% else %}
+          <li class="c-list__item">{{ 'Soon' | t }}</li>
+          {% endif %}
         </ul>
       </div>
       <div class="o-layout__item u-1/2@medium">
@@ -283,18 +303,25 @@
         {% endswitch %}
         {% endfor %}
         <ul class="o-list-bare c-list">
-        {% for item in make %}
-        {% switch item.type %}
-        {% case "item" %}
+          {% if makeDetail | length() %}
+          {% for item in makeDetail %}
           <li class="c-list__item">
-            {% if item.externalLink %}
-            <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-            {% else %}
-            {{ item.text }}
-            {% endif %}
+            {% set intro = item.intro.all() %}
+            {% for block in intro %}
+              {% switch block.type %}
+                {% case "button" %}
+                  {% if block.buttonURL | length %}
+                  <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+                  {% else %}
+                  {{ item.title }}
+                  {% endif %}
+              {% endswitch %}
+            {% endfor %}
           </li>
-        {% endswitch %}
-        {% endfor %}
+          {% endfor %}
+          {% else %}
+          <li class="c-list__item">{{ 'Soon' | t }}</li>
+          {% endif %}
         </ul>
       </div>
     </div>
@@ -303,6 +330,7 @@
 {% endif %}
 
 {% set expo = entry.mutationExpo.all() %}
+{% set expoDetail = craft.entries.section('mutationExpo').all() %}
 {% if expo | length() %}
 <div class="o-row-large c-theme-neutral-negative c-illustration  js-expo-watch">
   <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
@@ -327,24 +355,31 @@
     {% endswitch %}
     {% endfor %}
     <ul class="c-para o-layout o-layout--spacer-small">
-      {% for item in expo %}
-      {% switch item.type %}
-      {% case "item" %}
+      {% if expoDetail | length() %}
+      {% for item in expoDetail %}
         <li class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
-          {% if item.externalLink %}
-          <a href="{{ item.externalLink }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-          {% else %}
-          {{ item.text }}
-          {% endif %}
+          {% set intro = item.intro.all() %}
+          {% for block in intro %}
+            {% switch block.type %}
+              {% case "button" %}
+                {% if block.buttonURL | length %}
+                <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+                {% else %}
+                {{ item.title }}
+                {% endif %}
+            {% endswitch %}
+          {% endfor %}
         </li>
-      {% endswitch %}
       {% endfor %}
+      {% else %}
+        <li class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">{{ 'Soon' | t }}</li>
+      {% endif %}
     </ul>
   </div>
 </div>
 {% endif %}
 
-{% set extra = entry.mutationExtra.all() %}
+{% set extra = craft.entries.section('mutationExtra').all() %}
 {% if extra | length() %}
 <div class="o-row-large c-theme-secondary c-illustration js-extra-watch">
   <span class="c-illustration__center-bottom" role="presentation" aria-hidden="true">
@@ -362,41 +397,92 @@
   </span>
   <div class="o-wrapper o-wrapper--huge">
     {% for item in extra %}
-    <h2 class="c-section-title">
-      {{ item.heading }}
-    </h2>
-    <div class="o-layout{% if item|last %}{% else %} u-margin-bottom-large u-margin-bottom-large@large{% endif %}">
-      <div class="o-layout__item u-1/3@medium">
-        <h3 class="c-para-large">{{ item.subHeading }}</h3>
-      </div>
-      <div class="o-layout__item u-2/3@medium">
-        <div class="c-editor c-editor--bold c-editor--large u-margin-bottom">
-          {{ item.paragraph }}
-          {% if item.externalLink %}
-          <p><a href="{{ item.externalLinkHref }}" class="c-link c-link--bare" target="_blank"> {{ item.externalLink}} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
-          {% endif %}
+      {% set intro = item.intro.all() %}
+      {% for block in intro %}
+        {% switch block.type %}
+          {% case "subtitle" %}
+          <h2 class="c-section-title">
+            {{ block.subtitle }}
+          </h2>
+        {% endswitch %}
+      {% endfor %}
+      <div class="o-layout{% if item|last %}{% else %} u-margin-bottom-large u-margin-bottom-large@large{% endif %}">
+        <div class="o-layout__item u-1/3@medium">
+          <h3 class="c-para-large">{{ item.title }}</h3>
+        </div>
+        <div class="o-layout__item u-2/3@medium">
+          <div class="c-editor c-editor--bold c-editor--large u-margin-bottom">
+            {% for block in intro %}
+            {% switch block.type %}
+              {% case "introParagraph" %}
+                {{ block.introParagraph }}
+              {% case "button" %}
+                <p>
+                  {% if block.buttonLink | length %}
+                  {% for link in block.buttonLink.all() %}
+                  <a href="{{ link.url }}" class="c-link c-link--bare" target="_blank">
+                    {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                  </a>
+                  {% endfor %}
+                  {% else %}
+                  <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">
+                    {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                  </a>
+                  {% endif %}
+                </p>
+            {% endswitch %}
+          {% endfor %}
+          </div>
         </div>
       </div>
-    </div>
     {% endfor %}
   </div>
 </div>
 {% endif %}
 
-{% set tickets = entry.mutationTickets.all() %}
+{% set practical = craft.entries.section('mutationPractical').all() %}
+<div class="o-row-large c-theme-primary-tint c-illustration js-subscribe-watch" id="practical">
+  <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <g fill="none" fill-rule="evenodd">
+        <path class="s-o3-center" fill="#E9C200" d="M57.0988109,0 C88.6125076,0 114.197622,25.5851143 114.197622,57.0988109 C114.197622,88.6125076 88.6125076,114.197622 57.0988109,114.197622 C25.5851143,114.197622 0,88.6125076 0,57.0988109 C0,25.5851143 25.5851143,0 57.0988109,0 Z"/>
+        <path class="s-o3" fill="#262D40" d="M57.0988109,37.3240407 C68.0128462,37.3240407 76.8735812,46.1847756 76.8735812,57.0988109 C76.8735812,68.0128462 68.0128462,76.8735812 57.0988109,76.8735812 C46.1847756,76.8735812 37.3240407,68.0128462 37.3240407,57.0988109 C37.3240407,46.1847756 46.1847756,37.3240407 57.0988109,37.3240407 Z"/>
+      </g>
+    </svg>
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
+    <h2 class="c-section-title">
+      {{ 'Practical' | t }}
+    </h2>
+    <div class="o-layout o-layout--divider">
+      {% for item in practical %}
+      <div class="o-layout__item u-1/3@medium">
+        <h3 class="c-subtitle">{{ item.title }}</h3>
+        {% set intro = item.intro.all() %}
+        {% for block in intro %}
+          {% switch block.type %}
+            {% case "introParagraph" %}
+              <div class="c-editor c-editor--small">
+                {{ block.introParagraph }}
+              </div>
+          {% endswitch %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% set tickets = craft.entries.section('mutationTickets').all() %}
 {% if tickets | length() %}
 <div class="o-row-large c-theme-secondary-negative c-illustration js-subscribe-watch" id="tickets">
   <div class="o-wrapper o-wrapper--huge">
-    {% for item in tickets %}
-    {% switch item.type %}
-    {% case "heading" %}
     <h2 class="c-section-title u-margin-bottom">
-      {{ item.heading }}
+      {{ 'Tickets' | t }}
     </h2>
-    {% endswitch %}
-    {% endfor %}
     <ul class="o-list-bare c-list c-list--medium">
-      {% for item in tickets %}
+      {% for detail in tickets %}
+      {% for item in detail.mutationTickets.all() %}
       {% switch item.type %}
       {% case "ticket" %}
       <li class="c-list__item">
@@ -404,11 +490,14 @@
       </li>
       {% endswitch %}
       {% endfor %}
+      {% endfor %}
     </ul>
   </div>
 </div>
 {% endif %}
 
+{# Footer #}
+{# @TODO make seperate component #}
 {% set subscribe = entry.mutationSubscribe.all() %}
 {% if subscribe | length() %}
 <div class="o-row-large c-theme-neutral-tint c-illustration js-subscribe-watch" id="subscribe">

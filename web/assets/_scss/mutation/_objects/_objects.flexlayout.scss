@@ -238,3 +238,33 @@
     margin-bottom: $unit-small;
   }
 }
+
+/* Divider.
+   ========================================================================== */
+
+.o-layout--divider {
+  margin-top: -$unit-tiny;
+  margin-bottom: -$unit;
+
+  > .o-layout__item {
+    margin-top: $unit-tiny;
+    padding-top: $unit-small;
+    margin-bottom: $unit-small;
+    padding-bottom: $unit-small;
+  }
+
+  > .o-layout__item + .o-layout__item {
+    border-top: 2px solid $white;
+  }
+
+  @include mq(medium) {
+    > .o-layout__item {
+      padding-top: 0;
+    }
+
+    > .o-layout__item + .o-layout__item {
+      border-top: 0;
+      border-left: 2px solid $white;
+    }
+  }
+}

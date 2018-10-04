@@ -23,14 +23,13 @@
 		{% set seo = craft.seo.custom(siteName, '', false) %}
 	{% endif -%}
 
-	{% set social = craft.seo.social(seo) %}
 	{% set locale = craft.app.locale %}
 	{% set locales = craft.app.i18n.siteLocaleIds|without(locale) %}
 
 	<title>{{ seo.title }}</title>
 	<meta name="description" content="{{ seo.description }}" />
 
-	{% set fb = social.facebook -%}
+	{% set fb = seo.social.facebook -%}
 	<meta property="og:url" content="{{ craft.app.request.absoluteUrl }}" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{{ fb.title }}" />
@@ -42,7 +41,7 @@
 		<meta property="og:locale:alternate" content="{{ locale }}" />
 	{% endfor %}
 
-	{% set tw = social.twitter -%}
+	{% set tw = seo.social.twitter -%}
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:url" content="{{ craft.app.request.absoluteUrl }}" />
 	<meta name="twitter:title" content="{{ tw.title }}" />

@@ -27,15 +27,27 @@ return [
         // Disable DB backups
         'backupCommand' => false,
         'backupOnUpdate' => false,
+
+        // Dev Mode (see https://craftcms.com/support/dev-mode)
+       'devMode' => true
+    ],
+
+    // Local environment settings
+    'local' => [
+      // Base site URL
+      'siteUrl' => null,
+
+      // Dev Mode (see https://craftcms.com/support/dev-mode)
+      'devMode' => true
     ],
 
     // Dev environment settings
-    '.test' => [
-        // Base site URL
-        'siteUrl' => null,
+    'dev' => [
+      // Base site URL
+      'siteUrl' => null,
 
-        // Dev Mode (see https://craftcms.com/support/dev-mode)
-        'devMode' => true
+      // Dev Mode (see https://craftcms.com/support/dev-mode)
+      'devMode' => true
     ],
 
     // Staging environment settings
@@ -51,5 +63,8 @@ return [
     'production' => [
         // Base site URL
         'siteUrl' => null,
+
+        // Dev Mode (see https://craftcms.com/support/dev-mode)
+        'devMode' => true
     ],
 ];
