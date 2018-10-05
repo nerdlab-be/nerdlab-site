@@ -317,6 +317,43 @@ function subscribeWatcherIntro() {
     })
 }
 
+var practicalElement = $('.js-practical-watch');
+var practicalWatcher = scrollMonitor.create( practicalElement, -80 );
+
+practicalWatcher.enterViewport(function() {
+  if (practicalElement.hasClass('is-visible')) {
+  } else {
+    practicalWatcherIntro();
+  }
+});
+
+practicalWatcher.exitViewport(function() {
+  if (practicalElement.hasClass('is-visible')) {} else {
+    practicalElement.addClass('is-visible');
+  }
+});
+
+function practicalWatcherIntro() {
+  var practicalIn = anime.timeline({
+    duration: 900,
+    delay: function(el, i) { return i * 250 },
+    loop: 0,
+    easing: 'easeInOutSine'
+  });
+
+  practicalIn
+    .add({
+      targets: '.js-practical-watch .s-o3-center',
+      scale: [0,1],
+      duration: 300
+    })
+    .add({
+      targets: '.js-practical-watch .s-o3',
+      scale: [0,1],
+      offset: 200
+    })
+}
+
 var expoElement = $('.js-expo-watch');
 var expoWatcher = scrollMonitor.create( expoElement, -80 );
 

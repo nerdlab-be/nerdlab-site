@@ -441,12 +441,12 @@
 {% endif %}
 
 {% set practical = craft.entries.section('mutationPractical').all() %}
-<div class="o-row-large c-theme-primary-tint c-illustration js-subscribe-watch" id="practical">
+<div class="o-row-large c-theme-primary-tint c-illustration js-practical-watch" id="practical">
   <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
       <g fill="none" fill-rule="evenodd">
-        <path class="s-o3-center" fill="#E9C200" d="M57.0988109,0 C88.6125076,0 114.197622,25.5851143 114.197622,57.0988109 C114.197622,88.6125076 88.6125076,114.197622 57.0988109,114.197622 C25.5851143,114.197622 0,88.6125076 0,57.0988109 C0,25.5851143 25.5851143,0 57.0988109,0 Z"/>
-        <path class="s-o3" fill="#262D40" d="M57.0988109,37.3240407 C68.0128462,37.3240407 76.8735812,46.1847756 76.8735812,57.0988109 C76.8735812,68.0128462 68.0128462,76.8735812 57.0988109,76.8735812 C46.1847756,76.8735812 37.3240407,68.0128462 37.3240407,57.0988109 C37.3240407,46.1847756 46.1847756,37.3240407 57.0988109,37.3240407 Z"/>
+        <path class="s-o3-center" fill="#E53958" d="M57.0988109,0 C88.6125076,0 114.197622,25.5851143 114.197622,57.0988109 C114.197622,88.6125076 88.6125076,114.197622 57.0988109,114.197622 C25.5851143,114.197622 0,88.6125076 0,57.0988109 C0,25.5851143 25.5851143,0 57.0988109,0 Z"/>
+        <path class="s-o3" fill="#FFF" d="M57.0988109,37.3240407 C68.0128462,37.3240407 76.8735812,46.1847756 76.8735812,57.0988109 C76.8735812,68.0128462 68.0128462,76.8735812 57.0988109,76.8735812 C46.1847756,76.8735812 37.3240407,68.0128462 37.3240407,57.0988109 C37.3240407,46.1847756 46.1847756,37.3240407 57.0988109,37.3240407 Z"/>
       </g>
     </svg>
   </span>
@@ -454,19 +454,21 @@
     <h2 class="c-section-title">
       {{ 'Practical' | t }}
     </h2>
-    <div class="o-layout o-layout--divider">
+    <div class="o-layout o-layout--tiny o-layout--spacer-small">
       {% for item in practical %}
       <div class="o-layout__item u-1/3@medium">
-        <h3 class="c-subtitle">{{ item.title }}</h3>
-        {% set intro = item.intro.all() %}
-        {% for block in intro %}
-          {% switch block.type %}
-            {% case "introParagraph" %}
-              <div class="c-editor c-editor--small">
-                {{ block.introParagraph }}
-              </div>
-          {% endswitch %}
-        {% endfor %}
+        <div class="o-box c-theme-primary c-card c-card--match">
+          <h3 class="c-subtitle">{{ item.title }}</h3>
+          {% set intro = item.intro.all() %}
+          {% for block in intro %}
+            {% switch block.type %}
+              {% case "introParagraph" %}
+                <div class="c-editor c-editor--small">
+                  {{ block.introParagraph }}
+                </div>
+            {% endswitch %}
+          {% endfor %}
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -496,9 +498,8 @@
 </div>
 {% endif %}
 
-{# Footer #}
-{# @TODO make seperate component #}
-{% set subscribe = entry.mutationSubscribe.all() %}
+
+{% set subscribe = mutationGlobals.mutationSubscribe.all() %}
 {% if subscribe | length() %}
 <div class="o-row-large c-theme-neutral-tint c-illustration js-subscribe-watch" id="subscribe">
   <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
@@ -549,111 +550,4 @@
   </div>
 </div>
 {% endif %}
-
-{% set social = entry.mutationSocial.all() %}
-{% set partners = entry.mutationPartners.all() %}
-<div class="o-row-large c-theme-secondary c-illustration js-social-watch">
-  <span class="c-illustration__top-right-alt" role="presentation" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-      <g fill="#9ABE46" fill-rule="evenodd" transform="translate(36 2)">
-        <path class="s-i-1" d="M37.7509238,0 C42.9655561,0 47.199166,4.23360988 47.199166,9.44796069 C47.199166,14.6623115 42.9655561,18.8959214 37.7509238,18.8959214 C32.5362914,18.8959214 28.3026816,14.6623115 28.3026816,9.44796069 C28.3026816,4.23360988 32.5362914,0 37.7509238,0 Z"/>
-        <path class="s-i-2" d="M37.7509238,32.2118492 C42.9655561,32.2118492 47.199166,36.4454591 47.199166,41.6600914 C47.199166,46.8747238 42.9655561,51.1083337 37.7509238,51.1083337 C32.5362914,51.1083337 28.3026816,46.8747238 28.3026816,41.6600914 C28.3026816,36.4454591 32.5362914,32.2118492 37.7509238,32.2118492 Z"/>
-        <path class="s-i-3" d="M37.7509238,64.4237922 C42.9655561,64.4237922 47.199166,68.6574021 47.199166,73.8720345 C47.199166,79.0866668 42.9655561,83.3202767 37.7509238,83.3202767 C32.5362914,83.3202767 28.3026816,79.0866668 28.3026816,73.8720345 C28.3026816,68.6574021 32.5362914,64.4237922 37.7509238,64.4237922 Z"/>
-        <path class="s-i-4" d="M37.7509238,96.6357353 C42.9655561,96.6357353 47.199166,100.869345 47.199166,106.083978 C47.199166,111.29861 42.9655561,115.53222 37.7509238,115.53222 C32.5362914,115.53222 28.3026816,111.29861 28.3026816,106.083978 C28.3026816,100.869345 32.5362914,96.6357353 37.7509238,96.6357353 Z"/>
-        <path class="s-i-5" d="M9.44824224,0 C14.6628746,0 18.8964845,4.23360988 18.8964845,9.44796069 C18.8964845,14.6623115 14.6628746,18.8959214 9.44824224,18.8959214 C4.23360988,18.8959214 0,14.6623115 0,9.44796069 C0,4.23360988 4.23360988,0 9.44824224,0 Z"/>
-        <path class="s-i-6" d="M9.44824224,32.2118492 C14.6628746,32.2118492 18.8964845,36.4454591 18.8964845,41.6600914 C18.8964845,46.8747238 14.6628746,51.1083337 9.44824224,51.1083337 C4.23360988,51.1083337 0,46.8747238 0,41.6600914 C0,36.4454591 4.23360988,32.2118492 9.44824224,32.2118492 Z"/>
-        <path class="s-i-7" d="M9.44824224,64.4237922 C14.6628746,64.4237922 18.8964845,68.6574021 18.8964845,73.8720345 C18.8964845,79.0866668 14.6628746,83.3202767 9.44824224,83.3202767 C4.23360988,83.3202767 0,79.0866668 0,73.8720345 C0,68.6574021 4.23360988,64.4237922 9.44824224,64.4237922 Z"/>
-        <path class="s-i-8" d="M9.44824224,96.6357353 C14.6628746,96.6357353 18.8964845,100.869345 18.8964845,106.083978 C18.8964845,111.29861 14.6628746,115.53222 9.44824224,115.53222 C4.23360988,115.53222 0,111.29861 0,106.083978 C0,100.869345 4.23360988,96.6357353 9.44824224,96.6357353 Z"/>
-      </g>
-    </svg>
-  </span>
-  <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout o-layout--spacer">
-      <div class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
-        {% for item in social %}
-        {% switch item.type %}
-        {% case "heading" %}
-        <h2 class="c-section-title">
-          {{ item.heading }}
-        </h2>
-        {% endswitch %}
-        {% endfor %}
-        <ul class="o-list-bare c-list">
-        {% for item in social %}
-        {% switch item.type %}
-        {% case "socialLink" %}
-        {% if item.href | length %}
-        <li class="c-list__item">
-          <a href="{{ item.href }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-        </li>
-        {% endif %}
-        {% endswitch %}
-        {% endfor %}
-        </ul>
-      </div>
-      <div class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
-        {% for item in partners %}
-        {% switch item.type %}
-        {% case "heading" %}
-        <h2 class="c-section-title">
-          {{ item.heading }}
-        </h2>
-        {% endswitch %}
-        {% endfor %}
-        <ul class="o-list-bare c-list">
-        {% for item in partners %}
-        {% switch item.type %}
-        {% case "partner" %}
-        {% if item.href | length %}
-        <li class="c-list__item">
-          <a href="{{ item.href }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-        </li>
-        {% endif %}
-        {% endswitch %}
-        {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-{% set nerdlab = entry.mutationNerdlab.all() %}
-<div class="o-row-large c-theme-primary c-illustration js-footer-watch">
-  <span class="c-illustration__center-center" role="presentation" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-      <g fill="none" fill-rule="evenodd" transform="translate(1 2.4)">
-        <path class="s-o2-left" fill="#E72C55" d="M57.1037114,0 L57.1037114,114.207423 C25.5873505,114.207423 0,88.6200722 0,57.1037114 C0,25.5873505 25.5873505,0 57.1037114,0 Z"/>
-        <path class="s-o2-center" fill="#E0E4E6" d="M57.1037114,26.3628265 C74.070186,26.3628265 87.8445962,40.1372367 87.8445962,57.1037114 C87.8445962,74.070186 74.070186,87.8445962 57.1037114,87.8445962 C40.1372367,87.8445962 26.3628265,74.070186 26.3628265,57.1037114 C26.3628265,40.1372367 40.1372367,26.3628265 57.1037114,26.3628265 Z"/>
-      </g>
-    </svg>
-  </span>
-  <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout o-layout--reverse">
-      <div class="o-layout__item u-4/5@small u-2/3@medium u-1/2@large">
-        {% for item in nerdlab %}
-        {% switch item.type %}
-        {% case "heading" %}
-        <h2 class="c-section-title">
-          {{ item.heading }}
-        </h2>
-        {% endswitch %}
-        {% endfor %}
-        <div class="c-editor c-editor--medium c-editor--bold">
-        {% for item in nerdlab %}
-        {% switch item.type %}
-        {% case "paragraph" %}
-          {{ item.paragraph }}
-        {% case "href" %}
-        {% if item.href | length %}
-        <p>
-          <a href="{{ item.href }}" class="c-link c-link--bare">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-        </p>
-        {% endif %}
-        {% endswitch %}
-        {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 {% endblock %}

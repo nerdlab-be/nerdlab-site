@@ -21,7 +21,6 @@
   font-weight: $font-bold;
   @include font-size($font-h3);
   margin-bottom: $unit-small;
-  padding-top: $unit-tiny;
 
   .c-theme-neutral-alt & {
     color: $color-secondary;
