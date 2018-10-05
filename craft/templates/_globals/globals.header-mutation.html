@@ -10,7 +10,17 @@
           </h2>
         </div>
         <nav class="c-header__link">
-          <a href="{{ currentSite.baseUrl }}#tickets" class="c-link c-link--bare">{{ labels.mutationLink }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+          <ul class="o-list-bare c-nav">
+            <li class="c-nav__item">
+              {% set program = craft.entries.section('mutationProgram') %}
+              {% for page in program.all() %}
+                <a href="{{ page.url }}" class="c-nav__link">{{ page.title }}</a>
+              {% endfor %}
+            </li>
+            <li class="c-nav__item">
+              <a href="{{ currentSite.baseUrl }}#tickets" class="c-nav__link c-nav__link--special">{{ labels.mutationLink }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            </li>
+          </ul>
         </nav>
       </div>
       <ul class="o-list-inline c-nav-language c-header__language">

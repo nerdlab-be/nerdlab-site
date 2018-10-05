@@ -169,37 +169,22 @@
       </g>
     </svg>
   </span>
-  <div class="o-wrapper o-wrapper--large">
+  <div class="o-wrapper o-wrapper--huge">
     <h2 class="c-title u-margin-bottom">
       {{ 'Program' | t }}
     </h2>
-    <div class="o-layout">
-      <div class="o-layout__item u-margin-bottom-large u-margin-bottom-huge@medium">
+    <div class="o-layout o-layout--spacer">
+      <div class="o-layout__item u-1/2@medium">
         <h3 class="c-tag c-tag--back u-margin-bottom">
           {{ 'Experts' | t }}
         </h3>
         <ul class="o-list-bare c-list c-list--large">
+          {% set program = craft.entries.section('mutationProgram') %}
           {% if talks | length %}
           {% for item in talks %}
           <li class="c-list__item">
-            {% set intro = item.intro.all() %}
-            {% for block in intro %}
-              {% switch block.type %}
-                {% case "button" %}
-                  {% if block.buttonURL | length %}
-                  <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-                  {% else %}
-                  {{ item.title }}
-                  {% endif %}
-              {% endswitch %}
-            {% endfor %}
-            {% for block in intro %}
-              {% switch block.type %}
-                {% case "introParagraph" %}
-                  <div class="c-editor c-editor--line-up">
-                    {{ block.introParagraph }}
-                  </div>
-              {% endswitch %}
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}" class="c-link c-link--bare">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
             {% endfor %}
           </li>
           {% endfor %}
@@ -208,7 +193,7 @@
           {% endif %}
         </ul>
       </div>
-      <div class="o-layout__item u-margin-bottom-large u-margin-bottom-huge@medium">
+      <div class="o-layout__item u-1/2@medium">
         <h3 class="c-tag c-tag--back u-margin-bottom">
           {{ 'Local heroes' | t }}
         </h3>
