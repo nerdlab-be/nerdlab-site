@@ -39,6 +39,18 @@
   a {
     transition: color $global-duration $global-easing;
 
+    .c-theme-secondary-negative & {
+      &,
+      &:active {
+        color: $color-notice;
+      }
+
+      &:hover,
+      &:focus {
+        color: tint($color-notice,40);
+      }
+    }
+
     .c-theme-primary &,
     .c-theme-primary-tint &,
     .c-theme-neutral & {

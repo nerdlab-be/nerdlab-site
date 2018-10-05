@@ -51,6 +51,10 @@
   @include font-size($font-h6);
   color: $color-neutral;
 
+  .c-theme-secondary-negative & {
+    color: $white;
+  }
+
   .c-theme-neutral-alt & {
     color: $color-primary;
   }

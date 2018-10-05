@@ -6,10 +6,10 @@
 {% extends "_layouts/mutation" %}
 
 {% block main %}
-<div class="o-row-large c-theme-neutral-tint">
+<div class="o-row-large c-theme-secondary-negative ">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--large">
-      <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge  c-theme-secondary">
+      <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
         <h1 class="c-section-title">{{ entry.title }}</h1>
         <div class="c-editor c-editor--large u-margin-bottom-large">
           {% for block in entry.body.all() %}
@@ -20,7 +20,7 @@
           {% endfor %}
         </div>
       </div>
-      <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge c-theme-neutral-alt">
+      <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
         <div class="c-editor">
           {% for block in entry.body.all() %}
           {% switch block.type %}

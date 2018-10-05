@@ -497,57 +497,5 @@
   </div>
 </div>
 {% endif %}
-
-
-{% set subscribe = mutationGlobals.mutationSubscribe.all() %}
-{% if subscribe | length() %}
-<div class="o-row-large c-theme-neutral-tint c-illustration js-subscribe-watch" id="subscribe">
-  <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-      <g fill="none" fill-rule="evenodd">
-        <path class="s-o3-center" fill="#E9C200" d="M57.0988109,0 C88.6125076,0 114.197622,25.5851143 114.197622,57.0988109 C114.197622,88.6125076 88.6125076,114.197622 57.0988109,114.197622 C25.5851143,114.197622 0,88.6125076 0,57.0988109 C0,25.5851143 25.5851143,0 57.0988109,0 Z"/>
-        <path class="s-o3" fill="#262D40" d="M57.0988109,37.3240407 C68.0128462,37.3240407 76.8735812,46.1847756 76.8735812,57.0988109 C76.8735812,68.0128462 68.0128462,76.8735812 57.0988109,76.8735812 C46.1847756,76.8735812 37.3240407,68.0128462 37.3240407,57.0988109 C37.3240407,46.1847756 46.1847756,37.3240407 57.0988109,37.3240407 Z"/>
-      </g>
-    </svg>
-  </span>
-  <span class="c-illustration__right-center" role="presentation" aria-hidden="true">
-    <img src="/assets/images/svg/illustrationU2.svg" alt="">
-  </span>
-  <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout u-margin-bottom-large">
-      <div class="o-layout__item u-2/3@medium">
-        {% for item in subscribe %}
-        {% switch item.type %}
-        {% case "heading" %}
-        <h2 class="c-section-title">
-          {{ item.heading }}
-        </h2>
-        {% case "paragraph" %}
-        <div class="c-editor c-editor--large c-editor--bold">
-          {{ item.paragraph }}
-        </div>
-        {% endswitch %}
-        {% endfor %}
-      </div>
-    </div>
-    <!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup">
-      <form action="https://nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=dc6209d55c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll" class="o-layout o-layout--small o-layout--bottom">
-          <div class="mc-field-group o-layout__item u-2/3@medium">
-            <label for="mce-EMAIL" class="c-label">{{ labels.labelEmailAddress }}</label>
-            <div class="c-input-wrapper">
-              <input type="email" value="" name="EMAIL" class="required email c-input" id="mce-EMAIL">
-            </div>
-          </div>
-          <div class="clear o-layout__item u-1/3@medium">
-            <button role="submit"  name="subscribe" id="mc-embedded-subscribe" class="button c-button c-button--negative">{{ labels.labelSubscribe }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <!--End mc_embed_signup-->
-  </div>
-</div>
-{% endif %}
 {% endblock %}
+
