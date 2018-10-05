@@ -5,8 +5,8 @@
         <div>
           {% include '_elements/elements.logo-mutation.html' %}
           <h2 class="c-header__tagline">
-            <span>{{ labels.mutationDate }}</span>
-            <span>{{ labels.mutationLocation }}</span>
+            <span>{{ mutationGlobals.mutationDate }}</span>
+            <span>{{ mutationGlobals.mutationLocation }}</span>
           </h2>
         </div>
         <nav class="c-header__link">
@@ -18,7 +18,7 @@
               {% endfor %}
             </li>
             <li class="c-nav__item">
-              <a href="{{ currentSite.baseUrl }}#tickets" class="c-nav__link c-nav__link--special">{{ labels.mutationLink }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+              <a href="{{ currentSite.baseUrl }}#tickets" class="c-nav__link c-nav__link--special">{{ mutationGlobals.mutationLink }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
             </li>
           </ul>
         </nav>
