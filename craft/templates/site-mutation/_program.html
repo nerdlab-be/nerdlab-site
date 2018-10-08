@@ -110,7 +110,7 @@
         <ul class="o-list-bare c-list c-list--large">
           {% if localHeroes | length %}
           {% for item in localHeroes %}
-          <li class="c-list__item">
+          <li class="c-list__item" id="{{ item.title | camel }}">
             <h3 class="c-subtitle">{{ item.title }}</h3>
             {% set intro = item.intro.all() %}
             <div class="c-editor c-editor--line-up">

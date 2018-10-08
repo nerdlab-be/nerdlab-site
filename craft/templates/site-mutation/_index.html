@@ -201,24 +201,8 @@
           {% if localHeroes | length %}
           {% for item in localHeroes %}
           <li class="c-list__item">
-            {% set intro = item.intro.all() %}
-            {% for block in intro %}
-              {% switch block.type %}
-                {% case "button" %}
-                  {% if block.buttonURL | length %}
-                  <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-                  {% else %}
-                  {{ item.title }}
-                  {% endif %}
-              {% endswitch %}
-            {% endfor %}
-            {% for block in intro %}
-              {% switch block.type %}
-                {% case "introParagraph" %}
-                  <div class="c-editor c-editor--line-up">
-                    {{ block.introParagraph }}
-                  </div>
-              {% endswitch %}
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}" class="c-link c-link--bare">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
             {% endfor %}
           </li>
           {% endfor %}
@@ -257,6 +241,7 @@
           {% for item in workshopsDetail %}
           <li class="c-list__item">
             {% set intro = item.intro.all() %}
+            {% if intro | length() %}
             {% for block in intro %}
               {% switch block.type %}
                 {% case "button" %}
@@ -267,6 +252,9 @@
                   {% endif %}
               {% endswitch %}
             {% endfor %}
+            {% else %}
+            {{ item.title }}
+            {% endif %}
           </li>
           {% endfor %}
           {% else %}
@@ -292,6 +280,7 @@
           {% for item in makeDetail %}
           <li class="c-list__item">
             {% set intro = item.intro.all() %}
+            {% if intro | length() %}
             {% for block in intro %}
               {% switch block.type %}
                 {% case "button" %}
@@ -302,6 +291,9 @@
                   {% endif %}
               {% endswitch %}
             {% endfor %}
+            {% else %}
+            {{ item.title }}
+            {% endif %}
           </li>
           {% endfor %}
           {% else %}
@@ -344,6 +336,7 @@
       {% for item in expoDetail %}
         <li class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
           {% set intro = item.intro.all() %}
+          {% if intro | length() %}
           {% for block in intro %}
             {% switch block.type %}
               {% case "button" %}
@@ -354,6 +347,9 @@
                 {% endif %}
             {% endswitch %}
           {% endfor %}
+          {% else %}
+          {{ item.title }}
+          {% endif %}
         </li>
       {% endfor %}
       {% else %}
