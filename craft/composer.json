@@ -20,7 +20,7 @@
   },
   "require": {
     "php": ">=7.0.0",
-    "craftcms/cms": "3.0.26.1",
+    "craftcms/cms": "3.0.27.1",
     "vlucas/phpdotenv": "^2.4.0",
     "roave/security-advisories": "dev-master",
     "craftcms/redactor": "2.1.6",
@@ -34,7 +34,7 @@
     "rias/craft-schema": "1.0.3",
     "clubstudioltd/craft-asset-rev": "6.0.1",
     "craftcms/store-hours": "2.1.1",
-    "rias/craft-position-fieldtype": "1.0.13",
+    "rias/craft-position-fieldtype": "1.0.14",
     "wildbit/craft3-donottrack": "1.0.0",
     "nystudio107/craft-cookies": "1.1.10"
   },

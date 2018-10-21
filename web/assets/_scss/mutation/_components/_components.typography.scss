@@ -136,6 +136,10 @@
     border-top: 2px solid rgba($white,.2);
   }
 
+  .c-theme-secondary & .c-list__item + .c-list__item {
+    border-top: 2px solid rgba($color-secondary,.1);
+  }
+
   @include mq(small) {
     @include font-size($font-h2,1);
   }
@@ -245,6 +249,11 @@
 
   .c-theme-secondary-negative & {
     color: $color-secondary;
+  }
+
+  .c-theme-secondary & {
+    color: $white;
+    background-color: $color-secondary;
   }
 
   @include mq(medium) {

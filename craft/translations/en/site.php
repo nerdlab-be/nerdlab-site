@@ -9,4 +9,6 @@ return [
     'Soon' => 'Soon',
     'Practical' => 'Practical',
     'Tickets' => 'Tickets',
+    'Workshops' => 'Workshops',
+    'How do you make it?' => 'How do you make it?',
 ];

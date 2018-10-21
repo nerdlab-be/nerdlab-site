@@ -9,4 +9,6 @@ return [
     'Soon' => 'Binnenkort',
     'Practical' => 'Praktisch',
     'Tickets' => 'Tickets',
+    'Workshops' => 'Workshops',
+    'How do you make it?' => 'How do you make it?',
 ];
