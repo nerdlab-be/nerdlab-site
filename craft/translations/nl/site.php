@@ -3,12 +3,13 @@
 return [
     'Buy tickets' => 'Koop tickets',
     'Free' => 'Gratis',
-    'Program' => 'Programma',
-    'Experts' => 'Experts',
-    'Local heroes' => 'Local heroes',
+    'Program' => 'Inspiratie',
+    'Experts' => 'Sprekers',
+    'Local heroes' => 'Locale helden',
     'Soon' => 'Binnenkort',
     'Practical' => 'Praktisch',
     'Tickets' => 'Tickets',
     'Workshops' => 'Workshops',
     'How do you make it?' => 'How do you make it?',
 ];
+

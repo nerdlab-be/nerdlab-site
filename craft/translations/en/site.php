@@ -3,8 +3,8 @@
 return [
     'Buy tickets' => 'Buy tickets',
     'Free' => 'Free',
-    'Program' => 'Program',
-    'Experts' => 'Experts',
+    'Program' => 'Inspiration',
+    'Experts' => 'Talks',
     'Local heroes' => 'Local heroes',
     'Soon' => 'Soon',
     'Practical' => 'Practical',
