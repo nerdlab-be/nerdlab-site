@@ -184,7 +184,7 @@
           {% for item in talks %}
           <li class="c-list__item">
             {% for page in program.all() %}
-            <a href="{{ page.url }}#{{ item.title | camel }}" class="c-link c-link--bare">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            <a href="{{ page.url }}#{{ item.title | camel }}" class="c-link">{{ item.title }}</a>
             {% endfor %}
           </li>
           {% endfor %}
@@ -202,7 +202,7 @@
           {% for item in localHeroes %}
           <li class="c-list__item">
             {% for page in program.all() %}
-            <a href="{{ page.url }}#{{ item.title | camel }}" class="c-link c-link--bare">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            <a href="{{ page.url }}#{{ item.title | camel }}" class="c-link">{{ item.title }}</a>
             {% endfor %}
           </li>
           {% endfor %}
@@ -216,9 +216,8 @@
 </div>
 
 {% set workshops = entry.mutationWorkshops.all() %}
-{% set workshopsDetail = craft.entries.section('mutationWorkshops').all() %}
 {% set make = entry.mutationMake.all() %}
-{% set makeDetail = craft.entries.section('mutationHowDoYouMakeIt').all() %}
+{% set program = craft.entries.section('mutationProgram') %}
 {% if workshops | length() %}
 <div class="o-row-large c-theme-primary-negative c-illustration">
   <div class="o-wrapper o-wrapper--huge">
@@ -227,55 +226,40 @@
         {% for item in workshops %}
         {% switch item.type %}
         {% case "heading" %}
-        <h2 class="c-section-title">
+        <h2 class="c-subtitle">
           {{ item.heading }}
         </h2>
         {% case "paragraph" %}
-        <div class="c-editor c-editor--bold u-margin-bottom u-margin-bottom-large@large">
+        <div class="c-editor">
           {{ item.paragraph }}
+          <p>
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#workshops" class="c-link">{{ labels.labelMoreInfo }}</a>
+            {% endfor %}
+          </p>
         </div>
         {% endswitch %}
         {% endfor %}
-        <ul class="o-list-bare c-list">
-          {% if workshopsDetail | length %}
-          {% for item in workshopsDetail %}
-          <li class="c-list__item">
-            {% for page in program.all() %}
-            <a href="{{ page.url }}#workshop{{ item.title | camel }}" class="c-link c-link--bare">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-            {% endfor %}
-          </li>
-          {% endfor %}
-          {% else %}
-          <li class="c-list__item">{{ 'Soon' | t }}</li>
-          {% endif %}
         </ul>
       </div>
       <div class="o-layout__item u-1/2@medium">
         {% for item in make %}
         {% switch item.type %}
         {% case "heading" %}
-        <h2 class="c-section-title">
+        <h2 class="c-subtitle">
           {{ item.heading }}
         </h2>
         {% case "paragraph" %}
-        <div class="c-editor c-editor--bold u-margin-bottom u-margin-bottom-large@large">
+        <div class="c-editor">
           {{ item.paragraph }}
+          <p>
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#make" class="c-link">{{ labels.labelMoreInfo }}</a>
+            {% endfor %}
+          </p>
         </div>
         {% endswitch %}
         {% endfor %}
-        <ul class="o-list-bare c-list">
-          {% if makeDetail | length %}
-          {% for item in makeDetail %}
-          <li class="c-list__item">
-            {% for page in program.all() %}
-            <a href="{{ page.url }}#make{{ item.title | camel }}" class="c-link c-link--bare">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-            {% endfor %}
-          </li>
-          {% endfor %}
-          {% else %}
-          <li class="c-list__item">{{ 'Soon' | t }}</li>
-          {% endif %}
-        </ul>
       </div>
     </div>
   </div>
@@ -296,42 +280,52 @@
   </span>
   <div class="o-wrapper o-wrapper--huge">
     {% for item in expo %}
-    {% switch item.type %}
-    {% case "heading" %}
-    <h2 class="c-section-title">
-      {{ item.heading }}
-    </h2>
-    {% case "paragraph" %}
-    <div class="c-editor c-editor--bold u-margin-bottom u-margin-bottom-large@large">
-      {{ item.paragraph }}
-    </div>
-    {% endswitch %}
+      {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-subtitle">
+          {{ item.heading }}
+        </h2>
+      {% endswitch %}
     {% endfor %}
-    <ul class="c-para o-layout o-layout--spacer-small">
-      {% if expoDetail | length() %}
-      {% for item in expoDetail %}
-        <li class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
-          {% set intro = item.intro.all() %}
-          {% if intro | length() %}
-          {% for block in intro %}
-            {% switch block.type %}
-              {% case "button" %}
-                {% if block.buttonURL | length %}
-                <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">{{ item.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-                {% else %}
-                {{ item.title }}
-                {% endif %}
-            {% endswitch %}
+    <div class="o-layout o-layout--spacer">
+      <div class="o-layout__item u-1/2@medium">
+        {% for item in expo %}
+          {% switch item.type %}
+            {% case "paragraph" %}
+            <div class="c-editor">
+              {{ item.paragraph }}
+            </div>
+          {% endswitch %}
+        {% endfor %}
+      </div>
+      <div class="o-layout__item u-1/2@medium">
+        <ul class="c-para o-layout o-layout--spacer-small">
+          {% if expoDetail | length() %}
+          {% for item in expoDetail %}
+            <li class="o-layout__item u-1/3@small u-1/2@medium c-small">
+              {% set intro = item.intro.all() %}
+              {% if intro | length() %}
+              {% for block in intro %}
+                {% switch block.type %}
+                  {% case "button" %}
+                    {% if block.buttonURL | length %}
+                    <a href="{{ block.buttonURL }}" class="c-link" target="_blank">{{ item.title }}</a>
+                    {% else %}
+                    {{ item.title }}
+                    {% endif %}
+                {% endswitch %}
+              {% endfor %}
+              {% else %}
+              {{ item.title }}
+              {% endif %}
+            </li>
           {% endfor %}
           {% else %}
-          {{ item.title }}
+            <li class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">{{ 'Soon' | t }}</li>
           {% endif %}
-        </li>
-      {% endfor %}
-      {% else %}
-        <li class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">{{ 'Soon' | t }}</li>
-      {% endif %}
-    </ul>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 {% endif %}
@@ -382,8 +376,8 @@
                   </a>
                   {% endfor %}
                   {% else %}
-                  <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">
-                    {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                  <a href="{{ block.buttonURL }}" class="c-link" target="_blank">
+                    {{ block.buttonTitle }}
                   </a>
                   {% endif %}
                 </p>

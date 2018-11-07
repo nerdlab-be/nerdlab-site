@@ -11,7 +11,6 @@
   }
 
   li:first-child {
-    // border-left: 1px dotted $color-neutral-xlight;
     padding-left: $unit;
     margin-left: $unit-small;
   }
@@ -24,6 +23,7 @@
 }
 
   .c-nav-language__link {
+    @include font-size($font-h6);
     display: block;
     padding-bottom: $unit-tiny;
     transition: color $global-duration $global-easing;
@@ -47,6 +47,10 @@
       &:focus {
         color: $color-neutral;
       }
+    }
+
+    @include mq(large) {
+      @include font-size($font-h5);
     }
   }
 
@@ -72,21 +76,28 @@
       & + & {
         margin-top: 0;
         padding-top: 0;
-        margin-left: $unit;
-        padding-left: $unit;
+        margin-left: $unit-small + $unit-tiny;
+        padding-left: $unit-small + $unit-tiny;
         border-top: 0;
         border-left: 1px dotted $color-neutral-xlight;
+      }
+    }
+
+    @include mq(large) {
+      & + & {
+        margin-left: $unit;
+        padding-left: $unit;
       }
     }
   }
 
   .c-nav__link {
+    @include font-size($font-h6);
     display: block;
     padding-bottom: $unit-tiny;
     transition: color $global-duration $global-easing;
     text-decoration: none;
-
-    font-weight: $font-bold;
+    font-weight: $font-regular;
 
     &,
     &:active {
@@ -98,19 +109,17 @@
       color: $color-primary-light;
     }
 
-    &.is-active {
-      color: $color-neutral;
+    .is-selected & {
       font-weight: $font-bold;
+    }
 
-      &:hover,
-      &:focus {
-        color: $color-neutral;
-      }
+    @include mq(large) {
+      @include font-size($font-h5);
     }
   }
 
   .c-nav__link--special {
-    font-weight: $font-bold;
+    // font-weight: $font-bold;
 
     &,
     &:active {

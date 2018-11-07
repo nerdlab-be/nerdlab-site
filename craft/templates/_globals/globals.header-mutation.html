@@ -11,12 +11,20 @@
         </div>
         <nav class="c-header__link">
           <ul class="o-list-bare c-nav">
-            <li class="c-nav__item">
-              {% set program = craft.entries.section('mutationProgram') %}
-              {% for page in program.all() %}
+            {% set program = craft.entries.section('mutationProgram') %}
+            {% for page in program.all() %}
+            {% set active = bodyClass == page.url %}
+            <li class="c-nav__item{{ active( page.uri , 1,' is-selected') }}">
                 <a href="{{ page.url }}" class="c-nav__link">{{ page.title }}</a>
-              {% endfor %}
             </li>
+            {% endfor %}
+            {% set schedule = craft.entries.section('mutationSchedule') %}
+            {% for page in schedule.all() %}
+            {% set active = bodyClass == page.url %}
+            <li class="c-nav__item{{ active( page.uri , 1,' is-selected') }}">
+                <a href="{{ page.url }}" class="c-nav__link">{{ page.title }}</a>
+            </li>
+            {% endfor %}
             <li class="c-nav__item">
               <a href="{{ currentSite.baseUrl }}#tickets" class="c-nav__link c-nav__link--special">{{ mutationGlobals.mutationLink }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
             </li>

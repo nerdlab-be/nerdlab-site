@@ -16,40 +16,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   {# SEO #}
-  {%- if seo is not defined and entry is defined and entry["seo"] is defined and entry.seo is iterable %}
-		{% set seo = entry.seo %}
-	{% endif %}
-	{% if seo is not defined or seo is null or seo.title == "" %}
-		{% set seo = craft.seo.custom(siteName, '', false) %}
-	{% endif -%}
+  {% set seo = entry.seo %}
+  {% set locale = craft.app.locale %}
+  {% set locales = craft.app.i18n.siteLocaleIds|without(locale) %}
 
-	{% set locale = craft.app.locale %}
-	{% set locales = craft.app.i18n.siteLocaleIds|without(locale) %}
+  <title>{{ seo.title }}</title>
+  <meta name="description" content="{{ seo.description }}" />
 
-	<title>{{ seo.title }}</title>
-	<meta name="description" content="{{ seo.description }}" />
+  {% set fb = seo.social.facebook -%}
+  <meta property="og:url" content="{{ craft.app.request.absoluteUrl }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ fb.title }}" />
+  <meta property="og:image" content="https://nerdlab.be/mutation/images/facebook-og-twitter-card.jpg" />
+  <meta property="og:description" content="{{ fb.description }}" />
+  <meta property="og:site_name" content="{{ seo.title }}" />
+  <meta property="og:locale" content="{{ locale }}" />
+  {% for locale in locales -%}
+    <meta property="og:locale:alternate" content="{{ locale }}" />
+  {% endfor %}
 
-	{% set fb = seo.social.facebook -%}
-	<meta property="og:url" content="{{ craft.app.request.absoluteUrl }}" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{{ fb.title }}" />
-	<meta property="og:image" content="https://nerdlab.be/mutation/images/facebook-og-twitter-card.jpg" />
-	<meta property="og:description" content="{{ fb.description }}" />
-	<meta property="og:site_name" content="{{ seo.title }}" />
-	<meta property="og:locale" content="{{ locale }}" />
-	{% for locale in locales -%}
-		<meta property="og:locale:alternate" content="{{ locale }}" />
-	{% endfor %}
+  {% set tw = seo.social.twitter -%}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="{{ craft.app.request.absoluteUrl }}" />
+  <meta name="twitter:title" content="{{ tw.title }}" />
+  <meta name="twitter:description" content="{{ tw.description }}" />
+  <meta name="twitter:image" content="https://nerdlab.be/mutation/images/facebook-og-twitter-card.jpg" />
 
-	{% set tw = seo.social.twitter -%}
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:url" content="{{ craft.app.request.absoluteUrl }}" />
-	<meta name="twitter:title" content="{{ tw.title }}" />
-	<meta name="twitter:description" content="{{ tw.description }}" />
-	<meta name="twitter:image" content="https://nerdlab.be/mutation/images/facebook-og-twitter-card.jpg" />
-
-	<link rel="home" href="{{ siteUrl }}" />
-	<link rel="canonical" href="{{ craft.app.request.absoluteUrl }}">
+  <link rel="home" href="{{ siteUrl }}" />
+  <link rel="canonical" href="{{ craft.app.request.absoluteUrl }}">
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}

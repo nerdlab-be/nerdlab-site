@@ -1,0 +1,238 @@
+<div class="u-padding-left u-padding-right">
+  <div class="cd-schedule cd-schedule--short loading">
+  <div class="timeline">
+    <ul>
+      <li><span>9:30</span></li>
+      <li><span>10:00</span></li>
+      <li><span>10:30</span></li>
+      <li><span>11:00</span></li>
+      <li><span>11:30</span></li>
+      <li><span>12:00</span></li>
+      <li><span>12:30</span></li>
+      <li><span>13:00</span></li>
+      <li><span>13:30</span></li>
+      <li><span>14:00</span></li>
+      <li><span>14:30</span></li>
+      <li><span>15:00</span></li>
+      <li><span>15:30</span></li>
+      <li><span>16:00</span></li>
+      <li><span>16:30</span></li>
+      <li><span>17:00</span></li>
+      <li><span>17:30</span></li>
+      <li><span>18:00</span></li>
+    </ul>
+  </div>
+
+  <div class="events">
+    <ul>
+      {% set talks = craft.entries.section('mutationTalks').all() %}
+      {% set localHeroes = craft.entries.section('mutationLocalHeroes').all() %}
+      {% set workshops = craft.entries.section('mutationWorkshops').all() %}
+      {% set make = craft.entries.section('mutationHowDoYouMakeIt').all() %}
+      {% set program = craft.entries.section('mutationProgram') %}
+
+
+      <!-- Grote zaal -->
+      <li class="events-group">
+        <div class="top-info"><span>Grote zaal</span></div>
+        <ul>
+          {% for item in talks %}
+          {% if item.mutationRoom == "groteZaal" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Experts" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in localHeroes %}
+          {% if item.mutationRoom == "groteZaal" %}
+          <li class="single-event single-event--small" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Local heroes" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in workshops %}
+          {% if item.mutationRoom == "groteZaal" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#workshop{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Workshop" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in make %}
+          {% if item.mutationRoom == "groteZaal" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#make{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "How do you make it?" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <li class="events-group">
+        <div class="top-info"><span>Kleine zaal</span></div>
+        <ul>
+          {% for item in talks %}
+          {% if item.mutationRoom == "kleineZaal" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Experts" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in localHeroes %}
+          {% if item.mutationRoom == "kleineZaal" %}
+          <li class="single-event single-event--small" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Local heroes" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in workshops %}
+          {% if item.mutationRoom == "kleineZaal" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#workshop{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Workshops" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in make %}
+          {% if item.mutationRoom == "kleineZaal" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#make{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "How do you make it?" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <li class="events-group">
+        <div class="top-info"><span>Tuin</span></div>
+        <ul>
+          {% for item in talks %}
+          {% if item.mutationRoom == "tuin" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Experts" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in localHeroes %}
+          {% if item.mutationRoom == "tuin" %}
+          <li class="single-event single-event--small" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Local heroes" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in workshops %}
+          {% if item.mutationRoom == "tuin" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#workshop{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Workshops" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in make %}
+          {% if item.mutationRoom == "tuin" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#make{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "How do you make it?" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <li class="events-group">
+        <div class="top-info"><span>Backstage</span></div>
+        <ul>
+          {% for item in talks %}
+          {% if item.mutationRoom == "backstage" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Experts" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in localHeroes %}
+          {% if item.mutationRoom == "backstage" %}
+          <li class="single-event single-event--small" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Local heroes" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in workshops %}
+          {% if item.mutationRoom == "backstage" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#workshop{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Workshops" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+          {% for item in make %}
+          {% if item.mutationRoom == "backstage" %}
+          <li class="single-event" data-start="{{ item.hourStart|date('G:i') }}" data-end="{{ item.hourEnd|date('G:i') }}" data-content="#!" data-event="wednesday">
+            {% for page in program.all() %}
+            <a href="{{ page.url }}#make{{ item.title | camel }}">
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ "How do you make it?" | t }}</span></span>
+            </a>
+            {% endfor %}
+          </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>

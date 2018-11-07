@@ -4,15 +4,15 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "02c5382356b14fec5c13ec723adbc42c",
+    "content-hash": "6f7ebaa95815661d9d5b1d07efcbe234",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
-            "version": "2.0.7",
+            "version": "2.0.9",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-active/zipball/0ce84f83535868755dde56bd4d2e57bcccb1a3b0",
-                "reference": "0ce84f83535868755dde56bd4d2e57bcccb1a3b0",
+                "url": "https://api.github.com/repos/barrelstrength/craft-sprout-active/zipball/a24bcdfc3566d3c51716913cb7622a6c9421cddd",
+                "reference": "a24bcdfc3566d3c51716913cb7622a6c9421cddd",
                 "shasum": ""
             },
             "require": {
@@ -57,7 +57,7 @@
                 "docs": "https://sprout.barrelstrengthdesign.com/craft-plugins/active/docs",
                 "rss": "https://github.com/barrelstrength/sprout-active/commits/v2.atom"
             },
-            "time": "2018-07-24T12:46:37+00:00"
+            "time": "2018-11-02T14:37:09+00:00"
         },
         {
             "name": "cebe/markdown",
@@ -321,11 +321,11 @@
         },
         {
             "name": "composer/spdx-licenses",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/cb17687e9f936acd7e7245ad3890f953770dec1b",
-                "reference": "cb17687e9f936acd7e7245ad3890f953770dec1b",
+                "url": "https://api.github.com/repos/composer/spdx-licenses/zipball/7a9556b22bd9d4df7cad89876b00af58ef20d3a2",
+                "reference": "7a9556b22bd9d4df7cad89876b00af58ef20d3a2",
                 "shasum": ""
             },
             "require": {
@@ -368,7 +368,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2018-04-30T10:33:04+00:00"
+            "time": "2018-11-01T09:45:54+00:00"
         },
         {
             "name": "container-interop/container-interop",
@@ -397,11 +397,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.27.1",
+            "version": "3.0.30",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/4402eb4bfd4515246a07706d23f4f5c1f5efcbc8",
-                "reference": "4402eb4bfd4515246a07706d23f4f5c1f5efcbc8",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/5989395e0b0740f2aee0b588207281ce06907f84",
+                "reference": "5989395e0b0740f2aee0b588207281ce06907f84",
                 "shasum": ""
             },
             "require": {
@@ -472,7 +472,7 @@
                 "docs": "https://github.com/craftcms/docs",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2018-10-12T14:53:38+00:00"
+            "time": "2018-11-06T19:51:03+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -633,11 +633,11 @@
         },
         {
             "name": "craftcms/store-hours",
-            "version": "2.1.1",
+            "version": "2.1.1.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/ac8ef94ee160bdb82464bfbd47f0e81dcdcf51e4",
-                "reference": "ac8ef94ee160bdb82464bfbd47f0e81dcdcf51e4",
+                "url": "https://api.github.com/repos/craftcms/store-hours/zipball/820671b90b3de8824edf2ccbe5493fd0216623c8",
+                "reference": "820671b90b3de8824edf2ccbe5493fd0216623c8",
                 "shasum": ""
             },
             "require": {
@@ -682,7 +682,7 @@
                 "docs": "https://github.com/craftcms/store-hours",
                 "rss": "https://github.com/craftcms/store-hours/commits/v2.atom"
             },
-            "time": "2018-09-03T13:05:48+00:00"
+            "time": "2018-11-02T01:31:39+00:00"
         },
         {
             "name": "creocoder/yii2-nested-sets",
@@ -2638,11 +2638,11 @@
         },
         {
             "name": "symfony/console",
-            "version": "v4.1.6",
+            "version": "v4.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/dc7122fe5f6113cfaba3b3de575d31112c9aa60b",
-                "reference": "dc7122fe5f6113cfaba3b3de575d31112c9aa60b",
+                "url": "https://api.github.com/repos/symfony/console/zipball/432122af37d8cd52fba1b294b11976e0d20df595",
+                "reference": "432122af37d8cd52fba1b294b11976e0d20df595",
                 "shasum": ""
             },
             "require": {
@@ -2688,15 +2688,15 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-03T08:15:46+00:00"
+            "time": "2018-10-31T09:30:44+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.1.6",
+            "version": "v4.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/596d12b40624055c300c8b619755b748ca5cf0b5",
-                "reference": "596d12b40624055c300c8b619755b748ca5cf0b5",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/fd7bd6535beb1f0a0a9e3ee960666d0598546981",
+                "reference": "fd7bd6535beb1f0a0a9e3ee960666d0598546981",
                 "shasum": ""
             },
             "require": {
@@ -2732,11 +2732,11 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T12:40:59+00:00"
+            "time": "2018-10-30T13:18:25+00:00"
         },
         {
             "name": "symfony/finder",
-            "version": "v4.1.6",
+            "version": "v4.1.7",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/finder/zipball/1f17195b44543017a9c9b2d437c670627e96ad06",
@@ -2779,7 +2779,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/e3d826245268269cd66f8326bd8bc066687b4a19",
@@ -2831,11 +2831,11 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/d0cd638f4634c16d8df4508e847f14e9e43168b8",
-                "reference": "d0cd638f4634c16d8df4508e847f14e9e43168b8",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/c79c051f5b3a46be09205c73b80b346e4153e494",
+                "reference": "c79c051f5b3a46be09205c73b80b346e4153e494",
                 "shasum": ""
             },
             "require": {
@@ -2880,15 +2880,15 @@
                 "portable",
                 "shim"
             ],
-            "time": "2018-08-06T14:22:27+00:00"
+            "time": "2018-09-21T13:07:52+00:00"
         },
         {
             "name": "symfony/process",
-            "version": "v4.1.6",
+            "version": "v4.1.7",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/ee33c0322a8fee0855afcc11fff81e6b1011b529",
-                "reference": "ee33c0322a8fee0855afcc11fff81e6b1011b529",
+                "url": "https://api.github.com/repos/symfony/process/zipball/3e83acef94d979b1de946599ef86b3a352abcdc9",
+                "reference": "3e83acef94d979b1de946599ef86b3a352abcdc9",
                 "shasum": ""
             },
             "require": {
@@ -2923,7 +2923,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2018-10-02T12:40:59+00:00"
+            "time": "2018-10-14T20:48:13+00:00"
         },
         {
             "name": "symfony/yaml",

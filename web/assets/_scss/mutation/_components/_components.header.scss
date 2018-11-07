@@ -49,11 +49,12 @@
     @include font-size($font-h6);
 
     @include mq(medium) {
-      padding-top: $unit-tiny/2;
+      padding-top: $unit-tiny;
       @include font-size($font-h5);
     }
 
     @include mq(large) {
+      padding-top: $unit-tiny/1.5;
       @include font-size($font-h4);
     }
   }

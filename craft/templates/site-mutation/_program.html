@@ -63,6 +63,7 @@
         <ul class="o-list-bare c-list c-list--large">
           {% if talks | length %}
           {% for item in talks %}
+          {% if item.showInProgram == true %}
           <li class="c-list__item" id="{{ item.title | camel }}">
             <h3 class="c-subtitle">{{ item.title }}</h3>
             {% set intro = item.intro.all() %}
@@ -79,13 +80,13 @@
               <p>
                 {% if block.buttonLink | length %}
                 {% for link in block.buttonLink.all() %}
-                <a href="{{ link.url }}" class="c-link c-link--bare" target="_blank">
-                  {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                <a href="{{ link.url }}" class="c-link" target="_blank">
+                  {{ block.buttonTitle }}
                 </a>
                 {% endfor %}
                 {% else %}
-                <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">
-                  {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                <a href="{{ block.buttonURL }}" class="c-link" target="_blank">
+                  {{ block.buttonTitle }}
                 </a>
                 {% endif %}
               </p>
@@ -93,6 +94,7 @@
             {% endfor %}
             </div>
           </li>
+          {% endif %}
           {% endfor %}
           {% else %}
           <li class="c-list__item"><h3 class="c-subtitle">{{ 'Soon' | t }}</h3></li>
@@ -110,6 +112,7 @@
         <ul class="o-list-bare c-list c-list--large">
           {% if localHeroes | length %}
           {% for item in localHeroes %}
+          {% if item.showInProgram == true %}
           <li class="c-list__item" id="{{ item.title | camel }}">
             <h3 class="c-subtitle">{{ item.title }}</h3>
             {% set intro = item.intro.all() %}
@@ -126,13 +129,13 @@
               <p>
                 {% if block.buttonLink | length %}
                 {% for link in block.buttonLink.all() %}
-                <a href="{{ link.url }}" class="c-link c-link--bare" target="_blank">
-                  {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                <a href="{{ link.url }}" class="c-link" target="_blank">
+                  {{ block.buttonTitle }}
                 </a>
                 {% endfor %}
                 {% else %}
-                <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">
-                  {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                <a href="{{ block.buttonURL }}" class="c-link" target="_blank">
+                  {{ block.buttonTitle }}
                 </a>
                 {% endif %}
               </p>
@@ -140,6 +143,7 @@
             {% endfor %}
             </div>
           </li>
+          {% endif %}
           {% endfor %}
           {% else %}
           <li class="c-list__item"><h3 class="c-subtitle">{{ 'Soon' | t }}<h3></li>
@@ -174,9 +178,10 @@
         </h2>
       </div>
       <div class="o-layout__item u-3/4@medium">
-        <ul class="o-list-bare c-list c-list--large">
+        <ul id="workshops" class="o-list-bare c-list c-list--large">
           {% if workshops | length %}
           {% for item in workshops %}
+          {% if item.showInProgram == true %}
           <li class="c-list__item" id="workshop{{ item.title | camel }}">
             <h3 class="c-subtitle">{{ item.title }}</h3>
             {% set intro = item.intro.all() %}
@@ -193,13 +198,13 @@
               <p>
                 {% if block.buttonLink | length %}
                 {% for link in block.buttonLink.all() %}
-                <a href="{{ link.url }}" class="c-link c-link--bare" target="_blank">
-                  {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                <a href="{{ link.url }}" class="c-link" target="_blank">
+                  {{ block.buttonTitle }}
                 </a>
                 {% endfor %}
                 {% else %}
-                <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">
-                  {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                <a href="{{ block.buttonURL }}" class="c-link" target="_blank">
+                  {{ block.buttonTitle }}
                 </a>
                 {% endif %}
               </p>
@@ -207,6 +212,7 @@
             {% endfor %}
             </div>
           </li>
+          {% endif %}
           {% endfor %}
           {% else %}
           <li class="c-list__item"><h3 class="c-subtitle">{{ 'Soon' | t }}</h3></li>
@@ -221,9 +227,10 @@
         </h2>
       </div>
       <div class="o-layout__item u-3/4@medium">
-        <ul class="o-list-bare c-list c-list--large">
+        <ul id="make" class="o-list-bare c-list c-list--large">
           {% if make | length %}
           {% for item in make %}
+          {% if item.showInProgram == true %}
           <li class="c-list__item" id="make{{ item.title | camel }}">
             <h3 class="c-subtitle">{{ item.title }}</h3>
             {% set intro = item.intro.all() %}
@@ -240,13 +247,13 @@
               <p>
                 {% if block.buttonLink | length %}
                 {% for link in block.buttonLink.all() %}
-                <a href="{{ link.url }}" class="c-link c-link--bare" target="_blank">
-                  {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                <a href="{{ link.url }}" class="c-link" target="_blank">
+                  {{ block.buttonTitle }}
                 </a>
                 {% endfor %}
                 {% else %}
-                <a href="{{ block.buttonURL }}" class="c-link c-link--bare" target="_blank">
-                  {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+                <a href="{{ block.buttonURL }}" class="c-link" target="_blank">
+                  {{ block.buttonTitle }}
                 </a>
                 {% endif %}
               </p>
@@ -254,6 +261,7 @@
             {% endfor %}
             </div>
           </li>
+          {% endif %}
           {% endfor %}
           {% else %}
           <li class="c-list__item"><h3 class="c-subtitle">{{ 'Soon' | t }}<h3></li>

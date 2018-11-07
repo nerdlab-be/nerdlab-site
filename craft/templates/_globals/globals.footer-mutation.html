@@ -146,7 +146,7 @@
         {% case "href" %}
         {% if item.href | length %}
         <p>
-          <a href="{{ item.href }}" class="c-link c-link--bare">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+          <a href="{{ item.href }}" class="c-link">{{ item.text }}</a>
         </p>
         {% endif %}
         {% endswitch %}
