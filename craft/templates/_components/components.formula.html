@@ -24,8 +24,17 @@
           </p>
         </div>
       </div>
+      {% if block.video | length() %}
+      <div class="o-layout__item u-1/2@medium">
+        <div class="o-ratio o-ratio--16:9 u-margin-bottom u-margin-top">
+          <iframe src="https://www.youtube.com/embed/{{ block.video }}" class="o-ratio__content" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+      {% endif %}
     </div>
   </div>
+  {% if block.video | length() %}
+  {% else %}
   <div class="{{ cycle(['c-illustration__left', 'c-illustration__right'], loop.index0) }}">
     {% for item in block.image.limit(1).all() %}
       <img
@@ -35,8 +44,7 @@
         data-srcset="{{ item.url() }} 301w"
         alt="{{ item.title }}">
     {% endfor %}
-    <!-- <img
-      src="/assets/images/jpg/{{ cycle(['dag-thumb.jpg', 'week-thumb.jpg', 'custom-thumb.jpg'], loop.index0) }}" alt="{{ cycle(['de-dag', 'de-week', 'custom'], loop.index0) }}" data-src="/assets/images/jpg/{{ cycle(['dag.jpg', 'week.jpg', 'custom.jpg'], loop.index0) }}" class="lazyload fade-in"> -->
   </div>
+  {% endif %}
 </div>
 {% endfor %}
