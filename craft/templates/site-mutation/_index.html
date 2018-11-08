@@ -185,6 +185,9 @@
           <li class="c-list__item">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}" class="c-link">{{ item.title }}</a>
+            {% if item.shortIntro | length() %}
+            <div class="c-small u-margin-top">{{ item.shortIntro }}</div>
+            {% endif %}
             {% endfor %}
           </li>
           {% endfor %}
@@ -203,6 +206,10 @@
           <li class="c-list__item">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}" class="c-link">{{ item.title }}</a>
+            {% if item.shortIntro | length() %}
+            <br>
+            <span class="c-small">{{ item.shortIntro }}</span>
+            {% endif %}
             {% endfor %}
           </li>
           {% endfor %}
