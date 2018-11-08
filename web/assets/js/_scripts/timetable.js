@@ -148,3 +148,16 @@ jQuery(document).ready(function($){
     return timeStamp;
   }
 });
+
+// Sort events
+jQuery.fn.sortEvents = function sortEvents() {
+  $(".single-event", this[0]).sort(dec_sort).appendTo(this[0]);
+  function dec_sort(a, b){ return ($(b).data("start")) < ($(a).data("start")) ? 1 : -1; }
+}
+
+// $(".js-sort")
+// $(".js-sort").sortEvents();
+
+$(".js-sort").each(function() {
+  $(this).sortEvents();
+});

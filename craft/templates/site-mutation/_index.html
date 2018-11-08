@@ -347,7 +347,9 @@
     </svg>
   </span>
   <div class="o-wrapper o-wrapper--huge">
+    <ul class="o-list-bare c-list c-list--extra">
     {% for item in extra %}
+      <li class="c-list__item">
       {% set intro = item.intro.all() %}
       {% for block in intro %}
         {% switch block.type %}
@@ -386,7 +388,9 @@
           </div>
         </div>
       </div>
+      </li>
     {% endfor %}
+    </ul>
   </div>
 </div>
 {% endif %}
