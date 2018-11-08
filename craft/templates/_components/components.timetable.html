@@ -35,14 +35,14 @@
 
       <!-- Grote zaal -->
       <li class="events-group">
-        <div class="top-info"><span>{{ "Grote zaal" | t }}</span></div>
+        <div class="top-info"><span>{{ mutationGlobals.timelineLabelGroteZaal }}</span></div>
         <ul class="js-sort">
           {% for item in talks %}
           {% if item.mutationRoom == "groteZaal" %}
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Experts" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -53,7 +53,7 @@
           <li class="single-event single-event--small" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Local heroes" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelLokaleHelden }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -75,7 +75,7 @@
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#make{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label event-label--how">{{ "How do you make it?" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label event-label--how">{{ mutationGlobals.timelineLabelHowDoYouMakeIt }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -96,14 +96,14 @@
       </li>
 
       <li class="events-group">
-        <div class="top-info"><span>{{ "Kleine zaal" | t }}</span></div>
+        <div class="top-info"><span>{{ mutationGlobals.timelineLabelKleineZaal }}</span></div>
         <ul class="js-sort">
           {% for item in talks %}
           {% if item.mutationRoom == "kleineZaal" %}
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Experts" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -114,7 +114,7 @@
           <li class="single-event single-event--small" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Local heroes" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelLokaleHelden }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -125,7 +125,7 @@
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#workshop{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label event-label--workshop">{{ "Workshops" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label event-label--workshop">{{ mutationGlobals.timelineLabelWorkshop }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -136,7 +136,7 @@
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#make{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label event-label--how">{{ "How do you make it?" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label event-label--how">{{ mutationGlobals.timelineLabelHowDoYouMakeIt }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -157,14 +157,14 @@
       </li>
 
       <li class="events-group">
-        <div class="top-info"><span>{{ "Tuin" | t }}</span></div>
+        <div class="top-info"><span>{{ mutationGlobals.timelineLabelTuin }}</span></div>
         <ul class="js-sort">
           {% for item in talks %}
           {% if item.mutationRoom == "tuin" %}
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Experts" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -175,7 +175,7 @@
           <li class="single-event single-event--small" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Local heroes" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelLokaleHelden }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -186,7 +186,7 @@
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#workshop{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label event-label--workshop">{{ "Workshops" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label event-label--workshop">{{ mutationGlobals.timelineLabelWorkshop }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -197,7 +197,7 @@
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#make{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label event-label--how">{{ "How do you make it?" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label event-label--how">{{ mutationGlobals.timelineLabelHowDoYouMakeIt }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -218,14 +218,14 @@
       </li>
 
       <li class="events-group">
-        <div class="top-info"><span>{{ "Backstage" | t }}</span></div>
+        <div class="top-info"><span>{{ mutationGlobals.timelineLabelBackstage }}</span></div>
         <ul class="js-sort">
           {% for item in talks %}
           {% if item.mutationRoom == "backstage" %}
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Experts" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -236,7 +236,7 @@
           <li class="single-event single-event--small" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ "Local heroes" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelLokaleHelden }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -247,7 +247,7 @@
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#workshop{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label event-label--workshop">{{ "Workshops" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label event-label--workshop">{{ mutationGlobals.timelineLabelWorkshop }}</span></span>
             </a>
             {% endfor %}
           </li>
@@ -258,7 +258,7 @@
           <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
             {% for page in program.all() %}
             <a href="{{ page.url }}#make{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label event-label--how">{{ "How do you make it?" | t }}</span></span>
+              <span class="event-name">{{ item.title }} <span class="event-label event-label--how">{{ mutationGlobals.timelineLabelHowDoYouMakeIt }}</span></span>
             </a>
             {% endfor %}
           </li>

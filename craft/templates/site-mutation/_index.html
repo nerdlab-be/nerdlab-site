@@ -171,12 +171,12 @@
   </span>
   <div class="o-wrapper o-wrapper--huge">
     <h2 class="c-section-title u-margin-bottom">
-      {{ 'Program' | t }}
+      {{ mutationGlobals.mutationLabelInspiratie }}
     </h2>
     <div class="o-layout o-layout--spacer">
       <div class="o-layout__item u-1/2@medium">
         <h3 class="c-tag c-tag--back u-margin-bottom">
-          {{ 'Experts' | t }}
+          {{ mutationGlobals.mutationLabelSprekers }}
         </h3>
         <ul class="o-list-bare c-list c-list--large">
           {% set program = craft.entries.section('mutationProgram') %}
@@ -198,7 +198,7 @@
       </div>
       <div class="o-layout__item u-1/2@medium">
         <h3 class="c-tag c-tag--back u-margin-bottom">
-          {{ 'Local heroes' | t }}
+          {{ mutationGlobals.mutationLabelLokaleHelden }}
         </h3>
         <ul class="o-list-bare c-list c-list--large">
           {% if localHeroes | length %}
