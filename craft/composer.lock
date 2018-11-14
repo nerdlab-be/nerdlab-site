@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f7ebaa95815661d9d5b1d07efcbe234",
+    "content-hash": "b2ffb67e3397165937c75c3b47121a0e",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
@@ -397,11 +397,11 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.0.30",
+            "version": "3.0.30.1",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/5989395e0b0740f2aee0b588207281ce06907f84",
-                "reference": "5989395e0b0740f2aee0b588207281ce06907f84",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/5a4a4f1f784c085eab8cc69b30a031c0255a902f",
+                "reference": "5a4a4f1f784c085eab8cc69b30a031c0255a902f",
                 "shasum": ""
             },
             "require": {
@@ -472,7 +472,7 @@
                 "docs": "https://github.com/craftcms/docs",
                 "rss": "https://github.com/craftcms/cms/releases.atom"
             },
-            "time": "2018-11-06T19:51:03+00:00"
+            "time": "2018-11-07T21:46:38+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
