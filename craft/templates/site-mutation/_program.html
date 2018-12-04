@@ -284,9 +284,15 @@
       {% for item in detail.mutationTickets.all() %}
       {% switch item.type %}
       {% case "ticket" %}
+      {% if item.soldout %}
+      <li class="c-list__item">
+        <strong>{{ item.heading }}</strong>{{ "Soldout"|t }}
+      </li>
+      {% else %}
       <li class="c-list__item">
         <strong>{{ item.heading }}{% if item.price %}: {{ item.price }}{% endif %}</strong> {% if item.ticketLink %}<a href="{{ item.ticketLink }}" class="c-link c-link--bare" target="_blank">{{ "Buy tickets"|t }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>{% else %}<span>{{ "Free"|t }}</span>{% endif %}
       </li>
+      {% endif %}
       {% endswitch %}
       {% endfor %}
       {% endfor %}

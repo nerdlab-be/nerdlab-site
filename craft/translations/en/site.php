@@ -15,4 +15,5 @@ return [
     'Kleine zaal' => 'Kleine zaal',
     'Tuin' => 'Tuin',
     'Backstage' => 'Backstage',
+    'Soldout' => 'Soldout',
 ];
