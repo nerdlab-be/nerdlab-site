@@ -1,0 +1,43 @@
+{#
+  Related: Blog
+  ======================
+#}
+
+{#
+  {% include '_components/components.blog-related.html' %}
+#}
+
+{# -- Module -- #}
+<div class="o-row">
+  <div class="o-wrapper o-wrapper--large">
+    <ul class="o-list-bare c-pagination c-pagination--center">
+      {% set entries = craft.entries.section('mutationBlogDetail') %}
+      {% set params = craft.entries.section('mutationBlogDetail').orderBy('lft desc') %}
+      {% set prevEntry = entry.getPrev(params) %}
+      {% set nextEntry = entry.getNext(params) %}
+
+      {% if nextEntry %}
+        <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ nextEntry.url }}"  class="c-link c-link--bare c-link--icon-previous">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} {{ nextEntry.title }} </a></li>
+      {% else %}
+        {% for block in entries.all() %}
+          {% if loop.last %}
+            <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ block.url }}"  class="c-link c-link--bare c-link--icon-previous">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} {{ block.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      <li class="o-list-bare__item c-pagination__item c-pagination__item--center"><a href="{{ alias('@web') }}/{{ craft.app.request.getSegment(1) }}" class="c-link c-link--bare">{% include '_tools/tools.icon.html' with { options: { icon: 'grid' } } %}<span class="u-hidden-visually">{{ craft.app.request.getSegment(1) | capitalize }}</span></a></li>
+
+      {% if prevEntry %}
+        <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ prevEntry.url }}" class="c-link c-link--bare c-link--icon-next">{{ prevEntry.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
+
+      {% else %}
+        {% for block in entries.all() %}
+        {% if loop.first %}
+          <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ block.url }}" class="c-link c-link--bare c-link--icon-next">{{ block.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
+        {% endif %}
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+</div>
