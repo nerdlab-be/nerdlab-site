@@ -8,33 +8,188 @@
 #}
 
 {# -- Module -- #}
-<div class="o-row">
-  <div class="o-wrapper o-wrapper--large">
-    <ul class="o-list-bare c-pagination c-pagination--center">
+<div class="o-row c-theme-primary-tint">
+  <div class="o-wrapper o-wrapper--huge">
+    <ul class="o-layout">
       {% set entries = craft.entries.section('mutationBlogDetail') %}
       {% set params = craft.entries.section('mutationBlogDetail').orderBy('lft desc') %}
       {% set prevEntry = entry.getPrev(params) %}
       {% set nextEntry = entry.getNext(params) %}
 
       {% if nextEntry %}
-        <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ nextEntry.url }}"  class="c-link c-link--bare c-link--icon-previous">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} {{ nextEntry.title }} </a></li>
+        <li class="o-layout__item u-1/2@small">
+          <article class="u-margin-bottom-large">
+            <div class="c-card c-card--link js-link-expand-holder">
+              <div class="o-layout o-layout--small">
+                <div class="o-layout__item u-1/3@large u-padding-bottom u-padding-bottom-none@large">
+                  <div class="c-card__image">
+                  {% for image in nextEntry.image.all() %}
+                    <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
+                      <img
+                        class="o-crop__content o-crop__content--center lazyload fade-in"
+                        src="{{ image.url(thumb) }}"
+                        data-srcset="{{ image.url(large) }}"
+                        alt="{{ image.title }}">
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="o-layout__item u-2/3@large">
+                  <div class="c-card__body c-editor u-mw">
+                    {% for block in nextEntry.mutationAbout.all() %}
+                    {% switch block.type %}
+                    {% case "heading" %}
+                    <h2 class="c-subtitle"><a href="{{ nextEntry.url }}" class="c-link c-link--bare js-link-expand__target">{{ block.heading | raw }}</a></h2>
+                    {% case "editor" %}
+                      {{ block.editor }}
+                    {% case "paragraph" %}
+                    {{ block.paragraph }}
+                    {% endswitch %}
+                    {% endfor %}
+                    <p class="u-margin-top u-margin-bottom-none">
+                      <span class="c-link c-link--none js-link-expand">
+                        {{ "More" | t }}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </li>
       {% else %}
         {% for block in entries.all() %}
           {% if loop.last %}
-            <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ block.url }}"  class="c-link c-link--bare c-link--icon-previous">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} {{ block.title }}</a></li>
+            <li class="o-layout__item u-1/2@small">
+              <article class="u-margin-bottom-large">
+                <div class="c-card c-card--link js-link-expand-holder">
+                  <div class="o-layout o-layout--small">
+                    <div class="o-layout__item u-1/3@large u-padding-bottom u-padding-bottom-none@large">
+                      <div class="c-card__image">
+                      {% for image in block.image.all() %}
+                        <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
+                          <img
+                            class="o-crop__content o-crop__content--center lazyload fade-in"
+                            src="{{ image.url(thumb) }}"
+                            data-srcset="{{ image.url(large) }}"
+                            alt="{{ image.title }}">
+                        </div>
+                        {% endfor %}
+                      </div>
+                    </div>
+                    <div class="o-layout__item u-2/3@large">
+                      <div class="c-card__body c-editor u-mw">
+                        {% for item in block.mutationAbout.all() %}
+                        {% switch item.type %}
+                        {% case "heading" %}
+                        <h2 class="c-subtitle"><a href="{{ block.url }}" class="c-link c-link--bare js-link-expand__target">{{ item.heading | raw }}</a></h2>
+                        {% case "editor" %}
+                          {{ item.editor }}
+                        {% case "paragraph" %}
+                        {{ item.paragraph }}
+                        {% endswitch %}
+                        {% endfor %}
+                        <p class="u-margin-top u-margin-bottom-none">
+                          <span class="c-link c-link--none js-link-expand">
+                            {{ "More" | t }}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
           {% endif %}
         {% endfor %}
       {% endif %}
 
-      <li class="o-list-bare__item c-pagination__item c-pagination__item--center"><a href="{{ alias('@web') }}/{{ craft.app.request.getSegment(1) }}" class="c-link c-link--bare">{% include '_tools/tools.icon.html' with { options: { icon: 'grid' } } %}<span class="u-hidden-visually">{{ craft.app.request.getSegment(1) | capitalize }}</span></a></li>
 
       {% if prevEntry %}
-        <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ prevEntry.url }}" class="c-link c-link--bare c-link--icon-next">{{ prevEntry.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
+        <li class="o-layout__item u-1/2@small">
+          <article class="u-margin-bottom-large">
+            <div class="c-card c-card--link js-link-expand-holder">
+              <div class="o-layout o-layout--small">
+                <div class="o-layout__item u-1/3@large u-padding-bottom u-padding-bottom-none@large">
+                  <div class="c-card__image">
+                  {% for image in prevEntry.image.all() %}
+                    <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
+                      <img
+                        class="o-crop__content o-crop__content--center lazyload fade-in"
+                        src="{{ image.url(thumb) }}"
+                        data-srcset="{{ image.url(large) }}"
+                        alt="{{ image.title }}">
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+                <div class="o-layout__item u-2/3@large">
+                  <div class="c-card__body c-editor u-mw">
+                    {% for block in prevEntry.mutationAbout.all() %}
+                    {% switch block.type %}
+                    {% case "heading" %}
+                    <h2 class="c-subtitle"><a href="{{ prevEntry.url }}" class="c-link c-link--bare js-link-expand__target">{{ block.heading | raw }}</a></h2>
+                    {% case "editor" %}
+                      {{ block.editor }}
+                    {% case "paragraph" %}
+                    {{ block.paragraph }}
+                    {% endswitch %}
+                    {% endfor %}
+                    <p class="u-margin-top u-margin-bottom-none">
+                      <span class="c-link c-link--none js-link-expand">
+                        {{ "More" | t }}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </li>
 
       {% else %}
         {% for block in entries.all() %}
         {% if loop.first %}
-          <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ block.url }}" class="c-link c-link--bare c-link--icon-next">{{ block.title }} {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
+          <li class="o-layout__item u-1/2@small">
+            <article class="u-margin-bottom-large">
+              <div class="c-card c-card--link js-link-expand-holder">
+                <div class="o-layout o-layout--small">
+                  <div class="o-layout__item u-1/3@large u-padding-bottom u-padding-bottom-none@large">
+                    <div class="c-card__image">
+                    {% for image in block.image.all() %}
+                      <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
+                        <img
+                          class="o-crop__content o-crop__content--center lazyload fade-in"
+                          src="{{ image.url(thumb) }}"
+                          data-srcset="{{ image.url(large) }}"
+                          alt="{{ image.title }}">
+                      </div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  <div class="o-layout__item u-2/3@large">
+                    <div class="c-card__body c-editor u-mw">
+                      {% for item in block.mutationAbout.all() %}
+                      {% switch item.type %}
+                      {% case "heading" %}
+                      <h2 class="c-subtitle"><a href="{{ block.url }}" class="c-link c-link--bare js-link-expand__target">{{ item.heading | raw }}</a></h2>
+                      {% case "editor" %}
+                        {{ item.editor }}
+                      {% case "paragraph" %}
+                      {{ item.paragraph }}
+                      {% endswitch %}
+                      {% endfor %}
+                      <p class="u-margin-top u-margin-bottom-none">
+                        <span class="c-link c-link--none js-link-expand">
+                          {{ "More" | t }}
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </li>
         {% endif %}
         {% endfor %}
       {% endif %}

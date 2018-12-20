@@ -13,3 +13,47 @@
     }
   }
 }
+
+
+  .c-grid {
+    position: relative;
+    display: grid;
+    grid-gap: $unit-small;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr) );
+
+    @include mq(medium) {
+      grid-gap: $unit;
+      grid-template-columns: repeat(auto-fill, minmax(25%, 1fr) );
+    }
+
+    @include mq(large) {
+      grid-gap: $unit-large;
+    }
+  }
+
+    .c-grid__item {
+      display: block;
+
+      .o-crop__content {
+        height: 100%;
+        width: initial;
+        max-width: initial;
+      }
+    }
+
+    .c-grid__item--one {
+      grid-column: auto / span 1;
+    }
+
+    .c-grid__item--two {
+      grid-column: auto / span 2;
+      grid-row: auto / span 2;
+    }
+
+    .c-grid__item--three {
+      grid-column: auto / span 2;
+
+      @include mq(medium) {
+        grid-column: auto / span 1;
+      }
+    }
