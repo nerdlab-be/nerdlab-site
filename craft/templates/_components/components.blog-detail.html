@@ -8,85 +8,73 @@
 #}
 
 {# -- Module -- #}
-<div class="o-row-large u-padding-top c-body-image">
-  {% if entry.image | length() %}
+<div class="o-row-large c-theme-primary-tint c-illustration">
+  <span class="c-illustration__center-top" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationO3.svg" alt="">
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
+  {# {% if entry.image | length() %}
   <div class="c-body-image__image">
     {% for image in entry.image.all() %}
-    <div class="o-crop o-crop--1:1 o-crop--circle">
+    <div class="o-crop o-crop--16:9">
       <img
         class="o-crop__content o-crop__content--center lazyload fade-in"
         src="{{ image.url(thumb) }}"
-        data-sizes="auto"
-        data-srcset="{{ image.url(small) }} 1w,
-                     {{ image.url(medium) }} 301w,
-                     {{ image.url(large) }} 501w,
-                     {{ image.url(xlarge) }} 801w"
+        data-srcset="{{ image.url(xlarge) }}"
         alt="{{ image.title }}">
     </div>
     {% endfor %}
   </div>
-  {% endif %}
-  <div class="o-wrapper o-wrapper--large">
-    <div class="o-layout o-layout--flush s-editor">
+  {% endif %} #}
+    <div class="c-editor">
       {% for block in entry.blogDetail.all() %}
       {% switch block.type %}
       {% case "heading" %}
-      <div class="o-layout__item u-3/4@small u-3/5@large u-spacer u-spacer--small">
+      <h2 class="c-title">{{ block.heading }}</h2>
+      {% case "subHeading" %}
+      <h3 class="c-subtitle">{{ block.subHeading }}</h3>
+      {% case "paragraph" %}
+      {{ block.paragraph }}
+      {% case "quote" %}
+      <blockquote {% if block.quoteLink | length() %}cite="{{ block.quoteLink }}"{% endif %}>
+        {{ block.quote }}
+        {% if block.author | length() %}
+        <footer>{{ block.author }}{% if block.authorInfo | length() %},<br> {{ block.authorInfo }}{% endif %}</footer>
+        {% endif %}
+      </blockquote>
+      {% case "textImage" %}
+      {% if block.heading | length() %}
+      <div class="u-spacer u-spacer--small">
         <h2 class="c-title">{{ block.heading }}</h2>
       </div>
-      {% case "subHeading" %}
-      <div class="o-layout__item u-3/4@small u-3/5@large u-spacer u-spacer--tiny">
-        <h3 class="c-subtitle">{{ block.subHeading }}</h3>
-      </div>
-      {% case "paragraph" %}
-      <div class="o-layout__item u-3/4@small u-3/5@large u-spacer">
-        {{ block.paragraph }}
-      </div>
-      {% case "quote" %}
-      <div class="o-layout__item u-spacer u-alpha">
-        <blockquote {% if block.quoteLink | length() %}cite="{{ block.quoteLink }}"{% endif %}>
-          {{ block.quote }}
-          {% if block.author | length() %}
-          <footer>{{ block.author }}{% if block.authorInfo | length() %},<br> {{ block.authorInfo }}{% endif %}</footer>
-          {% endif %}
-        </blockquote>
-      </div>
-      {% case "textImage" %}
-      <div class="o-layout__item u-spacer{% if block.fullWidth %}{% else %} u-3/4@small u-3/5@large{% endif %}">
-        {% if block.heading | length() %}
-        <div class="u-spacer u-spacer--small">
-          <h2 class="c-title">{{ block.heading }}</h2>
-        </div>
-        {% endif %}
-        <div class="o-layout o-layout--flush u-spacer{% if block.layout == 'left' %} o-layout--reverse{% endif %}">
-          <div class="o-layout__item u-1/4@small u-2/5@large">
-            {% for image in block.image.all() %}
-              <div class="u-margin-bottom{% if block.layout == 'left' %} u-padding-left@small{% else %}u-padding-right@small{% endif %}">
-                <div class="o-crop o-crop--16:9">
-                  <img
-                    class="o-crop__content o-crop__content--center lazyload fade-in"
-                    src="{{ image.url(thumb) }}"
-                    data-sizes="auto"
-                    data-srcset="{{ image.url(small) }} 1w,
-                                 {{ image.url(medium) }} 301w,
-                                 {{ image.url(large) }} 501w,
-                                 {{ image.url(xlarge) }} 801w,
-                                 {{ image.url(large) }} 1181w"
-                    alt="{{ image.title }}">
-                </div>
-                {% if block.imageCaption | length() %}
-                <p class="c-small u-margin-top-small">{{ block.imageCaption }}</p>
-                {% endif %}
+      {% endif %}
+      <div class="o-layout o-layout--flush u-spacer{% if block.layout == 'left' %} o-layout--reverse{% endif %}">
+        <div class="o-layout__item u-1/4@small u-2/5@large">
+          {% for image in block.image.all() %}
+            <div class="u-margin-bottom{% if block.layout == 'left' %} u-padding-left@small{% else %}u-padding-right@small{% endif %}">
+              <div class="o-crop o-crop--16:9">
+                <img
+                  class="o-crop__content o-crop__content--center lazyload fade-in"
+                  src="{{ image.url(thumb) }}"
+                  data-sizes="auto"
+                  data-srcset="{{ image.url(small) }} 1w,
+                                {{ image.url(medium) }} 301w,
+                                {{ image.url(large) }} 501w,
+                                {{ image.url(xlarge) }} 801w,
+                                {{ image.url(large) }} 1181w"
+                  alt="{{ image.title }}">
               </div>
-            {% endfor %}
-          </div>
-          <div class="o-layout__item u-3/4@small u-3/5@large">
-            {{ block.paragraph }}
-          </div>
+              {% if block.imageCaption | length() %}
+              <p class="c-small u-margin-top-small">{{ block.imageCaption }}</p>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="o-layout__item u-3/4@small u-3/5@large">
+          {{ block.paragraph }}
         </div>
       </div>
       {% case "image" %}
-      <div class="o-layout__item u-spacer{% if block.fullWidth %}{% else %} u-3/4@small u-3/5@large{% endif %}">
         {% for image in block.image.all() %}
         <div class="u-margin-top u-margin-bottom">
           <div class="o-crop o-crop--16:9">
@@ -106,39 +94,35 @@
           {% endif %}
         </div>
         {% endfor %}
-      </div>
       {% case "video" %}
-      <div class="o-layout__item u-spacer{% if block.fullWidth %}{% else %} u-3/4@small u-3/5@large{% endif %}">
-        <div class="u-margin-top u-margin-bottom">
-          {% if block.heading | length() %}
-            <h2 class="c-title">{{ block.heading }}</h2>
-          {% endif %}
-          <div class="o-crop o-crop--16:9 c-image">
-            <iframe src="https://www.youtube.com/embed/{{ block.youtubeVideoId }}" class="o-ratio__content" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-          {% if block.caption | length() %}
-          <p class="c-small u-margin-top-small">{{ block.caption }}</p>
-          {% endif %}
+      <div class="u-margin-top u-margin-bottom">
+        {% if block.heading | length() %}
+          <h2 class="c-title">{{ block.heading }}</h2>
+        {% endif %}
+        <div class="o-crop o-crop--16:9 c-image">
+          <iframe src="https://www.youtube.com/embed/{{ block.youtubeVideoId }}" class="o-ratio__content" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
+        {% if block.caption | length() %}
+        <p class="c-small u-margin-top-small">{{ block.caption }}</p>
+        {% endif %}
+      </div>
       {% case "imageGrid" %}
-      <div class="o-layout__item u-spacer{% if block.fullWidth %}{% else %} u-3/4@small u-3/5@large{% endif %}">
-        <div class="c-grid">
-        {% for image in block.images.all() %}
-        <div class="c-grid__item {{ cycle(['c-grid__item--one','c-grid__item--one','c-grid__item--three','c-grid__item--two','c-grid__item--one','c-grid__item--one','c-grid__item--three','c-grid__item--two','c-grid__item--three'], loop.index0) }}">
-          <div class="o-crop o-crop--1:1">
-            <img
-              class="o-crop__content o-crop__content--center lazyload fade-in"
-              src="{{ image.url(thumb) }}"
-              data-sizes="auto"
-              data-srcset="{{ image.url(small) }} 1w,
-                           {{ image.url(medium) }} 301w,
-                           {{ image.url(large) }} 501w,
-                           {{ image.url(xlarge) }} 801w"
-              alt="{{ image.title }}">
-          </div>
+      <div class="c-grid">
+      {% for image in block.images.all() %}
+      <div class="c-grid__item {{ cycle(['c-grid__item--one','c-grid__item--one','c-grid__item--three','c-grid__item--two','c-grid__item--one','c-grid__item--one','c-grid__item--three','c-grid__item--two','c-grid__item--three'], loop.index0) }}">
+        <div class="o-crop o-crop--1:1">
+          <img
+            class="o-crop__content o-crop__content--center lazyload fade-in"
+            src="{{ image.url(thumb) }}"
+            data-sizes="auto"
+            data-srcset="{{ image.url(small) }} 1w,
+                          {{ image.url(medium) }} 301w,
+                          {{ image.url(large) }} 501w,
+                          {{ image.url(xlarge) }} 801w"
+            alt="{{ image.title }}">
         </div>
-        {% endfor %}
-        </div>
+      </div>
+      {% endfor %}
       </div>
       {% endswitch %}
       {% endfor %}

@@ -9,50 +9,81 @@
 
 {# -- Module -- #}
 {% paginate craft.entries().section('mutationBlogDetail').orderBy('postDate desc').limit(6) as paginate, entries %}
-<div class="o-row-large u-padding-top">
-  <div class="o-wrapper o-wrapper--large">
+<div class="o-row-huge-top c-theme-primary-tint c-illustration js-program-watch">
+  <span class="c-illustration__top-center" role="presentation" aria-hidden="true">
+    <img src="/assets/images/svg/illustrationU.svg" alt="">
+  </span>
+  <span class="c-illustration__top-left" role="presentation" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <g fill="none" fill-rule="evenodd" transform="translate(23)">
+        <path class="s-o2-right" fill="#9ABE46" d="M32.1763,119.54 L32.1763,0 C65.1642,0 91.9462,26.7821 91.9462,59.7701 C91.9462,92.758 65.1642,119.54 32.1763,119.54 Z"/>
+        <path class="s-o2-center" fill="#FFFFFF" d="M32.1763,91.9463 C14.4177,91.9463 0,77.5286 0,59.7701 C0,42.0115 14.4177,27.5938 32.1763,27.5938 C49.9349,27.5938 64.3526,42.0115 64.3526,59.7701 C64.3526,77.5286 49.9349,91.9463 32.1763,91.9463 Z"/>
+      </g>
+    </svg>
+  </span>
+  <span class="c-illustration__top-right" role="presentation" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <g fill="none" fill-rule="evenodd" transform="translate(-.5 19.5)">
+        <polygon class="s-talt-top" fill="#E9C200" points="120.798 40.226 80.512 40.226 80.512 0 40.286 0 40.286 40.226 0 40.226 0 0 120.798 0"/>
+        <polygon class="s-talt-center" fill="#FFFFFF" points="40.256 80.512 80.542 80.512 80.542 40.286 40.256 40.286"/>
+      </g>
+    </svg>
+  </span>
+  <span class="c-illustration__bottom-left" role="presentation" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <polygon class="s-triangle" fill="#243242" fill-rule="evenodd" points="0 120 120 0 120 120"/>
+    </svg>
+  </span>
+  <span class="c-illustration__bottom-right" role="presentation" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+      <g fill="none" fill-rule="evenodd">
+        <polygon class="s-t-center" fill="#FFFFFF" points="47 120 73 120 73 0 47 0"/>
+        <polygon class="s-t-middle" fill="#5239AC" points="0 73 120 73 120 47 0 47"/>
+      </g>
+    </svg>
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
     {% for item in entries %}
     <article class="u-spacer">
-      <div class="c-card c-animation-image js-link-expand-holder">
-        <div class="o-layout o-layout--flush o-layout--middle">
-          <div class="o-layout__item u-1/3@small u-1/4@medium u-padding-bottom u-padding-bottom-none@small">
-            <div class="c-card__body">
+      <div class="c-card c-card--link js-link-expand-holder">
+        <div class="o-layout o-layout--small">
+          <div class="o-layout__item u-1/3@small u-1/4@medium u-1/3@large u-padding-bottom u-padding-bottom-none@small">
+            <div class="c-card__image">
             {% for image in item.image.all() %}
-              <div class="o-crop o-crop--1:1 o-crop--circle o-crop--circle--small c-image-link js-link-expand">
+              <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
                 <img
                   class="o-crop__content o-crop__content--center lazyload fade-in"
                   src="{{ image.url(thumb) }}"
-                  data-sizes="auto"
-                  data-srcset="{{ image.url(small) }} 1w,
-                               {{ image.url(medium) }} 301w,
-                               {{ image.url(large) }} 501w"
+                  data-srcset="{{ image.url(large) }}"
                   alt="{{ image.title }}">
               </div>
               {% endfor %}
             </div>
           </div>
-          <div class="o-layout__item u-2/3@small u-3/4@medium">
-            <div class="c-card__body s-editor u-mw">
-              {% for block in item.blogDetail.all() %}
+          <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
+            <div class="c-card__body c-editor u-mw">
+              {% for block in item.mutationAbout.all() %}
               {% switch block.type %}
               {% case "heading" %}
-              <h2 class="c-title"><a href="{{ item.url }}" class="c-link c-link--none js-link-expand__target">{{ block.heading | raw }}</a></h2>
+              <h2 class="c-subtitle"><a href="{{ item.url }}" class="c-link c-link--bare js-link-expand__target">{{ block.heading | raw }}</a></h2>
               {% case "editor" %}
                 {{ block.editor }}
+              {% case "paragraph" %}
+              {{ block.paragraph }}
               {% endswitch %}
               {% endfor %}
+              <p class="u-margin-top u-margin-bottom-none">
+                <span class="c-link c-link--none js-link-expand">
+                  {{ "More" | t }}
+                </span>
+              </p>
             </div>
-            <p class="c-para u-margin-top u-margin-bottom-none">
-              <span class="c-link c-link--neutral js-link-expand">
-                Lees meer
-              </span>
-            </p>
           </div>
         </div>
       </div>
     </article>
     {% endfor %}
-    {# Build pagination interface if more than 1 page #}
+    {# Build pagination interface if more than 1 page
     {% if paginate.totalPages > 1 %}
       <ul class="o-list-bare c-pagination">
         {% if paginate.prevUrl %}
@@ -73,7 +104,7 @@
           <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ paginate.nextUrl }}"  class="c-link c-link--bare">{{ labels.labelNextPage }} {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
         {% endif %}
       </ul>
-    {% endif %}
+    {% endif %} #}
   </div>
 </div>
 

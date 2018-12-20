@@ -3166,6 +3166,32 @@ var pluginLoader = function() {
 };
 pluginLoader();
 
+/* ======================
+   #EXPAND LINK TO PARENT
+   ====================== */
+
+function expandLink() {
+  var linkExpand = $('.js-link-expand');
+  var down = void 0;
+  var up = void 0;
+
+  $('.js-link-expand').css( 'cursor', 'pointer' );
+
+  linkExpand.on('mousedown', function (e) {
+    return down = +new Date();
+  });
+
+  linkExpand.on('mouseup', function (e) {
+    up = +new Date();
+    if (up - down < 200) {
+      var link = $(this).closest('.js-link-expand-holder').find('.js-link-expand__target');
+      link[0].click();
+    }
+  });
+}
+
+expandLink();
+
 var heroElement = $('.js-hero-watch');
 var heroWatcher = scrollMonitor.create( heroElement, -80 );
 
@@ -3325,13 +3351,15 @@ function heroWatcherIntro() {
     .add({
       targets: '.js-hero-watch .s-n-left',
       scale: [0,1],
+      translateY: [2,2],
       offset: 300,
       duration: 300
     })
     .add({
       targets: '.js-hero-watch .s-n-right',
       scaleY: [0,1],
-      offset: 500
+      translateY: [100,3],
+      offset: 700
     })
 }
 
@@ -3434,6 +3462,7 @@ function programWatcherIntro() {
     .add({
       targets: '.js-program-watch .s-triangle',
       scaleY: [0,1],
+      translateY: [1,1],
       offset: 1200
     })
     .add({

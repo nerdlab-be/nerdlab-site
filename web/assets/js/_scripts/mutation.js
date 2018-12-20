@@ -157,13 +157,15 @@ function heroWatcherIntro() {
     .add({
       targets: '.js-hero-watch .s-n-left',
       scale: [0,1],
+      translateY: [2,2],
       offset: 300,
       duration: 300
     })
     .add({
       targets: '.js-hero-watch .s-n-right',
       scaleY: [0,1],
-      offset: 500
+      translateY: [100,3],
+      offset: 700
     })
 }
 
@@ -266,6 +268,7 @@ function programWatcherIntro() {
     .add({
       targets: '.js-program-watch .s-triangle',
       scaleY: [0,1],
+      translateY: [1,1],
       offset: 1200
     })
     .add({

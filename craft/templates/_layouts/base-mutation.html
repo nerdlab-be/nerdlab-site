@@ -27,7 +27,7 @@
   <meta property="og:url" content="{{ craft.app.request.absoluteUrl }}" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="{{ fb.title }}" />
-  {% if craft.request.getPath() == "schedule" %}
+  {% if craft.app.request.pathInfo() == "schedule" %}
     <meta property="og:image" content="https://nerdlab.be/mutation/images/facebook-og-schedule.jpg" />
   {% else %}
     <meta property="og:image" content="https://nerdlab.be/mutation/images/facebook-og-twitter-card.jpg" />
@@ -44,7 +44,7 @@
   <meta name="twitter:url" content="{{ craft.app.request.absoluteUrl }}" />
   <meta name="twitter:title" content="{{ tw.title }}" />
   <meta name="twitter:description" content="{{ tw.description }}" />
-  {% if craft.request.getPath() == "schedule" %}
+  {% if craft.app.request.pathInfo() == "schedule" %}
     <meta name="twitter:image" content="https://nerdlab.be/mutation/images/facebook-og-schedule.jpg" />
   {% else %}
     <meta name="twitter:image" content="https://nerdlab.be/mutation/images/facebook-og-twitter-card.jpg" />

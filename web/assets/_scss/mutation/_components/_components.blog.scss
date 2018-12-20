@@ -1,0 +1,15 @@
+
+.u-spacer {
+  & + & {
+    margin-top: $unit;
+    padding-top: $unit;
+    border-top: 2px dotted $white;
+  }
+
+  @include mq(medium) {
+    & + & {
+      margin-top: $unit + $unit-small;
+      padding-top: $unit + $unit-small;
+    }
+  }
+}

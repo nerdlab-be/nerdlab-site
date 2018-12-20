@@ -16,4 +16,5 @@ return [
     'Tuin' => 'Tuin',
     'Backstage' => 'Backstage',
     'Soldout' => 'Soldout',
+    'More' => 'Read more',
 ];

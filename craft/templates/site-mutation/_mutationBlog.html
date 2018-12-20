@@ -3,9 +3,13 @@
  # ------------------------
 -#}
 
-{% extends "_layouts/mutation" %}
+{% extends "_layouts/mutation-holder" %}
 
 {% block main %}
+
+
+{% include '_components/components.mutation-illustration.html' %}
+{% include '_components/components.mutation-intro.html' %}
 {% include '_components/components.blog-overview.html' %}
 
 {% endblock %}

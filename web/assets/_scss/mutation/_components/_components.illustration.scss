@@ -58,7 +58,7 @@
 }
 
 .js-hero-watch .s-n-right {
-  transform: scaleY(0);
+  transform: scaleY(0) translateY(3px);
 }
 
 .s-talt-top {
@@ -155,6 +155,7 @@
 
   .c-illustration__right-top {
     position: absolute;
+    z-index: $z-index-beta;
     width: 60px;
     right: 0;
     top: $unit-huge;
@@ -182,6 +183,7 @@
 
   .c-illustration__right-bottom {
     position: absolute;
+    z-index: $z-index-beta;
     width: 160px;
     right: $unit-huge;
     bottom: $unit-large;

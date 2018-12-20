@@ -57,6 +57,22 @@
   }
 }
 
+.c-button--negative-alt {
+  padding-left: 0;
+  background-color: transparent;
+  transition: color $global-duration $global-easing;
+
+  &,
+  &:active {
+    color: $yellow;
+  }
+
+  &:hover,
+  &:focus {
+    color: tint($yellow,50);
+  }
+}
+
 .c-button--cookie {
   position: relative;
   top: -2px;

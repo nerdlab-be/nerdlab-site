@@ -1,0 +1,32 @@
+<header class="o-row c-theme-neutral">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="c-header">
+      <div class="c-header__group">
+        <div>
+          {% include '_elements/elements.logo-mutation.html' %}
+        </div>
+        <nav class="c-header__link">
+          <ul class="o-list-bare c-nav">
+            <li class="c-nav__item">
+              <a href="/mutation/2018/" class="c-nav__link c-nav__link--special">{{ mutationGlobals.mutationLink }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <ul class="o-list-inline c-nav-language c-header__language">
+      {% for site in currentSite.group.sites %}
+        {% set current = (currentSite.name == site.name) ? 'is-active' : '' %}
+        <li class="o-list-inline__item">
+          <a href="{{ alias(site.baseUrl) }}" class="c-nav-language__link {{ current }}">
+            {% if loop.first %}
+            NL
+            {% else %}
+            EN
+            {% endif %}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</header>

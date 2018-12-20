@@ -9,6 +9,11 @@
 
   .c-split__background {
     position: absolute;
+    z-index: $z-index-beta;
+
+    svg {
+      z-index: $z-index-beta;
+    }
 
     @include mq(medium) {
       display: block;
