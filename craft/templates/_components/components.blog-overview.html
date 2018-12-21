@@ -43,46 +43,48 @@
     </svg>
   </span>
   <div class="o-wrapper o-wrapper--huge">
-    {% for item in entries %}
-    <article class="u-spacer">
-      <div class="c-card c-card--link js-link-expand-holder">
-        <div class="o-layout o-layout--small">
-          <div class="o-layout__item u-1/3@small u-1/4@medium u-1/3@large u-padding-bottom u-padding-bottom-none@small">
-            <div class="c-card__image">
-            {% for image in item.image.all() %}
-              <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
-                <img
-                  class="o-crop__content o-crop__content--center lazyload fade-in"
-                  src="{{ image.url(thumb) }}"
-                  data-srcset="{{ image.url(large) }}"
-                  alt="{{ image.title }}">
+    <ul class="o-list-bare">
+      {% for item in entries %}
+      <li class="o-list-bare__item u-divider">
+        <article class="c-card c-card--link js-link-expand-holder">
+          <div class="o-layout o-layout--small">
+            <div class="o-layout__item u-1/3@small u-1/4@medium u-1/3@large u-padding-bottom u-padding-bottom-none@small">
+              <div class="c-card__image">
+              {% for image in item.image.all() %}
+                <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
+                  <img
+                    class="o-crop__content o-crop__content--center lazyload fade-in"
+                    src="{{ image.url(thumb) }}"
+                    data-srcset="{{ image.url(large) }}"
+                    alt="{{ image.title }}">
+                </div>
+                {% endfor %}
               </div>
-              {% endfor %}
+            </div>
+            <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
+              <div class="c-card__body c-editor u-mw">
+                {% for block in item.mutationAbout.all() %}
+                {% switch block.type %}
+                {% case "heading" %}
+                <h2 class="c-subtitle"><a href="{{ item.url }}" class="c-link c-link--bare js-link-expand__target">{{ block.heading | raw }}</a></h2>
+                {% case "editor" %}
+                  {{ block.editor }}
+                {% case "paragraph" %}
+                {{ block.paragraph }}
+                {% endswitch %}
+                {% endfor %}
+                <p class="u-margin-top u-margin-bottom-none">
+                  <span class="c-link c-link--none js-link-expand">
+                    {{ "More" | t }}
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
-          <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
-            <div class="c-card__body c-editor u-mw">
-              {% for block in item.mutationAbout.all() %}
-              {% switch block.type %}
-              {% case "heading" %}
-              <h2 class="c-subtitle"><a href="{{ item.url }}" class="c-link c-link--bare js-link-expand__target">{{ block.heading | raw }}</a></h2>
-              {% case "editor" %}
-                {{ block.editor }}
-              {% case "paragraph" %}
-              {{ block.paragraph }}
-              {% endswitch %}
-              {% endfor %}
-              <p class="u-margin-top u-margin-bottom-none">
-                <span class="c-link c-link--none js-link-expand">
-                  {{ "More" | t }}
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-    {% endfor %}
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
     {# Build pagination interface if more than 1 page
     {% if paginate.totalPages > 1 %}
       <ul class="o-list-bare c-pagination">

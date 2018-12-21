@@ -92,9 +92,93 @@
     }
   }
 
+  blockquote {
+    color: $color-primary;
+    position: relative;
+    margin-bottom: $unit-large;
+    margin-top: $unit-large;
+    padding-top: $unit-large;
+    padding-bottom: $unit-large + $unit-small;
+    background-color: $color-primary-xlight;
+  }
+
+  blockquote::after,
+  blockquote::before {
+    content: '';
+    display: block;
+    background-color: $color-primary-xlight;
+    position: absolute;
+    top: 0;
+    width: $unit;
+    height: 100%;
+  }
+
+  blockquote::after {
+    right: -$unit;
+  }
+
+  blockquote::before {
+    left: -$unit;
+  }
+
+  blockquote p {
+    @include font-size($font-h3,1.5);
+    font-weight: $font-bold;
+    margin-bottom: 0;
+    max-width: 27em;
+  }
+
+  blockquote p::before {
+    content: '“'
+  }
+
+  blockquote p::after {
+    content: '”'
+  }
+
+  blockquote footer {
+    @include font-size($font-small);
+    margin-top: $unit-small;
+  }
+
+  @include mq(small) {
+    blockquote p {
+      @include font-size($font-h3,1.5);
+    }
+  }
+
   @include mq(medium) {
     p {
       @include font-size($font-h5);
+    }
+
+    blockquote p {
+      @include font-size($font-h2,1.5);
+      font-weight: $font-bold;
+    }
+
+    blockquote {
+      padding-top: $unit-large + $unit-small;
+      padding-bottom: $unit-large + $unit-small  + $unit-small;
+      margin-bottom: $unit-large;
+      margin-top: $unit-large;
+    }
+
+    blockquote footer {
+      @include font-size($font-h6);
+    }
+
+    blockquote::after,
+    blockquote::before {
+      width: $unit-large;
+    }
+
+    blockquote::after {
+      right: -$unit-large;
+    }
+
+    blockquote::before {
+      left: -$unit-large;
     }
   }
 }

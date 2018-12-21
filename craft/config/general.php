@@ -31,11 +31,11 @@ return [
         // Dev Mode (see https://craftcms.com/support/dev-mode)
        'devMode' => true,
 
-       //Aliases
-       'aliases' => [
-        '@assetBasePath' => getenv('ASSET_BASE_PATH'),
-        '@assetPublicPath' => getenv('ASSET_PUBLIC_PATH')
-    ]
+        //Aliases
+        'aliases' => [
+          '@assetBasePath' => getenv('ASSET_BASE_PATH'),
+          '@assetPublicPath' => getenv('ASSET_PUBLIC_PATH')
+        ]
     ],
 
     // Local environment settings

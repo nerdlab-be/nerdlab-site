@@ -224,9 +224,14 @@
   }
 }
 
-.c-small {
+.c-small,
+.c-editor .c-small {
   @include font-size($font-small);
   margin-bottom: 0;
+}
+
+.c-editor .c-small {
+  color: $color-neutral-light;
 }
 
 .c-tag {

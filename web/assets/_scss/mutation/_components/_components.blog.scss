@@ -1,5 +1,5 @@
 
-.u-spacer {
+.u-divider {
   & + & {
     margin-top: $unit;
     padding-top: $unit;
@@ -10,6 +10,42 @@
     & + & {
       margin-top: $unit + $unit-small;
       padding-top: $unit + $unit-small;
+    }
+  }
+}
+
+.u-spacer {
+  & + & {
+    margin-top: $unit + $unit-small;
+  }
+
+  @include mq(medium) {
+    & + & {
+      margin-top: $unit-large + $unit;
+    }
+  }
+}
+
+.u-spacer--small {
+  & + .u-spacer {
+    margin-top: $unit;
+  }
+
+  @include mq(medium) {
+    & + .u-spacer {
+      margin-top: $unit + $unit-small;
+    }
+  }
+}
+
+.u-spacer--tiny {
+  & + .u-spacer {
+    margin-top: $unit-tiny;
+  }
+
+  @include mq(medium) {
+    & + .u-spacer {
+      margin-top: $unit-small;
     }
   }
 }
