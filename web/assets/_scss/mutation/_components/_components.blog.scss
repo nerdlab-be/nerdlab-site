@@ -93,3 +93,15 @@
         grid-column: auto / span 1;
       }
     }
+
+.c-video {
+  margin-right: $unit-tiny;
+  margin-bottom: $unit-small;
+  box-shadow: $unit-tiny $unit-tiny 0 $color-primary-xlight;
+
+  @include mq(medium) {
+    margin-right: $unit-large;
+    margin-bottom: $unit + $unit-small;
+   box-shadow: $unit $unit 0 $color-primary-xlight;
+  }
+}
