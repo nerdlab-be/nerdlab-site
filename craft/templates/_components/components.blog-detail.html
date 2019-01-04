@@ -138,12 +138,12 @@
         <div class="o-crop o-crop--1:1">
           <img
             class="o-crop__content o-crop__content--center lazyload fade-in"
-            src="{{ image.url(thumb) }}"
+            src="{{ image.url(thumbSquare) }}"
             data-sizes="auto"
-            data-srcset="{{ image.url(small) }} 1w,
-                          {{ image.url(medium) }} 301w,
-                          {{ image.url(large) }} 501w,
-                          {{ image.url(xlarge) }} 801w"
+            data-srcset="{{ image.url(smallSquare) }} 1w,
+                          {{ image.url(mediumSquare) }} 301w,
+                          {{ image.url(largeSquare) }} 501w,
+                          {{ image.url(xlargeSquare) }} 801w"
             alt="{{ image.title }}">
         </div>
       </div>
