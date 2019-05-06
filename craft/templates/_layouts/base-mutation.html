@@ -72,8 +72,6 @@
 </head>
 <body>
   {# Cookie notice #}
-  {% if craft.doNotTrack.isEnabled %}
-  {% else %}
   {% if getCookie('PrivacyNotice') %}
   {% else %}
     <div class="c-theme-secondary-negative js-privacy">
@@ -87,7 +85,6 @@
         </div>
       </div>
     </div>
-  {% endif %}
   {% endif %}
   {# Analytics #}
   {% include "_globals/globals.gtm-body" %}
