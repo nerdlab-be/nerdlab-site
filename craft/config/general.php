@@ -31,10 +31,15 @@ return [
         // Dev Mode (see https://craftcms.com/support/dev-mode)
        'devMode' => true,
 
+       'useProjectConfigFile' => true,
+
         //Aliases
         'aliases' => [
           '@assetBasePath' => getenv('ASSET_BASE_PATH'),
-          '@assetPublicPath' => getenv('ASSET_PUBLIC_PATH')
+          '@assetPublicPath' => getenv('ASSET_PUBLIC_PATH'),
+          '@rootUrl' => getenv('ROOT_URL'),
+          '@mutationNlUrl' => getenv('MUTATION_NL_URL'),
+          '@mutationEnUrl' => getenv('MUTATION_EN_URL')
         ]
     ],
 
