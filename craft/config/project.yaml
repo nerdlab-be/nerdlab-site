@@ -1,4 +1,4 @@
-dateModified: 1557152566
+dateModified: 1557152878
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -488,18 +488,18 @@ fields:
     translationKeyFormat: null
     type: ether\seo\fields\SeoField
     settings:
-      titleSuffix: '{{ page.title }} | Nerdlab'
-      suffixAsPrefix: ''
+      titleSuffix: null
+      suffixAsPrefix: null
       title:
         -
           key: '1'
+          locked: '0'
           template: '{title}'
-          locked: false
         -
           key: '2'
-          template: ' {{ page.title }} | {{siteName}}'
-          locked: true
-      description: null
+          locked: '1'
+          template: ' | {{siteName}}'
+      description: ''
       socialImage:
         - '39'
       hideSocial: ''
@@ -5092,11 +5092,6 @@ sections:
         hasUrls: true
         uriFormat: '404'
         template: '404'
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: '404'
-        template: '404'
       8e92c4bf-d4fb-49f5-9833-4e91fb775669:
         enabledByDefault: true
         hasUrls: true
@@ -5295,11 +5290,6 @@ sections:
         hasUrls: true
         uriFormat: algemene-voorwaarden
         template: site-nerdlab/_conditions
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: general-conditions
-        template: site-mutation/_conditions
       8e92c4bf-d4fb-49f5-9833-4e91fb775669:
         enabledByDefault: true
         hasUrls: true
@@ -5479,11 +5469,6 @@ sections:
         hasUrls: true
         uriFormat: cookie-verklaring
         template: site-nerdlab/_cookie
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: cookie-statement
-        template: site-mutation/_cookie
       8e92c4bf-d4fb-49f5-9833-4e91fb775669:
         enabledByDefault: true
         hasUrls: true
@@ -5531,11 +5516,6 @@ sections:
         hasUrls: true
         uriFormat: privacy-verklaring
         template: site-nerdlab/_privacy
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: privacy-statement
-        template: site-mutation/_privacy
       8e92c4bf-d4fb-49f5-9833-4e91fb775669:
         enabledByDefault: true
         hasUrls: true
@@ -5546,52 +5526,6 @@ sections:
         hasUrls: true
         uriFormat: privacy-statement
         template: site-mutation/_privacy-holder
-  559e8569-55ae-4917-8dd1-f80d6638f4b6:
-    name: Mutation
-    handle: mutation
-    type: single
-    enableVersioning: true
-    propagateEntries: true
-    entryTypes:
-      47883e6c-f578-411d-b275-8e4a3195d150:
-        name: Mutation
-        handle: mutation
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          fd614b22-1532-4886-8762-cf7fe9e5ad99:
-            tabs:
-              -
-                name: Mutation
-                sortOrder: 1
-                fields:
-                  f7a30764-781d-4f99-b052-e9a222f835c3:
-                    required: false
-                    sortOrder: 1
-                  7ebd46bb-fc88-43e1-b7be-d5247837667d:
-                    required: false
-                    sortOrder: 2
-                  70ba9ca2-3a15-457d-aa8c-c00f3ce7e037:
-                    required: false
-                    sortOrder: 3
-                  a453ad43-52cd-47c0-bb1d-66e320db251d:
-                    required: false
-                    sortOrder: 4
-              -
-                name: Meta
-                sortOrder: 2
-                fields:
-                  f84689f7-6038-460e-9fda-f01a17d00956:
-                    required: false
-                    sortOrder: 1
-    siteSettings:
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: __home__
-        template: site-mutation/_index
   d0e90894-de7c-4502-9cda-d972eca9bd99:
     name: 'Site credits'
     handle: siteCredits
@@ -5625,11 +5559,6 @@ sections:
                     sortOrder: 1
     siteSettings:
       603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: site-credits
-        template: site-mutation/_site-credits
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
         enabledByDefault: true
         hasUrls: true
         uriFormat: site-credits
@@ -6235,15 +6164,6 @@ sites:
     baseUrl: $ROOT_URL
     sortOrder: 1
     primary: true
-  d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-    siteGroup: 236d7459-4a44-45bd-95b4-484013115e4c
-    name: 'Mutation 2018 (EN)'
-    handle: mutation2018en
-    language: en
-    hasUrls: true
-    baseUrl: $MUTATION2018_EN_URL
-    sortOrder: 4
-    primary: false
   8e92c4bf-d4fb-49f5-9833-4e91fb775669:
     siteGroup: 97f02ac8-737c-4c35-9376-16164cd596a6
     name: 'Mutation (NL)'
