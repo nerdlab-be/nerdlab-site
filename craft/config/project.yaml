@@ -1,4 +1,4 @@
-dateModified: 1557152878
+dateModified: 1557154491
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -4660,17 +4660,32 @@ plugins:
       sitemapName: sitemap
       sitemapLimit: '1000'
       titleSuffix: '| Nerdlab'
+      title:
+        -
+          key: '1'
+          locked: '0'
+          template: '{title}'
+        -
+          key: '2'
+          locked: '1'
+          template: ' | {{ siteName }}'
+      description: ''
       socialImage:
         - '39'
       metaTemplate: ''
+      robots:
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+        - ''
+      robotsTxt: "{# Sitemap URL #}\r\nSitemap: {{ url(seo.sitemapName ~ '.xml') }}\r\n\r\n{# Disallows #}\r\n{% if craft.app.config.env != 'production' %}\r\n\r\n{# Disallow access to everything when NOT in production #}\r\nUser-agent: *\r\nDisallow: /\r\n\r\n{% else %}\r\n\r\n{# Disallow access to cpresources/ when live #}\r\nUser-agent: *\r\nDisallow: /cpresources/\r\n\r\n{% endif %}"
+      facebookAppId: ''
+      twitterHandle: ''
     licenseKey: null
     enabled: '1'
     schemaVersion: 3.1.0
-  architect:
-    settings: null
-    licenseKey: null
-    enabled: '1'
-    schemaVersion: 2.0.0
   schema:
     settings: null
     licenseKey: null
@@ -4692,11 +4707,6 @@ plugins:
     enabled: '1'
     schemaVersion: 1.0.2
   cookies:
-    settings: null
-    licenseKey: null
-    enabled: '1'
-    schemaVersion: 1.0.0
-  do-not-track:
     settings: null
     licenseKey: null
     enabled: '1'
