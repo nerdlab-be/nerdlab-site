@@ -35,8 +35,6 @@
 </head>
 <body>
   {# Cookie notice #}
-  {% if craft.doNotTrack.isEnabled %}
-  {% else %}
   {% if getCookie('PrivacyNotice') %}
   {% else %}
     <div class="c-privacy js-privacy">
@@ -50,7 +48,6 @@
         </div>
       </div>
     </div>
-  {% endif %}
   {% endif %}
   {# Analytics #}
   {% include "_globals/globals.gtm-body" %}

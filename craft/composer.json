@@ -29,13 +29,11 @@
     "ether/simplemap": "3.4.11",
     "barrelstrength/sprout-active": "2.1.0",
     "nystudio107/craft-minify": "1.2.9",
-    "pennebaker/craft-architect": "2.3.1",
     "ether/seo": "3.5.4",
     "rias/craft-schema": "1.0.3",
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "craftcms/store-hours": "2.1.1.1",
     "rias/craft-position-fieldtype": "1.0.14",
-    "wildbit/craft3-donottrack": "1.0.0",
     "nystudio107/craft-cookies": "1.1.11"
   },
   "autoload": {
