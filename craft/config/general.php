@@ -31,15 +31,16 @@ return [
         // Dev Mode (see https://craftcms.com/support/dev-mode)
        'devMode' => true,
 
+        // Enable project config
        'useProjectConfigFile' => true,
 
         //Aliases
         'aliases' => [
-          '@assetBasePath' => getenv('ASSET_BASE_PATH'),
-          '@assetPublicPath' => getenv('ASSET_PUBLIC_PATH'),
           '@rootUrl' => getenv('ROOT_URL'),
           '@mutationNlUrl' => getenv('MUTATION_NL_URL'),
-          '@mutationEnUrl' => getenv('MUTATION_EN_URL')
+          '@mutationEnUrl' => getenv('MUTATION_EN_URL'),
+          '@assetBasePath' => getenv('ASSET_BASE_PATH'),
+          '@assetPublicPath' => getenv('ASSET_PUBLIC_PATH')
         ]
     ],
 
@@ -63,19 +64,19 @@ return [
 
     // Staging environment settings
     'staging' => [
-        // Base site URL
-        'siteUrl' => null,
+      // Base site URL
+      'siteUrl' => null,
 
-        // Dev Mode (see https://craftcms.com/support/dev-mode)
-        'devMode' => true
+      // Dev Mode (see https://craftcms.com/support/dev-mode)
+      'devMode' => true
     ],
 
     // Production environment settings
     'production' => [
-        // Base site URL
-        'siteUrl' => null,
+      // Base site URL
+      'siteUrl' => null,
 
-        // Dev Mode (see https://craftcms.com/support/dev-mode)
-        'devMode' => true
+      // Dev Mode (see https://craftcms.com/support/dev-mode)
+      'devMode' => true
     ],
 ];
