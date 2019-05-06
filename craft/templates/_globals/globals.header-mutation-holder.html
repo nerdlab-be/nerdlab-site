@@ -14,14 +14,15 @@
         </nav>
       </div>
       <ul class="o-list-inline c-nav-language c-header__language">
-      {% for site in currentSite.group.sites %}
-        {% set current = (currentSite.name == site.name) ? 'is-active' : '' %}
+      {% for sites in currentSite.group.sites %}
+        {% set current = (currentSite.name == sites.name) ? 'is-active' : '' %}
         <li class="o-list-inline__item">
-          <a href="{{ alias(site.baseUrl) }}" class="c-nav-language__link {{ current }}">
+          {% set currentUrl = alias(sites.baseUrl) %}
+          <a href="{{ getenv(currentUrl | trim('$')) }}" class="c-nav-language__link {{ current }}">
             {% if loop.first %}
-            NL
+            {{ sites.language | upper }}
             {% else %}
-            EN
+            {{ sites.language | upper }}
             {% endif %}
           </a>
         </li>
