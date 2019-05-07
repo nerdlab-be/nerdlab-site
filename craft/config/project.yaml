@@ -1,4 +1,4 @@
-dateModified: 1557240943
+dateModified: 1557241144
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -1485,7 +1485,7 @@ fields:
     handle: labelNext
     instructions: ''
     searchable: true
-    translationMethod: none
+    translationMethod: language
     translationKeyFormat: null
     type: craft\fields\PlainText
     settings:
