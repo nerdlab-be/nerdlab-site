@@ -19,15 +19,14 @@
 {% endif %}
 
 {# -- Module -- #}
-{% set pageEntries = craft.entries.section('events').orderBy('date asc') %}
+{% set pageEntries = craft.entries.section('events').orderBy('date desc').limit(5).all() %}
 
-{% for item in pageEntries.all() if item.date|date('Ymd') >= now|date('Ymd') %}
-{% if loop.first %}
 <div class="o-row-large u-border-top c-illustration">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
       <div class="o-layout__item u-1/2@medium u-push-1/2@medium">
         <h2 class="c-h2">{{ labels.labelUpcomingEvent }}</h2>
+        {% for item in pageEntries | reverse if item.date|date('Ymd') >= now|date('Ymd') %}
         <article class="u-divider-small">
           {% if item.customDate | length() %}
           <p class="c-faded u-margin-bottom-tiny">
@@ -61,6 +60,7 @@
             {% endif %}
           </div>
         </article>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -69,5 +69,6 @@
       src="/assets/images/jpg/agenda-alt-thumb.jpg" alt="agenda-illustration" data-src="/assets/images/jpg/agenda-alt.jpg" class="lazyload fade-in">
   </div>
 </div>
-{% endif %}
-{% endfor %}
+
+
+{# if item.date|date('Ymd') >= now|date('Ymd') #}
