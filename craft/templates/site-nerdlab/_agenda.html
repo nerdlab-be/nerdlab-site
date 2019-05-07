@@ -8,18 +8,39 @@
 {% block main %}
 <div class="o-row-intro">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout o-layout--large o-layout--spacer">
-      <div class="o-layout__item u-1/2@large">
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@large">
         {# Title #}
         <h1 class="c-h1">{{ entry.title }}</h1>
         {% include '_components/components.intro.html' %}
       </div>
-      <div class="o-layout__item u-1/2@large">
-        <div class="s-content u-max-width-md">
-          {# Agenda overview #}
-          {% include '_components/components.agenda-overview.html' %}
-        </div>
+    </div>
+  </div>
+</div>
+
+{# Agenda overview #}
+<div class="o-row-large u-border-top c-illustration">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-1/2@medium u-push-1/2@medium">
+        <h2 class="c-h2">Binnenkort</h2>
+        {% include '_components/components.agenda-overview.html' %}
       </div>
+    </div>
+  </div>
+  <div class="c-illustration__left-center">
+    <img
+      src="/assets/images/jpg/agenda-alt-thumb.jpg" alt="agenda-illustration" data-src="/assets/images/jpg/agenda-alt.jpg" class="lazyload fade-in">
+  </div>
+</div>
+
+{# Agenda finished #}
+<div class="o-row-large u-border-top" id="archive">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="s-content u-max-width-md">
+      <h2 class="c-h2">Afgelopen</h2>
+      {# Agenda overview #}
+      {% include '_components/components.agenda-archive.html' %}
     </div>
   </div>
 </div>
