@@ -66,7 +66,7 @@
 {% if paginate.totalPages > 1 %}
 <ul class="o-list-bare c-pagination">
   {% if paginate.prevUrl %}
-    <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ paginate.prevUrl }}#archive" class="c-pagination__link">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} <span>Vorige pagina</span></a></li>
+    <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ paginate.prevUrl }}#archive" class="c-pagination__link">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} <span>{{ labels.labelPrevious }}</span></a></li>
   {% endif %}
 
   {% for page, url in paginate.getPrevUrls(2) %}
@@ -80,7 +80,7 @@
   {% endfor %}
 
   {% if paginate.nextUrl %}
-    <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ paginate.nextUrl }}#archive"  class="c-pagination__link"><span>Volgende</span> {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
+    <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ paginate.nextUrl }}#archive"  class="c-pagination__link"><span>{{ labels.labelNext }}</span> {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
   {% endif %}
 </ul>
 {% endif %}

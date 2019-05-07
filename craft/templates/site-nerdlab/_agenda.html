@@ -23,7 +23,7 @@
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
       <div class="o-layout__item u-1/2@medium u-push-1/2@medium">
-        <h2 class="c-h2">Binnenkort</h2>
+        <h2 class="c-h2">{{ labels.labelSoon }}</h2>
         {% include '_components/components.agenda-overview.html' %}
       </div>
     </div>
@@ -38,7 +38,7 @@
 <div class="o-row-large u-border-top" id="archive">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-content u-max-width-md">
-      <h2 class="c-h2">Afgelopen</h2>
+      <h2 class="c-h2">{{ labels.labelPassed }}</h2>
       {# Agenda overview #}
       {% include '_components/components.agenda-archive.html' %}
     </div>
