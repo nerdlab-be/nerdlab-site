@@ -1,4 +1,4 @@
-dateModified: 1557236662
+dateModified: 1557240943
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -1429,6 +1429,74 @@ fields:
       localizeBlocks: ''
     fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0
     contentColumnType: string
+  49744b70-1586-4913-916d-9b25ac2bfd5b:
+    name: 'Agenda: binnenkort'
+    handle: labelSoon
+    instructions: ''
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20
+  d48f1cb0-3b3e-4087-919d-db1387123a42:
+    name: 'Agenda: afgelopen'
+    handle: labelPassed
+    instructions: ''
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20
+  d0236174-8e73-4aa9-992f-de61c385a871:
+    name: Vorige
+    handle: labelPrevious
+    instructions: ''
+    searchable: true
+    translationMethod: language
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20
+  e414d745-cb0c-4a5d-a611-88ca06baa3ce:
+    name: Volgende
+    handle: labelNext
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20
 globalSets:
   34840bd5-28aa-45b2-ac2e-e954e8712bd1:
     name: Interface
@@ -1491,45 +1559,57 @@ globalSets:
               283d7fce-9d3d-4dbf-87e4-5528a5ef4737:
                 required: false
                 sortOrder: 1
-              005bd721-afc6-4865-8330-4cefcb1ebf02:
+              49744b70-1586-4913-916d-9b25ac2bfd5b:
                 required: false
                 sortOrder: 2
-              76e830dc-333c-442a-8e51-310f4df9772b:
+              d48f1cb0-3b3e-4087-919d-db1387123a42:
                 required: false
                 sortOrder: 3
-              58d1c94f-4fce-49fb-a6ab-83e45621a8f9:
+              e414d745-cb0c-4a5d-a611-88ca06baa3ce:
                 required: false
                 sortOrder: 4
-              9ddba75f-4179-4e4d-a660-50ea36824b53:
+              d0236174-8e73-4aa9-992f-de61c385a871:
                 required: false
                 sortOrder: 5
-              b5fbdec4-0eb8-40be-a321-3ddb97543fee:
+              005bd721-afc6-4865-8330-4cefcb1ebf02:
                 required: false
                 sortOrder: 6
-              5fe30f3a-2a2e-4d7c-a0ad-db73ae8d8f5a:
+              76e830dc-333c-442a-8e51-310f4df9772b:
                 required: false
                 sortOrder: 7
-              282cb2c5-d308-41f2-8c94-93396d1377c6:
+              58d1c94f-4fce-49fb-a6ab-83e45621a8f9:
                 required: false
                 sortOrder: 8
-              89b245b1-06d5-4902-9a5b-f6897cadf2d9:
+              9ddba75f-4179-4e4d-a660-50ea36824b53:
                 required: false
                 sortOrder: 9
-              a9ad49fc-fcb4-4188-b086-a456b4bb6187:
+              b5fbdec4-0eb8-40be-a321-3ddb97543fee:
                 required: false
                 sortOrder: 10
-              a2c0bed3-84fe-40b9-9dfc-ae06502e5536:
+              5fe30f3a-2a2e-4d7c-a0ad-db73ae8d8f5a:
                 required: false
                 sortOrder: 11
-              4c2faa96-9b8f-4159-a93f-0005e0f6dac8:
+              282cb2c5-d308-41f2-8c94-93396d1377c6:
                 required: false
                 sortOrder: 12
-              9a2e9858-d266-43c4-a998-5b27bea6738f:
+              89b245b1-06d5-4902-9a5b-f6897cadf2d9:
                 required: false
                 sortOrder: 13
-              addf580f-4887-4a29-a983-421fe1631a61:
+              a9ad49fc-fcb4-4188-b086-a456b4bb6187:
                 required: false
                 sortOrder: 14
+              a2c0bed3-84fe-40b9-9dfc-ae06502e5536:
+                required: false
+                sortOrder: 15
+              4c2faa96-9b8f-4159-a93f-0005e0f6dac8:
+                required: false
+                sortOrder: 16
+              9a2e9858-d266-43c4-a998-5b27bea6738f:
+                required: false
+                sortOrder: 17
+              addf580f-4887-4a29-a983-421fe1631a61:
+                required: false
+                sortOrder: 18
   f81da93f-a409-48b0-9f36-032b8e60f8e7:
     name: Mutation
     handle: mutationGlobals
