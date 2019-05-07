@@ -28,11 +28,11 @@ return [
         'backupCommand' => false,
         'backupOnUpdate' => false,
 
-        // Dev Mode (see https://craftcms.com/support/dev-mode)
-       'devMode' => true,
-
         // Enable project config
-       'useProjectConfigFile' => true,
+        'useProjectConfigFile' => true,
+
+        // Dev Mode (see https://craftcms.com/support/dev-mode)
+        'devMode' => true,
 
         //Aliases
         'aliases' => [
@@ -45,38 +45,20 @@ return [
     ],
 
     // Local environment settings
-    'local' => [
-      // Base site URL
-      'siteUrl' => null,
-
-      // Dev Mode (see https://craftcms.com/support/dev-mode)
-      'devMode' => true
-    ],
-
-    // Dev environment settings
     'dev' => [
       // Base site URL
-      'siteUrl' => null,
-
-      // Dev Mode (see https://craftcms.com/support/dev-mode)
-      'devMode' => true
+      'siteUrl' => null
     ],
 
     // Staging environment settings
     'staging' => [
       // Base site URL
-      'siteUrl' => null,
-
-      // Dev Mode (see https://craftcms.com/support/dev-mode)
-      'devMode' => true
+      'siteUrl' => null
     ],
 
     // Production environment settings
     'production' => [
       // Base site URL
-      'siteUrl' => null,
-
-      // Dev Mode (see https://craftcms.com/support/dev-mode)
-      'devMode' => true
+      'siteUrl' => null
     ],
 ];
