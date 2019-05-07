@@ -1,4 +1,4 @@
-dateModified: 1557155387
+dateModified: 1557236662
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -4648,7 +4648,7 @@ plugins:
   cp-field-inspect:
     settings: null
     licenseKey: null
-    enabled: '0'
+    enabled: true
     schemaVersion: 1.0.0
   minify:
     settings: null
@@ -4723,7 +4723,7 @@ sections:
         name: Home
         handle: home
         hasTitleField: false
-        titleLabel: null
+        titleLabel: ''
         titleFormat: '{section.name|raw}'
         sortOrder: 1
         fieldLayouts:
@@ -4739,12 +4739,9 @@ sections:
                   a3ea3712-4718-48e9-ad57-ee76e05249f0:
                     required: false
                     sortOrder: 2
-                  15d993c6-f301-48fe-9c40-3e0ae70fbf85:
-                    required: false
-                    sortOrder: 3
                   8e6ba498-a6d2-46b8-a636-6faa9d3dc9a2:
                     required: false
-                    sortOrder: 4
+                    sortOrder: 3
               -
                 name: Meta
                 sortOrder: 2
