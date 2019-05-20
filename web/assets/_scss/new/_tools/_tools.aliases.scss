@@ -27,7 +27,8 @@ $small: $inuit-font-size-small;
 $tiny: $inuit-font-size-tiny;
 
 // Font settings
-$font: $inuit-font-family-primary;
+$font-primary: $inuit-font-family-primary;
+$font-secondary: $inuit-font-family-primary;
 $regular: $inuit-font-weight-regular;
 $medium: $inuit-font-weight-medium;
 $bold: $inuit-font-weight-bold;
@@ -37,3 +38,5 @@ $radius: $global-radius;
 $duration: $global-duration;
 $easing: $global-easing;
 $transition: $global-transition;
+$outline: $inuit-outline;
+$outline-solid: $inuit-outline-solid;

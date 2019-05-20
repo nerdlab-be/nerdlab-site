@@ -6,12 +6,12 @@
 {% extends "_layouts/site" %}
 
 {% block main %}
-<div class="o-row-intro">
+<div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--large">
       <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
         <h1 class="c-h1">{{ entry.title }}</h1>
-        <div class="c-content c-content--intro u-margin-bottom-large">
+        <div class="s-editor s-editor--intro u-margin-bottom-large">
           {% for block in entry.body.all() %}
           {% switch block.type %}
           {% case "lead" %}
@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
-        <div class="c-content c-content--small">
+        <div class="s-editor s-editor--small">
           {% for block in entry.body.all() %}
           {% switch block.type %}
           {% case "paragraph" %}

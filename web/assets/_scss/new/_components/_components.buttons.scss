@@ -1,62 +1,32 @@
-/* ==================================
+/* ==========================================================================
    #BUTTONS
-   ================================== */
+   ========================================================================== */
 
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
 
-.c-btn {
-  display: inline-block;
-  vertical-align: middle;
-  font: inherit;
-  text-align: center;
-  margin: 0;
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+ .c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
   padding: $unit-small $unit;
-  transition: $transition;
-  border-radius: $radius;
-  border: 0;
-}
-
-.c-btn-reset {
-  font: inherit;
-  position: relative;
-  color: inherit;
-  border: 0;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
-
-  &:focus {
-    outline: 0;
-    box-shadow: inset 0 0 0 2px $color-neutral-xlight;
-  }
-}
-
-.c-btn-reset--large {
-  @include font-size($h2);
-}
-
-
-
-
-/* Size variants
-   ================================== */
-
-.c-btn--small {
-  @include font-size($tiny);
-  padding: $unit-tiny $unit-small;
-}
-
-.c-btn--large {
-  @include font-size($h6);
-  padding: $unit-small $unit;
-
-  @include mq(medium) {
-    @include font-size($h5);
-    padding: $unit-small * 1.5 $unit * 1.5;
-  }
-}
-
-.c-btn--block {
-  display: block;
+  transition: $global-transition;
+  border-radius: $unit-large;
+  font-weight: $medium;
 }
 
 
@@ -64,10 +34,10 @@
 
 
 /* Style variants
-   ================================== */
+   ========================================================================== */
 
 .c-btn--primary {
-  background-color: $color-primary;
+  background-color: $color-secondary;
 
   &,
   &:hover,
@@ -79,34 +49,62 @@
 
   &:hover,
   &:focus {
-    background-color: $color-primary-light;
+    background-color: $color-primary;
   }
 
 }
 
-.c-btn--secondary {
-  background-color: $color-secondary;
+.c-button--cookie {
+  @include font-size($h6);
+  border: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: $unit;
+  background-color: transparent;
+  transition: color $global-duration $global-easing;
 
   &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none;
+  &:active {
     color: $white;
   }
 
   &:hover,
   &:focus {
-    background-color: $color-secondary-light;
+    opacity: .8;
   }
 
+  @include mq(medium) {
+    @include font-size($h4);
+  }
 }
 
 
 
 
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-btn--small {
+  padding: $unit-tiny $unit-small;
+}
+
+.c-btn--large {
+  padding: $unit-small $unit;
+
+  @include mq(medium) {
+    @include font-size($h6);
+  }
+}
+
+
+
+
+
 /* Ghost buttons
-   ================================== */
+   ========================================================================== */
 
 /**
  * Ghost buttons have see-through backgrounds and are bordered.
@@ -116,7 +114,7 @@ $btn-ghost-border-width: 2px !default;
 
 .c-btn--ghost {
   border: $btn-ghost-border-width solid currentColor;
-  padding: ($inuit-global-spacing-unit-small - $btn-ghost-border-width) ($inuit-global-spacing-unit - $btn-ghost-border-width);
+  padding: ($unit-small - $btn-ghost-border-width) ($unit - $btn-ghost-border-width);
 
   &,
   &:hover,
@@ -126,52 +124,25 @@ $btn-ghost-border-width: 2px !default;
   }
 
   &.c-btn--small {
-    padding: ($inuit-global-spacing-unit-tiny - $btn-ghost-border-width) ($inuit-global-spacing-unit-small - $btn-ghost-border-width);
+    padding: ($unit-tiny - $btn-ghost-border-width) ($unit-small - $btn-ghost-border-width);
   }
 
   &.c-btn--large {
-    padding: ($inuit-global-spacing-unit - $btn-ghost-border-width) ($inuit-global-spacing-unit-large - $btn-ghost-border-width);
+    padding: ($unit/1.3 - $btn-ghost-border-width) ($unit - $btn-ghost-border-width);
   }
 
   &.c-btn--primary {
-    color: $color-primary;
-
-    &:hover,
-    &:focus {
-      color: $color-primary-light;
-    }
-
-  }
-
-  &.c-btn--secondary {
     color: $color-secondary;
+    background-color: $white;
+    border-color: $white;
 
     &:hover,
     &:focus {
-      color: $color-secondary-light;
+      color: $white;
+      border-color: $color-secondary;
+      background-color: $color-secondary;
     }
 
   }
 
-}
-
-
-
-
-
-/* Button groups
-   ================================== */
-
-.c-btn-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  .c-btn {
-    margin-right: $inuit-global-spacing-unit;
-  }
-
-  .c-link {
-    margin: $inuit-global-spacing-unit 0;
-  }
 }

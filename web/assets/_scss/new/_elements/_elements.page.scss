@@ -15,7 +15,7 @@
  */
 
  html {
-  font-family: $font;
+  font-family: $font-primary;
   font-size: ($inuit-global-font-size / 16px) * 1em; /* [1] */
   line-height: $inuit-global-line-height / $inuit-global-font-size; /* [1] */
   overflow-y: scroll; /* [2] */
@@ -29,13 +29,13 @@
 }
 
 ::-moz-selection {
-  background-color: $color-neutral-xxlight;
-  color: $color-neutral;
+  background-color: $color-secondary-xxlight;
+  color: $color-secondary;
 }
 
 ::selection {
-  background-color: $color-neutral-xxlight;
-  color: $color-neutral;
+  background-color: $color-secondary-xxlight;
+  color: $color-secondary;
 }
 
 // Only show outlines to keyboard users

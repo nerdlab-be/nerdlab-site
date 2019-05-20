@@ -19,25 +19,52 @@
 {% endif %}
 
 {# -- Module -- #}
-<nav class="c-nav-main js-nav">
-  <ul class="o-list-bare c-nav-main__list">
-    {% set content = options.handle.all() %}
-    {% for block in content %}
-    {% set links = block.itemLink.all() %}
-    {% for link in links %}
-    {% set active = bodyClass == link.section.handle %}
-    <li class="c-nav-main__item{{ active( link.uri , 1,' is-selected') }}">
-      {% if block.externalLink %}
-      <a href="{{ block.externalLink }}{{ block.itemID }}" class="c-nav-main__link js-nav-trigger-up" target="_blank">{{ block.itemTitle }}</a>
-      {% else %}
-      <a href="{{ link.url }}{{ block.itemID }}" class="c-nav-main__link js-nav-trigger-up">{{ block.itemTitle }}</a>
-      {% endif %}
-    </li>
+
+<nav>
+  <button aria-expanded="false" aria-controls="menu" class="c-navigation-toggle js-nav-toggle">
+    <svg viewbox="0 0 64 44" class="c-hamburger">
+      <line id="nav-line-1" x1="8" x2="56" y1="8" y2="8" class="c-hamburger__line" />
+      <line id="nav-line-2" x1="8" x2="56" y1="22" y2="22" class="c-hamburger__line" />
+      <line id="nav-line-3" x1="8" x2="56" y1="22" y2="22" class="c-hamburger__line" />
+      <line id="nav-line-4" x1="8" x2="56" y1="36" y2="36" class="c-hamburger__line" />
+    </svg>
+    <span>Menu</span>
+  </button>
+  <div class="c-navigation js-nav{% if currentSite != 'Nerdlab' %} c-navigation--group{% endif %}">
+    <ul class="o-list-bare c-navigation__list">
+      {% set content = options.handle.all() %}
+      {% for block in content %}
+      {% set links = block.itemLink.all() %}
+      {% for link in links %}
+      {% set active = bodyClass == link.section.handle %}
+      <li class="c-list-bare__item c-navigation__item{{ active( link.uri , 1,' is-active') }}">
+        {% if block.externalLink %}
+        <a href="{{ block.externalLink }}{{ block.itemID }}" class="c-navigation__link" target="_blank">{{ block.itemTitle }}</a>
+        {% else %}
+        <a href="{{ link.url }}{{ block.itemID }}" class="c-navigation__link js-nav-trigger-up">{{ block.itemTitle }}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+      {% endfor %}
+    </ul>
+    {% if currentSite == 'Nerdlab' %}
+    {% else %}
+    <ul class="o-list-bare c-navigation__language-list">
+    {% for sites in currentSite.group.sites %}
+      {% set current = (currentSite.name == sites.name) ? 'is-active' : '' %}
+      {% set currentUrl = alias(sites.baseUrl) %}
+      <li class="c-list-bare__item c-navigation__language-item {{ current }}">
+        <a href="{{ getenv(currentUrl | trim('$')) }}" class="c-navigation__language-link ">
+          {% if loop.first %}
+          {{ sites.language | upper }}
+          {% else %}
+          {{ sites.language | upper }}
+          {% endif %}
+        </a>
+      </li>
     {% endfor %}
-    {% endfor %}
-  </ul>
+    </ul>
+    {% endif %}
+  </div>
 </nav>
-<button class="c-nav-main-trigger js-nav-trigger-button js-nav-trigger">
-  <span class="c-nav-main-trigger__icon"></span>
-  <span class="u-hidden-visually">Menu</span>
-</button>
+

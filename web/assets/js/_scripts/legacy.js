@@ -47,8 +47,8 @@ var chopstick =
     // init, something like a constructor
     init: function()
     {
-        headerScroll();
-        mobileNav();
+        // headerScroll();
+        // mobileNav();
 
         $('.js-gallery').slick({
             focusOnSelect: true,
@@ -68,41 +68,41 @@ var chopstick =
     }
 };
 
-var headerScroll = function()
-{
-    var header = $('.js-header');
-    var headerOffset = $('.js-header').outerHeight();
+// var headerScroll = function()
+// {
+//     var header = $('.js-header');
+//     var headerOffset = $('.js-header').outerHeight();
 
-    $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
+//     $(window).scroll(function() {
+//         var scroll = $(window).scrollTop();
 
-        if (scroll >= headerOffset/4) {
-            header.addClass("is-shrinken");
-        } else {
-            header.removeClass("is-shrinken");
-        }
-    });
-};
+//         if (scroll >= headerOffset/4) {
+//             header.addClass("is-shrinken");
+//         } else {
+//             header.removeClass("is-shrinken");
+//         }
+//     });
+// };
 
-var mobileNav = function()
-{
-    var header = $('.js-header');
-    var nav = $('.js-nav');
-    var trigger = $('.js-nav-trigger');
-    var triggerUp = $('.js-nav-trigger-up');
+// var mobileNav = function()
+// {
+//     var header = $('.js-header');
+//     var nav = $('.js-nav');
+//     var trigger = $('.js-nav-trigger');
+//     var triggerUp = $('.js-nav-trigger-up');
 
-    trigger.on('click', function() {
-        $(this).toggleClass('is-active');
-        nav.slideToggle('fast');
-        // header.toggleClass('has-visible-nav');
-    });
+//     trigger.on('click', function() {
+//         $(this).toggleClass('is-active');
+//         nav.slideToggle('fast');
+//         // header.toggleClass('has-visible-nav');
+//     });
 
-    triggerUp.on('click', function() {
-        trigger.removeClass('is-active');
-        nav.slideUp('fast');
-        // header.toggleClass('has-visible-nav');
-    });
-};
+//     triggerUp.on('click', function() {
+//         trigger.removeClass('is-active');
+//         nav.slideUp('fast');
+//         // header.toggleClass('has-visible-nav');
+//     });
+// };
 
 // Load all your plugins in the pluginLoader function.
 var pluginLoader = function() {

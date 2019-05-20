@@ -34,3 +34,51 @@
     width: calc(100% - #{$unit});
   }
 }
+
+
+.c-subscribe-form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.c-subscribe-form__input {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  border-width: 0 0 1px 0;
+  border-color: $color-neutral-xlight;
+  flex-grow: 1;
+  width: auto;
+
+  &:focus {
+    border-color: $color-neutral-xlight;
+  }
+
+  &::-webkit-input-placeholder {
+    color: tint($color-neutral-light,30);
+  }
+
+  &::-moz-placeholder {
+    color: tint($color-neutral-light,30);
+  }
+
+  &:-ms-input-placeholder {
+    color: tint($color-neutral-light,30);
+  }
+}
+
+.c-subscribe-form__btn {
+  border-color: $color-neutral-xlight;
+  color: $color-secondary;
+  background-color: transparent;
+  border-width: 0 0 1px;
+  padding-right: 0;
+  border-radius: 0;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+

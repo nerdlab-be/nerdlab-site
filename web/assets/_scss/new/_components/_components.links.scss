@@ -3,20 +3,20 @@
    ================================== */
 
 .c-link {
-  transition: $transition;
+  transition: color $transition;
 
   &,
   &:visited {
-    color: $color-primary;
+    color: $color-secondary;
   }
 
   &:hover,
   &:focus {
-    color: $color-primary-light;
+    color: $color-primary;
   }
 
-  .is-active > & {
-    color: $color-primary-dark;
+  &:focus {
+    outline: $outline;
   }
 }
 
@@ -31,21 +31,35 @@
 
 // Skip to navigation link
 .c-link--skip {
-  @include font-size($tiny);
+  @include font-size($tiny,1.2);
+  font-weight: $bold;
   position: absolute;
   top: -1000px;
   left: -1000px;
   height: 1px;
   width: 1px;
   display: block;
-  font-weight: $regular;
   text-decoration: none;
   transition: color $duration $easing;
+
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    color: $color-neutral-dark;
+  }
+
+  &:hover {
+    background-color: $color-tertiary-light;
+  }
 
   &:focus {
     width: auto;
     height: auto;
-    top: 100%;
+    top: calc(100% + #{$unit-tiny});
     left: 0;
+    white-space: nowrap;
+    background-color: $color-tertiary;
+    padding: $unit-tiny/2;
   }
 }

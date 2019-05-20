@@ -1,0 +1,52 @@
+/* ==========================================================================
+   #MAIN
+   ========================================================================== */
+
+@keyframes mainTransitionIn {
+  0% {
+    opacity: 0;
+    transform: translateY($unit * 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mainTransitionOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY($unit * 1);
+  }
+}
+
+.c-main {
+  backface-visibility: hidden;
+  animation-fill-mode: both;
+  animation-duration: $global-duration;
+  animation-name: mainTransitionIn;
+  animation-timing-function: $global-easing;
+
+  .is-exiting & {
+    animation-name: mainTransitionOut;
+  }
+}
+
+.c-main-alt {
+  backface-visibility: hidden;
+  animation-fill-mode: both;
+  animation-duration: $global-duration;
+  animation-name: mainTransitionIn;
+  animation-timing-function: $global-easing;
+  margin-top: $unit;
+
+  .is-exiting & {
+    animation-name: mainTransitionOut;
+  }
+}

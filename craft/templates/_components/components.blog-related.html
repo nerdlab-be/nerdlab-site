@@ -34,7 +34,7 @@
                 </div>
               </div>
               <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
-                <div class="c-card__body c-editor u-mw">
+                <div class="c-card__body s-editor u-mw">
                   {% for block in nextEntry.mutationAbout.all() %}
                   {% switch block.type %}
                   {% case "heading" %}
@@ -75,7 +75,7 @@
                     </div>
                   </div>
                   <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
-                    <div class="c-card__body c-editor u-mw">
+                    <div class="c-card__body s-editor u-mw">
                       {% for item in block.mutationAbout.all() %}
                       {% switch item.type %}
                       {% case "heading" %}
@@ -119,7 +119,7 @@
                 </div>
               </div>
               <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
-                <div class="c-card__body c-editor u-mw">
+                <div class="c-card__body s-editor u-mw">
                   {% for block in prevEntry.mutationAbout.all() %}
                   {% switch block.type %}
                   {% case "heading" %}
@@ -161,7 +161,7 @@
                   </div>
                 </div>
                 <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
-                  <div class="c-card__body c-editor u-mw">
+                  <div class="c-card__body s-editor u-mw">
                     {% for item in block.mutationAbout.all() %}
                     {% switch item.type %}
                     {% case "heading" %}
