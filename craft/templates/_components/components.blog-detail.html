@@ -9,40 +9,22 @@
 
 {# -- Module -- #}
 {% set intro = entry.mutationAbout.all() %}
-<div class="c-illustration js-intro-watch">
-  <span class="c-illustration__right-top" role="presentation" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-      <g fill="none" fill-rule="evenodd" transform="translate(26.43 1.5)">
-        <polygon class="s-m-left" fill="#E9C200" points="58.23 58.61 0 116.84 0 .381"/>
-        <polygon class="s-m-right" fill="#243242" points="58.23 58.61 94.177 94.558 94.177 22.662"/>
-      </g>
-    </svg>
-  </span>
-  <span class="c-illustration__right-bottom" role="presentation" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-      <g fill="none" fill-rule="evenodd" transform="translate(0 2.013)">
-        <path class="s-o2-left" fill="#E53958" d="M57.9032755,0 L57.9032755,115.807039 C25.9456593,115.807039 0,89.8613797 0,57.9037636 C0,25.9459034 25.9456593,0 57.9032755,0 Z"/>
-        <path class="s-o2-center" fill="#FDE3D3" d="M57.9032755,26.7321724 C75.1074871,26.7321724 89.0748666,40.699552 89.0748666,57.9037636 C89.0748666,75.1076335 75.1074871,89.0750619 57.9032755,89.0750619 C40.6994055,89.0750619 26.7319772,75.1076335 26.7319772,57.9037636 C26.7319772,40.699552 40.6994055,26.7321724 57.9032755,26.7321724 Z"/>
-      </g>
-    </svg>
-  </span>
-  <div class="o-row-large c-theme-neutral u-padding-top-none u-padding-bottom-none">
-    <div class="o-wrapper o-wrapper--huge">
-      <div class="o-layout">
-        <div class="o-layout__item u-4/5@small u-2/3@medium u-1/2@large">
-          {% for item in intro %}
-          {% switch item.type %}
-          {% case "heading" %}
-          <h2 class="c-title">
-            {{ item.heading }}
-          </h2>
-          {% case "paragraph" %}
-          <div class="c-editor c-editor--large">
-            {{ item.paragraph }}
-          </div>
-          {% endswitch %}
-          {% endfor %}
+<div class="o-row-large c-theme-neutral u-padding-top-none u-padding-bottom-none">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-4/5@small u-2/3@medium u-1/2@large">
+        {% for item in intro %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-title">
+          {{ item.heading }}
+        </h2>
+        {% case "paragraph" %}
+        <div class="c-editor c-editor--large">
+          {{ item.paragraph }}
         </div>
+        {% endswitch %}
+        {% endfor %}
       </div>
     </div>
   </div>

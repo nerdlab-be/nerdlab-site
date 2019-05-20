@@ -16,48 +16,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   {# SEO #}
-  {% set seo = entry.seo %}
-  {% set locale = craft.app.locale %}
-  {% set locales = craft.app.i18n.siteLocaleIds|without(locale) %}
-
-  <title>{{ seo.title }}</title>
-  <meta name="description" content="{{ seo.description }}" />
-
-  {% set fb = seo.social.facebook -%}
-  <meta property="og:url" content="{{ craft.app.request.absoluteUrl }}" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="{{ fb.title }}" />
-  {% if craft.app.request.pathInfo() == "schedule" %}
-    <meta property="og:image" content="https://nerdlab.be/mutation/images/facebook-og-schedule.jpg" />
-  {% else %}
-    <meta property="og:image" content="https://nerdlab.be/mutation/images/facebook-og-twitter-card.jpg" />
-  {% endif %}
-  <meta property="og:description" content="{{ fb.description }}" />
-  <meta property="og:site_name" content="{{ seo.title }}" />
-  <meta property="og:locale" content="{{ locale }}" />
-  {% for locale in locales -%}
-    <meta property="og:locale:alternate" content="{{ locale }}" />
-  {% endfor %}
-
-  {% set tw = seo.social.twitter -%}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="{{ craft.app.request.absoluteUrl }}" />
-  <meta name="twitter:title" content="{{ tw.title }}" />
-  <meta name="twitter:description" content="{{ tw.description }}" />
-  {% if craft.app.request.pathInfo() == "schedule" %}
-    <meta name="twitter:image" content="https://nerdlab.be/mutation/images/facebook-og-schedule.jpg" />
-  {% else %}
-    <meta name="twitter:image" content="https://nerdlab.be/mutation/images/facebook-og-twitter-card.jpg" />
-  {% endif %}
-
-  <link rel="home" href="{{ siteUrl }}" />
-  <link rel="canonical" href="{{ craft.app.request.absoluteUrl }}">
+  {% hook "seo" %}
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/mutation.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="{{ rev('mutation.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ rev('screen.min.css') }}">
   {% endif %}
 
   {# Favicon #}
