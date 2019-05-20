@@ -1,51 +1,13 @@
 <header class="o-row c-theme-neutral">
   <div class="o-wrapper o-wrapper--huge">
     <div class="c-header">
-      <div class="c-header__group">
-        <div>
-          {% include '_elements/elements.logo-mutation.html' %}
-          <h2 class="c-header__tagline">
+      {% include '_elements/elements.logo-mutation.html' %}
+      {# Site navigation #}
+      {% include '_components/components.navigation.html' with { options: { handle: interface.navigation } } %}
+  </div>
+</header>
+
+<h2 class="c-header__tagline">
             <span>{{ mutationGlobals.mutationDate }}</span>
             <span>{{ mutationGlobals.mutationLocation }}</span>
           </h2>
-        </div>
-        <nav class="c-header__link">
-          <ul class="o-list-bare c-nav">
-            {% set program = craft.entries.section('mutationProgram') %}
-            {% for page in program.all() %}
-            {% set active = bodyClass == page.url %}
-            <li class="c-nav__item{{ active( page.uri , 1,' is-selected') }}">
-                <a href="{{ page.url }}" class="c-nav__link">{{ page.title }}</a>
-            </li>
-            {% endfor %}
-            {% set schedule = craft.entries.section('mutationSchedule') %}
-            {% for page in schedule.all() %}
-            {% set active = bodyClass == page.url %}
-            <li class="c-nav__item{{ active( page.uri , 1,' is-selected') }}">
-                <a href="{{ page.url }}" class="c-nav__link">{{ page.title }}</a>
-            </li>
-            {% endfor %}
-            {# <li class="c-nav__item">
-              <a href="{{ currentSite.baseUrl }}#tickets" class="c-nav__link c-nav__link--special">{{ mutationGlobals.mutationLink }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-            </li> #}
-          </ul>
-        </nav>
-      </div>
-      <ul class="o-list-inline c-nav-language c-header__language">
-      {% for sites in currentSite.group.sites %}
-        {% set current = (currentSite.name == sites.name) ? 'is-active' : '' %}
-        <li class="o-list-inline__item">
-          {% set currentUrl = alias(sites.baseUrl) %}
-          <a href="{{ getenv(currentUrl | trim('$')) }}" class="c-nav-language__link {{ current }}">
-            {% if loop.first %}
-            {{ sites.language | upper }}
-            {% else %}
-            {{ sites.language | upper }}
-            {% endif %}
-          </a>
-        </li>
-      {% endfor %}
-      </ul>
-    </div>
-  </div>
-</header>

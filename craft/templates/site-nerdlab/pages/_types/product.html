@@ -1,18 +1,14 @@
 {% extends "_layouts/site" %}
 
 {% block main %}
-<div class="o-row-intro">
+<div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout">
-      <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
-        {# Breadcrumb #}
-        {% include "_elements/elements.breadcrumb.html" %}
-        {# Page title #}
-        <h1 class="c-h1">{{ entry.title }}</h1>
-        {# Intro #}
-        {% include '_components/components.intro.html' %}
-      </div>
-    </div>
+    {# Breadcrumb #}
+    {% include "_elements/elements.breadcrumb.html" %}
+    {# Page title #}
+    <h1 class="c-h1">{{ entry.title }}</h1>
+    {# Intro #}
+    {% include '_components/components.intro.html' %}
   </div>
 </div>
 

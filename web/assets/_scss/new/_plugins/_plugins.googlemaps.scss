@@ -1,0 +1,41 @@
+/*
+    Plugins: Google maps
+    ---
+    Google map styles
+*/
+
+/* Google maps images fix https://coderwall.com/p/nl1lba/img-max-width-100-breaks-google-maps */
+.gmap img {
+  max-width: none !important;
+}
+
+// Custom map
+.c-map {
+position: relative;
+border-bottom: 1px solid $color-neutral-xxlight;
+border-top: 1px solid $color-neutral-xxlight;
+}
+
+.c-map__background {
+  min-height: 50vh;
+  z-index: $z-index-alpha;
+
+  @include mq(medium) {
+    height: 75vh;
+  }
+}
+
+.c-map__content {
+  position: absolute;
+  z-index: $z-index-beta;
+  width: 50%;
+  padding-left: $unit;
+  padding-right: $unit;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+
+  p {
+    margin-bottom: 0;
+  }
+}

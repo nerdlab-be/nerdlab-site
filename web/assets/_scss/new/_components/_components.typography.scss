@@ -41,3 +41,103 @@
   vertical-align: middle;
   text-align: center;
 }
+
+
+
+
+
+
+.c-h1-big {
+  color: $color-primary;
+  @include font-size($h1,1.25);
+  margin-bottom: $unit-tiny;
+
+  @include mq(small) {
+    @include font-size($h1,1.25);
+  }
+
+  @include mq(medium) {
+    @include font-size(60px,1.25);
+  }
+}
+
+.c-h1 {
+  color: $color-neutral-dark;
+  @include font-size($h3,1.25);
+
+  @include mq(small) {
+    @include font-size($h2,1.25);
+  }
+
+  @include mq(medium) {
+    @include font-size($h1,1.25);
+  }
+}
+
+.c-h2 {
+  color: $color-neutral-dark;
+  @include font-size($h4,1.25);
+
+  @include mq(medium) {
+    @include font-size($h3,1.25);
+  }
+}
+
+.c-h3 {
+  color: $color-neutral-dark;
+  @include font-size($h5,1.25);
+
+  @include mq(medium) {
+    @include font-size($h4,1.25);
+  }
+}
+
+.c-h3--highlight,
+.c-content .c-h3--highlight {
+  color: $color-primary;
+}
+
+.c-h4 {
+  color: $color-primary;
+  @include font-size($h6,1.25);
+  margin-bottom: $unit-small;
+
+  @include mq(medium) {
+    @include font-size($h5,1.25);
+  }
+}
+
+.c-h5 {
+  font-weight: $regular;
+  color: $color-neutral-light;
+  @include font-size($small,1.25);
+  margin-bottom: $unit-tiny;
+
+  @include mq(medium) {
+    @include font-size($h6,1.25);
+  }
+}
+
+.c-lead {
+  font-weight: $regular;
+  color: $color-primary;
+  @include font-size($h6);
+
+  @include mq(small) {
+    @include font-size($h4);
+  }
+
+  @include mq(large) {
+    @include font-size($h3, auto, +1);
+  }
+}
+
+.c-faded {
+  color: $color-neutral-light;
+  text-transform: uppercase;
+  @include font-size(14px);
+}
+
+.c-small {
+  @include font-size($h6);
+}

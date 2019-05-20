@@ -8,7 +8,7 @@
 #}
 
 {# -- Module -- #}
-<div class="c-content c-content--intro">
+<div class="s-editor s-editor--intro">
   {% set intro = entry.intro.all() %}
   {% for block in intro %}
   {% switch block.type %}
@@ -22,7 +22,7 @@
     <p>
       {% if block.buttonLink | length %}
       {% for link in block.buttonLink.all() %}
-      <a href="{{ link.url }}" class="c-button c-button--lg c-button--alpha">
+      <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
         {{ block.buttonTitle }}
       </a>
       {% endfor %}

@@ -78,10 +78,10 @@
  */
 
 // SETTINGS
+@import "new/_settings/settings.colors";
 @import "new/_settings/settings.config";
 @import "new/_settings/settings.core";
 @import "new/_settings/settings.global";
-@import "new/_settings/settings.colors";
 @import "new/_settings/settings.font";
 
 
@@ -111,7 +111,7 @@
 
 
 // ELEMENTS
-@import "../_vendor/inuitcss/elements/elements.page";
+@import "new/_elements/elements.page";
 @import "../_vendor/inuitcss/elements/elements.headings";
 @import "../_vendor/inuitcss/elements/elements.images";
 @import "../_vendor/inuitcss/elements/elements.tables";
@@ -151,14 +151,16 @@
 @import "new/_components/components.input";
 @import "new/_components/components.forms";
 @import "new/_components/components.cards";
-@import "new/_components/components.tabs";
-@import "new/_components/components.collapsed";
-@import "new/_components/components.menu";
-@import "new/_components/components.tooltip";
-
-
-
-
+// @import "new/_components/components.tabs";
+// @import "new/_components/components.collapsed";
+// @import "new/_components/components.menu";
+// @import "new/_components/components.tooltip";
+@import "new/_components/components.transitions";
+@import "new/_components/components.pagination";
+@import "new/_components/components.breadcrumb";
+@import "new/_components/components.hours";
+@import "new/_components/components.cookies";
+@import "new/_components/components.background";
 
 // SCOPE
 @import "new/_scope/scope.theme";
@@ -176,12 +178,17 @@
 
 
 // PLUGINS
-
-
-
+@import "new/_plugins/plugins.googlemaps";
+@import "new/_plugins/plugins.lazysizes";
+@import "new/_plugins/plugins.slick";
+@import "new/_plugins/plugins.slick-theme";
 
 
 // UTILITIES
+// Be aware that enabling offsets produces a large chunk of classes which might
+// bloat your CSS, depending of the amount of breakpoints you defined.
+// Only set this to `true` if you are absolutely sure about what you are doing.
+$inuit-offsets: true;
 @import "../_vendor/inuitcss/utilities/utilities.widths";
 @import "../_vendor/inuitcss/utilities/utilities.headings";
 @import "../_vendor/inuitcss/utilities/utilities.spacings";
@@ -190,7 +197,6 @@
 @import "../_vendor/inuitcss/utilities/utilities.hide";
 @import "new/_utilities/utilities.divider";
 @import "new/_utilities/utilities.pesticide";
-
 
 
 

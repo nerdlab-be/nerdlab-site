@@ -6,15 +6,11 @@
 {% extends "_layouts/site" %}
 
 {% block main %}
-<div class="o-row-intro">
+<div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout">
-      <div class="o-layout__item u-2/3@large">
-        {# Title #}
-        <h1 class="c-h1">{{ entry.title }}</h1>
-        {% include '_components/components.intro.html' %}
-      </div>
-    </div>
+    {# Title #}
+    <h1 class="c-h1">{{ entry.title }}</h1>
+    {% include '_components/components.intro.html' %}
   </div>
 </div>
 

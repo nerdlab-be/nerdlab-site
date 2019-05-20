@@ -2,7 +2,7 @@
    #EDITOR
    ================================== */
 
-.c-editor {
+.s-editor {
   h1,
   h2,
   h3,
@@ -26,6 +26,163 @@
   }
 
   p + p {
-    margin-top: $unit-small;
+    margin-top: $unit;
+  }
+
+  a:not(.c-btn) {
+    transition: color $transition;
+
+    &,
+    &:visited {
+      color: $color-secondary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+  }
+
+  p,
+  ul {
+    @include font-size($h5,1.5);
+    max-width: 32em;
+  }
+
+  .c-small {
+    @include font-size($small,1.5);
+  }
+
+  @include mq(small) {
+    p,
+    ul {
+      @include font-size($h4,1.5);
+    }
+
+    p + p {
+      margin-top: $unit;
+    }
+  }
+
+  @include mq(medium) {
+    p,
+    ul {
+      @include font-size($h3,1.5);
+    }
+
+    p + p {
+      margin-top: $unit-large;
+    }
+  }
+}
+
+.s-editor--intro {
+  p:first-child {
+    @include font-size($h4,1.5);
+    max-width: 25em;
+  }
+
+  @include mq(small) {
+    p:first-child {
+      @include font-size($h3,1.5);
+    }
+  }
+
+  @include mq(medium) {
+    p:first-child {
+      @include font-size($h2,1.5);
+    }
+  }
+}
+
+
+.s-editor--small {
+  p {
+    @include font-size($h5,1.5);
+    max-width: 28em;
+  }
+
+  @include mq(small) {
+    p {
+      @include font-size($h5,1.5);
+    }
+  }
+
+  @include mq(medium) {
+    p {
+      @include font-size($h4,1.5);
+    }
+  }
+}
+
+.s-editor--cta {
+  color: $white;
+
+  p:first-child {
+    @include font-size($h4,1.5);
+    max-width: 25em;
+  }
+
+  @include mq(small) {
+    p:first-child {
+      @include font-size($h3,1.5);
+    }
+  }
+
+  @include mq(medium) {
+    p:first-child {
+      @include font-size($h2,1.5);
+    }
+  }
+}
+
+.s-editor--lead {
+  color: $color-primary;
+
+  p:first-child {
+    @include font-size($h4,1.5);
+    max-width: 28em;
+  }
+
+  @include mq(small) {
+    p:first-child {
+      @include font-size($h3,1.5);
+    }
+  }
+
+  @include mq(medium) {
+    p:first-child {
+      @include font-size($h2,1.5);
+    }
+  }
+}
+
+.s-editor--footer {
+  a:not(.c-btn) {
+    transition: color $transition;
+
+    &,
+    &:visited {
+      color: $color-neutral-dark;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-neutral;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+  }
+
+  @include mq(medium) {
+    p {
+      text-align: right;
+    }
   }
 }

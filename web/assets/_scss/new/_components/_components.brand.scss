@@ -2,19 +2,63 @@
    #BRAND
    ================================== */
 
-// Set global font style @TODO: should this be in elements.page?
-.c-brand {
-  font-family: $inuit-font-family-primary;
+$nerdlab-width: 300px;
+$nerdlab-height: 165px;
+$mutation-width: 430px;
+$mutation-height: 225px;
+
+.c-brand,
+.c-brand > .c-brand__link  {
+  font-family: $font-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-neutral-dark;
+  position: relative;
+  text-decoration: none;
+  margin-bottom: 0;
+
+  &:focus {
+    outline: $outline;
+  }
 }
 
-// Logo
-.c-brand-mark {
-  &,
-  & > .c-brand-mark__link {
-    position: relative;
-    color: $color-primary;
-    font-weight: $inuit-font-weight-bold;
-    text-decoration: none;
-    margin-bottom: 0;
+  .c-brand__mark {
+    .c-brand--nerdlab & {
+      width: $nerdlab-width/3.5;
+      height: $nerdlab-height/3.5;
+    }
+
+    .c-brand--mutation & {
+      width: $mutation-width/3.5;
+      height: $mutation-height/3.5;
+    }
+
+    @include mq(medium) {
+      .c-brand--mutation & {
+        width: $mutation-width/3;
+        height: $mutation-height/3;
+      }
+    }
+
+    @include mq(large) {
+      .c-brand--nerdlab & {
+        width: $nerdlab-width/3;
+        height: $nerdlab-height/3;
+      }
+    }
   }
+
+  .c-brand__text {
+    @include font-size($h5 - 3px);
+    text-transform: uppercase;
+    font-weight: $bold;
+
+    @include mq(large) {
+      @include font-size($h5);
+    }
+  }
+
+.c-brand__mark {
+
 }

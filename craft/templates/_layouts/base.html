@@ -23,9 +23,9 @@
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/screen.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="{{ rev('main.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ rev('screen.min.css') }}">
   {% endif %}
 
   {# Analytics #}
