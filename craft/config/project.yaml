@@ -1,4 +1,4 @@
-dateModified: 1557241144
+dateModified: 1558355332
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -23,6 +23,8 @@ fieldGroups:
     name: Custom
   34dbad60-26d5-4b5d-94c4-6f5c4c9846c0:
     name: Mutation
+  e0d9964b-b49c-4862-bed8-46420e6906c3:
+    name: Blog
 fields:
   80edc271-c16d-4058-8658-2f5fc279b19a:
     name: Body
@@ -319,8 +321,6 @@ fields:
     type: craft\fields\Entries
     settings:
       sources:
-        - 'section:5f28ba52-f8f3-416b-b8e5-243ae60c55e7'
-        - singles
         - 'section:f13b291a-d9b5-4468-a039-a5770d399c3c'
         - 'section:57e1c6a9-b04e-4d03-a86b-3132cf1f1341'
         - 'section:f19a1506-8abc-42c9-8798-196a5ff2c3ca'
@@ -330,8 +330,8 @@ fields:
       limit: ''
       selectionLabel: ''
       localizeRelations: ''
-    fieldGroup: d35ab853-df35-44ef-91e6-94d836314196
     contentColumnType: string
+    fieldGroup: d35ab853-df35-44ef-91e6-94d836314196
   93d43e72-49c1-4d10-9e48-665b41779ba0:
     name: 'Event URL'
     handle: eventURL
@@ -1412,8 +1412,8 @@ fields:
       limit: '1'
       selectionLabel: ''
       localizeRelations: ''
-    fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0
     contentColumnType: string
+    fieldGroup: e0d9964b-b49c-4862-bed8-46420e6906c3
   f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9:
     name: 'Blog detail'
     handle: blogDetail
@@ -1427,8 +1427,8 @@ fields:
       maxBlocks: ''
       contentTable: '{{%matrixcontent_blogdetail}}'
       localizeBlocks: ''
-    fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0
     contentColumnType: string
+    fieldGroup: e0d9964b-b49c-4862-bed8-46420e6906c3
   49744b70-1586-4913-916d-9b25ac2bfd5b:
     name: 'Agenda: binnenkort'
     handle: labelSoon
@@ -1497,6 +1497,48 @@ fields:
       columnType: text
     contentColumnType: text
     fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20
+  083db82b-93af-4b21-b0c6-93c14880c5e2:
+    name: Tag
+    handle: tag
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Tags
+    settings:
+      sources: '*'
+      source: 'taggroup:cfcb6775-cd26-4d59-90bb-8f25cdd22582'
+      targetSiteId: null
+      viewMode: null
+      limit: null
+      selectionLabel: ''
+      localizeRelations: ''
+    contentColumnType: string
+    fieldGroup: e0d9964b-b49c-4862-bed8-46420e6906c3
+  206d8a3d-5f1e-4ecd-80de-b7d34a4f9bd4:
+    name: 'Zichtbaar op:'
+    handle: visibleOn
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\Checkboxes
+    settings:
+      options:
+        -
+          label: Nerdlab
+          value: nerdlab
+          default: '1'
+        -
+          label: 'Mutation festival'
+          value: mutationFestival
+          default: ''
+        -
+          label: BYOB
+          value: byob
+          default: ''
+    contentColumnType: string
+    fieldGroup: e0d9964b-b49c-4862-bed8-46420e6906c3
 globalSets:
   34840bd5-28aa-45b2-ac2e-e954e8712bd1:
     name: Interface
@@ -4196,20 +4238,10 @@ matrixBlockTypes:
         fieldGroup: null
         contentColumnType: text
   cbaf7f9f-6138-4f71-9fb7-46d1e9d8058d:
+    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
     name: Titel
     handle: heading
     sortOrder: 1
-    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
-    fieldLayouts:
-      17cac0e6-7103-4968-8375-9900b167d407:
-        tabs:
-          -
-            name: Content
-            sortOrder: 1
-            fields:
-              7f8e4576-ff0c-455a-87b7-f227cb7a9d66:
-                required: false
-                sortOrder: 1
     fields:
       7f8e4576-ff0c-455a-87b7-f227cb7a9d66:
         name: Titel
@@ -4226,23 +4258,23 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
-  7f606b5c-36c5-475f-a8ca-fec02878d374:
-    name: Subtitel
-    handle: subHeading
-    sortOrder: 2
-    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+        fieldGroup: null
     fieldLayouts:
-      84a3b09a-0617-493b-bd9d-391820d667d0:
+      17cac0e6-7103-4968-8375-9900b167d407:
         tabs:
           -
             name: Content
             sortOrder: 1
             fields:
-              d5a25a01-e298-44d9-86ce-bf98ff2897f1:
+              7f8e4576-ff0c-455a-87b7-f227cb7a9d66:
                 required: false
                 sortOrder: 1
+  7f606b5c-36c5-475f-a8ca-fec02878d374:
+    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+    name: Subtitel
+    handle: subHeading
+    sortOrder: 2
     fields:
       d5a25a01-e298-44d9-86ce-bf98ff2897f1:
         name: Subtitel
@@ -4259,23 +4291,23 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
-  251555a6-dbc1-4980-b871-dda652129bc7:
-    name: Paragraaf
-    handle: paragraph
-    sortOrder: 3
-    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+        fieldGroup: null
     fieldLayouts:
-      ed43f55d-fdbc-4e06-8443-713137a609a4:
+      84a3b09a-0617-493b-bd9d-391820d667d0:
         tabs:
           -
             name: Content
             sortOrder: 1
             fields:
-              f356ebb8-7f0d-4f3d-97de-860a5623c188:
+              d5a25a01-e298-44d9-86ce-bf98ff2897f1:
                 required: false
                 sortOrder: 1
+  251555a6-dbc1-4980-b871-dda652129bc7:
+    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+    name: Paragraaf
+    handle: paragraph
+    sortOrder: 3
     fields:
       f356ebb8-7f0d-4f3d-97de-860a5623c188:
         name: Paragraaf
@@ -4288,20 +4320,104 @@ matrixBlockTypes:
         settings:
           redactorConfig: Simple.json
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: '*'
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      ed43f55d-fdbc-4e06-8443-713137a609a4:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              f356ebb8-7f0d-4f3d-97de-860a5623c188:
+                required: false
+                sortOrder: 1
   b70fa487-a4f3-40cd-bee7-153c2a3b3e51:
+    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
     name: Quote
     handle: quote
     sortOrder: 4
-    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+    fields:
+      38f7043c-d8fb-4d65-b046-55f44554f342:
+        name: Quote
+        handle: quote
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: ''
+          purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: '*'
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
+      b0f37315-7ed7-46a2-9f54-03a6d2f3eb3e:
+        name: Auteur
+        handle: author
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      67464e1d-5f80-4dd6-b94b-56c78adfc4b7:
+        name: 'Auteur info'
+        handle: authorInfo
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      e8566d27-fe74-483d-9f49-20476045f7a5:
+        name: 'Quote link'
+        handle: quoteLink
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       ac3ba325-2c44-42f6-b7a5-d481f153ceb5:
         tabs:
@@ -4321,105 +4437,11 @@ matrixBlockTypes:
               e8566d27-fe74-483d-9f49-20476045f7a5:
                 required: false
                 sortOrder: 4
-    fields:
-      38f7043c-d8fb-4d65-b046-55f44554f342:
-        name: Quote
-        handle: quote
-        instructions: ''
-        searchable: true
-        translationMethod: site
-        translationKeyFormat: null
-        type: craft\redactor\Field
-        settings:
-          redactorConfig: ''
-          purifierConfig: ''
-          purifyHtml: '1'
-          columnType: text
-          availableVolumes: '*'
-          availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
-        fieldGroup: null
-        contentColumnType: text
-      b0f37315-7ed7-46a2-9f54-03a6d2f3eb3e:
-        name: Auteur
-        handle: author
-        instructions: ''
-        searchable: true
-        translationMethod: site
-        translationKeyFormat: null
-        type: craft\fields\PlainText
-        settings:
-          placeholder: ''
-          code: ''
-          multiline: ''
-          initialRows: '4'
-          charLimit: ''
-          columnType: text
-        fieldGroup: null
-        contentColumnType: text
-      67464e1d-5f80-4dd6-b94b-56c78adfc4b7:
-        name: 'Auteur info'
-        handle: authorInfo
-        instructions: ''
-        searchable: true
-        translationMethod: site
-        translationKeyFormat: null
-        type: craft\fields\PlainText
-        settings:
-          placeholder: ''
-          code: ''
-          multiline: ''
-          initialRows: '4'
-          charLimit: ''
-          columnType: text
-        fieldGroup: null
-        contentColumnType: text
-      e8566d27-fe74-483d-9f49-20476045f7a5:
-        name: 'Quote link'
-        handle: quoteLink
-        instructions: ''
-        searchable: true
-        translationMethod: site
-        translationKeyFormat: null
-        type: craft\fields\PlainText
-        settings:
-          placeholder: ''
-          code: ''
-          multiline: ''
-          initialRows: '4'
-          charLimit: ''
-          columnType: text
-        fieldGroup: null
-        contentColumnType: text
   7cdfef8c-5aaa-4f5b-af55-9662edb5f894:
+    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
     name: 'Tekst + afbeelding'
     handle: textImage
     sortOrder: 5
-    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
-    fieldLayouts:
-      87ce8f7d-8877-4d92-92a9-7599c3586b2c:
-        tabs:
-          -
-            name: Content
-            sortOrder: 1
-            fields:
-              3b2c50c0-caaa-447c-9f8c-7c7815133ffd:
-                required: false
-                sortOrder: 1
-              75f813dd-5c28-4da1-aa78-d2b2ffe797e7:
-                required: false
-                sortOrder: 2
-              ed800917-c800-4e1a-8a3d-adedcdb1859c:
-                required: false
-                sortOrder: 3
-              19415ab2-7ae4-4cc1-833c-a90ec04d6cad:
-                required: false
-                sortOrder: 4
-              e4be16ea-721a-42f2-95b5-ceaf7cad98ed:
-                required: false
-                sortOrder: 5
     fields:
       3b2c50c0-caaa-447c-9f8c-7c7815133ffd:
         name: Titel
@@ -4436,8 +4458,8 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       75f813dd-5c28-4da1-aa78-d2b2ffe797e7:
         name: Paragraaf
         handle: paragraph
@@ -4449,15 +4471,16 @@ matrixBlockTypes:
         settings:
           redactorConfig: Simple.json
           purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
           purifyHtml: '1'
           columnType: text
           availableVolumes: '*'
           availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       ed800917-c800-4e1a-8a3d-adedcdb1859c:
         name: Afbeelding
         handle: image
@@ -4482,8 +4505,8 @@ matrixBlockTypes:
           limit: '1'
           selectionLabel: ''
           localizeRelations: ''
-        fieldGroup: null
         contentColumnType: string
+        fieldGroup: null
       19415ab2-7ae4-4cc1-833c-a90ec04d6cad:
         name: 'Afbeelding onderschrift'
         handle: imageCaption
@@ -4499,8 +4522,8 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       e4be16ea-721a-42f2-95b5-ceaf7cad98ed:
         name: Layout
         handle: layout
@@ -4518,26 +4541,35 @@ matrixBlockTypes:
             drop-left: ''
             drop-right: ''
           default: left
-        fieldGroup: null
         contentColumnType: string
-  7382ada0-518b-42b3-82b8-cc773d89d089:
-    name: Afbeelding
-    handle: image
-    sortOrder: 6
-    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+        fieldGroup: null
     fieldLayouts:
-      bc1ec7fe-8d13-4bbb-b253-7abd67173339:
+      87ce8f7d-8877-4d92-92a9-7599c3586b2c:
         tabs:
           -
             name: Content
             sortOrder: 1
             fields:
-              12b7048e-75cd-4d98-b2de-cd9deb74046d:
+              3b2c50c0-caaa-447c-9f8c-7c7815133ffd:
                 required: false
                 sortOrder: 1
-              21e49a26-7e10-4ee2-8119-92dcdcabd47d:
+              75f813dd-5c28-4da1-aa78-d2b2ffe797e7:
                 required: false
                 sortOrder: 2
+              ed800917-c800-4e1a-8a3d-adedcdb1859c:
+                required: false
+                sortOrder: 3
+              19415ab2-7ae4-4cc1-833c-a90ec04d6cad:
+                required: false
+                sortOrder: 4
+              e4be16ea-721a-42f2-95b5-ceaf7cad98ed:
+                required: false
+                sortOrder: 5
+  7382ada0-518b-42b3-82b8-cc773d89d089:
+    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+    name: Afbeelding
+    handle: image
+    sortOrder: 6
     fields:
       12b7048e-75cd-4d98-b2de-cd9deb74046d:
         name: Afbeelding
@@ -4562,8 +4594,8 @@ matrixBlockTypes:
           limit: '1'
           selectionLabel: ''
           localizeRelations: ''
-        fieldGroup: null
         contentColumnType: string
+        fieldGroup: null
       21e49a26-7e10-4ee2-8119-92dcdcabd47d:
         name: Onderschrift
         handle: caption
@@ -4579,29 +4611,26 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
-  d722d86c-0d72-4e92-9d4d-898dd68141d0:
-    name: Video
-    handle: video
-    sortOrder: 7
-    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+        fieldGroup: null
     fieldLayouts:
-      ff3ecfc4-ce30-4f68-8c29-2b4b019e5c0b:
+      bc1ec7fe-8d13-4bbb-b253-7abd67173339:
         tabs:
           -
             name: Content
             sortOrder: 1
             fields:
-              61c827f0-df0f-4a9b-a69e-bd239ab0599b:
+              12b7048e-75cd-4d98-b2de-cd9deb74046d:
                 required: false
                 sortOrder: 1
-              39fb2c28-2d5e-46d6-855c-0ed2a56b7082:
+              21e49a26-7e10-4ee2-8119-92dcdcabd47d:
                 required: false
                 sortOrder: 2
-              9021593d-9b6e-4d5b-9290-f716b86032fd:
-                required: false
-                sortOrder: 3
+  d722d86c-0d72-4e92-9d4d-898dd68141d0:
+    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+    name: Video
+    handle: video
+    sortOrder: 7
     fields:
       61c827f0-df0f-4a9b-a69e-bd239ab0599b:
         name: Titel
@@ -4618,8 +4647,8 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       39fb2c28-2d5e-46d6-855c-0ed2a56b7082:
         name: 'Youtube video ID'
         handle: youtubeVideoId
@@ -4635,8 +4664,8 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
+        fieldGroup: null
       9021593d-9b6e-4d5b-9290-f716b86032fd:
         name: Onderschrift
         handle: caption
@@ -4652,23 +4681,29 @@ matrixBlockTypes:
           initialRows: '4'
           charLimit: ''
           columnType: text
-        fieldGroup: null
         contentColumnType: text
-  89420d8b-e49c-4cb0-a8b7-267d99376fde:
-    name: 'Foto grid'
-    handle: imageGrid
-    sortOrder: 8
-    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+        fieldGroup: null
     fieldLayouts:
-      a6d469ea-0ee4-4b1c-97ab-e5cb982e7587:
+      ff3ecfc4-ce30-4f68-8c29-2b4b019e5c0b:
         tabs:
           -
             name: Content
             sortOrder: 1
             fields:
-              32bbc3c2-5d12-4cd7-b492-6a2c265faefe:
+              61c827f0-df0f-4a9b-a69e-bd239ab0599b:
                 required: false
                 sortOrder: 1
+              39fb2c28-2d5e-46d6-855c-0ed2a56b7082:
+                required: false
+                sortOrder: 2
+              9021593d-9b6e-4d5b-9290-f716b86032fd:
+                required: false
+                sortOrder: 3
+  89420d8b-e49c-4cb0-a8b7-267d99376fde:
+    field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9
+    name: 'Foto grid'
+    handle: imageGrid
+    sortOrder: 8
     fields:
       32bbc3c2-5d12-4cd7-b492-6a2c265faefe:
         name: Afbeeldingen
@@ -4694,8 +4729,18 @@ matrixBlockTypes:
           limit: ''
           selectionLabel: ''
           localizeRelations: ''
-        fieldGroup: null
         contentColumnType: string
+        fieldGroup: null
+    fieldLayouts:
+      a6d469ea-0ee4-4b1c-97ab-e5cb982e7587:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              32bbc3c2-5d12-4cd7-b492-6a2c265faefe:
+                required: false
+                sortOrder: 1
 plugins:
   redactor:
     settings: null
@@ -5439,13 +5484,29 @@ sections:
     type: channel
     enableVersioning: true
     propagateEntries: true
+    siteSettings:
+      8e92c4bf-d4fb-49f5-9833-4e91fb775669:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'blog/{slug}'
+        template: site-mutation/blog/_entry
+      ed4c9813-b9b0-4faa-b8b8-9bf9f55f5f6d:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'blog/{slug}'
+        template: site-mutation/blog/_entry
+      1f81a99e-4cd9-41d5-88e5-d85eb389e2ef:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: 'blog/{slug}'
+        template: site-nerdlab/blog/_entry
     entryTypes:
       b43bcced-b822-436f-8c0c-f3a193eb1e1b:
         name: Blog
         handle: blog
         hasTitleField: true
         titleLabel: Titel
-        titleFormat: null
+        titleFormat: ''
         sortOrder: 1
         fieldLayouts:
           b3b16c08-2072-485b-b3ad-f2effe5de2a6:
@@ -5454,15 +5515,21 @@ sections:
                 name: Content
                 sortOrder: 1
                 fields:
-                  3f690036-ba67-4919-8133-b177c47deee5:
+                  206d8a3d-5f1e-4ecd-80de-b7d34a4f9bd4:
                     required: false
                     sortOrder: 1
-                  20663383-07bd-43ac-a4c3-b0330378ab68:
+                  5c44570b-3bc0-4033-b80b-ef7d64ab8220:
                     required: false
                     sortOrder: 2
-                  17dae191-544a-4b28-8220-909333a9837e:
+                  9a90cbf7-2008-45ab-8dcb-1d7a961563c0:
                     required: false
                     sortOrder: 3
+                  f7a30764-781d-4f99-b052-e9a222f835c3:
+                    required: false
+                    sortOrder: 4
+                  f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9:
+                    required: false
+                    sortOrder: 5
               -
                 name: Meta
                 sortOrder: 2
@@ -5470,12 +5537,6 @@ sections:
                   f84689f7-6038-460e-9fda-f01a17d00956:
                     required: false
                     sortOrder: 1
-    siteSettings:
-      1f81a99e-4cd9-41d5-88e5-d85eb389e2ef:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: 'blog/{slug}'
-        template: blog/_entry
   f19a1506-8abc-42c9-8798-196a5ff2c3ca:
     name: Workshops
     handle: workshops
@@ -5650,570 +5711,41 @@ sections:
         hasUrls: true
         uriFormat: site-credits
         template: site-mutation/_site-credits
-  144a8670-ed91-4801-959e-a5f6b442dba6:
-    name: 'Mutation - Expo'
-    handle: mutationExpo
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: f387dfdd-8b8b-432e-9895-6b8593d7c520
-      maxLevels: 1
-    entryTypes:
-      a08a9a4b-91eb-4efc-abd4-5f4c5efe7314:
-        name: 'Mutation expo'
-        handle: mutationExpo
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          74548659-93b0-405d-b816-e3bbe6474485:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  20663383-07bd-43ac-a4c3-b0330378ab68:
-                    required: false
-                    sortOrder: 1
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  3643d2e1-88e6-473f-9d0c-5eac7f38a2a4:
-    name: 'Mutation - Extra'
-    handle: mutationExtra
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: 8c3ff1e8-b86d-4020-9ae3-2fdc372ddffe
-      maxLevels: 1
-    entryTypes:
-      b9825fe6-f743-4503-842d-27325f352ea3:
-        name: 'Mutation - Extra'
-        handle: mutationExtra
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          662f4612-5bed-4766-b669-47f814a84411:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  8eccee9f-28f1-41fe-9b86-4a793dde5b61:
-                    required: false
-                    sortOrder: 1
-                  5c83c045-1cf1-4135-92af-bbea0f0eb952:
-                    required: false
-                    sortOrder: 2
-                  20663383-07bd-43ac-a4c3-b0330378ab68:
-                    required: false
-                    sortOrder: 3
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  b0777b25-f5d3-4d8e-9154-e717907c48b7:
-    name: 'Mutation - How do you make it'
-    handle: mutationHowDoYouMakeIt
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: 4dc88217-f6d5-4833-be64-f3831923d92b
-      maxLevels: 1
-    entryTypes:
-      939668c4-7c45-4604-91f4-0fbb1bbc99d4:
-        name: 'How do you make it'
-        handle: mutationHowDoYouMakeIt
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          0a9e1eee-b756-4abf-9bcd-28a03d3359d7:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  f87a3d48-6506-4cea-9200-e707ea7fe1f3:
-                    required: false
-                    sortOrder: 1
-                  1919357a-9336-4b00-8f56-e9da754f13a9:
-                    required: false
-                    sortOrder: 2
-                  8eccee9f-28f1-41fe-9b86-4a793dde5b61:
-                    required: false
-                    sortOrder: 3
-                  5c83c045-1cf1-4135-92af-bbea0f0eb952:
-                    required: false
-                    sortOrder: 4
-                  20663383-07bd-43ac-a4c3-b0330378ab68:
-                    required: false
-                    sortOrder: 5
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  6dcc82d2-f39a-45fe-9d39-8a90e6402030:
-    name: 'Mutation - Local heroes'
-    handle: mutationLocalHeroes
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: 4ce12b03-9090-4b29-8d0b-d0804d78e2da
-      maxLevels: 1
-    entryTypes:
-      23793e73-0ee1-41d8-b50d-0af9d2dff14d:
-        name: 'Mutation - Local heroes'
-        handle: mutationLocalHeroes
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          489a73dd-d480-4485-8461-c04bdc7763cc:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  f87a3d48-6506-4cea-9200-e707ea7fe1f3:
-                    required: false
-                    sortOrder: 1
-                  1919357a-9336-4b00-8f56-e9da754f13a9:
-                    required: false
-                    sortOrder: 2
-                  8eccee9f-28f1-41fe-9b86-4a793dde5b61:
-                    required: false
-                    sortOrder: 3
-                  5c83c045-1cf1-4135-92af-bbea0f0eb952:
-                    required: false
-                    sortOrder: 4
-                  56c70303-3eac-405f-9444-b9e21d63565f:
-                    required: false
-                    sortOrder: 5
-                  20663383-07bd-43ac-a4c3-b0330378ab68:
-                    required: false
-                    sortOrder: 6
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  02c85fd4-09a3-40ad-ab1a-1aafcd75186a:
-    name: 'Mutation - Praktisch'
-    handle: mutationPractical
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: 478dc223-815d-4332-9dbc-4ee034e1c906
-      maxLevels: 1
-    entryTypes:
-      80207135-57ff-4a04-af8f-a4437c850f99:
-        name: 'Mutation - Praktisch'
-        handle: mutationPractical
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          5dd94d6e-fa5a-4292-bf7f-977016a88c74:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  20663383-07bd-43ac-a4c3-b0330378ab68:
-                    required: false
-                    sortOrder: 1
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  cb65b536-70ef-44ff-be6a-fba7b0c2d5fe:
-    name: 'Mutation - Programma'
-    handle: mutationProgram
+  966ff8eb-d301-42cc-9682-6ff16c2089e8:
+    name: Mutation
+    handle: mutation
     type: single
     enableVersioning: true
     propagateEntries: true
-    entryTypes:
-      09b768da-e2b8-44e8-aad8-3e26f61e2448:
-        name: 'Mutation - Programma'
-        handle: mutationProgram
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          cad58b32-0f77-47c5-a37e-1f11f6c770fe:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  f7a30764-781d-4f99-b052-e9a222f835c3:
-                    required: false
-                    sortOrder: 1
-              -
-                name: Meta
-                sortOrder: 2
-                fields:
-                  f84689f7-6038-460e-9fda-f01a17d00956:
-                    required: false
-                    sortOrder: 1
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: programma
-        template: site-mutation/_program
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: program
-        template: site-mutation/_program
-  1df840d0-985d-4a4a-a6e6-f20275582656:
-    name: 'Mutation - Talks'
-    handle: mutationTalks
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: 20167870-c1f9-41d1-9625-e0089f72b83b
-      maxLevels: 1
-    entryTypes:
-      62332a93-acbb-4b01-a61e-75a7b0729b1b:
-        name: 'Mutation talks'
-        handle: mutationTalks
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          17c72eac-5c30-4c2d-862b-c42c57fac55c:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  f87a3d48-6506-4cea-9200-e707ea7fe1f3:
-                    required: false
-                    sortOrder: 1
-                  1919357a-9336-4b00-8f56-e9da754f13a9:
-                    required: false
-                    sortOrder: 2
-                  8eccee9f-28f1-41fe-9b86-4a793dde5b61:
-                    required: false
-                    sortOrder: 3
-                  5c83c045-1cf1-4135-92af-bbea0f0eb952:
-                    required: false
-                    sortOrder: 4
-                  56c70303-3eac-405f-9444-b9e21d63565f:
-                    required: false
-                    sortOrder: 5
-                  20663383-07bd-43ac-a4c3-b0330378ab68:
-                    required: false
-                    sortOrder: 6
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  c75125d5-254e-4c7a-932f-87c6af29b12d:
-    name: 'Mutation - Tickets'
-    handle: mutationTickets
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: 7acdb020-7284-4434-a0b0-647183e9d303
-      maxLevels: 1
-    entryTypes:
-      abded8d4-605f-4fc1-8173-25b48f6635f0:
-        name: 'Mutation - Tickets'
-        handle: mutationTickets
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          40102f69-b108-47f3-83d9-8b63947eeed2:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  439211f6-b118-45ef-af8e-95098cdb3662:
-                    required: false
-                    sortOrder: 1
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  5f03f9aa-5f3e-4b49-889a-72129bb01709:
-    name: 'Mutation - Workshops'
-    handle: mutationWorkshops
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: 3d4785c7-a21e-4c2f-933a-a28d6f06689e
-      maxLevels: 1
-    entryTypes:
-      a19f2bb3-07f9-415e-9538-cfffa7ef936a:
-        name: 'Mutation workshops'
-        handle: mutationWorkshops
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          09c30d30-266d-4ba0-8525-33ee246354ec:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  f87a3d48-6506-4cea-9200-e707ea7fe1f3:
-                    required: false
-                    sortOrder: 1
-                  1919357a-9336-4b00-8f56-e9da754f13a9:
-                    required: false
-                    sortOrder: 2
-                  8eccee9f-28f1-41fe-9b86-4a793dde5b61:
-                    required: false
-                    sortOrder: 3
-                  5c83c045-1cf1-4135-92af-bbea0f0eb952:
-                    required: false
-                    sortOrder: 4
-                  20663383-07bd-43ac-a4c3-b0330378ab68:
-                    required: false
-                    sortOrder: 5
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  1e7da0a7-d0b1-4133-9596-1f2c7dde3505:
-    name: 'Mutation - Schedule'
-    handle: mutationSchedule
-    type: single
-    enableVersioning: true
-    propagateEntries: true
-    entryTypes:
-      aa67e33b-afbc-4eaa-9cfc-1fa628d18e5c:
-        name: 'Mutation - Schedule'
-        handle: mutationSchedule
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          0fd506ba-6ab0-425a-8c84-451c09fb38eb:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  f7a30764-781d-4f99-b052-e9a222f835c3:
-                    required: false
-                    sortOrder: 1
-              -
-                name: Meta
-                sortOrder: 2
-                fields:
-                  f84689f7-6038-460e-9fda-f01a17d00956:
-                    required: false
-                    sortOrder: 1
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: schedule
-        template: site-mutation/_schedule
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: schedule
-        template: site-mutation/_schedule
-  3b6b3b44-5e6e-40f6-bf5b-9903446e23c8:
-    name: 'Mutation - Schedule info'
-    handle: mutationScheduleInfo
-    type: structure
-    enableVersioning: true
-    propagateEntries: true
-    structure:
-      uid: e391a4ca-654e-497a-930c-51404de8925b
-      maxLevels: null
-    entryTypes:
-      e2229c81-5d43-4990-a36d-415ee54cc98d:
-        name: 'Mutation - Schedule info'
-        handle: mutationScheduleInfo
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          61a84913-b6d9-4a30-82ba-60b50c6987b4:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  1919357a-9336-4b00-8f56-e9da754f13a9:
-                    required: false
-                    sortOrder: 1
-                  8eccee9f-28f1-41fe-9b86-4a793dde5b61:
-                    required: false
-                    sortOrder: 2
-                  5c83c045-1cf1-4135-92af-bbea0f0eb952:
-                    required: false
-                    sortOrder: 3
-    siteSettings:
-      603e2a90-523e-4c25-af9f-eda4a4bfdab9:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-      d5f5659b-91c1-436a-a5dd-17ab66a5ece0:
-        enabledByDefault: true
-        hasUrls: false
-        uriFormat: null
-        template: null
-  27716576-8072-452e-a7d6-ad9813dd0cc9:
-    name: 'Mutation blog'
-    handle: mutationblog
-    type: single
-    enableVersioning: true
-    propagateEntries: true
-    entryTypes:
-      83d85b41-3020-470b-af7e-d94b13dfdcec:
-        name: 'Mutation blog'
-        handle: mutationblog
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
-        sortOrder: 1
-        fieldLayouts:
-          71f4b699-164e-4731-9106-04d4a6dcbad0:
-            tabs:
-              -
-                name: Content
-                sortOrder: 1
-                fields:
-                  f7a30764-781d-4f99-b052-e9a222f835c3:
-                    required: false
-                    sortOrder: 1
-              -
-                name: Meta
-                sortOrder: 2
-                fields:
-                  f84689f7-6038-460e-9fda-f01a17d00956:
-                    required: false
-                    sortOrder: 1
     siteSettings:
       8e92c4bf-d4fb-49f5-9833-4e91fb775669:
         enabledByDefault: true
         hasUrls: true
         uriFormat: __home__
-        template: site-mutation/_mutationBlog
+        template: site-mutation/_index
       ed4c9813-b9b0-4faa-b8b8-9bf9f55f5f6d:
         enabledByDefault: true
         hasUrls: true
         uriFormat: __home__
-        template: site-mutation/_mutationBlog
-  2a13701b-7cbc-489b-83de-3c6b242aec05:
-    name: 'Mutation blog - Details'
-    handle: mutationBlogDetail
-    type: channel
-    enableVersioning: true
-    propagateEntries: true
+        template: site-mutation/_index
     entryTypes:
-      c1457f07-5954-434c-8230-315aa0f07db4:
-        name: 'Mutation blog - Detail'
-        handle: mutationBlogDetail
-        hasTitleField: true
-        titleLabel: Titel
-        titleFormat: null
+      9ce3d8e4-05b0-47e4-a9d5-df30eaceb29c:
+        name: Mutation
+        handle: mutation
+        hasTitleField: false
+        titleLabel: ''
+        titleFormat: '{section.name|raw}'
         sortOrder: 1
         fieldLayouts:
-          57e4038c-0eee-45a4-a833-a75cf6477a79:
+          f2c7c9ab-5b1c-4d9e-af35-faa731235c19:
             tabs:
               -
                 name: Content
                 sortOrder: 1
                 fields:
-                  f7a30764-781d-4f99-b052-e9a222f835c3:
+                  20663383-07bd-43ac-a4c3-b0330378ab68:
                     required: false
                     sortOrder: 1
-                  9a90cbf7-2008-45ab-8dcb-1d7a961563c0:
-                    required: false
-                    sortOrder: 2
-                  f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9:
-                    required: false
-                    sortOrder: 3
               -
                 name: Meta
                 sortOrder: 2
@@ -6221,17 +5753,6 @@ sections:
                   f84689f7-6038-460e-9fda-f01a17d00956:
                     required: false
                     sortOrder: 1
-    siteSettings:
-      8e92c4bf-d4fb-49f5-9833-4e91fb775669:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: '{slug}'
-        template: site-mutation/_mutationBlogDetail
-      ed4c9813-b9b0-4faa-b8b8-9bf9f55f5f6d:
-        enabledByDefault: true
-        hasUrls: true
-        uriFormat: '{slug}'
-        template: site-mutation/_mutationBlogDetail
 siteGroups:
   fb7b000e-0be9-4670-92e0-32e5c95a49bb:
     name: Nerdlab
