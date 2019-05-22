@@ -4,6 +4,7 @@
 
 .c-link {
   transition: color $transition;
+  font-weight: $medium;
 
   &,
   &:visited {

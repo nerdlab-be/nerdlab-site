@@ -16,14 +16,14 @@
  * 5. Force all button-styled elements to appear clickable.
  */
 
- .c-btn {
+.c-btn {
   display: inline-block; /* [1] */
   vertical-align: middle; /* [2] */
   font: inherit; /* [3] */
   text-align: center; /* [4] */
   margin: 0; /* [4] */
   cursor: pointer; /* [5] */
-  padding: $unit-small $unit;
+  padding: $unit-small $unit $unit-small + 1px;
   transition: $global-transition;
   border-radius: $unit-large;
   font-weight: $medium;
@@ -92,7 +92,8 @@
 }
 
 .c-btn--large {
-  padding: $unit-small $unit;
+  @include font-size($small);
+  padding: $unit-small $unit $unit-small + 1px;
 
   @include mq(medium) {
     @include font-size($h6);
@@ -142,7 +143,5 @@ $btn-ghost-border-width: 2px !default;
       border-color: $color-secondary;
       background-color: $color-secondary;
     }
-
   }
-
 }

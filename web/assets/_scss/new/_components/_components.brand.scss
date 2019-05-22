@@ -59,6 +59,17 @@ $mutation-height: 225px;
     }
   }
 
-.c-brand__mark {
+.c-logo-vlaanderen {
+  display: block;
+  width: 150px;
+  margin-top: $unit;
 
+  @include mq(medium) {
+    width: 150px;
+    margin-top: 0;
+  }
+
+  @include mq(medium) {
+    width: 180px;
+  }
 }

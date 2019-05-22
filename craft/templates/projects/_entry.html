@@ -6,31 +6,27 @@
 {% extends "_layouts/site" %}
 
 {% block main %}
-<div class="o-row-intro">
+<div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout o-layout--large o-layout--spacer">
-      <div class="o-layout__item u-1/2@large">
-        {# Breadcrumb #}
-        {% set parent = craft.entries.section('projectOverview').one() %}
-        <p class="c-breadcrumb">
-          <a href="{{ parent.url() }}" alt="{{ parent.title }}" class="c-breadcrumb__link">
-            {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parent.title }}
-          </a>
-        </p>
-        {# Intro #}
-        <h1 class="c-h1">{{ entry.title }}</h1>
-        {% include '_components/components.intro.html' %}
-      </div>
-      <div class="o-layout__item u-1/2@large">
-        {# Agenda overview #}
-        {% include '_components/components.agenda-filter.html' with { options: { tag: entry.title } } %}
-      </div>
+    {# Breadcrumb #}
+    {% set parent = craft.entries.section('projectOverview').one() %}
+    <p class="c-breadcrumb">
+      <a href="{{ parent.url() }}" alt="{{ parent.title }}" class="c-breadcrumb__link">
+        {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parent.title }}
+      </a>
+    </p>
+    {# Intro #}
+    <h1 class="c-h1">{{ entry.title }}</h1>
+    {% include '_components/components.intro.html' %}
+    {# Agenda overview #}
+    <div class="u-margin-top-large">
+    {% include '_components/components.agenda-filter.html' with { options: { tag: entry.title } } %}
     </div>
   </div>
 </div>
 
 {# Gallery #}
-<div class="o-row o-row-tiny">
+<div class="o-row">
   <div class="p-slick-theme js-gallery">
     {% for item in entry.projectHeader.all() %}
     <div class="p-slick-theme__img">

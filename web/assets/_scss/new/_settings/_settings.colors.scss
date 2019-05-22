@@ -20,7 +20,8 @@
 
 // Base colors inspired by clrs.cc by @mrmrs_
 $navy                       : #001F3F;
-$blue                       : #0000FF;
+// $blue                       : #0000FF;
+$blue                       : #36F;
 $aqua                       : #7FDBFF;
 $teal                       : #39CCCC;
 $olive                      : #3D9970;
@@ -28,16 +29,16 @@ $green                      : #2ECC40;
 $lime                       : #01FF70;
 $yellow                     : #FFE100;
 $orange                     : #FF851B;
-$red                        : #DF0000;
+// $red                        : #DF0000;
+$red                        : #f33;
 $fuchsia                    : #F012BE;
 $purple                     : #B10DC9;
 $maroon                     : #85144B;
 
 $white                      : #FFFFFF;
 $silver                     : #DDDDDD;
-$gray                       : #888888;
+$gray                       : shade(#4b4c4d,20%);
 $black                      : #202226;
-
 
 
 
@@ -46,10 +47,10 @@ $black                      : #202226;
 // Brand colors
 
 $color-neutral              : $gray;
-$color-neutral-xxlight      : tint($color-neutral,75);
-$color-neutral-xlight       : tint($color-neutral,60);
-$color-neutral-light        : tint($color-neutral,20);
-$color-neutral-dark         : $black;
+$color-neutral-xxlight      : tint($color-neutral,93%);
+$color-neutral-xlight       : tint($color-neutral,85%);
+$color-neutral-light        : tint($color-neutral,30%);
+$color-neutral-dark         : shade($color-neutral,60%);
 
 $color-primary              : $red;
 $color-primary-xlight       : tint($color-primary,80);

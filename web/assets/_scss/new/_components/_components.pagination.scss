@@ -34,12 +34,6 @@
     .c-pagination--center  & + & {
       margin-left: 0;
     }
-
-    @include mq(medium) {
-      & + & {
-        // margin-left: $unit;
-      }
-    }
   }
 
   .c-pagination__item--current {
@@ -101,6 +95,7 @@
   }
 
   .c-pagination__link {
+    font-weight: $medium;
     display: block;
     padding: $unit-small;
     transition: $global-transition;
