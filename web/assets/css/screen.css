@@ -1659,6 +1659,10 @@ table {
   padding-bottom: 56.25%;
 }
 
+.o-crop--4\:3 {
+  padding-bottom: 75%;
+}
+
 .o-crop--3\:1 {
   padding-bottom: 33.33333%;
 }
@@ -3643,7 +3647,7 @@ table {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5;
-  max-width: 32em;
+  max-width: 35em;
 }
 
 .s-editor p + ul {
@@ -3775,7 +3779,7 @@ table {
   font-size: 21px;
   font-size: 1.3125rem;
   line-height: 1.5;
-  max-width: 25em;
+  max-width: 28em;
 }
 
 @media (min-width: 37.5em) {
