@@ -1,4 +1,4 @@
-dateModified: 1558355332
+dateModified: 1558533081
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -833,10 +833,10 @@ fields:
     settings:
       minBlocks: ''
       maxBlocks: ''
-      localizeBlocks: '1'
       contentTable: '{{%matrixcontent_mutationabout}}'
-    fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0
+      localizeBlocks: ''
     contentColumnType: string
+    fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0
   429a4df4-dbfc-49a6-b3d4-d101a6d92499:
     name: Nerdlab
     handle: mutationNerdlab
@@ -3533,10 +3533,28 @@ matrixBlockTypes:
         fieldGroup: null
         contentColumnType: text
   23334e4d-a4f6-4278-ba94-aa9b1ae435aa:
+    field: f7a30764-781d-4f99-b052-e9a222f835c3
     name: Titel
     handle: heading
     sortOrder: 1
-    field: f7a30764-781d-4f99-b052-e9a222f835c3
+    fields:
+      a16248c6-1a50-4c47-8771-21bddfc87bce:
+        name: Titel
+        handle: heading
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       5a0883aa-64b0-492a-b227-326628b49e1a:
         tabs:
@@ -3547,29 +3565,33 @@ matrixBlockTypes:
               a16248c6-1a50-4c47-8771-21bddfc87bce:
                 required: false
                 sortOrder: 1
-    fields:
-      a16248c6-1a50-4c47-8771-21bddfc87bce:
-        name: Titel
-        handle: heading
-        instructions: ''
-        searchable: true
-        translationMethod: none
-        translationKeyFormat: null
-        type: craft\fields\PlainText
-        settings:
-          placeholder: ''
-          code: ''
-          multiline: ''
-          initialRows: '4'
-          charLimit: ''
-          columnType: text
-        fieldGroup: null
-        contentColumnType: text
   4c425b5e-7180-4b17-8321-091ea38b0fd1:
+    field: f7a30764-781d-4f99-b052-e9a222f835c3
     name: Paragraaf
     handle: paragraph
     sortOrder: 2
-    field: f7a30764-781d-4f99-b052-e9a222f835c3
+    fields:
+      700dcf46-3c44-48dd-84f9-a782a6bd2502:
+        name: Paragraaf
+        handle: paragraph
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: Simple.json
+          purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: '*'
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
     fieldLayouts:
       d3f56619-bf27-4527-9987-571d3b39817c:
         tabs:
@@ -3580,27 +3602,6 @@ matrixBlockTypes:
               700dcf46-3c44-48dd-84f9-a782a6bd2502:
                 required: false
                 sortOrder: 1
-    fields:
-      700dcf46-3c44-48dd-84f9-a782a6bd2502:
-        name: Paragraaf
-        handle: paragraph
-        instructions: ''
-        searchable: true
-        translationMethod: none
-        translationKeyFormat: null
-        type: craft\redactor\Field
-        settings:
-          redactorConfig: Simple.json
-          purifierConfig: ''
-          purifyHtml: '1'
-          columnType: text
-          availableVolumes: '*'
-          availableTransforms: '*'
-          removeInlineStyles: '1'
-          removeEmptyTags: '1'
-          removeNbsp: '1'
-        fieldGroup: null
-        contentColumnType: text
   570010d5-76a8-496a-bc16-fc797fefcea5:
     name: Titel
     handle: heading
@@ -5515,21 +5516,18 @@ sections:
                 name: Content
                 sortOrder: 1
                 fields:
-                  206d8a3d-5f1e-4ecd-80de-b7d34a4f9bd4:
-                    required: false
-                    sortOrder: 1
                   5c44570b-3bc0-4033-b80b-ef7d64ab8220:
                     required: false
-                    sortOrder: 2
+                    sortOrder: 1
                   9a90cbf7-2008-45ab-8dcb-1d7a961563c0:
                     required: false
-                    sortOrder: 3
+                    sortOrder: 2
                   f7a30764-781d-4f99-b052-e9a222f835c3:
                     required: false
-                    sortOrder: 4
+                    sortOrder: 3
                   f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9:
                     required: false
-                    sortOrder: 5
+                    sortOrder: 4
               -
                 name: Meta
                 sortOrder: 2
@@ -5753,6 +5751,53 @@ sections:
                   f84689f7-6038-460e-9fda-f01a17d00956:
                     required: false
                     sortOrder: 1
+  4f11b2d3-033a-4eb4-8e6e-49b9041e6a81:
+    name: 'Blog overzicht'
+    handle: blogOverview
+    type: single
+    enableVersioning: true
+    propagateEntries: true
+    siteSettings:
+      8e92c4bf-d4fb-49f5-9833-4e91fb775669:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: blog
+        template: site-nerdlab/blog/_index
+      ed4c9813-b9b0-4faa-b8b8-9bf9f55f5f6d:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: blog
+        template: site-nerdlab/blog/_index
+      1f81a99e-4cd9-41d5-88e5-d85eb389e2ef:
+        enabledByDefault: true
+        hasUrls: true
+        uriFormat: blog
+        template: site-nerdlab/blog/_index
+    entryTypes:
+      94f640e9-3a84-43b8-a916-6e5df4ad8027:
+        name: 'Blog overzicht'
+        handle: blogOverview
+        hasTitleField: true
+        titleLabel: Titel
+        titleFormat: '{section.name|raw}'
+        sortOrder: 1
+        fieldLayouts:
+          5f60f31b-3841-4b6e-a470-ca1af99e1762:
+            tabs:
+              -
+                name: Content
+                sortOrder: 1
+                fields:
+                  20663383-07bd-43ac-a4c3-b0330378ab68:
+                    required: false
+                    sortOrder: 1
+              -
+                name: Meta
+                sortOrder: 2
+                fields:
+                  f84689f7-6038-460e-9fda-f01a17d00956:
+                    required: false
+                    sortOrder: 1
 siteGroups:
   fb7b000e-0be9-4670-92e0-32e5c95a49bb:
     name: Nerdlab
@@ -5795,7 +5840,7 @@ system:
   live: true
   name: Nerdlab
   timeZone: Europe/Brussels
-  schemaVersion: 3.1.27
+  schemaVersion: 3.1.28
 tagGroups:
   cfcb6775-cd26-4d59-90bb-8f25cdd22582:
     name: Onderwerp

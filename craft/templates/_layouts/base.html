@@ -110,6 +110,42 @@
     position: 'center-center'
   } %}
 
+  {% set thumbSquare = {
+    mode: 'crop',
+    width: 100,
+    height: 100,
+    quality: 90,
+    position: 'center-center'
+  } %}
+  {% set smallSquare = {
+    mode: 'crop',
+    width: 400,
+    height: 400,
+    quality: 90,
+    position: 'center-center'
+  } %}
+  {% set mediumSquare = {
+    mode: 'crop',
+    width: 600,
+    height: 600,
+    quality: 90,
+    position: 'center-center'
+  } %}
+  {% set largeSquare = {
+    mode: 'crop',
+    width: 900,
+    height: 900,
+    quality: 90,
+    position: 'center-center'
+  } %}
+  {% set xlargeSquare = {
+    mode: 'crop',
+    width: 1280,
+    height: 1280,
+    quality: 90,
+    position: 'center-center'
+  } %}
+
   {% block body %}{% endblock %}
 
   {# Global javascript #}
