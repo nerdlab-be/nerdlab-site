@@ -2,35 +2,38 @@
    #HOURS
    ========================================================================== */
 
-   .c-hours {
-    color: $color-neutral;
-    margin-top: $unit-large;
-    @include font-size($small);
-  }
+.c-hours {
+  margin-top: $unit;
 
-    .c-hours__list {
-      margin-bottom: 0;
+  @include mq(medium) {
+    margin-top: $unit-large;
+  }
+}
+
+  .c-hours__list {
+    color: $color-neutral;
+    margin-bottom: 0;
+
+    strong {
+      font-weight: $regular;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li + li {
+      border-top: 1px dotted $color-neutral-xlight;
+      padding-top: $unit-tiny;
+      margin-top: $unit-tiny;
+    }
+
+    li.is-now {
+      font-weight: $bold;
 
       strong {
-        font-weight: $regular;
-      }
-
-      li {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      li + li {
-        border-top: 1px dotted $color-neutral-xlight;
-        padding-top: $unit-tiny/2;
-        margin-top: $unit-tiny/2;
-      }
-
-      li.is-now {
         font-weight: $bold;
-
-        strong {
-          font-weight: $bold;
-        }
       }
     }
+  }

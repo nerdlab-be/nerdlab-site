@@ -119,20 +119,22 @@
 }
 
 .c-lead {
+  @include font-size($h4);
+  max-width: 28em;
   font-weight: $regular;
   color: $color-primary;
-  @include font-size($h6);
 
   @include mq(small) {
-    @include font-size($h4);
+    @include font-size($h3);
   }
 
-  @include mq(large) {
-    @include font-size($h3, auto, +1);
+  @include mq(medium) {
+    @include font-size($h2, auto, +1);
   }
 }
 
 .c-faded {
+  font-weight: $regular;
   color: $color-neutral-light;
   text-transform: uppercase;
   @include font-size(14px);

@@ -29,7 +29,7 @@
         <p>
           {% if block.buttonLink | length %}
           {% for link in block.buttonLink.all() %}
-          <a href="{{ link.url }}" class="c-button c-button--lg c-button--alpha">
+          <a href="{{ link.url }}" class="c-btn c-btn--large c-button--primary">
             {{ block.buttonTitle }}
           </a>
           {% endfor %}

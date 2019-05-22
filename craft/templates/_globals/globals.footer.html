@@ -2,11 +2,11 @@
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--spacer-mobile">
       <div class="o-layout__item u-1/2@small u-1/4@medium u-order-two">
-        <div class="s-editor">
+        <div class="s-editor s-editor--small">
           {{ interface.address }}
         </div>
       </div>
-      <div class="o-layout__item u-1/2@small u-1/4@medium s-editor u-order-two">
+      <div class="o-layout__item u-1/2@small u-1/4@medium s-editor s-editor--small u-order-two">
         <p class="u-margin-bottom-none">{{ interface.socialTitle }}</p>
         <ul class="o-list-bare">
           {% for block in interface.social.all() %}
@@ -16,7 +16,7 @@
       </div>
       <div class="o-layout__item u-2/4@medium u-order-one">
         {% for block in interface.newsletter.all() %}
-        <div class="s-editor u-margin-bottom-small">
+        <div class="s-editor s-editor--small u-margin-bottom-small">
           {{ block.paragraph }}
         </div>
         <form class="c-subscribe-form" action="//nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=14a5daee70" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>

@@ -56,23 +56,23 @@
   }
 
   &::-webkit-input-placeholder {
-    color: tint($color-neutral-light,30);
+    color: $color-neutral-light;
   }
 
   &::-moz-placeholder {
-    color: tint($color-neutral-light,30);
+    color: $color-neutral-light;
   }
 
   &:-ms-input-placeholder {
-    color: tint($color-neutral-light,30);
+    color: $color-neutral-light;
   }
 }
 
 .c-subscribe-form__btn {
-  border-color: $color-neutral-xlight;
+  border: 0;
+  border-bottom: 1px solid $color-neutral-xlight;
   color: $color-secondary;
   background-color: transparent;
-  border-width: 0 0 1px;
   padding-right: 0;
   border-radius: 0;
 

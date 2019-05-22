@@ -77,6 +77,12 @@
 
   @include mq(medium) {
     padding-bottom: $unit-huge;
+    min-height: $unit-huge*4;
+  }
+
+  @include mq(large) {
+    padding-bottom: $unit-huge;
+    min-height: $unit-huge*5;
   }
 }
 
