@@ -1,0 +1,304 @@
+/* ==================================
+   #NAVIGATION
+   ================================== */
+
+$nav-breakpoint: medium;
+
+.has-nav {
+  overflow: hidden;
+}
+
+.c-navigation {
+  margin-bottom: 0;
+  position: relative;
+  display: block;
+
+  @include mq($until: $nav-breakpoint) {
+    position: fixed;
+    z-index: $z-index-alpha;
+    overflow: scroll;
+    background-color: rgba($white,.98);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: $unit-huge + $unit 0 $unit-huge;
+    transform: scale(0);
+
+    .s-mutation & {
+      background-color: $color-secondary;
+    }
+
+    &.is-visible {
+      transform: scale(1);
+      transition: all $duration $easing;
+    }
+  }
+}
+
+.c-navigation--group {
+  display: flex;
+
+  @include mq($until: $nav-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+  .c-navigation__list {
+    margin-bottom: 0;
+  }
+
+  .c-navigation__item {
+    @include mq($nav-breakpoint) {
+      display: inline-block;
+    }
+  }
+
+  .c-navigation__link {
+    @include font-size($h4);
+    font-weight: $regular;
+    text-decoration: none;
+    display: block;
+    transition: color $transition;
+    padding: $unit;
+    text-align: center;
+
+    &,
+    &:visited {
+      color: $color-neutral-dark;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+
+    .is-active > & {
+      color: $color-primary;
+    }
+
+    .c-navigation--group & {
+      font-weight: $bold;
+      text-transform: uppercase;
+    }
+
+
+
+    .s-mutation &,
+    .s-mutation &:visited {
+      color: $white;
+    }
+
+    .s-mutation &:hover,
+    .s-mutation &:focus {
+      color: $color-tertiary;
+    }
+
+    .s-mutation .is-active > & {
+      color: $color-tertiary;
+    }
+
+    @include mq($nav-breakpoint) {
+      @include font-size($h5);
+      padding: $unit-small $unit/1.3;
+
+      .s-mutation &,
+      .s-mutation &:visited {
+        color: $color-neutral;
+      }
+
+      .s-mutation &:hover,
+      .s-mutation &:focus {
+        color: $color-primary;
+      }
+
+      .s-mutation .is-active > & {
+        color: $color-primary;
+      }
+
+      .c-navigation__item:last-child > & {
+        border-radius: $unit-huge;
+        border: 1px solid $color-neutral-xlight;
+      }
+
+      .c-navigation--group .c-navigation__item:last-child > & {
+        border-radius: none;
+        border: 0;
+      }
+
+
+    }
+
+    @include mq(large) {
+      padding: $unit-small*1.5 $unit*1.5;
+    }
+  }
+
+// Language nav
+.c-navigation__language-list {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+  margin-top: $unit-large;
+  border-top: 3px dotted $color-secondary-xlight;
+
+  @include mq($nav-breakpoint) {
+    position: relative;
+    bottom: auto;
+    width: auto;
+    margin-left: $unit;
+    margin-top: 0;
+    border: 3px dotted $color-secondary-xlight;
+  }
+}
+
+.c-navigation__language-item {
+  display: block;
+  text-align: center;
+  width: 100%;
+
+  & + & {
+    margin-top: 0;
+    border-left: 3px dotted $color-secondary-xlight;
+  }
+}
+
+.c-navigation__language-link {
+  @include font-size($h4);
+  font-weight: $bold;
+  text-decoration: none;
+  display: block;
+  padding: $unit - 3px $unit-small;
+  transition: color $transition;
+
+  &,
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-tertiary;
+  }
+
+  &:focus {
+    outline: 0;
+    background-color: $color-secondary;
+    color: $white;
+  }
+
+  .is-active > & {
+    color: $color-tertiary;
+  }
+
+  .is-active > &:focus {
+    background-color: $color-primary;
+    color: $white;
+  }
+
+  @include mq($nav-breakpoint) {
+    @include font-size($h5);
+    padding: $unit-small - 3px $unit - 3px;
+
+    &,
+    &:visited {
+      color: $color-secondary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-secondary-light;
+    }
+
+    &:focus {
+      outline: 0;
+      background-color: $color-secondary;
+      color: $white;
+    }
+
+    .is-active > & {
+      color: $color-neutral;
+      background-color: $color-secondary-xxlight;
+    }
+  }
+
+  @include mq(large) {
+    padding: $unit-small*1.5 - 3px $unit - 3px;
+  }
+}
+
+// Mobile navigation toggle
+.c-navigation-toggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: $z-index-beta;
+  border: 0;
+  color: $color-neutral-dark;
+  background-color: transparent;
+  transition: $global-transition;
+  font-weight: $bold;
+
+  &:focus {
+    outline: $outline;
+  }
+
+  &[aria-expanded="true"] {
+    color: $color-secondary;
+  }
+
+  .s-mutation &[aria-expanded="true"] {
+    color: $white;
+  }
+
+  @include mq($nav-breakpoint) {
+    display: none;
+  }
+}
+
+// Hamburger icon and animation
+.c-hamburger {
+  stroke: currentColor;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  width: 44px;
+  height: 44px;
+
+  .s-mutation & {
+    stroke-linecap: square;
+    stroke-width: 8px;
+    transform: skewY(4deg);
+  }
+}
+
+  .c-hamburger__line {
+    transition: transform $duration $easing;
+    transform-origin: center;
+
+    &:nth-child(3) {
+      opacity: 0;
+    }
+  }
+
+  [aria-expanded='true'] .c-hamburger__line {
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(-45deg);
+      opacity: 1;
+    }
+
+    &:first-child,
+    &:last-child {
+      transform: scale(0);
+    }
+  }

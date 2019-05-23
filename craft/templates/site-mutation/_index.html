@@ -5,7 +5,27 @@
 
 {% extends "_layouts/mutation" %}
 
-{% block body %}
+{% block main %}
+<div class="c-hero s-theme-tertiary">
+  <span class="c-hero__background">
+    <img src="/assets/images/svg/mutation-backdrop.svg" alt="">
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
+    <h1 class="u-hidden-visually">
+      Mutation Festival
+    </h1>
+    <h2 class="c-hero__title">
+      Forever <span class="c-highlight">whatever</span>
+    </h2>
+    <p class="c-hero__date">{{ mutationGlobals.mutationDate }}</p>
+    <p class="c-hero__location">{{ mutationGlobals.mutationLocation }}</p>
+  </div>
+</div>
 
+<div class="o-row-large s-theme-secondary">
+  <div class="o-wrapper o-wrapper--large">
+    <h2 class="c-mutation-title">Over Mutation</h2>
+  </div>
+</div>
 {% endblock %}
 
