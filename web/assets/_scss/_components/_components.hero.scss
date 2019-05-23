@@ -1,0 +1,115 @@
+/* ==================================
+   #HERO
+   ================================== */
+
+.c-hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: $unit-large;
+  padding-bottom: $unit-large;
+
+  @include mq(medium) {
+    padding-top: $unit-huge;
+    padding-bottom: $unit-huge;
+  }
+
+  @include mq(large) {
+    padding-top: $unit-huge + $unit;
+    padding-bottom: $unit-huge + $unit;
+  }
+
+  @include mq(huge) {
+    padding-top: $unit-huge + $unit-large;
+    padding-bottom: $unit-huge + $unit-large;
+  }
+}
+
+  .c-hero__background {
+    z-index: $z-index-alpha;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 464px;
+    }
+
+    @include mq(small) {
+      img {
+        height: 530px;
+      }
+    }
+
+    @include mq(medium) {
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .c-hero__title {
+    @include font-size($h1*1.4);
+    position: relative;
+    font-family: $font-secondary;
+    text-align: right;
+    margin-right: $unit-small;
+
+    @include mq(small) {
+      @include font-size($h1*2);
+      margin-right: $unit;
+    }
+
+    @include mq(medium) {
+      @include font-size($h1*2.3);
+    }
+
+    @include mq(large) {
+      text-align: center;
+      @include font-size($h1*3);
+    }
+  }
+
+  .c-hero__date {
+    @include font-size($h3);
+    position: relative;
+    color: $color-primary;
+    font-weight: $bold;
+    margin-bottom: $unit-large;
+
+    text-shadow: 0px 1.2ex 0px rgba($color-primary, .6), 0px -1.2ex 0px rgba($color-primary, .6), 0px 2.2ex 0px rgba($color-primary, .6), 0px -2.2ex 0px rgba($color-primary, .6);
+
+    @include mq(small) {
+      @include font-size($h2);
+    }
+
+    @include mq(large) {
+      margin-top: $unit-large;
+    }
+  }
+
+  .c-hero__location {
+    @include font-size($h2);
+    text-align: right;
+    color: $white;
+    font-weight: $bold;
+    text-transform: uppercase;
+    text-shadow: -6ex 0px 0px rgba($white, .9),-12ex 0px 0px rgba($white, .8),-18ex 0px 0px rgba($white, .7),-24ex 0px 0px rgba($white, .6), -6.5ex 0px 0px rgba($white, .3),-12.5ex 0px 0px rgba($white, .3),-18.5ex 0px 0px rgba($white, .3),-24.5ex 0px 0px rgba($white, .3);
+    margin-bottom: 0;
+    border-bottom: 4px dashed rgba($white,.6);
+
+    @include mq(small) {
+      @include font-size($h1);
+    }
+
+    @include mq(medium) {
+      @include font-size($large);
+    }
+
+    @include mq(large) {
+      @include font-size($large);
+    }
+  }

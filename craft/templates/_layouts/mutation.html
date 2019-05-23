@@ -15,12 +15,13 @@
   {% set bodyClass = entry is defined ? entry.section.handle : craft.request.firstSegment %}
 {% endif %}
 
-{% block main %}
+{% block body %}
   {% include "_globals/globals.header-mutation" %}
 
   <main role="main" id="content" class="c-main">
-    {% block body %}{% endblock %}
+    {% block main %}{% endblock %}
   </main>
 
-  {% include "_globals/globals.footer-mutation" %}
+  {% include "_globals/globals.prefooter-mutation" %}
+  {% include "_globals/globals.footer" %}
 {% endblock %}

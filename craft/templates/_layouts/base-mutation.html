@@ -20,9 +20,9 @@
 
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/mutation.css">
   {% else %}
-    <link rel="stylesheet" type="text/css" href="{{ rev('screen.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ rev('mutation.min.css') }}">
   {% endif %}
 
   {# Favicon #}
@@ -35,7 +35,7 @@
   {% include "_globals/globals.ga" %}
   {% endblock %}
 </head>
-<body>
+<body class="s-mutation">
   {# Cookie notice #}
   {% if getCookie('PrivacyNotice') %}
   {% else %}
@@ -147,7 +147,7 @@
     position: 'center-center'
   } %}
 
-  {% block main %}{% endblock %}
+  {% block body %}{% endblock %}
 
   {# Global javascript #}
   {% block foot %}

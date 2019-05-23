@@ -1,4 +1,4 @@
-dateModified: 1558533081
+dateModified: 1558612897
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -5710,7 +5710,7 @@ sections:
         uriFormat: site-credits
         template: site-mutation/_site-credits
   966ff8eb-d301-42cc-9682-6ff16c2089e8:
-    name: Mutation
+    name: 'Mutation Festival'
     handle: mutation
     type: single
     enableVersioning: true
@@ -5728,7 +5728,7 @@ sections:
         template: site-mutation/_index
     entryTypes:
       9ce3d8e4-05b0-47e4-a9d5-df30eaceb29c:
-        name: Mutation
+        name: 'Mutation Festival'
         handle: mutation
         hasTitleField: false
         titleLabel: ''
@@ -5762,12 +5762,12 @@ sections:
         enabledByDefault: true
         hasUrls: true
         uriFormat: blog
-        template: site-nerdlab/blog/_index
+        template: site-mutation/blog/_index
       ed4c9813-b9b0-4faa-b8b8-9bf9f55f5f6d:
         enabledByDefault: true
         hasUrls: true
         uriFormat: blog
-        template: site-nerdlab/blog/_index
+        template: site-mutation/blog/_index
       1f81a99e-4cd9-41d5-88e5-d85eb389e2ef:
         enabledByDefault: true
         hasUrls: true
