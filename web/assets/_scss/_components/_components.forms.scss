@@ -66,6 +66,35 @@
   &:-ms-input-placeholder {
     color: $color-neutral-light;
   }
+
+  .s-mutation & {
+    color: $white;
+    border-width: 0 0 6px 0;
+    border-color: $white;
+    @include font-size($h5);
+
+    &:focus {
+      border-color: $color-tertiary;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-neutral-xlight;
+    }
+
+    &::-moz-placeholder {
+      color: $color-neutral-xlight;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-neutral-xlight;
+    }
+  }
+
+  @include mq(medium) {
+    .s-mutation & {
+      @include font-size($h4);
+    }
+  }
 }
 
 .c-subscribe-form__btn {
@@ -79,6 +108,27 @@
   &:hover,
   &:focus {
     color: $color-primary;
+  }
+
+  .s-mutation & {
+    @include font-size($h5);
+    border-width: 0 0 6px 0;
+    border-color: $white;
+
+    color: $white;
+    font-weight: $bold;
+
+    &:hover,
+    &:focus {
+      color: $color-tertiary;
+      border-color: $color-tertiary;
+    }
+  }
+
+  @include mq(medium) {
+    .s-mutation & {
+      @include font-size($h4);
+    }
   }
 }
 

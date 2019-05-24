@@ -6,13 +6,13 @@
 {% extends "_layouts/mutation" %}
 
 {% block main %}
-<div class="c-hero s-theme-tertiary">
+<div class="c-hero s-theme-tertiary s-theme-noise">
   <span class="c-hero__background">
     <img src="/assets/images/svg/mutation-backdrop.svg" alt="">
   </span>
   <div class="o-wrapper o-wrapper--huge">
     <h1 class="u-hidden-visually">
-      Mutation Festival
+      {{ entry.title }}
     </h1>
     <h2 class="c-hero__title">
       Forever <span class="c-highlight">whatever</span>
@@ -22,9 +22,48 @@
   </div>
 </div>
 
-<div class="o-row-large s-theme-secondary">
-  <div class="o-wrapper o-wrapper--large">
+<div class="o-row-large s-theme-secondary s-theme-noise">
+  <div class="o-wrapper o-wrapper--huge">
     <h2 class="c-mutation-title">Over Mutation</h2>
+    {% include '_components/components.intro.html' %}
+  </div>
+</div>
+
+<div class="o-row-large s-theme-tertiary s-theme-noise">
+  <div class="o-wrapper o-wrapper--huge">
+    <h2 class="c-mutation-title">Open call</h2>
+    <div class="o-layout o-layout--spacer">
+      <div class="o-layout__item u-1/3@medium">
+        <div class="o-box c-card c-card--border">
+          <h3 class="c-mutation-subtitle">Exposanten</h3>
+          <div class="s-editor s-editor--small">
+            <p>​Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl. Donec volutpat erat quis mauris ullamcorper, luctus hendrerit odio pulvinar.​</p>
+            <p><a href="#" class="c-link">Schrijf je in {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="o-layout__item u-1/3@medium">
+        <div class="o-box c-card c-card--border">
+          <h3 class="c-mutation-subtitle">Talks</h3>
+          <div class="s-editor s-editor--small">
+            <p>​Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl. Donec volutpat erat quis mauris ullamcorper, luctus hendrerit odio pulvinar.​</p>
+            <p><a href="#" class="c-link">Schrijf je in {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="o-layout__item u-1/3@medium">
+        <div class="o-box c-card c-card--border">
+          <h3 class="c-mutation-subtitle">Workshops</h3>
+          <div class="s-editor s-editor--small">
+            <p>​Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl. Donec volutpat erat quis mauris ullamcorper, luctus hendrerit odio pulvinar.​</p>
+            <p><a href="#" class="c-link">Schrijf je in {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="s-editor s-editor--small u-margin-top u-margin-top-large@medium u-text-center">
+      <p>​<strong>Partner worden?</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl. Donec volutpat erat quis mauris ullamcorper, luctus hendrerit odio pulvinar.​ <a href="#" class="c-link">Contacteer ons</a>.</p>
+    </div>
   </div>
 </div>
 {% endblock %}

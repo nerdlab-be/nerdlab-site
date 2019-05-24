@@ -37,6 +37,15 @@
   }
 }
 
+.u-spacer {
+  margin-top: $unit-large;
+
+  & + & {
+    margin-top: $unit;
+    padding-top: $unit;
+  }
+}
+
 .u-border-top {
   border-top: 1px solid $color-neutral-xlight;
 }
@@ -230,6 +239,7 @@
 
 .c-highlight {
   position: relative;
+  z-index: $z-index-alpha;
   display: inline-block;
 
   &:after,
@@ -251,6 +261,19 @@
   &:before {
     border: 4px dashed $color-secondary;
     transform: rotate(-5deg);
+    z-index: -1;
+  }
+
+  .s-theme-secondary & {
+    &:after {
+      border: 4px solid $white;
+      transform: rotate(2deg);
+    }
+
+    &:before {
+      border: 4px dashed $white;
+      transform: rotate(-5deg);
+    }
   }
 
   @include mq(medium) {
@@ -269,12 +292,138 @@
     &:before {
       border: 6px dashed $color-secondary;
     }
+
+    .s-theme-secondary & {
+      &:after {
+        border: 5px solid $white;
+      }
+
+      &:before {
+        border: 5px dashed $white;
+      }
+    }
   }
 }
 
 
 .c-mutation-title {
+  @include font-size($h3);
   text-transform: uppercase;
   color: $color-tertiary;
   text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
+
+  .s-theme-white & {
+    color: $color-neutral;
+    text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
+  }
+
+  .s-theme-primary & {
+    color: $white;
+    text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.2);
+  }
+
+  .s-theme-secondary & {
+    color: $color-tertiary;
+    text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
+  }
+
+  .s-theme-tertiary & {
+    color: $color-neutral;
+    text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
+  }
+
+  .s-theme-neutral & {
+    color: $white;
+    text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.1);
+  }
+
+  @include mq(small) {
+    @include font-size($h2);
+  }
+
+  @include mq(medium) {
+    @include font-size($h1);
+  }
 }
+
+.c-mutation-subtitle,
+.s-editor .c-mutation-subtitle {
+  @include font-size($h4);
+
+  @include mq(medium) {
+    @include font-size($h3);
+  }
+}
+
+.c-marquee {
+  @include font-size($h3);
+  position: relative;
+  height: $unit-large;
+  color: $white;
+  background-color: $color-primary;
+  font-weight: $bold;
+  transition: all ease .3s;
+  overflow: hidden;
+
+  @include mq(medium) {
+    height: $unit-huge;
+    @include font-size($h1);
+  }
+}
+
+.c-marquee__content {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  white-space: nowrap;
+  text-align: center;
+
+  span {
+    transition: all ease .3s;
+    display: inline-block;
+  }
+}
+
+.u-text-center {
+  &,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+
+.c-list-inline {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $unit-large;
+
+  @include mq(small) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include mq(large) {
+    margin-bottom: $unit-huge;
+  }
+}
+
+  .c-list-inline__item,
+  .s-editor .c-list-inline__item {
+
+    @include mq(small) {
+      & + & {
+        margin-top: 0;
+        margin-left: $unit;
+      }
+    }
+
+  }

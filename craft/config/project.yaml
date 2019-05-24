@@ -1,4 +1,4 @@
-dateModified: 1558612897
+dateModified: 1558688705
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -5730,8 +5730,8 @@ sections:
       9ce3d8e4-05b0-47e4-a9d5-df30eaceb29c:
         name: 'Mutation Festival'
         handle: mutation
-        hasTitleField: false
-        titleLabel: ''
+        hasTitleField: true
+        titleLabel: Titel
         titleFormat: '{section.name|raw}'
         sortOrder: 1
         fieldLayouts:

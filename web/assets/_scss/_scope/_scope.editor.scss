@@ -76,6 +76,10 @@
     max-width: 35em;
   }
 
+  li + li {
+    margin-top: $unit-small;
+  }
+
   p + ul {
     margin-top: 0;
   }
@@ -164,6 +168,10 @@
   ul {
     @include font-size($h5,1.5);
     max-width: 35em;
+  }
+
+  li + li {
+    margin-top: 0;
   }
 
   @include mq(small) {

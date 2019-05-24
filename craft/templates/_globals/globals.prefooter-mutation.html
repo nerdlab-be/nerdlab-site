@@ -1,123 +1,123 @@
+{# <div class="o-row-small c-marquee-holder js-ticker-holder s-theme-primary s-theme-noise ticker">
+  <div class="block"></div>
+  <div class="c-marquee ticker__content">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div> #}
+
+<div class="c-marquee" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div>
+
 {% set subscribe = mutationGlobals.mutationSubscribe.all() %}
 {% if subscribe | length() %}
-<div class="o-row-large c-theme-primary-tint" id="subscribe">
+<div class="c-hero s-theme-secondary s-theme-noise" id="subscribe">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout u-margin-bottom-large">
-      <div class="o-layout__item u-2/3@medium">
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@medium u-push-1/3@medium">
         {% for item in subscribe %}
         {% switch item.type %}
         {% case "heading" %}
-        <h2 class="c-section-title">
+        <h3 class="c-mutation-title">
           {{ item.heading }}
-        </h2>
+        </h3>
         {% case "paragraph" %}
-        <div class="c-editor c-editor--large c-editor--bold">
+        <div class="s-editor u-margin-bottom-large">
           {{ item.paragraph }}
         </div>
         {% endswitch %}
         {% endfor %}
+
+        {% for block in interface.newsletter.all() %}
+        <form class="c-subscribe-form" action="https://nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=dc6209d55c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <label for="mce-EMAIL" class="u-hidden-visually">{{ labels.labelEmailAddress }}</label>
+          <input class="c-input-text c-input-text--large c-subscribe-form__input" type="email" value="" placeholder="{{ block.placeholder }}" name="EMAIL" class="required email" id="mce-EMAIL">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_26083caa15a40f691a214b23c_14a5daee70" tabindex="-1" value=""></div>
+          <button role="submit"  name="subscribe" id="mc-embedded-subscribe" class="c-subscribe-form__btn c-btn c-btn--large">{{ labels.labelSubscribe }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</button>
+        </form>
+        {% endfor %}
       </div>
     </div>
-    <!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup">
-      <form action="https://nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=dc6209d55c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll" class="o-layout o-layout--small o-layout--bottom">
-          <div class="mc-field-group o-layout__item u-2/3@medium">
-            <label for="mce-EMAIL" class="c-label">{{ labels.labelEmailAddress }}</label>
-            <div class="c-input-wrapper">
-              <input type="email" value="" name="EMAIL" class="required email c-input" id="mce-EMAIL">
-            </div>
-          </div>
-          <div class="clear o-layout__item u-1/3@medium">
-            <button role="submit"  name="subscribe" id="mc-embedded-subscribe" class="button c-button c-button--negative">{{ labels.labelSubscribe }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</button>
-          </div>
-        </div>
-      </form>
-    </div>
-    <!--End mc_embed_signup-->
   </div>
 </div>
 {% endif %}
 
 {% set social = mutationGlobals.mutationSocial.all() %}
 {% set partners = mutationGlobals.mutationPartners.all() %}
-<div class="o-row-large c-theme-secondary">
+{% set nerdlab = mutationGlobals.mutationNerdlab.all() %}
+
+<div class="o-row-large s-theme-white u-padding-bottom-none">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--spacer">
-      <div class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
-        {% for item in social %}
-        {% switch item.type %}
-        {% case "heading" %}
-        <h2 class="c-section-title">
-          {{ item.heading }}
-        </h2>
-        {% endswitch %}
-        {% endfor %}
-        <ul class="o-list-bare c-list">
-        {% for item in social %}
-        {% switch item.type %}
-        {% case "socialLink" %}
-        {% if item.href | length %}
-        <li class="c-list__item">
-          <a href="{{ item.href }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-        </li>
-        {% endif %}
-        {% endswitch %}
-        {% endfor %}
-        </ul>
-      </div>
-      <div class="o-layout__item u-1/2@small u-1/3@medium u-1/4@large">
-        {% for item in partners %}
-        {% switch item.type %}
-        {% case "heading" %}
-        <h2 class="c-section-title">
-          {{ item.heading }}
-        </h2>
-        {% endswitch %}
-        {% endfor %}
-        <ul class="o-list-bare c-list">
-        {% for item in partners %}
-        {% switch item.type %}
-        {% case "partner" %}
-        {% if item.href | length %}
-        <li class="c-list__item">
-          <a href="{{ item.href }}" class="c-link c-link--bare" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-        </li>
-        {% endif %}
-        {% endswitch %}
-        {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="o-layout__item u-3/5@medium u-2/3@large">
+        <div class="s-editor">
+          <ul class="o-list-bare c-list-inline">
+          {% for item in social %}
+          {% switch item.type %}
+          {% case "heading" %}
+          <li class="o-list-bare__item c-list-inline__item">
+             <h3 class="c-mutation-subtitle u-margin-bottom-none">{{ item.heading }}:</h3>
+          </li>
 
-{% set nerdlab = mutationGlobals.mutationNerdlab.all() %}
-<div class="o-row-large c-theme-primary">
-  <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout o-layout--reverse">
-      <div class="o-layout__item u-4/5@small u-2/3@medium u-1/2@large">
+          {% case "socialLink" %}
+          {% if item.href | length %}
+          <li class="o-list-bare__item c-list-inline__item">
+            <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }}</a>
+          </li>
+          {% endif %}
+          {% endswitch %}
+          {% endfor %}
+          </ul>
+        </div>
         {% for item in nerdlab %}
         {% switch item.type %}
         {% case "heading" %}
-        <h2 class="c-section-title">
+        <h3 class="c-mutation-subtitle u-margin-bottom-small">
           {{ item.heading }}
-        </h2>
+        </h3>
         {% endswitch %}
         {% endfor %}
-        <div class="c-editor c-editor--medium c-editor--bold">
-        {% for item in nerdlab %}
+        <div class="s-editor u-margin-bottom">
+          {% for item in nerdlab %}
+          {% switch item.type %}
+          {% case "paragraph" %}
+            {{ item.paragraph }}
+          {% case "href" %}
+          {% if item.href | length %}
+          <p class="u-margin-top">
+            <a href="{{ item.href }}" class="c-link">{{ item.text }} </a>
+          </p>
+          {% endif %}
+          {% endswitch %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="o-layout__item u-2/5@medium u-1/3@large">
+        {% for item in partners %}
         {% switch item.type %}
-        {% case "paragraph" %}
-          {{ item.paragraph }}
-        {% case "href" %}
-        {% if item.href | length %}
-        <p>
-          <a href="{{ item.href }}" class="c-link">{{ item.text }}</a>
-        </p>
-        {% endif %}
+        {% case "heading" %}
+        <h3 class="c-mutation-subtitle u-margin-bottom-small">
+          {{ item.heading }}
+        </h3>
         {% endswitch %}
         {% endfor %}
+        <div class="s-editor">
+          <ul class="o-list-bare">
+          {% for item in partners %}
+          {% switch item.type %}
+          {% case "partner" %}
+          {% if item.href | length %}
+          <li class="o-list-bare__item">
+            <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+          </li>
+          {% endif %}
+          {% endswitch %}
+          {% endfor %}
+          </ul>
         </div>
       </div>
     </div>
