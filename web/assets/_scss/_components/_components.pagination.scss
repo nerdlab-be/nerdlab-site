@@ -9,6 +9,10 @@
   border-top: 1px solid $color-neutral-xlight;
   @include font-size($h6);
 
+  .s-mutation & {
+    border-top: 5px solid $white;
+  }
+
   @include mq(small) {
     @include font-size($h5);
   }
@@ -119,6 +123,16 @@
 
     span {
       display: none;
+    }
+
+    .s-mutation &,
+    .s-mutation &:visited {
+      background-color: $white;
+    }
+
+    .s-mutation &:hover,
+    .s-mutation &:focus {
+      background-color: $color-tertiary-xlight;
     }
 
     @include mq(small) {

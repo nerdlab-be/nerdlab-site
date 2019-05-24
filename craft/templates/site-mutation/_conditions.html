@@ -6,7 +6,7 @@
 {% extends "_layouts/mutation" %}
 
 {% block main %}
-<div class="o-row-large c-theme-secondary-negative ">
+<div class="o-row-large s-theme-tertiary">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--large">
       <div class="o-layout__item u-3/4@medium u-2/3@large u-1/2@huge">
@@ -37,12 +37,12 @@
             {% if block.buttonLink | length %}
             {% for link in block.buttonLink.all() %}
             <a href="{{ link.url }}" class="c-button">
-              {{ block.buttonTitle }}
+              {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
             </a>
             {% endfor %}
             {% else %}
             <a href="{{ block.buttonURL }}" class="c-button">
-              {{ block.buttonTitle }}
+              {{ block.buttonTitle }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
             </a>
             {% endif %}
           </p>

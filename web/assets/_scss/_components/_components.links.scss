@@ -21,6 +21,20 @@
   }
 }
 
+.c-link--none {
+  text-decoration: underline;
+}
+
+.c-link--title,
+.s-editor a:not(.c-btn).c-link--title {
+  text-decoration: none;
+  font-weight: $bold;
+
+  @include mq(medium) {
+    @include font-size($h2);
+  }
+}
+
 .c-link--bare {
   &,
   &:visited,

@@ -9,11 +9,12 @@
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
     {# Intro #}
-    <h1 class="c-h1">{{ entry.title }}</h1>
+    <h1 class="c-mutation-title">{{ entry.title }}</h1>
     {% include '_components/components.intro.html' %}
+
+    <div class="u-margin-top-large u-margin-top-huge@medium">
+    {% include '_components/components.blog-overview.html' %}
+    </div>
   </div>
 </div>
-
-{% include '_components/components.blog-overview.html' %}
-
 {% endblock %}

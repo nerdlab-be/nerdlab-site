@@ -306,36 +306,11 @@
 }
 
 
-.c-mutation-title {
+.s-mutation .c-mutation-title {
   @include font-size($h3);
   text-transform: uppercase;
   color: $color-tertiary;
   text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
-
-  .s-theme-white & {
-    color: $color-neutral;
-    text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
-  }
-
-  .s-theme-primary & {
-    color: $white;
-    text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.2);
-  }
-
-  .s-theme-secondary & {
-    color: $color-tertiary;
-    text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
-  }
-
-  .s-theme-tertiary & {
-    color: $color-neutral;
-    text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
-  }
-
-  .s-theme-neutral & {
-    color: $white;
-    text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.1);
-  }
 
   @include mq(small) {
     @include font-size($h2);
@@ -344,6 +319,31 @@
   @include mq(medium) {
     @include font-size($h1);
   }
+}
+
+.s-mutation .s-theme-white .c-mutation-title {
+  color: $color-neutral;
+  text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
+}
+
+.s-mutation .s-theme-primary .c-mutation-title {
+  color: $white;
+  text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.2);
+}
+
+.s-mutation .s-theme-secondary .c-mutation-title {
+  color: $color-tertiary;
+  text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
+}
+
+.s-mutation .s-theme-tertiary .c-mutation-title {
+  color: $color-neutral;
+  text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
+}
+
+.s-mutation .s-theme-neutral .c-mutation-title {
+  color: $white;
+  text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.1);
 }
 
 .c-mutation-subtitle,
@@ -426,4 +426,78 @@
       }
     }
 
+  }
+
+.c-image-link  {
+  height: 100%;
+  position: relative;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 103%;
+    display: block;
+  }
+}
+
+.c-video {
+  outline: 6px solid $color-neutral-xxlight;
+
+  .s-mutation & {
+    outline: 6px dashed $color-tertiary-dark;
+  }
+}
+
+
+.c-grid {
+  position: relative;
+  display: grid;
+  grid-gap: $unit-small;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr) );
+
+  .o-crop {
+    outline: 6px solid $color-neutral-xxlight;
+  }
+
+  .s-mutation & .o-crop {
+    outline: none;
+    border: 6px solid $color-tertiary-dark;
+    background-color: $color-tertiary-dark;
+  }
+
+  @include mq(medium) {
+    grid-gap: $unit;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr) );
+  }
+
+  @include mq(large) {
+    // grid-gap: $unit-large;
+  }
+}
+
+  .c-grid__item {
+    display: block;
+
+    .o-crop__content {
+      height: 100%;
+      width: initial;
+      max-width: initial;
+    }
+  }
+
+  .c-grid__item--one {
+    grid-column: auto / span 1;
+  }
+
+  .c-grid__item--two {
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
+  }
+
+  .c-grid__item--three {
+    grid-column: auto / span 2;
+
+    @include mq(medium) {
+      grid-column: auto / span 1;
+    }
   }
