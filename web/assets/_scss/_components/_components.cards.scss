@@ -65,16 +65,16 @@
   box-shadow: 0 3px 20px rgba($color-neutral-dark,0.1);
   background-color: $white;
 
+  .s-mutation & {
+    outline: 6px dashed $color-tertiary-dark;
+    position: relative;
+    z-index: $z-index-beta;
+    border-radius: 0;
+  }
+
   .o-layout {
     position: relative;
   }
-}
-
-.c-card--border {
-  outline: 6px dashed $color-tertiary-dark;
-  position: relative;
-  z-index: $z-index-beta;
-  border-radius: 0;
 }
 
 .c-card--spacer {
@@ -85,6 +85,7 @@
 
   .c-card__image {
     flex-grow: 0;
+    height: 100%;
   }
 
   .c-card__content {
