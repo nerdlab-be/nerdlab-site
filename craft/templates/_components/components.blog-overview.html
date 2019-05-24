@@ -9,12 +9,12 @@
 
 {# -- Module -- #}
 {% paginate craft.entries().section('blog').orderBy('postDate desc') as paginate, entries %}
-<div class="o-row">
-  <div class="o-wrapper o-wrapper--huge">
+{# <div class="o-row">
+  <div class="o-wrapper o-wrapper--huge"> #}
     <ul class="o-list-bare">
       {% for item in entries %}
-      <li class="o-list-bare__item u-divider">
-        <article class="js-link-expand-holder">
+      <li class="o-list-bare__item u-spacer">
+        <article class="o-box c-card c-card--border js-link-expand-holder">
           <div class="o-layout o-layout--small">
             <div class="o-layout__item u-1/3@small u-1/4@medium u-1/3@large u-padding-bottom u-padding-bottom-none@small">
               <div class="c-card__image">
@@ -75,7 +75,7 @@
         {% endif %}
       </ul>
     {% endif %} #}
-  </div>
-</div>
+  {# </div>
+</div> #}
 
 

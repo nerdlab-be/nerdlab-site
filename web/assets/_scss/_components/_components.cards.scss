@@ -70,6 +70,13 @@
   }
 }
 
+.c-card--border {
+  outline: 6px dashed $color-tertiary-dark;
+  position: relative;
+  z-index: $z-index-beta;
+  border-radius: 0;
+}
+
 .c-card--spacer {
   & + & {
     margin-top: $unit;
