@@ -16,12 +16,16 @@
     {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parent.title }}
   </a>
 </p>
+
 {% for item in intro %}
 {% switch item.type %}
 {% case "heading" %}
-<h2 class="c-mutation-title">
+<h2 class="c-title u-margin-bottom-small">
   {{ item.heading }}
 </h2>
+{# <p class="c-faded">
+  {{ entry.postDate | date('l d F Y') }}
+</p> #}
 {% case "paragraph" %}
 <div class="s-editor s-editor--intro">
   {{ item.paragraph }}

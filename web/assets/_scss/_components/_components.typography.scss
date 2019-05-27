@@ -118,6 +118,14 @@
   }
 }
 
+.c-para {
+  @include font-size($h5,1.5);
+
+  @include mq(medium) {
+    @include font-size($h4,1.5);
+  }
+}
+
 .c-lead {
   @include font-size($h4);
   max-width: 28em;
@@ -138,6 +146,11 @@
   color: $color-neutral-light;
   text-transform: uppercase;
   @include font-size(14px);
+
+  .s-mutation & {
+    font-weight: $medium;
+    color: $color-tertiary-xdark;
+  }
 }
 
 .c-small {

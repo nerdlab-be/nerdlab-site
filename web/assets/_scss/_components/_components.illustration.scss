@@ -1,0 +1,93 @@
+.c-illustration {
+  position: relative;
+  padding-bottom: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  @include mq(medium) {
+    padding-bottom: $unit-huge;
+    min-height: $unit-huge*4;
+  }
+
+  @include mq(large) {
+    padding-bottom: $unit-huge;
+    min-height: $unit-huge*5;
+  }
+}
+
+  .c-illustration__left-center {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $unit;
+
+    @include mq(small) {
+      width: 80%;
+    }
+
+    @include mq(medium) {
+      position: absolute;
+      width: 70%;
+      left: -20%;
+      bottom: 0;
+      max-height: 100%
+    }
+
+    @include mq(large) {
+      width: 50%;
+      left: 0;
+    }
+  }
+
+  .c-illustration__left {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $unit;
+
+    @include mq(small) {
+      width: 80%;
+      margin-left: 0;
+    }
+
+    @include mq(medium) {
+      position: absolute;
+      width: 70%;
+      left: -20%;
+      bottom: 0;
+      max-height: 100%
+    }
+
+    @include mq(large) {
+      width: 50%;
+      left: 0;
+    }
+  }
+
+  .c-illustration__right {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: $unit;
+
+    @include mq(small) {
+      width: 80%;
+      margin-right: 0;
+    }
+
+    @include mq(medium) {
+      position: absolute;
+      width: 70%;
+      right: -20%;
+      bottom: 0;
+      max-height: 100%
+    }
+
+    @include mq(large) {
+      width: 50%;
+      right: 0;
+    }
+  }

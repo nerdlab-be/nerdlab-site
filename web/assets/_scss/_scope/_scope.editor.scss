@@ -70,6 +70,10 @@
     font-weight: $bold;
   }
 
+  .c-h3 a {
+    font-weight: $bold;
+  }
+
   p,
   ul {
     @include font-size($h5,1.5);
@@ -261,5 +265,26 @@
 
   @include mq(medium) {
     text-align: right;
+  }
+}
+
+.s-editor--prefooter {
+  .s-mutation & a:not(.c-btn) {
+    font-weight: $medium;
+    transition: color $transition;
+
+    &,
+    &:visited {
+      color: $color-neutral;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-primary;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
   }
 }

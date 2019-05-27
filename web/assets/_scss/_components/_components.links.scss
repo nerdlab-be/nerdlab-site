@@ -27,12 +27,7 @@
 
 .c-link--title,
 .s-editor a:not(.c-btn).c-link--title {
-  text-decoration: none;
   font-weight: $bold;
-
-  @include mq(medium) {
-    @include font-size($h2);
-  }
 }
 
 .c-link--bare {
@@ -61,20 +56,16 @@
   &:visited,
   &:hover,
   &:focus {
-    color: $color-neutral-dark;
-  }
-
-  &:hover {
-    background-color: $color-tertiary-light;
+    color: $white;
   }
 
   &:focus {
     width: auto;
     height: auto;
-    top: calc(100% + #{$unit-tiny});
+    top: calc(100% + #{$unit-small});
     left: 0;
     white-space: nowrap;
-    background-color: $color-tertiary;
+    background-color: $color-primary;
     padding: $unit-tiny/2;
   }
 }
