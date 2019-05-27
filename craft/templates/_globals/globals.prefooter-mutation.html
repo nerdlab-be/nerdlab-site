@@ -1,10 +1,3 @@
-{# <div class="o-row-small c-marquee-holder js-ticker-holder s-theme-primary s-theme-noise ticker">
-  <div class="block"></div>
-  <div class="c-marquee ticker__content">
-    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
-  </div>
-</div> #}
-
 <div class="c-marquee" aria-hidden="true">
   <div class="c-marquee__content js-ticker">
     <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
@@ -13,7 +6,10 @@
 
 {% set subscribe = mutationGlobals.mutationSubscribe.all() %}
 {% if subscribe | length() %}
-<div class="c-hero s-theme-secondary s-theme-noise" id="subscribe">
+<div class="c-hero c-drawing s-theme-secondary s-theme-noise" id="subscribe">
+  <span class="c-drawing__left-center">
+    <img src="/assets/images/svg/arrow-white.svg" alt="">
+  </span>
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
       <div class="o-layout__item u-2/3@medium u-push-1/3@medium">
@@ -24,7 +20,7 @@
           {{ item.heading }}
         </h3>
         {% case "paragraph" %}
-        <div class="s-editor u-margin-bottom-large">
+        <div class="s-editor s-editor--prefooter u-margin-bottom-large">
           {{ item.paragraph }}
         </div>
         {% endswitch %}
@@ -50,11 +46,17 @@
 {% set partners = mutationGlobals.mutationPartners.all() %}
 {% set nerdlab = mutationGlobals.mutationNerdlab.all() %}
 
-<div class="o-row-large s-theme-white u-padding-bottom-none">
-  <div class="o-wrapper o-wrapper--huge">
+<div class="o-row-large c-drawing s-theme-white u-padding-bottom-none">
+  <span class="c-drawing__left-top">
+    <img src="/assets/images/svg/worm.svg" alt="">
+  </span>
+  <span class="c-drawing__right">
+    <img src="/assets/images/svg/circle.svg" alt="">
+  </span>
+  <div class="o-wrapper o-wrapper--huge u-alpha">
     <div class="o-layout o-layout--spacer">
       <div class="o-layout__item u-3/5@medium u-2/3@large">
-        <div class="s-editor">
+        <div class="s-editor s-editor--prefooter">
           <ul class="o-list-bare c-list-inline">
           {% for item in social %}
           {% switch item.type %}
@@ -81,7 +83,7 @@
         </h3>
         {% endswitch %}
         {% endfor %}
-        <div class="s-editor u-margin-bottom">
+        <div class="s-editor s-editor--prefooter u-margin-bottom">
           {% for item in nerdlab %}
           {% switch item.type %}
           {% case "paragraph" %}
@@ -105,7 +107,7 @@
         </h3>
         {% endswitch %}
         {% endfor %}
-        <div class="s-editor">
+        <div class="s-editor s-editor--prefooter">
           <ul class="o-list-bare">
           {% for item in partners %}
           {% switch item.type %}

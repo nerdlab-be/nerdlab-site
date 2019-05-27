@@ -37,7 +37,7 @@
       {% set links = block.itemLink.all() %}
       {% for link in links %}
       {% set active = bodyClass == link.section.handle %}
-      <li class="c-list-bare__item c-navigation__item{{ active( link.uri , 1,' is-active') }}">
+      <li class="c-list-bare__item c-navigation__item{{ active( link.uri , 1,' is-active') }}{% if entry.uri == link.uri %} is-active{% endif %}">
         {% if block.externalLink %}
         <a href="{{ block.externalLink }}{{ block.itemID }}" class="c-navigation__link" target="_blank">{{ block.itemTitle }}</a>
         {% else %}

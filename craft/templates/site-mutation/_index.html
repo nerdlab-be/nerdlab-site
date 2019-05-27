@@ -22,47 +22,53 @@
   </div>
 </div>
 
-<div class="o-row-large s-theme-secondary s-theme-noise">
+<div class="o-row-large c-drawing s-theme-secondary s-theme-noise">
+  <span class="c-drawing__right-bottom">
+    <img src="/assets/images/svg/worm.svg" alt="">
+  </span>
+  <span class="c-drawing__right-top">
+    <img src="/assets/images/svg/triangle-small.svg" alt="">
+  </span>
   <div class="o-wrapper o-wrapper--huge">
-    <h2 class="c-mutation-title">Over Mutation</h2>
+    <h2 class="c-mutation-title">{{ entry.title }}</h2>
     {% include '_components/components.intro.html' %}
   </div>
 </div>
 
-<div class="o-row-large s-theme-tertiary s-theme-noise">
+<div class="o-row-large c-drawing s-theme-tertiary s-theme-noise">
+  <span class="c-drawing__left-bottom">
+    <img src="/assets/images/svg/triangle.svg" alt="">
+  </span>
   <div class="o-wrapper o-wrapper--huge">
-    <h2 class="c-mutation-title">Open call</h2>
+    {% for block in entry.openCall %}
+    {% switch block.type %}
+    {% case "heading" %}
+    <h2 class="c-mutation-title">{{ block.heading }}</h2>
+    {% endswitch %}
+    {% endfor %}
     <div class="o-layout o-layout--spacer">
+      {% for block in entry.openCall %}
+      {% switch block.type %}
+      {% case "item" %}
       <div class="o-layout__item u-1/3@medium">
         <div class="o-box c-card">
-          <h3 class="c-mutation-subtitle">Exposanten</h3>
+          <h3 class="c-mutation-subtitle">{{ block.heading }}</h3>
           <div class="s-editor s-editor--small">
-            <p>​Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl. Donec volutpat erat quis mauris ullamcorper, luctus hendrerit odio pulvinar.​</p>
-            <p><a href="#" class="c-link">Schrijf je in {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
+            {{ block.paragraph }}
+            <p><a href="{{ block.linkURL }}" class="c-link">{{ block.linkText }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
           </div>
         </div>
       </div>
-      <div class="o-layout__item u-1/3@medium">
-        <div class="o-box c-card">
-          <h3 class="c-mutation-subtitle">Talks</h3>
-          <div class="s-editor s-editor--small">
-            <p>​Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl. Donec volutpat erat quis mauris ullamcorper, luctus hendrerit odio pulvinar.​</p>
-            <p><a href="#" class="c-link">Schrijf je in {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="o-layout__item u-1/3@medium">
-        <div class="o-box c-card">
-          <h3 class="c-mutation-subtitle">Workshops</h3>
-          <div class="s-editor s-editor--small">
-            <p>​Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl. Donec volutpat erat quis mauris ullamcorper, luctus hendrerit odio pulvinar.​</p>
-            <p><a href="#" class="c-link">Schrijf je in {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a></p>
-          </div>
-        </div>
-      </div>
+      {% endswitch %}
+      {% endfor %}
     </div>
     <div class="s-editor s-editor--small u-margin-top u-margin-top-large@medium u-text-center">
-      <p>​<strong>Partner worden?</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae nunc scelerisque, porttitor leo quis, venenatis nisl. Donec volutpat erat quis mauris ullamcorper, luctus hendrerit odio pulvinar.​ <a href="#" class="c-link">Contacteer ons</a>.</p>
+      {% for block in entry.openCall %}
+      {% switch block.type %}
+      {% case "footer" %}
+      {{ block.paragraph }}
+      {% endswitch %}
+      {% endfor %}
     </div>
   </div>
 </div>

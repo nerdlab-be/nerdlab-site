@@ -1,4 +1,4 @@
-dateModified: 1558688705
+dateModified: 1558973746
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -1539,6 +1539,21 @@ fields:
           default: ''
     contentColumnType: string
     fieldGroup: e0d9964b-b49c-4862-bed8-46420e6906c3
+  9a48807a-fcb4-4455-969f-2b7b9f9aabbe:
+    name: 'Open call'
+    handle: openCall
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Matrix
+    settings:
+      minBlocks: ''
+      maxBlocks: '5'
+      contentTable: '{{%matrixcontent_opencall}}'
+      localizeBlocks: ''
+    contentColumnType: string
+    fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0
 globalSets:
   34840bd5-28aa-45b2-ac2e-e954e8712bd1:
     name: Interface
@@ -4742,6 +4757,169 @@ matrixBlockTypes:
               32bbc3c2-5d12-4cd7-b492-6a2c265faefe:
                 required: false
                 sortOrder: 1
+  4330ea4a-f938-4b46-b0a9-39a7dbbba816:
+    field: 9a48807a-fcb4-4455-969f-2b7b9f9aabbe
+    name: Item
+    handle: item
+    sortOrder: 2
+    fields:
+      80c94b74-85a9-4eb1-916e-96f531667883:
+        name: Heading
+        handle: heading
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      1185a30f-f05b-421c-9aba-8cd24e99479a:
+        name: Paragraaf
+        handle: paragraph
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: Simple.json
+          purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: ''
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
+      e2c2ae39-521e-4f1a-bdf2-0def64d7317f:
+        name: 'Link tekst'
+        handle: linkText
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      a2441f20-9e7b-42e0-8a68-4855e783e9f2:
+        name: 'Link URL'
+        handle: href
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\Url
+        settings:
+          placeholder: ''
+          maxLength: '255'
+        contentColumnType: string(255)
+        fieldGroup: null
+    fieldLayouts:
+      a0876bde-177d-473f-9e4e-777ccb68a1d7:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              80c94b74-85a9-4eb1-916e-96f531667883:
+                required: false
+                sortOrder: 1
+              1185a30f-f05b-421c-9aba-8cd24e99479a:
+                required: false
+                sortOrder: 2
+              e2c2ae39-521e-4f1a-bdf2-0def64d7317f:
+                required: false
+                sortOrder: 3
+              a2441f20-9e7b-42e0-8a68-4855e783e9f2:
+                required: false
+                sortOrder: 4
+  066bd6b5-33a3-4908-acf5-035f5923f058:
+    field: 9a48807a-fcb4-4455-969f-2b7b9f9aabbe
+    name: Footer
+    handle: footer
+    sortOrder: 3
+    fields:
+      2c959756-76d3-4cf9-a321-a73897a89ab8:
+        name: Paragraaf
+        handle: paragraph
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: Simple.json
+          purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: ''
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      77bc4400-933d-46fc-8921-29d548dd29d4:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              2c959756-76d3-4cf9-a321-a73897a89ab8:
+                required: false
+                sortOrder: 1
+  dea0c76f-0973-41a8-b81a-220f0401676a:
+    field: 9a48807a-fcb4-4455-969f-2b7b9f9aabbe
+    name: Heading
+    handle: heading
+    sortOrder: 1
+    fields:
+      9b14e32b-b36f-4c1c-b9a9-39b2d9454887:
+        name: Heading
+        handle: heading
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      7427acf5-ceb8-4451-8702-a226f8fc356f:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              9b14e32b-b36f-4c1c-b9a9-39b2d9454887:
+                required: false
+                sortOrder: 1
 plugins:
   redactor:
     settings: null
@@ -5744,6 +5922,9 @@ sections:
                   20663383-07bd-43ac-a4c3-b0330378ab68:
                     required: false
                     sortOrder: 1
+                  9a48807a-fcb4-4455-969f-2b7b9f9aabbe:
+                    required: false
+                    sortOrder: 2
               -
                 name: Meta
                 sortOrder: 2
