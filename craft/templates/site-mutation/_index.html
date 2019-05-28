@@ -40,14 +40,14 @@
     <img src="/assets/images/svg/triangle.svg" alt="">
   </span>
   <div class="o-wrapper o-wrapper--huge">
-    {% for block in entry.openCall %}
+    {% for block in entry.openCall.all() %}
     {% switch block.type %}
     {% case "heading" %}
     <h2 class="c-mutation-title">{{ block.heading }}</h2>
     {% endswitch %}
     {% endfor %}
     <div class="o-layout o-layout--spacer">
-      {% for block in entry.openCall %}
+      {% for block in entry.openCall.all() %}
       {% switch block.type %}
       {% case "item" %}
       <div class="o-layout__item u-1/3@medium">
@@ -63,7 +63,7 @@
       {% endfor %}
     </div>
     <div class="s-editor s-editor--small u-margin-top u-margin-top-large@medium u-text-center">
-      {% for block in entry.openCall %}
+      {% for block in entry.openCall.all() %}
       {% switch block.type %}
       {% case "footer" %}
       {{ block.paragraph }}

@@ -29,6 +29,26 @@
     @include font-size($h4);
   }
 
+  h2:after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $color-neutral-xlight;
+    margin-top: $unit-small;
+  }
+
+  h2.c-title-image:after {
+    border-bottom: 0;
+  }
+
+  .s-mutation & h2:after {
+    border-bottom: 6px solid $white;
+  }
+
+  .s-mutation & h2.c-title-image:after {
+    border-bottom: 0;
+  }
+
   h3 {
     @include font-size($h5);
   }
@@ -45,6 +65,10 @@
 
   p + * {
     margin-top: $unit;
+  }
+
+  p + ul {
+    margin-top: $unit-small;
   }
 
   a:not(.c-btn) {
@@ -66,7 +90,7 @@
     }
   }
 
-  .c-h3 a {
+  .c-h2 a {
     font-weight: $bold;
   }
 
@@ -80,17 +104,50 @@
     max-width: 35em;
   }
 
+  ul {
+    list-style: none;
+    margin-left: $unit-small;
+  }
+
   li + li {
     margin-top: $unit-small;
   }
 
-  p + ul {
-    margin-top: 0;
+  li:before {
+    font-size: 1.2em;
+    position: relative;
+    left: -$unit-small;
+    bottom: -.1em;
+    content: '•';
+    color: $color-secondary;
   }
 
   .c-small {
     @include font-size($tiny,1.5);
     color: $color-neutral-light;
+  }
+
+  blockquote {
+    margin-top: $unit;
+    margin-bottom: $unit;
+
+    p {
+      font-weight: $medium;
+    }
+
+    p:before {
+      content: "“"
+    }
+
+    p:after {
+      content: "”"
+    }
+
+    footer {
+      font-weight: $medium;
+      margin-top: $unit-small;
+      color: $color-primary;
+    }
   }
 
   @include mq(small) {
@@ -120,13 +177,14 @@
     p + * {
       margin-top: $unit;
     }
-
-    p + ul {
-      margin-top: 0;
-    }
   }
 
   @include mq(medium) {
+    blockquote {
+      margin-top: $unit-large;
+      margin-bottom: $unit-large;
+    }
+
     p,
     ul {
       @include font-size($h3,1.5);
@@ -134,10 +192,6 @@
 
     p + * {
       margin-top: $unit-large;
-    }
-
-    p + ul {
-      margin-top: 0;
     }
 
     .c-small {
@@ -174,8 +228,20 @@
     max-width: 35em;
   }
 
+  p + ul {
+    margin-top: 0;
+  }
+
   li + li {
     margin-top: 0;
+  }
+
+  ul {
+    margin-left: 0;
+  }
+
+  li:before {
+    display: none;
   }
 
   @include mq(small) {

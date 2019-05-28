@@ -18,9 +18,6 @@
   {# SEO #}
   {% hook "seo" %}
 
-  {# Modernizr #}
-  <script src="{{ alias('@web') }}/assets/js/modernizr-custom.js"></script>
-
   {# CSS #}
   {% if craft.app.config.general.devMode == true %}
     <link rel="stylesheet" type="text/css" href="{{ alias('@web') }}/assets/css/screen.css">

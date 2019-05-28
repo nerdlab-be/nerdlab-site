@@ -352,11 +352,18 @@
   }
 }
 
-.c-video {
+.c-video,
+.c-image {
   outline: 6px solid $color-neutral-xxlight;
 
   .s-mutation & {
     outline: 6px dashed $color-tertiary-dark;
+  }
+}
+
+.c-image--full {
+  img {
+    width: 100%;
   }
 }
 

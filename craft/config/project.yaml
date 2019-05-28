@@ -1,4 +1,4 @@
-dateModified: 1558973746
+dateModified: 1558977241
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -5667,12 +5667,12 @@ sections:
       8e92c4bf-d4fb-49f5-9833-4e91fb775669:
         enabledByDefault: true
         hasUrls: true
-        uriFormat: 'blog/{slug}'
+        uriFormat: 'nieuws/{slug}'
         template: site-mutation/blog/_entry
       ed4c9813-b9b0-4faa-b8b8-9bf9f55f5f6d:
         enabledByDefault: true
         hasUrls: true
-        uriFormat: 'blog/{slug}'
+        uriFormat: 'news/{slug}'
         template: site-mutation/blog/_entry
       1f81a99e-4cd9-41d5-88e5-d85eb389e2ef:
         enabledByDefault: true
@@ -5942,12 +5942,12 @@ sections:
       8e92c4bf-d4fb-49f5-9833-4e91fb775669:
         enabledByDefault: true
         hasUrls: true
-        uriFormat: blog
+        uriFormat: nieuws
         template: site-mutation/blog/_index
       ed4c9813-b9b0-4faa-b8b8-9bf9f55f5f6d:
         enabledByDefault: true
         hasUrls: true
-        uriFormat: blog
+        uriFormat: news
         template: site-mutation/blog/_index
       1f81a99e-4cd9-41d5-88e5-d85eb389e2ef:
         enabledByDefault: true
