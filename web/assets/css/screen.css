@@ -4051,26 +4051,6 @@ table {
   line-height: 1.42857;
 }
 
-.s-editor h2:after {
-  content: "";
-  display: block;
-  width: 100%;
-  border-bottom: 1px solid #e2e2e2;
-  margin-top: 12px;
-}
-
-.s-editor h2.c-title-image:after {
-  border-bottom: 0;
-}
-
-.s-mutation .s-editor h2:after {
-  border-bottom: 6px solid #FFFFFF;
-}
-
-.s-mutation .s-editor h2.c-title-image:after {
-  border-bottom: 0;
-}
-
 .s-editor h3 {
   font-size: 18px;
   font-size: 1.125rem;
@@ -4258,6 +4238,26 @@ table {
   }
 }
 
+.s-editor--blog h2:after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #e2e2e2;
+  margin-top: 12px;
+}
+
+.s-editor--blog h2.c-title-image:after {
+  border-bottom: 0;
+}
+
+.s-mutation .s-editor--blog h2:after {
+  border-bottom: 6px solid #FFFFFF;
+}
+
+.s-mutation .s-editor--blog h2.c-title-image:after {
+  border-bottom: 0;
+}
+
 .s-editor--small p,
 .s-editor--small ul {
   font-size: 18px;
@@ -4383,6 +4383,14 @@ table {
   .s-editor--footer {
     text-align: right;
   }
+}
+
+.s-editor--prefooter ul {
+  margin-left: 0;
+}
+
+.s-editor--prefooter li:before {
+  display: none;
 }
 
 .s-mutation .s-editor--prefooter a:not(.c-btn) {
