@@ -29,26 +29,6 @@
     @include font-size($h4);
   }
 
-  h2:after {
-    content: "";
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid $color-neutral-xlight;
-    margin-top: $unit-small;
-  }
-
-  h2.c-title-image:after {
-    border-bottom: 0;
-  }
-
-  .s-mutation & h2:after {
-    border-bottom: 6px solid $white;
-  }
-
-  .s-mutation & h2.c-title-image:after {
-    border-bottom: 0;
-  }
-
   h3 {
     @include font-size($h5);
   }
@@ -220,6 +200,28 @@
   }
 }
 
+.s-editor--blog {
+  h2:after {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid $color-neutral-xlight;
+    margin-top: $unit-small;
+  }
+
+  h2.c-title-image:after {
+    border-bottom: 0;
+  }
+
+  .s-mutation & h2:after {
+    border-bottom: 6px solid $white;
+  }
+
+  .s-mutation & h2.c-title-image:after {
+    border-bottom: 0;
+  }
+}
+
 
 .s-editor--small {
   p,
@@ -335,6 +337,14 @@
 }
 
 .s-editor--prefooter {
+  ul {
+    margin-left: 0;
+  }
+
+  li:before {
+    display: none;
+  }
+
   .s-mutation & a:not(.c-btn) {
     font-weight: $medium;
     transition: color $transition;
