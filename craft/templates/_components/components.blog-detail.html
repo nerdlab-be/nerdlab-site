@@ -20,9 +20,9 @@
 {% for item in intro %}
 {% switch item.type %}
 {% case "heading" %}
-<h2 class="c-title u-margin-bottom-small">
+<h1 class="c-title u-margin-bottom-small">
   {{ item.heading }}
-</h2>
+</h1>
 {# <p class="c-faded">
   {{ entry.postDate | date('l d F Y') }}
 </p> #}
@@ -56,13 +56,13 @@
     <h2 class="c-subtitle">{{ block.heading }}</h2>
   </div>
   {% endif %}
-  <div class="o-layout o-layout--flush u-spacer{% if block.layout == 'left' %} o-layout--reverse{% endif %}">
+  <div class="o-layout o-layout--flush u-margin-top u-margin-bottom u-margin-top-large@large u-margin-bottom-large@large{% if block.layout == 'right' %} o-layout--reverse{% endif %}">
     <div class="o-layout__item u-1/4@small u-2/5@large">
       {% for image in block.image.all() %}
-        <div class="u-margin-bottom{% if block.layout == 'left' %} u-padding-left@small{% else %}u-padding-right@small{% endif %}">
-          <div class="o-crop o-crop--16:9">
+        <div class="u-margin-bottom{% if block.layout == 'right' %} u-padding-left@small{% else %} u-padding-right@small{% endif %}">
+          <div class="c-image c-image--full">
             <img
-              class="o-crop__content o-crop__content--center lazyload fade-in"
+              class="lazyload fade-in"
               src="{{ image.url(thumb) }}"
               data-sizes="auto"
               data-srcset="{{ image.url(small) }} 1w,
@@ -84,8 +84,8 @@
   </div>
   {% case "image" %}
     {% for image in block.image.all() %}
-    <div class="u-margin-top u-margin-bottom">
-      <div class="o-crop o-crop--16:9">
+    <div class="u-margin-top u-margin-bottom u-margin-top-large@large u-margin-bottom-large@large">
+      <div class="o-crop o-crop--16:9 c-image">
         <img
           class="o-crop__content o-crop__content--center lazyload fade-in"
           src="{{ image.url(thumb) }}"
@@ -103,9 +103,9 @@
     </div>
     {% endfor %}
   {% case "video" %}
-  <div class="u-margin-top u-margin-bottom">
+  <div class="u-margin-top u-margin-bottom u-margin-top-large@large u-margin-bottom-large@large">
     {% if block.heading | length() %}
-      <h2 class="c-subtitle u-margin-bottom-small">{{ block.heading }}</h2>
+      <h2 class="c-subtitle u-margin-bottom-small c-title-image">{{ block.heading }}</h2>
     {% endif %}
     <div class="o-crop o-crop--16:9 c-video">
       <iframe src="https://www.youtube.com/embed/{{ block.youtubeVideoId }}" class="o-ratio__content" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>

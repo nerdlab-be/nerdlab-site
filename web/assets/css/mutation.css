@@ -3036,7 +3036,9 @@ table {
 .s-mutation .c-subscribe-form__input {
   color: #FFFFFF;
   border-width: 0 0 6px 0;
-  border-color: #FFFFFF;
+  border-color: #FFE100;
+  width: 100%;
+  padding: 15px 0 10px;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.33333;
@@ -3056,6 +3058,12 @@ table {
 
 .s-mutation .c-subscribe-form__input:-ms-input-placeholder {
   color: #dedede;
+}
+
+@media (min-width: 37.5em) {
+  .s-mutation .c-subscribe-form__input {
+    border-color: #FFFFFF;
+  }
 }
 
 @media (min-width: 56.25em) {
@@ -3083,15 +3091,31 @@ table {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.33333;
-  border-width: 0 0 6px 0;
+  border-width: 0;
   border-color: #FFFFFF;
-  color: #FFFFFF;
+  color: #343eed;
+  background-color: #FFFFFF;
   font-weight: 700;
+  width: 100%;
 }
 
 .s-mutation .c-subscribe-form__btn:hover, .s-mutation .c-subscribe-form__btn:focus {
-  color: #FFE100;
-  border-color: #FFE100;
+  color: #DF0000;
+  border-color: #DF0000;
+}
+
+@media (min-width: 37.5em) {
+  .s-mutation .c-subscribe-form__btn {
+    width: auto;
+    color: #FFFFFF;
+    background-color: transparent;
+    width: auto;
+    border-width: 0 0 6px 0;
+  }
+  .s-mutation .c-subscribe-form__btn:hover, .s-mutation .c-subscribe-form__btn:focus {
+    color: #FFE100;
+    border-color: #FFE100;
+  }
 }
 
 @media (min-width: 56.25em) {
@@ -3100,6 +3124,100 @@ table {
     font-size: 1.3125rem;
     line-height: 1.42857;
   }
+}
+
+.c-field-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (min-width: 37.5em) {
+  .c-field-group {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.c-field-group__input {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+
+@media (min-width: 37.5em) {
+  .c-field-group__input {
+    width: auto;
+  }
+}
+
+.s-mutation #mc_embed_signup div.mce_inline_error {
+  line-height: 2;
+  padding-bottom: 12px;
+  display: block;
+  color: #DF0000 !important;
+  background-color: #FFFFFF !important;
+}
+
+.s-mutation #mc_embed_signup input.mce_inline_error {
+  border-color: #DF0000 !important;
+}
+
+.s-mutation #mce-responses {
+  display: block;
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+  width: 100%;
+}
+
+@media (min-width: 37.5em) {
+  .s-mutation #mce-responses {
+    position: absolute;
+    top: 100%;
+  }
+}
+
+.s-mutation #mce-error-response {
+  color: #FFFFFF;
+  padding: 12px;
+  background-color: #DF0000;
+}
+
+.s-mutation #mce-error-response a,
+.s-mutation #mce-error-response a:hover,
+.s-mutation #mce-error-response a:visited,
+.s-mutation #mce-error-response a:focus {
+  color: #FFFFFF;
+}
+
+.s-mutation #mce-success-response {
+  color: #202226;
+  padding: 12px;
+  background-color: #FFE100;
+}
+
+.s-mutation #mce-success-response a,
+.s-mutation #mce-success-response a:hover,
+.s-mutation #mce-success-response a:visited,
+.s-mutation #mce-success-response a:focus {
+  color: #202226;
 }
 
 /* ==================================
@@ -3931,6 +4049,26 @@ table {
   line-height: 1.42857;
 }
 
+.s-editor h2:after {
+  content: "";
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #dedede;
+  margin-top: 12px;
+}
+
+.s-editor h2.c-title-image:after {
+  border-bottom: 0;
+}
+
+.s-mutation .s-editor h2:after {
+  border-bottom: 6px solid #FFFFFF;
+}
+
+.s-mutation .s-editor h2.c-title-image:after {
+  border-bottom: 0;
+}
+
 .s-editor h3 {
   font-size: 18px;
   font-size: 1.125rem;
@@ -3953,6 +4091,10 @@ table {
   margin-top: 24px;
 }
 
+.s-editor p + ul {
+  margin-top: 12px;
+}
+
 .s-editor a:not(.c-btn) {
   font-weight: 600;
   -webkit-transition: color 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -3971,7 +4113,7 @@ table {
   outline: 2px dotted #dedede;
 }
 
-.s-editor .c-h3 a {
+.s-editor .c-h2 a {
   font-weight: 700;
 }
 
@@ -3987,12 +4129,22 @@ table {
   max-width: 35em;
 }
 
+.s-editor ul {
+  list-style: none;
+  margin-left: 12px;
+}
+
 .s-editor li + li {
   margin-top: 12px;
 }
 
-.s-editor p + ul {
-  margin-top: 0;
+.s-editor li:before {
+  font-size: 1.2em;
+  position: relative;
+  left: -12px;
+  bottom: -.1em;
+  content: '•';
+  color: #343eed;
 }
 
 .s-editor .c-small {
@@ -4000,6 +4152,29 @@ table {
   font-size: 0.875rem;
   line-height: 1.5;
   color: #636467;
+}
+
+.s-editor blockquote {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.s-editor blockquote p {
+  font-weight: 600;
+}
+
+.s-editor blockquote p:before {
+  content: "“";
+}
+
+.s-editor blockquote p:after {
+  content: "”";
+}
+
+.s-editor blockquote footer {
+  font-weight: 600;
+  margin-top: 12px;
+  color: #DF0000;
 }
 
 @media (min-width: 37.5em) {
@@ -4034,12 +4209,13 @@ table {
   .s-editor p + * {
     margin-top: 24px;
   }
-  .s-editor p + ul {
-    margin-top: 0;
-  }
 }
 
 @media (min-width: 56.25em) {
+  .s-editor blockquote {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
   .s-editor p,
   .s-editor ul {
     font-size: 24px;
@@ -4048,9 +4224,6 @@ table {
   }
   .s-editor p + * {
     margin-top: 48px;
-  }
-  .s-editor p + ul {
-    margin-top: 0;
   }
   .s-editor .c-small {
     font-size: 16px;
@@ -4091,8 +4264,20 @@ table {
   max-width: 35em;
 }
 
+.s-editor--small p + ul {
+  margin-top: 0;
+}
+
 .s-editor--small li + li {
   margin-top: 0;
+}
+
+.s-editor--small ul {
+  margin-left: 0;
+}
+
+.s-editor--small li:before {
+  display: none;
 }
 
 @media (min-width: 37.5em) {
@@ -9525,12 +9710,18 @@ table {
   display: block;
 }
 
-.c-video {
+.c-video,
+.c-image {
   outline: 6px solid #eff0f0;
 }
 
-.s-mutation .c-video {
+.s-mutation .c-video, .s-mutation
+.c-image {
   outline: 6px dashed #ccb400;
+}
+
+.c-image--full img {
+  width: 100%;
 }
 
 .c-grid {
