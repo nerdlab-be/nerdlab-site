@@ -2,7 +2,7 @@
    #NAVIGATION
    ================================== */
 
-$nav-breakpoint: medium;
+$nav-breakpoint: 950px;
 
 .has-nav {
   overflow: hidden;
@@ -86,8 +86,6 @@ $nav-breakpoint: medium;
       text-transform: uppercase;
     }
 
-
-
     .s-mutation &,
     .s-mutation &:visited {
       color: $white;
@@ -129,8 +127,6 @@ $nav-breakpoint: medium;
         border-radius: none;
         border: 0;
       }
-
-
     }
 
     @include mq(large) {
