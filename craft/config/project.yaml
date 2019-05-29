@@ -1,4 +1,4 @@
-dateModified: 1558977241
+dateModified: 1559130793
 email:
   fromEmail: $EMAIL
   fromName: $EMAIL_NAME
@@ -1554,6 +1554,21 @@ fields:
       localizeBlocks: ''
     contentColumnType: string
     fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0
+  67149b8d-fddd-433a-aaa3-768c561c7a04:
+    name: Supporters
+    handle: mutationSupporters
+    instructions: ''
+    searchable: true
+    translationMethod: site
+    translationKeyFormat: null
+    type: craft\fields\Matrix
+    settings:
+      minBlocks: ''
+      maxBlocks: ''
+      contentTable: '{{%matrixcontent_mutationsupporters}}'
+      localizeBlocks: ''
+    contentColumnType: string
+    fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0
 globalSets:
   34840bd5-28aa-45b2-ac2e-e954e8712bd1:
     name: Interface
@@ -1658,15 +1673,6 @@ globalSets:
               a2c0bed3-84fe-40b9-9dfc-ae06502e5536:
                 required: false
                 sortOrder: 15
-              4c2faa96-9b8f-4159-a93f-0005e0f6dac8:
-                required: false
-                sortOrder: 16
-              9a2e9858-d266-43c4-a998-5b27bea6738f:
-                required: false
-                sortOrder: 17
-              addf580f-4887-4a29-a983-421fe1631a61:
-                required: false
-                sortOrder: 18
   f81da93f-a409-48b0-9f36-032b8e60f8e7:
     name: Mutation
     handle: mutationGlobals
@@ -1695,48 +1701,51 @@ globalSets:
               1ab2552e-1cfe-48fb-9768-7bb401872959:
                 required: false
                 sortOrder: 6
-              429a4df4-dbfc-49a6-b3d4-d101a6d92499:
+              67149b8d-fddd-433a-aaa3-768c561c7a04:
                 required: false
                 sortOrder: 7
-              bf185b8c-069e-4d10-90b9-f371702ef01b:
+              429a4df4-dbfc-49a6-b3d4-d101a6d92499:
                 required: false
                 sortOrder: 8
-              f5d96654-fff2-4e6b-abb7-c28aef99ae81:
+              bf185b8c-069e-4d10-90b9-f371702ef01b:
                 required: false
                 sortOrder: 9
-              b9999a09-1ce8-4681-9c01-1c8877ada7d5:
+              f5d96654-fff2-4e6b-abb7-c28aef99ae81:
                 required: false
                 sortOrder: 10
-              5692596e-f0aa-45de-b434-cbb8c811f182:
+              b9999a09-1ce8-4681-9c01-1c8877ada7d5:
                 required: false
                 sortOrder: 11
-              34952cd9-6993-4b3c-a735-5fe63ef010b7:
+              5692596e-f0aa-45de-b434-cbb8c811f182:
                 required: false
                 sortOrder: 12
-              bebdd49f-da1d-40e0-9893-56f02ceee572:
+              34952cd9-6993-4b3c-a735-5fe63ef010b7:
                 required: false
                 sortOrder: 13
-              ea2c0f61-4bc0-4f32-90da-0af542c6c33b:
+              bebdd49f-da1d-40e0-9893-56f02ceee572:
                 required: false
                 sortOrder: 14
-              7869a6ac-c746-4922-95b6-0c3b9bb0bc96:
+              ea2c0f61-4bc0-4f32-90da-0af542c6c33b:
                 required: false
                 sortOrder: 15
-              7f095af1-cbdb-43cc-a529-aee91750ef77:
+              7869a6ac-c746-4922-95b6-0c3b9bb0bc96:
                 required: false
                 sortOrder: 16
-              49dde19a-2567-4c93-97c0-c892be818901:
+              7f095af1-cbdb-43cc-a529-aee91750ef77:
                 required: false
                 sortOrder: 17
-              1bdec235-356c-4478-81b6-7062c2ac4274:
+              49dde19a-2567-4c93-97c0-c892be818901:
                 required: false
                 sortOrder: 18
-              b9edb9cc-4e79-4221-a82c-86a5cae7a5e3:
+              1bdec235-356c-4478-81b6-7062c2ac4274:
                 required: false
                 sortOrder: 19
-              a608bb2d-b05a-48a9-832c-393ba948e35e:
+              b9edb9cc-4e79-4221-a82c-86a5cae7a5e3:
                 required: false
                 sortOrder: 20
+              a608bb2d-b05a-48a9-832c-393ba948e35e:
+                required: false
+                sortOrder: 21
 matrixBlockTypes:
   0491af0f-c568-4d8a-861c-4affec15a0f5:
     name: Item
@@ -4920,6 +4929,88 @@ matrixBlockTypes:
               9b14e32b-b36f-4c1c-b9a9-39b2d9454887:
                 required: false
                 sortOrder: 1
+  33ac20d3-7762-4425-8423-6f44c39f6fd3:
+    field: 67149b8d-fddd-433a-aaa3-768c561c7a04
+    name: Heading
+    handle: heading
+    sortOrder: 1
+    fields:
+      5342f811-22da-48cd-a906-b6140285c934:
+        name: Heading
+        handle: heading
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      046c545f-6731-46f8-8307-d683cb654577:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              5342f811-22da-48cd-a906-b6140285c934:
+                required: false
+                sortOrder: 1
+  436d793f-2057-4599-bb92-5daad0d89f8a:
+    field: 67149b8d-fddd-433a-aaa3-768c561c7a04
+    name: Supporter
+    handle: supporter
+    sortOrder: 2
+    fields:
+      6988d94c-f682-498b-870e-ec2dd6cd698e:
+        name: Tekst
+        handle: text
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      8d545568-a03f-448e-bb6a-f0f5fdb85e31:
+        name: Link
+        handle: href
+        instructions: ''
+        searchable: true
+        translationMethod: language
+        translationKeyFormat: null
+        type: craft\fields\Url
+        settings:
+          placeholder: ''
+          maxLength: '255'
+        contentColumnType: string(255)
+        fieldGroup: null
+    fieldLayouts:
+      f17610fb-9d95-428b-a1aa-b36ec702e620:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              6988d94c-f682-498b-870e-ec2dd6cd698e:
+                required: false
+                sortOrder: 1
+              8d545568-a03f-448e-bb6a-f0f5fdb85e31:
+                required: false
+                sortOrder: 2
 plugins:
   redactor:
     settings: null
