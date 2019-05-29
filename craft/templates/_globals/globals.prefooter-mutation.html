@@ -53,6 +53,7 @@
 
 {% set social = mutationGlobals.mutationSocial.all() %}
 {% set partners = mutationGlobals.mutationPartners.all() %}
+{% set supporters = mutationGlobals.mutationSupporters.all() %}
 {% set nerdlab = mutationGlobals.mutationNerdlab.all() %}
 
 <div class="o-row-large c-drawing s-theme-white u-padding-bottom-none">
@@ -121,6 +122,28 @@
           {% for item in partners %}
           {% switch item.type %}
           {% case "partner" %}
+          {% if item.href | length %}
+          <li class="o-list-bare__item">
+            <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+          </li>
+          {% endif %}
+          {% endswitch %}
+          {% endfor %}
+          </ul>
+        </div>
+        {% for item in supporters %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h3 class="c-mutation-subtitle u-margin-bottom-small">
+          {{ item.heading }}
+        </h3>
+        {% endswitch %}
+        {% endfor %}
+        <div class="s-editor s-editor--prefooter">
+          <ul class="o-list-bare">
+          {% for item in supporters %}
+          {% switch item.type %}
+          {% case "supporter" %}
           {% if item.href | length %}
           <li class="o-list-bare__item">
             <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
