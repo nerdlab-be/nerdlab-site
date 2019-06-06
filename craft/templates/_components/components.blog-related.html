@@ -34,9 +34,6 @@
           </div>
           <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
             <div class="o-box c-card__body">
-              {# <p class="c-faded u-margin-bottom-none">
-                {{ nextEntry.postDate | date('l d F Y') }}
-              </p> #}
               {% for block in nextEntry.mutationAbout.all() %}
               {% switch block.type %}
               {% case "heading" %}
@@ -78,9 +75,6 @@
               </div>
               <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
                 <div class="o-box c-card__body">
-                  {# <p class="c-faded u-margin-bottom-none">
-                    {{ block.postDate | date('l d F Y') }}
-                  </p> #}
                   {% for item in block.mutationAbout.all() %}
                   {% switch item.type %}
                   {% case "heading" %}
@@ -105,7 +99,7 @@
     {% endfor %}
   {% endif %}
 
-  {% if prevEntry %}
+  {# {% if prevEntry %}
     <li class="o-list-bare__item u-spacer">
       <article class="c-card js-link-expand-holder">
         <div class="o-layout o-layout--flush">
@@ -124,9 +118,6 @@
           </div>
           <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
             <div class="o-box c-card__body">
-              {# <p class="c-faded u-margin-bottom-none">
-                {{ prevEntry.postDate | date('l d F Y') }}
-              </p> #}
               {% for block in prevEntry.mutationAbout.all() %}
               {% switch block.type %}
               {% case "heading" %}
@@ -169,9 +160,6 @@
             </div>
             <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
               <div class="o-box c-card__body">
-                {# <p class="c-faded u-margin-bottom-none">
-                  {{ block.postDate | date('l d F Y') }}
-                </p> #}
                 {% for item in block.mutationAbout.all() %}
                 {% switch item.type %}
                 {% case "heading" %}
@@ -194,5 +182,5 @@
       </li>
     {% endif %}
     {% endfor %}
-  {% endif %}
+  {% endif %} #}
 </ul>
