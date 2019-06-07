@@ -3769,14 +3769,14 @@ table {
   position: absolute;
   width: 25%;
   left: -10%;
-  top: 70%;
+  bottom: 30%;
 }
 
 @media (min-width: 37.5em) {
   .c-drawing__left-bottom {
     width: 25%;
     left: -10%;
-    top: 70%;
+    bottom: 30%;
   }
 }
 
@@ -3785,6 +3785,7 @@ table {
     width: 25%;
     left: -10%;
     top: 55%;
+    bottom: auto;
   }
 }
 

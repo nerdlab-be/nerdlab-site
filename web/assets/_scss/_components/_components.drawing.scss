@@ -61,18 +61,19 @@
     position: absolute;
     width: 25%;
     left: -10%;
-    top: 70%;
+    bottom: 30%;
 
     @include mq(small) {
       width: 25%;
       left: -10%;
-      top: 70%;
+      bottom: 30%;
     }
 
     @include mq(medium) {
       width: 25%;
       left: -10%;
       top: 55%;
+      bottom: auto;
     }
 
     @include mq(large) {
