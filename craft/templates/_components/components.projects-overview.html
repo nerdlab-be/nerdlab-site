@@ -8,7 +8,7 @@
 #}
 
 {# -- Module -- #}
-{% paginate craft.entries.section('projects') as pageInfo, pageEntries %}
+{% paginate craft.entries.section('projects').orderBy('postDate desc') as pageInfo, pageEntries %}
 
 <div class="o-row-large u-padding-top-none">
   <div class="o-wrapper o-wrapper--huge">
