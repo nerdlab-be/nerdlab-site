@@ -1,4 +1,61 @@
-<div class="c-marquee" aria-hidden="true">
+<div class="c-marquee c-marquee--secondary" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div>
+
+{% set tickets = craft.entries().section('tickets').all() %}
+{% if tickets | length() %}
+<div class="o-row-large s-theme-primary s-theme-noise" id="tickets">
+  <div class="o-wrapper">
+    <h2 class="c-mutation-title u-margin-bottom-large">
+      Tickets
+    </h2>
+    <ul class="o-list-bare c-list c-list--divider u-margin-bottom-none">
+      {% for item in tickets %}
+      <li class="o-list-bare__item c-list__item">
+        {% for entry in item.mutationTicketInfo.all() %}
+        {% if entry.ticketLink %}
+        <a href="{{ entry.ticketLink }}" class="c-link c-link--ticket" target="_blank" rel="noopener">
+        {% else %}
+        <div class="c-link c-link--ticket is-soldout">
+        {% endif %}
+          {% if entry.free == true %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">
+              {{ labels.labelFree }}
+              {% if entry.ticketLink %}
+              {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+              {% endif %}
+            </span>
+          {% else %}
+          {% if entry.soldout == true %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">{{ labels.labelSoldout }}</span>
+          {% else %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">
+              {{ entry.price }} | {{ labels.labelBuy }}
+              {% if entry.ticketLink %}
+              {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}
+              {% endif %}
+            </span>
+          {% endif %}
+          {% endif %}
+        {% if entry.ticketLink %}
+        </a>
+        {% else %}
+        </div>
+        {% endif %}
+        {% endfor %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}
+
+<div class="c-marquee c-marquee--tertiary" aria-hidden="true">
   <div class="c-marquee__content js-ticker">
     <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
   </div>
@@ -16,9 +73,9 @@
         {% for item in subscribe %}
         {% switch item.type %}
         {% case "heading" %}
-        <h3 class="c-mutation-title">
+        <h2 class="c-mutation-title">
           {{ item.heading }}
-        </h3>
+        </h2>
         {% case "paragraph" %}
         <div class="s-editor s-editor--prefooter u-margin-bottom-large">
           {{ item.paragraph }}
@@ -68,29 +125,28 @@
       <div class="o-layout__item u-3/5@medium u-2/3@large">
         <div class="s-editor s-editor--prefooter">
           <ul class="o-list-bare c-list-inline">
-          {% for item in social %}
-          {% switch item.type %}
-          {% case "heading" %}
-          <li class="o-list-bare__item c-list-inline__item">
-             <h3 class="c-mutation-subtitle u-margin-bottom-none">{{ item.heading }}:</h3>
-          </li>
-
-          {% case "socialLink" %}
-          {% if item.href | length %}
-          <li class="o-list-bare__item c-list-inline__item">
-            <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }}</a>
-          </li>
-          {% endif %}
-          {% endswitch %}
-          {% endfor %}
+            {% for item in social %}
+            {% switch item.type %}
+            {% case "heading" %}
+            <li class="o-list-bare__item c-list-inline__item">
+              <h2 class="c-mutation-subtitle u-margin-bottom-none">{{ item.heading }}:</h2>
+            </li>
+            {% case "socialLink" %}
+            {% if item.href | length %}
+            <li class="o-list-bare__item c-list-inline__item">
+              <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }}</a>
+            </li>
+            {% endif %}
+            {% endswitch %}
+            {% endfor %}
           </ul>
         </div>
         {% for item in nerdlab %}
         {% switch item.type %}
         {% case "heading" %}
-        <h3 class="c-mutation-subtitle u-margin-bottom-small">
+        <h2 class="c-mutation-subtitle u-margin-bottom-small">
           {{ item.heading }}
-        </h3>
+        </h2>
         {% endswitch %}
         {% endfor %}
         <div class="s-editor s-editor--prefooter u-margin-bottom">
@@ -112,45 +168,45 @@
         {% for item in partners %}
         {% switch item.type %}
         {% case "heading" %}
-        <h3 class="c-mutation-subtitle u-margin-bottom-small">
+        <h2 class="c-mutation-subtitle u-margin-bottom-small">
           {{ item.heading }}
-        </h3>
+        </h2>
         {% endswitch %}
         {% endfor %}
         <div class="s-editor s-editor--prefooter">
           <ul class="o-list-bare">
-          {% for item in partners %}
-          {% switch item.type %}
-          {% case "partner" %}
-          {% if item.href | length %}
-          <li class="o-list-bare__item">
-            <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-          </li>
-          {% endif %}
-          {% endswitch %}
-          {% endfor %}
+            {% for item in partners %}
+            {% switch item.type %}
+            {% case "partner" %}
+            {% if item.href | length %}
+            <li class="o-list-bare__item">
+              <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            </li>
+            {% endif %}
+            {% endswitch %}
+            {% endfor %}
           </ul>
         </div>
         {% for item in supporters %}
         {% switch item.type %}
         {% case "heading" %}
-        <h3 class="c-mutation-subtitle u-margin-bottom-small">
+        <h2 class="c-mutation-subtitle u-margin-bottom-small">
           {{ item.heading }}
-        </h3>
+        </h2>
         {% endswitch %}
         {% endfor %}
         <div class="s-editor s-editor--prefooter">
           <ul class="o-list-bare">
-          {% for item in supporters %}
-          {% switch item.type %}
-          {% case "supporter" %}
-          {% if item.href | length %}
-          <li class="o-list-bare__item">
-            <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
-          </li>
-          {% endif %}
-          {% endswitch %}
-          {% endfor %}
+            {% for item in supporters %}
+            {% switch item.type %}
+            {% case "supporter" %}
+            {% if item.href | length %}
+            <li class="o-list-bare__item">
+              <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.html' with { options: { icon: 'forward' } } %}</a>
+            </li>
+            {% endif %}
+            {% endswitch %}
+            {% endfor %}
           </ul>
         </div>
       </div>
