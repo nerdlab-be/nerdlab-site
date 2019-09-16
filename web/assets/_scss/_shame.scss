@@ -271,8 +271,6 @@
   @include font-size($h3);
   position: relative;
   height: $unit-large;
-  color: $white;
-  background-color: $color-primary;
   font-weight: $bold;
   transition: all ease .3s;
   overflow: hidden;
@@ -281,6 +279,16 @@
     height: $unit-huge;
     @include font-size($h1);
   }
+}
+
+.c-marquee--secondary {
+  color: $color-tertiary;
+  background-color: $color-secondary;
+}
+
+.c-marquee--tertiary {
+  color: $color-primary;
+  background-color: $color-tertiary;
 }
 
 .c-marquee__content {
@@ -419,4 +427,42 @@
 .u-alpha {
   position: relative;
   z-index: $z-index-alpha;
+}
+
+.c-list {
+
+}
+
+.s-mutation .c-list {
+  @include font-size($h5);
+
+  @include mq(medium) {
+    @include font-size($h3);
+  }
+}
+
+  .c-list__item {
+    & + & {
+      margin-top: $unit-small;
+      padding-top: $unit-small;
+    }
+
+    .c-list--divider & + & {
+      border-top: 1px solid $color-neutral-xlight;
+    }
+
+    .s-mutation .c-list--divider & + & {
+      border-top: 3px dashed $white;
+    }
+
+    @include mq(medium) {
+      & + & {
+        margin-top: $unit;
+        padding-top: $unit;
+      }
+    }
+  }
+
+.c-bold {
+  font-weight: $bold;
 }

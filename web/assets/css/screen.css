@@ -2691,6 +2691,47 @@ table {
   text-decoration: none;
 }
 
+.c-link--ticket {
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+}
+
+.c-link--ticket > .c-bold {
+  text-decoration: underline;
+}
+
+.c-link--ticket, .c-link--ticket:visited {
+  color: #FFFFFF;
+}
+
+.c-link--ticket:hover, .c-link--ticket:focus {
+  color: #FFFFFF;
+}
+
+.c-link--ticket:hover > .c-bold, .c-link--ticket:focus > .c-bold {
+  color: #FFE100;
+}
+
+.c-link--ticket.is-soldout:hover, .c-link--ticket.is-soldout:focus {
+  color: #FFFFFF;
+}
+
+.c-link--ticket.is-soldout:hover > .c-bold, .c-link--ticket.is-soldout:focus > .c-bold {
+  color: #FFFFFF;
+}
+
+.c-link--ticket.is-soldout > .c-bold {
+  text-decoration: none;
+}
+
 .c-link--skip {
   font-size: 14px;
   font-size: 0.875rem;
@@ -9616,8 +9657,6 @@ table {
   line-height: 1.25;
   position: relative;
   height: 48px;
-  color: #FFFFFF;
-  background-color: #f33;
   font-weight: 700;
   -webkit-transition: all ease .3s;
   transition: all ease .3s;
@@ -9631,6 +9670,16 @@ table {
     font-size: 2.625rem;
     line-height: 1.14286;
   }
+}
+
+.c-marquee--secondary {
+  color: #FFE100;
+  background-color: #36F;
+}
+
+.c-marquee--tertiary {
+  color: #f33;
+  background-color: #FFE100;
 }
 
 .c-marquee__content {
@@ -9787,4 +9836,42 @@ table {
 .u-alpha {
   position: relative;
   z-index: 1;
+}
+
+.s-mutation .c-list {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+
+@media (min-width: 56.25em) {
+  .s-mutation .c-list {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+}
+
+.c-list__item + .c-list__item {
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+.c-list--divider .c-list__item + .c-list__item {
+  border-top: 1px solid #e2e2e2;
+}
+
+.s-mutation .c-list--divider .c-list__item + .c-list__item {
+  border-top: 3px dashed #FFFFFF;
+}
+
+@media (min-width: 56.25em) {
+  .c-list__item + .c-list__item {
+    margin-top: 24px;
+    padding-top: 24px;
+  }
+}
+
+.c-bold {
+  font-weight: 700;
 }

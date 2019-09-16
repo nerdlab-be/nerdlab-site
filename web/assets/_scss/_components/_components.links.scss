@@ -39,6 +39,45 @@
   }
 }
 
+.c-link--ticket {
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+
+  > .c-bold {
+    text-decoration: underline;
+  }
+
+  &,
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+
+    > .c-bold {
+      color: $color-tertiary;
+    }
+  }
+
+  &.is-soldout:hover,
+  &.is-soldout:focus {
+    color: $white;
+
+    > .c-bold {
+      color: $white;
+    }
+  }
+
+
+  &.is-soldout > .c-bold {
+    text-decoration: none;
+  }
+}
+
 // Skip to navigation link
 .c-link--skip {
   @include font-size($tiny,1.2);

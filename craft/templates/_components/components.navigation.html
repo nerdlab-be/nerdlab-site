@@ -34,17 +34,25 @@
     <ul class="o-list-bare c-navigation__list">
       {% set content = options.handle.all() %}
       {% for block in content %}
+      {% if block.externalLink %}
+      <li class="c-list-bare__item c-navigation__item">
+        <a href="{{ block.externalLink }}{{ block.itemID }}" class="c-navigation__link" target="_blank">{{ block.itemTitle }}</a>
+      </li>
+      {% else %}
       {% set links = block.itemLink.all() %}
       {% for link in links %}
       {% set active = bodyClass == link.section.handle %}
-      <li class="c-list-bare__item c-navigation__item{{ active( link.uri , 1,' is-active') }}{% if entry.uri == link.uri %} is-active{% endif %}">
-        {% if block.externalLink %}
-        <a href="{{ block.externalLink }}{{ block.itemID }}" class="c-navigation__link" target="_blank">{{ block.itemTitle }}</a>
-        {% else %}
+      {% if block.itemID %}
+      <li class="c-list-bare__item c-navigation__item">
         <a href="{{ link.url }}{{ block.itemID }}" class="c-navigation__link js-nav-trigger-up">{{ block.itemTitle }}</a>
-        {% endif %}
       </li>
+      {% else %}
+      <li class="c-list-bare__item c-navigation__item{{ active( link.uri , 1,' is-active') }}{% if entry.uri == link.uri %} is-active{% endif %}">
+        <a href="{{ link.url }}{{ block.itemID }}" class="c-navigation__link js-nav-trigger-up">{{ block.itemTitle }}</a>
+      </li>
+      {% endif %}
       {% endfor %}
+      {% endif %}
       {% endfor %}
     </ul>
     {% if currentSite == 'Nerdlab' %}
