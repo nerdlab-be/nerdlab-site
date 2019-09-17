@@ -9671,6 +9671,11 @@ table {
   }
 }
 
+.c-marquee--primary {
+  color: #FFE100;
+  background-color: #DF0000;
+}
+
 .c-marquee--secondary {
   color: #FFE100;
   background-color: #343eed;
