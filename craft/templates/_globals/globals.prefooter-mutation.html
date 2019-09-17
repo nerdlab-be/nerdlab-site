@@ -1,11 +1,12 @@
+
+
+{% set tickets = craft.entries().section('tickets').all() %}
+{% if tickets | length() %}
 <div class="c-marquee c-marquee--secondary" aria-hidden="true">
   <div class="c-marquee__content js-ticker">
     <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
   </div>
 </div>
-
-{% set tickets = craft.entries().section('tickets').all() %}
-{% if tickets | length() %}
 <div class="o-row-large s-theme-primary s-theme-noise" id="tickets">
   <div class="o-wrapper">
     <h2 class="c-mutation-title u-margin-bottom-large">
@@ -53,13 +54,18 @@
     </ul>
   </div>
 </div>
-{% endif %}
-
 <div class="c-marquee c-marquee--tertiary" aria-hidden="true">
   <div class="c-marquee__content js-ticker">
     <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
   </div>
 </div>
+{% else %}
+<div class="c-marquee c-marquee--primary" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div>
+{% endif %}
 
 {% set subscribe = mutationGlobals.mutationSubscribe.all() %}
 {% if subscribe | length() %}

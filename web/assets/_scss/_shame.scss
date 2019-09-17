@@ -281,6 +281,11 @@
   }
 }
 
+.c-marquee--primary {
+  color: $color-tertiary;
+  background-color: $color-primary;
+}
+
 .c-marquee--secondary {
   color: $color-tertiary;
   background-color: $color-secondary;
