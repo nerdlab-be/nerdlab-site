@@ -4134,6 +4134,18 @@ table {
   outline: 2px dotted #dedede;
 }
 
+.s-theme-secondary .s-editor a:not(.c-btn), .s-theme-secondary .s-editor a:not(.c-btn):visited {
+  color: #FFE100;
+}
+
+.s-theme-secondary .s-editor a:not(.c-btn):hover, .s-theme-secondary .s-editor a:not(.c-btn):focus {
+  color: #FFFFFF;
+}
+
+.s-theme-secondary .s-editor a:not(.c-btn):focus {
+  outline: 2px dotted #dedede;
+}
+
 .s-editor .c-h2 a {
   font-weight: 700;
 }

@@ -70,6 +70,22 @@
     }
   }
 
+  .s-theme-secondary & a:not(.c-btn) {
+    &,
+    &:visited {
+      color: $color-tertiary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+  }
+
   .c-h2 a {
     font-weight: $bold;
   }
