@@ -3362,3 +3362,7 @@ jQuery.fn.sortEvents = function sortEvents() {
 $(".js-sort").each(function() {
   $(this).sortEvents();
 });
+
+$(".js-link-none").click(function(event){
+  event.preventDefault();
+});
