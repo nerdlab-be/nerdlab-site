@@ -9892,3 +9892,7 @@ table {
 .c-bold {
   font-weight: 700;
 }
+
+.js-link-none {
+  cursor: default;
+}

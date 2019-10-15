@@ -3976,6 +3976,392 @@ table {
   }
 }
 
+/* ==========================================================================
+   #TIMETABLE
+   ========================================================================== */
+.cd-schedule {
+  position: relative;
+  margin-top: 0;
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+
+.cd-schedule * {
+  margin: 0;
+}
+
+.cd-schedule ul {
+  list-style: none;
+}
+
+.cd-schedule a {
+  text-decoration: none;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule {
+    overflow: hidden;
+    padding-top: 0;
+    padding-right: 0;
+  }
+}
+
+.cd-schedule::before {
+  /* never visible - this is used in js to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule::before {
+    content: 'desktop';
+  }
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+.cd-schedule .timeline {
+  display: none;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .timeline {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 75px;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .timeline li {
+    position: relative;
+    height: 75px;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .timeline li:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    border-top: 2px solid #5d65f1;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .timeline li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 2px dotted rgba(93, 101, 241, 0.5);
+  }
+}
+
+@media (min-width: 75em) {
+  .cd-schedule .timeline li::after {
+    width: 100%;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .timeline li:last-child::after {
+    display: none;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .timeline li:nth-child(even)::after {
+    border-top-style: solid;
+  }
+}
+
+.cd-schedule .timeline li span {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1;
+  position: relative;
+  display: none;
+  font-weight: 700;
+  padding: 3px 4px 4px;
+  color: #FFFFFF;
+  background-color: #5d65f1;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .timeline li span {
+    display: inline-block;
+    -webkit-transform: translateY(calc(-50% - 1px));
+        -ms-transform: translateY(calc(-50% - 1px));
+            transform: translateY(calc(-50% - 1px));
+  }
+}
+
+.cd-schedule .events {
+  position: relative;
+  top: 0;
+  z-index: 1;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+    position: absolute;
+  }
+  .cd-schedule .events ul {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.cd-schedule .events .events-group {
+  position: relative;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .events-group {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    border-left: 2px dotted rgba(93, 101, 241, 0.5);
+    /* reset style */
+    margin-bottom: 0;
+    min-height: 2000px;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .events-group:last-child {
+    border-right: 0;
+  }
+}
+
+.cd-schedule .events .top-info {
+  width: 100%;
+  padding: 0;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .top-info {
+    /* vertically center its content */
+    height: 75px;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.cd-schedule .events .top-info > span {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  display: block;
+  font-weight: 700;
+  color: #DF0000;
+  padding: 12px 0 6px 0;
+  border-bottom: 1px solid #5d65f1;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .top-info > span {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: center;
+    padding: 24px 6px 3px 3px;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.cd-schedule .events .events-group > ul {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .events-group > ul {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
+
+.cd-schedule .events .events-group > ul::after {
+  /* never visible - used to add a right padding to .events-group > ul */
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .events-group > ul::after {
+    clear: both;
+    content: "";
+    display: block;
+    /* reset style */
+    display: none;
+  }
+}
+
+.cd-schedule .events .single-event {
+  -webkit-transition: opacity .2s, background-color .2s;
+  transition: opacity .2s, background-color .2s;
+  width: 100%;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .single-event {
+    position: absolute;
+    z-index: 3;
+    /* top position and height will be set using js */
+    width: 100%;
+    left: 0;
+    height: auto;
+    max-width: none;
+    margin-right: 0;
+    padding: 6px;
+  }
+}
+
+.cd-schedule .events .single-event:last-of-type {
+  margin-right: 5%;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .single-event:last-of-type {
+    /* reset style */
+    margin-right: 0;
+  }
+}
+
+.cd-schedule .events .single-event a {
+  display: block;
+  height: 100%;
+  padding: 8px 12px 12px 12px;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .single-event a {
+    overflow: hidden;
+  }
+}
+
+.cd-schedule .events .single-event--small a {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .single-event--small a {
+    padding: 3px 12px 3px 12px;
+  }
+}
+
+.cd-schedule.loading .events .single-event {
+  /* the class .loading is added by default to the .cd-schedule element
+       it is removed as soon as the single events are placed in the schedule plan (using javascript) */
+  opacity: 0;
+}
+
+.cd-schedule .event-name {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  display: block;
+  font-weight: 700;
+  color: #0d0e0f;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .single-event--small .event-name {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 75em) {
+  .cd-schedule .single-event--small .event-name {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 0;
+  }
+}
+
+.cd-schedule .event-date {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 500;
+  color: #202226;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .single-event--small .event-date {
+    display: none;
+  }
+}
+
+.cd-schedule .event-label {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1;
+  position: relative;
+  bottom: .1ex;
+  display: inline-block;
+  font-weight: 500;
+  color: #c90000;
+  background-color: #fad9d9;
+  border-radius: 3px;
+  padding: 2.4px 3px 4px;
+}
+
+.cd-schedule .event-label--how {
+  color: #1c7a26;
+  background-color: #d5f5d9;
+}
+
+.cd-schedule .event-label--workshop {
+  color: #995010;
+  background-color: #ffe7d1;
+}
+
+.cd-schedule .single-event a {
+  /* this is used to set a background color for the event and the modal window */
+  background: #FFFFFF;
+}
+
+.cd-schedule .single-event--tint a {
+  /* this is used to set a background color for the event and the modal window */
+  background: #1a1f77;
+  color: #FFFFFF;
+}
+
+.cd-schedule .single-event--tint a .event-name,
+.cd-schedule .single-event--tint a .event-date {
+  color: #FFFFFF;
+}
+
 /* ==================================
    #THEME
    ================================== */
@@ -9890,4 +10276,8 @@ table {
 
 .c-bold {
   font-weight: 700;
+}
+
+.js-link-none {
+  cursor: default;
 }
