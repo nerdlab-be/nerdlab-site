@@ -1,0 +1,75 @@
+/* ==================================
+   #BRAND
+   ================================== */
+
+$nerdlab-width: 300px;
+$nerdlab-height: 165px;
+$mutation-width: 430px;
+$mutation-height: 225px;
+
+.c-brand,
+.c-brand > .c-brand__link  {
+  font-family: $font-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-neutral-dark;
+  position: relative;
+  text-decoration: none;
+  margin-bottom: 0;
+
+  &:focus {
+    outline: $outline;
+  }
+}
+
+  .c-brand__mark {
+    .c-brand--nerdlab & {
+      width: $nerdlab-width/3.5;
+      height: $nerdlab-height/3.5;
+    }
+
+    .c-brand--mutation & {
+      width: $mutation-width/3.5;
+      height: $mutation-height/3.5;
+    }
+
+    @include mq(medium) {
+      .c-brand--mutation & {
+        width: $mutation-width/3;
+        height: $mutation-height/3;
+      }
+    }
+
+    @include mq(large) {
+      .c-brand--nerdlab & {
+        width: $nerdlab-width/3;
+        height: $nerdlab-height/3;
+      }
+    }
+  }
+
+  .c-brand__text {
+    @include font-size($h5 - 3px);
+    text-transform: uppercase;
+    font-weight: $bold;
+
+    @include mq(large) {
+      @include font-size($h5);
+    }
+  }
+
+.c-logo-vlaanderen {
+  display: block;
+  width: 150px;
+  margin-top: $unit;
+
+  @include mq(medium) {
+    width: 150px;
+    margin-top: 0;
+  }
+
+  @include mq(medium) {
+    width: 180px;
+  }
+}

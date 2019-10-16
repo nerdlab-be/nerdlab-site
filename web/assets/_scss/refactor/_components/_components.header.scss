@@ -1,0 +1,14 @@
+/* ==================================
+   #HEADER
+   ================================== */
+
+// Create a row with responsive padding and even spaced children. Used for a header or footer design pattern.
+.c-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+

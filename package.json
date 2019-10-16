@@ -5,7 +5,7 @@
   "main": "gulpfile.js",
   "author": "Dieter Peirs",
   "devDependencies": {
-    "autoprefixer": "^9.6.1",
+    "autoprefixer": "^9.6.5",
     "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
@@ -29,9 +29,15 @@
     "inuitcss-plugin-row": "^1.0.2",
     "jquery": "^3.4.1",
     "jquery-match-height": "^0.7.2",
-    "lazysizes": "^5.1.1",
+    "lazysizes": "^5.1.2",
     "picturefill": "^3.0.3",
     "sass-mq": "^5.0.1",
     "svgxuse": "^1.2.6"
-  }
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "maintained node versions",
+    "not dead"
+  ]
 }

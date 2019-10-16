@@ -1,27 +1,28 @@
 {
-  "_from": "inuitcss-plugin-flexlayout@^1.0.2",
-  "_id": "inuitcss-plugin-flexlayout@1.0.2",
+  "_from": "inuitcss-plugin-flexlayout@1.0.5",
+  "_id": "inuitcss-plugin-flexlayout@1.0.5",
   "_inBundle": false,
-  "_integrity": "sha1-bOs1ZYJ64cxT2iIT/aeIe4po644=",
+  "_integrity": "sha512-0jxkrSAisNWo/3XlSWQxBV1mrYqfcyCbRidqRMUo8M9K7xZStgBUtu0aOy7i/Fg4gJ9tBnYYwI59vjFVQYK6gg==",
   "_location": "/inuitcss-plugin-flexlayout",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "inuitcss-plugin-flexlayout@^1.0.2",
+    "raw": "inuitcss-plugin-flexlayout@1.0.5",
     "name": "inuitcss-plugin-flexlayout",
     "escapedName": "inuitcss-plugin-flexlayout",
-    "rawSpec": "^1.0.2",
+    "rawSpec": "1.0.5",
     "saveSpec": null,
-    "fetchSpec": "^1.0.2"
+    "fetchSpec": "1.0.5"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/inuitcss-plugin-flexlayout/-/inuitcss-plugin-flexlayout-1.0.2.tgz",
-  "_shasum": "6ceb3565827ae1cc53da2213fda7887b8a68eb8e",
-  "_spec": "inuitcss-plugin-flexlayout@^1.0.2",
-  "_where": "/Users/dieterpeirs/3-Sites/nerdlab-site",
+  "_resolved": "https://registry.npmjs.org/inuitcss-plugin-flexlayout/-/inuitcss-plugin-flexlayout-1.0.5.tgz",
+  "_shasum": "b43658ee4d95bb04a969a4a48fc64be4c8c6a6a5",
+  "_spec": "inuitcss-plugin-flexlayout@1.0.5",
+  "_where": "/Users/dieterpeirs/3-Sites/clients/nerdlab",
   "author": {
     "name": "Dieter Peirs"
   },
@@ -39,5 +40,5 @@
     "type": "git",
     "url": "git+https://github.com/Dietr/inuitcss-plugin-flexlayout.git"
   },
-  "version": "1.0.2"
+  "version": "1.0.5"
 }

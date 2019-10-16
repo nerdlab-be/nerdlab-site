@@ -1,4 +1,5 @@
 (function(window, factory) {
+	if(!window) {return;}
 	var globalInstall = function(){
 		factory(window.lazySizes);
 		window.removeEventListener('lazyunveilread', globalInstall, true);
@@ -13,7 +14,8 @@
 	} else {
 		window.addEventListener('lazyunveilread', globalInstall, true);
 	}
-}(window, function(window, document, lazySizes) {
+}(typeof window != 'undefined' ?
+	window : 0, function(window, document, lazySizes) {
 	'use strict';
 
 	if(!window.addEventListener){return;}
@@ -150,7 +152,7 @@
 			} else {
 				height = fitElem.clientHeight;
 
-				if(height > 40 && (displayRatio =  width / height) && ((fit == 'cover' && displayRatio < imageRatio) || (fit == 'contain' && displayRatio > imageRatio))){
+				if((displayRatio =  width / height) && ((fit == 'cover' && displayRatio < imageRatio) || (fit == 'contain' && displayRatio > imageRatio))){
 					retWidth = width * (imageRatio / displayRatio);
 				}
 			}

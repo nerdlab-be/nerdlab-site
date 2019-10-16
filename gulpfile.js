@@ -50,15 +50,6 @@ const config = {
     },
     parserOptions: { xmlMode: true }
   },
-  autoprefixer: {
-    browsers: [
-      'last 2 version',
-      '> 2%',
-      'ie >= 9',
-      'ios >= 8',
-      'android >= 4'
-    ]
-  },
   jsConcat: 'scripts.js'
 };
 
@@ -96,7 +87,8 @@ const paths = {
   jsWatch: 'web/assets/js/_scripts/**/*.js',
   iconsWatch: '_artwork/icons/*.svg',
   siteWatch: [
-    'templates/**/*.html'
+    'craft/templates/**/*.html',
+    'craft/templates/**/*.twig'
   ]
 }
 
@@ -150,7 +142,7 @@ function css() {
   return gulp
     .src(paths.scssSrc)
     .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(postcss([autoprefixer(config.autoprefixer)]))
+    .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest(paths.cssDist))
     .pipe(browsersync.stream());
 }
@@ -160,7 +152,7 @@ function productionCss() {
   return gulp
     .src(paths.scssSrc)
     .pipe(sass({ outputStyle: "compressed" }))
-    .pipe(postcss([ autoprefixer(config.autoprefixer) ]))
+    .pipe(postcss([ autoprefixer() ]))
     .pipe(rename((path) => {
       path.basename += ".min";
     }))

@@ -1,27 +1,28 @@
 {
-  "_from": "sass-mq@^5.0.0",
-  "_id": "sass-mq@5.0.0",
+  "_from": "sass-mq@5.0.1",
+  "_id": "sass-mq@5.0.1",
   "_inBundle": false,
-  "_integrity": "sha512-GCN6wGY+l4n10mASeMe2vqISvEEFjv6/NVcywaMU9saZgzw+DKM+fUUAnv07LlxXvDdnHSRf5jGJ10u/iF1BKA==",
+  "_integrity": "sha512-ugSVZO5fzasSFrGfKCtY02spnkOOfo9U9sXuzCuSXoCl1CgcoqdJRdNmigZkhvRVph1GKM6o0pgI00Jjc445CA==",
   "_location": "/sass-mq",
   "_phantomChildren": {},
   "_requested": {
-    "type": "range",
+    "type": "version",
     "registry": true,
-    "raw": "sass-mq@^5.0.0",
+    "raw": "sass-mq@5.0.1",
     "name": "sass-mq",
     "escapedName": "sass-mq",
-    "rawSpec": "^5.0.0",
+    "rawSpec": "5.0.1",
     "saveSpec": null,
-    "fetchSpec": "^5.0.0"
+    "fetchSpec": "5.0.1"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/sass-mq/-/sass-mq-5.0.0.tgz",
-  "_shasum": "7e8a8eb0f289591b3521549266f0ff923772809d",
-  "_spec": "sass-mq@^5.0.0",
-  "_where": "/Users/dieterpeirs/3-Sites/nerdlab-site",
+  "_resolved": "https://registry.npmjs.org/sass-mq/-/sass-mq-5.0.1.tgz",
+  "_shasum": "42c711e657d884ff6a1bb4d405dfb6f08a7dc622",
+  "_spec": "sass-mq@5.0.1",
+  "_where": "/Users/dieterpeirs/3-Sites/clients/nerdlab",
   "bugs": {
     "url": "https://github.com/sass-mq/sass-mq/issues"
   },
@@ -34,9 +35,9 @@
   "deprecated": false,
   "description": "mq() is a Sass mixin that helps manipulating media queries in an elegant way.",
   "devDependencies": {
-    "eyeglass": "^1.5.0",
-    "node-sass": "^4.9.0",
-    "sassdoc": "^2.5.0"
+    "eyeglass": "^2.4.1",
+    "node-sass": "^4.12.0",
+    "sassdoc": "^2.7.0"
   },
   "eyeglass": {
     "needs": ">= 0.8.2",
@@ -80,5 +81,5 @@
     "sassdoc": "./scripts/sassdoc.sh",
     "test": "./scripts/test.sh"
   },
-  "version": "5.0.0"
+  "version": "5.0.1"
 }

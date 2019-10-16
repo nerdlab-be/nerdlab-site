@@ -1,4 +1,5 @@
 (function(window, factory) {
+	if(!window) {return;}
 	var globalInstall = function(){
 		factory(window.lazySizes);
 		window.removeEventListener('lazyunveilread', globalInstall, true);
@@ -13,7 +14,8 @@
 	} else {
 		window.addEventListener('lazyunveilread', globalInstall, true);
 	}
-}(window, function(window, document, lazySizes) {
+}(typeof window != 'undefined' ?
+	window : 0, function(window, document, lazySizes) {
 	'use strict';
 
 	var slice = [].slice;
@@ -91,13 +93,19 @@
 			if(blurUp != 'always'){
 				blurImg.style.visibility = 'hidden';
 
-				setTimeout(function(){
-					lazySizes.rAF(function () {
-						if(!isForced){
-							blurImg.style.visibility = '';
-						}
-					});
-				}, 20);
+				lazySizes.rAF(function () {
+					if (blurImg) {
+						setTimeout(function(){
+							if (blurImg) {
+								lazySizes.rAF(function () {
+									if(!isForced && blurImg){
+										blurImg.style.visibility = '';
+									}
+								});
+							}
+						}, lazySizes.cfg.blurupCacheDelay || 33);
+					}
+				});
 			}
 		};
 
