@@ -82,7 +82,6 @@ const paths = {
   jsDist: 'web/assets/js/',
   iconsSrc: '_artwork/icons/*.svg',
   iconsDist: 'web/assets/images/svg/',
-  cssWatch: './assets/_scss/**/*.scss',
   cssWatch: 'web/assets/_scss/**/*.scss',
   jsWatch: 'web/assets/js/_scripts/**/*.js',
   iconsWatch: '_artwork/icons/*.svg',

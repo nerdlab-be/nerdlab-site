@@ -44,25 +44,29 @@
       {% endswitch %}
       {% endfor %}
     </div>
-  </div>
-  {% if entry.pageIntro.visual | length() %}
-  <div class="c-image-holder">
-  {% for block in entry.pageIntro.visual.all() %}
-    {% for image in block.image.all() %}
-    <img
-      class="o-crop__content lazyload fade-in"
-      src="{{ image.url(thumb) }}"
-      data-sizes="auto"
-      data-srcset="{{ image.url(small) }} 240w,
-                    {{ image.url(medium) }} 401w,
-                    {{ image.url(large) }} 601w"
-      alt="{{ image.altText }}">
-    {% if image.credits | length() %}
-    <p>{{ image.credits }}</p>
-    {% endif %}
+    {% if entry.pageIntro.visual | length() %}
+    <div class="u-margin-top">
+    {% for block in entry.pageIntro.visual.all() %}
+      {% for image in block.image.all() %}
+      <img
+        data-sizes="auto"
+        data-srcset="
+          {{ image.url(small) }} 350w,
+          {{ image.url(medium) }} 600w,
+          {{ image.url(large) }} 900w,
+          {{ image.url(xlarge) }} 1280w,
+          {{ image.url(huge) }} 1400w"
+        src="{{ image.url(thumb) }}"
+        alt="{{ image.altText }}"
+        class="c-media lazyload fade-in">
+      {% if image.credits | length() %}
+      <p>{{ image.credits }}</p>
+      {% endif %}
+      {% endfor %}
     {% endfor %}
-  {% endfor %}
-  {% endif %}
+    </div>
+    {% endif %}
   </div>
+
 </div>
 {% endif %}

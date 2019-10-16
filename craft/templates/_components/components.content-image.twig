@@ -2,8 +2,23 @@
 
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="s-editor">
-       <h2>Image</h2>
-    </div>
+    {% if block.singleImage | length() %}
+    {% for image in block.singleImage.all() %}
+    <img
+      data-sizes="auto"
+      data-srcset="
+        {{ image.url(small) }} 350w,
+        {{ image.url(medium) }} 600w,
+        {{ image.url(large) }} 900w,
+        {{ image.url(xlarge) }} 1280w,
+        {{ image.url(huge) }} 1400w"
+      src="{{ image.url(thumb) }}"
+      alt="{{ image.altText }}"
+      class="c-media lazyload fade-in">
+    {% if image.credits | length() %}
+    <p>{{ image.credits }}</p>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
   </div>
 </div>

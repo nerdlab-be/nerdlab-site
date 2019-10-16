@@ -3888,44 +3888,31 @@ table {
   outline: 2px dotted #e2e2e2;
 }
 
-.s-theme-secondary .s-editor a:not(.c-btn), .s-theme-secondary .s-editor a:not(.c-btn):visited {
-  color: #FFE100;
-}
-
-.s-theme-secondary .s-editor a:not(.c-btn):hover, .s-theme-secondary .s-editor a:not(.c-btn):focus {
-  color: #FFFFFF;
-}
-
-.s-theme-secondary .s-editor a:not(.c-btn):focus {
-  outline: 2px dotted #e2e2e2;
-}
-
-.s-editor .c-h2 a {
-  font-weight: 700;
-}
-
-.s-editor .c-h3 a {
-  font-weight: 700;
-}
-
 .s-editor p,
-.s-editor ul {
+.s-editor ul,
+.s-editor ol {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5;
   max-width: 35em;
 }
 
-.s-editor ul {
+.s-editor ul,
+.s-editor ol {
   list-style: none;
   margin-left: 12px;
+}
+
+.s-editor ol {
+  counter-reset: numbered-list;
+  margin-left: 0;
 }
 
 .s-editor li + li {
   margin-top: 12px;
 }
 
-.s-editor li:before {
+.s-editor ul li:before {
   font-size: 1.2em;
   position: relative;
   left: -12px;
@@ -3934,11 +3921,23 @@ table {
   color: #36F;
 }
 
-.s-editor .c-small {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: #777778;
+.s-editor ol li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.s-editor ol li:before {
+  content: counter(numbered-list);
+  counter-increment: numbered-list;
+  position: absolute;
+  top: .6ex;
+  left: 0;
+  font-size: .7em;
+  color: inherit;
+  background-color: #f1f1f1;
+  display: block;
+  padding: 0 6px;
+  border-radius: 4px;
 }
 
 .s-editor blockquote {
@@ -3962,6 +3961,26 @@ table {
   font-weight: 600;
   margin-top: 12px;
   color: #f33;
+}
+
+.s-theme-secondary .s-editor a:not(.c-btn), .s-theme-secondary .s-editor a:not(.c-btn):visited {
+  color: #FFE100;
+}
+
+.s-theme-secondary .s-editor a:not(.c-btn):hover, .s-theme-secondary .s-editor a:not(.c-btn):focus {
+  color: #FFFFFF;
+}
+
+.s-theme-secondary .s-editor a:not(.c-btn):focus {
+  outline: 2px dotted #e2e2e2;
+}
+
+.s-editor .c-h2 a {
+  font-weight: 700;
+}
+
+.s-editor .c-h3 a {
+  font-weight: 700;
 }
 
 @media (min-width: 37.5em) {
@@ -3988,7 +4007,8 @@ table {
     line-height: 1.33333;
   }
   .s-editor p,
-  .s-editor ul {
+  .s-editor ul,
+  .s-editor ol {
     font-size: 21px;
     font-size: 1.3125rem;
     line-height: 1.5;
@@ -4004,7 +4024,8 @@ table {
     margin-bottom: 48px;
   }
   .s-editor p,
-  .s-editor ul {
+  .s-editor ul,
+  .s-editor ol {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 1.5;
@@ -9588,4 +9609,8 @@ table {
 
 .js-link-none {
   cursor: default;
+}
+
+.c-media {
+  width: 100%;
 }

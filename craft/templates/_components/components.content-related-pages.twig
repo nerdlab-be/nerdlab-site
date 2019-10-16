@@ -3,7 +3,43 @@
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-editor">
-       <h2>Related pages</h2>
+      <h2>{{ block.heading }}</h2>
+      {% if block.paragraph | length() %}
+      {{ block.paragraph }}
+      {% endif %}
     </div>
+    {# @TODO: create cards layout #}
+    {% if block.showAllSubpages | length() %}
+    <ul class="c-para o-list-bare c-list c-list--divider u-margin-top-large">
+      {% set parent = craft.entries.slug(entry.title).one() %}
+      {% set pages =  parent.getDescendants(1)  %}
+      {% for page in pages.all() %}
+      <li class="o-list-bare__item c-list__item">
+        {% if block.showAsCards %}
+        <article>
+          <h3><a href="{{ page.url() }}">{{ page.title }}</a></h3>
+        </article>
+        {% else %}
+        <a href="{{ page.url() }}">{{ page.title }}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% elseif block.relatedPages | length() %}
+    <ul class="c-para o-list-bare c-list c-list--divider u-margin-top-large">
+      {% for page in block.relatedPages.all() %}
+      <li class="o-list-bare__item c-list__item">
+        {% if block.showAsCards %}
+        <article>
+          <h3><a href="{{ page.url() }}">{{ page.title }}</a></h3>
+        </article>
+        {% else %}
+        <a href="{{ page.url() }}">{{ page.title }}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+
   </div>
 </div>

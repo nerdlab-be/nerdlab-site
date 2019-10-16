@@ -3,7 +3,109 @@
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-editor">
-      <h2>Form</h2>
+      <h2>{{ block.heading }}</h2>
+      {% if block.paragraph | length() %}
+      {{ block.paragraph }}
+      {% endif %}
     </div>
+    {% if block.form | length() %}
+      {% macro errorList(errors) %}
+      {% if errors %}
+        <ul class="errors">
+            {% for error in errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+        </ul>
+      {% endif %}
+      {% endmacro %}
+      {% from _self import errorList %}
+
+      {% set pageRedirect = entry.url() %}
+      {% if block.formRedirect | length() %}
+      {% for page in block.formRedirect.all() %}
+      {% set pageRedirect = page.uri %}
+      {% endfor %}
+      {% set form = wheelform.form({
+        id: 1,
+        redirect: pageRedirect,
+        attributes: {
+          'class': 'c-form',
+        }
+      }) %}
+      {% else %}
+      {% set form = wheelform.form({
+        id: 1,
+        redirect: pageRedirect,
+      }) %}
+      {% endif %}
+
+      {{ form.open() }}
+          {{ wheelformErrors['form'] is defined ? errorList(wheelformErrors['form']) }}
+          {{ wheelformErrors['recaptcha'] is defined ? errorList(wheelformErrors['recaptcha']) }}
+          {{ wheelformErrors['honeypot'] is defined ? errorList(wheelformErrors['honeypot']) }}
+
+          {% for field in form.fields %}
+              {% switch field.type %}
+                  {% case "checkbox" %}
+                      <div class="form-checkbox">
+                      {% for item in field.items %}
+                      <label><input class="checkbox" type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id=""/>{{item}}</label>
+                      {% endfor %}
+                      </div>
+                  {% case "radio" %}
+                      <div class="form-radio">
+                      {% for item in field.items %}
+                      <input class="radio" type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id=""/>
+                      <label>{{item}}</label>
+                      {% endfor %}
+                      </div>
+                  {% case "select" %}
+                      <div class="form-select">
+                      <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
+                      {% for item in field.items %}
+                          <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
+                      {% endfor %}
+                      </select>
+                      </div>
+                  {% case "file" %}
+                      <div class="form-group">
+                          <label>{{field.label}}</label>
+                          <input type="file" name="{{field.name}}" id=""/>
+                      </div>
+                  {% case "textarea" %}
+                      <div class="form-group">
+                          <label>{{field.label}}</label>
+                          <textarea class="form-control" name="{{field.name}}" id="">{{ values[field.name] ?? '' }}</textarea>
+                      </div>
+                  {% case "list" %}
+                      <div class="form-group">
+                          <label>{{field.label}}</label>
+                          <input type="text" name="{{field.name}}[]" id=""/>
+                          <script>//Javascript to handle adding fields</script>
+                      </div>
+                  {% default %}
+                      <div class="form-group">
+                      <label>{{field.label}}</label>
+                      <input class="form-control" type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id=""/>
+                      </div>
+              {% endswitch %}
+              {{ wheelformErrors[field.name] is defined ? errorList(wheelformErrors[field.name]) }}
+          {% endfor %}
+          {% if form.recaptcha %}
+              <div>
+                  <script src="https://www.google.com/recaptcha/api.js"></script>
+                  <!-- Production captcha -->
+                  <div class="g-recaptcha" data-sitekey="{{wheelform.getSettings('recaptcha_public')}}"></div>
+              </div>
+          {% endif %}
+
+        {% if block.buttonText | length() %}
+        <button class="btn btn-success" id="submit">{{ block.buttonText }}</button>
+        {% else %}
+        <button class="btn btn-success" id="submit">Verstuur</button>
+        {% endif %}
+      </form>
+    {% endif %}
   </div>
 </div>
+

@@ -2,8 +2,14 @@
 
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="s-editor">
-       <h2>Quote</h2>
+    <div class="s-editor s-editor--quote">
+      <blockquote>
+        <p>{{ block.quote }}</p>
+        <footer>
+          {{ block.author }}
+        </footer>
+      </blockquote>
     </div>
   </div>
 </div>
+
