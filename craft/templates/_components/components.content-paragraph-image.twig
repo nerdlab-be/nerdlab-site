@@ -2,8 +2,32 @@
 
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="s-editor">
-       {{ block.paragraph }}
+    <div class="o-layout {% if block.position == 'right' %}o-layout--reverse{% endif %}">
+      <div class="o-layout__item {% if block.position != 'center' %}u-1/3@small u-1/2@medium{% endif %}">
+        {% if block.paragraphImage | length() %}
+        {% for image in block.paragraphImage.all() %}
+        <img
+          data-sizes="auto"
+          data-srcset="
+            {{ image.url(small) }} 350w,
+            {{ image.url(medium) }} 600w,
+            {{ image.url(large) }} 900w,
+            {{ image.url(xlarge) }} 1280w,
+            {{ image.url(huge) }} 1400w"
+          src="{{ image.url(thumb) }}"
+          alt="{{ image.altText }}"
+          class="c-media lazyload fade-in">
+        {% if image.credits | length() %}
+        <p>{{ image.credits }}</p>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+      </div>
+      <div class="o-layout__item {% if block.position != 'center' %}u-1/3@small u-1/2@medium{% endif %}">
+        <div class="s-editor">
+          {{ block.paragraph }}
+        </div>
+      </div>
     </div>
   </div>
 </div>

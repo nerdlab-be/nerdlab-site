@@ -70,46 +70,29 @@
     }
   }
 
-  .s-theme-secondary & a:not(.c-btn) {
-    &,
-    &:visited {
-      color: $color-tertiary;
-    }
-
-    &:hover,
-    &:focus {
-      color: $white;
-    }
-
-    &:focus {
-      outline: $outline;
-    }
-  }
-
-  .c-h2 a {
-    font-weight: $bold;
-  }
-
-  .c-h3 a {
-    font-weight: $bold;
-  }
-
   p,
-  ul {
+  ul,
+  ol {
     @include font-size($h5,1.5);
     max-width: 35em;
   }
 
-  ul {
+  ul,
+  ol {
     list-style: none;
     margin-left: $unit-small;
+  }
+
+  ol {
+    counter-reset: numbered-list;
+    margin-left: 0;
   }
 
   li + li {
     margin-top: $unit-small;
   }
 
-  li:before {
+  ul li:before {
     font-size: 1.2em;
     position: relative;
     left: -$unit-small;
@@ -118,9 +101,23 @@
     color: $color-secondary;
   }
 
-  .c-small {
-    @include font-size($tiny,1.5);
-    color: $color-neutral-light;
+  ol li {
+    position: relative;
+    padding-left: $unit + $unit-tiny;
+  }
+
+  ol li:before {
+    content: counter(numbered-list);
+    counter-increment: numbered-list;
+    position: absolute;
+    top: .6ex;
+    left: 0;
+    font-size: .7em;
+    color: inherit;
+    background-color: $color-neutral-xxlight;
+    display: block;
+    padding: 0 $unit-tiny;
+    border-radius: $radius;
   }
 
   blockquote {
@@ -146,6 +143,30 @@
     }
   }
 
+  .s-theme-secondary & a:not(.c-btn) {
+    &,
+    &:visited {
+      color: $color-tertiary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
+  }
+
+  .c-h2 a {
+    font-weight: $bold;
+  }
+
+  .c-h3 a {
+    font-weight: $bold;
+  }
+
   @include mq(small) {
     h1 {
       @include font-size($h2);
@@ -166,7 +187,8 @@
     }
 
     p,
-    ul {
+    ul,
+    ol {
       @include font-size($h4,1.5);
     }
 
@@ -182,7 +204,8 @@
     }
 
     p,
-    ul {
+    ul,
+    ol {
       @include font-size($h3,1.5);
     }
 
