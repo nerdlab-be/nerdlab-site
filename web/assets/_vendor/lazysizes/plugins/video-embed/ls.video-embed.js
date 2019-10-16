@@ -1,4 +1,5 @@
 (function(window, factory) {
+	if(!window) {return;}
 	var globalInstall = function(){
 		factory(window.lazySizes);
 		window.removeEventListener('lazyunveilread', globalInstall, true);
@@ -13,7 +14,8 @@
 	} else {
 		window.addEventListener('lazyunveilread', globalInstall, true);
 	}
-}(window, function(window, document, lazySizes) {
+}(typeof window != 'undefined' ?
+	window : 0, function(window, document, lazySizes) {
 	/*jshint eqnull:true */
 	'use strict';
 	if(!document.getElementsByClassName){return;}
@@ -23,8 +25,9 @@
 	;
 	var idIndex = Date.now();
 	var regId = /\{\{id}}/;
+	var regYtImg = /\{\{hqdefault}}/;
 	var regAmp = /^&/;
-	var youtubeImg = protocol + '//img.youtube.com/vi/{{id}}/sddefault.jpg';
+	var youtubeImg = protocol + '//img.youtube.com/vi/{{id}}/{{hqdefault}}.jpg';
 	var youtubeIframe = protocol + '//www.youtube.com/embed/{{id}}?autoplay=1';
 	var vimeoApi = protocol + '//vimeo.com/api/oembed.json?url=https%3A//vimeo.com/{{id}}';
 	var vimeoIframe = protocol + '//player.vimeo.com/video/{{id}}?autoplay=1';
@@ -75,7 +78,9 @@
 	}
 
 	function embedYoutubeImg(id, elem){
-		elem.style.backgroundImage = 'url('+ youtubeImg.replace(regId, id) +')';
+		var ytImg = elem.getAttribute('data-thumb-size') || lazySizes.cfg.ytThumb || 'hqdefault';
+
+		elem.style.backgroundImage = 'url('+ youtubeImg.replace(regId, id).replace(regYtImg, ytImg) +')';
 		elem.addEventListener('click', embedYoutubeIframe);
 	}
 

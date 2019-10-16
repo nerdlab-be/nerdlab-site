@@ -34,7 +34,9 @@
     "clubstudioltd/craft-asset-rev": "6.0.2",
     "craftcms/store-hours": "2.1.1.1",
     "rias/craft-position-fieldtype": "1.0.14",
-    "nystudio107/craft-cookies": "1.1.11"
+    "nystudio107/craft-cookies": "1.1.11",
+    "xpertbot/craft-wheelform": "2.3.4",
+    "verbb/super-table": "2.3.0"
   },
   "autoload": {
     "psr-4": {

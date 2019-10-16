@@ -1,12 +1,26 @@
 # Changelog
 
-## 5.0.0-beta1
+## 5.1.2
 
-* Add support fot native `loading="lazy"` feature as a [native loading plugin](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/native-loading).
+Fix visibility check (fixes [#709](https://github.com/aFarkas/lazysizes/issues/709))
+
+## 5.1.1
+
+* Fix ratio calculation in rias plugin (fixed in [#685](https://github.com/aFarkas/lazysizes/pull/685) by [tikotzky](https://github.com/tikotzky))
+* Make  thumb size for youtube poster image in video-embed plugin configurable (see [#681](https://github.com/aFarkas/lazysizes/pull/681) thx to [@nikitasol](https://github.com/nikitasol))
+
+## 5.1.0
+
+* Allow import/execution in node environment
+* Use "hqdefault" for youtube poster image in video-embed plugin fixes [#666](https://github.com/aFarkas/lazysizes/issues/666)
+
+## 5.0.0
+
 * Use `width`/`height` content attributes to detect physical aspect ratio of image candidates, if `data-aspectratio` and `h`/`w` descriptors are missing. [#642](https://github.com/aFarkas/lazysizes/issues/642)
 * Do not leak global `lazySizesConfig` anymore fixes [#647](https://github.com/aFarkas/lazysizes/issues/647)
 * Improve handling of cloned object-fit images fixes [#648](https://github.com/aFarkas/lazysizes/issues/648)
 * Improve blur-up/effect plugin.
+* Add support fot native `loading="lazy"` feature as a [native loading plugin](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/native-loading).
 
 ## 4.1.8
 

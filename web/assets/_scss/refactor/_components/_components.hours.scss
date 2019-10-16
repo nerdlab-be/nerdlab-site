@@ -1,0 +1,45 @@
+/* ==========================================================================
+   #HOURS
+   ========================================================================== */
+
+.c-hours {
+  margin-top: $unit;
+
+  @include mq(medium) {
+    margin-top: $unit-large;
+  }
+}
+
+  .c-hours__list {
+    color: $color-neutral;
+    margin-bottom: 0;
+    margin-left: 0 !important;
+    max-width: 100% !important;
+
+    strong {
+      font-weight: $regular;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li:before {
+      display: none;
+    }
+
+    li + li {
+      border-top: 1px dotted $color-neutral-xlight;
+      padding-top: $unit-tiny;
+      margin-top: $unit-tiny;
+    }
+
+    li.is-now {
+      font-weight: $bold;
+
+      strong {
+        font-weight: $bold;
+      }
+    }
+  }
