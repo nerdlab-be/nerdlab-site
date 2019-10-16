@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "490382083d2e2c0177de584846355be1",
+    "content-hash": "f1a13ddbd9eaa5b8a29e9ba1853ef011",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
@@ -107,6 +107,59 @@
                 "markdown-extra"
             ],
             "time": "2018-03-26T11:24:36+00:00"
+        },
+        {
+            "name": "charliedev/advanced-url-field",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/charliedevelopment/craft3-advanced-url-field/zipball/b5318ecb8e8744e9dc7202c1ba9c026f7733b1e6",
+                "reference": "b5318ecb8e8744e9dc7202c1ba9c026f7733b1e6",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-RC1"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Advanced Url Field",
+                "handle": "advanced-url-field",
+                "changelogUrl": "https://raw.githubusercontent.com/charliedevelopment/craft3-advanced-url-field/master/CHANGELOG.md",
+                "downloadUrl": "https://github.com/charliedevelopment/craft3-advanced-url-field/archive/master.zip",
+                "schemaVersion": "1.0.0",
+                "hasCpSettings": false,
+                "hasCpSection": false,
+                "class": "charliedev\\advancedurl\\AdvancedUrl"
+            },
+            "autoload": {
+                "psr-4": {
+                    "charliedev\\advancedurl\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Charlie Development",
+                    "email": "support@charliedev.com",
+                    "homepage": "http://charliedev.com/"
+                }
+            ],
+            "description": "Configurable URL field that provides multiple format restrictions and validation.",
+            "keywords": [
+                "cms",
+                "craft",
+                "craftcms",
+                "field",
+                "url"
+            ],
+            "support": {
+                "issues": "https://github.com/charliedevelopment/craft3-advanced-url-field/issues?state=open",
+                "source": "https://github.com/charliedevelopment/craft3-advanced-url-field",
+                "email": "support@charliedev.com"
+            },
+            "time": "2017-12-13T16:38:58+00:00"
         },
         {
             "name": "clubstudioltd/craft-asset-rev",

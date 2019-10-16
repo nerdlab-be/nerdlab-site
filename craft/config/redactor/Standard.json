@@ -1,4 +1,9 @@
 {
-  "buttons": ["bold", "italic", "unorderedlist", "orderedlist", "link"],
-  "toolbarFixed": true
+  "buttons": ["format","bold", "italic", "unorderedlist", "orderedlist", "link"],
+  "formatting": ["h2", "h3", "p" ],
+  "toolbarFixed": true,
+  "pastePlainText": true,
+  "removeNewlines": true,
+  "pasteBlockTags": [],
+  "pasteInlineTags": []
 }

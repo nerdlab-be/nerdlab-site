@@ -1,0 +1,42 @@
+{#
+  Content
+  ================
+#}
+
+{#
+  {% include '_components/components.page-content' %}
+#}
+
+{# -- Module -- #}
+{% if entry.pageContent | length() %}
+{% set item = entry.pageContent.all() %}
+{% for block in item %}
+{% switch block.type %}
+
+{% case "paragraph" %}
+{% include '_components/components.content-paragraph' %}
+
+{% case "paragraphImage" %}
+{% include '_components/components.content-paragraph-image' %}
+
+{% case "grid" %}
+{% include '_components/components.content-grid' %}
+
+{% case "image" %}
+{% include '_components/components.content-image' %}
+
+{% case "video" %}
+{% include '_components/components.content-video' %}
+
+{% case "quote" %}
+{% include '_components/components.content-quote' %}
+
+{% case "relatedPages" %}
+{% include '_components/components.content-related-pages' %}
+
+{% case "form" %}
+{% include '_components/components.content-form' %}
+
+{% endswitch %}
+{% endfor %}
+{% endif %}
