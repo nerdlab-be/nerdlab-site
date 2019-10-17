@@ -1,6 +1,7 @@
 <div class="cd-schedule cd-schedule--short loading">
   <div class="timeline">
     <ul>
+      <li><span>09:00</span></li>
       <li><span>09:30</span></li>
       <li><span>10:00</span></li>
       <li><span>10:30</span></li>
@@ -18,7 +19,6 @@
       <li><span>16:30</span></li>
       <li><span>17:00</span></li>
       <li><span>17:30</span></li>
-      <li><span>18:00</span></li>
     </ul>
   </div>
 
@@ -26,42 +26,52 @@
     <ul>
       {% set talks = craft.entries.section('programDetails').all() %}
 
-      <!-- Grote zaal -->
+      <!-- Kopergieterij -->
       <li class="events-group">
-        <div class="top-info"><span>{{ mutationGlobals.timelineLabelGroteZaal }}</span></div>
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.kopergieterij }}</span>
+          {% if mutationGlobals.timetableLabels.kopergieterijInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.kopergieterijInfo }}</span>
+          {% endif %}
+        </div>
         <ul class="js-sort">
           {% for item in talks %}
-          {% if item.mutationRoom == "groteZaal" %}
-          <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
-            {% if item.articleLink | length() %}
-            {% for page in item.articleLink.all() %}
-            <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">
-                {{ item.title }}
-                {# <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span> #}
-              </span>
-            </a>
-            {% endfor %}
-            {% else %}
-            <a href="#!" class="js-link-none">
-              <span class="event-name">
-                {{ item.title }}
-                {# <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span> #}
-              </span>
-            </a>
-            {% endif %}
-          </li>
+          {% if item.mutationRoom == "kopergieterij" %}
+          {% include '_components/components.timetable-entry.html' %}
           {% endif %}
           {% endfor %}
         </ul>
       </li>
 
+      <!-- Kraaienest -->
       <li class="events-group">
-        <div class="top-info"><span>{{ mutationGlobals.timelineLabelKleineZaal }}</span></div>
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.kraaienest }}</span>
+          {% if mutationGlobals.timetableLabels.kraaienestInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.kraaienestInfo }}</span>
+          {% endif %}
+        </div>
         <ul class="js-sort">
           {% for item in talks %}
-          {% if item.mutationRoom == "kleineZaal" %}
-          <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
+          {% if item.mutationRoom == "kraaienest" %}
+          {% include '_components/components.timetable-entry.html' %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+       <!-- Nerdlab -->
+      <li class="events-group">
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.nerdlab }}</span>
+          {% if mutationGlobals.timetableLabels.nerdlabInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.nerdlabInfo }}</span>
+          {% endif %}
+        </div>
+        <ul class="js-sort">
+          {% for item in talks %}
+          {% if item.mutationRoom == "nerdlab" %}
+          {% include '_components/components.timetable-entry.html' %}
             {% for page in program.all() %}
             <a href="{{ page.url }}#{{ item.title | camel }}">
               <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span></span>
@@ -73,35 +83,18 @@
         </ul>
       </li>
 
+      <!-- Tejo -->
       <li class="events-group">
-        <div class="top-info"><span>{{ mutationGlobals.timelineLabelTuin }}</span></div>
-        <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "tuin" %}
-          <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
-            {% for page in program.all() %}
-            <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span></span>
-            </a>
-            {% endfor %}
-          </li>
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.tejo }}</span>
+          {% if mutationGlobals.timetableLabels.tejoInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.tejoInfo }}</span>
           {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-
-      <li class="events-group">
-        <div class="top-info"><span>{{ mutationGlobals.timelineLabelBackstage }}</span></div>
+        </div>
         <ul class="js-sort">
           {% for item in talks %}
-          {% if item.mutationRoom == "backstage" %}
-          <li class="single-event" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
-            {% for page in program.all() %}
-            <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span></span>
-            </a>
-            {% endfor %}
-          </li>
+          {% if item.mutationRoom == "tejo" %}
+          {% include '_components/components.timetable-entry.html' %}
           {% endif %}
           {% endfor %}
         </ul>

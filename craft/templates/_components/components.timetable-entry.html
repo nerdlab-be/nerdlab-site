@@ -1,0 +1,53 @@
+{% if item.articleLink | length() %}
+{% for page in item.articleLink.all() %}
+<li class="single-event single-event--link {% if item.mutationSmall %}single-event--small{% endif %} {% if item.programType == 'info' %}single-event--info{% endif %}" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
+  <a href="{{ page.url }}#{{ item.title | camel }}">
+    <span class="event-name">
+      {{ item.title }}
+      {% if item.programType == "talk" %}
+      <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
+      {% elseif item.programType == "talkDebat" %}
+      <span class="event-label">{{ mutationGlobals.timetableLabels.talkDebat }}</span>
+      {% elseif item.programType == "workshop" %}
+      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }}</span>
+      {% elseif item.programType == "workshopDebat" %}
+      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }}</span>
+      {% elseif item.programType == "inspiratiesessie" %}
+      <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }}</span>
+      {% elseif item.programType == "denktank" %}
+      <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.denktank }}</span>
+      {% elseif item.programType == "expo" %}
+      <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }}</span>
+      {% elseif item.programType == "performance" %}
+      <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }}</span>
+      {% endif %}
+    </span>
+  </a>
+</li>
+{% endfor %}
+{% else %}
+<li class="single-event {% if item.mutationSmall %}single-event--small{% endif %} {% if item.programType == 'info' %}single-event--info{% endif %}" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
+  <a href="#!" class="js-link-none">
+    <span class="event-name">
+      {{ item.title }}
+      {% if item.programType == "talk" %}
+      <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
+      {% elseif item.programType == "talkDebat" %}
+      <span class="event-label">{{ mutationGlobals.timetableLabels.talkDebat }}</span>
+      {% elseif item.programType == "workshop" %}
+      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }}</span>
+      {% elseif item.programType == "workshopDebat" %}
+      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }}</span>
+      {% elseif item.programType == "inspiratiesessie" %}
+      <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }}</span>
+      {% elseif item.programType == "denktank" %}
+      <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.denktank }}</span>
+      {% elseif item.programType == "expo" %}
+      <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }}</span>
+      {% elseif item.programType == "performance" %}
+      <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }}</span>
+      {% endif %}
+    </span>
+  </a>
+</li>
+{% endif %}
