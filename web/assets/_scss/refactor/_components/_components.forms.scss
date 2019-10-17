@@ -2,6 +2,11 @@
    #FORMS
    ================================== */
 
+.c-form {
+  margin-top: $unit-large;
+  max-width: $inuit-wrapper-width;
+}
+
 .c-field {
   position: relative;
 
@@ -27,6 +32,10 @@
   display: block;
   color: $color-neutral;
   margin-bottom: $unit-tiny;
+
+  .s-theme-secondary & {
+    color: $white;
+  }
 
   .c-field--check & {
     color: $color-neutral-dark;

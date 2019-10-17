@@ -1,7 +1,7 @@
 {# {% include '_components/components.content-form' %} #}
 
-<div class="o-row-large u-border-top">
-  <div class="o-wrapper o-wrapper--huge">
+<div class="o-row-large s-theme-secondary">
+  <div class="o-wrapper">
     <div class="s-editor">
       <h2>{{ block.heading }}</h2>
       {% if block.paragraph | length() %}
@@ -47,62 +47,70 @@
           {% for field in form.fields %}
               {% switch field.type %}
                   {% case "checkbox" %}
-                      <div class="form-checkbox">
-                      {% for item in field.items %}
+                  <ul class="c-field c-field--checkbox">
+                    {% for item in field.items %}
+                    <li>
                       <label><input class="checkbox" type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id=""/>{{item}}</label>
-                      {% endfor %}
-                      </div>
+                    </li>
+                    {% endfor %}
+                  </ul>
                   {% case "radio" %}
-                      <div class="form-radio">
-                      {% for item in field.items %}
+                  <ul class="c-field c-field--radio">
+                    {% for item in field.items %}
+                    <li>
                       <input class="radio" type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id=""/>
                       <label>{{item}}</label>
-                      {% endfor %}
-                      </div>
+                    </li>
+                    {% endfor %}
+                  </ul>
                   {% case "select" %}
-                      <div class="form-select">
-                      <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
-                      {% for item in field.items %}
-                          <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
-                      {% endfor %}
-                      </select>
-                      </div>
+                  <p class="c-field">
+                    <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
+                    {% for item in field.items %}
+                        <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
+                    {% endfor %}
+                    </select>
+                  </p>
                   {% case "file" %}
-                      <div class="form-group">
-                          <label>{{field.label}}</label>
-                          <input type="file" name="{{field.name}}" id=""/>
-                      </div>
+                  <p class="c-field">
+                    <label class="c-label">{{field.label}}</label>
+                    <input type="file" name="{{field.name}}" id="" class="c-input"/>
+                  </p>
                   {% case "textarea" %}
-                      <div class="form-group">
-                          <label>{{field.label}}</label>
-                          <textarea class="form-control" name="{{field.name}}" id="">{{ values[field.name] ?? '' }}</textarea>
-                      </div>
+                  <p class="c-field">
+                    <label class="c-label">{{field.label}}</label>
+                    <textarea name="{{field.name}}" id="" class="c-textarea">{{ values[field.name] ?? '' }}</textarea>
+                  </p>
                   {% case "list" %}
-                      <div class="form-group">
-                          <label>{{field.label}}</label>
-                          <input type="text" name="{{field.name}}[]" id=""/>
-                          <script>//Javascript to handle adding fields</script>
-                      </div>
+                  <p class="c-field">
+                    <label class="c-label">{{field.label}}</label>
+                    <input type="text" name="{{field.name}}[]" id="" class="c-input"/>
+                    <script>//Javascript to handle adding fields</script>
+                  </p>
                   {% default %}
-                      <div class="form-group">
-                      <label>{{field.label}}</label>
-                      <input class="form-control" type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id=""/>
-                      </div>
+                  <p class="c-field">
+                    <label class="c-label">{{field.label}}</label>
+                    <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="" class="c-input"/>
+                  </p>
               {% endswitch %}
               {{ wheelformErrors[field.name] is defined ? errorList(wheelformErrors[field.name]) }}
           {% endfor %}
           {% if form.recaptcha %}
-              <div>
-                  <script src="https://www.google.com/recaptcha/api.js"></script>
-                  <!-- Production captcha -->
-                  <div class="g-recaptcha" data-sitekey="{{wheelform.getSettings('recaptcha_public')}}"></div>
-              </div>
+            <div>
+              <script src="https://www.google.com/recaptcha/api.js"></script>
+              <!-- Production captcha -->
+              <div class="g-recaptcha" data-sitekey="{{wheelform.getSettings('recaptcha_public')}}"></div>
+            </div>
           {% endif %}
 
         {% if block.buttonText | length() %}
-        <button class="btn btn-success" id="submit">{{ block.buttonText }}</button>
+        <p class="c-field">
+          <button class="c-btn c-btn--secondary c-btn--large" id="submit">{{ block.buttonText }}</button>
+        </p>
         {% else %}
-        <button class="btn btn-success" id="submit">Verstuur</button>
+        <p class="c-field">
+          <button class="c-btn c-btn--secondary c-btn--large" id="submit">Verstuur</button>
+        </p>
         {% endif %}
       </form>
     {% endif %}

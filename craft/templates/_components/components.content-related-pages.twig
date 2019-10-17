@@ -1,6 +1,6 @@
 {# {% include '_components/components.content-related-pages' %} #}
 
-<div class="o-row-large u-border-top">
+<div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-editor">
       <h2>{{ block.heading }}</h2>
@@ -8,37 +8,72 @@
       {{ block.paragraph }}
       {% endif %}
     </div>
-    {# @TODO: create cards layout #}
     {% if block.showAllSubpages | length() %}
-    <ul class="c-para o-list-bare c-list c-list--divider u-margin-top-large">
-      {% set parent = craft.entries.slug(entry.title).one() %}
-      {% set pages =  parent.getDescendants(1)  %}
-      {% for page in pages.all() %}
-      <li class="o-list-bare__item c-list__item">
-        {% if block.showAsCards %}
-        <article>
-          <h3><a href="{{ page.url() }}">{{ page.title }}</a></h3>
-        </article>
-        {% else %}
-        <a href="{{ page.url() }}">{{ page.title }}</a>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+      {% if block.showAsCards %}
+      <ul class="o-layout o-layout--small u-margin-top">
+        {% set parent = craft.entries.slug(entry.title).one() %}
+        {% set pages =  parent.getDescendants(1)  %}
+        {% for page in pages.all() %}
+        <li class="o-layout__item u-1/2@small u-1/3@medium">
+          <article class="c-card c-card--link">
+            <div class="o-box">
+              <h3 class="c-h3"><a href="{{ page.url() }}" class="c-link c-card__link">{{ page.title }}</a></h3>
+              {% if page.pageIntro.intro | length() %}
+              {% set intro = page.pageIntro.intro.all() %}
+              {% for block in intro %}
+              {% switch block.type %}
+              {% case "paragraph" %}
+                <p class="c-small u-margin-bottom-none">{{ block.paragraph | length > 125 ? block.paragraph | slice(3, 125) ~ '...' : block.paragraph }}</p>
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+          </article>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <ul class="c-para o-list-bare c-list c-list--small u-margin-top-large">
+        {% set parent = craft.entries.slug(entry.title).one() %}
+        {% set pages =  parent.getDescendants(1)  %}
+        {% for page in pages.all() %}
+        <li class="o-list-bare__item c-list__item">
+          <a href="{{ page.url() }}" class="c-link c-card__link">{{ page.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     {% elseif block.relatedPages | length() %}
-    <ul class="c-para o-list-bare c-list c-list--divider u-margin-top-large">
-      {% for page in block.relatedPages.all() %}
-      <li class="o-list-bare__item c-list__item">
-        {% if block.showAsCards %}
-        <article>
-          <h3><a href="{{ page.url() }}">{{ page.title }}</a></h3>
-        </article>
-        {% else %}
-        <a href="{{ page.url() }}">{{ page.title }}</a>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+      {% if block.showAsCards %}
+      <ul class="o-layout o-layout--small u-margin-top">
+        {% for page in block.relatedPages.all() %}
+        <li class="o-layout__item u-1/2@small u-1/3@medium">
+          <article class="c-card c-card--link">
+            <div class="o-box">
+              <h3 class="c-h3"><a href="{{ page.url() }}" class="c-link c-card__link">{{ page.title }}</a></h3>
+              {% if page.pageIntro.intro | length() %}
+              {% set intro = page.pageIntro.intro.all() %}
+              {% for block in intro %}
+              {% switch block.type %}
+              {% case "paragraph" %}
+                <p class="c-small u-margin-bottom-none">{{ block.paragraph | length > 125 ? block.paragraph | slice(3, 125) ~ '...' : block.paragraph }}</p>
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+          </article>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <ul class="c-para o-list-bare c-list c-list--divider u-margin-top-large">
+        {% for page in block.relatedPages.all() %}
+        <li class="o-list-bare__item c-list__item">
+          <a href="{{ page.url() }}" class="c-link">{{ page.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
     {% endif %}
   </div>
 </div>

@@ -456,6 +456,11 @@
       border-top: 1px solid $color-neutral-xlight;
     }
 
+    .c-list--small & + & {
+      margin-top: $unit-tiny;
+      padding-top: $unit-tiny;
+    }
+
     .s-mutation .c-list--divider & + & {
       border-top: 3px dashed $white;
     }
@@ -464,6 +469,11 @@
       & + & {
         margin-top: $unit;
         padding-top: $unit;
+      }
+
+      .c-list--small & + & {
+        margin-top: $unit-tiny;
+        padding-top: $unit-tiny;
       }
     }
   }
@@ -480,3 +490,65 @@
   width: 100%;
 }
 
+.c-backdrop-holder {
+  position: relative;
+}
+
+.c-backdrop {
+  position: relative;
+  top: 0;
+  right: 0;
+  background-color: $color-neutral-light;
+  margin-left: $unit;
+  width: calc(100% - #{$unit-large});
+  margin-bottom: -$unit;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: luminosity;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    mix-blend-mode: color;
+    top: $unit-huge;
+    left: -$unit;
+    height: calc(100% - #{$unit-huge});
+    width: 50%;
+    background-color: $color-secondary;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    mix-blend-mode: color;
+    top: $unit-large;
+    right: $unit;
+    height: $unit-large*2;
+    width: $unit-large*2;
+    border-radius: 50%;
+    background-color: $color-primary;
+  }
+
+  @include mq(medium) {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    margin-bottom: 0;
+
+    &:after {
+      height: $unit-large*4;
+      width: $unit-large*4;
+    }
+
+  }
+}
+
+.c-front {
+  position: relative;
+  z-index: $z-index-alpha;
+  background-color: $white;
+}
