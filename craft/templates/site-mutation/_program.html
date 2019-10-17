@@ -15,9 +15,25 @@
     <h1 class="c-title">{{ entry.title }}</h1>
     {% include '_components/components.intro.html' %}
 
-    <div class="u-margin-top-large u-margin-top-huge@medium">
-      {% include '_components/components.timetable.html' %}
+    <div class="u-margin-top-large u-margin-top-huge@medium js-tabs">
+      <ul role="tablist" class="o-list-bare c-tabs js-tabs__list">
+        <li role="presentation" class="c-tabs__item">
+          <a href="#section1-timetable" role="tab" id="tab1-timetable" aria-selected="true" class="c-tabs__link js-tabs__link">Talks & workshops</a>
+        </li>
+        <li role="presentation" class="c-tabs__item">
+          <a href="#section2-timetable" role="tab" id="tab2-timetable" tabindex="-1" class="c-tabs__link js-tabs__link">Inspiratiesessies en meer</a>
+        </li>
+      </ul>
+      <section id="section1-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab1-timetable" class="c-tabs-section">
+        {% include '_components/components.timetable.html' %}
+      </section>
+      <section id="section2-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab2-timetable" hidden="" class="c-tabs-section">
+        {% include '_components/components.timetable-two.html' %}
+      </section>
     </div>
   </div>
 </div>
 {% endblock %}
+
+
+

@@ -3752,6 +3752,7 @@ table {
    ========================================================================== */
 .cd-schedule {
   position: relative;
+  z-index: 2;
   margin-top: 0;
   padding-top: 24px;
   padding-bottom: 48px;
@@ -3933,27 +3934,47 @@ table {
   }
 }
 
-.cd-schedule .events .top-info > span {
+.cd-schedule .events .c-top-info__title {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5;
-  display: block;
+  display: inline-block;
   font-weight: 700;
-  color: #DF0000;
-  padding: 12px 0 6px 0;
-  border-bottom: 1px solid #5d65f1;
+  color: #FFFFFF;
+  background-color: #202226;
+  padding: 1px 3px 2px;
+  margin-bottom: 6px;
+}
+
+@media (min-width: 56.25em) {
+  .cd-schedule .events .c-top-info__title {
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #202226;
+    margin-left: 6px;
+  }
+}
+
+.cd-schedule .events .c-top-info__info {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  display: block;
+  font-weight: 500;
+  color: #524800;
   margin-bottom: 12px;
 }
 
 @media (min-width: 56.25em) {
-  .cd-schedule .events .top-info > span {
-    font-size: 18px;
-    font-size: 1.125rem;
+  .cd-schedule .events .c-top-info__info {
+    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
-    text-align: center;
-    padding: 24px 6px 3px 3px;
     margin-bottom: 0;
-    border-bottom: 0;
+    margin-left: 6px;
   }
 }
 
@@ -4019,12 +4040,27 @@ table {
   height: 100%;
   padding: 8px 12px 12px 12px;
   margin-bottom: 12px;
+  background-color: #fffbdb;
 }
 
 @media (min-width: 56.25em) {
   .cd-schedule .events .single-event a {
     overflow: hidden;
   }
+}
+
+.cd-schedule .events .single-event--link a {
+  transition: box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #FFFFFF;
+}
+
+.cd-schedule .events .single-event--link a:hover, .cd-schedule .events .single-event--link a:focus {
+  box-shadow: 0 0 6px rgba(13, 14, 15, 0.2);
+}
+
+.cd-schedule .events .single-event--info a {
+  color: #FFFFFF;
+  background-color: #2a32be;
 }
 
 .cd-schedule .events .single-event--small a {
@@ -4039,7 +4075,7 @@ table {
 
 .cd-schedule.loading .events .single-event {
   /* the class .loading is added by default to the .cd-schedule element
-       it is removed as soon as the single events are placed in the schedule plan (using javascript) */
+    it is removed as soon as the single events are placed in the schedule plan (using javascript) */
   opacity: 0;
 }
 
@@ -4070,6 +4106,10 @@ table {
   }
 }
 
+.cd-schedule .single-event--info .event-name {
+  color: #FFFFFF;
+}
+
 .cd-schedule .event-date {
   font-size: 16px;
   font-size: 1rem;
@@ -4082,6 +4122,10 @@ table {
   .cd-schedule .single-event--small .event-date {
     display: none;
   }
+}
+
+.cd-schedule .single-event--info .event-date {
+  color: #FFFFFF;
 }
 
 .cd-schedule .event-label {
@@ -4098,14 +4142,29 @@ table {
   padding: 2.4px 3px 4px;
 }
 
-.cd-schedule .event-label--how {
-  color: #1c7a26;
-  background-color: #d5f5d9;
+.cd-schedule .event-label--primary {
+  color: #1f258e;
+  background-color: #d6d8fb;
 }
 
-.cd-schedule .event-label--workshop {
-  color: #995010;
-  background-color: #ffe7d1;
+.cd-schedule .event-label--secondary {
+  color: #998700;
+  background-color: #fff9cc;
+}
+
+.cd-schedule .event-label--tertiary {
+  color: #176620;
+  background-color: #eafaec;
+}
+
+.cd-schedule .event-label--quarternary {
+  color: #3b3c3e;
+  background-color: #eff0f0;
+}
+
+.cd-schedule .event-label--quinary {
+  color: #6a0879;
+  background-color: #f7e7fa;
 }
 
 .cd-schedule .single-event a {
@@ -4122,6 +4181,82 @@ table {
 .cd-schedule .single-event--tint a .event-name,
 .cd-schedule .single-event--tint a .event-date {
   color: #FFFFFF;
+}
+
+/* ==================================
+   #TABS
+   ================================== */
+.c-tabs {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+@media (min-width: 37.5em) {
+  .c-tabs {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .c-tabs {
+    margin-bottom: 48px;
+  }
+}
+
+.c-tabs__item {
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 37.5em) {
+  .c-tabs__item + .c-tabs__item {
+    margin-left: 6px;
+  }
+}
+
+.c-tabs__link {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  padding: 12px 12px;
+  background-color: transparent;
+  border: 2px solid #DF0000;
+}
+
+.c-tabs__link, .c-tabs__link:visited {
+  color: #DF0000;
+  background-color: transparent;
+}
+
+.c-tabs__link:hover, .c-tabs__link:focus {
+  background-color: #FFFFFF;
+}
+
+.c-tabs__link:focus {
+  outline: 0;
+}
+
+.c-tabs__link[aria-selected='true'] {
+  color: #FFFFFF;
+  background-color: #DF0000;
+}
+
+@media (min-width: 37.5em) {
+  .c-tabs__link {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 1.42857;
+  }
+}
+
+.c-tabs-section:focus {
+  outline: 0;
 }
 
 /* ==================================

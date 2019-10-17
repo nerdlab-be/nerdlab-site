@@ -1,0 +1,91 @@
+<div class="cd-schedule cd-schedule--short loading">
+  <div class="timeline">
+    <ul>
+      <li><span>12:30</span></li>
+      <li><span>13:00</span></li>
+      <li><span>13:30</span></li>
+      <li><span>14:00</span></li>
+      <li><span>14:30</span></li>
+      <li><span>15:00</span></li>
+      <li><span>15:30</span></li>
+      <li><span>16:00</span></li>
+      <li><span>16:30</span></li>
+      <li><span>17:00</span></li>
+      <li><span>17:30</span></li>
+    </ul>
+  </div>
+
+  <div class="events">
+    <ul>
+      {% set talks = craft.entries.section('programDetails').all() %}
+
+      <!-- Gent Glas -->
+      <li class="events-group">
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.gentGlas }}</span>
+          {% if mutationGlobals.timetableLabels.gentGlasInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.gentGlasInfo }}</span>
+          {% endif %}
+        </div>
+        <ul class="js-sort">
+          {% for item in talks %}
+          {% if item.mutationRoom == "gentGlas" %}
+          {% include '_components/components.timetable-entry.html' %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <!-- Kapow -->
+      <li class="events-group">
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.kapow }}</span>
+          {% if mutationGlobals.timetableLabels.kapowInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.kapowInfo }}</span>
+          {% endif %}
+        </div>
+        <ul class="js-sort">
+          {% for item in talks %}
+          {% if item.mutationRoom == "kapow" %}
+          {% include '_components/components.timetable-entry.html' %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <!-- Straatier -->
+      <li class="events-group">
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.straatier }}</span>
+          {% if mutationGlobals.timetableLabels.straatierInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.straatierInfo }}</span>
+          {% endif %}
+        </div>
+        <ul class="js-sort">
+          {% for item in talks %}
+          {% if item.mutationRoom == "straatier" %}
+          {% include '_components/components.timetable-entry.html' %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <!-- Industriemuseum -->
+      <li class="events-group">
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.industriemuseum }}</span>
+          {% if mutationGlobals.timetableLabels.industriemuseumInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.industriemuseumInfo }}</span>
+          {% endif %}
+        </div>
+        <ul class="js-sort">
+          {% for item in talks %}
+          {% if item.mutationRoom == "industriemuseum" %}
+          {% include '_components/components.timetable-entry.html' %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
