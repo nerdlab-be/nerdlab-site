@@ -2420,6 +2420,7 @@ table {
   transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
   border-radius: 48px;
   font-weight: 600;
+  border: 0;
 }
 
 /* Style variants
@@ -2435,6 +2436,21 @@ table {
 }
 
 .c-btn--primary:hover, .c-btn--primary:focus {
+  background-color: #f33;
+}
+
+.c-btn--secondary {
+  background-color: #FFFFFF;
+}
+
+.c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
+  text-decoration: none;
+  /* [4] */
+  color: #f33;
+}
+
+.c-btn--secondary:hover, .c-btn--secondary:focus {
+  color: #FFFFFF;
   background-color: #f33;
 }
 
@@ -2838,6 +2854,11 @@ table {
 /* ==================================
    #FORMS
    ================================== */
+.c-form {
+  margin-top: 48px;
+  max-width: 960px;
+}
+
 .c-field {
   position: relative;
 }
@@ -2867,6 +2888,10 @@ table {
   display: block;
   color: #3c3d3e;
   margin-bottom: 6px;
+}
+
+.s-theme-secondary .c-label {
+  color: #FFFFFF;
 }
 
 .c-field--check .c-label {
@@ -9592,6 +9617,11 @@ table {
   border-top: 1px solid #e2e2e2;
 }
 
+.c-list--small .c-list__item + .c-list__item {
+  margin-top: 6px;
+  padding-top: 6px;
+}
+
 .s-mutation .c-list--divider .c-list__item + .c-list__item {
   border-top: 3px dashed #FFFFFF;
 }
@@ -9600,6 +9630,10 @@ table {
   .c-list__item + .c-list__item {
     margin-top: 24px;
     padding-top: 24px;
+  }
+  .c-list--small .c-list__item + .c-list__item {
+    margin-top: 6px;
+    padding-top: 6px;
   }
 }
 
@@ -9613,4 +9647,68 @@ table {
 
 .c-media {
   width: 100%;
+}
+
+.c-backdrop-holder {
+  position: relative;
+}
+
+.c-backdrop {
+  position: relative;
+  top: 0;
+  right: 0;
+  background-color: #777778;
+  margin-left: 24px;
+  width: calc(100% - 48px);
+  margin-bottom: -24px;
+}
+
+.c-backdrop img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: luminosity;
+}
+
+.c-backdrop:before {
+  content: '';
+  position: absolute;
+  mix-blend-mode: color;
+  top: 96px;
+  left: -24px;
+  height: calc(100% - 96px);
+  width: 50%;
+  background-color: #36F;
+}
+
+.c-backdrop:after {
+  content: '';
+  position: absolute;
+  mix-blend-mode: color;
+  top: 48px;
+  right: 24px;
+  height: 96px;
+  width: 96px;
+  border-radius: 50%;
+  background-color: #f33;
+}
+
+@media (min-width: 56.25em) {
+  .c-backdrop {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    margin-bottom: 0;
+  }
+  .c-backdrop:after {
+    height: 192px;
+    width: 192px;
+  }
+}
+
+.c-front {
+  position: relative;
+  z-index: 1;
+  background-color: #FFFFFF;
 }

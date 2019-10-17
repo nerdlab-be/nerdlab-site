@@ -27,6 +27,7 @@
   transition: $global-transition;
   border-radius: $unit-large;
   font-weight: $medium;
+  border: 0;
 }
 
 
@@ -49,6 +50,25 @@
 
   &:hover,
   &:focus {
+    background-color: $color-primary;
+  }
+
+}
+
+.c-btn--secondary {
+  background-color: $white;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+    color: $color-primary;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
     background-color: $color-primary;
   }
 

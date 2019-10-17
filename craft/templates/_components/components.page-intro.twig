@@ -10,63 +10,66 @@
 {# -- Module -- #}
 
 {% if entry.pageIntro | length() %}
-<div class="o-row-large">
+<div class="o-row-large c-backdrop-holder">
   <div class="o-wrapper o-wrapper--huge">
-    {# Breadcrumb #}
-    {% include "_elements/elements.breadcrumb" %}
-    {# Page title #}
-    <h1 class="c-h1">{{ entry.pageIntro.pageTitle }}</h1>
-    {# Intro #}
-    <div class="s-editor s-editor--intro">
-      {% set intro = entry.pageIntro.intro.all() %}
-      {% for block in intro %}
-      {% switch block.type %}
-      {% case "paragraph" %}
-        {{ block.paragraph }}
-      {% case "subtitle" %}
-        <h2>{{ block.subtitle }}</h2>
-      {% case "button" %}
-        <p>
-          {% if block.buttonLinkExternal | length() %}
-          <a href="{{ block.buttonLinkExternal }}" class="c-btn c-btn--large c-btn--primary">
-            {{ block.buttonText }}
-          </a>
-          {% else %}
-          {% if block.buttonLink | length() %}
-          {% for link in block.buttonLink.all() %}
-          <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
-            {{ block.buttonText }}
-          </a>
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@medium c-front">
+        {# Breadcrumb #}
+        {% include "_elements/elements.breadcrumb" %}
+        {# Page title #}
+        <h1 class="c-h1">{{ entry.pageIntro.pageTitle }}</h1>
+        {# Intro #}
+        <div class="s-editor s-editor--intro">
+          {% set intro = entry.pageIntro.intro.all() %}
+          {% for block in intro %}
+          {% switch block.type %}
+          {% case "paragraph" %}
+            {{ block.paragraph }}
+          {% case "subtitle" %}
+            <h2>{{ block.subtitle }}</h2>
+          {% case "button" %}
+            <p>
+              {% if block.buttonLinkExternal | length() %}
+              <a href="{{ block.buttonLinkExternal }}" class="c-btn c-btn--large c-btn--primary">
+                {{ block.buttonText }}
+              </a>
+              {% else %}
+              {% if block.buttonLink | length() %}
+              {% for link in block.buttonLink.all() %}
+              <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
+                {{ block.buttonText }}
+              </a>
+              {% endfor %}
+              {% endif %}
+              {% endif %}
+            </p>
+          {% endswitch %}
           {% endfor %}
-          {% endif %}
-          {% endif %}
-        </p>
-      {% endswitch %}
-      {% endfor %}
+        </div>
+      </div>
     </div>
-    {% if entry.pageIntro.visual | length() %}
-    <div class="u-margin-top">
-    {% for block in entry.pageIntro.visual.all() %}
-      {% for image in block.image.all() %}
-      <img
-        data-sizes="auto"
-        data-srcset="
-          {{ image.url(small) }} 350w,
-          {{ image.url(medium) }} 600w,
-          {{ image.url(large) }} 900w,
-          {{ image.url(xlarge) }} 1280w,
-          {{ image.url(huge) }} 1400w"
-        src="{{ image.url(thumb) }}"
-        alt="{{ image.altText }}"
-        class="c-media lazyload fade-in">
-      {% if image.credits | length() %}
-      <p>{{ image.credits }}</p>
-      {% endif %}
-      {% endfor %}
-    {% endfor %}
-    </div>
-    {% endif %}
   </div>
-
+  {% if entry.pageIntro.visual | length() %}
+  <div class="c-backdrop c-backdrop--right">
+  {% for block in entry.pageIntro.visual.all() %}
+    {% for image in block.image.all() %}
+    <img
+      data-sizes="auto"
+      data-srcset="
+        {{ image.url(small) }} 350w,
+        {{ image.url(medium) }} 600w,
+        {{ image.url(large) }} 900w,
+        {{ image.url(xlarge) }} 1280w,
+        {{ image.url(huge) }} 1400w"
+      src="{{ image.url(thumb) }}"
+      alt="{{ image.altText }}"
+      class="c-media lazyload fade-in">
+    {% if image.credits | length() %}
+    <p>{{ image.credits }}</p>
+    {% endif %}
+    {% endfor %}
+  {% endfor %}
+  </div>
+  {% endif %}
 </div>
 {% endif %}
