@@ -53,9 +53,18 @@
       outline: 0;
     }
 
+    .c-icon {
+      transform: rotate(0);
+      transition: transform $transition;
+    }
+
     &[aria-selected='true'] {
       color: $white;
       background-color: $color-primary;
+
+      .c-icon {
+        transform: rotate(90deg);
+      }
     }
 
     @include mq(small) {

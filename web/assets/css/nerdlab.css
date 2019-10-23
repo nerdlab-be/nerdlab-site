@@ -2851,6 +2851,101 @@ table {
   }
 }
 
+/*
+* Checkboxes and radios
+*/
+.c-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #3c3d3e;
+  cursor: pointer;
+}
+
+.s-theme-secondary .c-control {
+  color: #FFFFFF;
+}
+
+.c-control input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  /* Put the input behind the label so it doesn't overlay text */
+}
+
+.c-control-indicator {
+  display: block;
+  width: 1.3rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  font-size: 65%;
+  margin-right: 6px;
+  color: #e2e2e2;
+  text-align: center;
+  border: 1px solid #e2e2e2;
+  background-color: #FFFFFF;
+  background-size: 50% 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* Hover state */
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.c-control:hover .c-control-indicator {
+  color: #fff;
+  background-color: #ccc;
+}
+*/
+/* Focus */
+.c-control input:focus ~ .c-control-indicator {
+  box-shadow: 0 0 0 2px #e2e2e2;
+}
+
+/* Checked state */
+.c-control input:checked ~ .c-control-indicator {
+  color: #f33;
+  background-color: #ff5c5c;
+  border-color: #ff5c5c;
+}
+
+/* Active */
+.c-control input:active ~ .c-control-indicator {
+  color: #f33;
+  background-color: #f1f1f1;
+  border-color: #777778;
+}
+
+/* Checkbox modifiers */
+.c-control--checkbox .c-control-indicator {
+  border-radius: 4px;
+}
+
+.c-control--checkbox input:checked ~ .c-control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=);
+}
+
+/* Radio modifiers */
+.c-control--radio .c-control-indicator {
+  border-radius: 50%;
+}
+
+.c-control--radio input:checked ~ .c-control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+/* Alternately, use another character */
+.c-control-x input:checked ~ .c-control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xLjQsMEwwLDEuNGwwLjcsMC43bDEuOCwxLjhMMC43LDUuN0wwLDYuNGwxLjQsMS40bDAuNy0wLjdsMS44LTEuOGwxLjgsMS44bDAuNywwLjdsMS40LTEuNEw3LjEsNS43DQoJTDUuMywzLjlsMS44LTEuOGwwLjctMC43TDYuNCwwTDUuNywwLjdMMy45LDIuNUwyLjEsMC43QzIuMSwwLjcsMS40LDAsMS40LDB6Ii8+DQo8L3N2Zz4NCg==);
+}
+
+.c-control-dash input:checked ~ .c-control-indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iOHB4IiBoZWlnaHQ9IjhweCIgdmlld0JveD0iMCAwIDggOCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgOCA4IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0wLDN2Mmg4VjNIMHoiLz4NCjwvc3ZnPg0K);
+}
+
 /* ==================================
    #FORMS
    ================================== */
@@ -2861,16 +2956,16 @@ table {
 
 .c-field {
   position: relative;
+  margin-bottom: 0;
 }
 
 .c-field + .c-field {
   margin-top: 24px;
 }
 
-.c-field--check,
-.c-field--radio {
-  display: flex;
-  flex-wrap: wrap;
+.c-field--checkbox li + li,
+.c-field--radio li + li {
+  margin-top: 6px;
 }
 
 .c-legend {
@@ -3047,6 +3142,11 @@ table {
   .c-field-group__input {
     width: auto;
   }
+}
+
+.c-error-group {
+  margin-top: 6px;
+  font-weight: 700;
 }
 
 .s-mutation #mc_embed_signup div.mce_inline_error {
@@ -9668,30 +9768,6 @@ table {
      object-fit: cover;
   height: 100%;
   width: 100%;
-  mix-blend-mode: luminosity;
-}
-
-.c-backdrop:before {
-  content: '';
-  position: absolute;
-  mix-blend-mode: color;
-  top: 96px;
-  left: -24px;
-  height: calc(100% - 96px);
-  width: 50%;
-  background-color: #36F;
-}
-
-.c-backdrop:after {
-  content: '';
-  position: absolute;
-  mix-blend-mode: color;
-  top: 48px;
-  right: 24px;
-  height: 96px;
-  width: 96px;
-  border-radius: 50%;
-  background-color: #f33;
 }
 
 @media (min-width: 56.25em) {
@@ -9700,10 +9776,6 @@ table {
     height: 100%;
     width: 50%;
     margin-bottom: 0;
-  }
-  .c-backdrop:after {
-    height: 192px;
-    width: 192px;
   }
 }
 
