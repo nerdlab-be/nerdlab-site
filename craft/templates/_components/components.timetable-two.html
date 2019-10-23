@@ -1,7 +1,6 @@
 <div class="cd-schedule cd-schedule--short loading">
   <div class="timeline">
     <ul>
-      <li><span>12:30</span></li>
       <li><span>13:00</span></li>
       <li><span>13:30</span></li>
       <li><span>14:00</span></li>
@@ -12,46 +11,14 @@
       <li><span>16:30</span></li>
       <li><span>17:00</span></li>
       <li><span>17:30</span></li>
+      <li><span>18:00</span></li>
+      <li><span>18:30</span></li>
     </ul>
   </div>
 
   <div class="events">
     <ul>
       {% set talks = craft.entries.section('programDetails').all() %}
-
-      <!-- Gent Glas -->
-      <li class="events-group">
-        <div class="top-info">
-          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.gentGlas }}</span>
-          {% if mutationGlobals.timetableLabels.gentGlasInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.gentGlasInfo }}</span>
-          {% endif %}
-        </div>
-        <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "gentGlas" %}
-          {% include '_components/components.timetable-entry.html' %}
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-
-      <!-- Kapow -->
-      <li class="events-group">
-        <div class="top-info">
-          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.kapow }}</span>
-          {% if mutationGlobals.timetableLabels.kapowInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.kapowInfo }}</span>
-          {% endif %}
-        </div>
-        <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "kapow" %}
-          {% include '_components/components.timetable-entry.html' %}
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
 
       <!-- Straatier -->
       <li class="events-group">
@@ -64,6 +31,40 @@
         <ul class="js-sort">
           {% for item in talks %}
           {% if item.mutationRoom == "straatier" %}
+          {% include '_components/components.timetable-entry.html' %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <!-- Logos -->
+      <li class="events-group">
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.logos }}</span>
+          {% if mutationGlobals.timetableLabels.logosInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.logosInfo }}</span>
+          {% endif %}
+        </div>
+        <ul class="js-sort">
+          {% for item in talks %}
+          {% if item.mutationRoom == "logos" %}
+          {% include '_components/components.timetable-entry.html' %}
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+
+      <!-- Onbetaalbaar -->
+      <li class="events-group">
+        <div class="top-info">
+          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.onbetaalbaar }}</span>
+          {% if mutationGlobals.timetableLabels.onbetaalbaarInfo | length() %}
+          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.onbetaalbaarInfo }}</span>
+          {% endif %}
+        </div>
+        <ul class="js-sort">
+          {% for item in talks %}
+          {% if item.mutationRoom == "onbetaalbaar" %}
           {% include '_components/components.timetable-entry.html' %}
           {% endif %}
           {% endfor %}
