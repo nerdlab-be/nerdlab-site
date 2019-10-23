@@ -4242,9 +4242,18 @@ table {
   outline: 0;
 }
 
+.c-tabs__link .c-icon {
+  transform: rotate(0);
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
 .c-tabs__link[aria-selected='true'] {
   color: #FFFFFF;
   background-color: #DF0000;
+}
+
+.c-tabs__link[aria-selected='true'] .c-icon {
+  transform: rotate(90deg);
 }
 
 @media (min-width: 37.5em) {

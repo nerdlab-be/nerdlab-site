@@ -18,10 +18,10 @@
     <div class="u-margin-top-large u-margin-top-huge@medium js-tabs">
       <ul role="tablist" class="o-list-bare c-tabs js-tabs__list">
         <li role="presentation" class="c-tabs__item">
-          <a href="#section1-timetable" role="tab" id="tab1-timetable" aria-selected="true" class="c-tabs__link js-tabs__link">Talks & workshops</a>
+          <a href="#section1-timetable" role="tab" id="tab1-timetable" aria-selected="true" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetableLabels.talksEnWorkshops }} {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a>
         </li>
         <li role="presentation" class="c-tabs__item">
-          <a href="#section2-timetable" role="tab" id="tab2-timetable" tabindex="-1" class="c-tabs__link js-tabs__link">Inspiratiesessies en meer</a>
+          <a href="#section2-timetable" role="tab" id="tab2-timetable" tabindex="-1" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetableLabels.inspiratiesessiesEnMeer }} {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a>
         </li>
       </ul>
       <section id="section1-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab1-timetable" class="c-tabs-section">
