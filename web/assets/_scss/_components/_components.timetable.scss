@@ -2,8 +2,8 @@
    #TIMETABLE
    ========================================================================== */
 
-$calendar-item-height: 75px;
-$calendar-height: $calendar-item-height * 17;
+$calendar-item-height: 100px;
+$calendar-height: $calendar-item-height * 22;
 
 // Bootstrapping
 .cd-schedule {
@@ -156,7 +156,7 @@ $calendar-height: $calendar-item-height * 17;
     border-left: 2px dotted rgba($color-secondary-light,.5);
     /* reset style */
     margin-bottom: 0;
-    min-height: 2000px; // Fix height
+    min-height: 3000px; // Fix height
   }
 }
 
@@ -295,6 +295,10 @@ $calendar-height: $calendar-item-height * 17;
   }
 }
 
+.c-underline {
+  text-decoration: underline;
+}
+
 .cd-schedule .events .single-event--info a {
   color: $white;
   background-color: $color-secondary-dark;
@@ -305,9 +309,9 @@ $calendar-height: $calendar-item-height * 17;
 
   @include mq(medium) {
     padding:
-    $unit-tiny/2
+    $unit-tiny*1.5
     $unit-small
-    $unit-tiny/2
+    $unit-tiny*1.5
     $unit-small;
   }
 }
@@ -371,27 +375,27 @@ $calendar-height: $calendar-item-height * 17;
 }
 
 .cd-schedule .event-label--primary {
-  color: shade($color-secondary,40);
+  color: shade($color-secondary,60);
   background-color: tint($color-secondary,80);
 }
 
 .cd-schedule .event-label--secondary {
-  color: shade($color-tertiary,40);
+  color: shade($color-tertiary,70);
   background-color: tint($color-tertiary,80);
 }
 
 .cd-schedule .event-label--tertiary {
-  color: shade($color-success,50);
+  color: shade($color-success,60);
   background-color: tint($color-success,90);
 }
 
 .cd-schedule .event-label--quarternary {
-  color: shade($color-neutral-light,40);
+  color: shade($color-neutral-light,50);
   background-color: tint($color-neutral-light,90);
 }
 
 .cd-schedule .event-label--quinary {
-  color: shade($purple,40);
+  color: shade($purple,50);
   background-color: tint($purple,90);
 }
 
@@ -405,12 +409,72 @@ $calendar-height: $calendar-item-height * 17;
 }
 
 .cd-schedule .single-event--tint a {
-     /* this is used to set a background color for the event and the modal window */
-     background: shade($color-secondary,50);
-     color: $white;
+  /* this is used to set a background color for the event and the modal window */
+  background: shade($color-secondary,50);
+  color: $white;
 
-     .event-name,
-     .event-date {
-       color: $white;
-     }
-   }
+  .event-name,
+  .event-date {
+    color: $white;
+  }
+}
+
+
+.schedule-evening-holder {
+  position: relative;
+  padding-top: $unit;
+  border-top: 6px dashed $color-tertiary-dark;
+
+  z-index: 2;
+
+  @include mq(medium) {
+    border-top: 0;
+    padding-top: 0;
+    margin-left: 60px;
+    margin-top: -$calendar-item-height - $unit-large;
+  }
+}
+
+.schedule-evening-block {
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: $unit;
+    background-color: $color-primary;
+    transition: box-shadow $transition;
+  }
+
+  a:hover,
+  a:focus {
+    box-shadow: 0 0 6px rgba($color-neutral-dark,.2);
+  }
+
+  a .event-name {
+    text-decoration: underline;
+  }
+
+  .event-date {
+    @include inuit-font-size($small,1.45);
+    display: block;
+    font-weight: $medium;
+    color: $white;
+    margin-bottom: $unit-tiny/2;
+  }
+
+  .event-name {
+    @include inuit-font-size($h6,1.2);
+    display: block;
+    font-weight: $bold;
+    color: $color-neutral-dark;
+    color: $white;
+  }
+
+  @include mq(medium) {
+    padding: 6px;
+
+    .event-name {
+      @include inuit-font-size($h4,1);
+    }
+  }
+}
