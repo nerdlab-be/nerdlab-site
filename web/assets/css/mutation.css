@@ -3810,14 +3810,14 @@ table {
     left: 0;
     height: 100%;
     width: 100%;
-    padding-top: 75px;
+    padding-top: 100px;
   }
 }
 
 @media (min-width: 56.25em) {
   .cd-schedule .timeline li {
     position: relative;
-    height: 75px;
+    height: 100px;
   }
 }
 
@@ -3828,7 +3828,7 @@ table {
     top: 0;
     left: 0;
     width: 100%;
-    height: 75px;
+    height: 100px;
     border-top: 2px solid #5d65f1;
   }
 }
@@ -3910,7 +3910,7 @@ table {
     border-left: 2px dotted rgba(93, 101, 241, 0.5);
     /* reset style */
     margin-bottom: 0;
-    min-height: 2000px;
+    min-height: 3000px;
   }
 }
 
@@ -3928,7 +3928,7 @@ table {
 @media (min-width: 56.25em) {
   .cd-schedule .events .top-info {
     /* vertically center its content */
-    height: 75px;
+    height: 100px;
     margin-bottom: 0;
     border-bottom: 0;
   }
@@ -4058,6 +4058,10 @@ table {
   box-shadow: 0 0 6px rgba(13, 14, 15, 0.2);
 }
 
+.c-underline {
+  text-decoration: underline;
+}
+
 .cd-schedule .events .single-event--info a {
   color: #FFFFFF;
   background-color: #2a32be;
@@ -4069,7 +4073,7 @@ table {
 
 @media (min-width: 56.25em) {
   .cd-schedule .events .single-event--small a {
-    padding: 3px 12px 3px 12px;
+    padding: 9px 12px 9px 12px;
   }
 }
 
@@ -4143,27 +4147,27 @@ table {
 }
 
 .cd-schedule .event-label--primary {
-  color: #1f258e;
+  color: #15195f;
   background-color: #d6d8fb;
 }
 
 .cd-schedule .event-label--secondary {
-  color: #998700;
+  color: #4d4400;
   background-color: #fff9cc;
 }
 
 .cd-schedule .event-label--tertiary {
-  color: #176620;
+  color: #12521a;
   background-color: #eafaec;
 }
 
 .cd-schedule .event-label--quarternary {
-  color: #3b3c3e;
+  color: #323234;
   background-color: #eff0f0;
 }
 
 .cd-schedule .event-label--quinary {
-  color: #6a0879;
+  color: #590765;
   background-color: #f7e7fa;
 }
 
@@ -4181,6 +4185,70 @@ table {
 .cd-schedule .single-event--tint a .event-name,
 .cd-schedule .single-event--tint a .event-date {
   color: #FFFFFF;
+}
+
+.schedule-evening-holder {
+  position: relative;
+  padding-top: 24px;
+  border-top: 6px dashed #ccb400;
+  z-index: 2;
+}
+
+@media (min-width: 56.25em) {
+  .schedule-evening-holder {
+    border-top: 0;
+    padding-top: 0;
+    margin-left: 60px;
+    margin-top: -148px;
+  }
+}
+
+.schedule-evening-block a {
+  display: block;
+  text-decoration: none;
+  padding: 24px;
+  background-color: #DF0000;
+  transition: box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.schedule-evening-block a:hover,
+.schedule-evening-block a:focus {
+  box-shadow: 0 0 6px rgba(13, 14, 15, 0.2);
+}
+
+.schedule-evening-block a .event-name {
+  text-decoration: underline;
+}
+
+.schedule-evening-block .event-date {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.45;
+  display: block;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 3px;
+}
+
+.schedule-evening-block .event-name {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  display: block;
+  font-weight: 700;
+  color: #0d0e0f;
+  color: #FFFFFF;
+}
+
+@media (min-width: 56.25em) {
+  .schedule-evening-block {
+    padding: 6px;
+  }
+  .schedule-evening-block .event-name {
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 1;
+  }
 }
 
 /* ==================================

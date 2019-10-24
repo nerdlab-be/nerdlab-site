@@ -1,9 +1,9 @@
 {% if item.articleLink | length() %}
 {% for page in item.articleLink.all() %}
 <li class="single-event single-event--link {% if item.mutationSmall %}single-event--small{% endif %} {% if item.programType == 'info' %}single-event--info{% endif %}" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
-  <a href="{{ page.url }}#{{ item.title | camel }}">
+  <a href="{{ page.url }}">
     <span class="event-name">
-      {{ item.title }}
+      <span class="c-underline">{{ item.title }}</span>
       {% if item.programType == "talk" %}
       <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
       {% elseif item.programType == "talkDebat" %}
