@@ -20,22 +20,22 @@
   }
 }
 
-.u-divider {
-  margin-top: $unit-large;
+// .u-divider {
+//   margin-top: $unit-large;
 
-  & + & {
-    margin-top: $unit-large;
-    padding-top: $unit-large;
-    border-top: 1px solid $color-neutral-xlight;
-  }
+//   & + & {
+//     margin-top: $unit-large;
+//     padding-top: $unit-large;
+//     border-top: 1px solid $color-neutral-xlight;
+//   }
 
-  @include mq(large) {
-    & + & {
-      margin-top: $unit-huge;
-      padding-top: $unit-huge;
-    }
-  }
-}
+//   @include mq(large) {
+//     & + & {
+//       margin-top: $unit-huge;
+//       padding-top: $unit-huge;
+//     }
+//   }
+// }
 
 .u-spacer {
   margin-top: $unit-large;
@@ -490,6 +490,11 @@
   width: 100%;
 }
 
+.c-media--shadow {
+  width: calc(100% - #{$unit});
+  box-shadow: $unit $unit 0 $gray1;
+}
+
 .c-backdrop-holder {
   position: relative;
 }
@@ -498,7 +503,7 @@
   position: relative;
   top: 0;
   right: 0;
-  background-color: $color-neutral-light;
+  background-color: tint($brand2,80);
   margin-left: $unit;
   width: calc(100% - #{$unit-large});
   margin-bottom: -$unit;
@@ -507,50 +512,33 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
-    // mix-blend-mode: luminosity;
+    mix-blend-mode: luminosity;
   }
 
-  // &:before {
-  //   content: '';
-  //   position: absolute;
-  //   mix-blend-mode: color;
-  //   bottom: -$unit;
-  //   left: -$unit;
-  //   height: $unit-large*3;
-  //   width: $unit-large*3;
-  //   border-radius: 50%;
-  //   background-color: $color-secondary;
-  // }
-
-  // &:after {
-  //   content: '';
-  //   position: absolute;
-  //   mix-blend-mode: color;
-  //   top: $unit-large;
-  //   right: $unit;
-  //   height: $unit-large*2;
-  //   width: $unit-large*2;
-  //   border-radius: 50%;
-  //   background-color: $color-primary;
-  // }
+  &:before {
+    content: '';
+    position: absolute;
+    mix-blend-mode: color;
+    bottom: -$unit;
+    left: -$unit;
+    height: 70%;
+    width: 70%;
+    background-color: $yellow1;
+  }
 
   @include mq(medium) {
     position: absolute;
-    height: 100%;
-    width: 50%;
+    height: calc(100% - #{$unit-huge + $unit});
+    width: 60%;
     margin-bottom: 0;
+    top: $unit-huge - $unit;
 
-    // &:before {
-    //   height: $unit-large*8;
-    //   width: $unit-large*8;
-    //   bottom: -$unit-huge;
-    //   left: -$unit-huge;
-    // }
-
-    // &:after {
-    //   height: $unit-large*4;
-    //   width: $unit-large*4;
-    // }
+    &:before {
+      left: -100%;
+      height: 70%;
+      width: 150%;
+      bottom: -$unit-large;
+    }
   }
 }
 

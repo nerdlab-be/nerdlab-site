@@ -2,6 +2,37 @@
    #TYPOGRAPHY
    ================================== */
 
+.c-page-title {
+  @include font-size($h3,1.25);
+  color: $color-neutral-dark;
+  margin-bottom: $unit-small;
+
+  @include mq(small) {
+    @include font-size($h2,1.25);
+    margin-bottom: $unit;
+  }
+
+  @include mq(medium) {
+    @include font-size($h1,1.25);
+  }
+}
+
+.c-cta-title {
+  @include font-size($h3,1.25);
+  color: $white;
+  margin-bottom: $unit-small;
+
+  @include mq(small) {
+    @include font-size($h2,1.25);
+    margin-bottom: $unit;
+  }
+
+  @include mq(medium) {
+    @include font-size($h1,1.25);
+  }
+}
+
+
 .c-lead {
   @include font-size($h4,1.5);
   margin-bottom: $inuit-global-spacing-unit-large;
@@ -154,5 +185,9 @@
 }
 
 .c-small {
-  @include font-size($h6);
+  @include font-size($small,1.5);
+
+  @include mq(medium) {
+    @include font-size($h6,1.5);
+  }
 }

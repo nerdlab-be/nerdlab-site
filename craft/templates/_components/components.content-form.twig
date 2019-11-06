@@ -2,7 +2,7 @@
 
 {% if block.formRedirect | length() %}
 {% for page in block.formRedirect.all() %}
-<div class="o-row-large s-theme-secondary">
+<div class="o-row-large s-theme-neutral-light">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-editor">
       <h2>{{ block.heading }}</h2>
@@ -107,11 +107,11 @@
 
         {% if block.buttonText | length() %}
         <p class="c-field">
-          <button class="c-btn c-btn--secondary c-btn--large" id="submit">{{ block.buttonText }}</button>
+          <button class="c-btn c-btn--primary c-btn--large" id="submit">{{ block.buttonText }}</button>
         </p>
         {% else %}
         <p class="c-field">
-          <button class="c-btn c-btn--secondary c-btn--large" id="submit">Verstuur</button>
+          <button class="c-btn c-btn--primary c-btn--large" id="submit">Verstuur</button>
         </p>
         {% endif %}
       </form>
@@ -121,7 +121,7 @@
 {% endfor %}
 {% else %}
 {% set pageRedirect = entry.url() %}
-<div class="o-row-large s-theme-secondary">
+<div class="o-row-large s-theme-neutral">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-editor">
       <h2>{{ block.heading }}</h2>
@@ -226,11 +226,11 @@
 
         {% if block.buttonText | length() %}
         <p class="c-field">
-          <button class="c-btn c-btn--secondary c-btn--large" id="submit">{{ block.buttonText }}</button>
+          <button class="c-btn c-btn--primary c-btn--large" id="submit">{{ block.buttonText }}</button>
         </p>
         {% else %}
         <p class="c-field">
-          <button class="c-btn c-btn--secondary c-btn--large" id="submit">Verstuur</button>
+          <button class="c-btn c-btn--primary c-btn--large" id="submit">Verstuur</button>
         </p>
         {% endif %}
       </form>

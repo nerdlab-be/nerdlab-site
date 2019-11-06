@@ -10,14 +10,14 @@
 {# -- Module -- #}
 
 {% if entry.pageIntro | length() %}
-<div class="o-row-large c-backdrop-holder">
+<div class="o-row-intro c-backdrop-holder">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
       <div class="o-layout__item u-2/3@medium c-front">
         {# Breadcrumb #}
         {% include "_elements/elements.breadcrumb" %}
         {# Page title #}
-        <h1 class="c-h1">{{ entry.pageIntro.pageTitle }}</h1>
+        <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
         {# Intro #}
         <div class="s-editor s-editor--intro">
           {% set intro = entry.pageIntro.intro.all() %}
