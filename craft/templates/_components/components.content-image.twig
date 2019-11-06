@@ -1,6 +1,6 @@
 {# {% include '_components/components.content-image' %} #}
 
-<div class="o-row-large">
+<div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
     {% if block.singleImage | length() %}
     {% for image in block.singleImage.all() %}
@@ -14,7 +14,7 @@
         {{ image.url(huge) }} 1400w"
       src="{{ image.url(thumb) }}"
       alt="{{ image.altText }}"
-      class="c-media lazyload fade-in">
+      class="c-media c-media--shadow lazyload fade-in">
     {% if image.credits | length() %}
     <p>{{ image.credits }}</p>
     {% endif %}

@@ -1,0 +1,104 @@
+{#
+  CTA
+  ================
+#}
+
+{#
+  {% include '_components/components.page-cta' %}
+#}
+
+{# -- Module -- #}
+{% if entry.callToAction | length() %}
+{% for block in entry.callToAction.all() %}
+{% switch block.type %}
+{% case "selectBlock" %}
+{% for block in block.selectBlock.all() %}
+<div class="o-row-large c-background" id="action">
+  {% for item in block.media.all() %}
+  {% switch item.type %}
+  {% case "photo" %}
+  {% for type in item.photo.all() %}
+    <div class="c-background__image lazyload fade-in-cta" style="background-image: url('{{ type.url(thumb) }}');" data-bg="{{ type.url(huge) }}"></div>
+    <p class="c-background__image__meta">
+      {{ type.credits }}
+    </p>
+  {% endfor %}
+  {% case "video" %}
+  {% for type in item.placeholder.all() %}
+  <div class="c-background__image c-background__image--fallback lazyload fade-in-cta" style="background-image: url('{{ type.url(thumb) }}');" data-bg="{{ type.url(huge) }}"></div>
+  {% endfor %}
+  <video class="c-background__video" autoplay loop muted preload="true">
+    {% for type in item.webm.all() %}
+    <source src="{{ type.url }}" type="video/webm">
+    {% endfor %}
+    {% for type in item.mp4.all() %}
+    <source src="{{ type.url }}" type="video/mp4">
+    {% endfor %}
+  </video>
+  {% for type in item.placeholder.all() %}
+  <p class="c-background__video__meta">
+    {{ type.credits }}
+  </p>
+  {% endfor %}
+  {% endswitch %}
+  {% endfor %}
+  <div class="o-wrapper o-wrapper--huge c-background__body">
+    <div class="s-editor s-editor--cta">
+      {{ block.paragraph }}
+      {% for item in block.button.all() %}
+      <p>
+      {% if item.buttonLink | length %}
+        {% for link in item.buttonLink.all() %}
+        <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+          {{ item.buttonTitle }}
+        </a>
+        {% endfor %}
+      {% else %}
+        <a href="{{ item.buttonURL }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+          {{ item.buttonTitle }}
+        </a>
+      {% endif %}
+      </p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{% case "newBlock" %}
+<div class="o-row-large c-background" id="action">
+  {% for image in block.image.all() %}
+    <div class="c-background__image lazyload fade-in-cta" style="background-image: url('{{ image.url(thumb) }}');" data-bg="{{ image.url(huge) }}"></div>
+    <p class="c-background__image__meta">
+      {{ image.credits }}
+    </p>
+  <div class="c-background__image c-background__image--fallback lazyload fade-in-cta" style="background-image: url('{{ image.url(thumb) }}');" data-bg="{{ image.url(huge) }}"></div>
+  {% endfor %}
+  <div class="o-wrapper o-wrapper--huge c-background__body">
+    {% if block.heading | length() %}
+    <h2 class="c-cta-title">{{ block.heading }}</h2>
+    {% endif %}
+    <div class="s-editor s-editor--cta">
+      {{ block.paragraph }}
+      {% for item in block.button.all() %}
+      <p>
+      {% if item.buttonLinkInternal | length %}
+        {% for link in item.buttonLinkInternal.all() %}
+        <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+          {{ item.buttonText }}
+        </a>
+        {% endfor %}
+      {% else %}
+        <a href="{{ item.buttonLinkExternal }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+          {{ item.buttonText }}
+        </a>
+      {% endif %}
+      </p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endswitch %}
+{% endfor %}
+{% endif %}

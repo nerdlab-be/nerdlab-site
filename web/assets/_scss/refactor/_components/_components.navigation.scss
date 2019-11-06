@@ -78,7 +78,9 @@ $nav-breakpoint: 950px;
     }
 
     .is-active > & {
-      color: $color-primary;
+      color: $color-neutral-light;
+      text-decoration: underline;
+      text-decoration-color: tint($color-neutral-light,50);
     }
 
     .c-navigation--group & {

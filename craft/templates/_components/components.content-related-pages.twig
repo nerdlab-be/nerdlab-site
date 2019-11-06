@@ -1,6 +1,6 @@
 {# {% include '_components/components.content-related-pages' %} #}
 
-<div class="o-row-large">
+<div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-editor">
       <h2>{{ block.heading }}</h2>
@@ -16,9 +16,38 @@
         {% for page in pages.all() %}
         <li class="o-layout__item u-1/2@small u-1/3@medium">
           <article class="c-card c-card--link">
+            {% if page.pageIntro | length() %}
+            <div class="o-crop o-crop--3:1">
+              {% if page.pageIntro.visual | length() %}
+              {% set visual = page.pageIntro.visual.all() %}
+              {% for block in visual %}
+              {% switch block.type %}
+              {% case "image" %}
+                {% for image in block.image.all() %}
+                <a href="{{ page.url }}" alt="{{ page.title }}">
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  </a>
+                {% endfor %}
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
             <div class="o-box">
               <h3 class="c-h3"><a href="{{ page.url() }}" class="c-link c-card__link">{{ page.title }}</a></h3>
-              {% if page.pageIntro.intro | length() %}
+              {% if page.shortDescription | length() %}
+              <p class="c-small u-margin-bottom-none">{{ page.shortDescription }}</p>
+              {% elseif page.pageIntro | length() %}
               {% set intro = page.pageIntro.intro.all() %}
               {% for block in intro %}
               {% switch block.type %}
@@ -49,9 +78,36 @@
         {% for page in block.relatedPages.all() %}
         <li class="o-layout__item u-1/2@small u-1/3@medium">
           <article class="c-card c-card--link">
+            {% if page.pageIntro | length() %}
+            <div class="o-crop o-crop--3:1">
+              {% if page.pageIntro.visual | length() %}
+              {% set visual = page.pageIntro.visual.all() %}
+              {% for block in visual %}
+              {% switch block.type %}
+              {% case "image" %}
+                {% for image in block.image.all() %}
+                <img
+                  data-sizes="auto"
+                  data-srcset="
+                    {{ image.url(small) }} 350w,
+                    {{ image.url(medium) }} 600w,
+                    {{ image.url(large) }} 900w,
+                    {{ image.url(xlarge) }} 1280w,
+                    {{ image.url(huge) }} 1400w"
+                  src="{{ image.url(thumb) }}"
+                  alt="{{ image.altText }}"
+                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                {% endfor %}
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
             <div class="o-box">
-              <h3 class="c-h3"><a href="{{ page.url() }}" class="c-link c-card__link">{{ page.title }}</a></h3>
-              {% if page.pageIntro.intro | length() %}
+              <h3 class="c-h3"><a href="{{ page.url }}" class="c-link c-card__link">{{ page.title }}</a></h3>
+              {% if page.shortDescription | length() %}
+              <p class="c-small u-margin-bottom-none">{{ page.shortDescription }}</p>
+              {% elseif page.pageIntro | length() %}
               {% set intro = page.pageIntro.intro.all() %}
               {% for block in intro %}
               {% switch block.type %}
@@ -69,7 +125,18 @@
       <ul class="c-para o-list-bare c-list c-list--divider u-margin-top-large">
         {% for page in block.relatedPages.all() %}
         <li class="o-list-bare__item c-list__item">
+          {% if page.url == 0 %}
+          <a href="{{ page.eventURL }}" class="c-link" rel="nofollow" target="_blank">
+            {% if page.customDate | length() %}
+              {{ page.customDate | capitalize }}
+            {% else %}
+              {{ page.date |date('l d F Y') | capitalize }}
+            {% endif %}
+            : {{ page.title }}
+          </a>
+          {% else %}
           <a href="{{ page.url() }}" class="c-link">{{ page.title }}</a>
+          {% endif %}
         </li>
         {% endfor %}
       </ul>
