@@ -17,14 +17,15 @@
   line-height: normal;
   color: $color-neutral;
   background-color: $white;
-  border: 1px solid $color-neutral-xlight;
+  border: 2px solid $color-neutral-xlight;
   padding: $unit-small;
   @include font-size($h6);
 
   &:focus {
     background-color: $white;
     color: $color-neutral-dark;
-    box-shadow: 0 0 2px $color-neutral-xlight;
+    border-color: shade($color-neutral-xlight,20);
+    box-shadow: 0 0 4px $color-neutral-xlight;
   }
 
   // Placeholder styles
@@ -88,7 +89,7 @@
     padding: $unit-small;
     color: $color-neutral-dark;
     background-color: $white;
-    border: 1px solid $color-neutral-xlight;
+    border: 2px solid $color-neutral-xlight;
     border-radius: $radius;
     cursor: pointer;
     outline: 0;
@@ -210,7 +211,7 @@
   margin-right: $unit-tiny;
   color: $color-neutral-xlight;
   text-align: center;
-  border: 1px solid $color-neutral-xlight;
+  border: 2px solid $color-neutral-xlight;
   background-color: $white;
   background-size: 50% 50%;
   background-position: center center;
@@ -234,13 +235,13 @@
 /* Checked state */
 .c-control input:checked ~ .c-control-indicator {
   color: $color-primary;
-  background-color: $color-primary-light;
-  border-color: $color-primary-light;
+  background-color: $color-secondary;
+  border-color: $color-secondary;
 }
 
 /* Active */
 .c-control input:active ~ .c-control-indicator {
-  color: $color-primary;
+  color: $color-secondary;
   background-color: $color-neutral-xxlight;
   border-color: $color-neutral-light;
 }

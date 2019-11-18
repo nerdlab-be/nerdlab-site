@@ -1,0 +1,105 @@
+/* ==================================
+   #CTA
+   ================================== */
+
+
+.c-cta {
+  position: relative;
+
+  @include mq(medium) {
+    margin-bottom: $unit;
+  }
+
+}
+
+  .c-cta__body {
+    position: relative;
+    padding: $unit;
+    background-color: $color-neutral;
+    border: 2px solid $color-neutral;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: -$unit-tiny - 2px;
+      top: $unit-tiny + 2px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $color-neutral;
+      background-color: $color-tertiary;
+    }
+
+    @include mq(medium) {
+      margin-top: $unit;
+      margin-bottom: $unit;
+      padding: $unit + $unit-small;
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    @include mq(large) {
+      margin-top: $unit-large;
+      margin-bottom: $unit-large;
+      padding: $unit-large;
+      width: 60%;
+      margin-left: 20%;
+    }
+  }
+
+  .c-cta__visual {
+    position: absolute;
+    top: $unit-large;
+    left: 0;
+    width: 60%;
+    height: calc(100% - #{$unit-large + $unit});
+    z-index: -3;
+    border: 2px solid $white;
+    border-left: 0;
+    box-shadow: 8px 8px rgba($color-neutral,.1);
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: -$unit;
+      width: calc(117%);
+      height: 100%;
+      z-index: 1;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23B3ADFF' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    @include mq(medium) {
+      position: absolute;
+      top: $unit-large;
+      left: 0;
+      width: 60%;
+      height: calc(100% - #{$unit-large});
+
+      &:before {
+        right: -67%;
+        left: auto;
+        top: -$unit;
+        width: calc(100%);
+      }
+    }
+  }
+
+  .c-cta__credits {
+    position: absolute;
+    font-size: 13px;
+    color: $color-neutral-light;
+    left: $unit;
+    bottom: -$unit - $unit-small;
+
+    @include mq(medium) {
+      left: calc(60% + #{$unit});
+      bottom: -$unit - $unit-tiny;
+    }
+  }

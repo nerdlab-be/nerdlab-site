@@ -3,7 +3,7 @@
    ================================== */
 
 .c-page-title {
-  @include font-size($h3,1.25);
+  @include font-size($h3 + 4px,1.25);
   color: $color-neutral-dark;
   margin-bottom: $unit-small;
 
@@ -17,18 +17,52 @@
   }
 }
 
+.c-title-graphic {
+  position: relative;
+  border: 2px solid $color-neutral;
+  padding: $unit-small;
+  color: $color-neutral;
+  display: inline-block;
+  background-color: $white;
+  margin-bottom: $unit !important;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    right: -$unit-small - 2px;
+    top: $unit-small + 2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $color-neutral;
+    background-color: $color-primary;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    right: -$unit-tiny - 2px;
+    top: $unit-tiny + 2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid $color-neutral;
+    background-color: $color-secondary;
+  }
+}
+
 .c-cta-title {
-  @include font-size($h3,1.25);
+  @include font-size($h4,1.25);
   color: $white;
   margin-bottom: $unit-small;
 
   @include mq(small) {
-    @include font-size($h2,1.25);
+    @include font-size($h3,1.25);
     margin-bottom: $unit;
   }
 
   @include mq(medium) {
-    @include font-size($h1,1.25);
+    @include font-size($h2,1.25);
   }
 }
 
@@ -185,6 +219,7 @@
 }
 
 .c-small {
+  // font-weight: $regular;
   @include font-size($small,1.5);
 
   @include mq(medium) {

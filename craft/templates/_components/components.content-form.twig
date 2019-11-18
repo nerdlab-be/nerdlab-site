@@ -2,239 +2,259 @@
 
 {% if block.formRedirect | length() %}
 {% for page in block.formRedirect.all() %}
-<div class="o-row-large s-theme-neutral-light">
+<div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="s-editor">
-      <h2>{{ block.heading }}</h2>
-      {% if block.paragraph | length() %}
-      {{ block.paragraph }}
-      {% endif %}
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@medium">
+        <div class="o-box c-card c-card--beta">
+          <div class="s-editor">
+            <h2>{{ block.heading }}</h2>
+            {% if block.paragraph | length() %}
+            {{ block.paragraph }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="o-layout__item u-3/4@medium u-2/3@large  u-push-1/4@medium u-push-1/3@large">
+        <div class="o-box c-card c-card--gamma">
+        {% if block.form | length() %}
+          {% macro errorList(errors) %}
+          {% if errors %}
+            <ul class="o-list-bare c-error-group">
+              {% for error in errors %}
+                <li class="o-list-bare__item c-error">{{ error }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% endmacro %}
+          {% from _self import errorList %}
+
+          {% set pageRedirect = page.uri %}
+
+          {% set form = wheelform.form({
+            id: 1,
+            redirect: pageRedirect,
+            attributes: {
+              'class': 'c-form',
+            }
+          }) %}
+
+          {{ form.open() }}
+            {{ wheelformErrors['form'] is defined ? errorList(wheelformErrors['form']) }}
+            {{ wheelformErrors['recaptcha'] is defined ? errorList(wheelformErrors['recaptcha']) }}
+            {{ wheelformErrors['honeypot'] is defined ? errorList(wheelformErrors['honeypot']) }}
+
+            {% for field in form.fields %}
+              {% switch field.type %}
+                {% case "checkbox" %}
+                <ul class="o-list-bare c-field c-field--checkbox">
+                  {% for item in field.items %}
+                  <li class="o-list-bare__item">
+                    <label class="c-control c-control--checkbox">
+                      <input type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id="">
+                      <span class="c-control-indicator"></span>
+                      {{item}}
+                    </label>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% case "radio" %}
+                <ul class="o-list-bare c-field c-field--radio">
+                  {% for item in field.items %}
+                  <li class="o-list-bare__item c-radio">
+                    <label class="c-control c-control--checkbox">
+                      <input type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id="">
+                      <span class="c-control-indicator"></span>
+                      {{item}}
+                    </label>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% case "select" %}
+                <p class="c-field">
+                  <span class="c-select">
+                    <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
+                    {% for item in field.items %}
+                      <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
+                    {% endfor %}
+                    </select>
+                  </span>
+                </p>
+                {% case "file" %}
+                <p class="c-field">
+                  <label class="c-label">{{field.label}}</label>
+                  <input type="file" name="{{field.name}}" id="" class="c-input"/>
+                </p>
+                {% case "textarea" %}
+                <p class="c-field">
+                  <label class="c-label">{{field.label}}</label>
+                  <textarea name="{{field.name}}" id="" class="c-textarea">{{ values[field.name] ?? '' }}</textarea>
+                </p>
+                {% case "list" %}
+                <p class="c-field">
+                  <label class="c-label">{{field.label}}</label>
+                  <input type="text" name="{{field.name}}[]" id="" class="c-input"/>
+                  <script>//Javascript to handle adding fields</script>
+                </p>
+                {% default %}
+                <p class="c-field">
+                  <label class="c-label">{{field.label}}</label>
+                  <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="" class="c-input"/>
+                </p>
+              {% endswitch %}
+              {{ wheelformErrors[field.name] is defined ? errorList(wheelformErrors[field.name]) }}
+            {% endfor %}
+            {% if form.recaptcha %}
+              <p class="c-field">
+                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <!-- Production captcha -->
+                <p class="g-recaptcha" data-sitekey="{{wheelform.getSettings('recaptcha_public')}}"></div>
+              </p>
+            {% endif %}
+
+            {% if block.buttonText | length() %}
+            <p class="c-field">
+              <button class="c-btn c-btn--secondary c-btn--large" id="submit">{{ block.buttonText }}</button>
+            </p>
+            {% else %}
+            <p class="c-field">
+              <button class="c-btn c-btn--secondary c-btn--large" id="submit">Verstuur</button>
+            </p>
+            {% endif %}
+          </form>
+        {% endif %}
+        </div>
+      </div>
     </div>
-    {% if block.form | length() %}
-      {% macro errorList(errors) %}
-      {% if errors %}
-        <ul class="o-list-bare c-error-group">
-          {% for error in errors %}
-            <li class="o-list-bare__item c-error">{{ error }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      {% endmacro %}
-      {% from _self import errorList %}
-
-      {% set pageRedirect = page.uri %}
-
-      {% set form = wheelform.form({
-        id: 1,
-        redirect: pageRedirect,
-        attributes: {
-          'class': 'c-form',
-        }
-      }) %}
-
-      {{ form.open() }}
-        {{ wheelformErrors['form'] is defined ? errorList(wheelformErrors['form']) }}
-        {{ wheelformErrors['recaptcha'] is defined ? errorList(wheelformErrors['recaptcha']) }}
-        {{ wheelformErrors['honeypot'] is defined ? errorList(wheelformErrors['honeypot']) }}
-
-        {% for field in form.fields %}
-          {% switch field.type %}
-            {% case "checkbox" %}
-            <ul class="o-list-bare c-field c-field--checkbox">
-              {% for item in field.items %}
-              <li class="o-list-bare__item">
-                <label class="c-control c-control--checkbox">
-                  <input type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id="">
-                  <span class="c-control-indicator"></span>
-                  {{item}}
-                </label>
-              </li>
-              {% endfor %}
-            </ul>
-            {% case "radio" %}
-            <ul class="o-list-bare c-field c-field--radio">
-              {% for item in field.items %}
-              <li class="o-list-bare__item c-radio">
-                <label class="c-control c-control--checkbox">
-                  <input type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id="">
-                  <span class="c-control-indicator"></span>
-                  {{item}}
-                </label>
-              </li>
-              {% endfor %}
-            </ul>
-            {% case "select" %}
-            <p class="c-field">
-              <span class="c-select">
-                <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
-                {% for item in field.items %}
-                  <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
-                {% endfor %}
-                </select>
-              </span>
-            </p>
-            {% case "file" %}
-            <p class="c-field">
-              <label class="c-label">{{field.label}}</label>
-              <input type="file" name="{{field.name}}" id="" class="c-input"/>
-            </p>
-            {% case "textarea" %}
-            <p class="c-field">
-              <label class="c-label">{{field.label}}</label>
-              <textarea name="{{field.name}}" id="" class="c-textarea">{{ values[field.name] ?? '' }}</textarea>
-            </p>
-            {% case "list" %}
-            <p class="c-field">
-              <label class="c-label">{{field.label}}</label>
-              <input type="text" name="{{field.name}}[]" id="" class="c-input"/>
-              <script>//Javascript to handle adding fields</script>
-            </p>
-            {% default %}
-            <p class="c-field">
-              <label class="c-label">{{field.label}}</label>
-              <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="" class="c-input"/>
-            </p>
-          {% endswitch %}
-          {{ wheelformErrors[field.name] is defined ? errorList(wheelformErrors[field.name]) }}
-        {% endfor %}
-        {% if form.recaptcha %}
-          <p class="c-field">
-            <script src="https://www.google.com/recaptcha/api.js"></script>
-            <!-- Production captcha -->
-            <p class="g-recaptcha" data-sitekey="{{wheelform.getSettings('recaptcha_public')}}"></div>
-          </p>
-        {% endif %}
-
-        {% if block.buttonText | length() %}
-        <p class="c-field">
-          <button class="c-btn c-btn--primary c-btn--large" id="submit">{{ block.buttonText }}</button>
-        </p>
-        {% else %}
-        <p class="c-field">
-          <button class="c-btn c-btn--primary c-btn--large" id="submit">Verstuur</button>
-        </p>
-        {% endif %}
-      </form>
-    {% endif %}
   </div>
 </div>
 {% endfor %}
 {% else %}
 {% set pageRedirect = entry.url() %}
-<div class="o-row-large s-theme-neutral">
+<div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="s-editor">
-      <h2>{{ block.heading }}</h2>
-      {% if block.paragraph | length() %}
-      {{ block.paragraph }}
-      {% endif %}
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@medium">
+        <div class="o-box c-card c-card--beta">
+          <div class="s-editor">
+            <h2>{{ block.heading }}</h2>
+            {% if block.paragraph | length() %}
+            {{ block.paragraph }}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="o-layout__item u-3/4@medium u-2/3@large  u-push-1/4@medium u-push-1/3@large">
+        <div class="o-box c-card c-card--gamma">
+        {% if block.form | length() %}
+          {% macro errorList(errors) %}
+          {% if errors %}
+            <ul class="o-list-bare c-error-group">
+              {% for error in errors %}
+                <li class="o-list-bare__item c-error">{{ error }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+          {% endmacro %}
+          {% from _self import errorList %}
+
+          {% set pageRedirect = page.uri %}
+
+          {% set form = wheelform.form({
+            id: 1,
+            redirect: pageRedirect,
+            attributes: {
+              'class': 'c-form',
+            }
+          }) %}
+
+          {{ form.open() }}
+            {{ wheelformErrors['form'] is defined ? errorList(wheelformErrors['form']) }}
+            {{ wheelformErrors['recaptcha'] is defined ? errorList(wheelformErrors['recaptcha']) }}
+            {{ wheelformErrors['honeypot'] is defined ? errorList(wheelformErrors['honeypot']) }}
+
+            {% for field in form.fields %}
+              {% switch field.type %}
+                {% case "checkbox" %}
+                <ul class="o-list-bare c-field c-field--checkbox">
+                  {% for item in field.items %}
+                  <li class="o-list-bare__item">
+                    <label class="c-control c-control--checkbox">
+                      <input type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id="">
+                      <span class="c-control-indicator"></span>
+                      {{item}}
+                    </label>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% case "radio" %}
+                <ul class="o-list-bare c-field c-field--radio">
+                  {% for item in field.items %}
+                  <li class="o-list-bare__item c-radio">
+                    <label class="c-control c-control--checkbox">
+                      <input type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id="">
+                      <span class="c-control-indicator"></span>
+                      {{item}}
+                    </label>
+                  </li>
+                  {% endfor %}
+                </ul>
+                {% case "select" %}
+                <p class="c-field">
+                  <span class="c-select">
+                    <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
+                    {% for item in field.items %}
+                      <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
+                    {% endfor %}
+                    </select>
+                  </span>
+                </p>
+                {% case "file" %}
+                <p class="c-field">
+                  <label class="c-label">{{field.label}}</label>
+                  <input type="file" name="{{field.name}}" id="" class="c-input"/>
+                </p>
+                {% case "textarea" %}
+                <p class="c-field">
+                  <label class="c-label">{{field.label}}</label>
+                  <textarea name="{{field.name}}" id="" class="c-textarea">{{ values[field.name] ?? '' }}</textarea>
+                </p>
+                {% case "list" %}
+                <p class="c-field">
+                  <label class="c-label">{{field.label}}</label>
+                  <input type="text" name="{{field.name}}[]" id="" class="c-input"/>
+                  <script>//Javascript to handle adding fields</script>
+                </p>
+                {% default %}
+                <p class="c-field">
+                  <label class="c-label">{{field.label}}</label>
+                  <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="" class="c-input"/>
+                </p>
+              {% endswitch %}
+              {{ wheelformErrors[field.name] is defined ? errorList(wheelformErrors[field.name]) }}
+            {% endfor %}
+            {% if form.recaptcha %}
+              <p class="c-field">
+                <script src="https://www.google.com/recaptcha/api.js"></script>
+                <!-- Production captcha -->
+                <p class="g-recaptcha" data-sitekey="{{wheelform.getSettings('recaptcha_public')}}"></div>
+              </p>
+            {% endif %}
+
+            {% if block.buttonText | length() %}
+            <p class="c-field">
+              <button class="c-btn c-btn--secondary c-btn--large" id="submit">{{ block.buttonText }}</button>
+            </p>
+            {% else %}
+            <p class="c-field">
+              <button class="c-btn c-btn--secondary c-btn--large" id="submit">Verstuur</button>
+            </p>
+            {% endif %}
+          </form>
+        {% endif %}
+        </div>
+      </div>
     </div>
-    {% if block.form | length() %}
-      {% macro errorList(errors) %}
-      {% if errors %}
-        <ul class="o-list-bare c-error-group">
-          {% for error in errors %}
-            <li class="o-list-bare__item c-error">{{ error }}</li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-      {% endmacro %}
-      {% from _self import errorList %}
-
-      {% set pageRedirect = page.uri %}
-
-      {% set form = wheelform.form({
-        id: 1,
-        redirect: pageRedirect,
-        attributes: {
-          'class': 'c-form',
-        }
-      }) %}
-
-      {{ form.open() }}
-        {{ wheelformErrors['form'] is defined ? errorList(wheelformErrors['form']) }}
-        {{ wheelformErrors['recaptcha'] is defined ? errorList(wheelformErrors['recaptcha']) }}
-        {{ wheelformErrors['honeypot'] is defined ? errorList(wheelformErrors['honeypot']) }}
-
-        {% for field in form.fields %}
-          {% switch field.type %}
-            {% case "checkbox" %}
-            <ul class="o-list-bare c-field c-field--checkbox">
-              {% for item in field.items %}
-              <li class="o-list-bare__item">
-                <label class="c-control c-control--checkbox">
-                  <input type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id="">
-                  <span class="c-control-indicator"></span>
-                  {{item}}
-                </label>
-              </li>
-              {% endfor %}
-            </ul>
-            {% case "radio" %}
-            <ul class="o-list-bare c-field c-field--radio">
-              {% for item in field.items %}
-              <li class="o-list-bare__item c-radio">
-                <label class="c-control c-control--checkbox">
-                  <input type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id="">
-                  <span class="c-control-indicator"></span>
-                  {{item}}
-                </label>
-              </li>
-              {% endfor %}
-            </ul>
-            {% case "select" %}
-            <p class="c-field">
-              <span class="c-select">
-                <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
-                {% for item in field.items %}
-                  <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
-                {% endfor %}
-                </select>
-              </span>
-            </p>
-            {% case "file" %}
-            <p class="c-field">
-              <label class="c-label">{{field.label}}</label>
-              <input type="file" name="{{field.name}}" id="" class="c-input"/>
-            </p>
-            {% case "textarea" %}
-            <p class="c-field">
-              <label class="c-label">{{field.label}}</label>
-              <textarea name="{{field.name}}" id="" class="c-textarea">{{ values[field.name] ?? '' }}</textarea>
-            </p>
-            {% case "list" %}
-            <p class="c-field">
-              <label class="c-label">{{field.label}}</label>
-              <input type="text" name="{{field.name}}[]" id="" class="c-input"/>
-              <script>//Javascript to handle adding fields</script>
-            </p>
-            {% default %}
-            <p class="c-field">
-              <label class="c-label">{{field.label}}</label>
-              <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="" class="c-input"/>
-            </p>
-          {% endswitch %}
-          {{ wheelformErrors[field.name] is defined ? errorList(wheelformErrors[field.name]) }}
-        {% endfor %}
-        {% if form.recaptcha %}
-          <p class="c-field">
-            <script src="https://www.google.com/recaptcha/api.js"></script>
-            <!-- Production captcha -->
-            <p class="g-recaptcha" data-sitekey="{{wheelform.getSettings('recaptcha_public')}}"></div>
-          </p>
-        {% endif %}
-
-        {% if block.buttonText | length() %}
-        <p class="c-field">
-          <button class="c-btn c-btn--primary c-btn--large" id="submit">{{ block.buttonText }}</button>
-        </p>
-        {% else %}
-        <p class="c-field">
-          <button class="c-btn c-btn--primary c-btn--large" id="submit">Verstuur</button>
-        </p>
-        {% endif %}
-      </form>
-    {% endif %}
   </div>
 </div>
 {% endif %}

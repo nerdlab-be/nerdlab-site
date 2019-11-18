@@ -2,34 +2,36 @@
 
 <div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout">
+    <div class="o-layout c-card-group-two">
       {% for gridItem in block.blocks.all %}
       <div class="o-layout__item u-1/2@small">
-        {% if gridItem.gridImage | length() %}
-        {% for image in gridItem.gridImage.all() %}
-        <div class="o-crop o-crop--16:9 u-margin-bottom">
-        <img
-          data-sizes="auto"
-          data-srcset="
-            {{ image.url(small) }} 350w,
-            {{ image.url(medium) }} 600w,
-            {{ image.url(large) }} 900w,
-            {{ image.url(xlarge) }} 1280w,
-            {{ image.url(huge) }} 1400w"
-          src="{{ image.url(thumb) }}"
-          alt="{{ image.altText }}"
-          class="o-crop__content lazyload fade-in">
+        <div class="o-box o-box--flush">
+          {% if gridItem.gridImage | length() %}
+          {% for image in gridItem.gridImage.all() %}
+          <div class="o-crop o-crop--16:9 c-media c-media--shadow u-margin-bottom">
+          <img
+            data-sizes="auto"
+            data-srcset="
+              {{ image.url(small) }} 350w,
+              {{ image.url(medium) }} 600w,
+              {{ image.url(large) }} 900w,
+              {{ image.url(xlarge) }} 1280w,
+              {{ image.url(huge) }} 1400w"
+            src="{{ image.url(thumb) }}"
+            alt="{{ image.altText }}"
+            class="o-crop__content lazyload fade-in">
+          </div>
+          {% if image.credits | length() %}
+          <p>{{ image.credits }}</p>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+          <div class="s-editor s-editor--small">
+            {{ gridItem.paragraph }}
+          </div>
         </div>
-        {% if image.credits | length() %}
-        <p>{{ image.credits }}</p>
-        {% endif %}
-        {% endfor %}
-        {% endif %}
-        <div class="s-editor s-editor--small">
-          {{ gridItem.paragraph }}
-        </div>
-      </div>
       {% endfor %}
+      </div>
     </div>
   </div>
 </div>

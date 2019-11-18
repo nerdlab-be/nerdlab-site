@@ -13,48 +13,22 @@
 {% switch block.type %}
 {% case "selectBlock" %}
 {% for block in block.selectBlock.all() %}
-<div class="o-row-large c-background" id="action">
-  {% for item in block.media.all() %}
-  {% switch item.type %}
-  {% case "photo" %}
-  {% for type in item.photo.all() %}
-    <div class="c-background__image lazyload fade-in-cta" style="background-image: url('{{ type.url(thumb) }}');" data-bg="{{ type.url(huge) }}"></div>
-    <p class="c-background__image__meta">
-      {{ type.credits }}
-    </p>
-  {% endfor %}
-  {% case "video" %}
-  {% for type in item.placeholder.all() %}
-  <div class="c-background__image c-background__image--fallback lazyload fade-in-cta" style="background-image: url('{{ type.url(thumb) }}');" data-bg="{{ type.url(huge) }}"></div>
-  {% endfor %}
-  <video class="c-background__video" autoplay loop muted preload="true">
-    {% for type in item.webm.all() %}
-    <source src="{{ type.url }}" type="video/webm">
-    {% endfor %}
-    {% for type in item.mp4.all() %}
-    <source src="{{ type.url }}" type="video/mp4">
-    {% endfor %}
-  </video>
-  {% for type in item.placeholder.all() %}
-  <p class="c-background__video__meta">
-    {{ type.credits }}
-  </p>
-  {% endfor %}
-  {% endswitch %}
-  {% endfor %}
+<div class="o-row-huge c-cta" id="action">
   <div class="o-wrapper o-wrapper--huge c-background__body">
-    <div class="s-editor s-editor--cta">
-      {{ block.paragraph }}
+    <div class="o-box c-cta__body">
+      <div class="s-editor s-editor--cta u-margin-bottom u-margin-bottom-large@medium">
+        {{ block.paragraph }}
+      </div>
       {% for item in block.button.all() %}
       <p>
       {% if item.buttonLink | length %}
         {% for link in item.buttonLink.all() %}
-        <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+        <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary">
           {{ item.buttonTitle }}
         </a>
         {% endfor %}
       {% else %}
-        <a href="{{ item.buttonURL }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+        <a href="{{ item.buttonURL }}" class="c-btn c-btn--large c-btn--primary">
           {{ item.buttonTitle }}
         </a>
       {% endif %}
@@ -62,34 +36,71 @@
       {% endfor %}
     </div>
   </div>
+  {% for item in block.media.all() %}
+  {% switch item.type %}
+  {% case "photo" %}
+  {% for type in item.photo.all() %}
+    <div class="c-cta__visual">
+      <img
+        data-sizes="auto"
+        data-srcset="
+          {{ type.url(small) }} 350w,
+          {{ type.url(medium) }} 600w,
+          {{ type.url(large) }} 900w,
+          {{ type.url(xlarge) }} 1280w,
+          {{ type.url(huge) }} 1400w"
+        src="{{ type.url(thumb) }}"
+        alt="{{ type.altText }}"
+        class="c-media lazyload fade-in">
+      {% if type.credits | length() %}
+      <p>{{ type.credits }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+  {% case "video" %}
+  {% for type in item.placeholder.all() %}
+    <div class="c-cta__visual">
+      <img
+        data-sizes="auto"
+        data-srcset="
+          {{ type.url(small) }} 350w,
+          {{ type.url(medium) }} 600w,
+          {{ type.url(large) }} 900w,
+          {{ type.url(xlarge) }} 1280w,
+          {{ type.url(huge) }} 1400w"
+        src="{{ type.url(thumb) }}"
+        alt="{{ type.altText }}"
+        class="c-media lazyload fade-in">
+    </div>
+  {% endfor %}
+  {% for type in item.placeholder.all() %}
+    <p class="c-cta__credits">{{ type.credits }}</p>
+  {% endfor %}
+  {% endswitch %}
+  {% endfor %}
 </div>
 {% endfor %}
 
 {% case "newBlock" %}
-<div class="o-row-large c-background" id="action">
-  {% for image in block.image.all() %}
-    <div class="c-background__image lazyload fade-in-cta" style="background-image: url('{{ image.url(thumb) }}');" data-bg="{{ image.url(huge) }}"></div>
-    <p class="c-background__image__meta">
-      {{ image.credits }}
-    </p>
-  <div class="c-background__image c-background__image--fallback lazyload fade-in-cta" style="background-image: url('{{ image.url(thumb) }}');" data-bg="{{ image.url(huge) }}"></div>
-  {% endfor %}
-  <div class="o-wrapper o-wrapper--huge c-background__body">
-    {% if block.heading | length() %}
-    <h2 class="c-cta-title">{{ block.heading }}</h2>
-    {% endif %}
-    <div class="s-editor s-editor--cta">
-      {{ block.paragraph }}
+<div class="o-row-huge c-cta" id="action">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-box c-cta__body">
+      {% if block.heading | length() %}
+      <h2 class="c-cta-title u-margin-bottom-small">{{ block.heading }}</h2>
+      {% endif %}
+      <div class="s-editor s-editor--cta u-margin-bottom u-margin-bottom-large@medium">
+        {{ block.paragraph }}
+      </div>
       {% for item in block.button.all() %}
       <p>
       {% if item.buttonLinkInternal | length %}
         {% for link in item.buttonLinkInternal.all() %}
-        <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+        <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary">
           {{ item.buttonText }}
         </a>
         {% endfor %}
       {% else %}
-        <a href="{{ item.buttonLinkExternal }}" class="c-btn c-btn--large c-btn--primary c-btn--ghost">
+        <a href="{{ item.buttonLinkExternal }}" class="c-btn c-btn--large c-btn--primary">
           {{ item.buttonText }}
         </a>
       {% endif %}
@@ -97,8 +108,27 @@
       {% endfor %}
     </div>
   </div>
+  {% if block.image | length() %}
+  <div class="c-cta__visual">
+    {% for image in block.image.all() %}
+    <img
+      data-sizes="auto"
+      data-srcset="
+        {{ image.url(small) }} 350w,
+        {{ image.url(medium) }} 600w,
+        {{ image.url(large) }} 900w,
+        {{ image.url(xlarge) }} 1280w,
+        {{ image.url(huge) }} 1400w"
+      src="{{ image.url(thumb) }}"
+      alt="{{ image.altText }}"
+      class="c-media lazyload fade-in">
+    {% if image.credits | length() %}
+    <p>{{ image.credits }}</p>
+    {% endif %}
+    {% endfor %}
+  </div>
+  {% endif %}
 </div>
-
 {% endswitch %}
 {% endfor %}
 {% endif %}

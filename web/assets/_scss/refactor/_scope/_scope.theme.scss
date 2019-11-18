@@ -35,6 +35,24 @@
   }
 }
 
+.s-theme-tertiary-light {
+  position: relative;
+  color: $color-neutral-dark;
+
+
+  &:before {
+    content: '';
+    z-index: -1;
+    display: block;
+    position: absolute;
+    top: $unit;
+    left: $unit;
+    height: calc(100% - #{$unit-large});
+    width: calc(100% - #{$unit-large});
+    background-color: $color-tertiary-xlight;
+  }
+}
+
 .s-theme-primary {
   color: $white;
   background-color: $color-primary;
