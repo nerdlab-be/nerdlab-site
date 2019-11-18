@@ -3,8 +3,15 @@
    ================================== */
 
 .c-form {
-  margin-top: $unit-large;
+  // margin-top: $unit-large;
   max-width: $inuit-wrapper-width;
+  position: relative;
+  z-index: $z-index-gamma;
+
+  * {
+    position: relative;
+    z-index: $z-index-gamma;
+  }
 }
 
 .c-field {
@@ -50,84 +57,91 @@
 .c-subscribe-form {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: $unit-small + $unit-tiny;
+  margin-bottom: 0;
+
+  @include mq(small) {
+    flex-direction: row;
+  }
 }
 
-.c-subscribe-form__input {
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0;
-  border-width: 0 0 1px 0;
-  border-color: $color-neutral-xlight;
-  flex-grow: 1;
-  width: auto;
-
-  &:focus {
-    border-color: $color-neutral-xlight;
-  }
-
-  &::-webkit-input-placeholder {
-    color: $color-neutral-light;
-  }
-
-  &::-moz-placeholder {
-    color: $color-neutral-light;
-  }
-
-  &:-ms-input-placeholder {
-    color: $color-neutral-light;
-  }
-
-  .s-mutation & {
-    color: $white;
-    border-width: 0 0 6px 0;
-    border-color: $color-tertiary;
-    width: 100%;
-    padding: $unit-small + 3px 0  $unit-small - 2px;
-
-    @include font-size($h5);
+  .c-subscribe-form__input {
+    background-color: transparent;
+    padding: $unit-small + $unit-tiny/2 $unit-small;
+    border: 2px solid $color-neutral;
+    flex-grow: 1;
+    width: auto;
 
     &:focus {
-      border-color: $color-tertiary;
+      outline: 4px solid $color-tertiary-xlight;
     }
 
     &::-webkit-input-placeholder {
-      color: $color-neutral-xlight;
+      color: $color-neutral-light;
     }
 
     &::-moz-placeholder {
-      color: $color-neutral-xlight;
+      color: $color-neutral-light;
     }
 
     &:-ms-input-placeholder {
-      color: $color-neutral-xlight;
+      color: $color-neutral-light;
     }
-  }
 
-  @include mq(small) {
     .s-mutation & {
-      border-color: $white;
-    }
-  }
+      color: $white;
+      border-width: 0 0 6px 0;
+      border-color: $color-tertiary;
+      width: 100%;
+      padding: $unit-small + 3px 0  $unit-small - 2px;
 
-  @include mq(medium) {
-    .s-mutation & {
-      @include font-size($h4);
+      @include font-size($h5);
+
+      &:focus {
+        border-color: $color-tertiary;
+      }
+
+      &::-webkit-input-placeholder {
+        color: $color-neutral-xlight;
+      }
+
+      &::-moz-placeholder {
+        color: $color-neutral-xlight;
+      }
+
+      &:-ms-input-placeholder {
+        color: $color-neutral-xlight;
+      }
+    }
+
+    @include mq(small) {
+      padding: $unit-small;
+
+      .s-mutation & {
+        border-color: $white;
+      }
+    }
+
+    @include mq(medium) {
+      .s-mutation & {
+        @include font-size($h4);
+      }
     }
   }
-}
 
 .c-subscribe-form__btn {
   border: 0;
-  border-bottom: 1px solid $color-neutral-xlight;
-  color: $color-secondary;
-  background-color: transparent;
-  padding-right: 0;
+  border: 2px solid $color-neutral;
+  border-top: 0;
+  color: $white;
+  background-color: $color-secondary;
   border-radius: 0;
 
   &:hover,
   &:focus {
-    color: $color-primary;
+    background-color: $color-neutral;
   }
 
   .s-mutation & {
@@ -147,6 +161,9 @@
   }
 
   @include mq(small) {
+    border: 2px solid $color-neutral;
+    border-left: 0;
+
     .s-mutation & {
       width: auto;
       color: $white;

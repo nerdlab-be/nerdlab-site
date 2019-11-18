@@ -3,7 +3,7 @@
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-editor">
-      <h2>{{ block.heading }}</h2>
+      <h2 class="c-title-graphic">{{ block.heading }}</h2>
     </div>
     {% if block.youtubeId | length() %}
     <div class="o-crop o-crop--fill o-crop--16:9">
@@ -15,7 +15,7 @@
     </div>
     {% elseif block.video | length() %}
     {% for video in block.video.all() %}
-      <div class="o-crop o-crop--16:9">
+      <div class="o-crop o-crop--16:9 c-media c-media--shadow">
       {% if block.videoPoster | length() %}
         {% for poster in block.videoPoster.all() %}
         <video controls poster="{{ poster.url }}" class="o-crop__content">
@@ -23,12 +23,12 @@
         </video>
         {% endfor %}
       {% else %}
-        <video controls>
+        <video controls class="o-crop__content">
           <source src="{{ video.url }}">
         </video>
       {% endif %}
-      </div>
     {% endfor %}
+    </div>
     {% endif %}
     {% if block.paragraph | length() %}
     <div class="s-editor u-margin-top">

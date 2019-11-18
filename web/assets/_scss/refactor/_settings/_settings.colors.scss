@@ -41,8 +41,8 @@ $gray                       : shade(#4b4c4d,20%);
 $black                      : #202226;
 
 // Palx color palette
-$brand1: #ee192b;
-$brand2: #3165FF;
+$brand1: #FF3333;
+$brand2: #554FFF;
 $gray0: #f9f9fa;
 $gray1: #eceeef;
 $gray2: #dee1e3;
@@ -52,7 +52,7 @@ $gray5: #adb4b9;
 $gray6: #98a1a8;
 $gray7: #7f8b93;
 $gray8: #606e79;
-$gray9: #374047;
+$gray9: #331433;
 $gray10: #181b1f;
 $blue0: #f6fafd;
 $blue1: #e2eff9;
@@ -175,34 +175,37 @@ $cyan7: #009a8d;
 $cyan8: #007a70;
 $cyan9: #004842;
 
+$purple: #B31F54;
+$magenta: #FF2B78;
+
 
 
 
 
 // Brand colors
 
-$color-neutral              : $gray;
+$color-neutral              : #331433;
 $color-neutral-xxlight      : tint($color-neutral,93%);
 $color-neutral-xlight       : tint($color-neutral,85%);
 $color-neutral-light        : tint($color-neutral,30%);
-$color-neutral-dark         : shade($color-neutral,60%);
+$color-neutral-dark         : #1C0E24;
 
-$color-primary              : $red;
-$color-primary-xlight       : tint($color-primary,80);
-$color-primary-light        : tint($color-primary,20);
-$color-primary-dark         : shade($color-primary,20);
+$color-primary              : #FF3333;
+$color-primary-xlight       : #FFCBCB;
+$color-primary-light        : #FF9797;
+$color-primary-dark         : #B31E1C;
 
-$color-secondary            : $blue;
-$color-secondary-xxlight    : tint($color-secondary,90);
-$color-secondary-xlight     : tint($color-secondary,80);
-$color-secondary-light      : tint($color-secondary,20);
-$color-secondary-dark       : shade($color-secondary,20);
+$color-secondary            : #554FFF;
+$color-secondary-xxlight    : #D4DEFF;
+$color-secondary-xlight     : #D4DEFF;
+$color-secondary-light      : #A8BDFF;
+$color-secondary-dark       : #3856B5;
 
-$color-tertiary             : $yellow;
-$color-tertiary-xlight      : tint($color-tertiary,80);
-$color-tertiary-light       : tint($color-tertiary,20);
-$color-tertiary-dark        : shade($color-tertiary,20);
-$color-tertiary-xdark       : shade($color-tertiary,40);
+$color-tertiary             : #FFED03;
+$color-tertiary-xlight      : #FFFDBD;
+$color-tertiary-light       : #FFFA79;
+$color-tertiary-dark        : #B3AB00;
+$color-tertiary-xdark       : #B3AB00;
 
 
 

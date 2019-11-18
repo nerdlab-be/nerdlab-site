@@ -2,68 +2,12 @@
    #CARDS
    ================================== */
 
-// .c-card {
-//   position: relative;
-//   border-radius: $radius;
-//   box-shadow: 0 10px 20px rgba($black,.25);
-//   transition: box-shadow $duration $easing;
-//   height: 100%;
-
-//   &:hover,
-//   &:focus,
-//   &:focus-within {
-//     box-shadow: 0 10px 10px rgba($black,.25), 0 0 0 4px rgba($black,.25);
-//   }
-// }
-
-// .c-card,
-// .c-card__body {
-//   display: flex;
-//   flex-direction: column;
-//   overflow: hidden;
-// }
-
-//   .c-card__body {
-//     flex-grow: 1;
-
-//     > * {
-//       margin-bottom: 0;
-//     }
-
-//     > * + * {
-//       margin-top: $unit-small;
-//     }
-
-//     > *:last-child {
-//       margin-top: auto;
-//     }
-
-//     > *:nth-last-child(2) {
-//       margin-bottom: $unit;
-//     }
-//   }
-
-//   .c-card__link {
-//     &::after {
-//       content: '';
-//       position: absolute;
-//       top: 0;
-//       left: 0;
-//       width: 100%;
-//       height: 100%;
-//     }
-//   }
-
 .c-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  border-bottom-left-radius: $unit-small;
-  border-bottom-right-radius: $unit-small;
-  border-radius: $unit-tiny/2;
-  overflow: hidden;
-  box-shadow: 0 3px 20px rgba($color-neutral-dark,0.1);
+  // height: 100%;
   background-color: $white;
+  border: 2px solid $color-neutral;
 
   .s-mutation & {
     outline: 6px dashed $color-tertiary-dark;
@@ -76,6 +20,106 @@
     position: relative;
   }
 }
+
+  .c-card--alpha {
+    position: relative;
+    padding: $unit;
+    border: 2px solid $color-neutral;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: -$unit-tiny - 2px;
+      top: $unit-tiny + 2px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $color-neutral;
+      background-color: $color-primary;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      right: -$unit-small - 2px;
+      top: $unit-small + 2px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $color-neutral;
+      background-color: $color-secondary;
+    }
+  }
+
+  .c-card--beta {
+    position: relative;
+    padding: $unit;
+    color: $white;
+    background-color: $color-neutral;
+    border: 2px solid $color-neutral;
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -3;
+      left: -$unit-tiny - 2px;
+      top: $unit-tiny + 2px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $color-neutral;
+      background-color: $color-secondary;
+    }
+
+    @include mq(medium) {
+      padding: $unit + $unit-small;
+      margin-bottom: $unit;
+    }
+  }
+
+  .c-card--gamma {
+    position: relative;
+    margin-top: -$unit - $unit-tiny;
+    border: 2px solid $color-neutral;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -$unit;
+      top: -$unit;
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23B3ADFF' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -2;
+      right: -$unit-tiny - 2px;
+      top: $unit-tiny + 2px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid $color-neutral;
+      background-color: $color-primary;
+    }
+
+    @include mq(medium) {
+      margin-top: -$unit-large;
+
+      &:before {
+        top: -$unit-large;
+        left: -33%;
+        width: 120%;
+      }
+    }
+
+    @include mq(large) {
+      &:before {
+        left: -50%;
+      }
+    }
+  }
 
 .c-card--spacer {
   & + & {

@@ -25,7 +25,6 @@
   cursor: pointer; /* [5] */
   padding: $unit-small $unit $unit-small + 1px;
   transition: $global-transition;
-  border-radius: $unit-large;
   font-weight: $medium;
   border: 0;
 }
@@ -38,6 +37,26 @@
    ========================================================================== */
 
 .c-btn--primary {
+  border: 2px solid $white;
+  background-color: $color-primary;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-neutral;
+  }
+
+}
+
+.c-btn--secondary {
+  border: 2px solid $color-neutral;
   background-color: $color-secondary;
 
   &,
@@ -50,26 +69,8 @@
 
   &:hover,
   &:focus {
-    background-color: $color-primary;
-  }
-
-}
-
-.c-btn--secondary {
-  background-color: $white;
-
-  &,
-  &:hover,
-  &:active,
-  &:focus {
-    text-decoration: none; /* [4] */
-    color: $color-primary;
-  }
-
-  &:hover,
-  &:focus {
     color: $white;
-    background-color: $color-primary;
+    background-color: $color-neutral;
   }
 
 }
@@ -117,6 +118,7 @@
 
   @include mq(medium) {
     @include font-size($h6);
+    padding: $unit-small + 4px $unit $unit-small + 5px;
   }
 }
 
@@ -160,8 +162,8 @@ $btn-ghost-border-width: 2px !default;
     &:hover,
     &:focus {
       color: $white;
-      border-color: $color-secondary;
-      background-color: $color-secondary;
+      background-color: $color-primary;
+
     }
   }
 }

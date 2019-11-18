@@ -1,6 +1,7 @@
 .c-privacy {
   background-color: $color-secondary;
   color: $white;
+  box-shadow: 0 4px 0 rgba($color-secondary,.1);
 
   a:not(.c-btn) {
     color: $white;
@@ -17,13 +18,14 @@
   display: flex;
   padding: $unit 0;
   justify-content: space-between;
+  font-weight: $regular;
 
   p {
     margin-bottom: 0;
   }
 
   @include mq(medium) {
-    padding: $unit/2 0;
+    padding: $unit 0;
     align-items: center;
 
     p + p {

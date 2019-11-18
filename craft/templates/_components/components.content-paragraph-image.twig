@@ -2,7 +2,12 @@
 
 <div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout {% if block.position == 'right' %}o-layout--reverse{% endif %}">
+    <div class="o-layout {% if block.position == 'left' %}o-layout--reverse{% endif %}">
+      <div class="o-layout__item {% if block.position != 'center' %}u-2/3@small u-1/2@medium{% endif %}">
+        <div class="s-editor s-editor--title">
+          {{ block.paragraph }}
+        </div>
+      </div>
       <div class="o-layout__item {% if block.position != 'center' %}u-1/3@small u-1/2@medium{% endif %}">
         {% if block.paragraphImage | length() %}
         {% for image in block.paragraphImage.all() %}
@@ -22,11 +27,6 @@
         {% endif %}
         {% endfor %}
         {% endif %}
-      </div>
-      <div class="o-layout__item {% if block.position != 'center' %}u-2/3@small u-1/2@medium{% endif %}">
-        <div class="s-editor">
-          {{ block.paragraph }}
-        </div>
       </div>
     </div>
   </div>

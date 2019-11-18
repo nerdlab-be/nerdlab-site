@@ -10,47 +10,50 @@
 {# -- Module -- #}
 
 {% if entry.pageIntro | length() %}
-<div class="o-row-intro c-backdrop-holder">
-  <div class="o-wrapper o-wrapper--huge">
-    <div class="o-layout">
-      <div class="o-layout__item u-2/3@medium c-front">
-        {# Breadcrumb #}
-        {% include "_elements/elements.breadcrumb" %}
-        {# Page title #}
-        <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
-        {# Intro #}
-        <div class="s-editor s-editor--intro">
-          {% set intro = entry.pageIntro.intro.all() %}
-          {% for block in intro %}
-          {% switch block.type %}
-          {% case "paragraph" %}
-            {{ block.paragraph }}
-          {% case "subtitle" %}
-            <h2>{{ block.subtitle }}</h2>
-          {% case "button" %}
-            <p>
-              {% if block.buttonLinkExternal | length() %}
-              <a href="{{ block.buttonLinkExternal }}" class="c-btn c-btn--large c-btn--primary">
-                {{ block.buttonText }}
-              </a>
-              {% else %}
-              {% if block.buttonLink | length() %}
-              {% for link in block.buttonLink.all() %}
-              <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
-                {{ block.buttonText }}
-              </a>
-              {% endfor %}
-              {% endif %}
-              {% endif %}
-            </p>
-          {% endswitch %}
-          {% endfor %}
+<div class="o-row c-hero">
+  <div class="o-wrapper o-wrapper--huge c-hero">
+    <div class="o-layout o-layout--flush">
+      <div class="o-layout__item u-2/3@medium u-1/2@large">
+        <div class="o-box o-box--flush c-hero__body">
+          {# Breadcrumb #}
+          {% include "_elements/elements.breadcrumb" %}
+          {# Page title #}
+          <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
+          {# Intro #}
+          <div class="s-editor s-editor--intro">
+            {% set intro = entry.pageIntro.intro.all() %}
+            {% for block in intro %}
+            {% switch block.type %}
+            {% case "paragraph" %}
+              {{ block.paragraph }}
+            {% case "subtitle" %}
+              <h2>{{ block.subtitle }}</h2>
+            {% case "button" %}
+              <p>
+                {% if block.buttonLinkExternal | length() %}
+                <a href="{{ block.buttonLinkExternal }}" class="c-btn c-btn--large c-btn--primary">
+                  {{ block.buttonText }}
+                </a>
+                {% else %}
+                {% if block.buttonLink | length() %}
+                {% for link in block.buttonLink.all() %}
+                <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
+                  {{ block.buttonText }}
+                </a>
+                {% endfor %}
+                {% endif %}
+                {% endif %}
+              </p>
+            {% endswitch %}
+            {% endfor %}
+          </div>
+          {# {% include '_tools/tools.icon.html' with { options: { icon: 'down', styles: 'c-icon--intro' } } %} #}
         </div>
       </div>
     </div>
   </div>
   {% if entry.pageIntro.visual | length() %}
-  <div class="c-backdrop c-backdrop--right">
+  <div class="c-hero__visual">
   {% for block in entry.pageIntro.visual.all() %}
     {% for image in block.image.all() %}
     <img
