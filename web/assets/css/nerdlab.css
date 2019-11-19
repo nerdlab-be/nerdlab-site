@@ -2327,9 +2327,9 @@ table {
   line-height: 1.3;
   display: inline-block;
   padding: 3px 6px;
-  color: #331433;
-  background-color: #f1eff1;
-  border-radius: 4px;
+  color: #8f8900;
+  font-weight: 600;
+  background-color: #FFFDBD;
 }
 
 .c-form .c-badge {
@@ -2947,6 +2947,7 @@ table {
 /* Dropdown arrow */
 .c-select:after {
   position: absolute;
+  z-index: 3;
   top: 50%;
   right: 1.25rem;
   display: inline-block;
@@ -3136,6 +3137,15 @@ table {
   margin-top: 24px;
 }
 
+.c-field-wrapper + .c-field,
+.c-field + .c-field-wrapper {
+  margin-top: 24px;
+}
+
+.c-field-wrapper + .c-field-wrapper {
+  margin-top: 24px;
+}
+
 .c-field--checkbox li + li,
 .c-field--radio li + li {
   margin-top: 6px;
@@ -3166,6 +3176,18 @@ table {
   color: #1C0E24;
   margin-bottom: 6px;
   width: calc(100% - 24px);
+}
+
+.c-label--group {
+  font-weight: 600;
+}
+
+.c-error {
+  color: #FF3333;
+  font-weight: 600;
+  border: 1px solid #FFCBCB;
+  background-color: #ffefef;
+  padding: 6px;
 }
 
 .c-subscribe-form {
