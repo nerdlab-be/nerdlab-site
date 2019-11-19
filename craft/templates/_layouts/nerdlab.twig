@@ -16,13 +16,11 @@
 {% endif %}
 
 {% block body %}
-  <div class="c-scene" id="js-smoothstate">
-    {% include "_globals/globals.header-refactor" %}
+  {% include "_globals/globals.header-refactor" %}
 
-    <main role="main" id="content" class="c-main">
-      {% block main %}{% endblock %}
-    </main>
-  </div>
+  <main role="main" id="content" class="c-main">
+    {% block main %}{% endblock %}
+  </main>
 
   {% include "_globals/globals.prefooter-refactor" %}
   {% include "_globals/globals.footer-refactor" %}

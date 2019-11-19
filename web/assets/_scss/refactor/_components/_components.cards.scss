@@ -121,6 +121,18 @@
     }
   }
 
+  .c-card--delta {
+    border: 0;
+    margin-top: $unit;
+    text-align: center;
+    background-color: transparent;
+    border-top: 6px dotted $color-neutral-xlight;
+
+    @include mq(medium) {
+      margin-top: $unit-large;
+    }
+  }
+
 .c-card--spacer {
   & + & {
     margin-top: $unit;

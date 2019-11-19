@@ -4,7 +4,7 @@
 #}
 
 {#
-  {% include '_components/components.page-intro' %}
+  {% include '_components/components.page-intro-home' %}
 #}
 
 {# -- Module -- #}
@@ -13,14 +13,10 @@
 <div class="o-row c-hero">
   <div class="o-wrapper o-wrapper--huge c-hero">
     <div class="o-layout o-layout--flush">
-      <div class="o-layout__item u-2/3@medium u-1/2@large">
+      <div class="o-layout__item u-2/3@medium">
         <div class="o-box o-box--flush c-hero__body">
-          {# Breadcrumb #}
-          {% include "_elements/elements.breadcrumb" %}
-          {# Page title #}
-          <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
           {# Intro #}
-          <div class="s-editor s-editor--intro">
+          <div class="s-editor s-editor--home">
             {% set intro = entry.pageIntro.intro.all() %}
             {% for block in intro %}
             {% switch block.type %}
@@ -52,7 +48,7 @@
     </div>
   </div>
   {% if entry.pageIntro.visual | length() %}
-  <div class="c-hero__visual">
+  <div class="c-hero__visual c-hero__visual--home">
   {% for block in entry.pageIntro.visual.all() %}
     {% for image in block.image.all() %}
     <img

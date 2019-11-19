@@ -278,6 +278,31 @@
   }
 }
 
+.s-editor--home {
+  p:first-child {
+    @include font-size($h5,1.5);
+    max-width: 55ch;
+  }
+
+  @include mq(small) {
+    p:first-child {
+      @include font-size($h4,1.5);
+    }
+  }
+
+  @include mq(medium) {
+    p:first-child {
+      @include font-size($h3,1.5);
+    }
+  }
+
+  @include mq(large) {
+    p:first-child {
+      @include font-size($h2,1.5);
+    }
+  }
+}
+
 .s-editor--intro {
   p:first-child {
     @include font-size($h5,1.5);

@@ -91,3 +91,21 @@
       }
     }
   }
+
+  .c-hero__visual--home {
+    @include mq(large) {
+      top: $unit-large - 8px;
+      left: 64%;
+      height: calc(100% - #{$unit-huge});
+      width: calc(36%);
+      margin-left: 0;
+
+      &:before {
+        top: auto;
+        bottom: -$unit-large;
+        left: calc(-164% - #{$unit-large + $unit-large});
+        width: calc(200% + #{$unit});
+        height: calc(100% + #{$unit-tiny});
+      }
+    }
+  }

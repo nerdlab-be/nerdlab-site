@@ -1,0 +1,227 @@
+{#
+  Agenda
+  ================
+#}
+
+{#
+  {% include '_components/components.agenda-overview.html' with { options: { layout: '' } } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  layout: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+{% set pageEntries = craft.entries.section('events').orderBy('date asc') %}
+
+<div class="o-row-large">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="s-editor s-editor--title">
+      <h2>{{ labels.labelUpcomingEvent }}</h2>
+    </div>
+
+    <ul class="o-layout c-card-group">
+      {% set loopCount = 0 %}
+      {% set pageEntries = craft.entries
+        .section('events')
+        .orderBy('date asc')
+        .all() %}
+
+      {% for event in pageEntries if event.date|date('Ymd') >= now|date('Ymd') %}
+        {% set loopCount = loopCount + 1 %}
+        {% if loopCount == "1" %}
+        <li class="o-layout__item u-1/2@small u-1/3@medium">
+          <article class="o-box o-box--flush">
+            {% if event.pageIntro | length() %}
+            <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+              {% if event.pageIntro.visual | length() %}
+              {% set visual = event.pageIntro.visual.all() %}
+              {% for block in visual %}
+              {% switch block.type %}
+              {% case "image" %}
+                {% for image in block.image.all() %}
+                <a href="{{ event.url }}" alt="{{ event.title }}">
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  </a>
+                {% endfor %}
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
+            <div class="s-editor s-editor--small">
+              <h2 class="u-margin-bottom-small">
+                <a href="{{ event.url }}">
+                  {{ event.title }}
+                </a>
+              </h2>
+              {% if event.customDate | length() %}
+              <p class="c-faded u-margin-bottom-tiny">
+                {{ event.customDate | capitalize }}
+              </p>
+              {% else %}
+              <p class="c-faded u-margin-bottom-tiny">
+                {{ event.date | date('l d F Y') | capitalize }}
+              </p>
+              {% endif %}
+              {% for block in event.body.all() %}
+              {% switch block.type %}
+              {% case "lead" %}
+              {{ block.lead }}
+              {% endswitch %}
+              {% endfor %}
+            </div>
+          </article>
+        </li>
+        {% endif %}
+        {% if loopCount == "2" %}
+        <li class="o-layout__item u-1/2@small u-1/3@medium">
+          <article class="o-box o-box--flush">
+            {% if event.pageIntro | length() %}
+            <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+              {% if event.pageIntro.visual | length() %}
+              {% set visual = event.pageIntro.visual.all() %}
+              {% for block in visual %}
+              {% switch block.type %}
+              {% case "image" %}
+                {% for image in block.image.all() %}
+                <a href="{{ event.url }}" alt="{{ event.title }}">
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  </a>
+                {% endfor %}
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
+            <div class="s-editor s-editor--small">
+              <h2 class="u-margin-bottom-small">
+                <a href="{{ event.url }}">
+                  {{ event.title }}
+                </a>
+              </h2>
+              {% if event.customDate | length() %}
+              <p class="c-faded u-margin-bottom-tiny">
+                {{ event.customDate | capitalize }}
+              </p>
+              {% else %}
+              <p class="c-faded u-margin-bottom-tiny">
+                {{ event.date | date('l d F Y') | capitalize }}
+              </p>
+              {% endif %}
+              {% for block in event.body.all() %}
+              {% switch block.type %}
+              {% case "lead" %}
+              {{ block.lead }}
+              {% endswitch %}
+              {% endfor %}
+            </div>
+          </article>
+        </li>
+        {% endif %}
+        {% if loopCount == "3" %}
+        <li class="o-layout__item u-1/2@small u-1/3@medium">
+          <article class="o-box o-box--flush">
+            {% if event.pageIntro | length() %}
+            <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+              {% if event.pageIntro.visual | length() %}
+              {% set visual = event.pageIntro.visual.all() %}
+              {% for block in visual %}
+              {% switch block.type %}
+              {% case "image" %}
+                {% for image in block.image.all() %}
+                <a href="{{ event.url }}" alt="{{ event.title }}">
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  </a>
+                {% endfor %}
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
+            <div class="s-editor s-editor--small">
+              <h2 class="u-margin-bottom-small">
+                <a href="{{ event.url }}">
+                  {{ event.title }}
+                </a>
+              </h2>
+              {% if event.customDate | length() %}
+              <p class="c-faded u-margin-bottom-tiny">
+                {{ event.customDate | capitalize }}
+              </p>
+              {% else %}
+              <p class="c-faded u-margin-bottom-tiny">
+                {{ event.date | date('l d F Y') | capitalize }}
+              </p>
+              {% endif %}
+              {% for block in event.body.all() %}
+              {% switch block.type %}
+              {% case "lead" %}
+              {{ block.lead }}
+              {% endswitch %}
+              {% endfor %}
+            </div>
+          </article>
+        </li>
+        {% endif %}
+      {% endfor %}
+      {% if loopCount == "0" %}
+        <li class="o-layout__item u-1/2@small u-1/3@medium">
+          <p class="c-faded">
+            {{ labels.labelNoEvents }}
+          </p>
+        </li>
+      {% endif %}
+    </ul>
+
+    <div class="o-box c-card c-card--delta">
+      {% set agendaOverview = craft.entries.section('agenda').one() %}
+      {% if loopCount == "0" %}
+      <p class="c-small">
+        <a href="{{ agendaOverview.url }}" class="c-link c-link--neutral">Afgelopen events bekijken</a>
+      </p>
+      {% else %}
+      <p class="c-small">
+        <a href="{{ agendaOverview.url }}" class="c-link c-link--neutral">Volledige agenda bekijken</a>
+      </p>
+      {% endif %}
+    </div>
+  </div>
+</div>

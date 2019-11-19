@@ -1,0 +1,19 @@
+{#
+ # The homepage template
+ # ------------------------
+-#}
+
+{% extends "_layouts/nerdlab" %}
+
+{% block main %}
+{% include '_components/components.page-intro-home' %}
+
+{# Agenda home #}
+{% include '_components/components.agenda-home' %}
+
+{# Overview #}
+{# {% include '_components/components.page-content' %} #}
+
+{# CTA #}
+{% include '_components/components.page-cta' %}
+{% endblock %}
