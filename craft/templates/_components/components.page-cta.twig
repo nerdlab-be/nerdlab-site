@@ -16,6 +16,9 @@
 <div class="o-row-huge c-cta" id="action">
   <div class="o-wrapper o-wrapper--huge c-background__body">
     <div class="o-box c-cta__body">
+      {% if block.title | length() %}
+      <h2 class="c-cta-title u-margin-bottom-small">{{ block.title }}</h2>
+      {% endif %}
       <div class="s-editor s-editor--cta u-margin-bottom u-margin-bottom-large@medium">
         {{ block.paragraph }}
       </div>
