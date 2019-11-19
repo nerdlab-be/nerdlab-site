@@ -209,8 +209,6 @@
 .c-faded {
   font-weight: $regular;
   color: $color-neutral-light;
-  text-transform: uppercase;
-  @include font-size(14px);
 
   .s-mutation & {
     font-weight: $medium;

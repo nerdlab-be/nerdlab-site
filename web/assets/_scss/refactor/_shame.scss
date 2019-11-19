@@ -525,7 +525,8 @@
       border-right: 1px solid $color-neutral-xlight;
     }
 
-    .o-layout__item:nth-child(3n) {
+    .o-layout__item:nth-child(3n),
+    .o-layout__item:last-child {
       border-right: 0;
     }
   }

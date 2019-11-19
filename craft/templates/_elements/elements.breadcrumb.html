@@ -8,6 +8,9 @@
 #}
 
 {# -- Module -- #}
+{% set pages = entry %}
+{% set parentLink = entry %}
+
 {% if entry.level == '1' %}
   {% set pages = craft.entries.section('pages').descendantOf( entry.id ).descendantDist(1) %}
   {% set parentLink = entry %}

@@ -1,0 +1,34 @@
+{#
+ # Agenda overview
+ # ------------------------
+-#}
+
+{% extends "_layouts/nerdlab" %}
+
+{% block main %}
+{% include '_components/components.page-intro' %}
+
+{# Agenda overview #}
+<div class="o-row-large u-divider">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="s-editor s-editor--title">
+      <h2>{{ labels.labelSoon }}</h2>
+    </div>
+    {% include '_components/components.agenda-overview' %}
+  </div>
+</div>
+
+{# Agenda finished #}
+<div class="o-row-large u-divider" id="archive">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="s-editor">
+      <h2 class="c-title-graphic">{{ labels.labelPassed }}</h2>
+    </div>
+    {% include '_components/components.agenda-archive' %}
+  </div>
+</div>
+
+{# CTA #}
+{% include '_components/components.page-cta' %}
+
+{% endblock %}
