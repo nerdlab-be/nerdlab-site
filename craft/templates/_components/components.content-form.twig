@@ -35,7 +35,7 @@
             id: 1,
             redirect: pageRedirect,
             attributes: {
-              'class': 'c-form',
+              'class': 'c-form'
             }
           }) %}
 
@@ -44,36 +44,47 @@
             {{ wheelformErrors['recaptcha'] is defined ? errorList(wheelformErrors['recaptcha']) }}
             {{ wheelformErrors['honeypot'] is defined ? errorList(wheelformErrors['honeypot']) }}
 
+            <input type="text" name="ledlampje" value="" hidden>
+
             {% for field in form.fields %}
               {% switch field.type %}
+                {% case "hidden" %}
+                <input type="text" name="{{field.name}}" value="{{ entry.title }}" hidden>
                 {% case "checkbox" %}
-                <ul class="o-list-bare c-field c-field--checkbox">
-                  {% for item in field.items %}
-                  <li class="o-list-bare__item">
-                    <label class="c-control c-control--checkbox">
-                      <input type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id="">
-                      <span class="c-control-indicator"></span>
-                      {{item}}
-                    </label>
-                  </li>
-                  {% endfor %}
-                </ul>
+                <div class="c-field-wrapper">
+                  <label class="c-label c-label--group" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <ul class="o-list-bare c-field c-field--checkbox" id="{{field.name}}">
+                    {% for item in field.items %}
+                    <li class="o-list-bare__item">
+                      <label class="c-control c-control--checkbox">
+                        <input type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id="" {% if field.required == true %}required{% endif %}>
+                        <span class="c-control-indicator"></span>
+                        {{item}}
+                      </label>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
                 {% case "radio" %}
-                <ul class="o-list-bare c-field c-field--radio">
-                  {% for item in field.items %}
-                  <li class="o-list-bare__item c-radio">
-                    <label class="c-control c-control--checkbox">
-                      <input type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id="">
-                      <span class="c-control-indicator"></span>
-                      {{item}}
-                    </label>
-                  </li>
-                  {% endfor %}
-                </ul>
+                <div class="c-field-wrapper">
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <ul class="o-list-bare c-field c-field--radio" id="{{field.name}}">
+                    {% for item in field.items %}
+                    <li class="o-list-bare__item">
+                      <label class="c-control c-control--radio">
+                        <input type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id="">
+                        <span class="c-control-indicator"></span>
+                        {{item}}
+                      </label>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
                 {% case "select" %}
                 <p class="c-field">
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
                   <span class="c-select">
-                    <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
+                    <select id="{{field.name}}" name="{{field.name}}" class="wf-field {{field.fieldClass}}" {% if field.required == true %}required{% endif %}>
                     {% for item in field.items %}
                       <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
                     {% endfor %}
@@ -82,28 +93,29 @@
                 </p>
                 {% case "file" %}
                 <p class="c-field">
-                  <label class="c-label">{{field.label}}</label>
-                  <input type="file" name="{{field.name}}" id="" class="c-input"/>
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <input type="file" name="{{field.name}}" id="{{field.name}}" class="c-input" {% if field.required == true %}required{% endif %}/>
                 </p>
                 {% case "textarea" %}
                 <p class="c-field">
-                  <label class="c-label">{{field.label}}</label>
-                  <textarea name="{{field.name}}" id="" class="c-textarea">{{ values[field.name] ?? '' }}</textarea>
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <textarea name="{{field.name}}" id="{{field.name}}" class="c-textarea"  {% if field.required == true %}required{% endif %}>{{ values[field.name] ?? '' }}</textarea>
                 </p>
                 {% case "list" %}
                 <p class="c-field">
-                  <label class="c-label">{{field.label}}</label>
-                  <input type="text" name="{{field.name}}[]" id="" class="c-input"/>
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <input type="text" name="{{field.name}}[]" id="{{field.name}}" class="c-input" {% if field.required == true %}required{% endif %}/>
                   <script>//Javascript to handle adding fields</script>
                 </p>
                 {% default %}
                 <p class="c-field">
-                  <label class="c-label">{{field.label}}</label>
-                  <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="" class="c-input"/>
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="{{field.name}}" class="c-input" {% if field.required == true %}required{% endif %}/>
                 </p>
               {% endswitch %}
               {{ wheelformErrors[field.name] is defined ? errorList(wheelformErrors[field.name]) }}
             {% endfor %}
+
             {% if form.recaptcha %}
               <p class="c-field">
                 <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -114,11 +126,11 @@
 
             {% if block.buttonText | length() %}
             <p class="c-field">
-              <button class="c-btn c-btn--secondary c-btn--large" id="submit">{{ block.buttonText }}</button>
+              <button class="c-btn c-btn--secondary c-btn--large" id="submit" action="submit">{{ block.buttonText }}</button>
             </p>
             {% else %}
             <p class="c-field">
-              <button class="c-btn c-btn--secondary c-btn--large" id="submit">Verstuur</button>
+              <button class="c-btn c-btn--secondary c-btn--large" id="submit" action="submit">Verstuur</button>
             </p>
             {% endif %}
           </form>
@@ -130,7 +142,6 @@
 </div>
 {% endfor %}
 {% else %}
-{% set pageRedirect = entry.url() %}
 <div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout">
@@ -164,7 +175,7 @@
             id: 1,
             redirect: pageRedirect,
             attributes: {
-              'class': 'c-form',
+              'class': 'c-form js-form',
             }
           }) %}
 
@@ -173,36 +184,47 @@
             {{ wheelformErrors['recaptcha'] is defined ? errorList(wheelformErrors['recaptcha']) }}
             {{ wheelformErrors['honeypot'] is defined ? errorList(wheelformErrors['honeypot']) }}
 
+            <input type="text" name="ledlampje" value="" hidden>
+
             {% for field in form.fields %}
               {% switch field.type %}
+                {% case "hidden" %}
+                <input type="text" name="{{field.name}}" value="{{ entry.title }}" hidden>
                 {% case "checkbox" %}
-                <ul class="o-list-bare c-field c-field--checkbox">
-                  {% for item in field.items %}
-                  <li class="o-list-bare__item">
-                    <label class="c-control c-control--checkbox">
-                      <input type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id="">
-                      <span class="c-control-indicator"></span>
-                      {{item}}
-                    </label>
-                  </li>
-                  {% endfor %}
-                </ul>
+                <div class="c-field-wrapper">
+                  <label class="c-label c-label--group" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <ul class="o-list-bare c-field c-field--checkbox" id="{{field.name}}">
+                    {% for item in field.items %}
+                    <li class="o-list-bare__item">
+                      <label class="c-control c-control--checkbox">
+                        <input type="checkbox" value="{{ item }}" {{values[field.name] is defined and item in values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}[]" id="" {% if field.required == true %}required{% endif %}>
+                        <span class="c-control-indicator"></span>
+                        {{item}}
+                      </label>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
                 {% case "radio" %}
-                <ul class="o-list-bare c-field c-field--radio">
-                  {% for item in field.items %}
-                  <li class="o-list-bare__item c-radio">
-                    <label class="c-control c-control--checkbox">
-                      <input type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id="">
-                      <span class="c-control-indicator"></span>
-                      {{item}}
-                    </label>
-                  </li>
-                  {% endfor %}
-                </ul>
+                <div class="c-field-wrapper">
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <ul class="o-list-bare c-field c-field--radio" id="{{field.name}}">
+                    {% for item in field.items %}
+                    <li class="o-list-bare__item">
+                      <label class="c-control c-control--radio">
+                        <input type="radio" value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? ' checked="checked"' : '' }} name="{{field.name}}" id="">
+                        <span class="c-control-indicator"></span>
+                        {{item}}
+                      </label>
+                    </li>
+                    {% endfor %}
+                  </ul>
+                </div>
                 {% case "select" %}
                 <p class="c-field">
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
                   <span class="c-select">
-                    <select id="wf-select" name="{{field.name}}" class="wf-field {{field.fieldClass}}">
+                    <select id="{{field.name}}" name="{{field.name}}" class="wf-field {{field.fieldClass}}" {% if field.required == true %}required{% endif %}>
                     {% for item in field.items %}
                       <option value="{{ item }}" {{values[field.name] is defined and item == values[field.name] ? 'selected="selected"' : '' }}>{{item}}</option>
                     {% endfor %}
@@ -211,28 +233,29 @@
                 </p>
                 {% case "file" %}
                 <p class="c-field">
-                  <label class="c-label">{{field.label}}</label>
-                  <input type="file" name="{{field.name}}" id="" class="c-input"/>
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <input type="file" name="{{field.name}}" id="{{field.name}}" class="c-input" {% if field.required == true %}required{% endif %}/>
                 </p>
                 {% case "textarea" %}
                 <p class="c-field">
-                  <label class="c-label">{{field.label}}</label>
-                  <textarea name="{{field.name}}" id="" class="c-textarea">{{ values[field.name] ?? '' }}</textarea>
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <textarea name="{{field.name}}" id="{{field.name}}" class="c-textarea"  {% if field.required == true %}required{% endif %}>{{ values[field.name] ?? '' }}</textarea>
                 </p>
                 {% case "list" %}
                 <p class="c-field">
-                  <label class="c-label">{{field.label}}</label>
-                  <input type="text" name="{{field.name}}[]" id="" class="c-input"/>
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <input type="text" name="{{field.name}}[]" id="{{field.name}}" class="c-input" {% if field.required == true %}required{% endif %}/>
                   <script>//Javascript to handle adding fields</script>
                 </p>
                 {% default %}
                 <p class="c-field">
-                  <label class="c-label">{{field.label}}</label>
-                  <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="" class="c-input"/>
+                  <label class="c-label" for="{{field.name}}">{{field.label}} {% if field.required == false %} <span class="c-badge">Optioneel</span> {% endif %}</label>
+                  <input type="{{field.type}}" value="{{ values[field.name] ?? '' }}" name="{{field.name}}" id="{{field.name}}" class="c-input" {% if field.required == true %}required{% endif %}/>
                 </p>
               {% endswitch %}
               {{ wheelformErrors[field.name] is defined ? errorList(wheelformErrors[field.name]) }}
             {% endfor %}
+
             {% if form.recaptcha %}
               <p class="c-field">
                 <script src="https://www.google.com/recaptcha/api.js"></script>

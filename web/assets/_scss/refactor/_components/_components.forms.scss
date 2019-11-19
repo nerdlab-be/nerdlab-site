@@ -3,7 +3,6 @@
    ================================== */
 
 .c-form {
-  // margin-top: $unit-large;
   max-width: $inuit-wrapper-width;
   position: relative;
   z-index: $z-index-gamma;
@@ -21,6 +20,15 @@
   & + & {
     margin-top: $unit;
   }
+
+  .c-field-wrapper + &,
+  & + .c-field-wrapper {
+    margin-top: $unit;
+  }
+}
+
+.c-field-wrapper + .c-field-wrapper {
+  margin-top: $unit;
 }
 
 .c-field--checkbox,
@@ -53,6 +61,17 @@
   }
 }
 
+.c-label--group {
+  font-weight: $medium;
+}
+
+.c-error {
+  color: $color-primary;
+  font-weight: $medium;
+  border: 1px solid $color-primary-xlight;
+  background-color: tint($color-primary-xlight,70);
+  padding: $unit-tiny;
+}
 
 .c-subscribe-form {
   position: relative;
