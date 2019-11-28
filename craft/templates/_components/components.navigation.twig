@@ -1,0 +1,60 @@
+{#
+  Navigation
+  ================
+#}
+
+{#
+  {% include '_components/components.navigation.html' with { options: { handle: '' } } %}
+#}
+
+{# -- Set Defaults -- #}
+{% set defaults = {
+  handle: ''
+} %}
+
+{% if options is defined %}
+  {% set options = options is defined ? defaults|merge(options) : defaults %}
+{% else %}
+  {% set options = defaults %}
+{% endif %}
+
+{# -- Module -- #}
+
+<nav>
+  <button aria-expanded="false" aria-controls="menu" class="c-navigation-toggle js-nav-toggle">
+    <svg viewbox="0 0 64 44" class="c-hamburger">
+      <line id="nav-line-1" x1="8" x2="56" y1="8" y2="8" class="c-hamburger__line" />
+      <line id="nav-line-2" x1="8" x2="56" y1="22" y2="22" class="c-hamburger__line" />
+      <line id="nav-line-3" x1="8" x2="56" y1="22" y2="22" class="c-hamburger__line" />
+      <line id="nav-line-4" x1="8" x2="56" y1="36" y2="36" class="c-hamburger__line" />
+    </svg>
+    <span>Menu</span>
+  </button>
+  <div class="c-navigation js-nav{% if currentSite != 'Nerdlab' %} c-navigation--group{% endif %}">
+    <ul class="o-list-bare c-navigation__list">
+      {% set content = options.handle.all() %}
+      {% for block in content %}
+      {% if block.externalLink %}
+      <li class="c-list-bare__item c-navigation__item">
+        <a href="{{ block.externalLink }}{{ block.itemID }}" class="c-navigation__link" target="_blank">{{ block.itemTitle }}</a>
+      </li>
+      {% else %}
+      {% set links = block.itemLink.all() %}
+      {% for link in links %}
+      {% set active = bodyClass == link.section.handle %}
+      {% if block.itemID %}
+      <li class="c-list-bare__item c-navigation__item">
+        <a href="{{ link.url }}{{ block.itemID }}" class="c-navigation__link js-nav-trigger-up">{{ block.itemTitle }}</a>
+      </li>
+      {% else %}
+      <li class="c-list-bare__item c-navigation__item{{ active( link.uri , 1,' is-active') }}{% if entry.uri == link.uri %} is-active{% endif %}">
+        <a href="{{ link.url }}{{ block.itemID }}" class="c-navigation__link js-nav-trigger-up">{{ block.itemTitle }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+

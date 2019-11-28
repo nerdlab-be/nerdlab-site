@@ -1,6 +1,6 @@
 
 
-{% set tickets = craft.entries().section('tickets').all() %}
+{% set tickets = craft.entries().section('mutationTickets').all() %}
 {% if tickets | length() %}
 <div class="c-marquee c-marquee--secondary" aria-hidden="true">
   <div class="c-marquee__content js-ticker">

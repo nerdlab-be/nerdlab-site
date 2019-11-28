@@ -3,11 +3,11 @@
    ========================================================================== */
 
 .c-hours {
-  margin-top: $unit;
+  // margin-top: $unit;
 
-  @include mq(medium) {
-    margin-top: $unit-large;
-  }
+  // @include mq(medium) {
+  //   margin-top: $unit-large;
+  // }
 }
 
   .c-hours__list {

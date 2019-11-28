@@ -1,6 +1,8 @@
 <div class="cd-schedule cd-schedule--short loading">
   <div class="timeline">
     <ul>
+      <li><span>12:00</span></li>
+      <li><span>12:30</span></li>
       <li><span>13:00</span></li>
       <li><span>13:30</span></li>
       <li><span>14:00</span></li>
@@ -19,7 +21,7 @@
 
   <div class="events">
     <ul>
-      {% set talks = craft.entries.section('programDetails').all() %}
+      {% set talks = craft.entries.section('mutationProgramDetails').all() %}
 
       <!-- MediaFoyer -->
       <li class="events-group">

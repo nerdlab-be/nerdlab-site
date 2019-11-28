@@ -1,13 +1,13 @@
 {#
- # The homepage template
+ # Project detail
  # ------------------------
 -#}
 
 {% extends "_layouts/nerdlab" %}
 
 {% block main %}
-{% include '_components/components.page-intro-home' %}
+{% include '_components/components.page-intro-project' %}
 {% include '_components/components.page-content' %}
-{% include '_components/components.agenda-home' %}
 {% include '_components/components.page-cta' %}
+{% include '_components/components.projects-overview-related' %}
 {% endblock %}

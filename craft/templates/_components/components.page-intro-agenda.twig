@@ -1,0 +1,154 @@
+{#
+  Intro
+  ================
+#}
+
+{#
+  {% include '_components/components.page-intro' %}
+#}
+
+{# -- Module -- #}
+{% if entry.pageIntro | length() %}
+<div class="o-row c-hero">
+  <div class="o-wrapper o-wrapper--huge c-hero">
+    <div class="o-layout o-layout--flush">
+      <div class="o-layout__item u-2/3@medium u-1/2@large">
+        <div class="o-box o-box--flush c-hero__body">
+          {# Breadcrumb #}
+          {% set parent = craft.entries.section('agenda').one() %}
+          <p class="c-breadcrumb">
+            <a href="{{ parent.url() }}" alt="{{ parent.title }}" class="c-breadcrumb__link">
+              {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parent.title }}
+            </a>
+          </p>
+          {# Page title #}
+          <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
+          {# Details #}
+          <ul class="o-list-bare c-list c-list--agenda c-faded">
+            {% if entry.eventDetails.dateStart | length() %}
+            <li class="o-list-bare__item c-list__item">
+              {% if entry.eventDetails.dateEnd | length %}
+              🗓️ &nbsp;{{ entry.eventDetails.dateStart | date('d F Y') | capitalize }}
+              {% if entry.eventDetails.dateEnd  | date('d F Y') == entry.eventDetails.dateStart  | date('d F Y') %}
+              {% else %}
+              tot
+              {{ entry.eventDetails.dateEnd | date('d F Y') | capitalize }}
+              {% endif %}
+              {% else %}
+              🗓️ &nbsp;{{ entry.eventDetails.dateStart | date('d F Y') | capitalize }}
+              {% endif %}
+            </li>
+            {% endif %}
+            {% if entry.eventDetails.hourStart | length() %}
+            <li class="o-list-bare__item c-list__item">
+              {% if entry.eventDetails.hourEnd | length %}
+              ⏰ &nbsp;{{ entry.eventDetails.hourStart | date('H:m') | capitalize }}
+              {% if entry.eventDetails.hourEnd | date('H:m') == entry.eventDetails.hourStart  | date('H:m') %}
+              {% else %}
+              tot
+              {{ entry.eventDetails.hourEnd | date('H:m') | capitalize }}
+              {% endif %}
+              {% else %}
+              ⏰ &nbsp;{{ entry.eventDetails.hourStart | date('H:m')| capitalize }}
+              {% endif %}
+            </li>
+            {% endif %}
+            {% if entry.eventDetails.location | length() %}
+            <li class="o-list-bare__item c-list__item">
+              📍 &nbsp;{{ entry.eventDetails.location }}
+            </li>
+            {% endif %}
+            {% if entry.eventDetails.state | length() %}
+            <li class="o-list-bare__item c-list__item">
+              🏷️ &nbsp;{{ entry.eventDetails.state | capitalize }}
+            </li>
+            {% endif %}
+            {% if entry.eventDetails.price | length() %}
+            <li class="o-list-bare__item c-list__item">
+              💶 &nbsp;{{ entry.eventDetails.price }}
+            </li>
+            {% endif %}
+            {% if entry.eventDetails.moreInfo | length() %}
+            <li class="o-list-bare__item c-list__item">
+              {% for block in entry.eventDetails.moreInfo.all() %}
+                {% switch block.type %}
+                {% case "internalLink" %}
+                  {% for link in block.internalLink.all() %}
+                  🔗 &nbsp;<a href="{{ link.url() }}">{{ link.title }}</a>
+                  {% endfor %}
+                {% case "externalLink" %}
+                🔗 &nbsp;<a href="{{ block.linkUrl }}" target="_blank" rel="nofollow">{{ block.linkTitle }}</a>
+                {% endswitch %}
+              {% endfor %}
+            </li>
+            {% endif %}
+          </ul>
+          <div class="s-editor s-editor--intro">
+            {% set intro = entry.pageIntro.intro.all() %}
+            {% for block in intro %}
+            {% switch block.type %}
+            {% case "paragraph" %}
+              {{ block.paragraph }}
+            {% case "subtitle" %}
+              <h2>{{ block.subtitle }}</h2>
+            {% case "button" %}
+              <p>
+                {% if block.buttonLinkExternal | length() %}
+                <a href="{{ block.buttonLinkExternal }}" class="c-btn c-btn--large c-btn--primary">
+                  {{ block.buttonText }}
+                </a>
+                {% else %}
+                {% if block.buttonLink | length() %}
+                {% for link in block.buttonLink.all() %}
+                <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
+                  {{ block.buttonText }}
+                </a>
+                {% endfor %}
+                {% endif %}
+                {% endif %}
+              </p>
+            {% endswitch %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if entry.pageIntro.visual | length() %}
+  {% for block in entry.pageIntro.visual.all() %}
+  {% switch block.type %}
+  {% case "image" %}
+    <div class="c-hero__visual">
+    {% for image in block.image.all() %}
+      <img
+        data-sizes="auto"
+        data-srcset="
+          {{ image.url(small) }} 350w,
+          {{ image.url(medium) }} 600w,
+          {{ image.url(large) }} 900w,
+          {{ image.url(xlarge) }} 1280w,
+          {{ image.url(huge) }} 1400w"
+        src="{{ image.url(thumb) }}"
+        alt="{{ image.altText }}"
+        class="c-media lazyload fade-in">
+      {% if image.credits | length() %}
+      <p>{{ image.credits }}</p>
+      {% endif %}
+      {% endfor %}
+    </div>
+  {% case "video" %}
+    <div class="c-hero__video">
+    {% for video in block.video.all() %}
+    {% for poster in block.videoAfbeelding.all() %}
+    <video src="{{ video.url }}" poster="{{ poster.url }}" autoplay loop></video>
+    {% endfor %}
+    {% endfor %}
+    {% if block.credits | length() %}
+      <p class="c-hero__credits">{{ block.credits }}</p>
+    {% endif %}
+    </div>
+  {% endswitch %}
+  {% endfor %}
+  {% endif %}
+</div>
+{% endif %}

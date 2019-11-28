@@ -1,0 +1,139 @@
+{#
+  Body
+  ================
+#}
+
+{#
+  {% include '_components/components.blog-detail.html' %}
+#}
+
+{# -- Module -- #}
+{% set intro = entry.mutationAbout.all() %}
+{# Breadcrumb #}
+{% set parent = craft.entries.section('blogOverview').one() %}
+<p class="c-breadcrumb">
+  <a href="{{ parent.url() }}" alt="{{ parent.title }}" class="c-breadcrumb__link">
+    {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parent.title }}
+  </a>
+</p>
+
+{% for item in intro %}
+{% switch item.type %}
+{% case "heading" %}
+<h1 class="c-title u-margin-bottom-small">
+  {{ item.heading }}
+</h1>
+<p class="c-faded">
+  {{ entry.postDate | date('l d F Y') }}
+</p>
+{% case "paragraph" %}
+<div class="s-editor s-editor--intro">
+  {{ item.paragraph }}
+</div>
+{% endswitch %}
+{% endfor %}
+<div class="s-editor s-editor--blog u-margin-top u-margin-top-large@medium">
+  {% for block in entry.blogDetail.all() %}
+  {% switch block.type %}
+  {% case "heading" %}
+  <h2 class="c-subtitle">{{ block.heading }}</h2>
+  {% case "subHeading" %}
+  <h3 class="c-section-title">{{ block.subHeading }}</h3>
+  {% case "paragraph" %}
+  {{ block.paragraph }}
+  {% case "quote" %}
+  <div class="u-spacer">
+    <blockquote {% if block.quoteLink | length() %}cite="{{ block.quoteLink }}"{% endif %}>
+      {{ block.quote }}
+      {% if block.author | length() %}
+      <footer>{{ block.author }}{% if block.authorInfo | length() %}, {{ block.authorInfo }}{% endif %}</footer>
+      {% endif %}
+    </blockquote>
+  </div>
+  {% case "textImage" %}
+  {% if block.heading | length() %}
+  <div class="u-spacer u-spacer--tiny">
+    <h2 class="c-subtitle">{{ block.heading }}</h2>
+  </div>
+  {% endif %}
+  <div class="o-layout o-layout--flush u-margin-top u-margin-bottom u-margin-top-large@large u-margin-bottom-large@large{% if block.layout == 'right' %} o-layout--reverse{% endif %}">
+    <div class="o-layout__item u-1/4@small u-2/5@large">
+      {% for image in block.image.all() %}
+        <div class="u-margin-bottom{% if block.layout == 'right' %} u-padding-left@small{% else %} u-padding-right@small{% endif %}">
+          <div class="c-image c-image--full">
+            <img
+              class="lazyload fade-in"
+              src="{{ image.url(thumb) }}"
+              data-sizes="auto"
+              data-srcset="{{ image.url(small) }} 1w,
+                            {{ image.url(medium) }} 301w,
+                            {{ image.url(large) }} 501w,
+                            {{ image.url(xlarge) }} 801w,
+                            {{ image.url(large) }} 1181w"
+              alt="{{ image.title }}">
+          </div>
+          {% if block.imageCaption | length() %}
+          <p class="c-small u-margin-top-small">{{ block.imageCaption }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="o-layout__item u-3/4@small u-3/5@large">
+      {{ block.paragraph }}
+    </div>
+  </div>
+  {% case "image" %}
+    {% for image in block.image.all() %}
+    <div class="u-margin-top u-margin-bottom u-margin-top-large@large u-margin-bottom-large@large">
+      <div class="o-crop o-crop--16:9 c-image">
+        <img
+          class="o-crop__content o-crop__content--center lazyload fade-in"
+          src="{{ image.url(thumb) }}"
+          data-sizes="auto"
+          data-srcset="{{ image.url(small) }} 1w,
+                      {{ image.url(medium) }} 301w,
+                      {{ image.url(large) }} 501w,
+                      {{ image.url(xlarge) }} 801w,
+                      {{ image.url(huge) }} 1181w"
+          alt="{{ image.title }}">
+      </div>
+      {% if block.caption | length() %}
+      <p class="c-small u-margin-top-small">{{ block.caption }}</p>
+      {% endif %}
+    </div>
+    {% endfor %}
+  {% case "video" %}
+  <div class="u-margin-top u-margin-bottom u-margin-top-large@large u-margin-bottom-large@large">
+    {% if block.heading | length() %}
+      <h2 class="c-subtitle u-margin-bottom-small c-title-image">{{ block.heading }}</h2>
+    {% endif %}
+    <div class="o-crop o-crop--16:9 c-video">
+      <iframe src="https://www.youtube.com/embed/{{ block.youtubeVideoId }}" class="o-ratio__content" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+    {% if block.caption | length() %}
+    <p class="c-small u-margin-top-small">{{ block.caption }}</p>
+    {% endif %}
+  </div>
+  {% case "imageGrid" %}
+  <div class="c-grid">
+  {% for image in block.images.all() %}
+  <div class="c-grid__item {{ cycle(['c-grid__item--one','c-grid__item--one','c-grid__item--three','c-grid__item--two','c-grid__item--one','c-grid__item--one','c-grid__item--three','c-grid__item--two','c-grid__item--three'], loop.index0) }}">
+    <div class="o-crop o-crop--1:1">
+      <img
+        class="o-crop__content o-crop__content--center lazyload fade-in"
+        src="{{ image.url(thumbSquare) }}"
+        data-sizes="auto"
+        data-srcset="{{ image.url(smallSquare) }} 1w,
+                      {{ image.url(mediumSquare) }} 301w,
+                      {{ image.url(largeSquare) }} 501w,
+                      {{ image.url(xlargeSquare) }} 801w"
+        alt="{{ image.title }}">
+    </div>
+  </div>
+  {% endfor %}
+  </div>
+  {% endswitch %}
+  {% endfor %}
+</div>
+
+

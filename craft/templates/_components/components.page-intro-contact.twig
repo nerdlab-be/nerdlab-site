@@ -51,41 +51,51 @@
       </div>
     </div>
   </div>
-  {% if entry.pageIntro.visual | length() %}
-  {% for block in entry.pageIntro.visual.all() %}
-  {% switch block.type %}
-  {% case "image" %}
-    <div class="c-hero__visual">
-    {% for image in block.image.all() %}
-      <img
-        data-sizes="auto"
-        data-srcset="
-          {{ image.url(small) }} 350w,
-          {{ image.url(medium) }} 600w,
-          {{ image.url(large) }} 900w,
-          {{ image.url(xlarge) }} 1280w,
-          {{ image.url(huge) }} 1400w"
-        src="{{ image.url(thumb) }}"
-        alt="{{ image.altText }}"
-        class="c-media lazyload fade-in">
-      {% if image.credits | length() %}
-      <p>{{ image.credits }}</p>
-      {% endif %}
-      {% endfor %}
+  <div class="c-hero__visual c-hero__visual--map">
+    <div class="c-map">
+      <div id="osm-map" class="c-map__background"></div>
     </div>
-  {% case "video" %}
-    <div class="c-hero__video">
-    {% for video in block.video.all() %}
-    {% for poster in block.videoAfbeelding.all() %}
-    <video src="{{ video.url }}" poster="{{ poster.url }}" autoplay loop></video>
-    {% endfor %}
-    {% endfor %}
-    {% if block.credits | length() %}
-      <p class="c-hero__credits">{{ block.credits }}</p>
-    {% endif %}
-    </div>
-  {% endswitch %}
-  {% endfor %}
-  {% endif %}
+  </div>
 </div>
 {% endif %}
+
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+<script>
+  // Where you want to render the map.
+  var element = document.getElementById('osm-map');
+
+  // Create Leaflet map on map element.
+  var map = L.map(element,
+    { zoomControl:false }
+  );
+
+  // Add OSM tile leayer to the Leaflet map.
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  }).addTo(map);
+
+  // Target's GPS coordinates.
+  var target = L.latLng('{{ entry.googleMap.lat }}', '{{ entry.googleMap.lng }}');
+
+  // Set map's center to target with zoom 14.
+  map.setView(target, 14);
+
+  map.scrollWheelZoom.disable();
+  map.dragging.disable();
+
+
+  L.circle([{{ entry.googleMap.lat }}, {{ entry.googleMap.lng }}], {
+    radius: (50),
+    color: "#F33",
+    fill: false
+  }).addTo(map);
+
+</script>

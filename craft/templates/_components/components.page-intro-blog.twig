@@ -8,7 +8,6 @@
 #}
 
 {# -- Module -- #}
-
 {% if entry.pageIntro | length() %}
 <div class="o-row c-hero">
   <div class="o-wrapper o-wrapper--huge c-hero">
@@ -16,10 +15,20 @@
       <div class="o-layout__item u-2/3@medium u-1/2@large">
         <div class="o-box o-box--flush c-hero__body">
           {# Breadcrumb #}
-          {% include "_elements/elements.breadcrumb" %}
+          {% set parent = craft.entries.section('blogOverview').one() %}
+          <p class="c-breadcrumb">
+            <a href="{{ parent.url() }}" alt="{{ parent.title }}" class="c-breadcrumb__link">
+              {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parent.title }}
+            </a>
+          </p>
           {# Page title #}
           <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
-          {# Intro #}
+          {# Details #}
+          <ul class="o-list-bare c-list c-list--agenda c-faded">
+            <li class="o-list-bare__item c-list__item">
+              ✏️ &nbsp;{{ entry.postDate | date('l d F Y') | capitalize }}
+            </li>
+          </ul>
           <div class="s-editor s-editor--intro">
             {% set intro = entry.pageIntro.intro.all() %}
             {% for block in intro %}

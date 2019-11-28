@@ -1,0 +1,309 @@
+{#
+  Related: Blog
+  ======================
+#}
+
+{#
+  {% include '_components/components.blog-related.html' %}
+#}
+
+{# -- Module -- #}
+<div class="o-row-large u-divider">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="s-editor">
+      <h2 class="c-title-graphic">{{ labels.labelOtherArticles }}</h2>
+    </div>
+
+    <ul class="o-layout c-card-group">
+      {% set entries = craft.entries.section('blog') %}
+      {% set params = craft.entries.section('blog') %}
+      {% set prevEntry = entry.getPrev(params) %}
+      {% set nextEntry = entry.getNext(params) %}
+
+      {% if nextEntry %}
+        <li class="o-layout__item u-1/2@small">
+          <article class="o-box o-box--flush">
+            {% if nextEntry.pageIntro | length() %}
+            <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+              {% if nextEntry.pageIntro.visual | length() %}
+              {% set visual = nextEntry.pageIntro.visual.all() %}
+              {% for block in visual %}
+              {% switch block.type %}
+              {% case "image" %}
+                {% for image in block.image.all() %}
+                <a href="{{ nextEntry.url }}" alt="{{ nextEntry.title }}">
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  </a>
+                {% endfor %}
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
+            <div class="s-editor s-editor--small">
+              <h2 class="u-margin-bottom-small">
+                <a href="{{ nextEntry.url }}">
+                  {{ nextEntry.title }}
+                </a>
+              </h2>
+              {# Details #}
+              <ul class="o-list-bare c-list c-list--agenda c-faded">
+                <li class="o-list-bare__item c-list__item">
+                  ✏️ &nbsp;{{ nextEntry.postDate | date('l d F Y') | capitalize }}
+                </li>
+              </ul>
+              {% if nextEntry.shortDescription | length() %}
+              <div class="s-editor">
+                <p>{{ nextEntry.shortDescription}}</p>
+                <p>
+                  <a href="{{ project.url }}">
+                    {{ labels.labelMoreInfo }}
+                  </a>
+                </p>
+              </div>
+              {% elseif nextEntry.pageIntro | length() %}
+              {% set intro = nextEntry.pageIntro.intro.all() %}
+              {% for block in intro %}
+              {% switch block.type %}
+              {% case "paragraph" %}
+                <p class="c-small u-margin-bottom-none">{{ block.paragraph | length > 125 ? block.paragraph | slice(3, 125) ~ '...' : block.paragraph }}</p>
+                <p>
+                  <a href="{{ nextEntry.url }}">
+                    {{ labels.labelMoreInfo }}
+                  </a>
+                </p>
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+          </article>
+        </li>
+      {% else %}
+        {% for block in entries.all() %}
+          {% if loop.first %}
+            <li class="o-layout__item u-1/2@small">
+              <article class="o-box o-box--flush">
+                {% if block.pageIntro | length() %}
+                <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+                  {% if block.pageIntro.visual | length() %}
+                  {% set visual = block.pageIntro.visual.all() %}
+                  {% for block in visual %}
+                  {% switch block.type %}
+                  {% case "image" %}
+                    {% for image in block.image.all() %}
+                    <a href="{{ block.url }}" alt="{{ block.title }}">
+                      <img
+                        data-sizes="auto"
+                        data-srcset="
+                          {{ image.url(small) }} 350w,
+                          {{ image.url(medium) }} 600w,
+                          {{ image.url(large) }} 900w,
+                          {{ image.url(xlarge) }} 1280w,
+                          {{ image.url(huge) }} 1400w"
+                        src="{{ image.url(thumb) }}"
+                        alt="{{ image.altText }}"
+                        class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                      </a>
+                    {% endfor %}
+                  {% endswitch %}
+                  {% endfor %}
+                  {% endif %}
+                </div>
+                {% endif %}
+                <div class="s-editor s-editor--small">
+                  <h2 class="u-margin-bottom-small">
+                    <a href="{{ block.url }}">
+                      {{ block.title }}
+                    </a>
+                  </h2>
+                  {# Details #}
+                  <ul class="o-list-bare c-list c-list--agenda c-faded">
+                    <li class="o-list-bare__item c-list__item">
+                      ✏️ &nbsp;{{ block.postDate | date('l d F Y') | capitalize }}
+                    </li>
+                  </ul>
+                  {% if block.shortDescription | length() %}
+                  <div class="s-editor">
+                    <p>{{ block.shortDescription}}</p>
+                    <p>
+                      <a href="{{ project.url }}">
+                        {{ labels.labelMoreInfo }}
+                      </a>
+                    </p>
+                  </div>
+                  {% elseif block.pageIntro | length() %}
+                  {% set intro = block.pageIntro.intro.all() %}
+                  {% for block in intro %}
+                  {% switch block.type %}
+                  {% case "paragraph" %}
+                    <p class="c-small u-margin-bottom-none">{{ block.paragraph | length > 125 ? block.paragraph | slice(3, 125) ~ '...' : block.paragraph }}</p>
+                    <p>
+                      <a href="{{ block.url }}">
+                        {{ labels.labelMoreInfo }}
+                      </a>
+                    </p>
+                  {% endswitch %}
+                  {% endfor %}
+                  {% endif %}
+                </div>
+              </article>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {% if prevEntry %}
+        <li class="o-layout__item u-1/2@small">
+          <article class="o-box o-box--flush">
+            {% if prevEntry.pageIntro | length() %}
+            <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+              {% if prevEntry.pageIntro.visual | length() %}
+              {% set visual = prevEntry.pageIntro.visual.all() %}
+              {% for block in visual %}
+              {% switch block.type %}
+              {% case "image" %}
+                {% for image in block.image.all() %}
+                <a href="{{ prevEntry.url }}" alt="{{ prevEntry.title }}">
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  </a>
+                {% endfor %}
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
+            <div class="s-editor s-editor--small">
+              <h2 class="u-margin-bottom-small">
+                <a href="{{ prevEntry.url }}">
+                  {{ prevEntry.title }}
+                </a>
+              </h2>
+              {# Details #}
+              <ul class="o-list-bare c-list c-list--agenda c-faded">
+                <li class="o-list-bare__item c-list__item">
+                  ✏️ &nbsp;{{ prevEntry.postDate | date('l d F Y') | capitalize }}
+                </li>
+              </ul>
+              {% if prevEntry.shortDescription | length() %}
+              <div class="s-editor">
+                <p>{{ prevEntry.shortDescription}}</p>
+                <p>
+                  <a href="{{ project.url }}">
+                    {{ labels.labelMoreInfo }}
+                  </a>
+                </p>
+              </div>
+              {% elseif prevEntry.pageIntro | length() %}
+              {% set intro = prevEntry.pageIntro.intro.all() %}
+              {% for block in intro %}
+              {% switch block.type %}
+              {% case "paragraph" %}
+                <p class="c-small u-margin-bottom-none">{{ block.paragraph | length > 125 ? block.paragraph | slice(3, 125) ~ '...' : block.paragraph }}</p>
+                <p>
+                  <a href="{{ prevEntry.url }}">
+                    {{ labels.labelMoreInfo }}
+                  </a>
+                </p>
+              {% endswitch %}
+              {% endfor %}
+              {% endif %}
+            </div>
+          </article>
+        </li>
+
+      {% else %}
+        {% for block in entries.all() %}
+        {% if loop.last %}
+          <li class="o-layout__item u-1/2@small">
+            <article class="o-box o-box--flush">
+              {% if block.pageIntro | length() %}
+              <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+                {% if block.pageIntro.visual | length() %}
+                {% set visual = block.pageIntro.visual.all() %}
+                {% for block in visual %}
+                {% switch block.type %}
+                {% case "image" %}
+                  {% for image in block.image.all() %}
+                  <a href="{{ block.url }}" alt="{{ block.title }}">
+                    <img
+                      data-sizes="auto"
+                      data-srcset="
+                        {{ image.url(small) }} 350w,
+                        {{ image.url(medium) }} 600w,
+                        {{ image.url(large) }} 900w,
+                        {{ image.url(xlarge) }} 1280w,
+                        {{ image.url(huge) }} 1400w"
+                      src="{{ image.url(thumb) }}"
+                      alt="{{ image.altText }}"
+                      class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                    </a>
+                  {% endfor %}
+                {% endswitch %}
+                {% endfor %}
+                {% endif %}
+              </div>
+              {% endif %}
+              <div class="s-editor s-editor--small">
+                <h2 class="u-margin-bottom-small">
+                  <a href="{{ block.url }}">
+                    {{ block.title }}
+                  </a>
+                </h2>
+                {# Details #}
+                <ul class="o-list-bare c-list c-list--agenda c-faded">
+                  <li class="o-list-bare__item c-list__item">
+                    ✏️ &nbsp;{{ block.postDate | date('l d F Y') | capitalize }}
+                  </li>
+                </ul>
+                {% if block.shortDescription | length() %}
+                <div class="s-editor">
+                  <p>{{ block.shortDescription}}</p>
+                  <p>
+                    <a href="{{ project.url }}">
+                      {{ labels.labelMoreInfo }}
+                    </a>
+                  </p>
+                </div>
+                {% elseif block.pageIntro | length() %}
+                {% set intro = block.pageIntro.intro.all() %}
+                {% for block in intro %}
+                {% switch block.type %}
+                {% case "paragraph" %}
+                  <p class="c-small u-margin-bottom-none">{{ block.paragraph | length > 125 ? block.paragraph | slice(3, 125) ~ '...' : block.paragraph }}</p>
+                  <p>
+                    <a href="{{ block.url }}">
+                      {{ labels.labelMoreInfo }}
+                    </a>
+                  </p>
+                {% endswitch %}
+                {% endfor %}
+                {% endif %}
+              </div>
+            </article>
+          </li>
+        {% endif %}
+        {% endfor %}
+      {% endif %}
+    </ul>
+  </div>
+</div>

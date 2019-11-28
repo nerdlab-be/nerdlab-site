@@ -48,26 +48,40 @@
     </div>
   </div>
   {% if entry.pageIntro.visual | length() %}
-  <div class="c-hero__visual c-hero__visual--home">
   {% for block in entry.pageIntro.visual.all() %}
+  {% switch block.type %}
+  {% case "image" %}
+    <div class="c-hero__visual">
     {% for image in block.image.all() %}
-    <img
-      data-sizes="auto"
-      data-srcset="
-        {{ image.url(small) }} 350w,
-        {{ image.url(medium) }} 600w,
-        {{ image.url(large) }} 900w,
-        {{ image.url(xlarge) }} 1280w,
-        {{ image.url(huge) }} 1400w"
-      src="{{ image.url(thumb) }}"
-      alt="{{ image.altText }}"
-      class="c-media lazyload fade-in">
-    {% if image.credits | length() %}
-    <p>{{ image.credits }}</p>
-    {% endif %}
+      <img
+        data-sizes="auto"
+        data-srcset="
+          {{ image.url(small) }} 350w,
+          {{ image.url(medium) }} 600w,
+          {{ image.url(large) }} 900w,
+          {{ image.url(xlarge) }} 1280w,
+          {{ image.url(huge) }} 1400w"
+        src="{{ image.url(thumb) }}"
+        alt="{{ image.altText }}"
+        class="c-media lazyload fade-in">
+      {% if image.credits | length() %}
+      <p>{{ image.credits }}</p>
+      {% endif %}
+      {% endfor %}
+    </div>
+  {% case "video" %}
+    <div class="c-hero__video">
+    {% for video in block.video.all() %}
+    {% for poster in block.videoAfbeelding.all() %}
+    <video src="{{ video.url }}" poster="{{ poster.url }}" autoplay loop></video>
     {% endfor %}
+    {% endfor %}
+    {% if block.credits | length() %}
+      <p class="c-hero__credits">{{ block.credits }}</p>
+    {% endif %}
+    </div>
+  {% endswitch %}
   {% endfor %}
-  </div>
   {% endif %}
 </div>
 {% endif %}

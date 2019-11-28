@@ -350,7 +350,6 @@
   }
 }
 
-
 .s-editor--small {
   p,
   ul {
@@ -399,6 +398,22 @@
   p:first-child {
     @include font-size($h5,1.5);
     max-width: 28em;
+  }
+
+  a:not(.c-btn) {
+    &,
+    &:visited {
+      color: $color-tertiary;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-tertiary-light;
+    }
+
+    &:focus {
+      outline: $outline;
+    }
   }
 
   @include mq(small) {
