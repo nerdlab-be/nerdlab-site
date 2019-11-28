@@ -20,89 +20,61 @@
 
 {# -- Module -- #}
 
-
 {% paginate craft.entries.section('events')
-  .orderBy('date asc')
-  .limit(6)
+  .inReverse()
+  .limit(15)
   as paginate, pageEntries
 %}
 
-<ul class="o-layout c-card-group">
-{% for event in pageEntries if event.date|date('Ymd') < now|date('Ymd') %}
-  <li class="o-layout__item u-1/2@small u-1/3@medium">
-    <article class="o-box o-box--flush">
-      {% if event.pageIntro | length() %}
-      <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-        {% if event.pageIntro.visual | length() %}
-        {% set visual = event.pageIntro.visual.all() %}
-        {% for block in visual %}
-        {% switch block.type %}
-        {% case "image" %}
-          {% for image in block.image.all() %}
-          <a href="{{ event.url }}" alt="{{ event.title }}">
-            <img
-              data-sizes="auto"
-              data-srcset="
-                {{ image.url(small) }} 350w,
-                {{ image.url(medium) }} 600w,
-                {{ image.url(large) }} 900w,
-                {{ image.url(xlarge) }} 1280w,
-                {{ image.url(huge) }} 1400w"
-              src="{{ image.url(thumb) }}"
-              alt="{{ image.altText }}"
-              class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+<div class="o-row-large u-divider" id="archive">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="s-editor">
+      <h2 class="c-title-graphic">{{ labels.labelPassed }}</h2>
+    </div>
+    <ul class="c-para o-list-bare c-list c-list--divider u-margin-top">
+    {% for event in pageEntries if event.eventDetails.dateStart|date('Ymd') < now|date('Ymd') or event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') < now|date('Ymd') %}
+      <li class="s-editor s-editor--small o-list-bare__item c-list__item">
+        <article class="o-box o-box--flush">
+          <h3 class="u-margin-bottom-small">
+            <a href="{{ event.url }}">
+              {% if event.eventDetails.dateEnd | length %}
+              {{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+              {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
+              {% else %}
+              tot
+              {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}:
+              {% endif %}
+              {% else %}
+              {{ event.eventDetails.dateStart | date('d F Y') | capitalize }}:
+              {% endif %}
+              {{ event.title }}
             </a>
-          {% endfor %}
-        {% endswitch %}
-        {% endfor %}
-        {% endif %}
-      </div>
+          </h3>
+        </article>
+      </li>
+    {% endfor %}
+    </ul>
+    {# Build pagination interface if more than 1 page #}
+    {% if paginate.totalPages > 1 %}
+    <ul class="o-list-bare c-pagination">
+      {% if paginate.prevUrl %}
+        <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ paginate.prevUrl }}#archive" class="c-pagination__link">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} <span>{{ labels.labelPrevious }}</span></a></li>
       {% endif %}
-      <div class="s-editor s-editor--small">
-        <h2 class="u-margin-bottom-small">
-          <a href="{{ event.url }}">
-            {{ event.title }}
-          </a>
-        </h2>
-        {% if event.customDate | length() %}
-        <p class="c-faded u-margin-bottom-tiny">
-          {{ event.customDate | capitalize }}
-        </p>
-        {% else %}
-        <p class="c-faded u-margin-bottom-tiny">
-          {{ event.date | date('l d F Y') | capitalize }}
-        </p>
-        {% endif %}
-        {% for block in event.body.all() %}
-        {% switch block.type %}
-        {% case "lead" %}
-        {{ block.lead }}
-        {% endswitch %}
-        {% endfor %}
-      </div>
-    </article>
-  </li>
-{% endfor %}
-</ul>
-{# Build pagination interface if more than 1 page #}
-{% if paginate.totalPages > 1 %}
-<ul class="o-list-bare c-pagination">
-  {% if paginate.prevUrl %}
-    <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ paginate.prevUrl }}#archive" class="c-pagination__link">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} <span>{{ labels.labelPrevious }}</span></a></li>
-  {% endif %}
 
-  {% for page, url in paginate.getPrevUrls(3) %}
-    <li class="o-list-bare__item c-pagination__item"><a href="{{ url }}#archive" class="c-pagination__link">{{ page }}</a></li>
-  {% endfor %}
+      {% for page, url in paginate.getPrevUrls(3) %}
+        <li class="o-list-bare__item c-pagination__item"><a href="{{ url }}#archive" class="c-pagination__link">{{ page }}</a></li>
+      {% endfor %}
 
-  <li class="o-list-bare__item c-pagination__item c-pagination__item--current">{{ paginate.currentPage }}</li>
+      <li class="o-list-bare__item c-pagination__item c-pagination__item--current">{{ paginate.currentPage }}</li>
 
-  {% for page, url in paginate.getNextUrls(3) %}
-    <li class="o-list-bare__item c-pagination__item"><a href="{{ url }}#archive"  class="c-pagination__link">{{ page }}</a></li>
-  {% endfor %}
+      {% for page, url in paginate.getNextUrls(3) %}
+        <li class="o-list-bare__item c-pagination__item"><a href="{{ url }}#archive"  class="c-pagination__link">{{ page }}</a></li>
+      {% endfor %}
 
-  {% if paginate.nextUrl %}
-    <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ paginate.nextUrl }}#archive"  class="c-pagination__link"><span>{{ labels.labelNext }}</span> {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
-  {% endif %}
-</ul>
-{% endif %}
+      {% if paginate.nextUrl %}
+        <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ paginate.nextUrl }}#archive"  class="c-pagination__link"><span>{{ labels.labelNext }}</span> {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+</div>

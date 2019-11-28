@@ -15,7 +15,7 @@ $nav-breakpoint: 950px;
 
   @include mq($until: $nav-breakpoint) {
     position: fixed;
-    z-index: $z-index-alpha;
+    z-index: 4;
     overflow: scroll;
     background-color: $color-tertiary;
     top: 0;
@@ -271,7 +271,7 @@ $nav-breakpoint: 950px;
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: $z-index-beta;
+  z-index: 5;
   border: 0;
   transition: $global-transition;
   font-weight: $bold;

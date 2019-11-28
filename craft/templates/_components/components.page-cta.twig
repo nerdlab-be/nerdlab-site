@@ -27,12 +27,12 @@
       {% if item.buttonLink | length %}
         {% for link in item.buttonLink.all() %}
         <a href="{{ link.url() }}" class="c-btn c-btn--large c-btn--primary">
-          {{ item.buttonTitle }}
+          {{ item.buttonText }}
         </a>
         {% endfor %}
       {% else %}
         <a href="{{ item.buttonURL }}" class="c-btn c-btn--large c-btn--primary">
-          {{ item.buttonTitle }}
+          {{ item.buttonText }}
         </a>
       {% endif %}
       </p>

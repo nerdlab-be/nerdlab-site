@@ -1,13 +1,18 @@
 {#
- # The homepage template
+ # 404
  # ------------------------
 -#}
 
 {% extends "_layouts/nerdlab" %}
 
+{% set title = "404"|t %}
+
+{% if entry is not defined %}
+  {% set entry = craft.entries.uri('404').one() %}
+{% endif %}
+
 {% block main %}
 {% include '_components/components.page-intro-home' %}
 {% include '_components/components.page-content' %}
-{% include '_components/components.agenda-home' %}
 {% include '_components/components.page-cta' %}
 {% endblock %}

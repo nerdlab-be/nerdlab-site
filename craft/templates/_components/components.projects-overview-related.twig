@@ -1,0 +1,102 @@
+{#
+  Portfolio overview
+  ================
+#}
+
+{#
+  {% include '_components/components.projects-overview.html' %}
+#}
+
+{# -- Module -- #}
+{% set pageEntries = craft.entries
+  .section('projects')
+  .all()
+  | supersort('sortAs', '{projectDetails.dateStart.date}')
+%}
+
+{% set related = "false" %}
+{% for project in pageEntries if project.projectDetails.dateStart|date('Ymd') <= now|date('Ymd') and project.projectDetails.dateEnd|date('Ymd') >= now|date('Ymd') or project.projectDetails.dateStart|date('Ymd') > now|date('Ymd') %}
+{% if entry.title != project.title %}
+{% set related = "true" %}
+{% endif %}
+{% endfor %}
+{% if related == "true" %}
+<div class="o-row-large u-divider">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="s-editor">
+      <h2 class="c-title-graphic">{{ labels.labelOtherProjects }}</h2>
+    </div>
+    <ul class="o-layout c-card-group">
+    {% for project in pageEntries if project.projectDetails.dateStart|date('Ymd') <= now|date('Ymd') and project.projectDetails.dateEnd|date('Ymd') >= now|date('Ymd') or project.projectDetails.dateStart|date('Ymd') > now|date('Ymd') %}
+      {% if entry.title != project.title %}
+      <li class="o-layout__item u-1/2@small u-1/3@medium">
+        <article class="o-box o-box--flush">
+          {% if project.pageIntro | length() %}
+          <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+            {% if project.pageIntro.visual | length() %}
+            {% set visual = project.pageIntro.visual.all() %}
+            {% for block in visual %}
+            {% switch block.type %}
+            {% case "image" %}
+              {% for image in block.image.all() %}
+              <a href="{{ project.url }}" alt="{{ project.title }}">
+                <img
+                  data-sizes="auto"
+                  data-srcset="
+                    {{ image.url(small) }} 350w,
+                    {{ image.url(medium) }} 600w,
+                    {{ image.url(large) }} 900w,
+                    {{ image.url(xlarge) }} 1280w,
+                    {{ image.url(huge) }} 1400w"
+                  src="{{ image.url(thumb) }}"
+                  alt="{{ image.altText }}"
+                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                </a>
+              {% endfor %}
+            {% endswitch %}
+            {% endfor %}
+            {% endif %}
+          </div>
+          {% endif %}
+          <div class="s-editor s-editor--small">
+            <h2 class="u-margin-bottom-small">
+              <a href="{{ project.url }}">
+                {{ project.title }}
+              </a>
+            </h2>
+            {# Details #}
+            <ul class="o-list-bare c-list c-list--agenda c-faded">
+              {% if project.projectDetails.dateStart | length() %}
+              <li class="o-list-bare__item c-list__item">
+                {% if project.projectDetails.dateEnd | length %}
+                🗓️ &nbsp;{{ project.projectDetails.dateStart | date('d F Y') | capitalize }}
+                {% if project.projectDetails.dateEnd  | date('d F Y') == project.projectDetails.dateStart  | date('d F Y') %}
+                {% else %}
+                tot
+                {{ project.projectDetails.dateEnd | date('d F Y') | capitalize }}
+                {% endif %}
+                {% else %}
+                🗓️ &nbsp;{{ project.projectDetails.dateStart | date('d F Y') | capitalize }}
+                {% endif %}
+              </li>
+              {% endif %}
+              {% if project.projectDetails.location | length() %}
+              <li class="o-list-bare__item c-list__item">
+                📍 &nbsp;{{ project.projectDetails.location }}
+              </li>
+              {% endif %}
+              {% if project.projectDetails.state | length() %}
+              <li class="o-list-bare__item c-list__item">
+                🏷️ &nbsp;{{ project.projectDetails.state | capitalize }}
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </article>
+      </li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}

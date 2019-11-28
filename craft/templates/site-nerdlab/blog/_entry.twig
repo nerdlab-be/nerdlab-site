@@ -1,13 +1,14 @@
 {#
- # The homepage template
+ # The blog detail template
  # ------------------------
 -#}
 
 {% extends "_layouts/nerdlab" %}
 
 {% block main %}
-{% include '_components/components.page-intro-home' %}
+{% include '_components/components.page-intro-blog' %}
 {% include '_components/components.page-content' %}
-{% include '_components/components.agenda-home' %}
+{% include '_components/components.blog-related' %}
 {% include '_components/components.page-cta' %}
 {% endblock %}
+

@@ -438,6 +438,14 @@
 
 }
 
+.c-list--agenda {
+  @include font-size($h6);
+
+  @include mq(medium) {
+    @include font-size($h4);
+  }
+}
+
 .s-mutation .c-list {
   @include font-size($h5);
 
@@ -453,6 +461,12 @@
     }
 
     .c-list--divider & + & {
+      border-top: 1px solid $color-neutral-xlight;
+    }
+
+    .c-list--agenda & + & {
+      margin-top: $unit-tiny;
+      padding-top: $unit-tiny;
       border-top: 1px solid $color-neutral-xlight;
     }
 
@@ -529,6 +543,21 @@
     .o-layout__item:last-child {
       border-right: 0;
     }
+  }
+}
+
+.c-card-group-row {
+  margin-top: $unit;
+
+  @include mq(small) {
+    > .o-layout__item + .o-layout__item > .o-box {
+      padding-top: $unit-large;
+      border-top: 1px solid $color-neutral-xlight;
+    }
+  }
+
+  @include mq(medium) {
+
   }
 }
 

@@ -1,0 +1,41 @@
+{% set storeHours = entry.storeHours[1:]|merge(entry.storeHours[0:1]) %}
+{#
+  Openingsuren
+  ================
+#}
+
+{#
+  {% include '_components/components.hours.html' %}
+#}
+
+{# -- Module -- #}
+<div class="o-row-large u-padding-top">
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@medium">
+        <div class="o-box c-card c-card--beta s-editor">
+          <h2>Openingsuren</h2>
+        </div>
+      </div>
+      <div class="o-layout__item u-3/4@medium u-2/3@large u-push-1/4@medium u-push-1/3@large">
+        <div class="o-box c-card c-card--gamma">
+          <div class="c-hours s-editor">
+            <ul class="o-list-bare c-hours__list">
+              {% for day in storeHours %}
+              <li>
+                <strong>{{ day.name | capitalize }}:</strong>
+                {% if day.isBlank %}
+                  Gesloten
+                {% else %}
+                  {{ day.open|time('H:i') }} - {{ day.close|time('H:i') }}
+                {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

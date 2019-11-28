@@ -27,7 +27,7 @@
 
   <div class="events">
     <ul>
-      {% set talks = craft.entries.section('programDetails').all() %}
+      {% set talks = craft.entries.section('mutationProgramDetails').all() %}
 
       <!-- Kopergieterij -->
       <li class="events-group">
@@ -75,11 +75,6 @@
           {% for item in talks %}
           {% if item.mutationRoom == "nerdlab" %}
           {% include '_components/components.timetable-entry.html' %}
-            {% for page in program.all() %}
-            <a href="{{ page.url }}#{{ item.title | camel }}">
-              <span class="event-name">{{ item.title }} <span class="event-label">{{ mutationGlobals.timelineLabelSpreker }}</span></span>
-            </a>
-            {% endfor %}
           </li>
           {% endif %}
           {% endfor %}

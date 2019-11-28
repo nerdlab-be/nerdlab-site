@@ -3,10 +3,12 @@
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--middle o-layout--reverse">
       <div class="o-layout__item u-2/3@medium s-editor s-editor--footer">
-        {% set conditions = craft.entries.section('conditions') %}
-        {% set privacy = craft.entries.section('privacyStatement') %}
-        {% set cookies = craft.entries.section('cookieStatement') %}
-        <p class="c-small">©{{ 'now'|date('Y') }} Nerdlab, {% for page in conditions.all() %}<a href="{{ page.url }}">{{ page.title }}</a>{% endfor %}, {% for page in privacy.all() %}<a href="{{ page.url }}">{{ page.title }}</a>{% endfor %}, {% for page in cookies.all() %}<a href="{{ page.url }}">{{ page.title }}</a>{% endfor %}</p>
+        <p class="c-small">
+          ©{{ 'now'|date('Y') }} Nerdlab,
+          {% for page in interface.footerLinks.all() %}
+          {% for link in page.itemLink.all() %}<a href="{{ link.url() }}">{{ page.itemTitle }}</a>{% endfor %}{% if loop.last %}{% else %},{% endif %}
+          {% endfor %}
+        </p>
       </div>
       <div class="o-layout__item u-1/3@medium">
         <img src="/assets/images/svg/vlaanderen-logo.svg" alt="Vlaanderen - verbeelding werkt" class="c-logo-vlaanderen">

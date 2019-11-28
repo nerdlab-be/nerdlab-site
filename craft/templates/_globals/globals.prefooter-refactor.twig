@@ -4,6 +4,11 @@
       <div class="o-layout__item u-1/2@small u-1/4@medium u-order-two">
         <div class="s-editor s-editor--small">
           {{ interface.address }}
+          {% for page in interface.contactLink.all() %}
+          <p>
+            <a href="{{ page.url() }}">{{ page.title }}</a>
+          </p>
+          {% endfor %}
         </div>
       </div>
       <div class="o-layout__item u-1/2@small u-1/4@medium s-editor s-editor--small u-order-two">

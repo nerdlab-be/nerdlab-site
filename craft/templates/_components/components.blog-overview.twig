@@ -1,0 +1,117 @@
+{#
+  Blog Overview
+  ================
+#}
+
+{#
+  {% include '_components/components.blog-overview.html' %}
+#}
+
+{# -- Module -- #}
+{% paginate craft.entries().section('blog').orderBy('postDate desc') as paginate, entries %}
+
+<div class="o-row-large">
+  <div class="o-wrapper o-wrapper--huge">
+    <ul class="o-layout o-layout--small c-card-group-row">
+      {% for item in entries %}
+      <li class="o-layout__item">
+        <article class="o-box o-box--flush js-link-expand-holder">
+          <div class="o-layout">
+            <div class="o-layout__item u-1/3@small u-1/2@large">
+              {% if item.pageIntro | length() %}
+              <div class="o-crop o-crop--16:9 c-media-border">
+                {% if item.pageIntro.visual | length() %}
+                {% set visual = item.pageIntro.visual.all() %}
+                {% for block in visual %}
+                {% switch block.type %}
+                {% case "image" %}
+                  {% for image in block.image.all() %}
+                  <a href="{{ item.url }}" alt="{{ item.title }}">
+                    <img
+                      data-sizes="auto"
+                      data-srcset="
+                        {{ image.url(small) }} 350w,
+                        {{ image.url(medium) }} 600w,
+                        {{ image.url(large) }} 900w,
+                        {{ image.url(xlarge) }} 1280w,
+                        {{ image.url(huge) }} 1400w"
+                      src="{{ image.url(thumb) }}"
+                      alt="{{ image.altText }}"
+                      class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                    </a>
+                  {% endfor %}
+                {% endswitch %}
+                {% endfor %}
+                {% endif %}
+              </div>
+              {% endif %}
+            </div>
+            <div class="o-layout__item u-2/3@small u-1/2@large">
+              <div class="o-box o-box--flush s-editor s-editor--small">
+                <h2 class="u-margin-bottom-small">
+                  <a href="{{ item.url }}">
+                    {{ item.title }}
+                  </a>
+                </h2>
+                {# Details #}
+                <ul class="o-list-bare c-list c-list--agenda c-faded">
+                  <li class="o-list-bare__item c-list__item">
+                    ✏️ &nbsp;{{ item.postDate | date('l d F Y') | capitalize }}
+                  </li>
+                </ul>
+                {% if item.shortDescription | length() %}
+                <div class="s-editor">
+                  <p>{{ item.shortDescription}}</p>
+                  <p>
+                    <a href="{{ item.url }}">
+                      {{ labels.labelMoreInfo }}
+                    </a>
+                  </p>
+                </div>
+                {% elseif item.pageIntro | length() %}
+                {% set intro = item.pageIntro.intro.all() %}
+                {% for block in intro %}
+                {% switch block.type %}
+                {% case "paragraph" %}
+                  <p class="c-small u-margin-bottom-none">{{ block.paragraph | length > 125 ? block.paragraph | slice(3, 125) ~ '...' : block.paragraph }}</p>
+                  <p>
+                    <a href="{{ item.url }}">
+                      {{ labels.labelMoreInfo }}
+                    </a>
+                  </p>
+                {% endswitch %}
+                {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+    {# Build pagination interface if more than 1 page #}
+    {% if paginate.totalPages > 1 %}
+    <ul class="o-list-bare c-pagination">
+      {% if paginate.prevUrl %}
+        <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ paginate.prevUrl }}#archive" class="c-pagination__link">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} <span>{{ labels.labelPrevious }}</span></a></li>
+      {% endif %}
+
+      {% for page, url in paginate.getPrevUrls(2) %}
+        <li class="o-list-bare__item c-pagination__item"><a href="{{ url }}#archive" class="c-pagination__link">{{ page }}</a></li>
+      {% endfor %}
+
+      <li class="o-list-bare__item c-pagination__item c-pagination__item--current">{{ paginate.currentPage }}</li>
+
+      {% for page, url in paginate.getNextUrls(2) %}
+        <li class="o-list-bare__item c-pagination__item"><a href="{{ url }}#archive"  class="c-pagination__link">{{ page }}</a></li>
+      {% endfor %}
+
+      {% if paginate.nextUrl %}
+        <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ paginate.nextUrl }}#archive"  class="c-pagination__link"><span>{{ labels.labelNext }}</span> {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+</div>
+
+
