@@ -22,7 +22,7 @@
     <div class="s-editor s-editor--title">
       <h2>{{ labels.labelOngoing }}</h2>
     </div>
-    <ul class="o-layout c-card-group">
+    <ul class="o-layout c-card-group-two">
     {% for project in pageEntries if project.projectDetails.dateStart|date('Ymd') <= now|date('Ymd') and project.projectDetails.dateEnd|date('Ymd') >= now|date('Ymd') %}
       <li class="o-layout__item u-1/2@medium">
         <article class="o-box o-box--flush">
