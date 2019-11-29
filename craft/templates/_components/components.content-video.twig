@@ -1,16 +1,16 @@
 {# {% include '_components/components.content-video' %} #}
 
-<div class="o-row-large">
+<div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
-    <div class="s-editor">
-      <h2 class="c-title-graphic">{{ block.heading }}</h2>
+    <div class="s-editor s-editor--title u-margin-bottom-small">
+      <h2>{{ block.heading }}</h2>
     </div>
     {% if block.youtubeId | length() %}
-    <div class="o-crop o-crop--fill o-crop--16:9">
+    <div class="o-crop o-crop--fill o-crop--16:9 c-media c-media--shadow">
       <iframe class="o-crop__content" src="https://www.youtube.com/embed/{{ block.youtubeId }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     {% elseif block.vimeoId | length() %}
-    <div class="o-crop o-crop--fill o-crop--16:9">
+    <div class="o-crop o-crop--fill o-crop--16:9 c-media c-media--shadow">
       <iframe class="o-crop__content " src="https://player.vimeo.com/video/{{ block.vimeoId }}" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
     </div>
     {% elseif block.video | length() %}

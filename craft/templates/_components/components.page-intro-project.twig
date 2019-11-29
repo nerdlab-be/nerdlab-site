@@ -132,7 +132,7 @@
         alt="{{ image.altText }}"
         class="c-media lazyload fade-in">
       {% if image.credits | length() %}
-      <p>{{ image.credits }}</p>
+      <p class="c-hero__credits">{{ image.credits }}</p>
       {% endif %}
       {% endfor %}
     </div>
