@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbae528a2a10c67c85914556e99061f6",
+    "content-hash": "b92e814ff2abb5a3a20e71cd5b582566",
     "packages": [
         {
             "name": "barrelstrength/sprout-active",
@@ -1079,11 +1079,11 @@
         },
         {
             "name": "ether/simplemap",
-            "version": "3.7.2",
+            "version": "3.7.4",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/c2fe3ab3bf7a864b4bd49d667c5f5eb341c6fa78",
-                "reference": "c2fe3ab3bf7a864b4bd49d667c5f5eb341c6fa78",
+                "url": "https://api.github.com/repos/ethercreative/simplemap/zipball/b195ee49925417997c9b7db4a230b545cb790297",
+                "reference": "b195ee49925417997c9b7db4a230b545cb790297",
                 "shasum": ""
             },
             "require": {
@@ -1119,7 +1119,7 @@
                 "source": "https://github.com/ethercreative/simplemap",
                 "issues": "https://github.com/ethercreative/simplemap/issues"
             },
-            "time": "2019-11-19T13:21:24+00:00"
+            "time": "2019-12-03T13:32:19+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",

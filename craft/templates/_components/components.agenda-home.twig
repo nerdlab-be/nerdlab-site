@@ -30,7 +30,7 @@
 {% set homeEvents = "false" %}
 {% for event in pageEntries if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd') %}{% set homeEvents = "true" %}{% endfor %}
 {% if homeEvents == "true" %}
-<div class="o-row-large">
+<div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
     <div class="s-editor s-editor--title">
       <h2>{{ labels.labelUpcomingEvent }}</h2>
