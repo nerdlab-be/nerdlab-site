@@ -1,12 +1,10 @@
 
-<footer class="o-row-large">
+<footer class="o-row-large c-footer-alpha">
   <div class="o-wrapper o-wrapper--huge">
     <div class="o-layout o-layout--middle o-layout--reverse">
       <div class="o-layout__item u-2/3@medium s-editor s-editor--footer">
         <p class="c-small">©{{ 'now'|date('Y') }} Nerdlab,
-          {% for page in interface.footerLinks.all() %}
-          {% for link in page.itemLink.all() %}<a href="{{ link.url() }}">{{ page.itemTitle }}</a>{% endfor %}{% if loop.last %}{% else %},{% endif %}
-          {% endfor %}
+          <a href="https://nerdlab.be/algemene-voorwaarden">Algemene voorwaarden</a>, <a href="https://nerdlab.be/cookies">Cookies</a>, <a href="https://nerdlab.be/privacy">Privacy</a>
         </p>
       </div>
       <div class="o-layout__item u-1/3@medium">
