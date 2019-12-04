@@ -9717,6 +9717,11 @@ table {
   }
 }
 
+.c-footer-alpha {
+  position: relative;
+  z-index: 1;
+}
+
 .u-divider {
   margin-top: 48px;
 }

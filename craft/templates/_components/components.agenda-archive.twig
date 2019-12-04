@@ -21,8 +21,7 @@
 {# -- Module -- #}
 
 {% paginate craft.entries.section('events')
-  .inReverse()
-  .limit(15)
+  .limit(10)
   as paginate, pageEntries
 %}
 
@@ -32,7 +31,7 @@
       <h2 class="c-title-graphic">{{ labels.labelPassed }}</h2>
     </div>
     <ul class="c-para o-list-bare c-list c-list--divider u-margin-top">
-    {% for event in pageEntries if event.eventDetails.dateStart|date('Ymd') < now|date('Ymd') or event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') < now|date('Ymd') %}
+    {% for event in pageEntries if event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') < now|date('Ymd') or event.eventDetails.dateEnd == null and event.eventDetails.dateStart|date('Ymd') < now|date('Ymd')  %}
       <li class="s-editor s-editor--small o-list-bare__item c-list__item">
         <article class="o-box o-box--flush">
           <h3 class="u-margin-bottom-small">

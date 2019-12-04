@@ -35,8 +35,8 @@
                   {{ block.buttonText }}
                 </a>
                 {% else %}
-                {% if block.buttonLink | length() %}
-                {% for link in block.buttonLink.all() %}
+                {% if block.buttonLinkInternal | length() %}
+                {% for link in block.buttonLinkInternal.all() %}
                 <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
                   {{ block.buttonText }}
                 </a>
