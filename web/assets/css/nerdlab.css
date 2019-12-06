@@ -1903,17 +1903,11 @@ table {
   .c-navigation__item + .c-navigation__item {
     margin-left: 24px;
   }
-  .c-navigation__item:last-child {
-    margin-left: 12px;
-  }
 }
 
 @media (min-width: 75em) {
   .c-navigation__item + .c-navigation__item {
     margin-left: 48px;
-  }
-  .c-navigation__item:last-child {
-    margin-left: 24px;
   }
 }
 
@@ -1940,21 +1934,6 @@ table {
   background-color: #331433;
 }
 
-.c-navigation__item:last-child .c-navigation__link {
-  border: 2px solid #331433;
-  background-color: #331433;
-  color: #FFFFFF;
-}
-
-.c-navigation__item:last-child .c-navigation__link:before {
-  width: 100%;
-  height: 100%;
-  left: 6px;
-  top: 6px;
-  z-index: -1;
-  background-color: rgba(51, 20, 51, 0.2);
-}
-
 .c-navigation__link, .c-navigation__link:visited {
   color: #331433;
 }
@@ -1964,19 +1943,6 @@ table {
   text-decoration: underline;
   -webkit-text-decoration-color: #1C0E24;
           text-decoration-color: #1C0E24;
-}
-
-.c-navigation__item:last-child .c-navigation__link:hover,
-.c-navigation__item:last-child .c-navigation__link:focus {
-  text-decoration: none;
-  top: 3px;
-  left: 3px;
-}
-
-.c-navigation__item:last-child .c-navigation__link:hover:before,
-.c-navigation__item:last-child .c-navigation__link:focus:before {
-  left: 0;
-  top: 0;
 }
 
 .c-navigation__link:focus {
