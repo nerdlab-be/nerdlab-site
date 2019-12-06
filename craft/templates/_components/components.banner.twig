@@ -7,33 +7,35 @@
         <article class="o-box o-box--flush js-link-expand-holder c-card c-card--epsilon">
           <div class="o-layout o-layout--flush {{ cycle(['','o-layout--reverse'], loop.index0) }}">
             <div class="o-layout__item u-1/3@small u-1/2@large c-fit-holder">
-              {% for link in item.linkPage.all() %}
-              {% if link.pageIntro | length() %}
-                {% if link.pageIntro.visual | length() %}
-                {% set visual = link.pageIntro.visual.all() %}
-                {% for block in visual %}
-                {% switch block.type %}
-                {% case "image" %}
-                  {% for image in block.image.all() %}
-                  <a href="{{ link.url }}" alt="{{ item.title }}" class="c-fit">
-                    <img
-                      data-sizes="auto"
-                      data-srcset="
-                        {{ image.url(small) }} 350w,
-                        {{ image.url(medium) }} 600w,
-                        {{ image.url(large) }} 900w,
-                        {{ image.url(xlarge) }} 1280w,
-                        {{ image.url(huge) }} 1400w"
-                      src="{{ image.url(thumb) }}"
-                      alt="{{ image.altText }}"
-                      class="c-media c-media--fit lazyload fade-in">
-                    </a>
-                  {% endfor %}
-                {% endswitch %}
-                {% endfor %}
-                {% endif %}
-              {% endif %}
+              {% if item.linkExternal | length() %}
+              <a href="{{ item.linkExternal }}" alt="{{ item.title }}" class="c-fit">
+              {% elseif item.linkInternal | length() %}
+              {% for link in item.linkInternal.all() %}
+              <a href="{{ link.url }}" alt="{{ item.title }}" class="c-fit">
               {% endfor %}
+              {% else %}
+              <div class="c-fit">
+              {% endif %}
+                {% for image in item.image.all() %}
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="c-media c-media--fit lazyload fade-in">
+                {% endfor %}
+              {% if item.linkExternal | length() %}
+              </a>
+              {% elseif item.linkInternal | length() %}
+              </a>
+              {% else %}
+              </div>
+              {% endif %}
             </div>
             <div class="o-layout__item u-2/3@small u-1/2@large">
               <div class="o-box s-editor s-editor--small">
@@ -43,11 +45,18 @@
                 <div class="s-editor">
                   {{ item.paragraph }}
                   <p>
-                    {% for link in item.linkPage.all() %}
+                    {% if item.linkExternal | length() %}
+                    <a href="{{ item.linkExternal }}" class="c-btn c-btn--secondary">
+                      {{ item.linkText }}
+                    </a>
+                    {% endif %}
+                    {% if item.linkInternal | length() %}
+                    {% for link in item.linkInternal.all() %}
                     <a href="{{ link.url }}" class="c-btn c-btn--secondary">
                       {{ item.linkText }}
                     </a>
                     {% endfor %}
+                    {% endif %}
                   </p>
                 </div>
               </div>
