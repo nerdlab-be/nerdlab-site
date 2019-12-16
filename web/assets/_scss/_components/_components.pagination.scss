@@ -6,7 +6,8 @@
   display: flex;
   justify-content: flex-start;
   margin-top: $unit + $unit-tiny;
-  border-top: 1px solid $color-neutral-xlight;
+  padding-top: $unit + $unit-tiny;
+  border-top: 6px dotted $color-neutral-xlight;
   @include font-size($h6);
 
   .s-mutation & {
@@ -33,7 +34,13 @@
 }
 
   .c-pagination__item {
+    border: 2px solid $white;
     display: block;
+
+    & + & {
+      border-left: 0;
+
+    }
 
     .c-pagination--center  & + & {
       margin-left: 0;

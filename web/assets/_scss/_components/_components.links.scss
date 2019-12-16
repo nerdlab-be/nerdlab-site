@@ -21,6 +21,18 @@
   }
 }
 
+.c-link--neutral {
+  &,
+  &:visited {
+    color: $color-neutral;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
 .c-link--none {
   text-decoration: underline;
 }

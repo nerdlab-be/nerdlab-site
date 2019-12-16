@@ -46,6 +46,12 @@
             {% case "image" %}
               {% for image in block.image.all() %}
               <a href="{{ event.url }}" alt="{{ event.title }}">
+                {% if image.getMimeType() == 'image/gif' %}
+                <img
+                  src="{{ image.url() }}"
+                  alt="{{ image.altText }}"
+                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                {% else %}
                 <img
                   data-sizes="auto"
                   data-srcset="
@@ -58,6 +64,7 @@
                   alt="{{ image.altText }}"
                   class="o-crop__content o-crop__content--center c-media lazyload fade-in">
                 </a>
+                {% endif %}
               {% endfor %}
             {% endswitch %}
             {% endfor %}

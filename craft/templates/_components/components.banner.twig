@@ -17,6 +17,12 @@
               <div class="c-fit">
               {% endif %}
                 {% for image in item.image.all() %}
+                  {% if image.getMimeType() == 'image/gif' %}
+                  <img
+                    src="{{ image.url() }}"
+                    alt="{{ image.altText }}"
+                    class="c-media c-media--fit lazyload fade-in">
+                  {% else %}
                   <img
                     data-sizes="auto"
                     data-srcset="
@@ -28,6 +34,7 @@
                     src="{{ image.url(thumb) }}"
                     alt="{{ image.altText }}"
                     class="c-media c-media--fit lazyload fade-in">
+                  {% endif %}
                 {% endfor %}
               {% if item.linkExternal | length() %}
               </a>

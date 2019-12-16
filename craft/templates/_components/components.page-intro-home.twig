@@ -53,6 +53,12 @@
   {% case "image" %}
     <div class="c-hero__visual">
     {% for image in block.image.all() %}
+      {% if image.getMimeType() == 'image/gif' %}
+      <img
+        src="{{ image.url() }}"
+        alt="{{ image.altText }}"
+        class="c-media lazyload fade-in">
+      {% else %}
       <img
         data-sizes="auto"
         data-srcset="
@@ -64,6 +70,7 @@
         src="{{ image.url(thumb) }}"
         alt="{{ image.altText }}"
         class="c-media lazyload fade-in">
+      {% endif %}
       {% if image.credits | length() %}
       <p class="c-hero__credits">{{ image.credits }}</p>
       {% endif %}

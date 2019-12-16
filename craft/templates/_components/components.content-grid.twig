@@ -9,6 +9,12 @@
           {% if gridItem.gridImage | length() %}
           {% for image in gridItem.gridImage.all() %}
           <div class="o-crop o-crop--16:9 c-media c-media--shadow u-margin-bottom">
+          {% if image.getMimeType() == 'image/gif' %}
+          <img
+            src="{{ image.url() }}"
+            alt="{{ image.altText }}"
+            class="o-crop__content lazyload fade-in">
+          {% else %}
           <img
             data-sizes="auto"
             data-srcset="
@@ -20,6 +26,7 @@
             src="{{ image.url(thumb) }}"
             alt="{{ image.altText }}"
             class="o-crop__content lazyload fade-in">
+          {% endif %}
           </div>
           {% if image.credits | length() %}
           <p>{{ image.credits }}</p>

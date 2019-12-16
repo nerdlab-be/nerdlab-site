@@ -27,6 +27,12 @@
                 {% case "image" %}
                   {% for image in block.image.all() %}
                   <a href="{{ item.url }}" alt="{{ item.title }}">
+                    {% if image.getMimeType() == 'image/gif' %}
+                    <img
+                      src="{{ image.url() }}"
+                      alt="{{ image.altText }}"
+                      class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                    {% else %}
                     <img
                       data-sizes="auto"
                       data-srcset="
@@ -38,7 +44,8 @@
                       src="{{ image.url(thumb) }}"
                       alt="{{ image.altText }}"
                       class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                    </a>
+                    {% endif %}
+                  </a>
                   {% endfor %}
                 {% endswitch %}
                 {% endfor %}

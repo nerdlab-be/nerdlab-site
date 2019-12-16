@@ -5,6 +5,12 @@
 // Add a divider line between 2 elements when they follow each other
 .u-divider {
   & + & {
-    border-top: 2px solid $color-neutral-xxlight;
+    margin-top: -$unit;
+  }
+
+  @include mq(medium) {
+    & + & {
+      margin-top: -$unit-large;
+    }
   }
 }

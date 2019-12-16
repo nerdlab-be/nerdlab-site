@@ -4,6 +4,12 @@
   <div class="o-wrapper o-wrapper--huge">
     {% if block.singleImage | length() %}
     {% for image in block.singleImage.all() %}
+    {% if image.getMimeType() == 'image/gif' %}
+    <img
+      src="{{ image.url() }}"
+      alt="{{ image.altText }}"
+      class="c-media c-media--shadow lazyload fade-in">
+    {% else %}
     <img
       data-sizes="auto"
       data-srcset="
@@ -15,6 +21,7 @@
       src="{{ image.url(thumb) }}"
       alt="{{ image.altText }}"
       class="c-media c-media--shadow lazyload fade-in">
+    {% endif %}
     {% if image.credits | length() %}
     <p>{{ image.credits }}</p>
     {% endif %}
