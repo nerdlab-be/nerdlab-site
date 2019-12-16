@@ -44,10 +44,10 @@
   {% case "photo" %}
   {% for type in item.photo.all() %}
     <div class="c-cta__visual">
-      {% if image.getMimeType() == 'image/gif' %}
+      {% if type.getMimeType() == 'image/gif' %}
       <img
-        src="{{ image.url() }}"
-        alt="{{ image.altText }}"
+        src="{{ type.url() }}"
+        alt="{{ type.altText }}"
         class="c-media lazyload fade-in">
       {% else %}
       <img
@@ -70,10 +70,10 @@
   {% case "video" %}
   {% for type in item.placeholder.all() %}
     <div class="c-cta__visual">
-      {% if image.getMimeType() == 'image/gif' %}
+      {% if type.getMimeType() == 'image/gif' %}
       <img
-        src="{{ image.url() }}"
-        alt="{{ image.altText }}"
+        src="{{ type.url() }}"
+        alt="{{ type.altText }}"
         class="c-media lazyload fade-in">
       {% else %}
       <img
