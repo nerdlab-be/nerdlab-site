@@ -6,6 +6,8 @@
   margin-bottom: $unit-small;
 
   @include mq(medium) {
+    @include font-size($h5);
+
     .s-mutation & {
       @include font-size($h4);
     }
@@ -14,7 +16,7 @@
 
   .c-breadcrumb__link {
     text-decoration: none;
-    font-weight: $bold;
+    font-weight: $medium;
 
     &,
     &:visited {

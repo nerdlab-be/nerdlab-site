@@ -1,0 +1,110 @@
+/* ==================================
+   #LINKS
+   ================================== */
+
+.c-link {
+  transition: color $transition;
+  font-weight: $medium;
+
+  &,
+  &:visited {
+    color: $color-secondary;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+
+  &:focus {
+    outline: $outline;
+  }
+}
+
+.c-link--none {
+  text-decoration: underline;
+}
+
+.c-link--title,
+.s-editor a:not(.c-btn).c-link--title {
+  font-weight: $bold;
+}
+
+.c-link--bare {
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.c-link--ticket {
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+
+  > .c-bold {
+    text-decoration: underline;
+  }
+
+  &,
+  &:visited {
+    color: $white;
+  }
+
+  &:hover,
+  &:focus {
+    color: $white;
+
+    > .c-bold {
+      color: $color-tertiary;
+    }
+  }
+
+  &.is-soldout:hover,
+  &.is-soldout:focus {
+    color: $white;
+
+    > .c-bold {
+      color: $white;
+    }
+  }
+
+
+  &.is-soldout > .c-bold {
+    text-decoration: none;
+  }
+}
+
+// Skip to navigation link
+.c-link--skip {
+  @include font-size($tiny,1.2);
+  font-weight: $bold;
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  display: block;
+  text-decoration: none;
+  transition: color $duration $easing;
+
+  &,
+  &:visited,
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+
+  &:focus {
+    width: auto;
+    height: auto;
+    top: calc(100% + #{$unit-small});
+    left: 0;
+    white-space: nowrap;
+    background-color: $color-primary;
+    padding: $unit-tiny/2;
+  }
+}

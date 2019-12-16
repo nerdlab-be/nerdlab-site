@@ -14,6 +14,19 @@
   fill: currentColor;
 }
 
+.c-icon--intro {
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: $unit;
+  bottom: 0;
+
+  @include mq(large) {
+    width: 2em;
+    height: 2em;
+    margin-top: $unit + $unit-small;
+  }
+}
+
 .c-icon--plus {
   width: .75em;
   height: .75em;

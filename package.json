@@ -28,7 +28,6 @@
     "inuitcss-plugin-responsive-wrapper": "^1.0.1",
     "inuitcss-plugin-row": "^1.0.2",
     "jquery": "^3.4.1",
-    "jquery-match-height": "^0.7.2",
     "lazysizes": "^5.1.2",
     "picturefill": "^3.0.3",
     "sass-mq": "^5.0.1",

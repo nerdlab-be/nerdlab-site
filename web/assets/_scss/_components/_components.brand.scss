@@ -21,12 +21,16 @@ $mutation-height: 225px;
   &:focus {
     outline: $outline;
   }
+
+  // @include mq(large) {
+  //   flex-direction: row;
+  // }
 }
 
   .c-brand__mark {
     .c-brand--nerdlab & {
-      width: $nerdlab-width/3.5;
-      height: $nerdlab-height/3.5;
+      width: $nerdlab-width/4;
+      height: $nerdlab-height/4;
     }
 
     .c-brand--mutation & {
@@ -36,12 +40,14 @@ $mutation-height: 225px;
 
     @include mq(medium) {
       .c-brand--mutation & {
-        width: $mutation-width/3;
-        height: $mutation-height/3;
+        width: $nerdlab-width/4.5;
+        height: $nerdlab-height/4.5;
       }
     }
 
     @include mq(large) {
+      margin-right: $unit-tiny;
+
       .c-brand--nerdlab & {
         width: $nerdlab-width/3;
         height: $nerdlab-height/3;
@@ -50,12 +56,13 @@ $mutation-height: 225px;
   }
 
   .c-brand__text {
-    @include font-size($h5 - 3px);
-    text-transform: uppercase;
+    @include font-size($h4 - 3px);
     font-weight: $bold;
+    text-shadow: 2px 2px 0 rgba($color-neutral,.2);
+    // text-transform: uppercase;
 
     @include mq(large) {
-      @include font-size($h5);
+      @include font-size($h3);
     }
   }
 

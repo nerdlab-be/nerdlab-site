@@ -65,7 +65,6 @@ const paths = {
     'web/assets/_vendor/picturefill/dist/picturefill.js',
     'web/assets/_vendor/lazysizes/lazysizes.js',
     'web/assets/_vendor/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
-    'web/assets/_vendor/jquery-match-height/jquery.matchHeight.js',
     'web/assets/js/_plugins/*.js',
     'web/assets/js/_scripts/*.js'
   ],
@@ -75,7 +74,6 @@ const paths = {
     'web/assets/_vendor/picturefill/dist/picturefill.js',
     'web/assets/_vendor/lazysizes/lazysizes.js',
     'web/assets/_vendor/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
-    'web/assets/_vendor/jquery-match-height/jquery.matchHeight.js',
     'web/assets/js/_plugins/*.js',
     'web/assets/js/_scripts/*.js'
   ],
