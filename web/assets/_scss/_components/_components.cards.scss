@@ -5,21 +5,28 @@
 .c-card {
   display: flex;
   flex-direction: column;
-  // height: 100%;
   background-color: $white;
   border: 2px solid $color-neutral;
-
-  .s-mutation & {
-    outline: 6px dashed $color-tertiary-dark;
-    position: relative;
-    z-index: $z-index-beta;
-    border-radius: 0;
-  }
 
   .o-layout {
     position: relative;
   }
 }
+
+.c-card-link {
+  position: relative;
+}
+
+  .c-card-link__link {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 
   .c-card--alpha {
     position: relative;

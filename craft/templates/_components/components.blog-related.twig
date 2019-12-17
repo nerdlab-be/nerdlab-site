@@ -22,7 +22,7 @@
 
       {% if nextEntry %}
         <li class="o-layout__item u-1/2@small">
-          <article class="o-box o-box--flush">
+          <article class="o-box o-box--flush c-card-link">
             {% if nextEntry.pageIntro | length() %}
             <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
               {% if nextEntry.pageIntro.visual | length() %}
@@ -31,19 +31,24 @@
               {% switch block.type %}
               {% case "image" %}
                 {% for image in block.image.all() %}
-                <a href="{{ nextEntry.url }}" alt="{{ nextEntry.title }}">
-                  <img
-                    data-sizes="auto"
-                    data-srcset="
-                      {{ image.url(small) }} 350w,
-                      {{ image.url(medium) }} 600w,
-                      {{ image.url(large) }} 900w,
-                      {{ image.url(xlarge) }} 1280w,
-                      {{ image.url(huge) }} 1400w"
-                    src="{{ image.url(thumb) }}"
-                    alt="{{ image.altText }}"
-                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                  </a>
+                {% if image.getMimeType() == 'image/gif' %}
+                <img
+                  src="{{ image.url() }}"
+                  alt="{{ image.altText }}"
+                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                {% else %}
+                <img
+                  data-sizes="auto"
+                  data-srcset="
+                    {{ image.url(small) }} 350w,
+                    {{ image.url(medium) }} 600w,
+                    {{ image.url(large) }} 900w,
+                    {{ image.url(xlarge) }} 1280w,
+                    {{ image.url(huge) }} 1400w"
+                  src="{{ image.url(thumb) }}"
+                  alt="{{ image.altText }}"
+                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  {% endif %}
                 {% endfor %}
               {% endswitch %}
               {% endfor %}
@@ -52,7 +57,7 @@
             {% endif %}
             <div class="s-editor s-editor--small">
               <h2 class="u-margin-bottom-small">
-                <a href="{{ nextEntry.url }}">
+                <a href="{{ nextEntry.url }}" class="c-card-link__link">
                   {{ nextEntry.title }}
                 </a>
               </h2>
@@ -92,7 +97,7 @@
         {% for block in entries.all() %}
           {% if loop.first %}
             <li class="o-layout__item u-1/2@small">
-              <article class="o-box o-box--flush">
+              <article class="o-box o-box--flush c-card-link">
                 {% if block.pageIntro | length() %}
                 <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
                   {% if block.pageIntro.visual | length() %}
@@ -101,19 +106,24 @@
                   {% switch block.type %}
                   {% case "image" %}
                     {% for image in block.image.all() %}
-                    <a href="{{ block.url }}" alt="{{ block.title }}">
-                      <img
-                        data-sizes="auto"
-                        data-srcset="
-                          {{ image.url(small) }} 350w,
-                          {{ image.url(medium) }} 600w,
-                          {{ image.url(large) }} 900w,
-                          {{ image.url(xlarge) }} 1280w,
-                          {{ image.url(huge) }} 1400w"
-                        src="{{ image.url(thumb) }}"
-                        alt="{{ image.altText }}"
-                        class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                      </a>
+                    {% if image.getMimeType() == 'image/gif' %}
+                    <img
+                      src="{{ image.url() }}"
+                      alt="{{ image.altText }}"
+                      class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                    {% else %}
+                    <img
+                      data-sizes="auto"
+                      data-srcset="
+                        {{ image.url(small) }} 350w,
+                        {{ image.url(medium) }} 600w,
+                        {{ image.url(large) }} 900w,
+                        {{ image.url(xlarge) }} 1280w,
+                        {{ image.url(huge) }} 1400w"
+                      src="{{ image.url(thumb) }}"
+                      alt="{{ image.altText }}"
+                      class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                    {% endif %}
                     {% endfor %}
                   {% endswitch %}
                   {% endfor %}
@@ -122,7 +132,7 @@
                 {% endif %}
                 <div class="s-editor s-editor--small">
                   <h2 class="u-margin-bottom-small">
-                    <a href="{{ block.url }}">
+                    <a href="{{ block.url }}" class="c-card-link__link">
                       {{ block.title }}
                     </a>
                   </h2>
@@ -164,7 +174,7 @@
 
       {% if prevEntry %}
         <li class="o-layout__item u-1/2@small">
-          <article class="o-box o-box--flush">
+          <article class="o-box o-box--flush c-card-link">
             {% if prevEntry.pageIntro | length() %}
             <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
               {% if prevEntry.pageIntro.visual | length() %}
@@ -173,26 +183,24 @@
               {% switch block.type %}
               {% case "image" %}
                 {% for image in block.image.all() %}
-                <a href="{{ prevEntry.url }}" alt="{{ prevEntry.title }}">
-                  {% if image.getMimeType() == 'image/gif' %}
-                  <img
-                    src="{{ image.url() }}"
-                    alt="{{ image.altText }}"
-                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                  {% else %}
-                  <img
-                    data-sizes="auto"
-                    data-srcset="
-                      {{ image.url(small) }} 350w,
-                      {{ image.url(medium) }} 600w,
-                      {{ image.url(large) }} 900w,
-                      {{ image.url(xlarge) }} 1280w,
-                      {{ image.url(huge) }} 1400w"
-                    src="{{ image.url(thumb) }}"
-                    alt="{{ image.altText }}"
-                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                  {% endif %}
-                </a>
+                {% if image.getMimeType() == 'image/gif' %}
+                <img
+                  src="{{ image.url() }}"
+                  alt="{{ image.altText }}"
+                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                {% else %}
+                <img
+                  data-sizes="auto"
+                  data-srcset="
+                    {{ image.url(small) }} 350w,
+                    {{ image.url(medium) }} 600w,
+                    {{ image.url(large) }} 900w,
+                    {{ image.url(xlarge) }} 1280w,
+                    {{ image.url(huge) }} 1400w"
+                  src="{{ image.url(thumb) }}"
+                  alt="{{ image.altText }}"
+                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                {% endif %}
                 {% endfor %}
               {% endswitch %}
               {% endfor %}
@@ -201,7 +209,7 @@
             {% endif %}
             <div class="s-editor s-editor--small">
               <h2 class="u-margin-bottom-small">
-                <a href="{{ prevEntry.url }}">
+                <a href="{{ prevEntry.url }}" class="c-card-link__link">
                   {{ prevEntry.title }}
                 </a>
               </h2>
@@ -242,7 +250,7 @@
         {% for block in entries.all() %}
         {% if loop.last %}
           <li class="o-layout__item u-1/2@small">
-            <article class="o-box o-box--flush">
+            <article class="o-box o-box--flush c-card-link">
               {% if block.pageIntro | length() %}
               <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
                 {% if block.pageIntro.visual | length() %}
@@ -251,19 +259,24 @@
                 {% switch block.type %}
                 {% case "image" %}
                   {% for image in block.image.all() %}
-                  <a href="{{ block.url }}" alt="{{ block.title }}">
-                    <img
-                      data-sizes="auto"
-                      data-srcset="
-                        {{ image.url(small) }} 350w,
-                        {{ image.url(medium) }} 600w,
-                        {{ image.url(large) }} 900w,
-                        {{ image.url(xlarge) }} 1280w,
-                        {{ image.url(huge) }} 1400w"
-                      src="{{ image.url(thumb) }}"
-                      alt="{{ image.altText }}"
-                      class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                    </a>
+                  {% if image.getMimeType() == 'image/gif' %}
+                  <img
+                    src="{{ image.url() }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  {% else %}
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  {% endif %}
                   {% endfor %}
                 {% endswitch %}
                 {% endfor %}
@@ -272,7 +285,7 @@
               {% endif %}
               <div class="s-editor s-editor--small">
                 <h2 class="u-margin-bottom-small">
-                  <a href="{{ block.url }}">
+                  <a href="{{ block.url }}" class="c-card-link__link">
                     {{ block.title }}
                   </a>
                 </h2>

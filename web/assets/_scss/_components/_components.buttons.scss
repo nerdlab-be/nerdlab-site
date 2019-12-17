@@ -24,9 +24,13 @@
   margin: 0; /* [4] */
   cursor: pointer; /* [5] */
   padding: $unit-small $unit $unit-small + 1px;
-  transition: $global-transition;
+  transition: color $transition, background-color $transition;
   font-weight: $medium;
   border: 0;
+
+  &:focus {
+    outline-offset: 2px;
+  }
 }
 
 

@@ -143,6 +143,10 @@ $nav-breakpoint: 950px;
       font-weight: $medium;
     }
 
+    .is-active > &:focus {
+      outline: 2px dotted $color-neutral;
+    }
+
     @include mq($nav-breakpoint) {
       @include font-size($small);
 
