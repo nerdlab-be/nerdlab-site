@@ -157,10 +157,15 @@
   color: $white;
   background-color: $color-secondary;
   border-radius: 0;
+  transition: color $transition, background-color $transition;
 
   &:hover,
   &:focus {
     background-color: $color-neutral;
+  }
+
+  &:focus {
+    outline-offset: 2px;
   }
 
   .s-mutation & {

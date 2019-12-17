@@ -15,7 +15,7 @@
     <ul class="o-layout o-layout--small c-card-group-row">
       {% for item in entries %}
       <li class="o-layout__item">
-        <article class="o-box o-box--flush js-link-expand-holder">
+        <article class="o-box o-box--flush c-card-link">
           <div class="o-layout">
             <div class="o-layout__item u-1/3@small u-1/2@large">
               {% if item.pageIntro | length() %}
@@ -26,26 +26,24 @@
                 {% switch block.type %}
                 {% case "image" %}
                   {% for image in block.image.all() %}
-                  <a href="{{ item.url }}" alt="{{ item.title }}">
-                    {% if image.getMimeType() == 'image/gif' %}
-                    <img
-                      src="{{ image.url() }}"
-                      alt="{{ image.altText }}"
-                      class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                    {% else %}
-                    <img
-                      data-sizes="auto"
-                      data-srcset="
-                        {{ image.url(small) }} 350w,
-                        {{ image.url(medium) }} 600w,
-                        {{ image.url(large) }} 900w,
-                        {{ image.url(xlarge) }} 1280w,
-                        {{ image.url(huge) }} 1400w"
-                      src="{{ image.url(thumb) }}"
-                      alt="{{ image.altText }}"
-                      class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                    {% endif %}
-                  </a>
+                  {% if image.getMimeType() == 'image/gif' %}
+                  <img
+                    src="{{ image.url() }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  {% else %}
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  {% endif %}
                   {% endfor %}
                 {% endswitch %}
                 {% endfor %}
@@ -56,7 +54,7 @@
             <div class="o-layout__item u-2/3@small u-1/2@large">
               <div class="o-box o-box--flush s-editor s-editor--small">
                 <h2 class="u-margin-bottom-small">
-                  <a href="{{ item.url }}">
+                  <a href="{{ item.url }}" class="c-card-link__link">
                     {{ item.title }}
                   </a>
                 </h2>
