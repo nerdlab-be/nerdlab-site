@@ -32,7 +32,7 @@
           {% set pageRedirect = page.uri %}
 
           {% set form = wheelform.form({
-            id: 1,
+            id: block.form.id,
             redirect: pageRedirect,
             attributes: {
               'class': 'c-form'
@@ -172,7 +172,7 @@
           {% set pageRedirect = page.uri %}
 
           {% set form = wheelform.form({
-            id: 1,
+            id: block.form.id,
             redirect: pageRedirect,
             attributes: {
               'class': 'c-form js-form',
