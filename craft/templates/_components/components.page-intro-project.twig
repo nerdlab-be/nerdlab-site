@@ -42,14 +42,14 @@
             {% if entry.projectDetails.hourStart | length() %}
             <li class="o-list-bare__item c-list__item">
               {% if entry.projectDetails.hourEnd | length %}
-              ⏰ &nbsp;{{ entry.projectDetails.hourStart | date('H:m') | capitalize }}
-              {% if entry.projectDetails.hourEnd | date('H:m') == entry.projectDetails.hourStart  | date('H:m') %}
+              ⏰ &nbsp;{{ entry.projectDetails.hourStart | date('H:i') | capitalize }}
+              {% if entry.projectDetails.hourEnd | date('H:i') == entry.projectDetails.hourStart  | date('H:i') %}
               {% else %}
               tot
-              {{ entry.projectDetails.hourEnd | date('H:m') | capitalize }}
+              {{ entry.projectDetails.hourEnd | date('H:i') | capitalize }}
               {% endif %}
               {% else %}
-              ⏰ &nbsp;{{ entry.projectDetails.hourStart | date('H:m')| capitalize }}
+              ⏰ &nbsp;{{ entry.projectDetails.hourStart | date('H:i')| capitalize }}
               {% endif %}
             </li>
             {% endif %}
