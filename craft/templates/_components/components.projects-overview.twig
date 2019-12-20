@@ -209,10 +209,14 @@
 </div>
 {% endif %}
 
-
+{% set pageEntriesReverse = craft.entries
+  .section('projects')
+  .all()
+  | supersort('rsortAs', '{projectDetails.dateStart.date}')
+%}
 
 {% set passed = "false" %}
-{% for project in pageEntries if project.projectDetails.dateEnd|date('Ymd') < now|date('Ymd') %}{% set passed = "true" %}{% endfor %}
+{% for project in pageEntriesReverse if project.projectDetails.dateEnd|date('Ymd') < now|date('Ymd') %}{% set passed = "true" %}{% endfor %}
 {% if passed == "true" %}
 <div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
@@ -220,7 +224,7 @@
       <h2 class="c-title-graphic">{{ labels.labelPassed }}</h2>
     </div>
     <ul class="c-para o-list-bare c-list c-list--divider u-margin-top">
-    {% for project in pageEntries if project.projectDetails.dateEnd|date('Ymd') < now|date('Ymd') %}
+    {% for project in pageEntriesReverse if project.projectDetails.dateEnd|date('Ymd') < now|date('Ymd') %}
       <li class="s-editor s-editor--small o-list-bare__item c-list__item">
         <article class="o-box o-box--flush">
           <div class="s-editor s-editor--small">
