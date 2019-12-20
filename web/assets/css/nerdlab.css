@@ -1874,9 +1874,6 @@ table {
     padding: 96px 0;
     transform: scale(0);
   }
-  .s-mutation .c-navigation {
-    background-color: #554FFF;
-  }
   .c-navigation.is-visible {
     transform: scale(1);
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
@@ -1885,6 +1882,7 @@ table {
 
 .c-navigation__list {
   margin-bottom: 0;
+  display: flex;
 }
 
 .c-navigation__item {
@@ -1894,7 +1892,7 @@ table {
 
 @media (min-width: 59.375em) {
   .c-navigation__item {
-    display: inline-block;
+    display: block;
     padding: 0;
   }
 }
@@ -1973,7 +1971,7 @@ table {
   .c-navigation__link:before {
     width: 24px;
     height: 2px;
-    width: 27px;
+    width: 24px;
     top: 50%;
     right: calc(100%);
     background-color: #331433;
@@ -1987,7 +1985,7 @@ table {
     line-height: 1.33333;
   }
   .c-navigation__link:before {
-    width: 51px;
+    width: 48px;
   }
 }
 
@@ -10133,7 +10131,6 @@ table {
   }
 }
 
-.c-mutation-subtitle,
 .c-subtitle,
 .s-editor .c-subtitle,
 .s-editor .c-mutation-subtitle {
@@ -10143,7 +10140,6 @@ table {
 }
 
 @media (min-width: 56.25em) {
-  .c-mutation-subtitle,
   .c-subtitle,
   .s-editor .c-subtitle,
   .s-editor .c-mutation-subtitle {

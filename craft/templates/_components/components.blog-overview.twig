@@ -8,7 +8,7 @@
 #}
 
 {# -- Module -- #}
-{% paginate craft.entries().section('blog').orderBy('postDate desc') as paginate, entries %}
+{% paginate craft.entries().section('blog').limit(10).orderBy('postDate desc') as paginate, entries %}
 
 <div class="o-row-large">
   <div class="o-wrapper o-wrapper--huge">
