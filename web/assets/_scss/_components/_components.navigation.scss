@@ -35,6 +35,11 @@ $nav-breakpoint: 950px;
   .c-navigation__list {
     margin-bottom: 0;
     display: flex;
+    flex-direction: column;
+
+    @include mq($nav-breakpoint) {
+      flex-direction: row;
+    }
   }
 
   .c-navigation__item {
