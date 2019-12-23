@@ -1883,6 +1883,13 @@ table {
 .c-navigation__list {
   margin-bottom: 0;
   display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 59.375em) {
+  .c-navigation__list {
+    flex-direction: row;
+  }
 }
 
 .c-navigation__item {
@@ -2052,7 +2059,7 @@ table {
 }
 
 .is-active > .c-navigation__language-link:focus {
-  background-color: #FF3333;
+  background-color: #ee0000;
   color: #FFFFFF;
 }
 
@@ -2243,7 +2250,7 @@ table {
   width: 100%;
   height: 100%;
   border: 2px solid #331433;
-  background-color: #FF3333;
+  background-color: #ee0000;
 }
 
 .c-title-graphic:before {
@@ -2326,7 +2333,7 @@ table {
 }
 
 .c-h1-big {
-  color: #FF3333;
+  color: #ee0000;
   font-size: 42px;
   font-size: 2.625rem;
   line-height: 1.25;
@@ -2404,11 +2411,11 @@ table {
 
 .c-h3--highlight,
 .c-content .c-h3--highlight {
-  color: #FF3333;
+  color: #ee0000;
 }
 
 .c-h4 {
-  color: #FF3333;
+  color: #ee0000;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.25;
@@ -2460,7 +2467,7 @@ table {
   line-height: 1.42857;
   max-width: 28em;
   font-weight: 500;
-  color: #FF3333;
+  color: #ee0000;
 }
 
 @media (min-width: 37.5em) {
@@ -2545,7 +2552,7 @@ table {
    ========================================================================== */
 .c-btn--primary {
   border: 2px solid #FFFFFF;
-  background-color: #FF3333;
+  background-color: #ee0000;
 }
 
 .c-btn--primary, .c-btn--primary:hover, .c-btn--primary:active, .c-btn--primary:focus {
@@ -2655,7 +2662,7 @@ table {
 
 .c-btn--ghost.c-btn--primary:hover, .c-btn--ghost.c-btn--primary:focus {
   color: #FFFFFF;
-  background-color: #FF3333;
+  background-color: #ee0000;
 }
 
 /* ==================================
@@ -2671,7 +2678,7 @@ table {
 }
 
 .c-link:hover, .c-link:focus {
-  color: #FF3333;
+  color: #ee0000;
 }
 
 .c-link:focus {
@@ -2683,7 +2690,7 @@ table {
 }
 
 .c-link--neutral:hover, .c-link--neutral:focus {
-  color: #FF3333;
+  color: #ee0000;
 }
 
 .c-link--none {
@@ -2759,7 +2766,7 @@ table {
   top: calc(100% + 12px);
   left: 0;
   white-space: nowrap;
-  background-color: #FF3333;
+  background-color: #ee0000;
   padding: 3px;
 }
 
@@ -3052,7 +3059,7 @@ table {
 
 /* Checked state */
 .c-control input:checked ~ .c-control-indicator {
-  color: #FF3333;
+  color: #ee0000;
   background-color: #554FFF;
   border-color: #554FFF;
 }
@@ -3160,7 +3167,7 @@ table {
 }
 
 .c-error {
-  color: #FF3333;
+  color: #ee0000;
   font-weight: 600;
   border: 1px solid #FFCBCB;
   background-color: #ffefef;
@@ -3281,8 +3288,8 @@ table {
 }
 
 .s-mutation .c-subscribe-form__btn:hover, .s-mutation .c-subscribe-form__btn:focus {
-  color: #FF3333;
-  border-color: #FF3333;
+  color: #ee0000;
+  border-color: #ee0000;
 }
 
 @media (min-width: 37.5em) {
@@ -3343,12 +3350,12 @@ table {
 .s-mutation #mc_embed_signup div.mce_inline_error {
   line-height: 2;
   display: block;
-  color: #FF3333 !important;
+  color: #ee0000 !important;
   background-color: #FFFFFF !important;
 }
 
 .s-mutation #mc_embed_signup input.mce_inline_error {
-  border-color: #FF3333 !important;
+  border-color: #ee0000 !important;
 }
 
 .s-mutation #mce-responses {
@@ -3369,7 +3376,7 @@ table {
 .s-mutation #mce-error-response {
   color: #FFFFFF;
   padding: 12px;
-  background-color: #FF3333;
+  background-color: #ee0000;
 }
 
 .s-mutation #mce-error-response a,
@@ -3434,7 +3441,7 @@ table {
   width: 100%;
   height: 100%;
   border: 2px solid #331433;
-  background-color: #FF3333;
+  background-color: #ee0000;
 }
 
 .c-card--alpha:after {
@@ -4505,7 +4512,7 @@ table {
 
 .s-theme-primary {
   color: #FFFFFF;
-  background-color: #FF3333;
+  background-color: #ee0000;
 }
 
 .s-theme-secondary {
@@ -4537,7 +4544,7 @@ table {
 
 .c-color-primary {
   color: #FFFFFF;
-  background-color: #FF3333;
+  background-color: #ee0000;
 }
 
 .c-color-secondary {
@@ -4634,7 +4641,7 @@ table {
 }
 
 .s-editor a:not(.c-btn):hover, .s-editor a:not(.c-btn):focus {
-  color: #FF3333;
+  color: #ee0000;
 }
 
 .s-editor a:not(.c-btn):focus {
@@ -4713,7 +4720,7 @@ table {
 .s-editor blockquote footer {
   font-weight: 600;
   margin-top: 12px;
-  color: #FF3333;
+  color: #ee0000;
 }
 
 .s-theme-secondary .s-editor a:not(.c-btn), .s-theme-secondary .s-editor a:not(.c-btn):visited {
@@ -5014,7 +5021,7 @@ table {
 }
 
 .s-editor--lead {
-  color: #FF3333;
+  color: #ee0000;
 }
 
 .s-editor--lead p:first-child {
@@ -5089,7 +5096,7 @@ table {
 }
 
 .s-mutation .s-editor--prefooter a:not(.c-btn):hover, .s-mutation .s-editor--prefooter a:not(.c-btn):focus {
-  color: #FF3333;
+  color: #ee0000;
 }
 
 .s-mutation .s-editor--prefooter a:not(.c-btn):focus {
