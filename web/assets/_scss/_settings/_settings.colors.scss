@@ -190,7 +190,8 @@ $color-neutral-xlight       : tint($color-neutral,85%);
 $color-neutral-light        : tint($color-neutral,30%);
 $color-neutral-dark         : #1C0E24;
 
-$color-primary              : #FF3333;
+// $color-primary              : #FF3333;
+$color-primary              : #ee0000; // Make primary color darker for accessibility reasons
 $color-primary-xlight       : #FFCBCB;
 $color-primary-light        : #FF9797;
 $color-primary-dark         : #B31E1C;
