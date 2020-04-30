@@ -27,7 +27,7 @@
     "inuitcss-plugin-flexlayout": "^1.0.5",
     "inuitcss-plugin-responsive-wrapper": "^1.0.1",
     "inuitcss-plugin-row": "^1.0.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "lazysizes": "^5.1.2",
     "picturefill": "^3.0.3",
     "sass-mq": "^5.0.1",
