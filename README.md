@@ -23,22 +23,6 @@ Gulp tasks (see gulpfile.babel.js for details):
 
 Learn more about Craft at [craftcms.com](https://craftcms.com).
 
-## How to Install Craft 3
+## How to Install Craft 4
 
-See the Craft 3 documentation for [installation](https://github.com/craftcms/docs/blob/master/en/installation.md) and [updating](https://github.com/craftcms/docs/blob/master/en/upgrade.md) instructions.
-
-## Resources
-
-#### Official Resources
-- [Craft 3 Documentation](https://github.com/craftcms/docs)
-- [Craft 3 Class Reference](https://docs.craftcms.com/api/v3/)
-- [Craft 3 Plugins](https://plugins.craftcms.com)
-- [Demo site](https://demo.craftcms.com/)
-- [Craft Slack](https://craftcms.com/community#slack)
-- [Craft CMS Stack Exchange](http://craftcms.stackexchange.com/)
-
-#### Community Resources
-- [Mijingo](https://mijingo.com/craft) – Video courses and other learning resources
-- [Envato Tuts+](https://webdesign.tutsplus.com/categories/craft-cms/courses) – Video courses
-- [Straight Up Craft](http://straightupcraft.com/) – Articles, tutorials, and more
-- [pluginfactory.io](https://pluginfactory.io/) – Craft plugin scaffold generator
+See the Craft 4 documentation at [https://craftcms.com/docs/4.x/](https://craftcms.com/docs/4.x/).

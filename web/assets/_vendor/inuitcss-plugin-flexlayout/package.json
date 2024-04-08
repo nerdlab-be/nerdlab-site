@@ -1,44 +1,16 @@
 {
-  "_from": "inuitcss-plugin-flexlayout@1.0.5",
-  "_id": "inuitcss-plugin-flexlayout@1.0.5",
-  "_inBundle": false,
-  "_integrity": "sha512-0jxkrSAisNWo/3XlSWQxBV1mrYqfcyCbRidqRMUo8M9K7xZStgBUtu0aOy7i/Fg4gJ9tBnYYwI59vjFVQYK6gg==",
-  "_location": "/inuitcss-plugin-flexlayout",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "inuitcss-plugin-flexlayout@1.0.5",
-    "name": "inuitcss-plugin-flexlayout",
-    "escapedName": "inuitcss-plugin-flexlayout",
-    "rawSpec": "1.0.5",
-    "saveSpec": null,
-    "fetchSpec": "1.0.5"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/inuitcss-plugin-flexlayout/-/inuitcss-plugin-flexlayout-1.0.5.tgz",
-  "_shasum": "b43658ee4d95bb04a969a4a48fc64be4c8c6a6a5",
-  "_spec": "inuitcss-plugin-flexlayout@1.0.5",
-  "_where": "/Users/dieterpeirs/3-Sites/clients/nerdlab",
-  "author": {
-    "name": "Dieter Peirs"
-  },
-  "bugs": {
-    "url": "https://github.com/Dietr/inuitcss-plugin-flexlayout/issues"
-  },
-  "bundleDependencies": false,
-  "deprecated": false,
-  "description": "A flexbox-base layout replacement for the default InuitCSS layout object.",
-  "homepage": "https://github.com/Dietr/inuitcss-plugin-flexlayout",
-  "license": "Apache-2.0",
-  "main": "_objects.flexlayout.scss",
   "name": "inuitcss-plugin-flexlayout",
+  "version": "1.0.5",
+  "description": "A flexbox-base layout replacement for the default InuitCSS layout object.",
+  "main": "_objects.flexlayout.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dietr/inuitcss-plugin-flexlayout.git"
   },
-  "version": "1.0.5"
+  "author": "Dieter Peirs",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Dietr/inuitcss-plugin-flexlayout/issues"
+  },
+  "homepage": "https://github.com/Dietr/inuitcss-plugin-flexlayout"
 }

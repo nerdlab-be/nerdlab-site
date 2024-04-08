@@ -1,43 +1,16 @@
 {
-  "_from": "inuitcss-plugin-row@^1.0.2",
-  "_id": "inuitcss-plugin-row@1.0.2",
-  "_inBundle": false,
-  "_integrity": "sha1-08Z0J5FQYkDCsI+a+Nkv/bJGlXU=",
-  "_location": "/inuitcss-plugin-row",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "inuitcss-plugin-row@^1.0.2",
-    "name": "inuitcss-plugin-row",
-    "escapedName": "inuitcss-plugin-row",
-    "rawSpec": "^1.0.2",
-    "saveSpec": null,
-    "fetchSpec": "^1.0.2"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/inuitcss-plugin-row/-/inuitcss-plugin-row-1.0.2.tgz",
-  "_shasum": "d3c6742791506240c2b08f9af8d92ffdb2469575",
-  "_spec": "inuitcss-plugin-row@^1.0.2",
-  "_where": "/Users/dieterpeirs/3-Sites/nerdlab-site",
-  "author": {
-    "name": "Dieter Peirs"
-  },
-  "bugs": {
-    "url": "https://github.com/Dietr/inuitcss-plugin-row/issues"
-  },
-  "bundleDependencies": false,
-  "deprecated": false,
-  "description": "A row object for InuitCSS.",
-  "homepage": "https://github.com/Dietr/inuitcss-plugin-row",
-  "license": "Apache-2.0",
-  "main": "_objects.row.scss",
   "name": "inuitcss-plugin-row",
+  "version": "1.0.2",
+  "description": "A row object for InuitCSS.",
+  "main": "_objects.row.scss",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dietr/inuitcss-plugin-row.git"
   },
-  "version": "1.0.2"
+  "author": "Dieter Peirs",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Dietr/inuitcss-plugin-row/issues"
+  },
+  "homepage": "https://github.com/Dietr/inuitcss-plugin-row"
 }

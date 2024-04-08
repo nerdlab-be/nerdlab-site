@@ -1,8 +1,34 @@
 # Changelog
 
+### 5.3.1
+- Added basic Typescript support
+
+### 5.3.0
+
+- BGSet: Support adding multiple images/backgrounds through `event.detail.fullSrc` ([#827](https://github.com/aFarkas/lazysizes/issues/827))
+- RiaS plugin: Use `source` based config in case of `picture` element usage ([#764](https://github.com/aFarkas/lazysizes/issues/831))
+- BlurUp plugin: Added possibility to change classNames ([#814](https://github.com/aFarkas/lazysizes/pull/814))
+- Core: Added `iframeLoadMode` option (see [#810](https://github.com/aFarkas/lazysizes/pull/810))
+
+## 5.2.2
+- Add correct AMD module pattern for plugins.
+
+## 5.2.1
+
+- BlurUp-Plugin: Copy style attribute ([#764](https://github.com/aFarkas/lazysizes/pull/764))
+- Fixes minor security issue with video-embed plugin ([#764](https://github.com/aFarkas/lazysizes/pull/764))
+- Built: Update dependencies ([#774](https://github.com/aFarkas/lazysizes/pull/774), [#756](https://github.com/aFarkas/lazysizes/pull/756))
+- Fixes diverse issues with old AMD module pattern ([#780](https://github.com/aFarkas/lazysizes/pull/780), [#779](https://github.com/aFarkas/lazysizes/pull/779))
+
+## 5.2.0
+
+* Fix wrong window context under very rare SSR  (fixes [#717](https://github.com/aFarkas/lazysizes/pull/717))
+* Fix Safari Back-Forward Cache issue with lazyloading image elements (fixes [#711](https://github.com/aFarkas/lazysizes/issues/711))
+* Add lazyload of autoplay videos to unveilhooks  (fixes [#697](https://github.com/aFarkas/lazysizes/issues/697))
+
 ## 5.1.2
 
-Fix visibility check (fixes [#709](https://github.com/aFarkas/lazysizes/issues/709))
+* Fix visibility check (fixes [#709](https://github.com/aFarkas/lazysizes/issues/709))
 
 ## 5.1.1
 
@@ -20,7 +46,7 @@ Fix visibility check (fixes [#709](https://github.com/aFarkas/lazysizes/issues/7
 * Do not leak global `lazySizesConfig` anymore fixes [#647](https://github.com/aFarkas/lazysizes/issues/647)
 * Improve handling of cloned object-fit images fixes [#648](https://github.com/aFarkas/lazysizes/issues/648)
 * Improve blur-up/effect plugin.
-* Add support fot native `loading="lazy"` feature as a [native loading plugin](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/native-loading).
+* Add support for native `loading="lazy"` feature as a [native loading plugin](https://github.com/aFarkas/lazysizes/tree/gh-pages/plugins/native-loading).
 
 ## 4.1.8
 
@@ -28,7 +54,7 @@ Fix visibility check (fixes [#709](https://github.com/aFarkas/lazysizes/issues/7
 * Added h descriptor parsing fix plugin for MS edge (was already included in respimg polyfill.)
 * Effects-Plugin/Blur Up plugin: Remove [].find because IE..., fixes [#631](https://github.com/aFarkas/lazysizes/issues/631)
 * Documentation stuff
-* Bring back *.min.js files to npm package, but don't use them in your `import`/`require`. These are mostly for CDNs. Not for Common JS bundlers. 
+* Bring back *.min.js files to npm package, but don't use them in your `import`/`require`. These are mostly for CDNs. Not for Common JS bundlers.
 
 ## 4.1.7
 

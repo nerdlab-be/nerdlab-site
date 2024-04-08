@@ -1,5 +1,5 @@
 (function(window, factory) {
-	var lazySizes = factory(window, window.document);
+	var lazySizes = factory(window, window.document, Date);
 	if(typeof module == 'object' && module.exports){
 		module.exports = lazySizes;
 	} else if (typeof define == 'function' && define.amd) {
@@ -7,11 +7,20 @@
 	} else {
 		window.lazySizes = lazySizes;
 	}
-}(window, function l(window, document) {
+}(window, 
+/**
+ * import("./types/global")
+ * @typedef { import("./types/lazysizes-config").LazySizesConfigPartial } LazySizesConfigPartial
+ */
+function l(window, document, Date) { // Pass in the window Date function also for SSR because the Date class can be lost
 	'use strict';
 	/*jshint eqnull:true */
 
-	var lazysizes, lazySizesCfg;
+	var lazysizes,
+		/**
+		 * @type { LazySizesConfigPartial }
+		 */
+		lazySizesCfg;
 
 	(function(){
 		var prop;
@@ -24,6 +33,8 @@
 			errorClass: 'lazyerror',
 			//strictClass: 'lazystrict',
 			autosizesClass: 'lazyautosizes',
+			fastLoadedClass: 'ls-is-cached',
+			iframeLoadMode: 0,
 			srcAttr: 'data-src',
 			srcsetAttr: 'data-srcset',
 			sizesAttr: 'data-sizes',
@@ -51,14 +62,18 @@
 	if (!document || !document.getElementsByClassName) {
 		return {
 			init: function () {},
+			/**
+			 * @type { LazySizesConfigPartial }
+			 */
 			cfg: lazySizesCfg,
+			/**
+			 * @type { true }
+			 */
 			noSupport: true,
 		};
 	}
 
 	var docElem = document.documentElement;
-
-	var Date = window.Date;
 
 	var supportPicture = window.HTMLPictureElement;
 
@@ -66,7 +81,11 @@
 
 	var _getAttribute = 'getAttribute';
 
-	var addEventListener = window[_addEventListener];
+	/**
+	 * Update to bind to window because 'this' becomes null during SSR
+	 * builds.
+	 */
+	var addEventListener = window[_addEventListener].bind(window);
 
 	var setTimeout = window.setTimeout;
 
@@ -82,6 +101,10 @@
 
 	var forEach = Array.prototype.forEach;
 
+	/**
+	 * @param ele {Element}
+	 * @param cls {string}
+	 */
 	var hasClass = function(ele, cls) {
 		if(!regClassCache[cls]){
 			regClassCache[cls] = new RegExp('(\\s|^)'+cls+'(\\s|$)');
@@ -89,12 +112,20 @@
 		return regClassCache[cls].test(ele[_getAttribute]('class') || '') && regClassCache[cls];
 	};
 
+	/**
+	 * @param ele {Element}
+	 * @param cls {string}
+	 */
 	var addClass = function(ele, cls) {
 		if (!hasClass(ele, cls)){
 			ele.setAttribute('class', (ele[_getAttribute]('class') || '').trim() + ' ' + cls);
 		}
 	};
 
+	/**
+	 * @param ele {Element}
+	 * @param cls {string}
+	 */
 	var removeClass = function(ele, cls) {
 		var reg;
 		if ((reg = hasClass(ele,cls))) {
@@ -112,6 +143,14 @@
 		});
 	};
 
+	/**
+	 * @param elem { Element }
+	 * @param name { string }
+	 * @param detail { any }
+	 * @param noBubbles { boolean }
+	 * @param noCancelable { boolean }
+	 * @returns { CustomEvent }
+	 */
 	var triggerEvent = function(elem, name, detail, noBubbles, noCancelable){
 		var event = document.createEvent('Event');
 
@@ -145,6 +184,13 @@
 		return (getComputedStyle(elem, null) || {})[style];
 	};
 
+	/**
+	 *
+	 * @param elem { Element }
+	 * @param parent { Element }
+	 * @param [width] {number}
+	 * @returns {number}
+	 */
 	var getWidth = function(elem, parent, width){
 		width = width || elem.offsetWidth;
 
@@ -441,9 +487,12 @@
 		};
 
 		var changeIframeSrc = function(elem, src){
-			try {
+			var loadMode = elem.getAttribute('data-load-mode') || lazySizesCfg.iframeLoadMode;
+
+			// loadMode can be also a string!
+			if (loadMode == 0) {
 				elem.contentWindow.location.replace(src);
-			} catch(e){
+			} else if (loadMode == 1) {
 				elem.src = src;
 			}
 		};
@@ -525,7 +574,7 @@
 
 				if( !firesLoad || isLoaded){
 					if (isLoaded) {
-						addClass(elem, 'ls-is-cached');
+						addClass(elem, lazySizesCfg.fastLoadedClass);
 					}
 					switchLoadingClass(event);
 					elem._lazyCache = true;
@@ -541,6 +590,10 @@
 			}, true);
 		});
 
+		/**
+		 *
+		 * @param elem { Element }
+		 */
 		var unveilElement = function (elem){
 			if (elem._lazyRace) {return;}
 			var detail;
@@ -605,6 +658,22 @@
 
 				addEventListener('resize', throttledCheckElements, true);
 
+				addEventListener('pageshow', function (e) {
+					if (e.persisted) {
+						var loadingElements = document.querySelectorAll('.' + lazySizesCfg.loadingClass);
+
+						if (loadingElements.length && loadingElements.forEach) {
+							requestAnimationFrame(function () {
+								loadingElements.forEach( function (img) {
+									if (img.complete) {
+										unveilElement(img);
+									}
+								});
+							});
+						}
+					}
+				});
+
 				if(window.MutationObserver){
 					new MutationObserver( throttledCheckElements ).observe( docElem, {childList: true, subtree: true, attributes: true} );
 				} else {
@@ -663,6 +732,12 @@
 				updatePolyfill(elem, event.detail);
 			}
 		});
+		/**
+		 *
+		 * @param elem {Element}
+		 * @param dataAttr
+		 * @param [width] { number }
+		 */
 		var getSizeElement = function (elem, dataAttr, width){
 			var event;
 			var parent = elem.parentNode;
@@ -720,6 +795,9 @@
 	});
 
 	lazysizes = {
+		/**
+		 * @type { LazySizesConfigPartial }
+		 */
 		cfg: lazySizesCfg,
 		autoSizer: autoSizer,
 		loader: loader,

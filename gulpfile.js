@@ -1,18 +1,12 @@
 'use strict';
 
-
-// ---
-// Setup: load plugins and define config variables
-// ---
-
-
 // Plugins
 const gulp = require("gulp");
 const gnf = require("gulp-npm-files");
 const browsersync = require("browser-sync").create();
 const del = require("del");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+const sass = require("gulp-sass")(require('sass'));
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
@@ -21,8 +15,6 @@ const svgSymbols = require("gulp-svg-symbols");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const rev = require("gulp-rev");
-
-
 
 // Config
 const config = {
@@ -65,7 +57,6 @@ const paths = {
     'web/assets/_vendor/picturefill/dist/picturefill.js',
     'web/assets/_vendor/lazysizes/lazysizes.js',
     'web/assets/_vendor/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
-    'web/assets/js/_plugins/*.js',
     'web/assets/js/_scripts/*.js'
   ],
   jsSrcProduction: [
@@ -74,7 +65,6 @@ const paths = {
     'web/assets/_vendor/picturefill/dist/picturefill.js',
     'web/assets/_vendor/lazysizes/lazysizes.js',
     'web/assets/_vendor/lazysizes/plugins/unveilhooks/ls.unveilhooks.js',
-    'web/assets/js/_plugins/*.js',
     'web/assets/js/_scripts/*.js'
   ],
   jsDist: 'web/assets/js/',
@@ -89,42 +79,31 @@ const paths = {
   ]
 }
 
-// Install
-// ---
-// Copy dependencies from `node_modules` to $paths.vendor
+// Define tasks
 function copyNpmDependencies() {
   return gulp.src(gnf(), {base:'./'})
     .pipe(gulp.dest(paths.vendor));
 }
 
-// Move `$paths.vendor/node_modules/**/*` to `$paths.vendor/**/*`
 function copyVendorDependencies() {
-  return gulp.src(paths.vendor + 'node_modules/**/*')
+  return gulp.src(`${paths.vendor}node_modules/**/*`)
     .pipe(gulp.dest(paths.vendor));
 }
 
-// Delete `$paths.vendor/node_modules`
 function dependencies() {
-  return del([paths.vendor + 'node_modules/']);
+  return del([`${paths.vendor}node_modules/`]);
 }
 
-// BrowserSync
-// ---
 function browserSync(done) {
   browsersync.init(config.browsersync);
   done();
 }
 
-// BrowserSync Reload
 function browserSyncReload(done) {
   browsersync.reload();
   done();
 }
 
-// Icons
-// ---
-// Convert multiple svg's to one symbol file
-// https://css-tricks.com/svg-symbol-good-choice-icons/
 function icons() {
   return gulp.src(paths.iconsSrc)
     .pipe(cheerio(config.cheerio))
@@ -133,23 +112,19 @@ function icons() {
     .pipe(browsersync.stream());
 }
 
-// CSS
-// ---
 function css() {
-  return gulp
-    .src(paths.scssSrc)
-    .pipe(sass({ outputStyle: "expanded" }))
+  return gulp.src(paths.scssSrc)
+    .pipe(sass({ outputStyle: "expanded" }).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(gulp.dest(paths.cssDist))
     .pipe(browsersync.stream());
 }
 
-// Production css > 'gulp productioncss'
 function productionCss() {
   return gulp
     .src(paths.scssSrc)
-    .pipe(sass({ outputStyle: "compressed" }))
-    .pipe(postcss([ autoprefixer() ]))
+    .pipe(sass({ outputStyle: "compressed" }).on('error', sass.logError))
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(rename((path) => {
       path.basename += ".min";
     }))
@@ -164,18 +139,14 @@ function productionCss() {
     .pipe(gulp.dest(paths.revDist));
 }
 
-// JS
-// ---
-// Transpile, concatenate and minify scripts
 function scripts() {
   return gulp
     .src(paths.jsSrc)
     .pipe(concat(config.jsConcat))
     .pipe(gulp.dest(paths.jsDist))
-    .pipe(browsersync.stream())
+    .pipe(browsersync.stream());
 }
 
-// Compress and concat JS > 'gulp productionjs'
 function productionScripts() {
   return gulp
     .src(paths.jsSrcProduction)
@@ -195,50 +166,21 @@ function productionScripts() {
     .pipe(gulp.dest(paths.revDist));
 }
 
-// Watch files
-// ---
 function watchFiles() {
   gulp.watch(paths.cssWatch, css);
   gulp.watch(paths.jsWatch, scripts);
   gulp.watch(paths.iconsWatch, icons);
-  gulp.watch(
-    paths.siteWatch,
-    gulp.series(browserSyncReload)
-  );
+  gulp.watch(paths.siteWatch, gulp.series(browserSyncReload));
 }
 
-// Tasks
-// ---
-gulp.task("install", gulp.series(copyNpmDependencies, copyVendorDependencies, dependencies));
-gulp.task("icons", icons);
-gulp.task("css", css);
-gulp.task("scripts", scripts);
-gulp.task("productionCss", productionCss);
-gulp.task("productionScripts", productionScripts);
+// Export tasks
+exports.install = gulp.series(copyNpmDependencies, copyVendorDependencies, dependencies);
+exports.icons = icons;
+exports.css = css;
+exports.scripts = scripts;
+exports.productionCss = productionCss;
+exports.productionScripts = productionScripts;
+exports.watch = gulp.series(exports.install, gulp.parallel(watchFiles, browserSync));
 
-// Default
-gulp.task(
-  "default",
-  gulp.series(
-    "install",
-    gulp.parallel(css, scripts,icons),
-  )
-);
-
-// Build
-gulp.task(
-  "build",
-  gulp.series(
-    "install",
-    gulp.parallel(productionCss, productionScripts,icons)
-  )
-);
-
-// Watch
-gulp.task(
-  "watch",
-  gulp.series(
-    "default",
-    gulp.parallel(watchFiles, browserSync)
-  )
-);
+exports.default = gulp.series(exports.install, gulp.parallel(css, scripts, icons));
+exports.build = gulp.series(exports.install, gulp.parallel(productionCss, productionScripts, icons));
