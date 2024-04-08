@@ -46,6 +46,7 @@ return [
           '@assetBasePathImages' => '@webroot/data/images/',
           '@assetBaseUrlVideo' => '@web/data/Video/',
           '@assetBasePathVideo' => '@webroot/data/Video/',
+          '@mapsApiKey' => App::env('MAPS_API_KEY'),
         ]
     ]
 ];
