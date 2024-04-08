@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: mutationHighlights
+instructions: ''
+name: Highlights
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:5f28ba52-f8f3-416b-b8e5-243ae60c55e7' # Nieuws
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

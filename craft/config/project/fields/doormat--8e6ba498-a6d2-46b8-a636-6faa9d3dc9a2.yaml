@@ -1,0 +1,22 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
+handle: doormat
+instructions: ''
+name: Doormat
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: true
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources:
+    - 'section:f40ebf54-78ec-496c-8e23-c1226da21268' # Doormat
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

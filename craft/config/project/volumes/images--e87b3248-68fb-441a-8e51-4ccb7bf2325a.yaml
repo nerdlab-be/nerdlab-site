@@ -1,0 +1,56 @@
+fieldLayouts:
+  07093396-2618-493d-aae7-419a006ea487:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: 85e42164-17de-40c9-8167-316c0febdf49 # Alt tekst
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ec4ee15a-3257-4d3c-8d8b-f77b2e625ca4 # Credits
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Inhoud
+        sortOrder: 1
+fs: images
+handle: images
+hasUrls: true
+name: Images
+sortOrder: 1
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+url: '@assetPublicPath/images'

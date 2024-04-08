@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: pages
+name: 'Pagina''s'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  1f81a99e-4cd9-41d5-88e5-d85eb389e2ef: # Nerdlab
+    enabledByDefault: true
+    hasUrls: true
+    template: site-nerdlab/pages/_entry
+    uriFormat: '{parent.uri}/{slug}'
+structure:
+  maxLevels: 3
+  uid: 30def581-6bca-4834-a5e8-5fbefa6ef349
+type: structure

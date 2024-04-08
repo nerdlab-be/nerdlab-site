@@ -1,0 +1,112 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: programType
+instructions: ''
+name: Soort
+searchable: true
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Info
+        -
+          - value
+          - info
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Talk
+        -
+          - value
+          - talk
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Talk + debat'
+        -
+          - value
+          - talkDebat
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Workshop
+        -
+          - value
+          - workshop
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Workshop + debat'
+        -
+          - value
+          - workshopDebat
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Inspiratiesessie
+        -
+          - value
+          - inspiratiesessie
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Denktank
+        -
+          - value
+          - denktank
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Expo
+        -
+          - value
+          - expo
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Performance
+        -
+          - value
+          - performance
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

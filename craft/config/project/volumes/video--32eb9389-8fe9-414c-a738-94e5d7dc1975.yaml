@@ -1,0 +1,47 @@
+fieldLayouts:
+  be91fef6-cb84-4ce7-8585-c11a430730fb:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            warning: null
+            width: 100
+          -
+            fieldUid: ec4ee15a-3257-4d3c-8d8b-f77b2e625ca4 # Credits
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Inhoud
+        sortOrder: 1
+fs: video
+handle: video
+hasUrls: true
+name: Video
+sortOrder: 2
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+url: '@assetPublicPath/video'

@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: doormat
+name: Doormat
+propagationMethod: all
+siteSettings:
+  1f81a99e-4cd9-41d5-88e5-d85eb389e2ef: # Nerdlab
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: b5aae144-f79a-4d5b-a349-c74c7cd3fe4c
+type: structure

@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: mutationTickets
+name: Tickets
+propagationMethod: all
+siteSettings:
+  8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 4d6b4c62-0dfc-47f3-a081-12081651a6df
+type: structure

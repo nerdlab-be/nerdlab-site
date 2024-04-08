@@ -3,3 +3,5 @@
 gulpconfig.js
 /_archive
 project.yaml
+/web/data/images
+/web/data/video

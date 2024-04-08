@@ -1,0 +1,66 @@
+field: 1ab2552e-1cfe-48fb-9768-7bb401872959 # Partners
+fieldLayouts:
+  bfc4e988-cdc4-4533-b3a4-9cd46f108945:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3f2c2698-fadc-4364-8b0f-2391e647ef00 # Tekst
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: dd63864d-cda3-4dd8-9e90-06c0936f78fe # Link
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3f2c2698-fadc-4364-8b0f-2391e647ef00: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Tekst
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  dd63864d-cda3-4dd8-9e90-06c0936f78fe: # Link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: href
+    instructions: ''
+    name: Link
+    searchable: true
+    settings:
+      maxLength: 255
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Url
+handle: partner
+name: Partner
+sortOrder: 2

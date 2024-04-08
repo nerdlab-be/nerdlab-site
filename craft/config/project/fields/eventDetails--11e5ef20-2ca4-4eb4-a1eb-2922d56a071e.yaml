@@ -1,0 +1,78 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6fb9ef6c-97ce-4a20-9031-f708f1a53bb1 # Content
+handle: eventDetails
+instructions: ''
+name: 'Event details'
+searchable: false
+settings:
+  columns:
+    __assoc__:
+      -
+        - 036d4e49-1e65-4ef4-a9cc-871c55b8b6d8 # Eind uur (optioneel)
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 2ce1ac45-be0e-4f0c-9970-689e45c0c355 # Start uur (optioneel)
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 3decf3e5-2aa7-4808-a490-c00ae2e5f578 # Eind datum (optioneel)
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 7f8072df-0fa0-4aab-bdc3-86b996e32aeb # Prijs
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - e3bf3d16-0ba4-468d-a0d1-78798a356323 # Meer info
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - f0a1c75c-9d92-4144-9079-acc5a5abbe61 # Locatie
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - fc158264-c974-47a1-acd1-a8b793a41a92 # Start datum
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - fc2a9eae-f05c-42ed-8aac-314bcbd8792b # Status
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_eventdetails}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

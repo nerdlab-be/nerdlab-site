@@ -1,0 +1,36 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6fb9ef6c-97ce-4a20-9031-f708f1a53bb1 # Content
+handle: pageIntro
+instructions: ''
+name: 'Pagina intro'
+searchable: true
+settings:
+  columns:
+    315:
+      __assoc__:
+        -
+          - width
+          - ''
+    316:
+      __assoc__:
+        -
+          - width
+          - ''
+    317:
+      __assoc__:
+        -
+          - width
+          - ''
+  contentTable: '{{%stc_pageintro}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

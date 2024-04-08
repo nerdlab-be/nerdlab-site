@@ -1,0 +1,43 @@
+field: 429a4df4-dbfc-49a6-b3d4-d101a6d92499 # Nerdlab
+fieldLayouts:
+  5aabed5f-161b-41ca-8ca2-f50eb0479b16:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d89bda9d-4254-485c-afbf-e75b029cbc8a # Paragraaf
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  d89bda9d-4254-485c-afbf-e75b029cbc8a: # Paragraaf
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paragraph
+    instructions: ''
+    name: Paragraaf
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\ckeditor\Field
+handle: paragraph
+name: Paragraaf
+sortOrder: 2

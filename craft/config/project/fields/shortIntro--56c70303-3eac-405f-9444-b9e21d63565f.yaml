@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: shortIntro
+instructions: ''
+name: 'Korte intro'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: ''
+  purifyHtml: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+translationKeyFormat: null
+translationMethod: language
+type: craft\ckeditor\Field

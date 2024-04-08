@@ -1,0 +1,17 @@
+columnSuffix: null
+contentColumnType: datetime
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: hourEnd
+instructions: ''
+name: 'Eind uur'
+searchable: true
+settings:
+  max: null
+  min: null
+  minuteIncrement: '15'
+  showDate: false
+  showTime: true
+  showTimeZone: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

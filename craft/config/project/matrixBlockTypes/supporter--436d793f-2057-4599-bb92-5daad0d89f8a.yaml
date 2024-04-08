@@ -1,0 +1,66 @@
+field: 67149b8d-fddd-433a-aaa3-768c561c7a04 # Supporters
+fieldLayouts:
+  f17610fb-9d95-428b-a1aa-b36ec702e620:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 6988d94c-f682-498b-870e-ec2dd6cd698e # Tekst
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8d545568-a03f-448e-bb6a-f0f5fdb85e31 # Link
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  8d545568-a03f-448e-bb6a-f0f5fdb85e31: # Link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: href
+    instructions: ''
+    name: Link
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Url
+  6988d94c-f682-498b-870e-ec2dd6cd698e: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: text
+    instructions: ''
+    name: Tekst
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: supporter
+name: Supporter
+sortOrder: 2

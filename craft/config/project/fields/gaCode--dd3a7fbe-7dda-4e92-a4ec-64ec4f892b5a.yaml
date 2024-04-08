@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20 # Globals
+handle: gaCode
+instructions: 'Laat leeg indien dit niet gebruikt wordt.'
+name: 'Google Analytics ID'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

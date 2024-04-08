@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6c822df8-0b1f-43d3-b439-c0dc5a7c8edc # Custom
+handle: subscribe
+instructions: ''
+name: 'Schrijf je in'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_subscribe}}'
+  maxBlocks: '4'
+  minBlocks: '3'
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

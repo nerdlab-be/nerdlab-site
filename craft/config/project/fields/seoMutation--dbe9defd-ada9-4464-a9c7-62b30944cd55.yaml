@@ -1,0 +1,46 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: a0f91acb-1a89-4650-a756-7ec9b3fe451c # Meta
+handle: seoMutation
+instructions: ''
+name: 'SEO (Mutation)'
+searchable: true
+settings:
+  description: ''
+  hideSocial: ''
+  robots:
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  socialImage: ''
+  suffixAsPrefix: null
+  title:
+    -
+      __assoc__:
+        -
+          - key
+          - '1'
+        -
+          - locked
+          - '0'
+        -
+          - template
+          - '{title}'
+    -
+      __assoc__:
+        -
+          - key
+          - '2'
+        -
+          - locked
+          - '0'
+        -
+          - template
+          - ' | Mutation Festival'
+  titleSuffix: null
+translationKeyFormat: null
+translationMethod: language
+type: ether\seo\fields\SeoField

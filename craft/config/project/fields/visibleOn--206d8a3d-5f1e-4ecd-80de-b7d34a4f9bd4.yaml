@@ -1,0 +1,46 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: e0d9964b-b49c-4862-bed8-46420e6906c3 # Blog
+handle: visibleOn
+instructions: ''
+name: 'Zichtbaar op:'
+searchable: true
+settings:
+  multi: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Nerdlab
+        -
+          - value
+          - nerdlab
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Mutation festival'
+        -
+          - value
+          - mutationFestival
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - BYOB
+        -
+          - value
+          - byob
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Checkboxes

@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+handle: blogMutation
+name: Nieuws
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
+    enabledByDefault: true
+    hasUrls: true
+    template: site-mutation/blog/_entry
+    uriFormat: 'nieuws/{slug}'
+type: channel

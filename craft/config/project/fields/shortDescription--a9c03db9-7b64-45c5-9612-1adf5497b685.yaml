@@ -1,0 +1,19 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: 6fb9ef6c-97ce-4a20-9031-f708f1a53bb1 # Content
+handle: shortDescription
+instructions: 'Wordt getoond op plaatsen waar deze pagina gelinked wordt. Indien deze leeg is wordt een deel van de intro gebruikt.'
+name: 'Korte omschrijving'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: '1'
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

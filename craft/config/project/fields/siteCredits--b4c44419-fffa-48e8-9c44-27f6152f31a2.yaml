@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
+handle: siteCredits
+instructions: ''
+name: 'Site credits'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_sitecredits}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: none
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

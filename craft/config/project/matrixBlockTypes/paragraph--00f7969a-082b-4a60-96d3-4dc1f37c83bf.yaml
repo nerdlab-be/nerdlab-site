@@ -1,0 +1,43 @@
+field: a453ad43-52cd-47c0-bb1d-66e320db251d # Expo
+fieldLayouts:
+  5b156d72-0e65-4b7f-971b-1482d804caaf:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3edb8bfc-99ec-41ee-b6e7-b88891ef2c9d # Paragraaf
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3edb8bfc-99ec-41ee-b6e7-b88891ef2c9d: # Paragraaf
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paragraph
+    instructions: ''
+    name: Paragraaf
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\ckeditor\Field
+handle: paragraph
+name: Paragraaf
+sortOrder: 2

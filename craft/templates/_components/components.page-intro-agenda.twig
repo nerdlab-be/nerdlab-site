@@ -18,7 +18,7 @@
           {% set parent = craft.entries.section('agenda').one() %}
           <p class="c-breadcrumb">
             <a href="{{ parent.url() }}" alt="{{ parent.title }}" class="c-breadcrumb__link">
-              {% include '_tools/tools.icon.html' with { options: { icon: 'back' } } %}{{ parent.title }}
+              {% include '_tools/tools.icon.twig' with { options: { icon: 'back' } } %}{{ parent.title }}
             </a>
           </p>
           {# Page title #}

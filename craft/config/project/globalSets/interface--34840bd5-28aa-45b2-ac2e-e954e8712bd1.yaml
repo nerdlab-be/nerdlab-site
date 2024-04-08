@@ -1,0 +1,86 @@
+fieldLayouts:
+  9cae7911-371c-4300-95ca-a21a07475536:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ac0cfc6b-b01f-4f25-af52-86cc0ccd9db7 # Navigation
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Header
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: d2b78315-a04d-498c-92e8-81eded42c1a6 # Footer links
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 84db4dbe-c5d5-488e-b4c9-890ee6bd8da0 # Adres
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 86a05123-3b90-4d15-ad63-bb28c6f215a3 # Contact link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e81617a8-ff2d-4875-b2fd-7755490fbaf9 # Social titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 99cedd91-e6ce-4f27-b009-b47f966e0978 # Social
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 8f588830-d1cd-4b9e-8cb8-775e2b1bc435 # Newsletter
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 775356a1-2642-45d5-ab71-40829fa9fe3c # Over Nerdlab
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Footer
+        sortOrder: 2
+handle: interface
+name: Interface
+sortOrder: 1

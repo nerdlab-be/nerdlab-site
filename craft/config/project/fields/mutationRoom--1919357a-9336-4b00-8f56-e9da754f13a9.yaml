@@ -1,0 +1,134 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: mutationRoom
+instructions: ''
+name: Locatie
+searchable: true
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Kopergieterij
+        -
+          - value
+          - kopergieterij
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Kraaienest
+        -
+          - value
+          - kraaienest
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Printing studio'
+        -
+          - value
+          - tejo
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Nerdlab
+        -
+          - value
+          - nerdlab
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gent Glas'
+        -
+          - value
+          - gentGlas
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Kapow
+        -
+          - value
+          - kapow
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Straatier
+        -
+          - value
+          - straatier
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Industriemuseum
+        -
+          - value
+          - industriemuseum
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Logos
+        -
+          - value
+          - logos
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Onbetaalbaar
+        -
+          - value
+          - onbetaalbaar
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Avondprogramma
+        -
+          - value
+          - avondprogramma
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

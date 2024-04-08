@@ -1,0 +1,186 @@
+field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9 # Blog detail
+fieldLayouts:
+  87ce8f7d-8877-4d92-92a9-7599c3586b2c:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3b2c50c0-caaa-447c-9f8c-7c7815133ffd # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 75f813dd-5c28-4da1-aa78-d2b2ffe797e7 # Paragraaf
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: ed800917-c800-4e1a-8a3d-adedcdb1859c # Afbeelding
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 19415ab2-7ae4-4cc1-833c-a90ec04d6cad # Afbeelding onderschrift
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e4be16ea-721a-42f2-95b5-ceaf7cad98ed # Layout
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3b2c50c0-caaa-447c-9f8c-7c7815133ffd: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  75f813dd-5c28-4da1-aa78-d2b2ffe797e7: # Paragraaf
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paragraph
+    instructions: ''
+    name: Paragraaf
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\ckeditor\Field
+  19415ab2-7ae4-4cc1-833c-a90ec04d6cad: # Afbeelding onderschrift
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: imageCaption
+    instructions: ''
+    name: 'Afbeelding onderschrift'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  e4be16ea-721a-42f2-95b5-ceaf7cad98ed: # Layout
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: layout
+    instructions: ''
+    name: Layout
+    searchable: true
+    settings:
+      default: left
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - ''
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  ed800917-c800-4e1a-8a3d-adedcdb1859c: # Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: ''
+    name: Afbeelding
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: textImage
+name: 'Tekst + afbeelding'
+sortOrder: 5

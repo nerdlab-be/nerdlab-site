@@ -1,0 +1,21 @@
+defaultPlacement: end
+enableVersioning: true
+handle: blog
+name: Blog
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  1f81a99e-4cd9-41d5-88e5-d85eb389e2ef: # Nerdlab
+    enabledByDefault: true
+    hasUrls: true
+    template: site-nerdlab/blog/_entry
+    uriFormat: 'blog/{slug}'
+type: channel

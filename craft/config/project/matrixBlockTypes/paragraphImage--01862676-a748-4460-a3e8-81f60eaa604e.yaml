@@ -1,0 +1,129 @@
+field: a3147250-7897-4e84-8dac-580b4f8a043c # Content
+fieldLayouts:
+  b3d7a4e5-6887-4dc8-b7c5-c1c59d256198:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4388638e-b077-42b7-a2ab-c50bf4898b29 # Paragraaf
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 185ef95e-83fa-4c9b-aa35-77b689910eb2 # Afbeelding
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3f48ed85-3b71-484a-a0a2-6cac6eb172fa # Uitlijning
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  3f48ed85-3b71-484a-a0a2-6cac6eb172fa: # Uitlijning
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: position
+    instructions: ''
+    name: Uitlijning
+    searchable: true
+    settings:
+      default: left
+      options:
+        __assoc__:
+          -
+            - left
+            - '1'
+          -
+            - center
+            - '1'
+          -
+            - right
+            - '1'
+          -
+            - full
+            - ''
+          -
+            - drop-left
+            - ''
+          -
+            - drop-right
+            - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: rias\positionfieldtype\fields\Position
+  185ef95e-83fa-4c9b-aa35-77b689910eb2: # Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: paragraphImage
+    instructions: ''
+    name: Afbeelding
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  4388638e-b077-42b7-a2ab-c50bf4898b29: # Paragraaf
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paragraph
+    instructions: ''
+    name: Paragraaf
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      ckeConfig: 5627bc37-5d7c-4bd2-a10b-332843a753f6 # Standard
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\ckeditor\Field
+handle: paragraphImage
+name: 'Tekst + afbeelding'
+sortOrder: 2

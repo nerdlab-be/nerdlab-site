@@ -3,23 +3,27 @@
  * Craft web bootstrap file
  */
 
-// Multisite
+ // Multisite
 define('CRAFT_SITE','mutationnl');
 
-// Set path constants
-define('CRAFT_BASE_PATH', dirname('../../craft/vendor'));
-define('CRAFT_VENDOR_PATH', '/vendor');
-$root = dirname('../../craft/vendor');
+// Define path constants
+define('CRAFT_BASE_PATH', dirname(__DIR__, 2) . '/craft');
+define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH . '/vendor');
 
 // Load Composer's autoloader
-require_once $root.'/vendor/autoload.php';
+require_once CRAFT_VENDOR_PATH . '/autoload.php';
 
 // Load dotenv?
-if (file_exists($root.'/.env')) {
-  $dotenv = new Dotenv\Dotenv($root);
-  $dotenv->load();
+if (class_exists('Dotenv\Dotenv') && file_exists(CRAFT_BASE_PATH . '/.env')) {
+    Dotenv\Dotenv::create(CRAFT_BASE_PATH)->load();
 }
 
+// Define additional PHP constants
+// (see https://craftcms.com/docs/3.x/config/#php-constants)
+define('CRAFT_ENVIRONMENT', getenv('ENVIRONMENT') ?: 'production');
+// ...
+
 // Load and run Craft
-$app = require $root.'/vendor/craftcms/cms/bootstrap/web.php';
+/** @var craft\web\Application $app */
+$app = require CRAFT_VENDOR_PATH . '/craftcms/cms/bootstrap/web.php';
 $app->run();

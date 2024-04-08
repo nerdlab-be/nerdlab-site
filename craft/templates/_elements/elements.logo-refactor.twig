@@ -4,7 +4,7 @@
 #}
 
 {#
-  {% include '_elements/elements.logo.html' %}
+  {% include '_elements/elements.logo.twig' %}
 #}
 
 {# -- Module -- #}
@@ -19,7 +19,7 @@
       </g>
     </svg>
     <span class="c-brand__text">Nerdlab</span>
-    <a href="#content" class="c-link c-link--bare c-link--skip js-skip"><span>Skip to content {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</span></a>
+    <a href="#content" class="c-link c-link--bare c-link--skip js-skip"><span>Skip to content {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</span></a>
   </h1>
   {% else %}
   <p class="c-brand c-brand--nerdlab">
@@ -34,6 +34,6 @@
       </svg>
       <span class="c-brand__text">Nerdlab</span>
     </a>
-    <a href="#content" class="c-link c-link--bare c-link--skip js-skip"><span>Skip to content {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</span></a>
+    <a href="#content" class="c-link c-link--bare c-link--skip js-skip"><span>Skip to content {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</span></a>
   </p>
 {% endif %}

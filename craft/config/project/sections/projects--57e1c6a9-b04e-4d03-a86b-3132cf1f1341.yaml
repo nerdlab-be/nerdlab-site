@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: projects
+name: Projecten
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+propagationMethod: all
+siteSettings:
+  1f81a99e-4cd9-41d5-88e5-d85eb389e2ef: # Nerdlab
+    enabledByDefault: true
+    hasUrls: true
+    template: site-nerdlab/projects/_entry
+    uriFormat: 'dingen-maken/{slug}'
+structure:
+  maxLevels: 1
+  uid: f42f9dea-5163-405d-b4aa-0dc4098fde34
+type: structure

@@ -1,0 +1,218 @@
+field: a3147250-7897-4e84-8dac-580b4f8a043c # Content
+fieldLayouts:
+  2b28fe74-dcc4-417a-9d35-2cc4588853e0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d6a799b1-a6b5-4233-a00f-785582728af1 # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d88c46c2-1e63-4e5c-acae-a66be5ae1c59 # Video
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7671caa0-76f3-4035-a7a5-b7c189851cde # Video poster
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 845acace-9d1e-4b03-b5c6-8ad975101b2d # Youtube id
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0b1e24f5-5ab6-4af7-8503-736c2bcfefd6 # Vimeo id
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 40bbada2-b92f-4324-bdbb-4016d1c31242 # Tekst
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0b1e24f5-5ab6-4af7-8503-736c2bcfefd6: # Vimeo id
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: vimeoId
+    instructions: ''
+    name: 'Vimeo id'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  40bbada2-b92f-4324-bdbb-4016d1c31242: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paragraph
+    instructions: ''
+    name: Tekst
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\ckeditor\Field
+  845acace-9d1e-4b03-b5c6-8ad975101b2d: # Youtube id
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: youtubeId
+    instructions: ''
+    name: 'Youtube id'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  7671caa0-76f3-4035-a7a5-b7c189851cde: # Video poster
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: videoPoster
+    instructions: ''
+    name: 'Video poster'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  d6a799b1-a6b5-4233-a00f-785582728af1: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d88c46c2-1e63-4e5c-acae-a66be5ae1c59: # Video
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: video
+    instructions: ''
+    name: Video
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - video
+      defaultUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:32eb9389-8fe9-414c-a738-94e5d7dc1975' # Video
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: video
+name: Video
+sortOrder: 5

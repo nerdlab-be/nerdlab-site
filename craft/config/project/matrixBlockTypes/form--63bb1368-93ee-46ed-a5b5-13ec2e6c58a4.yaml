@@ -1,0 +1,153 @@
+field: a3147250-7897-4e84-8dac-580b4f8a043c # Content
+fieldLayouts:
+  6ac8c256-d5a0-496b-b908-d0c5ef57f8f7:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 56dfaf4e-9884-4ab1-8f41-0840c2ef52ff # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 350e26ab-1a50-4c04-9885-8a4d0235a2e2 # Tekst
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 51af00cb-3e0d-44f4-8210-7b9b8788d8ef # Formulier
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 75041e51-80f8-4e44-96d6-347eb28c7f27 # Button tekst
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0bef507a-b73b-4afb-8514-dfea37ef2989 # Formulier redirect
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  0bef507a-b73b-4afb-8514-dfea37ef2989: # Formulier redirect
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: formRedirect
+    instructions: 'Pagina waar naar genavigeerd wordt bij verzenden van het formulier.'
+    name: 'Formulier redirect'
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - 'section:f13b291a-d9b5-4468-a039-a5770d399c3c' # Pagina's
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  51af00cb-3e0d-44f4-8210-7b9b8788d8ef: # Formulier
+    columnSuffix: null
+    contentColumnType: integer
+    fieldGroup: null
+    handle: form
+    instructions: ''
+    name: Formulier
+    searchable: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: wheelform\fields\FormField
+  56dfaf4e-9884-4ab1-8f41-0840c2ef52ff: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  350e26ab-1a50-4c04-9885-8a4d0235a2e2: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paragraph
+    instructions: ''
+    name: Tekst
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\ckeditor\Field
+  75041e51-80f8-4e44-96d6-347eb28c7f27: # Button tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonText
+    instructions: ''
+    name: 'Button tekst'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: form
+name: Formulier
+sortOrder: 8

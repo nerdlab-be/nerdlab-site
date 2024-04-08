@@ -4,7 +4,7 @@
 #}
 
 {#
-  {% include '_components/components.agenda-overview.html' with { options: { layout: '' } } %}
+  {% include '_components/components.agenda-overview.twig' with { options: { layout: '' } } %}
 #}
 
 {# -- Set Defaults -- #}
@@ -24,11 +24,15 @@
 {% set pageEntries = craft.entries
   .section('events')
   .all()
-  | supersort('sortAs', '{eventDetails.dateStart.date}')
+  | supersort('sortAs', "{eventDetails.dateStart|date('Y-m-d')}")
 %}
 
 {% set homeEvents = "false" %}
-{% for event in pageEntries if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd') %}{% set homeEvents = "true" %}{% endfor %}
+{% for event in pageEntries %}
+  {% if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or (event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd')) %}
+    {% set homeEvents = "true" %}
+  {% endif %}
+{% endfor %}
 {% if homeEvents == "true" %}
 <div class="o-row-large u-divider">
   <div class="o-wrapper o-wrapper--huge">
@@ -36,190 +40,192 @@
       <h2>{{ labels.labelUpcomingEvent }}</h2>
     </div>
     <ul class="o-layout c-card-group">
-      {% for event in pageEntries if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd') %}
-        {% set loopCount = loopCount + 1 %}
-        {% if loopCount == "1" %}
-        <li class="o-layout__item u-1/2@small u-1/3@medium">
-          <article class="o-box o-box--flush c-card-link">
-            {% if event.pageIntro | length() %}
-            <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-              {% if event.pageIntro.visual | length() %}
-              {% set visual = event.pageIntro.visual.all() %}
-              {% for block in visual %}
-              {% switch block.type %}
-              {% case "image" %}
-                {% for image in block.image.all() %}
-                {% if image.getMimeType() == 'image/gif' %}
-                <img
-                  src="{{ image.url() }}"
-                  alt="{{ image.altText }}"
-                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                {% else %}
-                <img
-                  data-sizes="auto"
-                  data-srcset="
-                    {{ image.url(small) }} 350w,
-                    {{ image.url(medium) }} 600w,
-                    {{ image.url(large) }} 900w,
-                    {{ image.url(xlarge) }} 1280w,
-                    {{ image.url(huge) }} 1400w"
-                  src="{{ image.url(thumb) }}"
-                  alt="{{ image.altText }}"
-                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                {% endif %}
+      {% for event in pageEntries %}
+        {% if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or (event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd')) %}
+          {% set loopCount = loopCount + 1 %}
+          {% if loopCount == "1" %}
+          <li class="o-layout__item u-1/2@small u-1/3@medium">
+            <article class="o-box o-box--flush c-card-link">
+              {% if event.pageIntro | length() %}
+              <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+                {% if event.pageIntro.visual | length() %}
+                {% set visual = event.pageIntro.visual.all() %}
+                {% for block in visual %}
+                {% switch block.type %}
+                {% case "image" %}
+                  {% for image in block.image.all() %}
+                  {% if image.getMimeType() == 'image/gif' %}
+                  <img
+                    src="{{ image.url() }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  {% else %}
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
+                  {% endif %}
+                  {% endfor %}
+                {% endswitch %}
                 {% endfor %}
-              {% endswitch %}
-              {% endfor %}
+                {% endif %}
+              </div>
               {% endif %}
-            </div>
-            {% endif %}
-            <div class="s-editor s-editor--small">
-              <h2 class="u-margin-bottom-small">
-                <a href="{{ event.url }}" class="c-card-link__link">
-                  {{ event.title }}
-                </a>
-              </h2>
-              <ul class="o-list-bare c-list c-list--agenda c-faded">
-                {% if event.eventDetails.dateStart | length() %}
-                <li class="o-list-bare__item c-list__item">
-                  {% if event.eventDetails.dateEnd | length %}
-                  🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
-                  {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
-                  {% else %}
-                  tot
-                  {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}
+              <div class="s-editor s-editor--small">
+                <h2 class="u-margin-bottom-small">
+                  <a href="{{ event.url }}" class="c-card-link__link">
+                    {{ event.title }}
+                  </a>
+                </h2>
+                <ul class="o-list-bare c-list c-list--agenda c-faded">
+                  {% if event.eventDetails.dateStart | length() %}
+                  <li class="o-list-bare__item c-list__item">
+                    {% if event.eventDetails.dateEnd | length %}
+                    🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                    {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
+                    {% else %}
+                    tot
+                    {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}
+                    {% endif %}
+                    {% else %}
+                    🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                    {% endif %}
+                  </li>
                   {% endif %}
+                </ul>
+              </div>
+            </article>
+          </li>
+          {% endif %}
+          {% if loopCount == "2" %}
+          <li class="o-layout__item u-1/2@small u-1/3@medium">
+            <article class="o-box o-box--flush c-card-link">
+              {% if event.pageIntro | length() %}
+              <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+                {% if event.pageIntro.visual | length() %}
+                {% set visual = event.pageIntro.visual.all() %}
+                {% for block in visual %}
+                {% switch block.type %}
+                {% case "image" %}
+                  {% for image in block.image.all() %}
+                  {% if image.getMimeType() == 'image/gif' %}
+                  <img
+                    src="{{ image.url() }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
                   {% else %}
-                  🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
                   {% endif %}
-                </li>
-                {% endif %}
-              </ul>
-            </div>
-          </article>
-        </li>
-        {% endif %}
-        {% if loopCount == "2" %}
-        <li class="o-layout__item u-1/2@small u-1/3@medium">
-          <article class="o-box o-box--flush c-card-link">
-            {% if event.pageIntro | length() %}
-            <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-              {% if event.pageIntro.visual | length() %}
-              {% set visual = event.pageIntro.visual.all() %}
-              {% for block in visual %}
-              {% switch block.type %}
-              {% case "image" %}
-                {% for image in block.image.all() %}
-                {% if image.getMimeType() == 'image/gif' %}
-                <img
-                  src="{{ image.url() }}"
-                  alt="{{ image.altText }}"
-                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                {% else %}
-                <img
-                  data-sizes="auto"
-                  data-srcset="
-                    {{ image.url(small) }} 350w,
-                    {{ image.url(medium) }} 600w,
-                    {{ image.url(large) }} 900w,
-                    {{ image.url(xlarge) }} 1280w,
-                    {{ image.url(huge) }} 1400w"
-                  src="{{ image.url(thumb) }}"
-                  alt="{{ image.altText }}"
-                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                {% endif %}
+                  {% endfor %}
+                {% endswitch %}
                 {% endfor %}
-              {% endswitch %}
-              {% endfor %}
+                {% endif %}
+              </div>
               {% endif %}
-            </div>
-            {% endif %}
-            <div class="s-editor s-editor--small">
-              <h2 class="u-margin-bottom-small">
-                <a href="{{ event.url }}" class="c-card-link__link">
-                  {{ event.title }}
-                </a>
-              </h2>
-              <ul class="o-list-bare c-list c-list--agenda c-faded">
-                {% if event.eventDetails.dateStart | length() %}
-                <li class="o-list-bare__item c-list__item">
-                  {% if event.eventDetails.dateEnd | length %}
-                  🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
-                  {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
-                  {% else %}
-                  tot
-                  {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}
+              <div class="s-editor s-editor--small">
+                <h2 class="u-margin-bottom-small">
+                  <a href="{{ event.url }}" class="c-card-link__link">
+                    {{ event.title }}
+                  </a>
+                </h2>
+                <ul class="o-list-bare c-list c-list--agenda c-faded">
+                  {% if event.eventDetails.dateStart | length() %}
+                  <li class="o-list-bare__item c-list__item">
+                    {% if event.eventDetails.dateEnd | length %}
+                    🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                    {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
+                    {% else %}
+                    tot
+                    {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}
+                    {% endif %}
+                    {% else %}
+                    🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                    {% endif %}
+                  </li>
                   {% endif %}
+                </ul>
+              </div>
+            </article>
+          </li>
+          {% endif %}
+          {% if loopCount == "3" %}
+          <li class="o-layout__item u-1/2@small u-1/3@medium">
+            <article class="o-box o-box--flush c-card-link">
+              {% if event.pageIntro | length() %}
+              <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
+                {% if event.pageIntro.visual | length() %}
+                {% set visual = event.pageIntro.visual.all() %}
+                {% for block in visual %}
+                {% switch block.type %}
+                {% case "image" %}
+                  {% for image in block.image.all() %}
+                  {% if image.getMimeType() == 'image/gif' %}
+                  <img
+                    src="{{ image.url() }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
                   {% else %}
-                  🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                  <img
+                    data-sizes="auto"
+                    data-srcset="
+                      {{ image.url(small) }} 350w,
+                      {{ image.url(medium) }} 600w,
+                      {{ image.url(large) }} 900w,
+                      {{ image.url(xlarge) }} 1280w,
+                      {{ image.url(huge) }} 1400w"
+                    src="{{ image.url(thumb) }}"
+                    alt="{{ image.altText }}"
+                    class="o-crop__content o-crop__content--center c-media lazyload fade-in">
                   {% endif %}
-                </li>
-                {% endif %}
-              </ul>
-            </div>
-          </article>
-        </li>
-        {% endif %}
-        {% if loopCount == "3" %}
-        <li class="o-layout__item u-1/2@small u-1/3@medium">
-          <article class="o-box o-box--flush c-card-link">
-            {% if event.pageIntro | length() %}
-            <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-              {% if event.pageIntro.visual | length() %}
-              {% set visual = event.pageIntro.visual.all() %}
-              {% for block in visual %}
-              {% switch block.type %}
-              {% case "image" %}
-                {% for image in block.image.all() %}
-                {% if image.getMimeType() == 'image/gif' %}
-                <img
-                  src="{{ image.url() }}"
-                  alt="{{ image.altText }}"
-                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                {% else %}
-                <img
-                  data-sizes="auto"
-                  data-srcset="
-                    {{ image.url(small) }} 350w,
-                    {{ image.url(medium) }} 600w,
-                    {{ image.url(large) }} 900w,
-                    {{ image.url(xlarge) }} 1280w,
-                    {{ image.url(huge) }} 1400w"
-                  src="{{ image.url(thumb) }}"
-                  alt="{{ image.altText }}"
-                  class="o-crop__content o-crop__content--center c-media lazyload fade-in">
-                {% endif %}
+                  {% endfor %}
+                {% endswitch %}
                 {% endfor %}
-              {% endswitch %}
-              {% endfor %}
-              {% endif %}
-            </div>
-            {% endif %}
-            <div class="s-editor s-editor--small">
-              <h2 class="u-margin-bottom-small">
-                <a href="{{ event.url }}" class="c-card-link__link">
-                  {{ event.title }}
-                </a>
-              </h2>
-              <ul class="o-list-bare c-list c-list--agenda c-faded">
-                {% if event.eventDetails.dateStart | length() %}
-                <li class="o-list-bare__item c-list__item">
-                  {% if event.eventDetails.dateEnd | length %}
-                  🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
-                  {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
-                  {% else %}
-                  tot
-                  {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}
-                  {% endif %}
-                  {% else %}
-                  🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
-                  {% endif %}
-                </li>
                 {% endif %}
-              </ul>
-            </div>
-          </article>
-        </li>
+              </div>
+              {% endif %}
+              <div class="s-editor s-editor--small">
+                <h2 class="u-margin-bottom-small">
+                  <a href="{{ event.url }}" class="c-card-link__link">
+                    {{ event.title }}
+                  </a>
+                </h2>
+                <ul class="o-list-bare c-list c-list--agenda c-faded">
+                  {% if event.eventDetails.dateStart | length() %}
+                  <li class="o-list-bare__item c-list__item">
+                    {% if event.eventDetails.dateEnd | length %}
+                    🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                    {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
+                    {% else %}
+                    tot
+                    {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}
+                    {% endif %}
+                    {% else %}
+                    🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                    {% endif %}
+                  </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </article>
+          </li>
+          {% endif %}
         {% endif %}
       {% endfor %}
       {% if loopCount == "0" %}

@@ -1,0 +1,56 @@
+field: a3147250-7897-4e84-8dac-580b4f8a043c # Content
+fieldLayouts:
+  77fe5c5c-6bbf-4217-9681-ae9f8fe49faf:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f2f3aa51-d5bc-4cf2-a9dc-188ced224e3f # Afbeelding
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  f2f3aa51-d5bc-4cf2-a9dc-188ced224e3f: # Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: singleImage
+    instructions: ''
+    name: Afbeelding
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: image
+name: Afbeelding
+sortOrder: 4

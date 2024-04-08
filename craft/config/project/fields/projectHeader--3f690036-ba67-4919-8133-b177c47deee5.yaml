@@ -1,0 +1,34 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
+handle: projectHeader
+instructions: ''
+name: 'Pagina foto''s'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+  defaultUploadLocationSubpath: ''
+  limit: ''
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  singleUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

@@ -1,0 +1,25 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6c822df8-0b1f-43d3-b439-c0dc5a7c8edc # Custom
+handle: highlightedPages
+instructions: ''
+name: 'Uitgelichte pagina''s'
+searchable: true
+settings:
+  allowSelfRelations: false
+  limit: ''
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: null
+  sources:
+    - singles
+    - 'section:f13b291a-d9b5-4468-a039-a5770d399c3c' # Pagina's
+    - 'section:57e1c6a9-b04e-4d03-a86b-3132cf1f1341' # Projecten
+    - 'section:f19a1506-8abc-42c9-8798-196a5ff2c3ca'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

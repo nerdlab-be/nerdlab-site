@@ -50,7 +50,7 @@
           <a href="{{ page.url }}" class="c-link">{{ labels.labelMoreInfo }}</a>
           {% endfor %}</p>
           <p>
-            <button class="c-button c-button--cookie js-privacy__button">{% include '_tools/tools.icon.html' with { options: { icon: 'close' } } %} <span class="u-hidden-visually">{{ labels.labelClose }}</span></button>
+            <button class="c-button c-button--cookie js-privacy__button">{% include '_tools/tools.icon.twig' with { options: { icon: 'close' } } %} <span class="u-hidden-visually">{{ labels.labelClose }}</span></button>
           </p>
         </div>
       </div>
@@ -58,21 +58,6 @@
   {% endif %}
   {# Analytics #}
   {% include "_globals/globals.gtm-body" %}
-  {# @var schema \Spatie\SchemaOrg\Schema #}
-  {% set schema = craft.schema %}
-  {{ schema
-      .thing
-        .name("{{ siteName }}")
-        .email("info@nerdlab.be")
-        .url("https://nerdlab.be")
-        .address(schema.postalAddress
-          .addressCountry("Belgium")
-          .addressLocality("Gent")
-          .addressRegion("Oost-Vlaanderen")
-          .postalCode("9000")
-          .streetAddress("Nieuwland 67")
-        ) | raw
-  }}
 
   {# Image transforms #}
   {% set thumb = {

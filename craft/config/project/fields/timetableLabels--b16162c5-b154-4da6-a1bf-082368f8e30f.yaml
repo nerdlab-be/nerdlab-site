@@ -1,0 +1,232 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: timetableLabels
+instructions: ''
+name: 'Timetable labels'
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 327
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 328
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 280
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 272
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 261
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 269
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 274
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 258
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 262
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 273
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 268
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 259
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 270
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 267
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 276
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 260
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 257
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 275
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 330
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 329
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 332
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 331
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 266
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 264
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 263
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 271
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 278
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 277
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 279
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 265
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_timetablelabels}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

@@ -1,0 +1,39 @@
+{#
+ # Program
+ # ------------------------
+-#}
+
+{% extends "_layouts/mutation" %}
+
+{% block main %}
+<div class="o-row-large c-drawing s-theme-tertiary s-theme-noise">
+  <span class="c-drawing__background">
+    <img src="/assets/images/svg/mutation-backdrop-light.svg" alt="">
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
+    {# Intro #}
+    <h1 class="c-title">{{ entry.title }}</h1>
+    {% include '_components/components.intro.twig' %}
+
+    <div class="u-margin-top-large u-margin-top-huge@medium js-tabs">
+      <ul role="tablist" class="o-list-bare c-tabs js-tabs__list">
+        <li role="presentation" class="c-tabs__item">
+          <a href="#section1-timetable" role="tab" id="tab1-timetable" aria-selected="true" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetableLabels.talksEnWorkshops }} {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a>
+        </li>
+        <li role="presentation" class="c-tabs__item">
+          <a href="#section2-timetable" role="tab" id="tab2-timetable" tabindex="-1" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetableLabels.inspiratiesessiesEnMeer }} {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a>
+        </li>
+      </ul>
+      <section id="section1-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab1-timetable" class="c-tabs-section">
+        {% include '_components/components.timetable.twig' %}
+      </section>
+      <section id="section2-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab2-timetable" hidden="" class="c-tabs-section">
+        {% include '_components/components.timetable-two.twig' %}
+      </section>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+

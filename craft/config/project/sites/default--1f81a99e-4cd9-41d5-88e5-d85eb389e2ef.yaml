@@ -1,0 +1,9 @@
+baseUrl: '@web'
+enabled: true
+handle: default
+hasUrls: true
+language: nl
+name: Nerdlab
+primary: true
+siteGroup: fb7b000e-0be9-4670-92e0-32e5c95a49bb # Nerdlab
+sortOrder: 1

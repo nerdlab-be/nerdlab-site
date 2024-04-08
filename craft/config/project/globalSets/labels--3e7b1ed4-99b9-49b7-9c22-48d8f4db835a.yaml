@@ -1,0 +1,235 @@
+fieldLayouts:
+  78f5b35b-96ff-454f-8363-11482828b5a7:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 283d7fce-9d3d-4dbf-87e4-5528a5ef4737 # Homepagina: eerstvolgend event titel
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 0be710d5-fa3b-4938-8a7c-774ac41f2c1e # Homepage: meer events
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 59f7f55d-4ca4-4308-a72e-d42a3233beaa # Homepagina: Nieuwtjes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c4a56f06-4d66-4fb7-8e83-6a04158ef008 # Home: meer nieuwtjes
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 49744b70-1586-4913-916d-9b25ac2bfd5b # Agenda: binnenkort
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d48f1cb0-3b3e-4087-919d-db1387123a42 # Agenda: afgelopen
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 30f0acac-362b-4187-9702-9da53157dfba # Projecten: Nu bezig
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e414d745-cb0c-4a5d-a611-88ca06baa3ce # Volgende
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: d0236174-8e73-4aa9-992f-de61c385a871 # Vorige
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 005bd721-afc6-4865-8330-4cefcb1ebf02 # Geen events
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 76e830dc-333c-442a-8e51-310f4df9772b # Meer info
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 58d1c94f-4fce-49fb-a6ab-83e45621a8f9 # Bekijk project
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9ddba75f-4179-4e4d-a660-50ea36824b53 # Andere projecten:
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 36938e14-06a5-426c-84a4-4a7adf6eb899 # Andere events:
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c31c670b-d73b-4561-9106-f1e219f12d99 # Andere artikels:
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b5fbdec4-0eb8-40be-a321-3ddb97543fee # Huur ons ook voor volgende zaken:
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5fe30f3a-2a2e-4d7c-a0ad-db73ae8d8f5a # Meer workshops:
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 282cb2c5-d308-41f2-8c94-93396d1377c6 # E-mail adres
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 89b245b1-06d5-4902-9a5b-f6897cadf2d9 # Inschrijven
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a9ad49fc-fcb4-4188-b086-a456b4bb6187 # Cookie notice
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 068c82f2-6f46-4cd6-a806-6927581c9f29 # Cookie notice link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a2c0bed3-84fe-40b9-9dfc-ae06502e5536 # Sluiten
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5bd0593c-b059-4578-9f77-0a6c3f4fe30d # Koop tickets
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: da34a271-cfe7-41a0-a481-46dc694eb065 # Gratis
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 98428b34-1e09-4a7d-aef1-9248766afd52 # Uitverkocht
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: labels
+name: Labels
+sortOrder: 2

@@ -4,7 +4,7 @@
 #}
 
 {#
-  {% include '_components/components.agenda-archive.html' with { options: { layout: '' } } %}
+  {% include '_components/components.agenda-archive.twig' with { options: { layout: '' } } %}
 #}
 
 {# -- Set Defaults -- #}
@@ -31,7 +31,8 @@
       <h2 class="c-title-graphic">{{ labels.labelPassed }}</h2>
     </div>
     <ul class="c-para o-list-bare c-list c-list--divider u-margin-top">
-    {% for event in pageEntries if event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') < now|date('Ymd') or event.eventDetails.dateEnd == null and event.eventDetails.dateStart|date('Ymd') < now|date('Ymd')  %}
+    {% for event in pageEntries %}
+      {% if event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') < now|date('Ymd') or event.eventDetails.dateEnd == null and event.eventDetails.dateStart|date('Ymd') < now|date('Ymd')  %}
       <li class="s-editor s-editor--small o-list-bare__item c-list__item">
         <article class="o-box o-box--flush">
           <h3 class="u-margin-bottom-small">
@@ -51,13 +52,14 @@
           </h3>
         </article>
       </li>
+      {% endif %}
     {% endfor %}
     </ul>
     {# Build pagination interface if more than 1 page #}
     {% if paginate.totalPages > 1 %}
     <ul class="o-list-bare c-pagination">
       {% if paginate.prevUrl %}
-        <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ paginate.prevUrl }}#archive" class="c-pagination__link">{% include '_tools/tools.icon.html' with { options: { icon: 'previous' } } %} <span>{{ labels.labelPrevious }}</span></a></li>
+        <li class="o-list-bare__item c-pagination__item c-pagination__item--first"><a href="{{ paginate.prevUrl }}#archive" class="c-pagination__link">{% include '_tools/tools.icon.twig' with { options: { icon: 'previous' } } %} <span>{{ labels.labelPrevious }}</span></a></li>
       {% endif %}
 
       {% for page, url in paginate.getPrevUrls(3) %}
@@ -71,7 +73,7 @@
       {% endfor %}
 
       {% if paginate.nextUrl %}
-        <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ paginate.nextUrl }}#archive"  class="c-pagination__link"><span>{{ labels.labelNext }}</span> {% include '_tools/tools.icon.html' with { options: { icon: 'next' } } %}</a></li>
+        <li class="o-list-bare__item c-pagination__item c-pagination__item--last"><a href="{{ paginate.nextUrl }}#archive"  class="c-pagination__link"><span>{{ labels.labelNext }}</span> {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a></li>
       {% endif %}
     </ul>
     {% endif %}

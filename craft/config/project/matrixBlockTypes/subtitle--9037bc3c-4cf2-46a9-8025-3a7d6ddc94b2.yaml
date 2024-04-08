@@ -1,0 +1,41 @@
+field: bf499267-fdfe-4240-98a5-5613ad9da373 # Intro
+fieldLayouts:
+  ff6c3a0a-015f-4686-9e60-6a8981d5f919:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 2b0a10ab-89ae-422d-aef5-dff1c0b325a9 # Subtitel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2b0a10ab-89ae-422d-aef5-dff1c0b325a9: # Subtitel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: subtitle
+    instructions: ''
+    name: Subtitel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: subtitle
+name: Subtitel
+sortOrder: 2

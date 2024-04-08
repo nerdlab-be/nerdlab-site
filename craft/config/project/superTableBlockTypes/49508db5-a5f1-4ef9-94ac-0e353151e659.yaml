@@ -1,0 +1,301 @@
+field: 11e5ef20-2ca4-4eb4-a1eb-2922d56a071e # Event details
+fieldLayouts:
+  b6416bbf-dfcb-45a4-ae77-6dce51683bec:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: fc158264-c974-47a1-acd1-a8b793a41a92 # Start datum
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 3decf3e5-2aa7-4808-a490-c00ae2e5f578 # Eind datum (optioneel)
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 2ce1ac45-be0e-4f0c-9970-689e45c0c355 # Start uur (optioneel)
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 036d4e49-1e65-4ef4-a9cc-871c55b8b6d8 # Eind uur (optioneel)
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: f0a1c75c-9d92-4144-9079-acc5a5abbe61 # Locatie
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: fc2a9eae-f05c-42ed-8aac-314bcbd8792b # Status
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7f8072df-0fa0-4aab-bdc3-86b996e32aeb # Prijs
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e3bf3d16-0ba4-468d-a0d1-78798a356323 # Meer info
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  2ce1ac45-be0e-4f0c-9970-689e45c0c355: # Start uur (optioneel)
+    columnSuffix: null
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: hourStart
+    instructions: ''
+    name: 'Start uur (optioneel)'
+    searchable: true
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: false
+      showTime: true
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  3decf3e5-2aa7-4808-a490-c00ae2e5f578: # Eind datum (optioneel)
+    columnSuffix: null
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: dateEnd
+    instructions: ''
+    name: 'Eind datum (optioneel)'
+    searchable: false
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  7f8072df-0fa0-4aab-bdc3-86b996e32aeb: # Prijs
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: price
+    instructions: ''
+    name: Prijs
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  036d4e49-1e65-4ef4-a9cc-871c55b8b6d8: # Eind uur (optioneel)
+    columnSuffix: null
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: hourEnd
+    instructions: ''
+    name: 'Eind uur (optioneel)'
+    searchable: true
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: false
+      showTime: true
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date
+  e3bf3d16-0ba4-468d-a0d1-78798a356323: # Meer info
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: moreInfo
+    instructions: ''
+    name: 'Meer info'
+    searchable: true
+    settings:
+      contentTable: '{{%matrixcontent_moreinfo}}'
+      maxBlocks: '1'
+      minBlocks: ''
+      propagationKeyFormat: null
+      propagationMethod: all
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Matrix
+  f0a1c75c-9d92-4144-9079-acc5a5abbe61: # Locatie
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: location
+    instructions: ''
+    name: Locatie
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  fc2a9eae-f05c-42ed-8aac-314bcbd8792b: # Status
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: state
+    instructions: ''
+    name: Status
+    searchable: true
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Openbaar
+            -
+              - value
+              - Openbaar
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Gratis
+            -
+              - value
+              - Gratis
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Reserveren
+            -
+              - value
+              - Reserveren
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Betalend
+            -
+              - value
+              - Betalend
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Volzet
+            -
+              - value
+              - Volzet
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Uitverkocht
+            -
+              - value
+              - Uitverkocht
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Uitgesteld
+            -
+              - value
+              - Uitgesteld
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  fc158264-c974-47a1-acd1-a8b793a41a92: # Start datum
+    columnSuffix: null
+    contentColumnType: datetime
+    fieldGroup: null
+    handle: dateStart
+    instructions: ''
+    name: 'Start datum'
+    searchable: true
+    settings:
+      max: null
+      min: null
+      minuteIncrement: '30'
+      showDate: true
+      showTime: false
+      showTimeZone: false
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Date

@@ -1,0 +1,130 @@
+field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9 # Blog detail
+fieldLayouts:
+  ac3ba325-2c44-42f6-b7a5-d481f153ceb5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 38f7043c-d8fb-4d65-b046-55f44554f342 # Quote
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: b0f37315-7ed7-46a2-9f54-03a6d2f3eb3e # Auteur
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 67464e1d-5f80-4dd6-b94b-56c78adfc4b7 # Auteur info
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: e8566d27-fe74-483d-9f49-20476045f7a5 # Quote link
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  38f7043c-d8fb-4d65-b046-55f44554f342: # Quote
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: quote
+    instructions: ''
+    name: Quote
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: f80eb94d-2324-42d8-a607-d1934a8c494d # Default
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\ckeditor\Field
+  67464e1d-5f80-4dd6-b94b-56c78adfc4b7: # Auteur info
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: authorInfo
+    instructions: ''
+    name: 'Auteur info'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  b0f37315-7ed7-46a2-9f54-03a6d2f3eb3e: # Auteur
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: author
+    instructions: ''
+    name: Auteur
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+  e8566d27-fe74-483d-9f49-20476045f7a5: # Quote link
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: quoteLink
+    instructions: ''
+    name: 'Quote link'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: quote
+name: Quote
+sortOrder: 4

@@ -4,7 +4,7 @@
 #}
 
 {#
-  {% include '_components/components.navigation.html' with { options: { handle: '' } } %}
+  {% include '_components/components.navigation.twig' with { options: { handle: '' } } %}
 #}
 
 {# -- Set Defaults -- #}
@@ -46,7 +46,7 @@
         <a href="{{ link.url }}{{ block.itemID }}" class="c-navigation__link">{{ block.itemTitle }}</a>
       </li>
       {% else %}
-      <li class="c-list-bare__item c-navigation__item{{ active( link.uri , 1,' is-active') }}">
+      <li class="c-list-bare__item c-navigation__item">
         <a href="{{ link.url }}{{ block.itemID }}" class="c-navigation__link">{{ block.itemTitle }}</a>
       </li>
       {% endif %}

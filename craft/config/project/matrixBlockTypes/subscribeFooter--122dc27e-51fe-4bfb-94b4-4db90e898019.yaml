@@ -1,0 +1,43 @@
+field: 015399ac-7b4d-484b-9fe7-f09121aa0565 # Schrijf je in
+fieldLayouts:
+  99ee9856-e4bd-4efe-b619-f3438df7718c:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: f783863b-82a3-47b7-b113-26307fa23508 # Footer
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  f783863b-82a3-47b7-b113-26307fa23508: # Footer
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: subscribeFooter
+    instructions: ''
+    name: Footer
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: subscribeFooter
+name: Footer
+sortOrder: 4

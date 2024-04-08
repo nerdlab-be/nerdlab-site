@@ -4,18 +4,18 @@
 #}
 
 {#
-  {% include '_components/components.projects-overview.html' %}
+  {% include '_components/components.projects-overview.twig' %}
 #}
 
 {# -- Module -- #}
 {% set pageEntries = craft.entries
   .section('projects')
   .all()
-  | supersort('sortAs', '{projectDetails.dateStart.date}')
+  | supersort('sortAs', "{projectDetails.dateStart|date('Y-m-d')}")
 %}
 
 {% set related = "false" %}
-{% for project in pageEntries if project.projectDetails.dateStart|date('Ymd') <= now|date('Ymd') and project.projectDetails.dateEnd|date('Ymd') >= now|date('Ymd') or project.projectDetails.dateStart|date('Ymd') > now|date('Ymd') %}
+{% for project in pageEntries|filter(project => project.projectDetails.dateStart|date('Ymd') <= now|date('Ymd') and project.projectDetails.dateEnd|date('Ymd') >= now|date('Ymd') or project.projectDetails.dateStart|date('Ymd') > now|date('Ymd')) %}
 {% if entry.title != project.title %}
 {% set related = "true" %}
 {% endif %}
@@ -27,7 +27,7 @@
       <h2 class="c-title-graphic">{{ labels.labelOtherProjects }}</h2>
     </div>
     <ul class="o-layout c-card-group">
-    {% for project in pageEntries if project.projectDetails.dateStart|date('Ymd') <= now|date('Ymd') and project.projectDetails.dateEnd|date('Ymd') >= now|date('Ymd') or project.projectDetails.dateStart|date('Ymd') > now|date('Ymd') %}
+    {% for project in pageEntries|filter(project => project.projectDetails.dateStart|date('Ymd') <= now|date('Ymd') and project.projectDetails.dateEnd|date('Ymd') >= now|date('Ymd') or project.projectDetails.dateStart|date('Ymd') > now|date('Ymd')) %}
       {% if entry.title != project.title %}
       <li class="o-layout__item u-1/2@small u-1/3@medium">
         <article class="o-box o-box--flush c-card-link">

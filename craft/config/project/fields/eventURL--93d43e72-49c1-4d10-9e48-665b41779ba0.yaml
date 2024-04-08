@@ -1,0 +1,15 @@
+columnSuffix: null
+contentColumnType: string(255)
+fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
+handle: eventURL
+instructions: ''
+name: 'Event URL'
+searchable: true
+settings:
+  maxLength: 255
+  placeholder: null
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

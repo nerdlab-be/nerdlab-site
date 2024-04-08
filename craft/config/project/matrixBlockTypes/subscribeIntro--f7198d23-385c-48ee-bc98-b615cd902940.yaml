@@ -1,0 +1,43 @@
+field: 015399ac-7b4d-484b-9fe7-f09121aa0565 # Schrijf je in
+fieldLayouts:
+  2067daf4-1eec-4798-b581-4ac21c71ce02:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 00e7f0ba-b44a-4127-9cae-fa820a1e8df4 # Intro paragraaf
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  00e7f0ba-b44a-4127-9cae-fa820a1e8df4: # Intro paragraaf
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: subscribeIntro
+    instructions: ''
+    name: 'Intro paragraaf'
+    searchable: true
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: subscribeIntro
+name: 'Intro paragraaf'
+sortOrder: 2

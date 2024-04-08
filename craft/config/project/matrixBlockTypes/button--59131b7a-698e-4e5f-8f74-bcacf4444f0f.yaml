@@ -1,0 +1,104 @@
+field: 20663383-07bd-43ac-a4c3-b0330378ab68 # Intro
+fieldLayouts:
+  fb805677-fd76-4110-9519-2fd8fa711f78:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: e70a7203-f05b-48c9-b6e7-116999cc4be7 # Title
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: a5d3283c-932b-44f3-ba9d-313688a055ed # Link
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: c35e20ab-90f7-4370-99b4-cb2a68ee32fb # URL
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  a5d3283c-932b-44f3-ba9d-313688a055ed: # Link
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttonLink
+    instructions: ''
+    name: Link
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      limit: '1'
+      localizeRelations: true
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources:
+        - singles
+        - 'section:377903e1-8825-44e4-8412-dda3987b1bb6' # Events
+        - 'section:313d9952-cc7f-4b6d-a325-5caf4eaa435e'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  c35e20ab-90f7-4370-99b4-cb2a68ee32fb: # URL
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonURL
+    instructions: ''
+    name: URL
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  e70a7203-f05b-48c9-b6e7-116999cc4be7: # Title
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonTitle
+    instructions: ''
+    name: Title
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: button
+name: Button
+sortOrder: 4

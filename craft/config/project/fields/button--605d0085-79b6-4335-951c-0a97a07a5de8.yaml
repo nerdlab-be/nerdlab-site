@@ -1,0 +1,43 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 6fb9ef6c-97ce-4a20-9031-f708f1a53bb1 # Content
+handle: button
+instructions: ''
+name: Button
+searchable: true
+settings:
+  columns:
+    __assoc__:
+      -
+        - 07b689e1-9003-4bad-8aee-5766d2f9b49c # Button tekst
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 32b53573-73c8-4497-ab72-a256bb71c4ee # Button link (internal)
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - eccb3d55-83b2-4eab-a6e2-bce37cf4b805 # Button link (external)
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_button}}'
+  fieldLayout: row
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: ''
+  staticField: '1'
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

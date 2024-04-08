@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
+handle: paragraph
+instructions: ''
+name: Paragraaf
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: ''
+  purifyHtml: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

@@ -1,0 +1,14 @@
+columnSuffix: null
+contentColumnType: boolean
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: showInProgram
+instructions: 'Indien een item meerdere keren voorkomt kan je met deze switch zorgen dat die verborgen wordt in het programma overzicht (om dubbele entries te vermijden). Deze wordt wel getoond in de schedule.'
+name: 'In programma'
+searchable: true
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

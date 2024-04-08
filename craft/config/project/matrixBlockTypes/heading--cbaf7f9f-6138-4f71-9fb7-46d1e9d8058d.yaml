@@ -1,0 +1,41 @@
+field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9 # Blog detail
+fieldLayouts:
+  17cac0e6-7103-4968-8375-9900b167d407:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7f8e4576-ff0c-455a-87b7-f227cb7a9d66 # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  7f8e4576-ff0c-455a-87b7-f227cb7a9d66: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: heading
+name: Titel
+sortOrder: 1

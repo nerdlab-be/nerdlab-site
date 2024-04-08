@@ -1,0 +1,28 @@
+fieldLayouts:
+  d6efb07c-8511-4908-a5d4-1300029356c1:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: dd3a7fbe-7dda-4e92-a4ec-64ec4f892b5a # Google Analytics ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 50734450-ea84-46c3-bcee-6cd19b071554 # Google Tag Manager ID
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Settings
+        sortOrder: 1
+handle: settings
+name: Settings
+sortOrder: 4

@@ -1,0 +1,37 @@
+{#
+  Intro
+  ================
+#}
+
+{#
+  {% include '_components/components.intro.twig' %}
+#}
+
+{# -- Module -- #}
+<div class="s-editor s-editor--intro s-editor--blog">
+  {% set intro = entry.intro.all() %}
+  {% for block in intro %}
+  {% switch block.type %}
+  {% case "introParagraph" %}
+    {{ block.introParagraph }}
+  {% case "paragraph" %}
+    {{ block.paragraph }}
+  {% case "subtitle" %}
+    <h2>{{ block.subtitle }}</h2>
+  {% case "button" %}
+    <p>
+      {% if block.buttonLink | length %}
+      {% for link in block.buttonLink.all() %}
+      <a href="{{ link.url }}" class="c-btn c-btn--large c-btn--primary">
+        {{ block.buttonTitle }}
+      </a>
+      {% endfor %}
+      {% else %}
+      <a href="{{ block.buttonURL }}" class="c-btn c-btn--large c-btn--primary">
+        {{ block.buttonTitle }}
+      </a>
+      {% endif %}
+    </p>
+  {% endswitch %}
+  {% endfor %}
+</div>

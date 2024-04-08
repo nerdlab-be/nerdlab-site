@@ -1,0 +1,143 @@
+field: 439211f6-b118-45ef-af8e-95098cdb3662 # TicketInfo
+fieldLayouts:
+  a399ccdc-5ceb-4dd6-bdb8-aceb49535ea6:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 628d3bba-570c-4cb8-ada2-9f5fd98b5040 # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 73db79d6-a35d-4069-98ea-c2247bc36819 # Prijs
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 76b15be2-85fe-4c3b-9109-92b6e6b9105c # Ticket link
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 5f8540bd-d66a-4737-ab34-e8dc66a94048 # Gratis
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 142a51c1-128b-4052-9608-920a4daa77c1 # Soldout
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  5f8540bd-d66a-4737-ab34-e8dc66a94048: # Gratis
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: free
+    instructions: ''
+    name: Gratis
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  73db79d6-a35d-4069-98ea-c2247bc36819: # Prijs
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: price
+    instructions: ''
+    name: Prijs
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  76b15be2-85fe-4c3b-9109-92b6e6b9105c: # Ticket link
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: ticketLink
+    instructions: ''
+    name: 'Ticket link'
+    searchable: true
+    settings:
+      maxLength: '255'
+      placeholder: ''
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\Url
+  142a51c1-128b-4052-9608-920a4daa77c1: # Soldout
+    columnSuffix: null
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: soldout
+    instructions: ''
+    name: Soldout
+    searchable: true
+    settings:
+      default: false
+      offLabel: null
+      onLabel: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  628d3bba-570c-4cb8-ada2-9f5fd98b5040: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: ticket
+name: Ticket
+sortOrder: 1

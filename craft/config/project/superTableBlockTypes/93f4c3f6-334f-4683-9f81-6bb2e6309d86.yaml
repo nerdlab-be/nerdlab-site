@@ -1,0 +1,119 @@
+changedFieldIndicator: null
+field: 5a209f20-64c4-4718-acb6-b53acfb807bd # Button
+fieldLayouts:
+  e2fd76d3-c13a-4ca4-a771-562d95ec9af1:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 9ec634b1-48e5-46dc-bed0-f999f3b7eff7 # Button tekst
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c6a5f9d-98ee-4a4f-a33d-a92fc54103dd
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1d89cf84-e9af-4b17-b542-295df9dbd2b7 # Button link (internal)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 60c3583e-6155-4756-8156-6cea0818b00e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 63c7cacc-b94f-481f-a7a7-e5a6c87fe9b5 # Button link (external)
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9cbc5e47-f935-479f-a88c-d4de0bea7f1b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 787896bd-8bb1-43ce-a97d-529fb69336ab
+        userCondition: null
+fields:
+  1d89cf84-e9af-4b17-b542-295df9dbd2b7: # Button link (internal)
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: buttonLinkInternal
+    instructions: null
+    name: 'Button link (internal)'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      branchLimit: null
+      localizeRelations: false
+      maintainHierarchy: false
+      maxRelations: 1
+      minRelations: null
+      selectionLabel: null
+      showSiteMenu: true
+      sources:
+        - singles
+        - 'section:377903e1-8825-44e4-8412-dda3987b1bb6' # Events
+        - 'section:5f28ba52-f8f3-416b-b8e5-243ae60c55e7' # Nieuws
+        - 'section:f13b291a-d9b5-4468-a039-a5770d399c3c' # Pagina's
+        - 'section:9868968d-46de-4ab8-bd19-48bcd95d03a4' # Programma details
+        - 'section:57e1c6a9-b04e-4d03-a86b-3132cf1f1341' # Projecten
+        - 'section:4d79a10b-67b0-4005-9c56-634a4616b073' # Tickets
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
+  9ec634b1-48e5-46dc-bed0-f999f3b7eff7: # Button tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonText
+    instructions: null
+    name: 'Button tekst'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  63c7cacc-b94f-481f-a7a7-e5a6c87fe9b5: # Button link (external)
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: buttonLinkExternal
+    instructions: null
+    name: 'Button link (external)'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText

@@ -1,45 +1,21 @@
 {
-  "name": "craftcms/craft",
-  "description": "Craft CMS",
-  "keywords": [
-    "craft",
-    "cms",
-    "craftcms",
-    "project"
-  ],
-  "license": "MIT",
-  "homepage": "https://craftcms.com/",
-  "type": "project",
-  "support": {
-    "email": "support@craftcms.com",
-    "issues": "https://github.com/craftcms/cms/issues",
-    "forum": "https://craftcms.stackexchange.com/",
-    "source": "https://github.com/craftcms/cms",
-    "docs": "https://craftcms.com/docs",
-    "rss": "https://craftcms.com/changelog.rss"
-  },
   "require": {
-    "php": ">=7.0.0",
-    "craftcms/cms": "3.3.18.3",
-    "vlucas/phpdotenv": "^2.4.0",
-    "roave/security-advisories": "dev-master",
-    "craftcms/redactor": "2.4.0",
-    "mmikkel/cp-field-inspect": "1.0.7",
-    "verbb/cp-nav": "2.0.9",
-    "ether/simplemap": "3.7.6",
-    "barrelstrength/sprout-active": "2.1.0",
-    "nystudio107/craft-minify": "1.2.9",
-    "ether/seo": "3.6.3",
-    "rias/craft-schema": "1.0.3",
-    "clubstudioltd/craft-asset-rev": "6.0.2",
-    "craftcms/store-hours": "2.1.1.1",
-    "rias/craft-position-fieldtype": "1.0.14",
-    "nystudio107/craft-cookies": "1.1.11",
-    "xpertbot/craft-wheelform": "2.3.4",
-    "verbb/super-table": "2.3.1",
-    "charliedev/advanced-url-field": "1.0.0",
-    "topshelfcraft/wordsmith": "3.1.1",
-    "topshelfcraft/supersort": "3.0.1"
+    "craftcms/cms": "^4.0.0",
+    "vlucas/phpdotenv": "^3.3",
+    "craftcms/redactor": "3.0.4",
+    "ether/seo": "4.2.2",
+    "verbb/super-table": "3.0.12 ",
+    "craftcms/ckeditor": "3.8.3",
+    "mmikkel/cp-field-inspect": "1.4.4",
+    "ether/simplemap": "4.0.5",
+    "nystudio107/craft-minify": "4.0.1",
+    "clubstudioltd/craft-asset-rev": "7.0.0",
+    "craftcms/store-hours": " 3.1.0",
+    "rias/craft-position-fieldtype": "4.0.0",
+    "nystudio107/craft-cookies": "4.0.1",
+    "xpertbot/craft-wheelform": "3.2.0",
+    "topshelfcraft/wordsmith": "4.4.0",
+    "topshelfcraft/supersort": "4.0.0"
   },
   "autoload": {
     "psr-4": {
@@ -47,15 +23,26 @@
     }
   },
   "config": {
-    "optimize-autoloader": true
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.0.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
   },
   "scripts": {
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-create-project-cmd": [
-      "@composer dump-autoload -o",
-      "@php craft setup/welcome"
     ]
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
 }

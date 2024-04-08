@@ -1,0 +1,41 @@
+field: 1a6052ff-be6c-435b-b77e-709230192637 # Inschrijven
+fieldLayouts:
+  b9c4d0c9-4cfd-4c5f-a18b-49aaef685c70:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 5f0f7837-c6a4-4443-8173-19e20e5d7e54 # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  5f0f7837-c6a4-4443-8173-19e20e5d7e54: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: heading
+name: Titel
+sortOrder: 1

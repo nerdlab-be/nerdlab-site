@@ -1,0 +1,41 @@
+field: 1ab2552e-1cfe-48fb-9768-7bb401872959 # Partners
+fieldLayouts:
+  45052106-5d37-4a00-aa75-7eb22df88bd7:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4183cba5-7fe8-490b-a745-057f40de70e3 # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  4183cba5-7fe8-490b-a745-057f40de70e3: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: heading
+name: Titel
+sortOrder: 1

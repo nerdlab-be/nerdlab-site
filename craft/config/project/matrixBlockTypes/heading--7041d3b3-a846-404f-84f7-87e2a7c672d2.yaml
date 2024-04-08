@@ -1,0 +1,41 @@
+field: a453ad43-52cd-47c0-bb1d-66e320db251d # Expo
+fieldLayouts:
+  cd72c852-aed0-4947-97dd-371dca42d9ba:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 41b9c5ba-a59c-4832-9df4-5df1c04ceb0b # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  41b9c5ba-a59c-4832-9df4-5df1c04ceb0b: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: heading
+    instructions: ''
+    name: Titel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+handle: heading
+name: Titel
+sortOrder: 1

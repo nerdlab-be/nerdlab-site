@@ -1,0 +1,84 @@
+field: 92d29bf9-421e-4bc2-8a4c-61d449fe5bf2 # Blokken
+fieldLayouts:
+  bc07e699-de01-4366-87d8-5baefd5a5e0f:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7667c9fc-2b2c-432d-9489-00ead43d7d06 # Tekst
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9453d305-c27d-4376-a547-c3f72423ed03 # Afbeelding
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  7667c9fc-2b2c-432d-9489-00ead43d7d06: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paragraph
+    instructions: ''
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      ckeConfig: 5627bc37-5d7c-4bd2-a10b-332843a753f6 # Standard
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\ckeditor\Field
+  9453d305-c27d-4376-a547-c3f72423ed03: # Afbeelding
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: gridImage
+    instructions: ''
+    name: Afbeelding
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      singleUploadLocationSubpath: ''
+      source: null
+      sources:
+        - 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      targetSiteId: null
+      useSingleFolder: false
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets

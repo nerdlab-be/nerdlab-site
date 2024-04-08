@@ -1,0 +1,41 @@
+field: f1c3bcc1-adaf-4e5f-b2ff-0ed3cb59add9 # Blog detail
+fieldLayouts:
+  84a3b09a-0617-493b-bd9d-391820d667d0:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d5a25a01-e298-44d9-86ce-bf98ff2897f1 # Subtitel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  d5a25a01-e298-44d9-86ce-bf98ff2897f1: # Subtitel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: subHeading
+    instructions: ''
+    name: Subtitel
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\PlainText
+handle: subHeading
+name: Subtitel
+sortOrder: 2

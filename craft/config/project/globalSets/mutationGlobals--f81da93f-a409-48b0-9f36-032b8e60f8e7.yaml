@@ -1,0 +1,95 @@
+fieldLayouts:
+  9a60c424-085e-401e-b7b9-842996798395:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 4c2faa96-9b8f-4159-a93f-0005e0f6dac8 # Mutation datum
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 9a2e9858-d266-43c4-a998-5b27bea6738f # Mutation locatie
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: addf580f-4887-4a29-a983-421fe1631a61 # Mutation link
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1a6052ff-be6c-435b-b77e-709230192637 # Inschrijven
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 61c6b9fb-3d6f-441b-bde1-6de67945c5a4 # Social
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 1ab2552e-1cfe-48fb-9768-7bb401872959 # Partners
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 67149b8d-fddd-433a-aaa3-768c561c7a04 # Supporters
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 429a4df4-dbfc-49a6-b3d4-d101a6d92499 # Nerdlab
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: b16162c5-b154-4da6-a1bf-082368f8e30f # Timetable labels
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Timetable
+        sortOrder: 2
+handle: mutationGlobals
+name: Mutation
+sortOrder: 3

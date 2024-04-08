@@ -1,0 +1,43 @@
+field: bf499267-fdfe-4240-98a5-5613ad9da373 # Intro
+fieldLayouts:
+  f8ee910e-054d-43d4-bbf8-34072edc17e9:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: a19458ec-073d-4286-abdf-c95f15091e6a # Tekst
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  a19458ec-073d-4286-abdf-c95f15091e6a: # Tekst
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: paragraph
+    instructions: ''
+    name: Tekst
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+      columnType: text
+      defaultTransform: ''
+      enableSourceEditingForNonAdmins: true
+      purifierConfig: ''
+      purifyHtml: '1'
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\ckeditor\Field
+handle: paragraph
+name: Tekst
+sortOrder: 1

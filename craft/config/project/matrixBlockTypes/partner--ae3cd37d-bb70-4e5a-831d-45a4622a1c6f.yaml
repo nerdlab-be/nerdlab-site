@@ -1,0 +1,80 @@
+field: 92e8569a-24fe-47b7-b6bd-9eb2c20c9189 # Partners
+fieldLayouts:
+  98f50a8b-cd03-4e5b-ab70-1f29a8f1d818:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 118d3bb3-6f11-427f-8806-b57d71440d37 # Logo
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 7eb8586a-1c65-4bd8-b080-129ceea6d19c # URL
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  7eb8586a-1c65-4bd8-b080-129ceea6d19c: # URL
+    columnSuffix: null
+    contentColumnType: string(255)
+    fieldGroup: null
+    handle: partnerURL
+    instructions: ''
+    name: URL
+    searchable: true
+    settings:
+      maxLength: 255
+      placeholder: null
+      types:
+        - url
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Url
+  118d3bb3-6f11-427f-8806-b57d71440d37: # Logo
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: partnerLogo
+    instructions: ''
+    name: Logo
+    searchable: true
+    settings:
+      allowSelfRelations: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      defaultUploadLocationSubpath: ''
+      limit: '1'
+      localizeRelations: false
+      previewMode: full
+      restrictFiles: '1'
+      selectionLabel: ''
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: true
+      singleUploadLocationSource: 'volume:e87b3248-68fb-441a-8e51-4ccb7bf2325a' # Images
+      singleUploadLocationSubpath: logos
+      source: null
+      sources: '*'
+      targetSiteId: null
+      useSingleFolder: true
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: partner
+name: Partner
+sortOrder: 1

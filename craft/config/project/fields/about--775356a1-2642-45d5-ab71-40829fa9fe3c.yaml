@@ -1,0 +1,21 @@
+columnSuffix: null
+contentColumnType: text
+fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20 # Globals
+handle: about
+instructions: ''
+name: 'Over Nerdlab'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+  columnType: text
+  defaultTransform: ''
+  enableSourceEditingForNonAdmins: true
+  purifierConfig: ''
+  purifyHtml: '1'
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+translationKeyFormat: null
+translationMethod: language
+type: craft\ckeditor\Field

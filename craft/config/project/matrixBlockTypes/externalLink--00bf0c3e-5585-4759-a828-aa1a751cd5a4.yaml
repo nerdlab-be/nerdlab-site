@@ -1,0 +1,70 @@
+field: e3bf3d16-0ba4-468d-a0d1-78798a356323 # Meer info
+fieldLayouts:
+  de5b20d2-60f1-4ba1-8b41-b4065c26b3c4:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: b023fb64-d051-4154-b565-21ecdd77572f # Titel
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
+            fieldUid: 01b29a3c-3fcb-41dd-a6f7-ae60124197a2 # URL
+            instructions: null
+            label: null
+            required: 0
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  01b29a3c-3fcb-41dd-a6f7-ae60124197a2: # URL
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkUrl
+    instructions: ''
+    name: URL
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  b023fb64-d051-4154-b565-21ecdd77572f: # Titel
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: linkTitle
+    instructions: ''
+    name: Titel
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: text
+      initialRows: '4'
+      multiline: ''
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: externalLink
+name: 'Externe link'
+sortOrder: 2

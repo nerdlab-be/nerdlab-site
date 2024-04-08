@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20 # Globals
+handle: footerLinks
+instructions: ''
+name: 'Footer links'
+searchable: true
+settings:
+  contentTable: '{{%matrixcontent_footerlinks}}'
+  maxBlocks: ''
+  minBlocks: ''
+  propagationKeyFormat: null
+  propagationMethod: none
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

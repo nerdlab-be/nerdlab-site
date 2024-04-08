@@ -1,0 +1,221 @@
+
+
+{% set tickets = craft.entries().section('mutationTickets').all() %}
+{% if tickets | length() %}
+<div class="c-marquee c-marquee--secondary" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div>
+<div class="o-row-large s-theme-primary s-theme-noise" id="tickets">
+  <div class="o-wrapper">
+    <h2 class="c-mutation-title u-margin-bottom-large">
+      Tickets
+    </h2>
+    <ul class="o-list-bare c-list c-list--divider u-margin-bottom-none">
+      {% for item in tickets %}
+      <li class="o-list-bare__item c-list__item">
+        {% for entry in item.mutationTicketInfo.all() %}
+        {% if entry.ticketLink %}
+        <a href="{{ entry.ticketLink }}" class="c-link c-link--ticket" target="_blank" rel="noopener">
+        {% else %}
+        <div class="c-link c-link--ticket is-soldout">
+        {% endif %}
+          {% if entry.free == true %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">
+              {{ labels.labelFree }}
+              {% if entry.ticketLink %}
+              {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}
+              {% endif %}
+            </span>
+          {% else %}
+          {% if entry.soldout == true %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">{{ labels.labelSoldout }}</span>
+          {% else %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">
+              {{ entry.price }} | {{ labels.labelBuy }}
+              {% if entry.ticketLink %}
+              {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}
+              {% endif %}
+            </span>
+          {% endif %}
+          {% endif %}
+        {% if entry.ticketLink %}
+        </a>
+        {% else %}
+        </div>
+        {% endif %}
+        {% endfor %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+<div class="c-marquee c-marquee--tertiary" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div>
+{% else %}
+<div class="c-marquee c-marquee--primary" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div>
+{% endif %}
+
+{% set subscribe = mutationGlobals.mutationSubscribe.all() %}
+{% if subscribe | length() %}
+<div class="o-row-large c-drawing s-theme-secondary s-theme-noise" id="subscribe">
+  <span class="c-drawing__left-center">
+    <img src="/assets/images/svg/arrow-white.svg" alt="">
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@medium u-push-1/3@medium">
+        {% for item in subscribe %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-mutation-title">
+          {{ item.heading }}
+        </h2>
+        {% case "paragraph" %}
+        <div class="s-editor s-editor--prefooter u-margin-bottom-large">
+          {{ item.paragraph }}
+        </div>
+        {% endswitch %}
+        {% endfor %}
+
+        {% for block in interface.newsletter.all() %}
+        <div id="mc_embed_signup">
+          <form action="https://nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=dc6209d55c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="c-subscribe-form validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll" class="c-field-group">
+              <div class="mc-field-group c-field-group__input">
+                <label for="mce-EMAIL" class="u-hidden-visually">{{ labels.labelEmailAddress }}</label>
+                <input type="email" value="" name="EMAIL" class="required email c-input-text c-input-text--large c-subscribe-form__input" placeholder="{{ block.placeholder }}" id="mce-EMAIL">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4b5f2ef2cf3c4ae035ef2e113_afaa240742" tabindex="-1" value=""></div>
+              <button role="submit" name="subscribe" id="mc-embedded-subscribe" class="c-subscribe-form__btn c-btn c-btn--large">{{ labels.labelSubscribe }} {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}</button>
+            </div>
+          </form>
+        </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% set social = mutationGlobals.mutationSocial.all() %}
+{% set partners = mutationGlobals.mutationPartners.all() %}
+{% set supporters = mutationGlobals.mutationSupporters.all() %}
+{% set nerdlab = mutationGlobals.mutationNerdlab.all() %}
+
+<div class="o-row-large c-drawing s-theme-white u-padding-bottom-none">
+  <span class="c-drawing__left-top">
+    <img src="/assets/images/svg/worm.svg" alt="">
+  </span>
+  <span class="c-drawing__right">
+    <img src="/assets/images/svg/circle.svg" alt="">
+  </span>
+  <div class="o-wrapper o-wrapper--huge u-alpha">
+    <div class="o-layout o-layout--spacer">
+      <div class="o-layout__item u-3/5@medium u-2/3@large">
+        <div class="s-editor s-editor--prefooter">
+          <ul class="o-list-bare c-list-inline">
+            {% for item in social %}
+            {% switch item.type %}
+            {% case "heading" %}
+            <li class="o-list-bare__item c-list-inline__item">
+              <h2 class="c-mutation-subtitle u-margin-bottom-none">{{ item.heading }}:</h2>
+            </li>
+            {% case "socialLink" %}
+            {% if item.href | length %}
+            <li class="o-list-bare__item c-list-inline__item">
+              <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }}</a>
+            </li>
+            {% endif %}
+            {% endswitch %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% for item in nerdlab %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-mutation-subtitle u-margin-bottom-small">
+          {{ item.heading }}
+        </h2>
+        {% endswitch %}
+        {% endfor %}
+        <div class="s-editor s-editor--prefooter u-margin-bottom">
+          {% for item in nerdlab %}
+          {% switch item.type %}
+          {% case "paragraph" %}
+            {{ item.paragraph }}
+          {% case "href" %}
+          {% if item.href | length %}
+          <p class="u-margin-top">
+            <a href="{{ item.href }}" class="c-link">{{ item.text }} </a>
+          </p>
+          {% endif %}
+          {% endswitch %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="o-layout__item u-2/5@medium u-1/3@large">
+        {% for item in partners %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-mutation-subtitle u-margin-bottom-small">
+          {{ item.heading }}
+        </h2>
+        {% endswitch %}
+        {% endfor %}
+        <div class="s-editor s-editor--prefooter">
+          <ul class="o-list-bare">
+            {% for item in partners %}
+            {% switch item.type %}
+            {% case "partner" %}
+            {% if item.href | length %}
+            <li class="o-list-bare__item">
+              <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}</a>
+            </li>
+            {% endif %}
+            {% endswitch %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% for item in supporters %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-mutation-subtitle u-margin-bottom-small">
+          {{ item.heading }}
+        </h2>
+        {% endswitch %}
+        {% endfor %}
+        <div class="s-editor s-editor--prefooter">
+          <ul class="o-list-bare">
+            {% for item in supporters %}
+            {% switch item.type %}
+            {% case "supporter" %}
+            {% if item.href | length %}
+            <li class="o-list-bare__item">
+              <a href="{{ item.href }}" class="c-link" target="_blank">{{ item.text }} {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}</a>
+            </li>
+            {% endif %}
+            {% endswitch %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,21 +4,26 @@
 #}
 
 {#
-  {% include '_components/components.projects-overview.html' %}
+  {% include '_components/components.projects-overview.twig' %}
 #}
 
 {# -- Module -- #}
 {% set pageEntries = craft.entries
   .section('events')
   .all()
-  | supersort('sortAs', '{eventDetails.dateStart.date}')
+  | supersort('sortAs', "{eventDetails.dateStart|date('Y-m-d')}")
 %}
 
 {% set related = "false" %}
-{% for event in pageEntries if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd') %}
-{% if entry.title != event.title %}
+{# Pre-filter pageEntries to include only relevant events #}
+{% set filteredPageEntries = pageEntries|filter(event => 
+    (event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or 
+    (event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd'))) and 
+    entry.title != event.title
+) %}
+
+{% for event in filteredPageEntries %}
 {% set related = "true" %}
-{% endif %}
 {% endfor %}
 {% if related == "true" %}
 <div class="o-row-large u-divider">
@@ -27,8 +32,7 @@
       <h2 class="c-title-graphic">{{ labels.labelOtherEvents }}</h2>
     </div>
     <ul class="o-layout c-card-group">
-    {% for event in pageEntries if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd') %}
-      {% if entry.title != event.title %}
+    {% for event in filteredPageEntries %}
       <li class="o-layout__item u-1/2@small u-1/3@medium">
         <article class="o-box o-box--flush c-card-link">
           {% if event.pageIntro | length() %}
@@ -99,7 +103,6 @@
           </div>
         </article>
       </li>
-      {% endif %}
     {% endfor %}
     </ul>
   </div>
