@@ -1,0 +1,40 @@
+HTTrack3.49-2+htsswf+htsjava launched on Tue, 06 Aug 2024 11:42:02 at https://nerdlab.be/mutation/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://nerdlab.be/mutation/ -O1 "C:\My Web Sites\nerdlab-mutation-2019" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:42:07	Error: 	"Bad Request" (400) at link https://www.googletagmanager.com/gtm.js?id= (from https://nerdlab.be/mutation/)
+11:42:27	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws (from https://nerdlab.be/mutation/nieuws)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/programma (from https://nerdlab.be/mutation/programma)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/praktisch (from https://nerdlab.be/mutation/nieuws/praktisch)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/gratis-feest-en-expo (from https://nerdlab.be/mutation/nieuws/gratis-feest-en-expo)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/digitaal-aanbod (from https://nerdlab.be/mutation/nieuws/digitaal-aanbod)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/talk-tim-verheyden (from https://nerdlab.be/mutation/nieuws/talk-tim-verheyden)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/glimps-nl (from https://nerdlab.be/mutation/nieuws/glimps-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/stadsexpo-nl (from https://nerdlab.be/mutation/nieuws/stadsexpo-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/boottrip-captain-einstein-nl (from https://nerdlab.be/mutation/nieuws/boottrip-captain-einstein-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/letterpress-nl (from https://nerdlab.be/mutation/nieuws/letterpress-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/wearable-nl (from https://nerdlab.be/mutation/nieuws/wearable-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/vr-in-de-cultuur (from https://nerdlab.be/mutation/nieuws/vr-in-de-cultuur)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/inspiratiesessie-nieuwe-maakplekken-nl (from https://nerdlab.be/mutation/nieuws/inspiratiesessie-nieuwe-maakplekken-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/talk-educatie-participatie-nerdlab-nl (from https://nerdlab.be/mutation/nieuws/talk-educatie-participatie-nerdlab-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/wie-wat-waar-nl (from https://nerdlab.be/mutation/nieuws/wie-wat-waar-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/talk-co-creatie-en-activisme-talk-nl (from https://nerdlab.be/mutation/nieuws/talk-co-creatie-en-activisme-talk-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/tools-for-things-and-ideas (from https://nerdlab.be/mutation/nieuws/tools-for-things-and-ideas)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/spaced-nl (from https://nerdlab.be/mutation/nieuws/spaced-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/playfield-nl (from https://nerdlab.be/mutation/nieuws/playfield-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/workshop-deep-space-nl (from https://nerdlab.be/mutation/nieuws/workshop-deep-space-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/jasna-rok-nl (from https://nerdlab.be/mutation/nieuws/jasna-rok-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/en/ (from https://nerdlab.be/mutation/nieuws/jasna-rok-nl)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/talk-young-talent-seks-mag (from https://nerdlab.be/mutation/nieuws/talk-young-talent-seks-mag)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/polymorf (from https://nerdlab.be/mutation/nieuws/polymorf)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/tweede-spreker-dries-depoorter (from https://nerdlab.be/mutation/nieuws/tweede-spreker-dries-depoorter)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/man-machine-logos-robot-orchestra-mutation-festival (from https://nerdlab.be/mutation/nieuws/man-machine-logos-robot-orchestra-mutation-festival)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/daan-roosegaarde-mutation-2019 (from https://nerdlab.be/mutation/nieuws/daan-roosegaarde-mutation-2019)
+11:42:41	Error: 	"Not Found" (404) at link https://nerdlab.be/mutation/mutation/nieuws/bring-your-own-beamer-1 (from https://nerdlab.be/mutation/nieuws/bring-your-own-beamer-1)
+
+HTTrack Website Copier/3.49-2 mirror complete in 39 seconds : 161 links scanned, 131 files written (9342379 bytes overall) [8633463 bytes received at 221370 bytes/sec], 1638506 bytes transferred using HTTP compression in 59 files, ratio 32%, 40.2 requests per connection
+(29 errors, 0 warnings, 0 messages)
