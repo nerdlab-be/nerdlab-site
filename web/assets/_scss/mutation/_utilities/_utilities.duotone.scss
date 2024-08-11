@@ -1,0 +1,23 @@
+@supports (mix-blend-mode: darken) {
+  .u-duotone::after {
+    background-color: $color-primary;
+    mix-blend-mode: darken;
+  }
+}
+.u-duotone::before,
+.u-duotone::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@supports (mix-blend-mode: lighten) {
+  .u-duotone::before {
+    background-color: $color-secondary;
+    mix-blend-mode: lighten;
+  }
+}

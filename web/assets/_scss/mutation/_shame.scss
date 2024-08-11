@@ -220,7 +220,7 @@
   @include font-size($h3);
   text-transform: uppercase;
   color: $color-tertiary;
-  text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
+  // text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
 
   @include mq(small) {
     @include font-size($h2);
@@ -234,31 +234,31 @@
 .s-mutation .s-theme-white .c-mutation-title,
 .s-mutation .s-theme-white .c-title {
   color: $color-neutral;
-  text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
+  // text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
 }
 
 .s-mutation .s-theme-primary .c-mutation-title,
 .s-mutation .s-theme-primary .c-title {
   color: $white;
-  text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.2);
+  // text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.2);
 }
 
 .s-mutation .s-theme-secondary .c-mutation-title,
 .s-mutation .s-theme-secondary .c-title {
-  color: $color-tertiary;
-  text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
+  color: $color-primary;
+  // text-shadow: .25ex .25ex 0 rgba($color-tertiary,.4),-.25ex -.25ex 0 rgba($color-tertiary,.2);
 }
 
 .s-mutation .s-theme-tertiary .c-mutation-title,
 .s-mutation .s-theme-tertiary .c-title {
-  color: $color-neutral;
-  text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
+  color: $white;
+  // text-shadow: .25ex .25ex 0 rgba($color-neutral,.3),-.25ex -.25ex 0 rgba($color-neutral,.1);
 }
 
 .s-mutation .s-theme-neutral .c-mutation-title,
 .s-mutation .s-theme-neutral .c-title {
   color: $white;
-  text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.1);
+  // text-shadow: .25ex .25ex 0 rgba($white,.3),-.25ex -.25ex 0 rgba($white,.1);
 }
 
 .c-mutation-subtitle,
@@ -272,47 +272,7 @@
   }
 }
 
-.c-marquee {
-  @include font-size($h3);
-  position: relative;
-  height: $unit-large;
-  font-weight: $bold;
-  transition: all ease .3s;
-  overflow: hidden;
 
-  @include mq(medium) {
-    height: $unit-huge;
-    @include font-size($h1);
-  }
-}
-
-.c-marquee--primary {
-  color: $color-tertiary;
-  background-color: $color-primary;
-}
-
-.c-marquee--secondary {
-  color: $color-tertiary;
-  background-color: $color-secondary;
-}
-
-.c-marquee--tertiary {
-  color: $color-primary;
-  background-color: $color-tertiary;
-}
-
-.c-marquee__content {
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  white-space: nowrap;
-  text-align: center;
-
-  span {
-    transition: all ease .3s;
-    display: inline-block;
-  }
-}
 
 .u-text-center {
   &,
@@ -480,3 +440,93 @@
 .js-link-none {
   cursor: default;
 }
+
+
+.c-drawing img{
+	position: relative;
+	z-index: 10;
+	animation: image_animation 60s infinite;
+}
+
+.c-drawing .delay-1 {
+	animation-delay: 3s;
+}
+
+.c-drawing .delay-2 {
+	animation-delay: 15s;
+}
+
+.c-drawing .delay-3 {
+	animation-delay: 7s;
+}
+
+
+@keyframes image_animation {
+	0% {
+		transform: scale(1) rotate(0deg);
+	}
+	5% {
+		transform: scale(1.002) rotate(3deg);
+	}
+	10% {
+		transform: scale(0.999) rotate(0deg);
+	}
+	15% {
+		transform: scale(1.004) rotate(-1deg);
+	}
+	20% {
+		transform: scale(1.0) rotate(0deg);
+	}
+
+	25% {
+		transform: scale(1.002) rotate(3deg);
+	}
+	30% {
+		transform: scale(0.999) rotate(0deg);
+	}
+	35% {
+		transform: scale(1.004) rotate(-1deg);
+	}
+	40% {
+		transform: scale(1.0) rotate(0deg);
+	}
+	45% {
+		transform: scale(1.002) rotate(3deg);
+	}
+	50% {
+		transform: scale(0.999) rotate(0deg);
+	}
+	55% {
+		transform: scale(1.004) rotate(-1deg);
+	}
+	60% {
+		transform: scale(1.0) rotate(0deg);
+	}
+	65% {
+		transform: scale(1.002) rotate(3deg);
+	}
+	70% {
+		transform: scale(0.999) rotate(0deg);
+	}
+	75% {
+		transform: scale(1.004) rotate(-1deg);
+	}
+	80% {
+		transform: scale(1.0) rotate(0deg);
+	}
+	85% {
+		transform: scale(1.002) rotate(3deg);
+	}
+	90% {
+		transform: scale(0.999) rotate(0deg);
+	}
+	95% {
+		transform: scale(1.004) rotate(-1deg);
+	}
+	100% {
+		transform: scale(1.0) rotate(0deg);
+	}
+	
+}
+
+

@@ -1,0 +1,45 @@
+<div class="o-row-large c-drawing s-theme-checkers">
+  <span class="c-drawing c-drawing__left-bottom">
+    <img src="/assets/images/png/jellyfish.png" alt="">
+  </span>
+	{% for block in entry.openCall.all() %}
+    {% switch block.type %}
+    {% case "heading" %}
+		<div class="c-marquee c-marquee--secondary" aria-hidden="true">
+  <div class="c-marquee__content">
+    <span>{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}</span>
+  </div>
+	</div>
+	{% endswitch %}
+    {% endfor %}
+
+    {# <h2 class="c-mutation-title u-text-center">{{ block.heading }}</h2> #}
+    
+  <div class="o-wrapper o-wrapper--huge">
+    
+    <div class="o-layout o-layout--spacer">
+      {% for block in entry.openCall.all() %}
+      {% switch block.type %}
+      {% case "item" %}
+      <div class="o-layout__item u-3/5@medium u-push-1/5@medium">
+        <div class="o-box c-card">
+          <h3 class="c-mutation-subtitle">{{ block.heading }}</h3>
+          <div class="s-editor s-editor--small">
+            {{ block.paragraph }}
+            <p><a href="{{ block.href }}" class="c-link">{{ block.linkText }} {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}</a></p>
+          </div>
+        </div>
+      </div>
+      {% endswitch %}
+      {% endfor %}
+    </div>
+    <div class="s-editor s-editor--small u-margin-top u-margin-top-large@medium u-text-center">
+      {# {% for block in entry.openCall.all() %}
+      {% switch block.type %}
+      {% case "footer" %}
+      {{ block.paragraph }}
+      {% endswitch %}
+      {% endfor %} #}
+    </div>
+  </div>
+</div> 

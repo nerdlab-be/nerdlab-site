@@ -1,0 +1,115 @@
+
+
+{% set tickets = craft.entries().section('mutationTickets').all() %}
+{% if tickets | length() %}
+<div class="c-marquee c-marquee--secondary" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <h2>Tickets Tickets Tickets Tickets Tickets Tickets Tickets Tickets Tickets Tickets Tickets Tickets Tickets Tickets Tickets </h2>
+  </div>
+</div>
+<div class="o-row-large s-theme-primary s-theme-noise" id="tickets">
+  <div class="o-wrapper">
+    <h2 class="c-mutation-title u-margin-bottom-large u-hidden-visually">
+      Tickets
+    </h2>
+    <ul class="o-list-bare c-list c-list--divider u-margin-bottom-none">
+      {% for item in tickets %}
+      <li class="o-list-bare__item c-list__item">
+        {% for entry in item.mutationTicketInfo.all() %}
+        {% if entry.ticketLink %}
+        <a href="{{ entry.ticketLink }}" class="c-link c-link--ticket" target="_blank" rel="noopener">
+        {% else %}
+        <div class="c-link c-link--ticket is-soldout">
+        {% endif %}
+          {% if entry.free == true %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">
+              {{ labels.labelFree }}
+              {% if entry.ticketLink %}
+              {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}
+              {% endif %}
+            </span>
+          {% else %}
+          {% if entry.soldout == true %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">{{ labels.labelSoldout }}</span>
+          {% else %}
+            <span>{{ entry.heading }}</span>
+            <span class="c-bold">
+              {{ entry.price }} | {{ labels.labelBuy }}
+              {% if entry.ticketLink %}
+              {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}
+              {% endif %}
+            </span>
+          {% endif %}
+          {% endif %}
+        {% if entry.ticketLink %}
+        </a>
+        {% else %}
+        </div>
+        {% endif %}
+        {% endfor %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{# <div class="c-marquee c-marquee--tertiary" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div> #}
+{% else %}
+{# <div class="c-marquee c-marquee--primary" aria-hidden="true">
+  <div class="c-marquee__content js-ticker">
+    <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span>
+  </div>
+</div> #}
+{% endif %}
+
+{% set subscribe = mutationGlobals.mutationSubscribe.all() %}
+{% if subscribe | length() %}
+<div class="o-row-large c-drawing s-theme-secondary s-theme-noise" id="subscribe">
+  <span class="c-drawing__left-center">
+    <img src="/assets/images/svg/arrow-white.svg" alt="">
+  </span>
+  <div class="o-wrapper o-wrapper--huge">
+    <div class="o-layout">
+      <div class="o-layout__item u-2/3@medium u-push-1/3@medium">
+        {% for item in subscribe %}
+        {% switch item.type %}
+        {% case "heading" %}
+        <h2 class="c-mutation-title">
+          {{ item.heading }}
+        </h2>
+        {% case "paragraph" %}
+        <div class="s-editor s-editor--prefooter u-margin-bottom-large">
+          {{ item.paragraph }}
+        </div>
+        {% endswitch %}
+        {% endfor %}
+
+        {% for block in interface.newsletter.all() %}
+        <div id="mc_embed_signup">
+          <form action="https://nerdlab.us6.list-manage.com/subscribe/post?u=26083caa15a40f691a214b23c&amp;id=dc6209d55c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="c-subscribe-form validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll" class="c-field-group">
+              <div class="mc-field-group c-field-group__input">
+                <label for="mce-EMAIL" class="u-hidden-visually">{{ labels.labelEmailAddress }}</label>
+                <input type="email" value="" name="EMAIL" class="required email c-input-text c-input-text--large c-subscribe-form__input" placeholder="{{ block.placeholder }}" id="mce-EMAIL">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4b5f2ef2cf3c4ae035ef2e113_afaa240742" tabindex="-1" value=""></div>
+              <button role="submit" name="subscribe" id="mc-embedded-subscribe" class="c-subscribe-form__btn c-btn c-btn--large">{{ labels.labelSubscribe }} {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}</button>
+            </div>
+          </form>
+        </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

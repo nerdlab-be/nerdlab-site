@@ -158,6 +158,9 @@
 @import "mutation/_components/components.drawing";
 @import "mutation/_components/components.timetable";
 @import "mutation/_components/components.tabs";
+@import "mutation/_components/components.pill__shape";
+@import "mutation/_components/components.marquee";
+
 
 // SCOPE
 @import "mutation/_scope/scope.theme";
@@ -194,7 +197,7 @@ $inuit-offsets: true;
 @import "../_vendor/inuitcss/utilities/utilities.hide";
 @import "mutation/_utilities/utilities.divider";
 @import "mutation/_utilities/utilities.pesticide";
-
+@import "mutation/_utilities/utilities.duotone";
 
 
 

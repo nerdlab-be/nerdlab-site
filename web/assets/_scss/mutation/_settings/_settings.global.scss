@@ -38,8 +38,9 @@ $mq-breakpoints: (
 
 // Font styles
 
-$inuit-font-family-primary: "Public", sans-serif;
-$inuit-font-family-secondary: "Mutation", sans-serif;
+$inuit-font-family-primary: "GT-Flexa-Compressed", sans-serif;
+$inuit-font-family-secondary: "GT-Flexa", sans-serif;
+$inuit-font-family-tertiary: "Mutation", sans-serif;
 $inuit-font-weight-light: 400;
 $inuit-font-weight-regular: 500;
 $inuit-font-weight-medium: 600;
@@ -80,9 +81,9 @@ $inuit-outline-solid: 2px solid $color-neutral-xlight;
 
 
 // Z-indexes
-$z-index-alpha: 1;
+$z-index-alpha: 3;
 $z-index-beta: 2;
-$z-index-gamma: 3;
+$z-index-gamma: 1;
 
 
 

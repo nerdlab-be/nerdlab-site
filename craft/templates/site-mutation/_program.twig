@@ -6,10 +6,11 @@
 {% extends "_layouts/mutation" %}
 
 {% block main %}
+{% include "_globals/globals.navigation" %}
 <div class="o-row-large c-drawing s-theme-tertiary s-theme-noise">
-  <span class="c-drawing__background">
+  {# <span class="c-drawing__background">
     <img src="/assets/images/svg/mutation-backdrop-light.svg" alt="">
-  </span>
+  </span> #}
   <div class="o-wrapper o-wrapper--huge">
     {# Intro #}
     <h1 class="c-title">{{ entry.title }}</h1>

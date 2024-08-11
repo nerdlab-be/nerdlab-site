@@ -6,126 +6,17 @@
 {% extends "_layouts/mutation" %}
 
 {% block main %}
-<div class="c-hero s-theme-tertiary s-theme-noise">
-  <span class="c-hero__background">
-    <img src="/assets/images/svg/mutation-backdrop.svg" alt="">
-  </span>
-  <div class="o-wrapper o-wrapper--huge">
-    <h1 class="u-hidden-visually">
-      {{ entry.title }}
-    </h1>
-    <h2 class="c-hero__title">
-      Forever <span class="c-highlight">whatever</span>
-    </h2>
-    <p class="c-hero__date">{{ mutationGlobals.mutationDate }}</p>
-    <p class="c-hero__location">{{ mutationGlobals.mutationLocation }}</p>
-  </div>
-</div>
+{% include "_globals/globals.hero" %}
+{% include "_globals/globals.navigation" %}
+{% include "_globals/globals.intro" %}
 
-<div class="o-row-large c-drawing s-theme-secondary s-theme-noise">
-  <span class="c-drawing__right-bottom">
-    <img src="/assets/images/svg/worm.svg" alt="">
-  </span>
-  <span class="c-drawing__right-top">
-    <img src="/assets/images/svg/triangle-small.svg" alt="">
-  </span>
-  <div class="o-wrapper o-wrapper--huge">
-    <h2 class="c-mutation-title">{{ entry.title }}</h2>
-    {% include '_components/components.intro.twig' %}
-  </div>
-</div>
 
-<div class="o-row-large c-drawing s-theme-tertiary s-theme-noise">
-  <span class="c-drawing__left-bottom">
-    <img src="/assets/images/svg/triangle.svg" alt="">
-  </span>
-  <div class="o-wrapper">
-    <h2 class="c-mutation-title u-text-center">Updates</h2>
-    <ul class="o-list-bare">
-      {% set highlights = entry.mutationHighlights.all() %}
-      {% for item in highlights %}
-      <li class="o-list-bare__item u-spacer">
-        <article class="c-card js-link-expand-holder">
-          <div class="o-layout o-layout--flush">
-            <div class="o-layout__item u-1/3@small u-1/4@medium u-1/3@large">
-              <div class="c-card__image c-card__image--full">
-              {% for image in item.image.all() %}
-                <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
-                  <img
-                    class="o-crop__content o-crop__content--center lazyload fade-in"
-                    src="{{ image.url(thumb) }}"
-                    data-srcset="{{ image.url(large) }}"
-                    alt="{{ image.title }}">
-                </div>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
-              <div class="o-box c-card__body">
-                <p class="c-faded u-margin-bottom-none">
-                  {{ item.postDate | date('l d F Y') }}
-                </p>
-                {% for block in item.mutationAbout.all() %}
-                {% switch block.type %}
-                {% case "heading" %}
-                <h2 class="c-subtitle"><a href="{{ item.url }}" class="c-link c-link--title js-link-expand__target">{{ block.heading | raw }}</a></h2>
-                {% case "paragraph" %}
-                <div class="s-editor">
-                  {{ block.paragraph }}
-                </div>
-                {% endswitch %}
-                {% endfor %}
-                <p class="c-para u-margin-top u-margin-bottom-none">
-                  <span class="c-link c-link--none js-link-expand">
-                    {{ "More" | t }}
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
+{% include "_globals/globals.open-call" %}
+{% include "_globals/globals.program" %}
+{# {% include "_globals/globals.tickets" %} #}
+{# {% include "_globals/globals.modal" %}
+{% include "_globals/globals.scripts" %} #}
 
-{# <div class="o-row-large c-drawing s-theme-tertiary s-theme-noise">
-  <span class="c-drawing__left-bottom">
-    <img src="/assets/images/svg/triangle.svg" alt="">
-  </span>
-  <div class="o-wrapper o-wrapper--huge">
-    {% for block in entry.openCall.all() %}
-    {% switch block.type %}
-    {% case "heading" %}
-    <h2 class="c-mutation-title u-text-center">{{ block.heading }}</h2>
-    {% endswitch %}
-    {% endfor %}
-    <div class="o-layout o-layout--spacer">
-      {% for block in entry.openCall.all() %}
-      {% switch block.type %}
-      {% case "item" %}
-      <div class="o-layout__item u-3/5@medium u-push-1/5@medium">
-        <div class="o-box c-card">
-          <h3 class="c-mutation-subtitle">{{ block.heading }}</h3>
-          <div class="s-editor s-editor--small">
-            {{ block.paragraph }}
-            <p><a href="{{ block.href }}" class="c-link">{{ block.linkText }} {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}</a></p>
-          </div>
-        </div>
-      </div>
-      {% endswitch %}
-      {% endfor %}
-    </div>
-    <div class="s-editor s-editor--small u-margin-top u-margin-top-large@medium u-text-center">
-      {% for block in entry.openCall.all() %}
-      {% switch block.type %}
-      {% case "footer" %}
-      {{ block.paragraph }}
-      {% endswitch %}
-      {% endfor %}
-    </div>
-  </div>
-</div> #}
+
 {% endblock %}
 
