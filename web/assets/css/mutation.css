@@ -593,7 +593,7 @@ dd, ol, ul {
  * 3. Ensure the page always fills at least the entire height of the viewport.
  */
 html {
-  font-family: "GT-Flexa-Compressed", sans-serif;
+  font-family: "GT-Flexa", sans-serif;
   font-size: 1em; /* [1] */
   line-height: 1.5; /* [1] */
   overflow-y: scroll; /* [2] */
@@ -1635,7 +1635,7 @@ table {
    ================================== */
 .c-brand,
 .c-brand > .c-brand__link {
-  font-family: "GT-Flexa-Compressed", sans-serif;
+  font-family: "GT-Flexa", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3184,7 +3184,6 @@ table {
 }
 
 .c-hero__background__video {
-  background-color: #f268e5;
   color: #372b1d;
   width: 100vw;
   height: 80vh;
@@ -3199,7 +3198,6 @@ table {
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -2;
-  mix-blend-mode: difference;
 }
 
 .c-lower__buttons__container, .c-upper__buttons__container {
@@ -3996,7 +3994,7 @@ table {
   box-sizing: border-box;
   white-space: nowrap;
   font-size: 3rem;
-  font-family: "GT-Flexa-Compressed", sans-serif;
+  font-family: "GT-Flexa", sans-serif;
   font-weight: normal;
 }
 
@@ -8876,6 +8874,7 @@ table {
   .u-duotone::after {
     background-color: #f268e5;
     mix-blend-mode: darken;
+    opacity: 0.5;
   }
 }
 .u-duotone::before,
@@ -8894,6 +8893,7 @@ table {
   .u-duotone::before {
     background-color: #372b1d;
     mix-blend-mode: lighten;
+    opacity: 0.5;
   }
 }
 /* ==================================

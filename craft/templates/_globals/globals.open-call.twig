@@ -21,7 +21,7 @@
       {% for block in entry.openCall.all() %}
       {% switch block.type %}
       {% case "item" %}
-      <div class="o-layout__item u-3/5@medium u-push-1/5@medium">
+      <div class="o-layout__item u-3/5@medium u-push-1/5@medium u-spacer">
         <div class="o-box c-card">
           <h3 class="c-mutation-subtitle">{{ block.heading }}</h3>
           <div class="s-editor s-editor--small">

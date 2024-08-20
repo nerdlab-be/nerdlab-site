@@ -8,10 +8,15 @@ Requirements:
 - [Gulp](https://gulpjs.com/)
 
 Setup:
+- Clone the repository
+- Windows: Download Laragon
+- Mac: Download Valet
+- Download Database en run the SQL file
 - Run 'composer install'
 - Create a '.env' file from '.env-example'
 - Run 'npm install'
 - Create a 'gulpconfig.js' file from 'gulpfile.example.js'
+- Run 'npm start'
 
 Gulp tasks (see gulpfile.babel.js for details):
 - 'gulp watch': run a watch task with browsersync, scss, js concat, etc.

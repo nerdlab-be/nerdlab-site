@@ -2,6 +2,7 @@
   .u-duotone::after {
     background-color: $color-primary;
     mix-blend-mode: darken;
+    opacity: 0.5;
   }
 }
 .u-duotone::before,
@@ -19,5 +20,6 @@
   .u-duotone::before {
     background-color: $color-secondary;
     mix-blend-mode: lighten;
+    opacity: 0.5;
   }
 }
