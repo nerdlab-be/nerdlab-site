@@ -1,0 +1,22 @@
+.u-flexbox{
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+}
+
+.u-flexbox--row{
+	flex-direction: row;
+	flex-direction: row-reverse;
+}
+
+.u-flexbox--column{
+	flex-direction: column;
+	flex-direction: column-reverse;
+}
+
+@media (max-width: 768px) {
+	.u-flexbox {
+		flex-direction: column;
+	}
+}
