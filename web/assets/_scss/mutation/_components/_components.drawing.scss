@@ -66,19 +66,19 @@
     @include mq(small) {
       width: 25%;
       left: -10%;
-      bottom: 30%;
+      bottom: -10%;
     }
 
     @include mq(medium) {
-      width: 25%;
-      left: -10%;
-      top: 55%;
+      width: 20%;
+      left: -15%;
+      top: 90%;
       bottom: auto;
     }
 
     @include mq(large) {
-      width: 25%;
-      left: -7%;
+      width: 20%;
+      left: -10%;
       top: 50%;
     }
   }

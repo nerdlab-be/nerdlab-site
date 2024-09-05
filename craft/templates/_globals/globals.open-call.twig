@@ -6,7 +6,7 @@
     {% switch block.type %}
     {% case "heading" %}
 		<div class="c-marquee c-marquee--secondary" aria-hidden="true">
-  <div class="c-marquee__content">
+  <div class="c-marquee__content" id="open-call">
     <span>{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}{{ block.heading }} {{ block.heading }} {{ block.heading }} {{ block.heading }}</span>
   </div>
 	</div>
@@ -17,16 +17,16 @@
     
   <div class="o-wrapper o-wrapper--huge u-spacer u-flexbox">
     
-    <div class="o-layout o-layout--spacer">
+    <div class="o-layout o-layout--spacer u-flexbox--row">
       {% for block in entry.openCall.all() %}
       {% switch block.type %}
       {% case "item" %}
-      <div class="o-layout__item u-3/5@medium u-push-1/5@medium u-spacer">
+      <div class="o-layout__item u-1/3@small u-1/3@medium u-1/3@large">
         <div class="o-box c-card">
           <h3 class="c-mutation-subtitle">{{ block.heading }}</h3>
           <div class="s-editor s-editor--small">
             {{ block.paragraph }}
-            <p><a href="{{ block.href }}" class="c-link">{{ block.linkText }} {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}</a></p>
+            <p><a href="{{ block.href }}" class="c-link c-pill__shape-small">{{ block.linkText }} {% include '_tools/tools.icon.twig' with { options: { icon: 'forward' } } %}</a></p>
           </div>
         </div>
       </div>

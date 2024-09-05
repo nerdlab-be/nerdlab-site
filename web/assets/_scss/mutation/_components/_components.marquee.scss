@@ -30,6 +30,12 @@
   font-size: 200vh;
   height: 200vh;
   top: -100vh;
+
+  @include mq(large) {
+    height: 300vh;
+    font-size: 300vh;
+    top: -150vh;
+  }
 }
 
 /* Specific Marquee Styles */

@@ -743,6 +743,10 @@ table {
   max-width: 1420px;
 }
 
+.o-wrapper--full {
+  max-width: unset;
+}
+
 /* ==========================================================================
    #ROW
    ========================================================================== */
@@ -2815,7 +2819,6 @@ table {
   background-color: #FFFFFF;
 }
 .s-mutation .c-card {
-  outline: 6px dashed #1a1b1e;
   position: relative;
   z-index: 2;
   border-radius: 0;
@@ -3207,6 +3210,26 @@ table {
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
+  flex-wrap: wrap;
+  flex-flow: column;
+  gap: 20px;
+}
+@media (min-width: 37.5em) {
+  .c-lower__buttons__container, .c-upper__buttons__container {
+    flex-wrap: wrap;
+    flex-flow: column;
+  }
+}
+@media (min-width: 56.25em) {
+  .c-lower__buttons__container, .c-upper__buttons__container {
+    flex-flow: row;
+    gap: 0px;
+  }
+}
+@media (min-width: 75em) {
+  .c-lower__buttons__container, .c-upper__buttons__container {
+    flex-flow: row;
+  }
 }
 
 .c-lower__buttons__container {
@@ -3290,21 +3313,21 @@ table {
   .c-drawing__left-bottom {
     width: 25%;
     left: -10%;
-    bottom: 30%;
+    bottom: -10%;
   }
 }
 @media (min-width: 56.25em) {
   .c-drawing__left-bottom {
-    width: 25%;
-    left: -10%;
-    top: 55%;
+    width: 20%;
+    left: -15%;
+    top: 90%;
     bottom: auto;
   }
 }
 @media (min-width: 75em) {
   .c-drawing__left-bottom {
-    width: 25%;
-    left: -7%;
+    width: 20%;
+    left: -10%;
     top: 50%;
   }
 }
@@ -3990,19 +4013,52 @@ table {
   transition: background-color 0.3s ease;
   height: 75px;
   border-radius: 100px;
+  border: 2px solid #f268e5;
+  background-color: #202226;
+  color: #f268e5;
+  box-sizing: border-box;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-family: "GT-Flexa", sans-serif;
+  font-weight: normal;
+  flex-flow: column;
+}
+@media (min-width: 56.25em) {
+  .c-pill__shape {
+    font-size: 2rem;
+    flex-flow: row;
+  }
+}
+@media (min-width: 75em) {
+  .c-pill__shape {
+    font-size: 3rem;
+  }
+}
+
+.c-pill__shape-small {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  background-color: #f268e5;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 100px;
   border: 2px solid #202226;
   box-sizing: border-box;
   white-space: nowrap;
-  font-size: 3rem;
+  font-size: 1rem;
   font-family: "GT-Flexa", sans-serif;
   font-weight: normal;
+  margin: auto;
+  padding: 15px 30px;
+  margin-bottom: 30px;
 }
 
-.c-pill__shape {
+.c-pill__shape-small:hover {
   background-color: #202226;
   color: #f268e5;
   border: 2px solid #f268e5;
-  font-size: 3rem;
 }
 
 /* Hero Marquee Styles */
@@ -8896,9 +8952,35 @@ table {
     opacity: 0.5;
   }
 }
+.u-flexbox {
+  display: flex;
+  display: -ms-flexbox;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-flexbox--row {
+  flex-direction: row;
+}
+
+.u-flexbox--column {
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .u-flexbox {
+    flex-direction: column;
+  }
+}
 /* ==================================
    #SHAME
    ================================== */
+.o-wrapper {
+  z-index: 10;
+}
+
 .u-order-one {
   order: 1;
   margin-bottom: 48px;
@@ -9396,4 +9478,15 @@ table {
   100% {
     transform: scale(1) rotate(0deg);
   }
+}
+* {
+  scroll-behavior: smooth;
+}
+
+.o-wrapper--full {
+  max-width: 80%;
+}
+
+.o-wrapper--full * {
+  margin: auto;
 }

@@ -2,6 +2,11 @@
    #SHAME
    ================================== */
 
+   .o-wrapper{
+    z-index: 10;
+    // position: relative;
+   }
+
 .u-order-one {
   order: 1;
   margin-bottom: $unit-large;
@@ -399,9 +404,7 @@
   z-index: $z-index-alpha;
 }
 
-.c-list {
 
-}
 
 .s-mutation .c-list {
   @include font-size($h5);
@@ -530,3 +533,15 @@
 }
 
 
+*{
+  scroll-behavior: smooth;
+
+}
+
+.o-wrapper--full {
+  max-width: 80%;
+}
+
+.o-wrapper--full * {
+  margin: auto;
+}
