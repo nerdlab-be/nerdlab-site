@@ -555,12 +555,10 @@
 }
 
 .language-button{
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 100;
-  padding: 1rem;
-  background-color: $color-neutral-xlight;
-  border-radius: 0 0 0 1rem;
-  cursor: pointer;
+  margin: 50px;
+  // cursor: pointer;
 }

@@ -9752,3 +9752,11 @@ body {
 .no-padding-bottom {
   padding-bottom: 0;
 }
+
+.language-button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  margin: 50px;
+}
