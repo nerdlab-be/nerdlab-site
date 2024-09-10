@@ -553,3 +553,14 @@
 .no-padding-bottom {
   padding-bottom: 0;
 }
+
+.language-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1rem;
+  background-color: $color-neutral-xlight;
+  border-radius: 0 0 0 1rem;
+  cursor: pointer;
+}
