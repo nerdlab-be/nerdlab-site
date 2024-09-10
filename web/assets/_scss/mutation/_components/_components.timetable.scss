@@ -364,9 +364,10 @@ $calendar-height: $calendar-item-height * 22;
 
 .cd-schedule .event-label {
   @include inuit-font-size(13px,1);
-  position: relative;
-  bottom: .1ex;
-  display: inline-block;
+  position: absolute;
+  top: .1ex;
+  right: .5rem;
+  display: flex;
   font-weight: $regular;
   color: shade($color-primary,10);
   background-color: tint($color-primary,85);
@@ -475,6 +476,135 @@ $calendar-height: $calendar-item-height * 22;
 
     .event-name {
       @include inuit-font-size($h4,1);
+    }
+  }
+}
+
+
+
+// added for testing
+$card-padding: 15px;
+$card-margin: 15px;
+
+// Mixins
+@mixin card-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: $card-padding;
+  margin: $card-margin 0;
+  background-color: $white;
+  border: 1px solid $color-secondary;;
+  position: relative;
+}
+
+@mixin label-style($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 2px 6px;
+  font-size: 0.75em;
+  margin-right: 4px;
+}
+
+// Base styles
+.single-event {
+  @include card-style;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    position: relative;
+
+    .event-name {
+      display: flex;
+      flex-direction: column; // Stack labels and title vertically on smaller screens
+      margin-bottom: 8px;
+
+      .c-underline {
+        text-decoration: underline;
+        font-weight: bold;
+      }
+
+      .event-label {
+        @include label-style($color-primary, #fff);
+        &--primary {
+          @include label-style(#007bff, #fff);
+        }
+        &--secondary {
+          @include label-style(#28a745, #fff);
+        }
+        &--tertiary {
+          @include label-style(#ffc107, #333);
+        }
+        &--quarternary {
+          @include label-style(#dc3545, #fff);
+        }
+        &--quinary {
+          @include label-style(#17a2b8, #fff);
+        }
+      }
+    }
+
+    .event-time, .event-location, .event-price {
+      font-size: 0.875em;
+      color: $color-secondary;
+    }
+
+    .event-time {
+      margin-bottom: 4px;
+    }
+
+    .event-location {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .event-price {
+      position: absolute;
+      bottom: .5rem;
+      right: .5rem;
+      font-weight: bold;
+      color: #000;
+    }
+  }
+}
+
+
+// Responsive design
+@media (max-width: 768px) {
+  .single-event {
+    // Adjust padding and margin for smaller screens
+    $card-padding: 12px;
+    $card-margin: 6px;
+
+    a {
+      .event-name {
+        flex-direction: column; // Stack elements vertically
+      }
+
+      .event-price {
+        font-size: 0.75em; // Smaller font size on smaller screens
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .single-event {
+    $card-padding: 8px;
+    $card-margin: 4px;
+
+    a {
+      .event-name {
+        font-size: 0.875em; // Adjust font size for smaller screens
+      }
+
+      .event-time, .event-location {
+        font-size: 0.75em; // Adjust font size for smaller screens
+      }
     }
   }
 }

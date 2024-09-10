@@ -66,7 +66,7 @@
     @include mq(small) {
       width: 25%;
       left: -10%;
-      bottom: -10%;
+      bottom: 0%;
     }
 
     @include mq(medium) {
@@ -115,8 +115,9 @@
     position: absolute;
     width: 60%;
     right: 0;
-    bottom: -5%;
-    opacity: .5;
+    bottom: 0%;
+    // opacity: .5;
+    z-index: $z-index-alpha;
 
     @include mq(small) {
       width: 50%;
@@ -126,14 +127,14 @@
     @include mq(medium) {
       width: 40%;
       right: 0;
-      bottom: -30%;
-      opacity: .3;
+      bottom: -20%;
+      // opacity: .3;
     }
 
     @include mq(large) {
       width: 30%;
-      right: 5%;
-      bottom: -20%;
+      right: -5%;
+      bottom: -10%;
     }
   }
 
@@ -141,20 +142,20 @@
     position: absolute;
     width: 30%;
     right: 0;
-    top: 90%;
+    top: 95%;
     z-index: $z-index-alpha;
 
     @include mq(small) {
       width: 30%;
-      top: 85%;
+      top: 95%;
     }
 
     @include mq(medium) {
     }
 
     @include mq(large) {
-      width: 30%;
-      right: 5%;
+      width: 20%;
+      right: 15%;
       top: 75%;
     }
 
@@ -190,4 +191,37 @@
     @include mq(huge) {
       right: 10%;
     }
+  }
+
+  .c-drawing__right-center {
+    position: absolute;
+    width: 10%;
+    right: 5%;
+    top: 50%;
+    z-index: $z-index-alpha;
+    transform: rotate(150deg);
+
+    @include mq(small) {
+      width: 10%;
+      right: 4%;
+      top: 50%;
+      transform: rotate(130deg);
+    }
+
+    @include mq(medium) {
+      right: auto;
+      width: 10%;
+      left: 75%;
+      top: 50%;
+      transform: rotate(-60deg);
+    }
+
+    @include mq(large) {
+      top: 50%;
+    }
+  }
+
+
+  .c-drawing-big{
+    width: 30%;
   }

@@ -19,17 +19,24 @@
     <div class="u-margin-top-large u-margin-top-huge@medium js-tabs">
       <ul role="tablist" class="o-list-bare c-tabs js-tabs__list">
         <li role="presentation" class="c-tabs__item">
-          <a href="#section1-timetable" role="tab" id="tab1-timetable" aria-selected="true" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetableLabels.talksEnWorkshops }} {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a>
+          <a href="#section1-timetable" role="tab" id="tab1-timetable" aria-selected="true" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetabledays.dayOne }} {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a>
         </li>
         <li role="presentation" class="c-tabs__item">
-          <a href="#section2-timetable" role="tab" id="tab2-timetable" tabindex="-1" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetableLabels.inspiratiesessiesEnMeer }} {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a>
+          <a href="#section2-timetable" role="tab" id="tab2-timetable" tabindex="-1" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetabledays.dayTwo }} {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a>
+        </li>
+        <li role="presentation" class="c-tabs__item">
+          <a href="#section3-timetable" role="tab" id="tab3-timetable" tabindex="-1" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetabledays.dayThree }} {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a>
         </li>
       </ul>
+      
       <section id="section1-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab1-timetable" class="c-tabs-section">
-        {% include '_components/components.timetable.twig' %}
+        {% include '_components/components.timetable.twig' with {"day": "dayOne", "location": "De Krook" } only %}
       </section>
       <section id="section2-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab2-timetable" hidden="" class="c-tabs-section">
-        {% include '_components/components.timetable-two.twig' %}
+        {% include '_components/components.timetable.twig' with {"day": "dayTwo", "location": "De Krook" } only %}
+      </section>
+       <section id="section3-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab3-timetable" hidden="" class="c-tabs-section">
+        {% include '_components/components.timetable.twig' with {"day": "dayThree" , "location": "De Krook"} only %}
       </section>
     </div>
   </div>

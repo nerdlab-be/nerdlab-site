@@ -1,129 +1,18 @@
 <div class="cd-schedule cd-schedule--short loading">
-  <div class="timeline">
-    <ul>
-      <li><span>9:00</span></li>
-      <li><span>9:30</span></li>
-      <li><span>10:00</span></li>
-      <li><span>10:30</span></li>
-      <li><span>11:00</span></li>
-      <li><span>11:30</span></li>
-      <li><span>12:00</span></li>
-      <li><span>12:30</span></li>
-      <li><span>13:00</span></li>
-      <li><span>13:30</span></li>
-      <li><span>14:00</span></li>
-      <li><span>14:30</span></li>
-      <li><span>15:00</span></li>
-      <li><span>15:30</span></li>
-      <li><span>16:00</span></li>
-      <li><span>16:30</span></li>
-      <li><span>17:00</span></li>
-      <li><span>17:30</span></li>
-      <li><span>18:00</span></li>
-      <li><span>...</span></li>
-      <li><span>20:00</span></li>
-    </ul>
-  </div>
 
-  <div class="events">
-    <ul>
-      {% set talks = craft.entries.section('mutationProgramDetails').all() %}
+      {% set programElements = craft.entries.section('mutationProgramDetails').all() %}
+      {% set sortedProgramElements = programElements|sort((a, b) => a.hourStart <=> b.hourStart) %}
+      {% for item in sortedProgramElements %}
+        {% if item.programDate == day  %}
+        {% if loop.first or item.hourStart != sortedProgramElements[loop.index - 1].hourStart %}
+          <div class="cd-schedule__timeline">
+            <span>{{ item.hourStart|date('H:00') }}</span>
+          </div>
+        {% endif %}
+                      {% include '_components/components.timetable-entry.twig' %}
 
-      <!-- Kopergieterij -->
-      <li class="events-group">
-        <div class="top-info">
-          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.kopergieterij }}</span>
-          {% if mutationGlobals.timetableLabels.kopergieterijInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.kopergieterijInfo }}</span>
-          {% endif %}
-        </div>
-        <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "kopergieterij" %}
-          {% include '_components/components.timetable-entry.twig' %}
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-
-      <!-- Onbetaalbaar -->
-      <li class="events-group">
-        <div class="top-info">
-          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.onbetaalbaar }}</span>
-          {% if mutationGlobals.timetableLabels.onbetaalbaarInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.onbetaalbaarInfo }}</span>
-          {% endif %}
-        </div>
-        <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "onbetaalbaar" %}
-          {% include '_components/components.timetable-entry.twig' %}
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-
-      <!-- Nerdlab -->
-      <li class="events-group">
-        <div class="top-info">
-          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.nerdlab }}</span>
-          {% if mutationGlobals.timetableLabels.nerdlabInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.nerdlabInfo }}</span>
-          {% endif %}
-        </div>
-        <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "nerdlab" %}
-          {% include '_components/components.timetable-entry.twig' %}
-          </li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-
-      <!-- Straatier -->
-      <li class="events-group">
-        <div class="top-info">
-          <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.straatier }}</span>
-          {% if mutationGlobals.timetableLabels.straatierInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.straatierInfo }}</span>
-          {% endif %}
-        </div>
-        <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "straatier" %}
-          {% include '_components/components.timetable-entry.twig' %}
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-
-    </ul>
-  </div>
-</div>
-<div class="schedule-evening-holder">
-  <ul class="o-list-bare">
-    {% for item in talks %}
-    {% if item.mutationRoom == "avondprogramma" %}
-    <li class="schedule-evening-block">
-      {% if item.articleLink | length() %}
-      {% for page in item.articleLink.all() %}
-        <a href="{{ page.url }}">
-          <span class="event-date">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
-          <span class="event-name">
-            {{ item.title }}
-          </span>
-        </a>
+        {% endif %}
       {% endfor %}
-      {% else %}
-        <span class="event-date">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
-        <span class="event-name">
-          {{ item.title }}
-        </span>
-      {% endif %}
-    </li>
-    {% endif %}
-    {% endfor %}
-  </ul>
 </div>
+
 

@@ -11,11 +11,15 @@
 
 .u-flexbox--row{
 	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
 	// flex-direction: row-reverse;
 }
 
 .u-flexbox--column{
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	// flex-direction: column-reverse;
 }
 

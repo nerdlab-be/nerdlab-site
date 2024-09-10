@@ -1,6 +1,12 @@
 <div class="cd-schedule cd-schedule--short loading">
   <div class="timeline">
     <ul>
+      <li><span>9:00</span></li>
+      <li><span>9:30</span></li>
+      <li><span>10:00</span></li>
+      <li><span>10:30</span></li>
+      <li><span>11:00</span></li>
+      <li><span>11:30</span></li>
       <li><span>12:00</span></li>
       <li><span>12:30</span></li>
       <li><span>13:00</span></li>
@@ -14,28 +20,28 @@
       <li><span>17:00</span></li>
       <li><span>17:30</span></li>
       <li><span>18:00</span></li>
-      <li><span>...</span></li>
+      <li><span>19:00</span></li>
       <li><span>20:00</span></li>
     </ul>
   </div>
 
   <div class="events">
     <ul>
-      {% set talks = craft.entries.section('mutationProgramDetails').all() %}
+      {% set programElements = craft.entries.section('mutationProgramDetails').all() %}
 
       <!-- MediaFoyer -->
       <li class="events-group">
         <div class="top-info">
           <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.kraaienest }}</span>
-          {% if mutationGlobals.timetableLabels.kraaienestInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.kraaienestInfo }}</span>
+          {% if mutationGlobals.timetableLabels.kraaienestInfo|length %}
+            <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.kraaienestInfo }}</span>
           {% endif %}
         </div>
         <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "kraaienest" %}
-          {% include '_components/components.timetable-entry.twig' %}
-          {% endif %}
+          {% for item in programElements %}
+            {% if item.mutationRoom == 'kraaienest' %}
+              {% include '_components/components.timetable-entry.twig' %}
+            {% endif %}
           {% endfor %}
         </ul>
       </li>
@@ -44,15 +50,15 @@
       <li class="events-group">
         <div class="top-info">
           <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.logos }}</span>
-          {% if mutationGlobals.timetableLabels.logosInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.logosInfo }}</span>
+          {% if mutationGlobals.timetableLabels.logosInfo|length %}
+            <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.logosInfo }}</span>
           {% endif %}
         </div>
         <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "logos" %}
-          {% include '_components/components.timetable-entry.twig' %}
-          {% endif %}
+          {% for item in programElements %}
+            {% if item.mutationRoom == 'logos' %}
+              {% include '_components/components.timetable-entry.twig' %}
+            {% endif %}
           {% endfor %}
         </ul>
       </li>
@@ -61,15 +67,15 @@
       <li class="events-group">
         <div class="top-info">
           <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.industriemuseum }}</span>
-          {% if mutationGlobals.timetableLabels.industriemuseumInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.industriemuseumInfo }}</span>
+          {% if mutationGlobals.timetableLabels.industriemuseumInfo|length %}
+            <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.industriemuseumInfo }}</span>
           {% endif %}
         </div>
         <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "industriemuseum" %}
-          {% include '_components/components.timetable-entry.twig' %}
-          {% endif %}
+          {% for item in programElements %}
+            {% if item.mutationRoom == 'industriemuseum' %}
+              {% include '_components/components.timetable-entry.twig' %}
+            {% endif %}
           {% endfor %}
         </ul>
       </li>
@@ -78,44 +84,41 @@
       <li class="events-group">
         <div class="top-info">
           <span class="c-top-info__title">{{ mutationGlobals.timetableLabels.tejo }}</span>
-          {% if mutationGlobals.timetableLabels.tejoInfo | length() %}
-          <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.tejoInfo }}</span>
+          {% if mutationGlobals.timetableLabels.tejoInfo|length %}
+            <span class="c-top-info__info">{{ mutationGlobals.timetableLabels.tejoInfo }}</span>
           {% endif %}
         </div>
         <ul class="js-sort">
-          {% for item in talks %}
-          {% if item.mutationRoom == "tejo" %}
-          {% include '_components/components.timetable-entry.twig' %}
-          {% endif %}
+          {% for item in programElements %}
+            {% if item.mutationRoom == 'tejo' %}
+              {% include '_components/components.timetable-entry.twig' %}
+            {% endif %}
           {% endfor %}
         </ul>
       </li>
-
     </ul>
   </div>
 </div>
 <div class="schedule-evening-holder">
   <ul class="o-list-bare">
-    {% for item in talks %}
-    {% if item.mutationRoom == "avondprogramma" %}
-    <li class="schedule-evening-block">
-      {% if item.articleLink | length() %}
-      {% for page in item.articleLink.all() %}
-        <a href="{{ page.url }}">
-          <span class="event-date">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
-          <span class="event-name">
-            {{ item.title }}
-          </span>
-        </a>
-      {% endfor %}
-      {% else %}
-        <span class="event-date">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
-        <span class="event-name">
-          {{ item.title }}
-        </span>
+    {% for item in programElements %}
+      {% if item.mutationRoom == 'avondprogramma' %}
+        <li class="schedule-evening-block">
+          {% if item.articleLink|length %}
+            {% for page in item.articleLink.all() %}
+              <a href="{{ page.url }}">
+                <span class="event-date">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
+                <span class="event-name">{{ item.title }}</span>
+                <span class="event-price">{{ item.betalend ? '€' : '' }}</span>
+              </a>
+            {% endfor %}
+          {% else %}
+            <span class="event-date">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
+            <span class="event-name">{{ item.title }}</span>
+            <span class="event-price">{{ item.betalend ? '€' : '' }}</span>
+          {% endif %}
+        </li>
       {% endif %}
-    </li>
-    {% endif %}
     {% endfor %}
   </ul>
 </div>

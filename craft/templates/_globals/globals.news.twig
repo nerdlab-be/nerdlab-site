@@ -1,0 +1,64 @@
+{# program #}
+<div class="o-row-large c-drawing s-theme-secondary s-theme-noise" >
+   <span class="c-drawing c-drawing__left-bottom c-drawing-big">
+    <img src="/assets/images/png/talks-and-thoughts-sea-butterfly.png" alt="" class=".delay-3">
+  </span>
+  <span class="c-drawing c-drawing__right c-drawing-big">
+    <img src="/assets/images/png/Pause-and-play-tardigrade.png" alt="" class=".delay-1">
+  </span> 
+	<div class="c-marquee c-marquee--tertiary" aria-hidden="true">
+  <div class="c-marquee__content" id="program">
+    {# <span>Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }} • Mutation festival • Forever whatever • {{ mutationGlobals.mutationDate }} • {{ mutationGlobals.mutationLocation }}</span> #}
+		<span>News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News News </span>
+	</div>
+</div>
+  <div class="o-wrapper o-wrapper--huge u-flexbox">
+    {# <h2 class="c-mutation-title u-text-center">Updates</h2> #}
+    <ul class="o-list-bare u-flexbox">
+      {% set highlights = entry.mutationHighlights.all() %}
+      {% for item in highlights %}
+      <li class="o-list-bare__item u-spacer u-1/3@small u-1/3@medium u-1/3@large">
+        <article class="c-card js-link-expand-holder">
+          <div class="o-layout o-layout--flush">
+            <div class="o-layout__item u-1/3@small u-1/4@medium u-1/3@large">
+              <div class="c-card__image c-card__image--full">
+              {% for image in item.image.all() %}
+                <div class="o-crop o-crop--4:3 c-image-link js-link-expand">
+                  <img
+                    class="o-crop__content o-crop__content--center lazyload fade-in"
+                    src="{{ image.url(thumb) }}"
+                    data-srcset="{{ image.url(large) }}"
+                    alt="{{ image.title }}">
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+            <div class="o-layout__item u-2/3@small u-3/4@medium u-2/3@large">
+              <div class="o-box c-card__body">
+                <p class="c-faded u-margin-bottom-none">
+                  {{ item.postDate | date('l d F Y') }}
+                </p>
+                {% for block in item.mutationAbout.all() %}
+                {% switch block.type %}
+                {% case "heading" %}
+                <h2 class="c-subtitle"><a href="{{ item.url }}" class="c-link c-link--title js-link-expand__target">{{ block.heading | raw }}</a></h2>
+                {% case "paragraph" %}
+                <div class="s-editor">
+                  {{ block.paragraph }}
+                </div>
+                {% endswitch %}
+                {% endfor %}
+                <p class="c-para u-margin-top u-margin-bottom-none">
+                  <span class="c-link c-link--none js-link-expand">
+                    {{ "More" | t }}
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -26,4 +26,4 @@ siteSettings:
     hasUrls: true
     template: site-mutation/_program
     uriFormat: programma
-type: single
+type: channel

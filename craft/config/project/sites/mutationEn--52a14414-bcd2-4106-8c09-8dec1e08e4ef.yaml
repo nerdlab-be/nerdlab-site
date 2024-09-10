@@ -1,4 +1,4 @@
-baseUrl: '@web/mutation/en'
+baseUrl: '@web/mutation/en/'
 enabled: '1'
 handle: mutationEn
 hasUrls: true

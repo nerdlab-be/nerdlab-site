@@ -2,94 +2,155 @@ fieldLayouts:
   9a60c424-085e-401e-b7b9-842996798395:
     tabs:
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: 4c2faa96-9b8f-4159-a93f-0005e0f6dac8 # Mutation datum
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 781220e6-731d-4642-8050-314c064db08a
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 9a2e9858-d266-43c4-a998-5b27bea6738f # Mutation locatie
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 44907c9e-0b6a-4752-bda3-87bd5d5c6fbe
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: addf580f-4887-4a29-a983-421fe1631a61 # Mutation link
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 125fdc68-9081-4810-bcb8-e0f0ba9e5622
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 1a6052ff-be6c-435b-b77e-709230192637 # Inschrijven
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 12b6182b-b8f7-46d7-b1e4-d5d2b92a98dc
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 61c6b9fb-3d6f-441b-bde1-6de67945c5a4 # Social
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c9886ac1-1962-4683-8fb6-6341c5a8c481
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 1ab2552e-1cfe-48fb-9768-7bb401872959 # Partners
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: fcf3c430-2b90-468e-937f-a7c6ef2897d0
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 67149b8d-fddd-433a-aaa3-768c561c7a04 # Supporters
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0a29776f-7f9a-4cfb-bc3c-cec60e07bfb6
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 429a4df4-dbfc-49a6-b3d4-d101a6d92499 # Nerdlab
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5119d758-cac0-4fe2-8b81-7e9527c4b9e3
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 405760c6-3834-4302-a607-bbc6d0dfca98
+        userCondition: null
       -
+        elementCondition: null
         elements:
           -
+            elementCondition: null
             fieldUid: b16162c5-b154-4da6-a1bf-082368f8e30f # Timetable labels
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 45bc5b0c-60c4-44ec-a586-110750e67c86
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 603e6133-33fa-49dc-8209-32ddf1648016 # Timetable Locations
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 75e60fb8-2923-43f5-a503-3f03fabc07ec
+            userCondition: null
             warning: null
             width: 100
         name: Timetable
-        sortOrder: 2
+        uid: e556ce75-207d-4a6b-92dd-f85baa940194
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 553a2f1c-7ee0-45c2-8602-7645898feb64 # Timetable Days
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd7fd0d7-d6d7-4cbc-9538-ae55fe251fb1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Days
+        uid: fdf7ff8c-3c4a-4c74-9455-04a45ec3cc9d
+        userCondition: null
 handle: mutationGlobals
 name: Mutation
 sortOrder: 3

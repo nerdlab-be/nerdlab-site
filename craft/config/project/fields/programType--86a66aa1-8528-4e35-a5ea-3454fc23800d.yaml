@@ -2,11 +2,11 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: programType
-instructions: ''
-name: Soort
+instructions: null
+name: 'Programma Item Soort'
 searchable: true
 settings:
-  optgroups: true
+  columnType: string
   options:
     -
       __assoc__:

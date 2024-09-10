@@ -68,6 +68,10 @@
   }
 }
 
+.o-layout__item{
+  flex-grow: 1;
+}
+
 .o-layout--spacer {
   .o-layout__item {
     padding-top: $unit-small;
@@ -544,4 +548,8 @@
 
 .o-wrapper--full * {
   margin: auto;
+}
+
+.no-padding-bottom {
+  padding-bottom: 0;
 }
