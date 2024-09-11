@@ -19,7 +19,7 @@ const rev = require("gulp-rev");
 // Config
 const config = {
   browsersync: {
-    proxy: 'nerdlab.test',
+    proxy: 'nerdlab-site.test',
     notify: true,
     ghostMode: {
       clicks: true,
