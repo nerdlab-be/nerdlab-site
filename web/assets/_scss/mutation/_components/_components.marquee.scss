@@ -94,11 +94,11 @@
 	}
 }
 
-.c-marquee--secondary .c-marquee__content{
+.c-marquee--secondary .c-marquee__content, .c-marquee--tertiary .c-marquee__content {
 	animation: marquee 27s linear infinite;
 
  @include mq(small) {
-	animation: marquee_small 70s linear infinite;
+	animation: marquee_small 15s linear infinite;
 
 	}
 }

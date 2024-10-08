@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+changedFieldIndicator: 298181703
+>>>>>>> Stashed changes
 field: b16162c5-b154-4da6-a1bf-082368f8e30f # Timetable labels
 fieldLayouts:
   b4fc5508-e462-4c41-b0bc-8b82aebd5fc8:
@@ -23,6 +27,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+<<<<<<< Updated upstream
             fieldUid: fc665f2a-c73c-42fd-a459-8daf09d9e5b8 # Kopergieterij
             instructions: null
             label: null
@@ -203,6 +208,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
+=======
+            elementCondition: null
+>>>>>>> Stashed changes
             fieldUid: 87615dc1-c11c-43bf-bced-41b61c68c0b8 # Talk
             instructions: null
             label: null
@@ -297,6 +305,7 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+<<<<<<< Updated upstream
   2a4f7ff5-91df-4913-8f21-7f6d5fc44a7e: # Straatier info
     columnSuffix: null
     contentColumnType: text
@@ -397,6 +406,8 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+=======
+>>>>>>> Stashed changes
   68e9ffc7-14c2-46c3-a175-d5a5ee33a615: # Workshop
     columnSuffix: null
     contentColumnType: text
@@ -457,6 +468,7 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+<<<<<<< Updated upstream
   98b66ab7-e61e-4fe2-9d9c-f1afedffd20a: # Straatier
     columnSuffix: null
     contentColumnType: text
@@ -577,6 +589,8 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+=======
+>>>>>>> Stashed changes
   87615dc1-c11c-43bf-bced-41b61c68c0b8: # Talk
     columnSuffix: null
     contentColumnType: text
@@ -597,6 +611,7 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+<<<<<<< Updated upstream
   9082913c-c2c4-4148-909c-feb4f37a0a07: # Logos info
     columnSuffix: null
     contentColumnType: text
@@ -637,6 +652,8 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+=======
+>>>>>>> Stashed changes
   a5610b26-b83a-428f-959a-31e76dbe90a3: # Workshop + debat
     columnSuffix: null
     contentColumnType: text
@@ -657,6 +674,7 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+<<<<<<< Updated upstream
   a2523413-cd72-43a8-b70a-08eb70221ce8: # Industriemuseum
     columnSuffix: null
     contentColumnType: text
@@ -737,6 +755,8 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+=======
+>>>>>>> Stashed changes
   e518b0fb-da83-4993-9bee-37c2eb306b45: # Inspiratiesessies en meer
     columnSuffix: null
     contentColumnType: text
@@ -757,6 +777,7 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+<<<<<<< Updated upstream
   e83883a3-2a11-4dec-bba8-12c3c3e916af: # Printing studio
     columnSuffix: null
     contentColumnType: text
@@ -797,6 +818,8 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+=======
+>>>>>>> Stashed changes
   eea75f48-ae3a-4a4d-b068-1d8ac378dc89: # Denktank
     columnSuffix: null
     contentColumnType: text
@@ -857,6 +880,7 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+<<<<<<< Updated upstream
   fc665f2a-c73c-42fd-a459-8daf09d9e5b8: # Kopergieterij
     columnSuffix: null
     contentColumnType: text
@@ -877,3 +901,5 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
+=======
+>>>>>>> Stashed changes

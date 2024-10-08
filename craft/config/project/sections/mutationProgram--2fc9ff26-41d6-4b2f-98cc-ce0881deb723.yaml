@@ -17,5 +17,14 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: site-mutation/_program
+<<<<<<< Updated upstream
     uriFormat: programma
+=======
+    uriFormat: program
+  52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
+    enabledByDefault: true
+    hasUrls: true
+    template: site-mutation/_program
+    uriFormat: program
+>>>>>>> Stashed changes
 type: single

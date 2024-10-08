@@ -6,6 +6,11 @@ instructions: ''
 name: 'Timetable labels'
 searchable: true
 settings:
+<<<<<<< Updated upstream
+=======
+  blockTypeFields: 0
+  changedFieldIndicator: 1976487559
+>>>>>>> Stashed changes
   columns:
     __assoc__:
       -
@@ -23,6 +28,7 @@ settings:
               - width
               - ''
       -
+<<<<<<< Updated upstream
         - 280
         -
           __assoc__:
@@ -164,6 +170,9 @@ settings:
               - ''
       -
         - 266
+=======
+        - 87615dc1-c11c-43bf-bced-41b61c68c0b8 # Talk
+>>>>>>> Stashed changes
         -
           __assoc__:
             -

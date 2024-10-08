@@ -1,0 +1,20 @@
+defaultPlacement: end
+enableVersioning: true
+handle: faqQuestions
+name: 'FAQ Questions'
+propagationMethod: all
+siteSettings:
+  8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 9cfe61f3-dae8-44af-962f-51dfd927af69
+type: structure

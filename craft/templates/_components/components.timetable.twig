@@ -1,7 +1,7 @@
 <div class="cd-schedule cd-schedule--short loading">
 
       {% set programElements = craft.entries.section('mutationProgramDetails').all() %}
-      {% set sortedProgramElements = programElements|sort((a, b) => a.hourStart <=> b.hourStart) %}
+      {% set sortedProgramElements = programElements|sort((a, b) => a.hourStart|date('H') <=> b.hourStart|date('H')) %}
       {% for item in sortedProgramElements %}
         {% if item.programDate == day  %}
         {% if loop.first or item.hourStart != sortedProgramElements[loop.index - 1].hourStart %}

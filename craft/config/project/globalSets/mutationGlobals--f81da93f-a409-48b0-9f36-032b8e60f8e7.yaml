@@ -80,16 +80,42 @@ fieldLayouts:
       -
         elements:
           -
+<<<<<<< Updated upstream
+=======
+            elementCondition: null
+            fieldUid: 553a2f1c-7ee0-45c2-8602-7645898feb64 # Timetable Days
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd7fd0d7-d6d7-4cbc-9538-ae55fe251fb1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+>>>>>>> Stashed changes
             fieldUid: b16162c5-b154-4da6-a1bf-082368f8e30f # Timetable labels
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+<<<<<<< Updated upstream
             warning: null
             width: 100
         name: Timetable
         sortOrder: 2
+=======
+            uid: 98643f12-48a9-4a3c-a57f-a4c912b43bc7
+            userCondition: null
+            warning: null
+            width: 100
+        name: Days
+        uid: fdf7ff8c-3c4a-4c74-9455-04a45ec3cc9d
+        userCondition: null
+>>>>>>> Stashed changes
 handle: mutationGlobals
 name: Mutation
 sortOrder: 3

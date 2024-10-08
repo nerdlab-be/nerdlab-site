@@ -1,0 +1,11 @@
+<div class="faq-entry">
+  <details class="faq-question">
+    <summary class="faq-entry__title">{{ item.title }}</summary>
+    <div class="faq-entry__content">
+      <p>{{ item.mutationfaqanswer }}</p>
+      {% if item.eventURL %}
+        <a href="{{ item.eventURL }}" class="faq-entry__link">Learn more</a>
+      {% endif %}
+    </div>
+  </details>
+</div>

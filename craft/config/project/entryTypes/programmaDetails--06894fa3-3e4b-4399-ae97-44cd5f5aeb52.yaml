@@ -27,6 +27,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+<<<<<<< Updated upstream
+=======
+            elementCondition: null
+            fieldUid: 9a90cbf7-2008-45ab-8dcb-1d7a961563c0 # Afbeelding
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 95782200-d0aa-45a8-80ae-e218117ce73a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+>>>>>>> Stashed changes
             fieldUid: db40784b-08c3-47f5-bba6-620385411e85 # Kleine blok
             instructions: null
             label: null

@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px 100px 10px;
   background-color: $color-primary;
   text-transform: uppercase;
   text-decoration: none;
@@ -18,18 +17,28 @@
   font-family: $font-primary;
   font-weight: normal;
   flex-flow: column;
+  padding: 15px 50px;
 
 
-
+  @include mq(small) {
+    @include font-size($h1 * 1.75/3);
+  }
   @include mq(medium) {
-    font-size: 2rem;
-    flex-flow: row;
+    flex-flow: row;    
+    padding: 15px 100px 10px;
+    @include font-size($h1 * 1.75/3);
+
 
   }
 
   @include mq(large) {
     font-size: 3rem;
+    @include font-size($h1 * 1);
+
   }
+
+  
+
 }
 
 

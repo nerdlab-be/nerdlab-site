@@ -23,7 +23,9 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     background-repeat: no-repeat;
     min-width: 350px;
-    min-height: 350px;
+    min-height: 400px;
+    height: 100%;
+    block-size: fit-content;
     box-sizing: border-box;
     filter: contrast(120%);
 
@@ -71,6 +73,7 @@
 
     @include mq(small) {
         width: 100%;
+        min-height: 350px;
     }
     @include mq(medium) {
         width: 450px;

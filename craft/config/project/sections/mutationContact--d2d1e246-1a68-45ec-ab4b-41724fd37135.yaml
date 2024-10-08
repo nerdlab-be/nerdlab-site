@@ -19,6 +19,16 @@ siteSettings:
   8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
     enabledByDefault: true
     hasUrls: true
+<<<<<<< Updated upstream:craft/config/project/sections/mutationContact--d2d1e246-1a68-45ec-ab4b-41724fd37135.yaml
     template: site-mutation/_contact
     uriFormat: contact
+=======
+    template: site-mutation/_faq
+    uriFormat: dafaq
+  52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
+    enabledByDefault: true
+    hasUrls: true
+    template: site-mutation/_faq
+    uriFormat: dafaq
+>>>>>>> Stashed changes:craft/config/project/sections/faqMutation--54778e6d-aa8b-4f0d-97fb-5679e552f1c0.yaml
 type: single

@@ -3,6 +3,7 @@
 
   img {
     width: 100%;
+    z-index: 30;
   }
 
   @include mq(medium) {
@@ -30,6 +31,8 @@
       height: 100%;
     }
   }
+
+  
 
   .c-drawing__left-top {
     position: absolute;

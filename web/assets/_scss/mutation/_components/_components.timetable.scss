@@ -365,7 +365,7 @@ $calendar-height: $calendar-item-height * 22;
 .cd-schedule .event-label {
   @include inuit-font-size(13px,1);
   position: absolute;
-  top: .1ex;
+  top: 1rem;
   right: .5rem;
   display: flex;
   font-weight: $regular;
@@ -491,7 +491,6 @@ $card-margin: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: $card-padding;
   margin: $card-margin 0;
   background-color: $white;
   border: 1px solid $color-secondary;;
@@ -567,7 +566,11 @@ $card-margin: 15px;
       bottom: .5rem;
       right: .5rem;
       font-weight: bold;
-      color: #000;
+      color: white;
+      padding: 2px 6px;
+      background-color: $color-neutral;
+      border-radius: 3px;
+      text-align: center;
     }
   }
 }
@@ -608,3 +611,21 @@ $card-margin: 15px;
     }
   }
 }
+
+.event-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+}
+.event-text{
+  width: 50%;
+  padding: $card-padding;
+
+}
+
+.event-image{
+  width: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
