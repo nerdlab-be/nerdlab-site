@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
-handle: faqMutation
-name: FAQ
+handle: mutationContact
+name: MutationContact
 previewTargets:
   -
     __assoc__:
@@ -19,11 +19,6 @@ siteSettings:
   8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
     enabledByDefault: true
     hasUrls: true
-    template: faq/_entry.twig
-    uriFormat: 'faq/{slug}'
-  52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
-    enabledByDefault: true
-    hasUrls: true
-    template: faq/_entry.twig
-    uriFormat: 'faq/{slug}'
-type: channel
+    template: site-mutation/_contact
+    uriFormat: contact
+type: single

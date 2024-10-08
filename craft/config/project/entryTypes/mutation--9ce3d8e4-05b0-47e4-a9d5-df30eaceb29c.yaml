@@ -2,7 +2,6 @@ fieldLayouts:
   f2c7c9ab-5b1c-4d9e-af35-faa731235c19:
     tabs:
       -
-        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -10,9 +9,7 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
-            elementCondition: null
             id: null
-            inputType: null
             instructions: null
             label: null
             max: null
@@ -27,74 +24,54 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 7bbb3fc8-0548-4c66-bd2b-3fdf263cffc8
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: 20663383-07bd-43ac-a4c3-b0330378ab68 # Intro
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8b221c0b-1904-4de1-8c19-b88e185adc91
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: 5604263f-fbdc-42bd-9b45-25064091705d # Highlights
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ad1812ee-3e54-430d-b63b-c714b32f5218
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: 9a48807a-fcb4-4455-969f-2b7b9f9aabbe # Info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: eee35e37-4a97-4692-a281-b70b49bf8e1f
-            userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: c573df5b-5d9c-4ad5-8023-3f6bb3cb675a
-        userCondition: null
+        sortOrder: 1
       -
-        elementCondition: null
         elements:
           -
-            elementCondition: null
             fieldUid: f84689f7-6038-460e-9fda-f01a17d00956 # SEO
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 00a6b072-07c0-4fb4-a19b-2bfa0980282c
-            userCondition: null
             warning: null
             width: 100
         name: Meta
-        uid: c03c3f4a-0666-4656-916c-372e4c0fb1d2
-        userCondition: null
+        sortOrder: 2
 handle: mutation
 hasTitleField: true
 name: 'Mutation Festival'
 section: 966ff8eb-d301-42cc-9682-6ff16c2089e8 # Mutation Festival
-showStatusField: true
-slugTranslationKeyFormat: null
-slugTranslationMethod: site
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

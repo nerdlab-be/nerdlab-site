@@ -1,490 +1,397 @@
-changedFieldIndicator: 1388860474
 field: b16162c5-b154-4da6-a1bf-082368f8e30f # Timetable labels
 fieldLayouts:
   b4fc5508-e462-4c41-b0bc-8b82aebd5fc8:
     tabs:
       -
-        elementCondition: null
         elements:
           -
-            elementCondition: null
             fieldUid: 0d705cce-b32e-42c9-bfd3-fc6588076228 # Talks en workshops
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6606400e-d1b8-4dec-bf75-16e8c291f4f8
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: e518b0fb-da83-4993-9bee-37c2eb306b45 # Inspiratiesessies en meer
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3f7e9cc9-db0a-474d-8eee-d37dc27c4d37
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: fc665f2a-c73c-42fd-a459-8daf09d9e5b8 # Location One
+            fieldUid: fc665f2a-c73c-42fd-a459-8daf09d9e5b8 # Kopergieterij
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3a9c6937-7991-4181-9901-149a07876514
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: c769f504-f4cb-4f16-b035-d270587c9585 # Location 1 info
+            fieldUid: c769f504-f4cb-4f16-b035-d270587c9585 # Kopergieterij info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 1b7df693-1cd6-4cdc-8c4d-77a751911fbd
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 3cba0cd1-6bd7-402b-b484-c672e040b074 # Location 2
+            fieldUid: 3cba0cd1-6bd7-402b-b484-c672e040b074 # Kraaienest
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 52ecf68b-3421-458c-88a8-7ba978ab62f7
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 9c4b615a-0611-4ec4-95a8-bc096c660115 # Location 2 info
+            fieldUid: 9c4b615a-0611-4ec4-95a8-bc096c660115 # Kraaienest info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: cfa26d0d-8e19-4b6f-9b86-858063d31790
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: e83883a3-2a11-4dec-bba8-12c3c3e916af # Location 3
+            fieldUid: e83883a3-2a11-4dec-bba8-12c3c3e916af # Printing studio
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 674f34b1-5bdb-44c0-b035-1559e926f50c
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 210ca8ce-42a9-427d-8058-f814f0f42fdf # location 3 Info
+            fieldUid: 210ca8ce-42a9-427d-8058-f814f0f42fdf # Printing studio info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6944fd42-cfdc-4da4-bd6f-bf624c385292
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 417cd8cc-4caf-4500-bcbd-41206f6aed4c # Location Four
+            fieldUid: 417cd8cc-4caf-4500-bcbd-41206f6aed4c # Nerdlab
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6ac59894-b9fa-4a19-9ca8-4369b7d7cf77
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: db1fb757-a713-4a9b-a732-989c22445736 # Location Four Info
+            fieldUid: db1fb757-a713-4a9b-a732-989c22445736 # Nerdlab info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6a77398b-3dc0-4bc9-bc37-fea969abf103
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 98b66ab7-e61e-4fe2-9d9c-f1afedffd20a # Location Five
+            fieldUid: 98b66ab7-e61e-4fe2-9d9c-f1afedffd20a # Straatier
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2e4f272a-f981-49d7-bd97-081e8601b36b
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 2a4f7ff5-91df-4913-8f21-7f6d5fc44a7e # Location Five Info
+            fieldUid: 2a4f7ff5-91df-4913-8f21-7f6d5fc44a7e # Straatier info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 857e3c80-a923-4dca-8d10-db19f870c759
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: a2523413-cd72-43a8-b70a-08eb70221ce8 # Location Six
+            fieldUid: a2523413-cd72-43a8-b70a-08eb70221ce8 # Industriemuseum
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9a6d0c9c-76aa-42cf-81a5-2ecf2bfbae1d
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 9713ed7d-b649-4f0e-97a8-c54614f5d095 # Location Six info
+            fieldUid: 9713ed7d-b649-4f0e-97a8-c54614f5d095 # Industriemuseum info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: b2f48301-a132-44f4-82f0-0fb8ddcc4f4a
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: ed3728d1-6272-48dd-b2e2-efd6141a42f4 # Location Seven
+            fieldUid: ed3728d1-6272-48dd-b2e2-efd6141a42f4 # Kapow
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d90ad6fd-98f8-45f0-960e-fb54216b44f0
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 2b3b596a-d7c0-495a-b5d0-425f7bec7776 # Location Seven
+            fieldUid: 2b3b596a-d7c0-495a-b5d0-425f7bec7776 # Kapow info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ac06012d-5dcd-4748-9bc7-a21402581c01
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 0801b2e0-8f2f-4ba6-b65b-386d086846d4 # Location Eight
+            fieldUid: 0801b2e0-8f2f-4ba6-b65b-386d086846d4 # Gent Glas
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 691578fa-106f-4428-84d0-b11942e8c2df
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: e98f2b5b-2eb2-40c7-8583-96ce3a84068c # Location Eight Info
+            fieldUid: e98f2b5b-2eb2-40c7-8583-96ce3a84068c # Gent Glas info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 03388aa4-f2d6-4fa0-bc48-97e34dadfaf7
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 60400c25-48ca-421f-95dc-a071e63a37c6 # Location Nine
+            fieldUid: 60400c25-48ca-421f-95dc-a071e63a37c6 # Onbetaalbaar
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: be16e101-921f-4f49-8c9a-3148773c4b8f
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 40d63982-1738-461a-9177-1d38c92d3924 # Location Nine
+            fieldUid: 40d63982-1738-461a-9177-1d38c92d3924 # Onbetaalbaar info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 85c529ec-389d-4a9f-8ff4-603222156b8d
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: a00bc7a1-ceec-4583-9792-a94cea032c05 # Location Ten
+            fieldUid: a00bc7a1-ceec-4583-9792-a94cea032c05 # Logos
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7de3538d-088e-402b-a151-1ec8d23f8202
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
-            fieldUid: 9082913c-c2c4-4148-909c-feb4f37a0a07 # Location Ten
+            fieldUid: 9082913c-c2c4-4148-909c-feb4f37a0a07 # Logos info
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 808bc920-6d3e-460b-a658-ceaa3874068e
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: 87615dc1-c11c-43bf-bced-41b61c68c0b8 # Talk
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: baea8e2a-ff8b-4686-9656-dead0c7ac47f
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: 80a4aed9-085e-471c-b781-2dc035e86d05 # Talk + debat
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: df7327ad-4224-4feb-9618-d05036ccd55f
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: 68e9ffc7-14c2-46c3-a175-d5a5ee33a615 # Workshop
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8aa2929d-75a9-4376-a544-720a67713527
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: a5610b26-b83a-428f-959a-31e76dbe90a3 # Workshop + debat
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ff89bcf8-79db-43eb-a548-7d0287c63143
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: f074248b-d0eb-4592-8192-b7bf8d8b98f1 # Inspiratiesessie
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 08038e6a-44f6-4880-87b9-0b6a096361b2
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: eea75f48-ae3a-4a4d-b068-1d8ac378dc89 # Denktank
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 78cd22be-bd12-4988-90d4-07ba89a3e43b
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: fa34ba1e-e338-457a-bb5d-19b37824844d # Expo
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 283138dc-1f72-4ced-a24d-cca4d403e166
-            userCondition: null
             warning: null
             width: 100
           -
-            elementCondition: null
             fieldUid: 82cba82a-f444-4fb5-bce9-6770a3e700bc # Performance
             instructions: null
             label: null
-            required: false
+            required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 99bd4a68-246b-4992-925d-d4c7f23d70e2
-            userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: be66e567-ae40-4508-ba4c-880a9c111492
-        userCondition: null
+        sortOrder: 1
 fields:
   0d705cce-b32e-42c9-bfd3-fc6588076228: # Talks en workshops
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: talksEnWorkshops
-    instructions: null
+    instructions: ''
     name: 'Talks en workshops'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  2a4f7ff5-91df-4913-8f21-7f6d5fc44a7e: # Location Five Info
+  2a4f7ff5-91df-4913-8f21-7f6d5fc44a7e: # Straatier info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: straatierFiveInfo
-    instructions: null
-    name: 'Location Five Info'
+    handle: straatierInfo
+    instructions: ''
+    name: 'Straatier info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  2b3b596a-d7c0-495a-b5d0-425f7bec7776: # Location Seven
+  2b3b596a-d7c0-495a-b5d0-425f7bec7776: # Kapow info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: LocationSevenInfo
-    instructions: null
-    name: 'Location Seven'
+    handle: kapowInfo
+    instructions: ''
+    name: 'Kapow info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  3cba0cd1-6bd7-402b-b484-c672e040b074: # Location 2
+  3cba0cd1-6bd7-402b-b484-c672e040b074: # Kraaienest
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationTwo
-    instructions: null
-    name: 'Location 2'
+    handle: kraaienest
+    instructions: ''
+    name: Kraaienest
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  9c4b615a-0611-4ec4-95a8-bc096c660115: # Location 2 info
+  9c4b615a-0611-4ec4-95a8-bc096c660115: # Kraaienest info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationTwoInfo
-    instructions: null
-    name: 'Location 2 info'
+    handle: kraaienestInfo
+    instructions: ''
+    name: 'Kraaienest info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  40d63982-1738-461a-9177-1d38c92d3924: # Location Nine
+  40d63982-1738-461a-9177-1d38c92d3924: # Onbetaalbaar info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationNineInfo
-    instructions: null
-    name: 'Location Nine'
+    handle: onbetaalbaarInfo
+    instructions: ''
+    name: 'Onbetaalbaar info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -495,16 +402,16 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: workshop
-    instructions: null
+    instructions: ''
     name: Workshop
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -515,16 +422,16 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: talkDebat
-    instructions: null
+    instructions: ''
     name: 'Talk + debat'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -535,136 +442,136 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: performance
-    instructions: null
+    instructions: ''
     name: Performance
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  98b66ab7-e61e-4fe2-9d9c-f1afedffd20a: # Location Five
+  98b66ab7-e61e-4fe2-9d9c-f1afedffd20a: # Straatier
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationFive
-    instructions: null
-    name: 'Location Five'
+    handle: straatier
+    instructions: ''
+    name: Straatier
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  210ca8ce-42a9-427d-8058-f814f0f42fdf: # location 3 Info
+  210ca8ce-42a9-427d-8058-f814f0f42fdf: # Printing studio info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationThreeInfo
-    instructions: null
-    name: 'location 3 Info'
+    handle: tejoInfo
+    instructions: ''
+    name: 'Printing studio info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  417cd8cc-4caf-4500-bcbd-41206f6aed4c: # Location Four
+  417cd8cc-4caf-4500-bcbd-41206f6aed4c: # Nerdlab
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationFour
-    instructions: null
-    name: 'Location Four'
+    handle: nerdlab
+    instructions: ''
+    name: Nerdlab
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  0801b2e0-8f2f-4ba6-b65b-386d086846d4: # Location Eight
+  0801b2e0-8f2f-4ba6-b65b-386d086846d4: # Gent Glas
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationEight
-    instructions: null
-    name: 'Location Eight'
+    handle: gentGlas
+    instructions: ''
+    name: 'Gent Glas'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  9713ed7d-b649-4f0e-97a8-c54614f5d095: # Location Six info
+  9713ed7d-b649-4f0e-97a8-c54614f5d095: # Industriemuseum info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationSixInfo
-    instructions: null
-    name: 'Location Six info'
+    handle: industriemuseumInfo
+    instructions: ''
+    name: 'Industriemuseum info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  60400c25-48ca-421f-95dc-a071e63a37c6: # Location Nine
+  60400c25-48ca-421f-95dc-a071e63a37c6: # Onbetaalbaar
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationNine
-    instructions: null
-    name: 'Location Nine'
+    handle: onbetaalbaar
+    instructions: ''
+    name: Onbetaalbaar
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -675,56 +582,56 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: talk
-    instructions: null
+    instructions: ''
     name: Talk
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  9082913c-c2c4-4148-909c-feb4f37a0a07: # Location Ten
+  9082913c-c2c4-4148-909c-feb4f37a0a07: # Logos info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationTenInfo
-    instructions: null
-    name: 'Location Ten'
+    handle: logosInfo
+    instructions: ''
+    name: 'Logos info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  a00bc7a1-ceec-4583-9792-a94cea032c05: # Location Ten
+  a00bc7a1-ceec-4583-9792-a94cea032c05: # Logos
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationTen
-    instructions: null
-    name: 'Location Ten'
+    handle: logos
+    instructions: ''
+    name: Logos
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -735,96 +642,96 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: workshopDebat
-    instructions: null
+    instructions: ''
     name: 'Workshop + debat'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  a2523413-cd72-43a8-b70a-08eb70221ce8: # Location Six
+  a2523413-cd72-43a8-b70a-08eb70221ce8: # Industriemuseum
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationSix
-    instructions: null
-    name: 'Location Six'
+    handle: industriemuseum
+    instructions: ''
+    name: Industriemuseum
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  c769f504-f4cb-4f16-b035-d270587c9585: # Location 1 info
+  c769f504-f4cb-4f16-b035-d270587c9585: # Kopergieterij info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationOneInfo
-    instructions: null
-    name: 'Location 1 info'
+    handle: kopergieterijInfo
+    instructions: ''
+    name: 'Kopergieterij info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  db1fb757-a713-4a9b-a732-989c22445736: # Location Four Info
+  db1fb757-a713-4a9b-a732-989c22445736: # Nerdlab info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationFourInfo
-    instructions: null
-    name: 'Location Four Info'
+    handle: nerdlabInfo
+    instructions: ''
+    name: 'Nerdlab info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  e98f2b5b-2eb2-40c7-8583-96ce3a84068c: # Location Eight Info
+  e98f2b5b-2eb2-40c7-8583-96ce3a84068c: # Gent Glas info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationEightInfo
-    instructions: null
-    name: 'Location Eight Info'
+    handle: gentGlasInfo
+    instructions: ''
+    name: 'Gent Glas info'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -835,56 +742,56 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: inspiratiesessiesEnMeer
-    instructions: null
+    instructions: ''
     name: 'Inspiratiesessies en meer'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  e83883a3-2a11-4dec-bba8-12c3c3e916af: # Location 3
+  e83883a3-2a11-4dec-bba8-12c3c3e916af: # Printing studio
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationThree
-    instructions: null
-    name: 'Location 3'
+    handle: tejo
+    instructions: ''
+    name: 'Printing studio'
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  ed3728d1-6272-48dd-b2e2-efd6141a42f4: # Location Seven
+  ed3728d1-6272-48dd-b2e2-efd6141a42f4: # Kapow
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationSeven
-    instructions: null
-    name: 'Location Seven'
+    handle: kapow
+    instructions: ''
+    name: Kapow
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -895,16 +802,16 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: denktank
-    instructions: null
+    instructions: ''
     name: Denktank
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -915,16 +822,16 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: inspiratiesessie
-    instructions: null
+    instructions: ''
     name: Inspiratiesessie
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
@@ -935,36 +842,36 @@ fields:
     contentColumnType: text
     fieldGroup: null
     handle: expo
-    instructions: null
+    instructions: ''
     name: Expo
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  fc665f2a-c73c-42fd-a459-8daf09d9e5b8: # Location One
+  fc665f2a-c73c-42fd-a459-8daf09d9e5b8: # Kopergieterij
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: locationOne
-    instructions: null
-    name: 'Location One'
+    handle: kopergieterij
+    instructions: ''
+    name: Kopergieterij
     searchable: false
     settings:
       byteLimit: null
       charLimit: null
-      code: false
+      code: ''
       columnType: text
-      initialRows: 4
-      multiline: false
+      initialRows: '4'
+      multiline: ''
       placeholder: null
       uiMode: normal
     translationKeyFormat: null

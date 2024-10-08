@@ -2,97 +2,20 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: mutationRoom
-instructions: null
-name: 'Programma Item Locatie'
+instructions: ''
+name: Locatie
 searchable: true
 settings:
-  columnType: string
+  optgroups: true
   options:
     -
       __assoc__:
         -
           - label
-          - 'Krook - Agora'
+          - Kopergieterij
         -
           - value
-          - locationOne
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Krook - Maakatelier'
-        -
-          - value
-          - locationTwo
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Krook - De blauwe vogel'
-        -
-          - value
-          - locationThree
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Oude bib - Glazen kot'
-        -
-          - value
-          - locationFour
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Oude bib - Buitenplek'
-        -
-          - value
-          - locationFive
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Shopping Gent Zuid - Oude H&M'
-        -
-          - value
-          - locationSix
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Wintercircus - De Catacomben'
-        -
-          - value
-          - locationSeven
-        -
-          - default
-          - ''
-    -
-      __assoc__:
-        -
-          - label
-          - 'Wintercircus - Arena'
-        -
-          - value
-          - locationEight
+          - kopergieterij
         -
           - default
           - '1'
@@ -100,10 +23,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Wintercircus - Auditorium'
+          - Kraaienest
         -
           - value
-          - locationNine
+          - kraaienest
         -
           - default
           - ''
@@ -111,10 +34,10 @@ settings:
       __assoc__:
         -
           - label
-          - 'Wintercircus - Expo'
+          - 'Printing studio'
         -
           - value
-          - locationTen
+          - tejo
         -
           - default
           - ''
@@ -122,10 +45,76 @@ settings:
       __assoc__:
         -
           - label
-          - 'Wintercircus - Lammerstraat'
+          - Nerdlab
         -
           - value
-          - locationEleven
+          - nerdlab
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Gent Glas'
+        -
+          - value
+          - gentGlas
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Kapow
+        -
+          - value
+          - kapow
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Straatier
+        -
+          - value
+          - straatier
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Industriemuseum
+        -
+          - value
+          - industriemuseum
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Logos
+        -
+          - value
+          - logos
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Onbetaalbaar
+        -
+          - value
+          - onbetaalbaar
         -
           - default
           - ''
@@ -136,7 +125,7 @@ settings:
           - Avondprogramma
         -
           - value
-          - locationTwelve
+          - avondprogramma
         -
           - default
           - ''

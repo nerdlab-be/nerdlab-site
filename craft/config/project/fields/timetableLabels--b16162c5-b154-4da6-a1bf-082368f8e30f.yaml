@@ -2,219 +2,217 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: timetableLabels
-instructions: null
+instructions: ''
 name: 'Timetable labels'
 searchable: true
 settings:
-  blockTypeFields: 0
-  changedFieldIndicator: 686460847
   columns:
     __assoc__:
       -
-        - 0d705cce-b32e-42c9-bfd3-fc6588076228 # Talks en workshops
+        - 327
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - e518b0fb-da83-4993-9bee-37c2eb306b45 # Inspiratiesessies en meer
+        - 328
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - fc665f2a-c73c-42fd-a459-8daf09d9e5b8 # Location One
+        - 280
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - c769f504-f4cb-4f16-b035-d270587c9585 # Location 1 info
+        - 272
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 3cba0cd1-6bd7-402b-b484-c672e040b074 # Location 2
+        - 261
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 9c4b615a-0611-4ec4-95a8-bc096c660115 # Location 2 info
+        - 269
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - e83883a3-2a11-4dec-bba8-12c3c3e916af # Location 3
+        - 274
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 210ca8ce-42a9-427d-8058-f814f0f42fdf # location 3 Info
+        - 258
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 417cd8cc-4caf-4500-bcbd-41206f6aed4c # Location Four
+        - 262
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - db1fb757-a713-4a9b-a732-989c22445736 # Location Four Info
+        - 273
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 98b66ab7-e61e-4fe2-9d9c-f1afedffd20a # Location Five
+        - 268
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 2a4f7ff5-91df-4913-8f21-7f6d5fc44a7e # Location Five Info
+        - 259
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - a2523413-cd72-43a8-b70a-08eb70221ce8 # Location Six
+        - 270
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 9713ed7d-b649-4f0e-97a8-c54614f5d095 # Location Six info
+        - 267
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - ed3728d1-6272-48dd-b2e2-efd6141a42f4 # Location Seven
+        - 276
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 2b3b596a-d7c0-495a-b5d0-425f7bec7776 # Location Seven
+        - 260
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 0801b2e0-8f2f-4ba6-b65b-386d086846d4 # Location Eight
+        - 257
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - e98f2b5b-2eb2-40c7-8583-96ce3a84068c # Location Eight Info
+        - 275
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 60400c25-48ca-421f-95dc-a071e63a37c6 # Location Nine
+        - 330
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 40d63982-1738-461a-9177-1d38c92d3924 # Location Nine
+        - 329
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - a00bc7a1-ceec-4583-9792-a94cea032c05 # Location Ten
+        - 332
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 9082913c-c2c4-4148-909c-feb4f37a0a07 # Location Ten
+        - 331
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 87615dc1-c11c-43bf-bced-41b61c68c0b8 # Talk
+        - 266
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 80a4aed9-085e-471c-b781-2dc035e86d05 # Talk + debat
+        - 264
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 68e9ffc7-14c2-46c3-a175-d5a5ee33a615 # Workshop
+        - 263
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - a5610b26-b83a-428f-959a-31e76dbe90a3 # Workshop + debat
+        - 271
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - f074248b-d0eb-4592-8192-b7bf8d8b98f1 # Inspiratiesessie
+        - 278
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - eea75f48-ae3a-4a4d-b068-1d8ac378dc89 # Denktank
+        - 277
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - fa34ba1e-e338-457a-bb5d-19b37824844d # Expo
+        - 279
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 82cba82a-f444-4fb5-bce9-6770a3e700bc # Performance
+        - 265
         -
           __assoc__:
             -
@@ -222,12 +220,13 @@ settings:
               - ''
   contentTable: '{{%stc_timetablelabels}}'
   fieldLayout: row
-  maxRows: null
-  minRows: null
+  maxRows: ''
+  minRows: ''
+  placeholderKey: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: null
-  staticField: true
+  selectionLabel: ''
+  staticField: '1'
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: verbb\supertable\fields\SuperTableField

@@ -1,0 +1,22 @@
+{#
+ # The homepage template
+ # ------------------------
+-#}
+
+{% extends "_layouts/mutation" %}
+
+{% block main %}
+{% include "_globals/globals.navigation" %}
+
+<a href="{{ siteUrl('nl/') }}" class="c-pill__shape language-button">NL</a>
+
+{% include "_globals/globals.contact" %}
+
+
+{# {% include "_globals/globals.tickets" %} #}
+{# {% include "_globals/globals.modal" %}
+{% include "_globals/globals.scripts" %} #}
+
+
+{% endblock %}
+
