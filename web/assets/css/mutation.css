@@ -3879,6 +3879,14 @@ table {
   background-color: #2c2217;
 }
 
+.single-event a {
+  color: #f268e5;
+}
+
+.single-event a:hover {
+  color: #372b1d;
+}
+
 .cd-schedule .events .single-event--small a {
   margin-bottom: 12px;
 }
@@ -4012,7 +4020,7 @@ table {
   }
 }
 
-.schedule-evening-block a {
+.schedule-evening-block {
   display: block;
   text-decoration: none;
   padding: 24px;
@@ -4023,7 +4031,7 @@ table {
 .schedule-evening-block a:focus {
   box-shadow: 0 0 6px rgba(13, 14, 15, 0.2);
 }
-.schedule-evening-block a .event-name {
+.schedule-evening-block .event-name {
   text-decoration: underline;
 }
 .schedule-evening-block .event-date {
@@ -4064,77 +4072,80 @@ table {
   border: 1px solid #372b1d;
   position: relative;
   width: 100%;
-}
-.single-event a {
   text-decoration: none;
   color: inherit;
   display: block;
   height: 100%;
   position: relative;
 }
-.single-event a .event-name {
+.single-event .event-name {
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
 }
-.single-event a .event-name .c-underline {
+.single-event .event-name .c-underline {
   text-decoration: underline;
   font-weight: bold;
 }
-.single-event a .event-name .event-label {
-  background-color: #f268e5;
+.single-event .event-name .event-label {
+  background-color: #cc00ff;
   color: #fff;
   padding: 2px 6px;
   font-size: 0.75em;
   margin-right: 4px;
 }
-.single-event a .event-name .event-label--primary {
+.single-event .event-name .event-label--primary {
   background-color: #007bff;
   color: #fff;
   padding: 2px 6px;
   font-size: 0.75em;
   margin-right: 4px;
 }
-.single-event a .event-name .event-label--secondary {
+.single-event .event-name .event-label--secondary {
   background-color: #28a745;
   color: #fff;
   padding: 2px 6px;
   font-size: 0.75em;
   margin-right: 4px;
 }
-.single-event a .event-name .event-label--tertiary {
+.single-event .event-name .event-label--tertiary {
   background-color: #ffc107;
   color: #333;
   padding: 2px 6px;
   font-size: 0.75em;
   margin-right: 4px;
 }
-.single-event a .event-name .event-label--quarternary {
+.single-event .event-name .event-label--quarternary {
   background-color: #dc3545;
   color: #fff;
   padding: 2px 6px;
   font-size: 0.75em;
   margin-right: 4px;
 }
-.single-event a .event-name .event-label--quinary {
+.single-event .event-name .event-label--quinary {
   background-color: #17a2b8;
   color: #fff;
   padding: 2px 6px;
   font-size: 0.75em;
   margin-right: 4px;
 }
-.single-event a .event-time, .single-event a .event-location, .single-event a .event-price {
+.single-event .event-time,
+.single-event .event-location,
+.single-event .event-price {
   font-size: 0.875em;
   color: #372b1d;
 }
-.single-event a .event-time {
+.single-event .sign-up {
+  background-color: #f268e5 !important;
+}
+.single-event .event-time {
   margin-bottom: 4px;
 }
-.single-event a .event-location {
+.single-event .event-location {
   display: block;
   margin-bottom: 4px;
 }
-.single-event a .event-price {
+.single-event .event-price {
   position: absolute;
   bottom: 0.5rem;
   right: 0.5rem;
@@ -4158,7 +4169,8 @@ table {
   .single-event a .event-name {
     font-size: 0.875em;
   }
-  .single-event a .event-time, .single-event a .event-location {
+  .single-event a .event-time,
+  .single-event a .event-location {
     font-size: 0.75em;
   }
 }
@@ -9857,4 +9869,8 @@ body {
   margin-top: 1rem;
   color: #007bff;
   text-decoration: none;
+}
+
+.u-color-black {
+  color: black;
 }

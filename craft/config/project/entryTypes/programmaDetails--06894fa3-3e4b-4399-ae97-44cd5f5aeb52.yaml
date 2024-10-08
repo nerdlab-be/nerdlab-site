@@ -2,6 +2,7 @@ fieldLayouts:
   f2e75ab6-0407-4c16-b3ba-456c69ea72c3:
     tabs:
       -
+        elementCondition: null
         elements:
           -
             autocapitalize: true
@@ -9,7 +10,9 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
+            elementCondition: null
             id: null
+            inputType: null
             instructions: null
             label: null
             max: null
@@ -24,11 +27,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ff52147a-576a-4bd5-adab-bf05ddf722b4
+            userCondition: null
             warning: null
             width: 100
           -
-<<<<<<< Updated upstream
-=======
             elementCondition: null
             fieldUid: 9a90cbf7-2008-45ab-8dcb-1d7a961563c0 # Afbeelding
             instructions: null
@@ -42,66 +45,122 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
->>>>>>> Stashed changes
             fieldUid: db40784b-08c3-47f5-bba6-620385411e85 # Kleine blok
             instructions: null
             label: null
-            required: 0
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1c5eb597-3723-4708-9f7c-4b9a8ba4611e
+            userCondition: null
             warning: null
             width: 100
           -
-            fieldUid: 1919357a-9336-4b00-8f56-e9da754f13a9 # Locatie
+            elementCondition: null
+            fieldUid: 1919357a-9336-4b00-8f56-e9da754f13a9 # Programma Item Locatie
             instructions: null
             label: null
-            required: 0
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 21239889-688d-46d5-ab63-311d0568612e
+            userCondition: null
             warning: null
             width: 100
           -
-            fieldUid: 86a66aa1-8528-4e35-a5ea-3454fc23800d # Soort
+            elementCondition: null
+            fieldUid: 86a66aa1-8528-4e35-a5ea-3454fc23800d # Programma Item Soort
             instructions: null
             label: null
-            required: 0
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 8299f46e-4739-4bdc-bc14-dd00d7e3da23
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
+            fieldUid: c83e3c30-b93b-48c5-b6fd-2b6a3c6d34b8 # Programma Item Datum
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2bdd3d7a-1ab8-4d57-9095-f94be85e357d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             fieldUid: 8eccee9f-28f1-41fe-9b86-4a793dde5b61 # Start uur
             instructions: null
             label: null
-            required: 0
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 99e2d7df-b77d-4e4f-87a3-80248d105763
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 5c83c045-1cf1-4135-92af-bbea0f0eb952 # Eind uur
             instructions: null
             label: null
-            required: 0
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 3d48d3b5-95ab-430b-a50d-8eb378d70809
+            userCondition: null
             warning: null
             width: 100
           -
+            elementCondition: null
             fieldUid: 3905d91b-dc37-4488-9150-d0956af46de0 # Artikel link
             instructions: null
             label: null
-            required: 0
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 94f29c30-5b31-46a1-8e4f-695ebeb71676
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 773b3c99-de76-40c0-a4f3-46b4419b6f7d # Betalend
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5b1c20bd-b8f6-47b7-9212-db089d136501
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 93d43e72-49c1-4d10-9e48-665b41779ba0 # Event URL
+            instructions: null
+            label: 'Registery URL or Event Url'
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d90cb17b-4ce4-439e-a2e0-e12ce53c0c2d
+            userCondition: null
             warning: null
             width: 100
         name: Content
-        sortOrder: 1
+        uid: 626ad102-ca25-403b-b56f-b6543014342f
+        userCondition: null
 handle: programmaDetails
 hasTitleField: true
 name: 'Programma details'
 section: 9868968d-46de-4ab8-bd19-48bcd95d03a4 # Programma details
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

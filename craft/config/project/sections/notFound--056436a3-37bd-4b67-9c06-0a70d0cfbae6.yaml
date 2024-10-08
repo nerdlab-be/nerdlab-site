@@ -11,6 +11,9 @@ previewTargets:
       -
         - urlFormat
         - '{url}'
+      -
+        - refresh
+        - '1'
 propagationMethod: all
 siteSettings:
   1f81a99e-4cd9-41d5-88e5-d85eb389e2ef: # Nerdlab
@@ -19,6 +22,11 @@ siteSettings:
     template: '404'
     uriFormat: '404'
   8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
+    enabledByDefault: true
+    hasUrls: true
+    template: '404'
+    uriFormat: '404'
+  52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
     enabledByDefault: true
     hasUrls: true
     template: '404'

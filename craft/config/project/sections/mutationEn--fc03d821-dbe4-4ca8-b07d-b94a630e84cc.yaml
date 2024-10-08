@@ -1,13 +1,13 @@
 defaultPlacement: end
 enableVersioning: true
-handle: blogMutation
-name: Nieuws
+handle: mutationEn
+name: 'Mutation Festival En'
 previewTargets:
   -
     __assoc__:
       -
         - label
-        - 'Primaire invoer-pagina'
+        - 'Primary entry page'
       -
         - urlFormat
         - '{url}'
@@ -16,14 +16,9 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
-    enabledByDefault: true
-    hasUrls: true
-    template: site-mutation/blog/_entry
-    uriFormat: 'nieuws/{slug}'
   52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
     enabledByDefault: true
     hasUrls: true
-    template: site-mutation/blog/_entry
-    uriFormat: 'nieuws/{slug}'
-type: channel
+    template: site-mutation/en/_index
+    uriFormat: __home__
+type: single

@@ -1,77 +1,42 @@
-{% if item.articleLink|length %}
-  {% for page in item.articleLink.all() %}
-    <li class="single-event single-event--link {% if item.programType == 'info' %}{% endif %}" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
-      <a href="{{ page.url }}">
-        <div class="event-wrapper">
-          {% if item.image.one() and item.image.one().getUrl() %}
-            <span class="event-image" style="background-image: url({{ item.image.one().getUrl() }})"></span>
-          {% endif %}
-          <span class="event-name">
-            <span class="event-text">
-              <span class="c-underline">{{ item.title }}</span>
-              {% if item.programType == 'talk' %}
-                <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
-              {% elseif item.programType == 'talkDebat' %}
-                <span class="event-label">{{ mutationGlobals.timetableLabels.talkDebat }}</span>
-              {% elseif item.programType == 'workshop' %}
-                <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }}</span>
-              {% elseif item.programType == 'workshopDebat' %}
-                <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }}</span>
-              {% elseif item.programType == 'inspiratiesessie' %}
-                <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }}</span>
-              {% elseif item.programType == 'denktank' %}
-                <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.denktank }}</span>
-              {% elseif item.programType == 'expo' %}
-                <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }}</span>
-              {% elseif item.programType == 'performance' %}
-                <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }}</span>
-              {% endif %}
-            </span>
-            <span class="event-location">{{ item.mutationRoom.value }}</span>
-            <span class="event-time">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
-            {% if item.paying %}
-              <span class="event-price">€</span>
-            {% endif %}
-          </span>
-        </div>
-      </a>
-    </li>
-  {% endfor %}
-{% else %}
-  <li class="single-event {% if item.programType == 'info' %}{% endif %}" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
-    <a href="#!" class="js-link-none">
-      <div class="event-wrapper">
-        {% if item.image.one() and item.image.one().getUrl() %}
-          <span class="event-image" style="background-image: url({{ item.image.one().getUrl() }})"></span>
+<li class="single-event single-event--link {% if item.programType == 'info' %}{% endif %}" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
+  <div class="event-wrapper">
+    {% if item.image.one() and item.image.one().getUrl() %}
+      <span class="event-image" style="background-image: url({{ item.image.one().getUrl() }})"></span>
+    {% endif %}
+    <span class="event-text">
+      <span class="event-name">
+        {{ item.title }}
+        {% if item.programType == 'talk' %}
+          <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
+        {% elseif item.programType == 'talkDebat' %}
+          <span class="event-label">{{ mutationGlobals.timetableLabels.talkDebat }}</span>
+        {% elseif item.programType == 'workshop' %}
+          <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }}</span>
+        {% elseif item.programType == 'workshopDebat' %}
+          <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }}</span>
+        {% elseif item.programType == 'inspiratiesessie' %}
+          <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }}</span>
+        {% elseif item.programType == 'denktank' %}
+          <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.denktank }}</span>
+        {% elseif item.programType == 'expo' %}
+          <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }}</span>
+        {% elseif item.programType == 'performance' %}
+          <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }}</span>
         {% endif %}
-        <span class="event-text">
-          <span class="event-name">
-            {{ item.title }}
-            {% if item.programType == 'talk' %}
-              <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
-            {% elseif item.programType == 'talkDebat' %}
-              <span class="event-label">{{ mutationGlobals.timetableLabels.talkDebat }}</span>
-            {% elseif item.programType == 'workshop' %}
-              <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }}</span>
-            {% elseif item.programType == 'workshopDebat' %}
-              <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }}</span>
-            {% elseif item.programType == 'inspiratiesessie' %}
-              <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }}</span>
-            {% elseif item.programType == 'denktank' %}
-              <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.denktank }}</span>
-            {% elseif item.programType == 'expo' %}
-              <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }}</span>
-            {% elseif item.programType == 'performance' %}
-              <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }}</span>
-            {% endif %}
-          </span>
-          <span class="event-time">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
-          <span class="event-location">{{ item.mutationRoom.label }}</span>
-          {% if item.paying %}
-            <span class="event-price">€</span>
-          {% endif %}
-        </span>
-      </div>
-    </a>
-  </li>
-{% endif %}
+      </span>
+      <span class="event-time">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
+      <span class="event-location">{{ item.mutationRoom.label }}</span>
+
+      {% if item.eventURL %}
+        <a href="{{ item.eventURL }}"><span class="event-price sign-up" target="_blank">{{ 'Sign up'|t }} {{ item.paying ? '| €' : '' }}</span></a>
+      {% else %}
+        <span class="event-price">{{ 'First come first serve'|t }} {{ item.paying ? '| €' : '' }}</span>
+      {% endif %} 
+      {% if item.articleLink|length %}
+        {% for page in item.articleLink.all() %}
+          <a href="{{ page.url }}" class="btn btn--small btn--primary">{{ 'Info'|t }}</a><br />
+        {% endfor %}
+      {% endif %}
+    </span>
+  </div>
+</li>
