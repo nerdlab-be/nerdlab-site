@@ -546,9 +546,6 @@
   max-width: 80%;
 }
 
-.o-wrapper--full * {
-  margin: auto;
-}
 
 .no-padding-bottom {
   padding-bottom: 0;
@@ -599,4 +596,8 @@
 
 .u-color-black{
   color: black;
+}
+
+.u-pos-rel{
+  position: relative;
 }

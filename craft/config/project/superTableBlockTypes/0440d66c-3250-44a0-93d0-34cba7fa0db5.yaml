@@ -1,4 +1,4 @@
-changedFieldIndicator: 298181703
+changedFieldIndicator: 1893132194
 field: b16162c5-b154-4da6-a1bf-082368f8e30f # Timetable labels
 fieldLayouts:
   b4fc5508-e462-4c41-b0bc-8b82aebd5fc8:
@@ -8,19 +8,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: 0d705cce-b32e-42c9-bfd3-fc6588076228 # Talks en workshops
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 6606400e-d1b8-4dec-bf75-16e8c291f4f8
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: e518b0fb-da83-4993-9bee-37c2eb306b45 # Inspiratiesessies en meer
+            fieldUid: e518b0fb-da83-4993-9bee-37c2eb306b45 # Info
             instructions: null
             label: null
             required: false
@@ -44,19 +32,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: 80a4aed9-085e-471c-b781-2dc035e86d05 # Talk + debat
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: df7327ad-4224-4feb-9618-d05036ccd55f
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 68e9ffc7-14c2-46c3-a175-d5a5ee33a615 # Workshop
+            fieldUid: 68e9ffc7-14c2-46c3-a175-d5a5ee33a615 # Makeathon
             instructions: null
             label: null
             required: false
@@ -68,7 +44,19 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: a5610b26-b83a-428f-959a-31e76dbe90a3 # Workshop + debat
+            fieldUid: 0d705cce-b32e-42c9-bfd3-fc6588076228 # Workshops
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6606400e-d1b8-4dec-bf75-16e8c291f4f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: a5610b26-b83a-428f-959a-31e76dbe90a3 # Workshop en debat
             instructions: null
             label: null
             required: false
@@ -92,25 +80,25 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: eea75f48-ae3a-4a4d-b068-1d8ac378dc89 # Denktank
+            fieldUid: 80a4aed9-085e-471c-b781-2dc035e86d05 # Netwerk
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 78cd22be-bd12-4988-90d4-07ba89a3e43b
+            uid: df7327ad-4224-4feb-9618-d05036ccd55f
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: fa34ba1e-e338-457a-bb5d-19b37824844d # Expo
+            fieldUid: 1ebe5c27-4731-4558-951a-3ec1fb1322e8 # Expo
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 283138dc-1f72-4ced-a24d-cca4d403e166
+            uid: 8fdacbb9-f00d-4694-bee5-51333bb5853b
             userCondition: null
             warning: null
             width: 100
@@ -126,37 +114,29 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: eea75f48-ae3a-4a4d-b068-1d8ac378dc89 # Extra 2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 78cd22be-bd12-4988-90d4-07ba89a3e43b
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: be66e567-ae40-4508-ba4c-880a9c111492
         userCondition: null
 fields:
-  0d705cce-b32e-42c9-bfd3-fc6588076228: # Talks en workshops
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: talksEnWorkshops
-    instructions: null
-    name: 'Talks en workshops'
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: text
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  68e9ffc7-14c2-46c3-a175-d5a5ee33a615: # Workshop
+  0d705cce-b32e-42c9-bfd3-fc6588076228: # Workshops
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: workshop
     instructions: null
-    name: Workshop
+    name: Workshops
     searchable: false
     settings:
       byteLimit: null
@@ -170,13 +150,53 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  80a4aed9-085e-471c-b781-2dc035e86d05: # Talk + debat
+  1ebe5c27-4731-4558-951a-3ec1fb1322e8: # Expo
+    columnSuffix: rmoujwrj
+    contentColumnType: text
+    fieldGroup: null
+    handle: expo
+    instructions: null
+    name: Expo
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  68e9ffc7-14c2-46c3-a175-d5a5ee33a615: # Makeathon
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: talkDebat
+    handle: makeathon
     instructions: null
-    name: 'Talk + debat'
+    name: Makeathon
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: text
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: language
+    type: craft\fields\PlainText
+  80a4aed9-085e-471c-b781-2dc035e86d05: # Netwerk
+    columnSuffix: null
+    contentColumnType: text
+    fieldGroup: null
+    handle: netwerk
+    instructions: null
+    name: Netwerk
     searchable: false
     settings:
       byteLimit: null
@@ -230,13 +250,13 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  a5610b26-b83a-428f-959a-31e76dbe90a3: # Workshop + debat
+  a5610b26-b83a-428f-959a-31e76dbe90a3: # Workshop en debat
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: workshopDebat
     instructions: null
-    name: 'Workshop + debat'
+    name: 'Workshop en debat'
     searchable: false
     settings:
       byteLimit: null
@@ -250,13 +270,13 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  e518b0fb-da83-4993-9bee-37c2eb306b45: # Inspiratiesessies en meer
+  e518b0fb-da83-4993-9bee-37c2eb306b45: # Info
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
-    handle: inspiratiesessiesEnMeer
+    handle: info
     instructions: null
-    name: 'Inspiratiesessies en meer'
+    name: Info
     searchable: false
     settings:
       byteLimit: null
@@ -270,13 +290,13 @@ fields:
     translationKeyFormat: null
     translationMethod: language
     type: craft\fields\PlainText
-  eea75f48-ae3a-4a4d-b068-1d8ac378dc89: # Denktank
+  eea75f48-ae3a-4a4d-b068-1d8ac378dc89: # Extra 2
     columnSuffix: null
     contentColumnType: text
     fieldGroup: null
     handle: denktank
     instructions: null
-    name: Denktank
+    name: 'Extra 2'
     searchable: false
     settings:
       byteLimit: null
@@ -297,26 +317,6 @@ fields:
     handle: inspiratiesessie
     instructions: null
     name: Inspiratiesessie
-    searchable: false
-    settings:
-      byteLimit: null
-      charLimit: null
-      code: false
-      columnType: text
-      initialRows: 4
-      multiline: false
-      placeholder: null
-      uiMode: normal
-    translationKeyFormat: null
-    translationMethod: language
-    type: craft\fields\PlainText
-  fa34ba1e-e338-457a-bb5d-19b37824844d: # Expo
-    columnSuffix: null
-    contentColumnType: text
-    fieldGroup: null
-    handle: expo
-    instructions: null
-    name: Expo
     searchable: false
     settings:
       byteLimit: null

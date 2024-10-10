@@ -6,31 +6,32 @@
     <span class="event-text">
       <span class="event-name">
         {{ item.title }}
+        {{item.programType}}
         {% if item.programType == 'talk' %}
-          <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
-        {% elseif item.programType == 'talkDebat' %}
-          <span class="event-label">{{ mutationGlobals.timetableLabels.talkDebat }}</span>
+          <span class="event-label">{{ mutationGlobals.timetableLabels.talk }} {{ item.paying ? '| €' : '' }}</span>
+        {% elseif item.programType == 'makeathon' %}
+          <span class="event-label">{{ mutationGlobals.timetableLabels.makeathon }} {{ item.paying ? '| €' : '' }}</span>
         {% elseif item.programType == 'workshop' %}
-          <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }}</span>
+          <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }} {{ item.paying ? '| €' : '' }}</span>
         {% elseif item.programType == 'workshopDebat' %}
-          <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }}</span>
+          <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }} {{ item.paying ? '| €' : '' }}</span>
         {% elseif item.programType == 'inspiratiesessie' %}
-          <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }}</span>
-        {% elseif item.programType == 'denktank' %}
-          <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.denktank }}</span>
+          <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }} {{ item.paying ? '| €' : '' }}</span>
+        {% elseif item.programType == 'netwerk' %}
+          <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.netwerk }} {{ item.paying ? '| €' : '' }}</span>
         {% elseif item.programType == 'expo' %}
-          <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }}</span>
+          <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }} {{ item.paying ? '| €' : '' }}</span>
         {% elseif item.programType == 'performance' %}
-          <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }}</span>
+          <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }} {{ item.paying ? '| €' : '' }}</span>
         {% endif %}
       </span>
       <span class="event-time">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
       <span class="event-location">{{ item.mutationRoom.label }}</span>
 
       {% if item.eventURL %}
-        <a href="{{ item.eventURL }}"><span class="event-price sign-up" target="_blank">{{ 'Sign up'|t }} {{ item.paying ? '| €' : '' }}</span></a>
+        <a href="{{ item.eventURL }}"><span class="event-price sign-up" target="_blank">{{ 'Sign up'|t }}</span></a>
       {% else %}
-        <span class="event-price">{{ 'First come first serve'|t }} {{ item.paying ? '| €' : '' }}</span>
+        <span class="event-price">{{ 'First come first serve'|t }}</span>
       {% endif %} 
       {% if item.articleLink|length %}
         {% for page in item.articleLink.all() %}

@@ -1,12 +1,11 @@
 <div class="cd-schedule cd-schedule--short loading">
-
       {% set programElements = craft.entries.section('mutationProgramDetails').all() %}
-      {% set sortedProgramElements = programElements|sort((a, b) => a.hourStart|date('H') <=> b.hourStart|date('H')) %}
+      {% set sortedProgramElements = programElements|sort((a, b) => a.hourStart|date('H:i') <=> b.hourStart|date('H:i')) %}
       {% for item in sortedProgramElements %}
         {% if item.programDate == day  %}
-        {% if loop.first or item.hourStart != sortedProgramElements[loop.index - 1].hourStart %}
+        {% if loop.first or item.hourStart|date('H') != sortedProgramElements[loop.index - 1].hourStart|date('H') %}
           <div class="cd-schedule__timeline">
-            <span>{{ item.hourStart|date('H:00') }}</span>
+            <span>{{ item.hourStart|date('H:i') }}</span>
           </div>
         {% endif %}
                       {% include '_components/components.timetable-entry.twig' %}

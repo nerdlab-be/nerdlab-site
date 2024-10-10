@@ -11,7 +11,7 @@ $nav-breakpoint: 950px;
 .c-navigation {
   margin-bottom: 0;
   position: relative;
-	display: block;
+  display: block;
   // @include mq($until: $nav-breakpoint) {
   //   position: fixed;
   //   z-index: $z-index-alpha;
@@ -43,103 +43,113 @@ $nav-breakpoint: 950px;
   // }
 }
 
-  .c-navigation__list {
-    margin-bottom: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-flow: row wrap;
-		gap: 10px;
-		width: 100%;
+.c-navigation__list {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: .5*$unit;
+  width: 100%;
+
+  @include mq(medium) {
+    gap: 1*$unit;
+
   }
 
-  .c-navigation__item {
-    @include mq($nav-breakpoint) {
-      display: inline-block;
-    }
+  @include mq(large) {
+    gap: 2*$unit;
+  }
+}
+
+.c-navigation__item {
+  @include mq($nav-breakpoint) {
+    display: inline-block;
+  }
+}
+
+.c-navigation__link {
+  @include font-size($h1);
+  font-weight: $regular;
+  text-decoration: none;
+  display: block;
+  transition: color $transition;
+  padding: $unit;
+  text-align: center;
+  color: $color-primary;
+
+  &,
+  &:visited {
+    color: $color-tertiary;
   }
 
-  .c-navigation__link {
-    @include font-size($h1);
-    font-weight: $regular;
-    text-decoration: none;
-    display: block;
-    transition: color $transition;
-    padding: $unit;
-    text-align: center;
-		color: $color-primary;
-    &,
-    &:visited {
-      color: $color-tertiary;
-    }
-
-    &:hover,
-    &:focus {
-      color: $white;
-			border: 2px solid $white;
-    }
-
-    &:focus {
-      outline: $outline;
-    }
-
-    .is-active > & {
-      color: $color-primary;
-    }
-
-    .c-navigation--group & {
-      font-weight: $bold;
-      text-transform: uppercase;
-    }
-
-    .s-mutation &,
-    .s-mutation &:visited {
-      color: $color-primary;
-    }
-
-    .s-mutation &:hover,
-    .s-mutation &:focus {
-      color: $white;
-			border: 2px solid $white;
-    }
-
-    .s-mutation .is-active > & {
-      color: $color-tertiary;
-    }
-
-    // @include mq($nav-breakpoint) {
-    //   @include font-size($h5);
-    //   padding: $unit-small $unit/1.3;
-
-    //   .s-mutation &,
-    //   .s-mutation &:visited {
-    //     color: $color-neutral;
-    //   }
-
-    //   .s-mutation &:hover,
-    //   .s-mutation &:focus {
-    //     color: $color-primary;
-    //   }
-
-    //   .s-mutation .is-active > & {
-    //     color: $color-primary;
-    //   }
-
-    //   .c-navigation__item:last-child > & {
-    //     border-radius: $unit-huge;
-    //     border: 1px solid $color-neutral-xlight;
-    //   }
-
-    //   .c-navigation--group .c-navigation__item:last-child > & {
-    //     border-radius: none;
-    //     border: 0;
-    //   }
-    // }
-
-    // @include mq(large) {
-    //   padding: $unit-small*1.5 $unit*1.5;
-    // }
+  &:hover,
+  &:focus {
+    color: $white;
+    border: 2px solid $white;
   }
+
+  &:focus {
+    outline: $outline;
+  }
+
+  .is-active>& {
+    color: $color-primary;
+  }
+
+  .c-navigation--group & {
+    font-weight: $bold;
+    text-transform: uppercase;
+  }
+
+  .s-mutation &,
+  .s-mutation &:visited {
+    color: $color-primary;
+  }
+
+  .s-mutation &:hover,
+  .s-mutation &:focus {
+    color: $white;
+    border: 2px solid $white;
+  }
+
+  .s-mutation .is-active>& {
+    color: $color-tertiary;
+  }
+
+  // @include mq($nav-breakpoint) {
+  //   @include font-size($h5);
+  //   padding: $unit-small $unit/1.3;
+
+  //   .s-mutation &,
+  //   .s-mutation &:visited {
+  //     color: $color-neutral;
+  //   }
+
+  //   .s-mutation &:hover,
+  //   .s-mutation &:focus {
+  //     color: $color-primary;
+  //   }
+
+  //   .s-mutation .is-active > & {
+  //     color: $color-primary;
+  //   }
+
+  //   .c-navigation__item:last-child > & {
+  //     border-radius: $unit-huge;
+  //     border: 1px solid $color-neutral-xlight;
+  //   }
+
+  //   .c-navigation--group .c-navigation__item:last-child > & {
+  //     border-radius: none;
+  //     border: 0;
+  //   }
+  // }
+
+  // @include mq(large) {
+  //   padding: $unit-small*1.5 $unit*1.5;
+  // }
+}
 
 // Language nav
 .c-navigation__language-list {
@@ -167,7 +177,7 @@ $nav-breakpoint: 950px;
   text-align: center;
   width: 100%;
 
-  & + & {
+  &+& {
     margin-top: 0;
     border-left: 3px dotted $color-secondary-xlight;
   }
@@ -197,11 +207,11 @@ $nav-breakpoint: 950px;
     color: $white;
   }
 
-  .is-active > & {
+  .is-active>& {
     color: $color-tertiary;
   }
 
-  .is-active > &:focus {
+  .is-active>&:focus {
     background-color: $color-primary;
     color: $white;
   }
@@ -226,7 +236,7 @@ $nav-breakpoint: 950px;
       color: $white;
     }
 
-    .is-active > & {
+    .is-active>& {
       color: $color-neutral;
       background-color: $color-secondary-xxlight;
     }
@@ -281,27 +291,27 @@ $nav-breakpoint: 950px;
   }
 }
 
-  .c-hamburger__line {
-    transition: transform $duration $easing;
-    transform-origin: center;
+.c-hamburger__line {
+  transition: transform $duration $easing;
+  transform-origin: center;
 
-    &:nth-child(3) {
-      opacity: 0;
-    }
+  &:nth-child(3) {
+    opacity: 0;
+  }
+}
+
+[aria-expanded='true'] .c-hamburger__line {
+  &:nth-child(2) {
+    transform: rotate(45deg);
   }
 
-  [aria-expanded='true'] .c-hamburger__line {
-    &:nth-child(2) {
-      transform: rotate(45deg);
-    }
-
-    &:nth-child(3) {
-      transform: rotate(-45deg);
-      opacity: 1;
-    }
-
-    &:first-child,
-    &:last-child {
-      transform: scale(0);
-    }
+  &:nth-child(3) {
+    transform: rotate(-45deg);
+    opacity: 1;
   }
+
+  &:first-child,
+  &:last-child {
+    transform: scale(0);
+  }
+}

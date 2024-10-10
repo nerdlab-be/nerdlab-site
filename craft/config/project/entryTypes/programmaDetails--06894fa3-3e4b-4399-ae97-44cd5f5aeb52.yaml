@@ -45,18 +45,6 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: db40784b-08c3-47f5-bba6-620385411e85 # Kleine blok
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1c5eb597-3723-4708-9f7c-4b9a8ba4611e
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
             fieldUid: 1919357a-9336-4b00-8f56-e9da754f13a9 # Programma Item Locatie
             instructions: null
             label: null
@@ -148,6 +136,18 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: d90cb17b-4ce4-439e-a2e0-e12ce53c0c2d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: db40784b-08c3-47f5-bba6-620385411e85 # Kleine blok
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1c5eb597-3723-4708-9f7c-4b9a8ba4611e
             userCondition: null
             warning: null
             width: 100

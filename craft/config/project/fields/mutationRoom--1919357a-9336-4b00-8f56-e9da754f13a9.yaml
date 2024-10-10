@@ -45,7 +45,7 @@ settings:
       __assoc__:
         -
           - label
-          - 'Oude bib - Glazen kot'
+          - 'Oude bib - Bureau'
         -
           - value
           - locationFour
@@ -137,6 +137,83 @@ settings:
         -
           - value
           - locationTwelve
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Krook - Trappen'
+        -
+          - value
+          - 'locationThirteen '
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Oude bib - Ronde'
+        -
+          - value
+          - oudeBibRonde
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Oude bib - Tussenruimte'
+        -
+          - value
+          - oudeBibTussenruimte
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Shopping Gent Zuid - Oude H&M - Hoofdingang'
+        -
+          - value
+          - shoppingGentZuidOudeHMHoofdingang
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Shopping Gent Zuid - Oude H&M - Tussenruimte'
+        -
+          - value
+          - shoppingGentZuidOudeHMTussenruimte
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Shopping Gent Zuid - Oude H&M - Kastenruimte'
+        -
+          - value
+          - shoppingGentZuidOudeHMKastenruimte
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wintercircus - Concertzaal'
+        -
+          - value
+          - wintercircusConcertzaal
         -
           - default
           - ''
