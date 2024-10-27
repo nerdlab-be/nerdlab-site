@@ -15,11 +15,14 @@ const svgSymbols = require("gulp-svg-symbols");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const rev = require("gulp-rev");
+const { proxy } = require("jquery");
 
 // Config
 const config = {
   browsersync: {
-    proxy: 'http://nerdlab.test',
+    // check to see if the proxy is correct
+    proxy: 'http://nerdlab.be',
+    // proxy: 'http://nerdlab.test',
     notify: true,
     ghostMode: {
       clicks: true,

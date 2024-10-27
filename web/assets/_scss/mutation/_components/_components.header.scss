@@ -5,7 +5,7 @@
 // Create a row with responsive padding and even spaced children. Used for a header or footer design pattern.
 .c-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
 	padding: $unit-huge 0;

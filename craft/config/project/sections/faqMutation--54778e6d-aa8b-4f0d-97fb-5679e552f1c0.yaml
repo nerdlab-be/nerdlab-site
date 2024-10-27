@@ -24,6 +24,6 @@ siteSettings:
   52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
     enabledByDefault: true
     hasUrls: true
-    template: site-mutation/_faq
+    template: site-mutation/en/_faq
     uriFormat: dafaq
 type: single

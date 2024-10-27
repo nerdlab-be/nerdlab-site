@@ -366,43 +366,39 @@ $calendar-height: $calendar-item-height * 22;
 
 .cd-schedule .event-label {
   @include inuit-font-size(13px, 1);
-  position: absolute;
-  top: 1rem;
-  right: .5rem;
   display: flex;
   font-weight: $regular;
-  color: shade($color-primary, 10);
-  background-color: tint($color-primary, 85);
+  color: shade($color-primary, 10%);
+  background-color: tint($color-primary, 85%);
   border-radius: 3px;
   padding: $unit-tiny/2.5 $unit-tiny/2 $unit-tiny/1.5;
 }
 
 .cd-schedule .event-label--primary {
-  color: shade($color-secondary, 60);
-  background-color: tint($color-secondary, 80);
+  color: shade($color-secondary, 60%);
+  background-color: tint($color-secondary, 80%);
 }
 
 .cd-schedule .event-label--secondary {
-  color: shade($color-tertiary, 70);
-  background-color: tint($color-tertiary, 80);
+  color: shade($color-tertiary, 70%);
+  background-color: tint($color-tertiary, 80%);
 }
 
 .cd-schedule .event-label--tertiary {
-  color: shade($color-success, 60);
-  background-color: tint($color-success, 90);
+  color: shade($color-success, 60%);
+  background-color: tint($color-success, 90%);
 }
 
 .cd-schedule .event-label--quarternary {
-  color: shade($color-neutral-light, 50);
-  background-color: tint($color-neutral-light, 90);
+  color: shade($color-neutral-light, 50%);
+  background-color: tint($color-neutral-light, 90%);
 }
 
 .cd-schedule .event-label--quinary {
-  color: shade($purple, 50);
-  background-color: tint($purple, 90);
+  color: shade($purple, 50%);
+  background-color: tint($purple, 90%);
 }
 
-.cd-schedule .single-event--small .event-label {}
 
 .cd-schedule .single-event a {
   /* this is used to set a background color for the event and the modal window */
@@ -493,7 +489,6 @@ $card-margin: 15px;
   margin: $card-margin 0;
   background-color: $white;
   border: 1px solid $color-secondary;
-  ;
   position: relative;
 }
 
@@ -502,7 +497,6 @@ $card-margin: 15px;
   color: $text-color;
   padding: 2px 6px;
   font-size: 0.75em;
-  margin-right: 4px;
 }
 
 // Base styles
@@ -517,127 +511,129 @@ $card-margin: 15px;
   height: 100%;
   position: relative;
 
+  .event-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "image text";
+
+    @include mq(medium) {
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+
+  .event-text {
+    padding: $card-padding;
+    grid-area: text;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "name name label"
+      "info info null"
+      "details details tickets";
+  }
+
+  .event-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-area: image;
+    @include mq(medium) {
+      min-height: 150px;
+
+    }
+  }
+
   .event-name {
     display: flex;
     flex-direction: column; // Stack labels and title vertically on smaller screens
-    margin-bottom: 8px;
-
+    grid-area: name;
     .c-underline {
       text-decoration: underline;
       font-weight: bold;
     }
 
-    .event-label {
-      @include label-style(#cc00ff, #fff);
+  }
 
-      &--primary {
-        @include label-style(#007bff, #fff);
-      }
+  .event-label {
+    @include label-style(#cc00ff, #fff);
 
-      &--secondary {
-        @include label-style(#28a745, #fff);
-      }
-
-      &--tertiary {
-        @include label-style(#ffc107, #333);
-      }
-
-      &--quarternary {
-        @include label-style(#dc3545, #fff);
-      }
-
-      &--quinary {
-        @include label-style(#17a2b8, #fff);
-      }
+    &--primary {
+      @include label-style(#007bff, #fff);
     }
+
+    &--secondary {
+      @include label-style(#28a745, #fff);
+    }
+
+    &--tertiary {
+      @include label-style(#ffc107, #333);
+    }
+
+    &--quarternary {
+      @include label-style(#dc3545, #fff);
+    }
+
+    &--quinary {
+      @include label-style(#17a2b8, #fff);
+    }
+  }
+
+  .event-details{
+    grid-area: details;
   }
 
   .event-time,
   .event-location,
-  .event-price {
+  .event-tickets {
     font-size: 0.875em;
     color: $color-secondary;
   }
 
-  .sign-up{
+  .sign-up {
     background-color: $color-primary !important;
   }
 
-  .event-time {
+  .event-time, .event-location {
     margin-bottom: 4px;
   }
 
-  .event-location {
-    display: block;
-    margin-bottom: 4px;
-  }
-
-  .event-price {
-    position: absolute;
-    bottom: .5rem;
-    right: .5rem;
+  .event-tickets {
     font-weight: bold;
-    color: white;
-    padding: 2px 6px;
+    color: $white;
     background-color: $color-neutral;
     border-radius: 3px;
     text-align: center;
-  }
-}
+    padding: 5px;
+    transition: box-shadow $transition;
 
-
-
-// Responsive design
-@media (max-width: 768px) {
-  .single-event {
-    // Adjust padding and margin for smaller screens
-    $card-padding: 12px;
-    $card-margin: 6px;
-
-    a {
-      .event-name {
-        flex-direction: column; // Stack elements vertically
-      }
-
-      .event-price {
-        font-size: 0.75em; // Smaller font size on smaller screens
-      }
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 6px rgba($color-neutral-dark, .5);
     }
   }
-}
 
-@media (max-width: 480px) {
-  .single-event {
-    $card-padding: 8px;
-    $card-margin: 4px;
+  .event-tickets-wrapper {
+    grid-area: tickets;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 
-    a {
-      .event-name {
-        font-size: 0.875em; // Adjust font size for smaller screens
-      }
+  .event-info-wrapper{
+    grid-area: info;
+    display: flex;
+  }
 
-      .event-time,
-      .event-location {
-        font-size: 0.75em; // Adjust font size for smaller screens
-      }
-    }
+  .event-label-wrapper{
+    grid-area: label;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
   }
 }
 
-.event-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.event-text {
-  width: 50%;
-  padding: $card-padding;
 
-}
-
-.event-image {
-  width: 30%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}

@@ -1,43 +1,80 @@
-<li class="single-event single-event--link {% if item.programType == 'info' %}{% endif %}" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday">
+<li class="single-event single-event--link {% if item.programType == 'info' %}{% endif %}" data-start="{{ item.hourStart|date('H:i') }}" data-end="{{ item.hourEnd|date('H:i') }}" data-content="#!" data-event="friday" data-program-type='{{item.programType}}' data-event-location='{{item.mutationRoom.label}}'>
   <div class="event-wrapper">
     {% if item.image.one() and item.image.one().getUrl() %}
       <span class="event-image" style="background-image: url({{ item.image.one().getUrl() }})"></span>
     {% endif %}
-    <span class="event-text">
-      <span class="event-name">
+    <div class="event-text">
+      <span class="event-name" >
         {{ item.title }}
-        {{item.programType}}
-        {% if item.programType == 'talk' %}
-          <span class="event-label">{{ mutationGlobals.timetableLabels.talk }} {{ item.paying ? '| €' : '' }}</span>
-        {% elseif item.programType == 'makeathon' %}
-          <span class="event-label">{{ mutationGlobals.timetableLabels.makeathon }} {{ item.paying ? '| €' : '' }}</span>
-        {% elseif item.programType == 'workshop' %}
-          <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }} {{ item.paying ? '| €' : '' }}</span>
-        {% elseif item.programType == 'workshopDebat' %}
-          <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }} {{ item.paying ? '| €' : '' }}</span>
-        {% elseif item.programType == 'inspiratiesessie' %}
-          <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }} {{ item.paying ? '| €' : '' }}</span>
-        {% elseif item.programType == 'netwerk' %}
-          <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.netwerk }} {{ item.paying ? '| €' : '' }}</span>
-        {% elseif item.programType == 'expo' %}
-          <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }} {{ item.paying ? '| €' : '' }}</span>
-        {% elseif item.programType == 'performance' %}
-          <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }} {{ item.paying ? '| €' : '' }}</span>
-        {% endif %}
       </span>
-      <span class="event-time">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</span>
-      <span class="event-location">{{ item.mutationRoom.label }}</span>
 
-      {% if item.eventURL %}
-        <a href="{{ item.eventURL }}"><span class="event-price sign-up" target="_blank">{{ 'Sign up'|t }}</span></a>
-      {% else %}
-        <span class="event-price">{{ 'First come first serve'|t }}</span>
-      {% endif %} 
+      <div class="event-details">
+        <div class="event-time">{{ item.hourStart|date('H:i') }} - {{ item.hourEnd|date('H:i') }}</div>
+        <div class="event-location">{{ item.mutationRoom.label }}</div>
+      </div>
+     
+
+      
       {% if item.articleLink|length %}
         {% for page in item.articleLink.all() %}
-          <a href="{{ page.url }}" class="btn btn--small btn--primary">{{ 'Info'|t }}</a><br />
+        <div class="event-info-wrapper">
+          <a href="{{ page.url }}" class="event-info btn btn--small btn--primary">{{ 'Info'|t }}</a>
+        </div>
         {% endfor %}
       {% endif %}
-    </span>
+     <div class="event-label-wrapper">
+          {% if item.programType == 'talk' %}
+            <span class="event-label">{{ mutationGlobals.timetableLabels.talk }} {{ item.paying ? '| €' : '' }}</span>
+          {% elseif item.programType == 'makeathon' %}
+            <span class="event-label">{{ mutationGlobals.timetableLabels.makeathon }} {{ item.paying ? '| €' : '' }}</span>
+          {% elseif item.programType == 'workshop' %}
+            <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }} {{ item.paying ? '| €' : '' }}</span>
+          {% elseif item.programType == 'workshopDebat' %}
+            <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }} {{ item.paying ? '| €' : '' }}</span>
+          {% elseif item.programType == 'inspiratiesessie' %}
+            <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }} {{ item.paying ? '| €' : '' }}</span>
+          {% elseif item.programType == 'netwerk' %}
+            <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.netwerk }} {{ item.paying ? '| €' : '' }}</span>
+          {% elseif item.programType == 'expo' %}
+            <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }} {{ item.paying ? '| €' : '' }}</span>
+          {% elseif item.programType == 'performance' %}
+            <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }} {{ item.paying ? '| €' : '' }}</span>
+          {% endif %}
+        </div>
+        <div class="event-tickets-wrapper">
+    {% if item.eventURL %}
+        <a href="{{ item.eventURL }}"><span class="event-tickets sign-up" target="_blank">{{ 'Sign up'|t }}</span></a>
+      {% else %}
+        <span class="event-tickets">{{ 'First come'}}<br class="mobile-break"> {{'first serve'|t }}</span>
+      {% endif %} 
   </div>
+  </div>
+      </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            let categoryFilter = document.getElementById('category-filter');
+            let categoryOption = '{{ item.programType|capitalize }}';
+
+            if (categoryFilter && !Array.from(categoryFilter.options).some(option => option.value === categoryOption)) {
+              let newOption = document.createElement('option');
+              newOption.value = categoryOption;
+              newOption.text = categoryOption;
+              categoryFilter.add(newOption);
+            }
+            });
+        </script>
+             <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          let locationFilter = document.getElementById('location-filter');
+          let locationOption = '{{ item.mutationRoom.label|raw }}';
+
+          if (locationFilter && !Array.from(locationFilter.options).some(option => option.value === locationOption)) {
+            let newOption = document.createElement('option');
+            newOption.value = locationOption;
+            newOption.text = locationOption;
+            locationFilter.add(newOption);
+          }
+        });
+      </script>
 </li>

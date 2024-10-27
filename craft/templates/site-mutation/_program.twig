@@ -28,7 +28,75 @@
           <a href="#section3-timetable" role="tab" id="tab3-timetable" tabindex="-1" class="c-tabs__link js-tabs__link">{{ mutationGlobals.timetabledays.dayThree }} {% include '_tools/tools.icon.twig' with { options: { icon: 'next' } } %}</a>
         </li>
       </ul>
-      
+      <div class="u-flex u-flexWrap u-justifyContentSpaceBetween u-alignItemsCenter">
+  <div class="o-form__group u-1/3 u-minWidth200 u-marginBottom">
+    <label for="search-bar" class="o-form__label">Zoek activiteiten</label>
+    <input type="text" id="search-bar" class="o-form__input u-paddingSmall u-widthFull" placeholder="Zoek activiteiten op titel...">
+  </div>
+  
+  <div class="o-form__group u-1/3 u-minWidth200 u-marginBottom">
+    <label for="category-filter" class="o-form__label">Filter op categorie</label>
+    <select id="category-filter" class="o-form__select u-paddingSmall u-widthFull">
+      <option value="">All Categories</option>
+<!-- hacky infill in timetable entry -->
+    </select>
+  </div>
+  
+  <div class="o-form__group u-1/3 u-minWidth200 u-marginBottom">
+    <label for="location-filter" class="o-form__label">Filter op locatie</label>
+    <select id="location-filter" class="o-form__select u-paddingSmall u-widthFull">
+      <option value="">All Locations</option>
+  <!-- hacky infill in timetable entry -->
+    </select>
+  </div>
+</div>
+
+
+  <script>
+    document.getElementById('search-bar').addEventListener('input', function() {
+      filterEvents();
+    });
+
+    document.getElementById('category-filter').addEventListener('change', function() {
+      filterEvents();
+    });
+
+    document.getElementById('location-filter').addEventListener('change', function() {
+      filterEvents();
+    });
+
+    function filterEvents() {
+      let searchQuery = document.getElementById('search-bar').value.toLowerCase();
+      let selectedCategory = document.getElementById('category-filter').value;
+      let selectedLocation = document.getElementById('location-filter').value;
+      let events = document.querySelectorAll('.single-event');
+      let timeline = document.querySelectorAll('.cd-schedule__timeline');
+
+      if (searchQuery !== ''  || selectedCategory !== '' || selectedLocation !== '') {
+        timeline.forEach(function(time) {
+          time.style.display = 'none';
+        });
+      } else {
+        timeline.forEach(function(time) {
+          time.style.display = '';
+        });
+      }
+
+      events.forEach(function(event) {
+        let title = event.querySelector('.event-name').textContent.toLowerCase();
+        let eventLabel = event.getAttribute('data-program-type').toLowerCase();
+        let eventLocation = event.getAttribute('data-event-location').toLowerCase();
+
+        if ((title.includes(searchQuery) || searchQuery === '') &&
+            (eventLabel.includes(selectedCategory.toLowerCase()) || selectedCategory === '') &&
+            (eventLocation.includes(selectedLocation.toLowerCase()) || selectedLocation === '')) {
+          event.style.display = '';
+        } else {
+          event.style.display = 'none';
+        }
+      });
+    }
+  </script>
       <section id="section1-timetable" role="tabpanel" tabindex="-1" aria-labelledby="tab1-timetable" class="c-tabs-section">
         {% include '_components/components.timetable.twig' with {"day": "dayOne", "location": "De Krook" } only %}
       </section>

@@ -2013,7 +2013,7 @@ table {
    ================================== */
 .c-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
@@ -2315,7 +2315,7 @@ table {
 }
 .s-mutation .c-faded {
   font-weight: 600;
-  color: #B3AB00;
+  color: #705b70;
 }
 
 .c-small {

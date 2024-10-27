@@ -24,7 +24,7 @@
   &:focus {
     background-color: $white;
     color: $color-neutral-dark;
-    border-color: shade($color-neutral-xlight,20);
+    border-color: shade($color-neutral-xlight,20%);
     box-shadow: 0 0 4px $color-neutral-xlight;
   }
 

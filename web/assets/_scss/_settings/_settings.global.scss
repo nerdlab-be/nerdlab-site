@@ -68,11 +68,11 @@ $inuit-font-size-tiny: 14px;
 
 // Standardise some UI treatments.
 $global-radius: 4px;
-$global-duration: (1/2) + s;
+$global-duration: calc(1/2) + s;
 $global-easing: cubic-bezier(0.190,  1.000, 0.220, 1.000);
 $global-transition: $global-duration $global-easing;
 $btn-ghost-border-width: 2px;
-$inuit-outline: 2px dotted shade($color-neutral-xlight,10);
+$inuit-outline: 2px dotted shade($color-neutral-xlight,10%);
 $inuit-outline-solid: 2px solid $color-neutral-xlight;
 
 

@@ -23,6 +23,7 @@
     width: 100%;
     bottom: 0;
     overflow: hidden;
+    pointer-events: none;
 
     img {
       object-fit: cover;

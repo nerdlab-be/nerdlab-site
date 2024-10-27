@@ -54,21 +54,21 @@ $color-neutral-light        : tint($color-neutral,30%);
 $color-neutral-dark         : shade($color-neutral,60%);
 
 $color-primary              : $fuchsia;
-$color-primary-xlight       : tint($color-primary,80);
-$color-primary-light        : tint($color-primary,20);
-$color-primary-dark         : shade($color-primary,20);
+$color-primary-xlight       : tint($color-primary,80%);
+$color-primary-light        : tint($color-primary,20%);
+$color-primary-dark         : shade($color-primary,20%);
 
 $color-secondary            : $brown;
-$color-secondary-xxlight    : tint($color-secondary,90);
-$color-secondary-xlight     : tint($color-secondary,80);
-$color-secondary-light      : tint($color-secondary,20);
-$color-secondary-dark       : shade($color-secondary,20);
+$color-secondary-xxlight    : tint($color-secondary,90%);
+$color-secondary-xlight     : tint($color-secondary,80%);
+$color-secondary-light      : tint($color-secondary,20%);
+$color-secondary-dark       : shade($color-secondary,20%);
 
 $color-tertiary             : $black;
-$color-tertiary-xlight      : tint($color-tertiary,80);
-$color-tertiary-light       : tint($color-tertiary,20);
-$color-tertiary-dark        : shade($color-tertiary,20);
-$color-tertiary-xdark       : shade($color-tertiary,40);
+$color-tertiary-xlight      : tint($color-tertiary,80%);
+$color-tertiary-light       : tint($color-tertiary,20%);
+$color-tertiary-dark        : shade($color-tertiary,20%);
+$color-tertiary-xdark       : shade($color-tertiary,40%);
 
 
 
