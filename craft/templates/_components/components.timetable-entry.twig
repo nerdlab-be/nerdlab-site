@@ -6,6 +6,13 @@
     <div class="event-text">
       <span class="event-name" >
         {{ item.title }}
+              {% if item.articleLink|length %}
+        {% for page in item.articleLink.all() %}
+        <br><div class="event-info-wrapper">
+          <a href="{{ page.url }}" class="event-info btn btn--small btn--primary">{{ 'Info'|t }}</a>
+        </div>
+        {% endfor %}
+      {% endif %}
       </span>
 
       <div class="event-details">
@@ -15,13 +22,7 @@
      
 
       
-      {% if item.articleLink|length %}
-        {% for page in item.articleLink.all() %}
-        <div class="event-info-wrapper">
-          <a href="{{ page.url }}" class="event-info btn btn--small btn--primary">{{ 'Info'|t }}</a>
-        </div>
-        {% endfor %}
-      {% endif %}
+
      <div class="event-label-wrapper">
           {% if item.programType == 'talk' %}
             <span class="event-label">{{ mutationGlobals.timetableLabels.talk }} {{ item.paying ? '| €' : '' }}</span>
