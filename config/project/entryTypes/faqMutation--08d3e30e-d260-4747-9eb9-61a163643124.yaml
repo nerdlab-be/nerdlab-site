@@ -1,0 +1,83 @@
+fieldLayouts:
+  4a203cef-ade3-439d-83d7-c6f6a1f702ff:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ef52e9a3-7a52-48f7-8644-97ea8ba8a2d8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 07540c64-9a46-4b6b-9d99-0910dec02fd6 # QuestionMutationFAQ
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 549bc741-8bdd-4a91-8dd7-d3b9705797d3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 71c2d3e6-804c-4a13-bc9a-6f217b9f7fdd # MutationFaqAnswer
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 03083a20-22a9-4add-bc8a-37296e0ed010
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 93d43e72-49c1-4d10-9e48-665b41779ba0 # Event URL
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b589af14-a617-4386-9608-fd70297b8819
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5eafb32b-84d1-48cd-b2db-2cdaa00b2cb1
+        userCondition: null
+handle: faqMutation
+hasTitleField: false
+name: FAQ
+section: 54778e6d-aa8b-4f0d-97fb-5679e552f1c0 # FAQ
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+sortOrder: 2
+titleFormat: '{questionmutationfaq}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

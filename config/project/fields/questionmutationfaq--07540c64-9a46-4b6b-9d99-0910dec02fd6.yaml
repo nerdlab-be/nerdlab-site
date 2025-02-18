@@ -1,0 +1,19 @@
+columnSuffix: erzuvnyt
+contentColumnType: text
+fieldGroup: e0d9964b-b49c-4862-bed8-46420e6906c3 # Blog
+handle: questionmutationfaq
+instructions: 'Type the question for the FAQ'
+name: QuestionMutationFAQ
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

@@ -1,0 +1,24 @@
+defaultPlacement: end
+enableVersioning: true
+handle: mutation
+name: 'Mutation Festival'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primaire invoer-pagina'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
+    enabledByDefault: true
+    hasUrls: true
+    template: site-mutation/_index
+    uriFormat: __home__
+type: single

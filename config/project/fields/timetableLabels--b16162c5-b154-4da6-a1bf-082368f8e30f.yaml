@@ -1,0 +1,93 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: timetableLabels
+instructions: null
+name: 'Timetable labels'
+searchable: true
+settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 65054785
+  columns:
+    __assoc__:
+      -
+        - e518b0fb-da83-4993-9bee-37c2eb306b45 # Info
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 87615dc1-c11c-43bf-bced-41b61c68c0b8 # Talk
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 68e9ffc7-14c2-46c3-a175-d5a5ee33a615 # Makeathon
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 0d705cce-b32e-42c9-bfd3-fc6588076228 # Workshops
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - a5610b26-b83a-428f-959a-31e76dbe90a3 # Workshop en debat
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - f074248b-d0eb-4592-8192-b7bf8d8b98f1 # Inspiratiesessie
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 80a4aed9-085e-471c-b781-2dc035e86d05 # Netwerk
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 1ebe5c27-4731-4558-951a-3ec1fb1322e8 # Expo
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - 82cba82a-f444-4fb5-bce9-6770a3e700bc # Performance
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+      -
+        - eea75f48-ae3a-4a4d-b068-1d8ac378dc89 # Extra 2
+        -
+          __assoc__:
+            -
+              - width
+              - ''
+  contentTable: '{{%stc_timetablelabels}}'
+  fieldLayout: row
+  maxRows: null
+  minRows: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  selectionLabel: null
+  staticField: true
+translationKeyFormat: null
+translationMethod: none
+type: verbb\supertable\fields\SuperTableField

@@ -6,3 +6,8 @@ project.yaml
 /web/data/images
 /web/data/video
 /web/cpresources
+/web/dist
+.vscode
+/.env
+/.idea
+/vendor

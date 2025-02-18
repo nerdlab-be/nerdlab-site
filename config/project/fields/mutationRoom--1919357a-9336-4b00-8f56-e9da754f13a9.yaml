@@ -1,0 +1,222 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: mutationRoom
+instructions: null
+name: 'Programma Item Locatie'
+searchable: true
+settings:
+  columnType: string
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Krook - Agora'
+        -
+          - value
+          - locationOne
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Krook - Maakatelier'
+        -
+          - value
+          - locationTwo
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Krook - De blauwe vogel'
+        -
+          - value
+          - locationThree
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Oude bib - Bureau'
+        -
+          - value
+          - locationFour
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Oude bib - Buitenplek'
+        -
+          - value
+          - locationFive
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Shopping Gent Zuid - Oude H&M'
+        -
+          - value
+          - locationSix
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wintercircus - De Catacomben'
+        -
+          - value
+          - locationSeven
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wintercircus - Arena'
+        -
+          - value
+          - locationEight
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wintercircus - Auditorium'
+        -
+          - value
+          - locationNine
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wintercircus - Expo'
+        -
+          - value
+          - locationTen
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wintercircus - Lammerstraat'
+        -
+          - value
+          - locationEleven
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Avondprogramma
+        -
+          - value
+          - locationTwelve
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Krook - Trappen'
+        -
+          - value
+          - 'locationThirteen '
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Oude bib - Ronde'
+        -
+          - value
+          - oudeBibRonde
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Oude bib - Tussenruimte'
+        -
+          - value
+          - oudeBibTussenruimte
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Shopping Gent Zuid - Oude H&M - Hoofdingang'
+        -
+          - value
+          - shoppingGentZuidOudeHMHoofdingang
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Shopping Gent Zuid - Oude H&M - Tussenruimte'
+        -
+          - value
+          - shoppingGentZuidOudeHMTussenruimte
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Shopping Gent Zuid - Oude H&M - Kastenruimte'
+        -
+          - value
+          - shoppingGentZuidOudeHMKastenruimte
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Wintercircus - Concertzaal'
+        -
+          - value
+          - wintercircusConcertzaal
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

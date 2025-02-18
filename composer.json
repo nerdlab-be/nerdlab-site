@@ -1,0 +1,49 @@
+{
+  "require": {
+    "clubstudioltd/craft-asset-rev": "7.0.0",
+    "craftcms/ckeditor": "3.8.3",
+    "craftcms/cms": "^4.0.0",
+    "craftcms/redactor": "3.0.4",
+    "craftcms/store-hours": " 3.1.0",
+    "ether/seo": "4.2.2",
+    "ether/simplemap": "4.0.5",
+    "mmikkel/cp-field-inspect": "1.4.4",
+    "nystudio107/craft-cookies": "4.0.1",
+    "nystudio107/craft-minify": "4.0.1",
+    "nystudio107/craft-vite": "4.0.10",
+    "rias/craft-position-fieldtype": "4.0.0",
+    "topshelfcraft/supersort": "4.0.0",
+    "topshelfcraft/wordsmith": "4.4.0",
+    "verbb/super-table": "3.0.12 ",
+    "vlucas/phpdotenv": "^3.3",
+    "xpertbot/craft-wheelform": "3.2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "platform": {
+      "php": "8.3"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.craftcms.com",
+      "canonical": false
+    }
+  ]
+}

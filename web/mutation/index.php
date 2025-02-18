@@ -3,11 +3,11 @@
  * Craft web bootstrap file
  */
 
- // Multisite
+  // Multisite
 define('CRAFT_SITE','mutationnl');
 
 // Define path constants
-define('CRAFT_BASE_PATH', dirname(__DIR__, 2) . '/craft');
+define('CRAFT_BASE_PATH', dirname(__DIR__, 2));
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH . '/vendor');
 
 // Load Composer's autoloader

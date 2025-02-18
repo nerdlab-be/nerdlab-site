@@ -1,0 +1,40 @@
+name: nerdlab
+type: craftcms
+docroot: web
+php_version: "8.3"
+webserver_type: nginx-fpm
+xdebug_enabled: false
+additional_hostnames: []
+additional_fqdns: []
+database:
+    type: mysql
+    version: "5.7"
+use_dns_when_possible: true
+web_environment: []
+corepack_enable: false
+
+# Upload dirs
+upload_dirs:
+  - web/data/images
+
+# Additional recommended configuration
+webimage_extra_packages: [ghostscript, imagemagick]
+
+# Configure PHP settings
+php_memory_limit: "256M"
+upload_dir: "/tmp"
+upload_size: "256M"
+
+# Optional performance settings
+performance_mode: none
+
+# Composer settings
+composer_version: "2" 
+
+# node and vite setup
+nodejs_version: '20'
+web_extra_exposed_ports:
+  - name: vite
+    container_port: 5173
+    http_port: 5172
+    https_port: 5173
