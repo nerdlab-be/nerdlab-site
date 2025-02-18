@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: paragraph13
+instructions: null
+name: 'Expo - Paragraaf - Paragraaf'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+  createButtonLabel: null
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  showWordCount: false
+  sourceEditingGroups: '*'
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: language
+type: craft\ckeditor\Field

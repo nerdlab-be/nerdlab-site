@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  84a3b09a-0617-493b-bd9d-391820d667d0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: d5a25a01-e298-44d9-86ce-bf98ff2897f1
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Subtitel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6e1bfdc7-2de3-4c5d-bd1c-f1c4ed33f450
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 355300d9-03de-4bb3-887c-17a6f97e7d1a
+        userCondition: null
+handle: subHeading
+hasTitleField: false
+icon: null
+name: Subtitel
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

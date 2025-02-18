@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20 # Globals
 handle: social
 instructions: ''
 name: Social
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_social}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: abf4b656-c050-4638-8868-89027fc3fd4d
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

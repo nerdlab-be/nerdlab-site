@@ -1,0 +1,117 @@
+color: null
+fieldLayouts:
+  2b28fe74-dcc4-417a-9d35-2cc4588853e0:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: d6a799b1-a6b5-4233-a00f-785582728af1
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Titel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1376cae8-78ca-4d77-8b87-afb357e3f43e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: d88c46c2-1e63-4e5c-acae-a66be5ae1c59
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Video
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b5701aa3-95c5-40f9-9336-c69fd875a6a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 7671caa0-76f3-4035-a7a5-b7c189851cde
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Video poster'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 834b3168-430f-444e-bbbd-abb3aa9896b6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 845acace-9d1e-4b03-b5c6-8ad975101b2d
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Youtube id'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67f1fbda-3d10-4064-9b74-1647c01604f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 0b1e24f5-5ab6-4af7-8503-736c2bcfefd6
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Vimeo id'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41d3090c-e70d-4b83-835d-e29bee4251c4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 40bbada2-b92f-4324-bdbb-4016d1c31242
+            handle: paragraph
+            includeInCards: false
+            instructions: null
+            label: Tekst
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30f741c5-3c7e-41a4-8e33-5bad8ce88137
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 046ef3ec-e1db-4981-80e6-4a7d4a09db2c
+        userCondition: null
+handle: video
+hasTitleField: false
+icon: null
+name: Video
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

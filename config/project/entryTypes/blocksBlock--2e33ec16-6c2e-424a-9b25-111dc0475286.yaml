@@ -1,0 +1,53 @@
+color: null
+fieldLayouts:
+  bc07e699-de01-4366-87d8-5baefd5a5e0f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 7667c9fc-2b2c-432d-9489-00ead43d7d06
+            handle: paragraph
+            includeInCards: true
+            instructions: null
+            label: Tekst
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 971dd04c-0c47-4a00-892f-61b61c43782c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 9453d305-c27d-4376-a547-c3f72423ed03
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Afbeelding
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3579cd22-7b52-464b-9f16-359ebc5df7d6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f3a77f50-60bc-4f0b-add5-da3b24b274e5
+        userCondition: null
+handle: blocksBlock
+hasTitleField: false
+icon: null
+name: 'Content - Grid - Blokken Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

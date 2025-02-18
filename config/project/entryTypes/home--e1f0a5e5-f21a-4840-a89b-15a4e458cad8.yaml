@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: d1d06a68-7826-435c-93e5-9daab4e91a4d
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b76a32d6-515c-4626-b2d5-c49d1a4421fb
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 08c10b18-26b2-451c-b8f7-933c14650ce1
             warning: null
             width: 100
           -
@@ -51,6 +54,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 26c84c4c-00d8-4221-82c8-c129d05edb8f
             warning: null
             width: 100
           -
@@ -60,10 +64,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: f3f80f55-9e26-4261-aeb5-99362d2b7050
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 82503e81-b548-4ce9-8ec3-0c3bd282c101
       -
         elements:
           -
@@ -73,14 +79,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b69c674a-6364-4805-a863-f917a21573e7
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: d46e9685-fa59-4947-b40c-12957c5778a1
 handle: home
 hasTitleField: false
 name: Home
-section: f9e0df6c-e400-4efc-b07a-685541c60467 # Home
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

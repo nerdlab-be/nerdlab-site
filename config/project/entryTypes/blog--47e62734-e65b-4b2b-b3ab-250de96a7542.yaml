@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6b48942f-ad17-4c7f-a0ab-2dbd8f1d5d90
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0b17b146-b1a7-4c19-a6fb-4eb6eae85898
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c89a383d-5abd-4dd5-9003-b4228623db93
             warning: null
             width: 100
           -
@@ -51,6 +54,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: aecb5f25-c823-49a4-a2f9-a0c3631d3904
             warning: null
             width: 100
           -
@@ -60,10 +64,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 26f7c479-541b-4149-a6e6-47a022516927
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 78d96636-b5f8-42c2-b76a-ce880f77b49c
       -
         elements:
           -
@@ -73,14 +79,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 6726d86c-5b77-495b-9196-ffb12264fa8b
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: 9e598a69-9788-4e66-9b77-4b721a3d721c
 handle: blog
 hasTitleField: true
 name: Blog
-section: 39372646-5838-493c-b12c-7f45e53105bc # Blog
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

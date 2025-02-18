@@ -1,0 +1,88 @@
+columnSuffix: null
+handle: state
+instructions: null
+name: 'Event details - Status'
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Openbaar
+        -
+          - value
+          - Openbaar
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Gratis
+        -
+          - value
+          - Gratis
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Reserveren
+        -
+          - value
+          - Reserveren
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Betalend
+        -
+          - value
+          - Betalend
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Volzet
+        -
+          - value
+          - Volzet
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Uitverkocht
+        -
+          - value
+          - Uitverkocht
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Uitgesteld
+        -
+          - value
+          - Uitgesteld
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 57d54617-cb57-4e24-b2f5-955f320729d1
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 470b5cca-0c64-4e54-b506-f11c88aa4482
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 370a3f37-b760-45ae-8097-892c6ab7294f
             warning: null
             width: 100
           -
@@ -51,10 +54,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1ae093ba-0550-4758-8c0a-723b0f24d850
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 1606a241-111f-4de6-98f6-95ba8426cd88
       -
         elements:
           -
@@ -64,14 +69,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2309c47f-f458-42a4-9f50-b2555fc28b0d
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: 90c4b7c1-5e85-48ec-88db-3890726ab587
 handle: blogOverview
 hasTitleField: true
 name: 'Blog overzicht'
-section: 4f11b2d3-033a-4eb4-8e6e-49b9041e6a81 # Blog overzicht
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

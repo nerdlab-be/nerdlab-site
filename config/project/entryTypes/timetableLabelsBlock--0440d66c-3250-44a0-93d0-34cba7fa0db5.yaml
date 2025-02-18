@@ -1,0 +1,181 @@
+color: null
+fieldLayouts:
+  b4fc5508-e462-4c41-b0bc-8b82aebd5fc8:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: e518b0fb-da83-4993-9bee-37c2eb306b45
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Info
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3f7e9cc9-db0a-474d-8eee-d37dc27c4d37
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 87615dc1-c11c-43bf-bced-41b61c68c0b8
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Talk
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: baea8e2a-ff8b-4686-9656-dead0c7ac47f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 68e9ffc7-14c2-46c3-a175-d5a5ee33a615
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Makeathon
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8aa2929d-75a9-4376-a544-720a67713527
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 0d705cce-b32e-42c9-bfd3-fc6588076228
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Workshops
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6606400e-d1b8-4dec-bf75-16e8c291f4f8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: a5610b26-b83a-428f-959a-31e76dbe90a3
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Workshop en debat'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff89bcf8-79db-43eb-a548-7d0287c63143
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: f074248b-d0eb-4592-8192-b7bf8d8b98f1
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Inspiratiesessie
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 08038e6a-44f6-4880-87b9-0b6a096361b2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 80a4aed9-085e-471c-b781-2dc035e86d05
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Netwerk
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: df7327ad-4224-4feb-9618-d05036ccd55f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 1ebe5c27-4731-4558-951a-3ec1fb1322e8
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Expo
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8fdacbb9-f00d-4694-bee5-51333bb5853b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 82cba82a-f444-4fb5-bce9-6770a3e700bc
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Performance
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 99bd4a68-246b-4992-925d-d4c7f23d70e2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: eea75f48-ae3a-4a4d-b068-1d8ac378dc89
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Extra 2'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 78cd22be-bd12-4988-90d4-07ba89a3e43b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: be66e567-ae40-4508-ba4c-880a9c111492
+        userCondition: null
+handle: timetableLabelsBlock
+hasTitleField: false
+icon: null
+name: 'Timetable labels Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

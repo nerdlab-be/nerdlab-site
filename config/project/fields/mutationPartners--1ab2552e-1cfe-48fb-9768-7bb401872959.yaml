@@ -1,16 +1,21 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: mutationPartners
 instructions: ''
 name: Partners
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_mutationpartners}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      handle: heading
+      uid: 5a5eb289-0f3a-45e5-a926-670489c8f2f8
+    -
+      uid: 9362fd86-4829-4ee3-bd2b-bfea23f7782b
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

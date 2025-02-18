@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: b8eea8db-3e27-4c83-a735-da7bd77f3482 # Agenda
 handle: agenda
 name: Agenda
 previewTargets:

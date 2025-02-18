@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: blocks
+instructions: null
+name: 'Content - Grid - Blokken'
+searchable: true
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    - 2e33ec16-6c2e-424a-9b25-111dc0475286 # Content - Grid - Blokken Block
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

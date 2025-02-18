@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  77bc4400-933d-46fc-8921-29d548dd29d4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 2c959756-76d3-4cf9-a321-a73897a89ab8
+            handle: paragraph
+            includeInCards: true
+            instructions: null
+            label: Paragraaf
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 47f0b3a2-4f11-45a6-bc89-f6903b9994aa
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 85787eab-c39d-4d1f-987e-baf3c3323505
+        userCondition: null
+handle: footer
+hasTitleField: false
+icon: null
+name: Footer
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

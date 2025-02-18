@@ -1,5 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 1cb3add7-2d5d-4688-a70b-a8ca49c87908 # Pagina
+  -
+    uid: 1ebdfedb-5c30-4bd9-8d42-a80c2f36d43f # Contact
 handle: pages
 name: 'Pagina''s'
 previewTargets:

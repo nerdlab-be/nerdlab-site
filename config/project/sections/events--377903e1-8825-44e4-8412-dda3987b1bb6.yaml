@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 2a1e9478-5209-4d8c-8fbe-f38ebedb014b # Event
 handle: events
 name: Events
 previewTargets:

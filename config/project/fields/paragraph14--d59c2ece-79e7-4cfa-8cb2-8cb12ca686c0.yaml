@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: paragraph14
+instructions: null
+name: 'Content - Tekst - Tekst'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  ckeConfig: 5627bc37-5d7c-4bd2-a10b-332843a753f6 # Standard
+  createButtonLabel: null
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  showWordCount: false
+  sourceEditingGroups: '*'
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: language
+type: craft\ckeditor\Field

@@ -1,16 +1,21 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
 handle: media
 instructions: ''
 name: Foto/video
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_media}}'
-  maxBlocks: '1'
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: 6c756459-d9ea-4ec2-9182-435ba7a9035b
+    -
+      handle: video
+      uid: 82e1f41f-f59e-456d-be46-7a372e9e6fb3
+  maxEntries: '1'
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

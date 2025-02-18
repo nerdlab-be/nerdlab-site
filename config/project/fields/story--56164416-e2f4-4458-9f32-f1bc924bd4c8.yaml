@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
 handle: story
 instructions: ''
 name: Story
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_story}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: be4e3275-7b37-403e-ba7a-c73019ab1591
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

@@ -1,6 +1,5 @@
 columnSuffix: otxbmzgf
 contentColumnType: string
-fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: timetabledays
 instructions: null
 name: 'Timetable Days'
@@ -11,34 +10,38 @@ settings:
   columns:
     __assoc__:
       -
-        - d7c97fd2-8c66-4f08-a8ab-e3f564396339 # Day One
+        - d7c97fd2-8c66-4f08-a8ab-e3f564396339
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - eec017fe-cc3d-484a-8967-7a474f83d39b # Day Two
+        - eec017fe-cc3d-484a-8967-7a474f83d39b
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 6146ebdf-a4fe-4149-8cfc-8251531dc42f # Day Three
+        - 6146ebdf-a4fe-4149-8cfc-8251531dc42f
         -
           __assoc__:
             -
               - width
               - ''
-  contentTable: '{{%stc_timetabledays}}'
+  entryTypes:
+    - 82f56465-d8a7-4063-bb3c-15db0a305c7b # Timetable Days Block
   fieldLayout: row
+  maxEntries: null
   maxRows: null
+  minEntries: null
   minRows: null
   propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: null
   staticField: null
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: none
 type: verbb\supertable\fields\SuperTableField

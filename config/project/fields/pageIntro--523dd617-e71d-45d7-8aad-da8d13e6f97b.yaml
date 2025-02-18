@@ -1,6 +1,5 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6fb9ef6c-97ce-4a20-9031-f708f1a53bb1 # Content
 handle: pageIntro
 instructions: ''
 name: 'Pagina intro'
@@ -22,15 +21,19 @@ settings:
         -
           - width
           - ''
-  contentTable: '{{%stc_pageintro}}'
+  entryTypes:
+    - f5ae3bf6-323d-441b-a067-e74a43893522 # Pagina intro Block
   fieldLayout: row
+  maxEntries: null
   maxRows: ''
+  minEntries: null
   minRows: ''
   placeholderKey: null
   propagationKeyFormat: null
   propagationMethod: all
   selectionLabel: ''
   staticField: '1'
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: verbb\supertable\fields\SuperTableField

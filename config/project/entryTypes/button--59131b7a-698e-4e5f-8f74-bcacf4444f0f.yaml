@@ -1,0 +1,69 @@
+color: null
+fieldLayouts:
+  fb805677-fd76-4110-9519-2fd8fa711f78:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: e70a7203-f05b-48c9-b6e7-116999cc4be7
+            handle: buttonTitle
+            includeInCards: true
+            instructions: null
+            label: Title
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce448c72-4734-4a77-9506-8586b6b78f96
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: a5d3283c-932b-44f3-ba9d-313688a055ed
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Link
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1bc08755-8664-4066-b15b-b552154bf66b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: c35e20ab-90f7-4370-99b4-cb2a68ee32fb
+            handle: buttonURL
+            includeInCards: false
+            instructions: null
+            label: URL
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c62c596c-dbeb-4f11-baea-fcee7ef001e1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6ea90880-4dae-408b-9e86-7be2bc772cd7
+        userCondition: null
+handle: button
+hasTitleField: false
+icon: null
+name: Button
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

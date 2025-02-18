@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: optionThreeParagraph
+instructions: null
+name: 'Schrijf je in - Opties - Optie 3 paragraaf'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: 12d25984-f2d6-4041-9f35-32e8b8645969 # Simple 2
+  createButtonLabel: null
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  showWordCount: false
+  sourceEditingGroups: '*'
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

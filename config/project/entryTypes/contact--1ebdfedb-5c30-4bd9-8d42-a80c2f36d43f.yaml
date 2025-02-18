@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 31280f96-ad84-4e07-9fc0-b5f958fa6c23
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1251b048-a484-4bb5-ab08-8e28e12616cb
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2b578af9-e2ab-44c0-a3e0-280b782b3f1d
             warning: null
             width: 100
           -
@@ -51,6 +54,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9a65ce1d-b469-4b3a-9c88-58112e3187f6
             warning: null
             width: 100
           -
@@ -60,6 +64,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 00b718b0-d398-45c3-8bcb-299cdb35ea67
             warning: null
             width: 100
           -
@@ -69,6 +74,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ea723aea-3488-4d27-9d3f-59a6f39152af
             warning: null
             width: 100
           -
@@ -78,10 +84,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: cf5fb561-9168-4c53-8952-e15477127e87
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 6ec7fd00-4460-4eaf-aa40-af8b8290d3ad
       -
         elements:
           -
@@ -91,14 +99,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e22d3ef0-4195-4c1e-b6df-fd4ee67ca4b2
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: 225ef9bb-c918-44f3-9243-98b8250550e3
 handle: contact
 hasTitleField: true
 name: Contact
-section: f13b291a-d9b5-4468-a039-a5770d399c3c # Pagina's
 sortOrder: 8
 titleFormat: null
 titleTranslationKeyFormat: null

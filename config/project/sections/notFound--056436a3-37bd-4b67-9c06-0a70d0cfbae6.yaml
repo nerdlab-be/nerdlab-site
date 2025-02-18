@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: d002bf12-1f4e-4979-a27c-be3305816763 # 404-not-found
 handle: notFound
 name: 404-not-found
 previewTargets:

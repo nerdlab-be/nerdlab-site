@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 29d72652-c247-407a-96b3-202860afe6de
             warning: null
             width: 100
           -
@@ -33,14 +34,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2ce3123b-ecd7-467f-a996-63ab16fac31e
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 9060df7e-0131-4d89-8a14-3166c6b18161
 handle: tickets
 hasTitleField: true
 name: Tickets
-section: 4d79a10b-67b0-4005-9c56-634a4616b073 # Tickets
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

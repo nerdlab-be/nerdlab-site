@@ -1,0 +1,53 @@
+color: null
+fieldLayouts:
+  98f50a8b-cd03-4e5b-ab70-1f29a8f1d818:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 118d3bb3-6f11-427f-8806-b57d71440d37
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Logo
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6cfa4d5e-0ebd-43aa-b759-ef436453ce1c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 7eb8586a-1c65-4bd8-b080-129ceea6d19c
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: URL
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b54fd4bb-8ccd-4228-bcd7-8a50634640f5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: dceaa2db-a2d9-4fdc-b0e1-0b43338ecf07
+        userCondition: null
+handle: partner2
+hasTitleField: false
+icon: null
+name: Partner
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,0 +1,23 @@
+columnSuffix: null
+handle: itemLink
+instructions: null
+name: 'Navigation - Item - Link'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - singles
+    - 'section:f13b291a-d9b5-4468-a039-a5770d399c3c' # Pagina's
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

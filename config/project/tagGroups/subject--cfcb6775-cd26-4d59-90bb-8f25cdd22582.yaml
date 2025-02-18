@@ -24,9 +24,11 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
+            uid: eea4ac78-4c18-4039-93c6-068ca1d2af02
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: c35d3d28-42c4-4df3-9fde-7abfba8c3d09
 handle: subject
 name: Onderwerp

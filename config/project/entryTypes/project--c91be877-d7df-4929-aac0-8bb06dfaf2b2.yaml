@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: cc1d73a6-a797-4c8a-b271-9297e64ab8ef
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 819e5838-4bca-4692-8c93-3640b67a17b2
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9864d763-e215-42a3-a8e7-95ab93026305
             warning: null
             width: 100
           -
@@ -51,6 +54,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b42f6be7-404e-4513-a98e-ea206072d760
             warning: null
             width: 100
           -
@@ -60,6 +64,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 061ccac4-232c-4f41-9721-e3308041895c
             warning: null
             width: 100
           -
@@ -69,10 +74,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 29c15c57-f53b-4850-9892-c4314a292c2c
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: e387aca5-a7e3-4bef-a45d-05db92d69ebd
       -
         elements:
           -
@@ -82,14 +89,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: c0d87885-4111-4d44-bc5b-1c64f90e11c5
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: d9b76da6-cc6d-45c3-8bd4-2bf66d060104
 handle: project
 hasTitleField: true
 name: Project
-section: 57e1c6a9-b04e-4d03-a86b-3132cf1f1341 # Projecten
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

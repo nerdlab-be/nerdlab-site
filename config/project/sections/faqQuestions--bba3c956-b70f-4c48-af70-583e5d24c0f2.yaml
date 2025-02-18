@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 880b8934-3b17-452c-8c55-81c826cd5719 # faqEntry
 handle: faqQuestions
 name: 'FAQ Questions'
 propagationMethod: all

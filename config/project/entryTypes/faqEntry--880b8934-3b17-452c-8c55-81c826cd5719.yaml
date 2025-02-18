@@ -49,7 +49,6 @@ fieldLayouts:
 handle: faqEntry
 hasTitleField: true
 name: faqEntry
-section: bba3c956-b70f-4c48-af70-583e5d24c0f2 # FAQ Questions
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

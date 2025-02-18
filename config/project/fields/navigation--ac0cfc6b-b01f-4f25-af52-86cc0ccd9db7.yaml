@@ -1,16 +1,19 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20 # Globals
 handle: navigation
 instructions: ''
 name: Navigation
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_navigation}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      handle: item
+      uid: 0491af0f-c568-4d8a-861c-4affec15a0f5
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: none
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

@@ -1,0 +1,117 @@
+color: null
+fieldLayouts:
+  68ebcd8a-7aa5-464a-9280-7d385db35fd4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 30dc1067-1365-43c5-91af-6e709f30c989
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Titel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dee99c2d-7a17-4022-8bd7-7eb20b9cdd1b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 8bf94dbe-0f4b-404c-9248-77da7b8dab46
+            handle: paragraph
+            includeInCards: false
+            instructions: null
+            label: Paragraaf
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4a9fbd66-0787-4b81-8799-306ec92af9ef
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 40a6117e-a5e5-42cf-a514-e1e15d986421
+            handle: image
+            includeInCards: false
+            instructions: null
+            label: Afbeelding
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6174c421-4034-4abc-a088-de6932e1e8eb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 1df1f4a8-06c3-4c63-b219-674cc1c28b27
+            handle: linkText
+            includeInCards: false
+            instructions: null
+            label: 'Link tekst'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5275fc6-7a2f-49d2-b106-efc27cbbd3e6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: c06ea692-eef8-45a8-8cfb-78d8ce6c51b8
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Interne link'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a5d7f859-3cb7-41a2-96f7-06e7a983fbff
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 042070bc-b132-47fd-b968-69b624df5794
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Externe link'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff91879b-02b0-4f9c-bc54-8cc35b35d819
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 8baada8f-1c08-4718-b9ed-addbaff8dcf8
+        userCondition: null
+handle: banner
+hasTitleField: false
+icon: null
+name: Banner
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

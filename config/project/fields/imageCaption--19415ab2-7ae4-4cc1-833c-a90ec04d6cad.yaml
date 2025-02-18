@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: imageCaption
+instructions: null
+name: 'Blog detail - Tekst + afbeelding - Afbeelding onderschrift'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText

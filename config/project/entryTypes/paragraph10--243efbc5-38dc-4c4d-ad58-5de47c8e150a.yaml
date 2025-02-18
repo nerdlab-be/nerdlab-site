@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  f8ee910e-054d-43d4-bbf8-34072edc17e9:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: a19458ec-073d-4286-abdf-c95f15091e6a
+            handle: paragraph
+            includeInCards: true
+            instructions: null
+            label: Tekst
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dec564f7-3733-434b-aeec-566446a6a2ea
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0a156e18-25c6-4f49-8835-6981c1602e6d
+        userCondition: null
+handle: paragraph10
+hasTitleField: false
+icon: null
+name: Tekst
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

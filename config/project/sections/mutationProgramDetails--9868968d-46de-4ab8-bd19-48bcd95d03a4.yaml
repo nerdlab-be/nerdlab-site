@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 06894fa3-3e4b-4399-ae97-44cd5f5aeb52 # Programma details
 handle: mutationProgramDetails
 name: 'Programma details'
 propagationMethod: all

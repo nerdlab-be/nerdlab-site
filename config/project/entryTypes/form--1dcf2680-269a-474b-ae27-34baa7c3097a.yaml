@@ -1,0 +1,69 @@
+color: null
+fieldLayouts:
+  270edd7a-bccb-4d80-9c8f-a86225761c5f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 7431df3f-0c78-4769-8dd4-7d1083148e5a
+            handle: paragraph
+            includeInCards: true
+            instructions: null
+            label: Paragraaf
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a53e29c5-bbc4-47cb-8f41-6031e0708da2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 717f6695-33fa-436b-a932-614d4ebe6b33
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Placeholder
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f5492890-c86d-4b1b-8781-6db45ed498fe
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: aa33fe7b-83e7-486d-b771-df5b364d8468
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Submit
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 72505250-99a7-4a93-a4e7-327c6782e69d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: a246c1f7-03c3-44d1-b506-a57759318e9a
+        userCondition: null
+handle: form
+hasTitleField: false
+icon: null
+name: Form
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 9ed82eba-8c2d-489f-bde7-317bb8ee93e2
             warning: null
             width: 100
           -
@@ -33,10 +34,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 4c386224-8531-4e29-a76d-81b18ce7acba
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 0842682e-e2a7-4a43-9f4f-ce9b174deeef
       -
         elements:
           -
@@ -46,14 +49,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 3ff346e8-bf59-4a60-9bf5-0678b28a3978
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: a9d01db5-bd33-4796-99ef-bdc470684eaf
 handle: mutationProgram
 hasTitleField: true
 name: Programma
-section: 2fc9ff26-41d6-4b2f-98cc-ce0881deb723 # Programma
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

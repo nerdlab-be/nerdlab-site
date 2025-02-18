@@ -1,0 +1,30 @@
+columnSuffix: null
+handle: moreInfo2
+instructions: null
+name: 'Project details - Meer info'
+searchable: true
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 2fef00d3-1796-46f1-8de0-6b36210054ec
+    -
+      __assoc__:
+        -
+          - uid
+          - f8d65190-b574-45c9-920f-f5cdfacd0091
+  includeTableView: false
+  maxEntries: 1
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

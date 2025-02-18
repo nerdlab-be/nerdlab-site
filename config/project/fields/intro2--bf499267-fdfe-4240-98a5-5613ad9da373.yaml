@@ -1,0 +1,44 @@
+columnSuffix: null
+handle: intro2
+instructions: null
+name: 'Pagina intro - Intro'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 243efbc5-38dc-4c4d-ad58-5de47c8e150a
+        -
+          - handle
+          - paragraph
+    -
+      __assoc__:
+        -
+          - uid
+          - 9037bc3c-4cf2-46a9-8025-3a7d6ddc94b2
+        -
+          - handle
+          - subtitle
+    -
+      __assoc__:
+        -
+          - uid
+          - fb7e0342-8eaa-4d5e-b649-742ea5b8d35b
+        -
+          - handle
+          - button
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

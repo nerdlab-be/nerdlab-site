@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: selectBlock
+instructions: null
+name: 'Call to action - Selecteer blok - Selecteer blok'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:f40ebf54-78ec-496c-8e23-c1226da21268' # Doormat
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

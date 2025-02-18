@@ -1,16 +1,19 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
 handle: partners
 instructions: ''
 name: Partners
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_partners}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      handle: partner
+      uid: ae3cd37d-bb70-4e5a-831d-45a4622a1c6f
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

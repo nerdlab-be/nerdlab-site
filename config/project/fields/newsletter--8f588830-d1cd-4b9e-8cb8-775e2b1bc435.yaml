@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: b639b6b0-8294-408c-ad90-3d01942d0f20 # Globals
 handle: newsletter
 instructions: ''
 name: Newsletter
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_newsletter}}'
-  maxBlocks: '1'
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: 1dcf2680-269a-474b-ae27-34baa7c3097a
+  maxEntries: '1'
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

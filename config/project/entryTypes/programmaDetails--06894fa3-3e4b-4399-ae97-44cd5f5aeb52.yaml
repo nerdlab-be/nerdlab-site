@@ -157,7 +157,6 @@ fieldLayouts:
 handle: programmaDetails
 hasTitleField: true
 name: 'Programma details'
-section: 9868968d-46de-4ab8-bd19-48bcd95d03a4 # Programma details
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

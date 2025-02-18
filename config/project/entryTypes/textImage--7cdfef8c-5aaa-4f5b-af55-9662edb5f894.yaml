@@ -1,0 +1,101 @@
+color: null
+fieldLayouts:
+  87ce8f7d-8877-4d92-92a9-7599c3586b2c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 3b2c50c0-caaa-447c-9f8c-7c7815133ffd
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Titel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e847e7bd-fbd7-43f5-bdb3-54eea846ee69
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 75f813dd-5c28-4da1-aa78-d2b2ffe797e7
+            handle: paragraph
+            includeInCards: false
+            instructions: null
+            label: Paragraaf
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7fa092e7-4fdc-4fd7-a279-da0068087c65
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: ed800917-c800-4e1a-8a3d-adedcdb1859c
+            handle: image
+            includeInCards: false
+            instructions: null
+            label: Afbeelding
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: afb4b6b6-e8bc-4824-af43-799e4c5c282d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 19415ab2-7ae4-4cc1-833c-a90ec04d6cad
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Afbeelding onderschrift'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bdaeca90-5e32-409c-926f-3d131768b2c6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: e4be16ea-721a-42f2-95b5-ceaf7cad98ed
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Layout
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 26172425-8670-4311-9942-f8a882eff93f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 437b31f5-fb5a-489b-8168-7ab6e6c4a41a
+        userCondition: null
+handle: textImage
+hasTitleField: false
+icon: null
+name: 'Tekst + afbeelding'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

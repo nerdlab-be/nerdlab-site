@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  5aabed5f-161b-41ca-8ca2-f50eb0479b16:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: d89bda9d-4254-485c-afbf-e75b029cbc8a
+            handle: paragraph
+            includeInCards: true
+            instructions: null
+            label: Paragraaf
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e41e7548-78a8-4fbb-afb6-f92813ac78c2
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3f335429-5501-445f-8bde-990b9591ca8a
+        userCondition: null
+handle: paragraph4
+hasTitleField: false
+icon: null
+name: Paragraaf
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

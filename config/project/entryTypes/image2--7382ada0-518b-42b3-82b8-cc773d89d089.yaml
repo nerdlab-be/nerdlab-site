@@ -1,0 +1,53 @@
+color: null
+fieldLayouts:
+  bc1ec7fe-8d13-4bbb-b253-7abd67173339:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 12b7048e-75cd-4d98-b2de-cd9deb74046d
+            handle: image
+            includeInCards: false
+            instructions: null
+            label: Afbeelding
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 36aed004-1208-48ea-84e7-d7ce4ee24c6a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 21e49a26-7e10-4ee2-8119-92dcdcabd47d
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Onderschrift
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e0b21a7b-d846-45bf-9bdd-962393cc8e7f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e4077af1-4945-4903-86bd-186e1c367494
+        userCondition: null
+handle: image2
+hasTitleField: false
+icon: null
+name: Afbeelding
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: dfa57fd2-b5e2-4c37-9a54-b6c671e47db3
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 781ed53a-6e80-4886-bced-e37eff33a405
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ed84382c-10d0-4b86-a656-f63e7cc0c042
             warning: null
             width: 100
           -
@@ -51,14 +54,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: ce3faf59-acfd-4c92-ab30-22a35834a5d4
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 4f6da03a-1b99-422b-84a1-146744a130b4
 handle: doormat
 hasTitleField: true
 name: Doormat
-section: f40ebf54-78ec-496c-8e23-c1226da21268 # Doormat
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

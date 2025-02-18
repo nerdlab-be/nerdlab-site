@@ -1,16 +1,25 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: d35ab853-df35-44ef-91e6-94d836314196 # Common
 handle: intro
 instructions: ''
 name: Intro
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_intro}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: 3906c612-eeac-4e3a-a6a5-f6663f4bf6da
+    -
+      handle: paragraph
+      uid: 0180938e-03c6-4d53-9b8b-10fbafc4cd19
+    -
+      uid: 17e7b732-95e4-4c6d-aea7-c89442588c30
+    -
+      uid: 59131b7a-698e-4e5f-8f74-bcacf4444f0f
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

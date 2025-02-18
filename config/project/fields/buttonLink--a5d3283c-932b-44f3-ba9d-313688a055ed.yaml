@@ -1,0 +1,24 @@
+columnSuffix: null
+handle: buttonLink
+instructions: null
+name: 'Intro - Button - Link'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - singles
+    - 'section:377903e1-8825-44e4-8412-dda3987b1bb6' # Events
+    - 'section:313d9952-cc7f-4b6d-a325-5caf4eaa435e'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries

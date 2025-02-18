@@ -1,16 +1,37 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: e0d9964b-b49c-4862-bed8-46420e6906c3 # Blog
 handle: blogDetail
 instructions: ''
 name: 'Blog detail'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_blogdetail}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      handle: heading
+      uid: cbaf7f9f-6138-4f71-9fb7-46d1e9d8058d
+    -
+      uid: 7f606b5c-36c5-475f-a8ca-fec02878d374
+    -
+      handle: paragraph
+      uid: 251555a6-dbc1-4980-b871-dda652129bc7
+    -
+      handle: quote
+      uid: b70fa487-a4f3-40cd-bee7-153c2a3b3e51
+    -
+      uid: 7cdfef8c-5aaa-4f5b-af55-9662edb5f894
+    -
+      handle: image
+      uid: 7382ada0-518b-42b3-82b8-cc773d89d089
+    -
+      handle: video
+      uid: d722d86c-0d72-4e92-9d4d-898dd68141d0
+    -
+      uid: 89420d8b-e49c-4cb0-a8b7-267d99376fde
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

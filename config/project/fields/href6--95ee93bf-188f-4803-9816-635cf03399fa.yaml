@@ -1,0 +1,14 @@
+columnSuffix: null
+handle: href6
+instructions: null
+name: 'Site credits - Credit - URL'
+searchable: true
+settings:
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: false
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Link

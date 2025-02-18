@@ -1,0 +1,85 @@
+color: null
+fieldLayouts:
+  ac3ba325-2c44-42f6-b7a5-d481f153ceb5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 38f7043c-d8fb-4d65-b046-55f44554f342
+            handle: quote
+            includeInCards: true
+            instructions: null
+            label: Quote
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b4fc9793-83b8-4432-8b2b-70a637130a86
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: b0f37315-7ed7-46a2-9f54-03a6d2f3eb3e
+            handle: author
+            includeInCards: false
+            instructions: null
+            label: Auteur
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 75ee9fd7-19c3-484f-b8bb-d6c210bb20a6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 67464e1d-5f80-4dd6-b94b-56c78adfc4b7
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Auteur info'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fe6d0e0f-1c95-48a7-999c-59b5c1f4cf7a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: e8566d27-fe74-483d-9f49-20476045f7a5
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Quote link'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3823049e-328d-4b50-a4ee-63d9869f6723
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: eab1ad02-0a73-43bb-b3ff-08aedfb754ce
+        userCondition: null
+handle: quote2
+hasTitleField: false
+icon: null
+name: Quote
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

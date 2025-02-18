@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 93fc8ead-9eba-44ff-8bcf-1b11421607d0
             warning: null
             width: 100
           -
@@ -33,10 +34,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: b8f0d210-12b8-4ed0-a48b-8cf3f9172136
             warning: null
             width: 100
         name: Inhoud
         sortOrder: 1
+        uid: 5db20fad-0a58-4b60-a867-1302f683b782
 fs: video
 handle: video
 hasUrls: true

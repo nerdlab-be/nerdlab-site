@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: showAllSubpages
+instructions: 'Deze setting toont alle onderliggende pagina''s die 1 niveau diep liggen.'
+name: 'Content - Gerelateerde pagina''s - Toon alle subpagina''s'
+searchable: true
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

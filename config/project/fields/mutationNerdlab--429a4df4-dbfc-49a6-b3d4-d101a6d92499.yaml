@@ -1,16 +1,24 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: mutationNerdlab
 instructions: ''
 name: Nerdlab
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_mutationnerdlab}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      handle: heading
+      uid: 570010d5-76a8-496a-bc16-fc797fefcea5
+    -
+      handle: paragraph
+      uid: 56f8b7bc-2c2e-43ac-9c91-f34610be3f57
+    -
+      uid: f2d28712-fc47-4f1f-b3ef-158ad246d421
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

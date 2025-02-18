@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  b7a79373-4b91-4c36-b7d5-04d36d08f87a:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 1234a7d5-ad1f-4891-9a42-097164a9d95d
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Titel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cd584458-0c09-4836-888f-a716c0d32c04
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f3c1b4e9-4da6-4474-88e5-2976ca3c127b
+        userCondition: null
+handle: heading7
+hasTitleField: false
+icon: null
+name: Titel
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

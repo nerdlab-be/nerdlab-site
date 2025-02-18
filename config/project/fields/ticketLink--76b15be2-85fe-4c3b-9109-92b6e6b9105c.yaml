@@ -1,0 +1,14 @@
+columnSuffix: null
+handle: ticketLink
+instructions: null
+name: 'TicketInfo - Ticket - Ticket link'
+searchable: true
+settings:
+  fullGraphqlData: false
+  maxLength: 255
+  showLabelField: false
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\Link

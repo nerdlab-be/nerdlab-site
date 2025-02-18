@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a697d8c1-fbab-4fe7-9565-ebc8d5a0349d
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2f0b231c-2baa-4e1c-af3b-f18f026ce4d6
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 776a9ce9-183d-4f85-9d11-0ccb78c6fbaf
             warning: null
             width: 100
           -
@@ -51,6 +54,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0a3d8a89-ce68-4cae-862c-ad8edbec5a36
             warning: null
             width: 100
           -
@@ -60,10 +64,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: dc447966-e4e8-411a-8cb7-550a91fadc74
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: b435989b-6c07-4e81-844f-39ec820a2a14
       -
         elements:
           -
@@ -73,14 +79,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 9b9dbb8c-3a2a-42b6-ad5d-e56899ff72c8
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: c4490552-b2c5-4d8d-a434-225276cc6108
 handle: page
 hasTitleField: true
 name: Pagina
-section: f13b291a-d9b5-4468-a039-a5770d399c3c # Pagina's
 sortOrder: 7
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -91,7 +91,6 @@ fieldLayouts:
 handle: mutationEn
 hasTitleField: true
 name: 'Mutation Festival En'
-section: fc03d821-dbe4-4ca8-b07d-b94a630e84cc # Mutation Festival En
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: heading20
+instructions: null
+name: 'Intro - Titel - Titel'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: language
+type: craft\fields\PlainText

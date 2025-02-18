@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 11e50b85-6fff-4a82-b5ac-96058eef1eaf
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2d5e00a4-2ff0-4563-9015-e37d05e0a6fc
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 078ac94d-7fac-4369-93f0-50cfec81c1e9
             warning: null
             width: 100
           -
@@ -51,6 +54,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: a8f9135e-04ca-4a59-83df-a8fa8be209ea
             warning: null
             width: 100
           -
@@ -60,10 +64,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 20aae798-32e3-48c4-a0c5-8af41dd54f44
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: d6b98bb0-41ee-4a3e-8ca5-8e66e2317d2b
       -
         elements:
           -
@@ -73,14 +79,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: afecf441-da18-4278-a88e-0e3bdefb55f7
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: f918c7bf-e03d-42ba-b77d-bf5ee1959a19
 handle: projectOverview
 hasTitleField: true
 name: 'Dingen maken'
-section: 5122b91f-2ec5-4f7f-b401-d33c32c961aa # Dingen maken
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

@@ -1,16 +1,20 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6fb9ef6c-97ce-4a20-9031-f708f1a53bb1 # Content
 handle: callToAction
 instructions: ''
 name: 'Call to action'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_calltoaction}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: 78e7ee07-e959-4226-ad0f-d4999e5ffcbf
+    -
+      uid: 0d073441-fdd4-4652-83d7-fa8adea09acc
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

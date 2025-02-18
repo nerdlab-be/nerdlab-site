@@ -1,0 +1,69 @@
+color: null
+fieldLayouts:
+  face8d3e-35b2-4cde-8169-c162d45c0658:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: d7c97fd2-8c66-4f08-a8ab-e3f564396339
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: 'Day One'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88634fab-f9c6-4dc0-8d05-f4f31ad57b3b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: eec017fe-cc3d-484a-8967-7a474f83d39b
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Day Two'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 521a2cf4-7af2-4bcc-bb22-8d07d7fde289
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 6146ebdf-a4fe-4149-8cfc-8251531dc42f
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Day Three'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a0c71111-afbf-469d-be15-270ac673bedd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 86c45707-46d3-4b6e-b2ce-94456f7e9adf
+        userCondition: null
+handle: timetabledaysBlock
+hasTitleField: false
+icon: null
+name: 'Timetable Days Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: cd3eb703-f32d-44a6-829a-3d2974d8398f
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 7e7df3e0-aabf-4a87-b138-21f5b79b563f
             warning: null
             width: 100
           -
@@ -42,10 +44,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 0a9548b6-2a54-4a64-922b-1e50a70cc2d6
             warning: null
             width: 100
         name: Inhoud
         sortOrder: 1
+        uid: 566e592e-ed6f-4021-aa43-e0d5dfde0b82
 fs: images
 handle: images
 hasUrls: true

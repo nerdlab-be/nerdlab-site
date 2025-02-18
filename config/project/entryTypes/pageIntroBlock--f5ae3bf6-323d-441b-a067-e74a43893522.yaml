@@ -1,0 +1,69 @@
+color: null
+fieldLayouts:
+  ac8a2d72-e815-4072-9528-6f38f3e07411:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 2b4bf20e-546a-40bb-b7cc-879d4f42c271
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: 'Pagina titel'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1cb329d3-4e1b-426f-9ce2-e8a826a967b0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: bf499267-fdfe-4240-98a5-5613ad9da373
+            handle: intro
+            includeInCards: false
+            instructions: null
+            label: Intro
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 03507c16-59b2-45f0-a5da-aa4737787b3c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: fed11f6d-6a51-4dfc-a468-69e3f8d26395
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Visual
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3461c432-1e20-4532-a6a3-49e539b19630
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 4b9ea143-5d52-4234-8a18-50e36f846aca
+        userCondition: null
+handle: pageIntroBlock
+hasTitleField: false
+icon: null
+name: 'Pagina intro Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: b6d81c02-6029-40a7-b028-e3689f3aedf0 # Tickets
 handle: mutationTickets
 name: Tickets
 propagationMethod: all

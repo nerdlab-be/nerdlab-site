@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: e1f0a5e5-f21a-4840-a89b-15a4e458cad8 # Home
 handle: home
 name: Home
 previewTargets:

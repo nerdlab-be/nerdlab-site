@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 94f640e9-3a84-43b8-a916-6e5df4ad8027 # Blog overzicht
 handle: blogOverview
 name: 'Blog overzicht'
 previewTargets:

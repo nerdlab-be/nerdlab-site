@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6fb9ef6c-97ce-4a20-9031-f708f1a53bb1 # Content
 handle: banner
 instructions: ''
 name: Banner
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_banner}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: f535c0ea-0929-4d25-830b-82835f0d869a
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

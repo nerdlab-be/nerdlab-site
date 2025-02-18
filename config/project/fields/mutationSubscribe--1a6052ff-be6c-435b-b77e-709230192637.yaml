@@ -1,16 +1,20 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: mutationSubscribe
 instructions: ''
 name: Inschrijven
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_mutationsubscribe}}'
-  maxBlocks: ''
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: c10cce26-cbbb-4fc8-8574-76408add05d9
+    -
+      uid: 7be7b0d8-0b0b-4f5f-8914-7577e55650b2
+  maxEntries: ''
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

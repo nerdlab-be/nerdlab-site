@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  99ee9856-e4bd-4efe-b619-f3438df7718c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: f783863b-82a3-47b7-b113-26307fa23508
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: Footer
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1cd8424b-306e-4d09-accd-1e4436dd6b6f
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e8909715-ab4f-4ccd-b340-5d668fefc8af
+        userCondition: null
+handle: subscribeFooter
+hasTitleField: false
+icon: null
+name: Footer
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

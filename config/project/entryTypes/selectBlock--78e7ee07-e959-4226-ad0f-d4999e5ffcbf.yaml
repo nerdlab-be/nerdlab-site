@@ -1,0 +1,37 @@
+color: null
+fieldLayouts:
+  b8c67df1-b3d1-4369-bbbf-fd0c617976d5:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 6305bf94-beca-4215-95db-6204d432e5dc
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: 'Selecteer blok'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d327a992-ebd9-4826-9172-4ddcf19fa601
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: cc89f560-8b0b-4c25-8fa2-58c5ffbc2551
+        userCondition: null
+handle: selectBlock
+hasTitleField: false
+icon: null
+name: 'Selecteer blok'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

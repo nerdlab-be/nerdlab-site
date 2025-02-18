@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: quote2
+instructions: null
+name: 'Blog detail - Quote - Quote'
+searchable: true
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  ckeConfig: f80eb94d-2324-42d8-a607-d1934a8c494d # Default
+  createButtonLabel: null
+  defaultTransform: null
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  showWordCount: false
+  sourceEditingGroups: '*'
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\ckeditor\Field

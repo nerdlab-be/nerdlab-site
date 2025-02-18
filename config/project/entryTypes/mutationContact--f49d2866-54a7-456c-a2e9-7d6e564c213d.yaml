@@ -49,7 +49,6 @@ fieldLayouts:
 handle: mutationContact
 hasTitleField: false
 name: 'Mutation Contact'
-section: 89fa331f-52a0-4175-aebb-192c259b1d6c # Mutation Contact
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

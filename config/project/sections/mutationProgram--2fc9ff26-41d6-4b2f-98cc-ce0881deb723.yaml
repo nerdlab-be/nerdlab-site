@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 523cc977-c3e6-4508-9d3a-137bb8af2e4f # Programma
 handle: mutationProgram
 name: Programma
 previewTargets:

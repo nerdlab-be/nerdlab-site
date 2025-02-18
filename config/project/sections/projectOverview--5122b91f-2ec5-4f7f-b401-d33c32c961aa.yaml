@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: e0bed8d3-d087-4141-af2d-fe1a41573976 # Dingen maken
 handle: projectOverview
 name: 'Dingen maken'
 previewTargets:

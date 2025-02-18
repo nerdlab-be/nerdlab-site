@@ -1,16 +1,18 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: mutationTicketInfo
 instructions: ''
 name: TicketInfo
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_mutationticketinfo}}'
-  maxBlocks: '1'
-  minBlocks: ''
+  entryTypes:
+    -
+      uid: 7478d2bf-cecf-4edc-8e5a-3329cd0b3d8d
+  maxEntries: '1'
+  minEntries: ''
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix

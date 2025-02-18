@@ -1,0 +1,101 @@
+color: null
+fieldLayouts:
+  6ac8c256-d5a0-496b-b908-d0c5ef57f8f7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 56dfaf4e-9884-4ab1-8f41-0840c2ef52ff
+            handle: heading
+            includeInCards: true
+            instructions: null
+            label: Titel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ce9b5323-fb08-472c-89e9-693142ab7ab3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 350e26ab-1a50-4c04-9885-8a4d0235a2e2
+            handle: paragraph
+            includeInCards: false
+            instructions: null
+            label: Tekst
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6c10b93-3a6e-4646-9660-81b35cd4993b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 51af00cb-3e0d-44f4-8210-7b9b8788d8ef
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Formulier
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5dd8c28a-87f1-4e5c-b5a8-ebec553e2ee7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 75041e51-80f8-4e44-96d6-347eb28c7f27
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Button tekst'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c9bb606-43ae-43d5-b74a-1eff587a43fb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 0bef507a-b73b-4afb-8514-dfea37ef2989
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Formulier redirect'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 118390e6-21ff-4aa3-91d5-57a9bd5b09aa
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9920af39-3488-4662-9436-c2261c9f52a0
+        userCondition: null
+handle: form2
+hasTitleField: false
+icon: null
+name: Formulier
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: c91be877-d7df-4929-aac0-8bb06dfaf2b2 # Project
 handle: projects
 name: Projecten
 previewTargets:

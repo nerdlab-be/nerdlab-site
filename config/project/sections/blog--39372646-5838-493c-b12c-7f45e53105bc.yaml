@@ -1,5 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
+entryTypes:
+  -
+    uid: 47e62734-e65b-4b2b-b3ab-250de96a7542 # Blog
 handle: blog
 name: Blog
 previewTargets:

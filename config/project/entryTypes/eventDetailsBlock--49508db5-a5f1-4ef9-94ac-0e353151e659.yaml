@@ -1,0 +1,149 @@
+color: null
+fieldLayouts:
+  b6416bbf-dfcb-45a4-ae77-6dce51683bec:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: fc158264-c974-47a1-acd1-a8b793a41a92
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: 'Start datum'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e3b68eb5-17f3-4ad6-b91d-b60c3fa38b74
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 3decf3e5-2aa7-4808-a490-c00ae2e5f578
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Eind datum (optioneel)'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e36ca32a-6f1a-4dd5-8b93-b0e057d64fda
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 2ce1ac45-be0e-4f0c-9970-689e45c0c355
+            handle: hourStart
+            includeInCards: false
+            instructions: null
+            label: 'Start uur (optioneel)'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5beb145e-d1c4-4f4d-8ecf-cbdbebc1d5eb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 036d4e49-1e65-4ef4-a9cc-871c55b8b6d8
+            handle: hourEnd
+            includeInCards: false
+            instructions: null
+            label: 'Eind uur (optioneel)'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e43ea638-f99d-4494-8233-fb3f681b64c7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: f0a1c75c-9d92-4144-9079-acc5a5abbe61
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Locatie
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ba71fb4d-d78b-464d-a24b-6a2cd5b91a88
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: fc2a9eae-f05c-42ed-8aac-314bcbd8792b
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Status
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b298474f-3ec5-497d-92f8-125085cf1488
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 7f8072df-0fa0-4aab-bdc3-86b996e32aeb
+            handle: price
+            includeInCards: false
+            instructions: null
+            label: Prijs
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 12fd2087-4484-48d2-8f40-b2be0a9de5a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: e3bf3d16-0ba4-468d-a0d1-78798a356323
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Meer info'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a7835282-eef9-4acf-9501-37821817488c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5d8dfe9d-2a6b-4bc5-a59c-593a4974cdad
+        userCondition: null
+handle: eventDetailsBlock
+hasTitleField: false
+icon: null
+name: 'Event details Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -73,7 +73,6 @@ fieldLayouts:
 handle: locations
 hasTitleField: true
 name: Locations
-section: 3cf941b3-e314-4366-9581-8c36d98f380f # Locations
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

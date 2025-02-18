@@ -1,0 +1,29 @@
+columnSuffix: null
+handle: buttonLinkInternal
+instructions: null
+name: 'Intro - Button - Button link (internal)'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:5f28ba52-f8f3-416b-b8e5-243ae60c55e7' # Nieuws
+    - singles
+    - 'section:377903e1-8825-44e4-8412-dda3987b1bb6' # Events
+    - 'section:f13b291a-d9b5-4468-a039-a5770d399c3c' # Pagina's
+    - 'section:313d9952-cc7f-4b6d-a325-5caf4eaa435e'
+    - 'section:57e1c6a9-b04e-4d03-a86b-3132cf1f1341' # Projecten
+    - 'section:4d79a10b-67b0-4005-9c56-634a4616b073' # Tickets
+    - 'section:f19a1506-8abc-42c9-8798-196a5ff2c3ca'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

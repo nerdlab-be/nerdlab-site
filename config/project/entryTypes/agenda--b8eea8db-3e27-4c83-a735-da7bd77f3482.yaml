@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3d575ec1-a1f4-4620-86d5-9ede9c068975
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 80386b50-e549-46df-9c71-a582c30832aa
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5f238ce9-df45-46ab-914b-2edf21ad8d07
             warning: null
             width: 100
           -
@@ -51,6 +54,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 93807c96-263e-4312-93a0-fc4320b763ac
             warning: null
             width: 100
           -
@@ -60,10 +64,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 20bfeb3d-6341-408c-93af-4f3f3c74a894
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 89dd4a01-3bb4-41f5-9771-aeba62d4a932
       -
         elements:
           -
@@ -73,14 +79,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 1cad21e5-5bb2-43f4-b5dd-d5c19d99bb36
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: 0c051a73-f4ac-4ed8-9835-06e370dc310b
 handle: agenda
 hasTitleField: true
 name: Agenda
-section: 9352cb54-fd58-44f5-a355-ff5403eb870b # Agenda
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

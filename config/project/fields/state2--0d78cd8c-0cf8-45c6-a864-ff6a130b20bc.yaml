@@ -1,0 +1,77 @@
+columnSuffix: null
+handle: state2
+instructions: null
+name: 'Project details - Status'
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Openbaar
+        -
+          - value
+          - Openbaar
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Inschrijven
+        -
+          - value
+          - Inschrijven
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Betalend
+        -
+          - value
+          - Betalend
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Gratis
+        -
+          - value
+          - Gratis
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Volzet
+        -
+          - value
+          - Volzet
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - Uitverkocht
+        -
+          - value
+          - Uitverkocht
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

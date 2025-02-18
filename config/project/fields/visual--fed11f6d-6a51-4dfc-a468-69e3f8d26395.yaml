@@ -1,0 +1,36 @@
+columnSuffix: null
+handle: visual
+instructions: null
+name: 'Pagina intro - Visual'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 7f0fabcf-9c9f-4119-bd25-9bbebee47a8d
+        -
+          - handle
+          - image
+    -
+      __assoc__:
+        -
+          - uid
+          - 4b8d964f-7938-4e7e-b56f-40ea160d88de
+        -
+          - handle
+          - video
+  includeTableView: false
+  maxEntries: 1
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

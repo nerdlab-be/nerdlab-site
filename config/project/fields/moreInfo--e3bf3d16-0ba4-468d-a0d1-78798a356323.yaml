@@ -1,0 +1,36 @@
+columnSuffix: null
+handle: moreInfo
+instructions: null
+name: 'Event details - Meer info'
+searchable: true
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 11063832-7d3e-4acd-97e1-d71edece221b
+        -
+          - handle
+          - internalLink
+    -
+      __assoc__:
+        -
+          - uid
+          - 00bf0c3e-5585-4759-a828-aa1a751cd5a4
+        -
+          - handle
+          - externalLink
+  includeTableView: false
+  maxEntries: 1
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

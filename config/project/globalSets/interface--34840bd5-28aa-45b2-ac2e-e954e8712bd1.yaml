@@ -10,10 +10,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 5b91f7f3-ee74-4d6d-be02-2532b880fc1f
             warning: null
             width: 100
         name: Header
         sortOrder: 1
+        uid: 75e2fd2d-28c1-488d-84aa-922ba6ba30ac
       -
         elements:
           -
@@ -23,6 +25,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 6ccc07b8-ea6c-4dd2-bbaf-5cf0aff93371
             warning: null
             width: 100
           -
@@ -32,6 +35,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 33cbd1bf-a0af-44c0-abb1-beb1990208c9
             warning: null
             width: 100
           -
@@ -41,6 +45,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 89106f9c-356f-448a-ae09-e1dbbe77beed
             warning: null
             width: 100
           -
@@ -50,6 +55,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 742f429b-4a37-4044-858b-98032a0ebe2c
             warning: null
             width: 100
           -
@@ -59,6 +65,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 777bfa9e-4618-4271-bd5b-69fbaab17cb7
             warning: null
             width: 100
           -
@@ -68,6 +75,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 94e3004b-0f2e-47ed-a049-dc385afe8326
             warning: null
             width: 100
           -
@@ -77,10 +85,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: a226840d-838a-490e-bc7f-d7136f694342
             warning: null
             width: 100
         name: Footer
         sortOrder: 2
+        uid: 72149ff6-9f21-4011-88d7-9f4e32d17c87
 handle: interface
 name: Interface
 sortOrder: 1

@@ -1,0 +1,149 @@
+color: null
+fieldLayouts:
+  1955abc9-0f9e-47a9-b5b5-942eb845145c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: c22bc76f-b526-4910-adf4-c9474b7c3762
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: 'Optie 1 titel'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3fda199c-bbf2-4fcb-9146-dfa9f98ce870
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 8fb5f2d5-b0b6-4c3a-94c2-58da6cf63080
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Optie 1 paragraaf'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 410e3d5b-f237-4188-a885-02f55271a11e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 0c029ee9-42dd-4424-97e3-3661da3740f3
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Optie 2 titel'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6809083-a2e3-4102-984b-be237964af14
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 87dc7885-761d-476d-b7eb-f9ada85ce3ed
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Optie 2 paragraaf'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 978700af-7181-41fd-8a9a-e7edf35fbe78
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 36dc3a65-f6ef-4728-a13f-8e10bf14e65b
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Optie 3 titel'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e846eb36-6927-4cbf-b153-7fcbca5e6f49
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 58074cdc-5a2d-4350-9f13-0657fd186cea
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Optie 3 paragraaf'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b07a50c5-befa-4df8-ba5d-2aa43f12a731
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: cc0d4023-833d-469c-b7c7-ef6d647c5a89
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Button titel'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3aa99e40-9198-439a-a9e1-22c598d43b2b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 14c8daa6-3034-4524-bbf0-ac7342e5f4e0
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Button URL'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 970ea163-a641-4049-9a61-b3300d4c10ef
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b9329fc2-c622-4b45-9854-55932feeb24a
+        userCondition: null
+handle: options
+hasTitleField: false
+icon: null
+name: Opties
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

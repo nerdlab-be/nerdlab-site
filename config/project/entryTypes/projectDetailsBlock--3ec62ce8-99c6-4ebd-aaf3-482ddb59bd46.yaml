@@ -1,0 +1,117 @@
+color: null
+fieldLayouts:
+  4321535d-8dfb-46f9-96a9-88a3d0eb3230:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: c9512d5a-5f12-4d3b-8902-b533f35676e5
+            handle: dateStart
+            includeInCards: true
+            instructions: null
+            label: 'Start datum'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a1b9fc1b-b4d5-4de4-8a2c-740fc838c465
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 5ce2cf94-c00c-4919-9f13-81a4d46b5033
+            handle: dateEnd
+            includeInCards: false
+            instructions: null
+            label: 'Eind datum'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4961c0c4-6986-4f02-8a3b-f3a24f64f3d4
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 84a8cfcb-704b-452f-98bb-4ef54d98555b
+            handle: location
+            includeInCards: false
+            instructions: null
+            label: Locatie
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 97568af2-2b1e-46ed-bc51-6988afee2ed0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 0d78cd8c-0cf8-45c6-a864-ff6a130b20bc
+            handle: state
+            includeInCards: false
+            instructions: null
+            label: Status
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e9f364dd-cb05-44c5-9801-8dfd40925306
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 43d38005-2ba0-4df4-a83a-8f5c5897073c
+            handle: price
+            includeInCards: false
+            instructions: null
+            label: Prijs
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3c136eb3-c137-4518-a97d-127a5052a3fb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 4d3b70ce-440b-4190-bfd2-0a900864a3ee
+            handle: moreInfo
+            includeInCards: false
+            instructions: null
+            label: 'Meer info'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cdaaa9f7-8383-415a-b7e4-59caf878c404
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: d72512ab-d196-4c85-b231-ca4baaad2528
+        userCondition: null
+handle: projectDetailsBlock
+hasTitleField: false
+icon: null
+name: 'Project details Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

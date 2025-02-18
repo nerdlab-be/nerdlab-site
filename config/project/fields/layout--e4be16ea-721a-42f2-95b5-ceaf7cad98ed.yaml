@@ -1,0 +1,30 @@
+columnSuffix: null
+handle: layout
+instructions: null
+name: 'Blog detail - Tekst + afbeelding - Layout'
+searchable: true
+settings:
+  default: left
+  options:
+    __assoc__:
+      -
+        - left
+        - '1'
+      -
+        - center
+        - ''
+      -
+        - right
+        - '1'
+      -
+        - full
+        - ''
+      -
+        - drop-left
+        - ''
+      -
+        - drop-right
+        - ''
+translationKeyFormat: null
+translationMethod: none
+type: rias\positionfieldtype\fields\Position

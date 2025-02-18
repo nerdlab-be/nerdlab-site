@@ -73,7 +73,6 @@ fieldLayouts:
 handle: faqMutation
 hasTitleField: false
 name: FAQ
-section: 54778e6d-aa8b-4f0d-97fb-5679e552f1c0 # FAQ
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

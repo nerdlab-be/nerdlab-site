@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: button2
+instructions: null
+name: 'Call to action - 1-malige blok - Button'
+searchable: true
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    - 93f4c3f6-334f-4683-9f81-6bb2e6309d86 # Call to action - 1-malige blok - Button Block
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: verbb\supertable\fields\SuperTableField

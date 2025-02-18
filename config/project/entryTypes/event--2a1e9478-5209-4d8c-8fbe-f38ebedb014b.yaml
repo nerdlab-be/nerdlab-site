@@ -24,6 +24,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 5e651774-bb21-495f-953a-19eeafad1050
             warning: null
             width: 100
           -
@@ -33,6 +34,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: bb8107b8-f13b-41bb-ae26-ccb37fe761f9
             warning: null
             width: 100
           -
@@ -42,6 +44,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 51478c90-0cbb-43c3-bb8b-5d83f6b37634
             warning: null
             width: 100
           -
@@ -51,6 +54,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 8d74edf5-dbcd-4610-9948-529c91ed7e08
             warning: null
             width: 100
           -
@@ -60,6 +64,7 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: e0ee6cee-dd60-441e-b20e-67f1247e6a15
             warning: null
             width: 100
           -
@@ -69,10 +74,12 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 3a7a74d6-967b-4f61-9bbc-52cb0395a3f6
             warning: null
             width: 100
         name: Content
         sortOrder: 1
+        uid: 42d7a0bc-a474-491d-995a-7e946073bced
       -
         elements:
           -
@@ -82,14 +89,15 @@ fieldLayouts:
             required: 0
             tip: null
             type: craft\fieldlayoutelements\CustomField
+            uid: 2a574028-4a79-477a-9bcc-62d16b94317f
             warning: null
             width: 100
         name: Meta
         sortOrder: 2
+        uid: aba150c1-3b20-4bb3-a283-1c8ebbf238f7
 handle: event
 hasTitleField: true
 name: Event
-section: 377903e1-8825-44e4-8412-dda3987b1bb6 # Events
 sortOrder: 1
 titleFormat: null
 titleTranslationKeyFormat: null

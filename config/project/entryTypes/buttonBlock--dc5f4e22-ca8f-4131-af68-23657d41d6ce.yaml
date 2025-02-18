@@ -1,0 +1,69 @@
+color: null
+fieldLayouts:
+  5cb8c6b9-0b31-40d0-8bfc-21d505e12589:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 07b689e1-9003-4bad-8aee-5766d2f9b49c
+            handle: buttonText
+            includeInCards: true
+            instructions: null
+            label: 'Button tekst'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a565b907-afc8-4ac2-8661-65655691baf6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: 32b53573-73c8-4497-ab72-a256bb71c4ee
+            handle: buttonLinkInternal
+            includeInCards: false
+            instructions: null
+            label: 'Button link (internal)'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c59b1e6-498c-4149-be81-9e82c03dce48
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-18T15:42:39+00:00'
+            elementCondition: null
+            fieldUid: eccb3d55-83b2-4eab-a6e2-bce37cf4b805
+            handle: buttonLinkExternal
+            includeInCards: false
+            instructions: null
+            label: 'Button link (external)'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2e8f3fce-7c62-46a7-a198-415c7f853735
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: bc2d38b7-5716-462d-b601-c8ec13a8c1b5
+        userCondition: null
+handle: buttonBlock
+hasTitleField: false
+icon: null
+name: 'Button Block'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

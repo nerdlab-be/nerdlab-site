@@ -1,16 +1,24 @@
 columnSuffix: null
 contentColumnType: string
-fieldGroup: 6c822df8-0b1f-43d3-b439-c0dc5a7c8edc # Custom
 handle: subscribe
 instructions: ''
 name: 'Schrijf je in'
 searchable: true
 settings:
-  contentTable: '{{%matrixcontent_subscribe}}'
-  maxBlocks: '4'
-  minBlocks: '3'
+  entryTypes:
+    -
+      uid: 0700beea-b582-432b-bac8-0aae1ae58b0b
+    -
+      uid: f7198d23-385c-48ee-bc98-b615cd902940
+    -
+      uid: 892f0d24-4b79-4f5a-be7e-e73495ea2643
+    -
+      uid: 122dc27e-51fe-4bfb-94b4-4db90e898019
+  maxEntries: '4'
+  minEntries: '3'
   propagationKeyFormat: null
   propagationMethod: all
+  viewMode: blocks
 translationKeyFormat: null
 translationMethod: site
 type: craft\fields\Matrix
