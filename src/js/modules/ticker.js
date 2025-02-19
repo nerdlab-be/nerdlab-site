@@ -1,24 +1,25 @@
-if ($('.js-ticker').length) {
-  function tickerLoop(){
-    tickerWidth = document.querySelector(".js-ticker").offsetWidth;
+if (document.querySelector('.js-ticker')) {
+  let tickerWidth;
+  let counter = 0;
+
+  function tickerLoop() {
+    tickerWidth = document.querySelector('.js-ticker').offsetWidth;
     counter = 0;
   }
 
   tickerLoop();
 
-  window.onresize = function(event) {
-    tickerLoop();
-  };
+  window.onresize = tickerLoop;
 
-  var distance = 1;
+  const distance = 1;
 
-  setInterval(function(){
+  setInterval(() => {
     if (counter >= (tickerWidth/2)) {
       counter = 0;
-    } else{
+    } else {
       counter += distance;
     }
-    var huh = "translate(-" + counter + "px, -50%)";
-    $(".js-ticker").css('transform', huh);
+    const transform = `translate(-${counter}px, -50%)`;
+    document.querySelector('.js-ticker').style.transform = transform;
   }, 30);
 }

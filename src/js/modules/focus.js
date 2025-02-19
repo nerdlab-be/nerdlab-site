@@ -2,18 +2,25 @@
    #FOCUS
    ====================== */
 
-var skipLink = $('.js-skip');
+const skipLink = document.querySelector('.js-skip');
 
-function getFocus() {
-  var skipTo = "#"+this.href.split('#')[1];
+function getFocus(event) {
+  event.preventDefault();
+  const skipTo = '#' + this.href.split('#')[1];
+  const targetElement = document.querySelector(skipTo);
 
   // Setting 'tabindex' to -1 takes an element out of normal
   // tab flow but allows it to be focused via javascript
-  $(skipTo).attr('tabindex', -1).on('blur focusout', function () {
-    // when focus leaves this element,
-    // remove the tabindex attribute
-    $(this).removeAttr('tabindex');
-  }).focus(); // focus on the content container
+  targetElement.setAttribute('tabindex', -1);
+  
+  targetElement.addEventListener('blur', removeTabIndex);
+  targetElement.addEventListener('focusout', removeTabIndex);
+  
+  targetElement.focus(); // focus on the content container
 }
 
-skipLink.on('click', getFocus);
+function removeTabIndex() {
+  this.removeAttribute('tabindex');
+}
+
+skipLink.addEventListener('click', getFocus);

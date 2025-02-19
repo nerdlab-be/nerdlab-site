@@ -3,22 +3,27 @@
    ====================== */
 
 function expandLink() {
-  var linkExpand = $('.js-link-expand');
-  var down = void 0;
-  var up = void 0;
+  const linkExpands = document.querySelectorAll('.js-link-expand');
+  let down;
+  let up;
 
-  $('.js-link-expand').css( 'cursor', 'pointer' );
-
-  linkExpand.on('mousedown', function (e) {
-    return down = +new Date();
+  // Set cursor style for all expandable links
+  linkExpands.forEach(link => {
+    link.style.cursor = 'pointer';
   });
 
-  linkExpand.on('mouseup', function (e) {
-    up = +new Date();
-    if (up - down < 200) {
-      var link = $(this).closest('.js-link-expand-holder').find('.js-link-expand__target');
-      link[0].click();
-    }
+  linkExpands.forEach(link => {
+    link.addEventListener('mousedown', (e) => {
+      down = +new Date();
+    });
+
+    link.addEventListener('mouseup', (e) => {
+      up = +new Date();
+      if (up - down < 200) {
+        const link = e.target.closest('.js-link-expand-holder').querySelector('.js-link-expand__target');
+        link.click();
+      }
+    });
   });
 }
 

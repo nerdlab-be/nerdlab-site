@@ -2,6 +2,11 @@
    #EDITOR
    ================================== */
 
+
+   body{
+    overflow-x: hidden;
+   }
+
 .s-editor {
   h1,
   h2,
@@ -73,7 +78,7 @@
   .s-theme-secondary & a:not(.c-btn) {
     &,
     &:visited {
-      color: $color-tertiary;
+      color: $color-primary;
     }
 
     &:hover,

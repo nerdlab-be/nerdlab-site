@@ -1,0 +1,30 @@
+.u-flexbox{
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	gap: 40px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.u-flexbox--row{
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+	// flex-direction: row-reverse;
+}
+
+.u-flexbox--column{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	// flex-direction: column-reverse;
+}
+
+@media (max-width: 768px) {
+	.u-flexbox {
+		flex-direction: column;
+	}
+}

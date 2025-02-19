@@ -19,7 +19,7 @@
   {% hook "seo" %}
 
   {# CSS #}
-  {{ craft.vite.script("src/js/mutation.js") }}
+  {{ craft.vite.script("src/js/mutation.js", false) }}
 
   {# Favicon #}
   <link rel="shortcut icon" type="image/ico" href="{{ siteUrl }}favicon.ico"/>

@@ -1,10 +1,6 @@
 // Setup SCSS
 import "../scss/nerdlab.scss";
 
-// Import jQuery and make it globally available
-import "../_vendor/jquery/dist/jquery.min.js";
-window.$ = window.jQuery = $;
-
 // Plugins
 import "../_vendor/jquery/dist/jquery.min.js";
 import "../_vendor/svgxuse/svgxuse.min.js";

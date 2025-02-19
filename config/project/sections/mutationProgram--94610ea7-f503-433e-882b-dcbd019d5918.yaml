@@ -4,6 +4,7 @@ entryTypes:
   -
     uid: 523cc977-c3e6-4508-9d3a-137bb8af2e4f # Programma
 handle: mutationProgram
+maxAuthors: 1
 name: Programma
 previewTargets:
   -
@@ -22,11 +23,11 @@ siteSettings:
   8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
     enabledByDefault: true
     hasUrls: true
-    template: site-mutation\_program.twig
-    uriFormat: program
+    template: site-mutation/_program.twig
+    uriFormat: programma
   52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
     enabledByDefault: true
     hasUrls: true
-    template: site-mutation\en\_program.twig
+    template: site-mutation/en/_program.twig
     uriFormat: program
 type: single

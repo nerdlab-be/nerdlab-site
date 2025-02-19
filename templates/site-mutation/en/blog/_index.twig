@@ -1,0 +1,28 @@
+{#
+ # The blog detail template
+ # ------------------------
+-#}
+
+{% extends "_layouts/mutation" %}
+
+{% block main %}
+{% include "_globals/globals.navigation" %}
+
+<div class="o-row-large c-drawing s-theme-tertiary s-theme-noise">
+  <span class="c-drawing__background">
+<span class="c-drawing c-drawing__left-bottom">
+    <img src="/assets/images/png/bacteria.png" alt="" class=".delay-3">
+  </span>
+  <span class="c-drawing c-drawing__right-top">
+    <img src="/assets/images/png/triangle.png" alt="" class=".delay-1">
+  </span>   </span>
+  <div class="o-wrapper o-wrapper--huge">
+    {# Intro #}
+    <h1 class="c-title u-alpha">{{ entry.title }}</h1>
+
+    <div class="u-margin-top-large u-margin-top-huge@medium">
+    {% include '_components/components.blog-overview-mutation' %}
+    </div>
+  </div>
+</div>
+{% endblock %}

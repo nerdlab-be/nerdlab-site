@@ -5,7 +5,7 @@
    .c-background {
     overflow: hidden;
     position: relative;
-    background-color: $color-neutral;
+    background-color: $black;
     padding-bottom: $unit-large + $unit;
 
     @include mq(medium) {

@@ -44,8 +44,8 @@ permissions:
   - 'deletepeerassets:32eb9389-8fe9-414c-a738-94e5d7dc1975' # Video
   - 'editpeerimages:32eb9389-8fe9-414c-a738-94e5d7dc1975' # Video
   - 'createfolders:32eb9389-8fe9-414c-a738-94e5d7dc1975' # Video
-  - 'viewentries:2fc9ff26-41d6-4b2f-98cc-ce0881deb723' # Programma
-  - 'saveentries:2fc9ff26-41d6-4b2f-98cc-ce0881deb723' # Programma
+  - 'viewentries:2fc9ff26-41d6-4b2f-98cc-ce0881deb723'
+  - 'saveentries:2fc9ff26-41d6-4b2f-98cc-ce0881deb723'
   - 'viewentries:f9e0df6c-e400-4efc-b07a-685541c60467' # Home
   - 'saveentries:f9e0df6c-e400-4efc-b07a-685541c60467' # Home
   - 'viewentries:4d79a10b-67b0-4005-9c56-634a4616b073' # Tickets

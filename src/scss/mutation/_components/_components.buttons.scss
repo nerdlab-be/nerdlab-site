@@ -17,12 +17,18 @@
  */
 
 .c-btn {
-  display: inline-block; /* [1] */
-  vertical-align: middle; /* [2] */
-  font: inherit; /* [3] */
-  text-align: center; /* [4] */
-  margin: 0; /* [4] */
-  cursor: pointer; /* [5] */
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  font: inherit;
+  /* [3] */
+  text-align: center;
+  /* [4] */
+  margin: 0;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
   padding: $unit-small $unit $unit-small + 1px;
   transition: $global-transition;
   border-radius: $unit-large;
@@ -43,7 +49,8 @@
   &:hover,
   &:active,
   &:focus {
-    text-decoration: none; /* [4] */
+    text-decoration: none;
+    /* [4] */
     color: $white;
   }
 
@@ -143,5 +150,23 @@ $btn-ghost-border-width: 2px !default;
       border-color: $color-secondary;
       background-color: $color-secondary;
     }
+  }
+}
+
+.language-button {
+  position: fixed;
+  margin: 50px;
+  // cursor: pointer;
+  // @include font-size($h6);
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 10px 50px;
+  @include mq(medium) {
+    top: 0;
+    bottom: unset;
+    z-index: 100;
+    // font-size: inherit;
+    padding: 15px 100px 10px;
   }
 }

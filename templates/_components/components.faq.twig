@@ -1,0 +1,6 @@
+<div class="faq-questions loading">
+      {% set faqElements = craft.entries.section('faqQuestions').all() %}
+      {% for item in faqElements %}
+            {% include '_components/components.faq-entry.twig' %}
+      {% endfor %}
+</div>

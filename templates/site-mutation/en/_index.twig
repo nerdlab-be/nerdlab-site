@@ -1,0 +1,25 @@
+{#
+ # The homepage template
+ # ------------------------
+-#}
+
+{% extends "_layouts/mutation" %}
+
+{% block main %}
+{% include "_globals/globals.hero" %}
+{% include "_globals/globals.navigation" %}
+{% include "_globals/globals.intro" %}
+
+<a href="{{ siteUrl('..') }}" class="c-pill__shape language-button">NL</a>
+
+{% include "_globals/globals.news" %}
+{% include "_globals/globals.open-call" %}
+{% include "_globals/globals.locations" %}
+
+{# {% include "_globals/globals.tickets" %} #}
+{# {% include "_globals/globals.modal" %}
+{% include "_globals/globals.scripts" %} #}
+
+
+{% endblock %}
+

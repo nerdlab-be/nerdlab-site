@@ -3,20 +3,20 @@
  # ------------------------
 -#}
 
-{% extends "_layouts/mutation" %}
+{% extends '_layouts/mutation' %}
 
 {% block main %}
-<div class="o-row-large c-drawing s-theme-tertiary s-theme-noise">
-  <span class="c-drawing__background">
-    <img src="/assets/images/svg/mutation-backdrop-light.svg" alt="">
-  </span>
-  <div class="o-wrapper o-wrapper--huge u-alpha">
-    {% include '_components/components.blog-detail-mutation' %}
+  <div class="o-row-large c-drawing s-theme-tertiary s-theme-noise u-pos-rel">
+    <span class="c-drawing__background">
+      <span class="c-drawing c-drawing__left-bottom c-drawing-big"><img src="/assets/images/png/triangle.png" alt="Decoration - Triangle" class=".delay-1" /></span>
+      <span class="c-drawing c-drawing__right-top  c-drawing-big"><img src="/assets/images/png/Pause-and-play-tardigrade.png" alt="Decoration - Tardigrade" class=".delay-1" /></span>
+    </span>
+    <div class="o-wrapper o-wrapper--huge u-alpha">
+      {% include '_components/components.blog-detail-mutation' %}
 
-    <div class="u-margin-top-large u-margin-top-huge@medium">
-      {% include '_components/components.blog-related-mutation' %}
+      <div class="u-margin-top-large u-margin-top-huge@medium">
+        {% include '_components/components.blog-related-mutation' %}
+      </div>
     </div>
   </div>
-</div>
 {% endblock %}
-

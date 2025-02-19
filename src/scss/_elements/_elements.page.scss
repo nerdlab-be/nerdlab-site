@@ -16,8 +16,8 @@
 
  html {
   font-family: $font-primary;
-  font-size: ($inuit-global-font-size / 16px) * 1em; /* [1] */
-  line-height: $inuit-global-line-height / $inuit-global-font-size; /* [1] */
+  font-size: calc($inuit-global-font-size / 16px) * 1em; /* [1] */
+  line-height: calc($inuit-global-line-height / $inuit-global-font-size); /* [1] */
   overflow-y: scroll; /* [2] */
   min-height: 100%; /* [3] */
   // background-color: tint($color-tertiary-xlight,70);

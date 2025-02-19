@@ -1,0 +1,38 @@
+{# program #}
+<div class="o-row-large s-theme-tertiary s-theme-noise u-pos-rel">
+  <span class="c-drawing c-drawing__left-bottom c-drawing-big">
+    <img src="/assets/images/png/Wild-and-wonderful-sea-slug.png" alt="Decoration - Sea Slug"  class=".delay-3">
+  </span>
+  <span class="c-drawing c-drawing__right-center c-drawing-big">
+    <img src="/assets/images/png/Threads-and-textile-physarum.png" alt="Decoration - Physarum" class=".delay-1">
+  </span> 
+  <div class="c-marquee c-marquee--tertiary" aria-hidden="true">
+    <div class="c-marquee__content" id="program">
+      <span>Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations Locations</span>
+    </div>
+  </div>
+  <div class="o-wrapper o-wrapper--huge u-flexbox">
+    {# <h2 class="c-mutation-title u-text-center">Updates</h2> #}
+    <ul class="o-list-bare u-flexbox u-spacer">
+      <section class="locations flex flex-row" id="locations">
+        {% for entry in craft.entries.section('locations').all() %}
+          {% if entry.eventURL %}
+            <a href="{{ entry.eventURL }}" target="_blank" class="locations__card {{ entry.slug }}" style="background-image: url('{{ entry.image.one().getUrl() }}');"> 
+                <div class="overlay">
+                  <h3>{{ entry.title }}</h3>
+                  <p>{{ entry.shortDescription }}</p>
+              </div>
+            </a>
+          {% else %}
+            <div class="locations__card {{ entry.slug }}" style="background-image: url('{{ entry.image.one().getUrl() }}');">
+              <div class="overlay">
+                <h3>{{ entry.title }}</h3>
+                <p>{{ entry.shortDescription }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </section>
+    </ul>
+  </div>
+</div>

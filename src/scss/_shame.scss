@@ -481,7 +481,7 @@
   position: relative;
   top: 0;
   right: 0;
-  background-color: tint($color-secondary,80);
+  background-color: tint($color-secondary,80%);
   margin-left: $unit;
   width: calc(100% - #{$unit-large});
   margin-bottom: -$unit;

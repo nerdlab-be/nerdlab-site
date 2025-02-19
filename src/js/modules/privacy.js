@@ -1,26 +1,39 @@
-$(document).ready(function(){
-  var privacy = $('.js-privacy');
-  var privacyButton = $('.js-privacy__button');
+// Wait for DOM to be ready
+function initPrivacy() {
+  const privacy = document.querySelector('.js-privacy');
+  const privacyButton = document.querySelector('.js-privacy__button');
+  
+  if (!privacy || !privacyButton) {
+    console.error('Privacy elements not found');
+    return;
+  }
 
   function writeCookie(key, value, days) {
-    var date = new Date();
-
+    const date = new Date();
+    
     // Default at 365 days.
     days = days || 365;
 
     // Get unix milliseconds at current time plus number of days
     date.setTime(+ date + (days * 86400000)); //24 * 60 * 60 * 1000
 
-    window.document.cookie = key + "=" + value + "; expires=" + date.toGMTString() + "; path=/";
+    document.cookie = `${key}=${value}; expires=${date.toGMTString()}; path=/`;
 
     return value;
-  };
+  }
 
   function setPrivacy(e) {
     privacyButton.blur();
-    privacy.toggleClass('u-hidden');
-    writeCookie('PrivacyNotice','NerdlabCookieNotice');
+    privacy.classList.toggle('u-hidden');
+    writeCookie('PrivacyNotice', 'NerdlabCookieNotice');
   }
 
-  privacyButton.on('click', setPrivacy);
-});
+  privacyButton.addEventListener('click', setPrivacy);
+}
+
+// Initialize when DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPrivacy);
+} else {
+  initPrivacy();
+}

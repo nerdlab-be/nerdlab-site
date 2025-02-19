@@ -3,9 +3,6 @@
  * Craft web bootstrap file
  */
 
-  // Multisite
-define('CRAFT_SITE','mutationnl');
-
 // Define path constants
 define('CRAFT_BASE_PATH', dirname(__DIR__, 2));
 define('CRAFT_VENDOR_PATH', CRAFT_BASE_PATH . '/vendor');
@@ -15,8 +12,8 @@ require_once CRAFT_VENDOR_PATH . '/autoload.php';
 
 // Load dotenv?
 if (class_exists('Dotenv\Dotenv') && file_exists(CRAFT_BASE_PATH . '/.env')) {
-  $dotenv = Dotenv\Dotenv::createImmutable(CRAFT_BASE_PATH);
-  $dotenv->load();
+    $dotenv = Dotenv\Dotenv::createImmutable(CRAFT_BASE_PATH);
+    $dotenv->load();
 }
 
 // Define additional PHP constants

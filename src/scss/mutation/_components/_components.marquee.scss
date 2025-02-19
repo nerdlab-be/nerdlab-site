@@ -1,0 +1,153 @@
+/* Hero Marquee Styles */
+.c-hero__marquee {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  mix-blend-mode: difference;
+}
+
+/* General Marquee Styles */
+/* Marquee Styles */
+.c-marquee__marquee,
+.c-marquee__content {
+  font-family: $inuit-font-family-tertiary;
+  font-weight: normal;
+
+  background: transparent;
+  position: relative;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  text-transform: uppercase;
+  font-style: oblique -40deg;
+}
+
+.c-marquee__marquee {
+  font-size: 200vh;
+  height: 200vh;
+  top: -100vh;
+
+  @include mq(large) {
+    height: 300vh;
+    font-size: 300vh;
+    top: -175vh;
+  }
+}
+
+/* Specific Marquee Styles */
+.c-marquee {
+  @include font-size($h3);
+  font-weight: $bold;
+  transition: all ease 0.3s;
+	position: relative;
+	top: 0;
+	width: 100vw;
+	display: flex;
+  overflow: hidden;
+  user-select: none;
+	flex-wrap: nowrap;
+  // @include mq(medium) {
+  //   height: $unit-huge;
+  //   @include font-size($h1);
+  // }
+}
+
+/* Marquee Content */
+.c-marquee__content {
+  font-size: 10rem;
+	height: 10rem;
+  transition: all ease 0.3s;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: visible;
+  span {
+    transition: all ease 0.3s;
+		height: 10rem;
+		font-size: 10rem;
+		white-space: nowrap;
+		// transform: translateX(10%)
+  }
+
+  @include font-size($h1);
+  font-size: 3em;
+}
+
+/* Marquee Track Animation */
+.c-marquee__track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 128s linear infinite;
+  color: $color-primary;
+}
+
+.c-marquee__content{
+	animation: marquee 32s linear infinite;
+
+ @include mq(small) {
+	animation: marquee_small 64s linear infinite;
+
+	}
+}
+
+.c-marquee--secondary .c-marquee__content, .c-marquee--tertiary .c-marquee__content {
+	animation: marquee 27s linear infinite;
+
+ @include mq(small) {
+	animation: marquee_small 15s linear infinite;
+
+	}
+}
+
+/* Marquee Animation Keyframes */
+@keyframes marquee {
+  from {
+    transform: translateX(-10%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee_small {
+  from {
+    transform: translateX(00%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Marquee Modifiers */
+.c-marquee--primary {
+  color: $color-tertiary;
+  // background-color: $color-primary;
+}
+
+.c-marquee--secondary {
+  color: $color-tertiary;
+  // background-color: $color-secondary;
+}
+
+.c-marquee--tertiary {
+  color: $color-primary;
+  // background-color: $color-tertiary;
+}
+
+/* Responsive Marquee Animation */
+@media screen and (max-width: 600px) {
+  .c-marquee__track {
+    animation: marquee 64s linear infinite;
+  }
+}
+
+/* Secondary Marquee Modifier */
+.c-marquee--secondary {
+  // background-color: $white;
+
+  color: $white;
+}

@@ -75,7 +75,9 @@
 }
 
 .c-h2 {
-  color: $color-neutral-dark;
+	color: $color-neutral-dark;
+	font-weight: $regular;
+
   @include font-size($h4,1.25);
 
   @include mq(medium) {
@@ -149,7 +151,7 @@
 
   .s-mutation & {
     font-weight: $medium;
-    color: $color-tertiary-xdark;
+    color: $color-neutral-light;
   }
 }
 

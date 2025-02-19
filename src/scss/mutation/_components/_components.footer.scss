@@ -23,3 +23,15 @@
     align-items: center;
   }
 }
+
+.c-logos__wrapper{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 40px;
+}
+
+.c-logos__item{
+	flex-shrink: 1;
+	max-width: 100px;
+}	
