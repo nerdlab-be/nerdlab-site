@@ -191,7 +191,7 @@
             {% endif %}
             {% endif %}
             {{ page.title }}
-            {% if page.projectDetails.one() | length() %}
+            {% if page.projectDetails | length() %}
             {% if page.projectDetails.one().dateEnd | length %}
             {{ page.projectDetails.one().dateStart | date('d F Y') | capitalize }}
             {% if page.projectDetails.one().dateEnd  | date('d F Y') == page.projectDetails.one().dateStart  | date('d F Y') %}

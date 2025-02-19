@@ -23,10 +23,13 @@
 
 {% set pageEntries = craft.entries
   .section('events')
+  .with(['eventDetails.one()', 'pageIntro.one().visual.image'])
+  .status('live')
   .all()
-  | supersort('sortAs', "{eventDetails.one().dateStart|date('Y-m-d')}")
+  |sort((a,b) => a.eventDetails.one().dateStart|date('U') <=> b.eventDetails.one().dateStart|date('U'))
 %}
 
+{# Cache the entire agenda section for better performance #}
 {% set homeEvents = "false" %}
 {% for event in pageEntries %}
   {% if event.eventDetails.one().dateStart|date('Ymd') >= now|date('Ymd') or (event.eventDetails.one().dateEnd|length and event.eventDetails.one().dateEnd|date('Ymd') >= now|date('Ymd')) %}

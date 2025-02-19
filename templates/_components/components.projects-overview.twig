@@ -10,8 +10,9 @@
 {# -- Module -- #}
 {% set pageEntries = craft.entries
   .section('projects')
+  .with(['projectDetails.one()', 'pageIntro.one().visual.image'])
   .all()
-  | supersort('sortAs', "{projectDetails.one().dateStart|date('Y-m-d')}")
+  |sort((a,b) => a.projectDetails.one().dateStart|date('U') <=> b.projectDetails.one().dateStart|date('U'))
 %}
 
 {% set soon = "false" %}
@@ -217,8 +218,9 @@
 
 {% set pageEntriesReverse = craft.entries
   .section('projects')
+  .with(['projectDetails.one()', 'pageIntro.one().visual.image'])
   .all()
-  | supersort('rsortAs', "{projectDetails.one().dateStart|date('Y-m-d')}")
+  |sort((a,b) => a.projectDetails.one().dateStart|date('U') <=> b.projectDetails.one().dateStart|date('U'))
 %}
 
 {% set passed = "false" %}

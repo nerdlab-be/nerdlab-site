@@ -21,6 +21,8 @@
 {# -- Module -- #}
 
 {% paginate craft.entries.section('events')
+  .with(['eventDetails.one()', 'pageIntro.one().visual.image'])
+  .status('live')
   .limit(10)
   as paginate, pageEntries
 %}

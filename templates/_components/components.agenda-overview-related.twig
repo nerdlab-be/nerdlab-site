@@ -10,8 +10,10 @@
 {# -- Module -- #}
 {% set pageEntries = craft.entries
   .section('events')
+  .with(['eventDetails.one()', 'pageIntro.one().visual.image'])
+  .status('live')
   .all()
-  | supersort('sortAs', "{eventDetails.one().dateStart|date('Y-m-d')}")
+  |sort((a,b) => a.eventDetails.one().dateStart|date('U') <=> b.eventDetails.one().dateStart|date('U'))
 %}
 
 {% set related = "false" %}
