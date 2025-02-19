@@ -1,10 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
-    <title>back</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
+<svg viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="back" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <polygon id="Fill-2" fill="#000000" points="40.8899852 19.6387504 12.153593 19.6387504 25.3529713 6.4393719 21.9999987 3.11001215 3.11001215 21.9999987 21.9999987 40.8899852 25.3293583 37.5606253 12.153593 24.361247 40.8899852 24.361247"></polygon>
+        <polygon id="Fill-2" points="40.8899852 19.6387504 12.153593 19.6387504 25.3529713 6.4393719 21.9999987 3.11001215 3.11001215 21.9999987 21.9999987 40.8899852 25.3293583 37.5606253 12.153593 24.361247 40.8899852 24.361247"></polygon>
     </g>
 </svg>

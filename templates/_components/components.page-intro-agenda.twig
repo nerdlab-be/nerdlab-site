@@ -8,7 +8,7 @@
 #}
 
 {# -- Module -- #}
-{% if entry.pageIntro | length() %}
+{% if entry.pageIntro.one() | length() %}
 <div class="o-row c-hero">
   <div class="o-wrapper o-wrapper--huge c-hero">
     <div class="o-layout o-layout--flush">
@@ -22,7 +22,7 @@
             </a>
           </p>
           {# Page title #}
-          <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
+          <h1 class="c-page-title">{{ entry.pageIntro.one().pageTitle }}</h1>
           {# Details #}
           <ul class="o-list-bare c-list c-list--agenda c-faded">
             {% if entry.eventDetails.dateStart | length() %}
@@ -84,7 +84,7 @@
             {% endif %}
           </ul>
           <div class="s-editor s-editor--intro">
-            {% set intro = entry.pageIntro.intro.all() %}
+            {% set intro = entry.pageIntro.one().intro.all() %}
             {% for block in intro %}
             {% switch block.type %}
             {% case "paragraph" %}
@@ -113,8 +113,8 @@
       </div>
     </div>
   </div>
-  {% if entry.pageIntro.visual | length() %}
-  {% for block in entry.pageIntro.visual.all() %}
+  {% if entry.pageIntro.one().visual | length() %}
+  {% for block in entry.pageIntro.one().visual.all() %}
   {% switch block.type %}
   {% case "image" %}
     <div class="c-hero__visual">

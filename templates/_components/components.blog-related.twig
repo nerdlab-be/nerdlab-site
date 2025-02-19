@@ -23,10 +23,10 @@
       {% if nextEntry %}
         <li class="o-layout__item u-1/2@small">
           <article class="o-box o-box--flush c-card-link">
-            {% if nextEntry.pageIntro | length() %}
+            {% if nextEntry.pageIntro.one() | length() %}
             <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-              {% if nextEntry.pageIntro.visual | length() %}
-              {% set visual = nextEntry.pageIntro.visual.all() %}
+              {% if nextEntry.pageIntro.one().visual | length() %}
+              {% set visual = nextEntry.pageIntro.one().visual.all() %}
               {% for block in visual %}
               {% switch block.type %}
               {% case "image" %}
@@ -76,8 +76,8 @@
                   </a>
                 </p>
               </div>
-              {% elseif nextEntry.pageIntro | length() %}
-              {% set intro = nextEntry.pageIntro.intro.all() %}
+              {% elseif nextEntry.pageIntro.one() | length() %}
+              {% set intro = nextEntry.pageIntro.one().intro.all() %}
               {% for block in intro %}
               {% switch block.type %}
               {% case "paragraph" %}
@@ -98,10 +98,10 @@
           {% if loop.first %}
             <li class="o-layout__item u-1/2@small">
               <article class="o-box o-box--flush c-card-link">
-                {% if block.pageIntro | length() %}
+                {% if block.pageIntro.one() | length() %}
                 <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-                  {% if block.pageIntro.visual | length() %}
-                  {% set visual = block.pageIntro.visual.all() %}
+                  {% if block.pageIntro.one().visual | length() %}
+                  {% set visual = block.pageIntro.one().visual.all() %}
                   {% for block in visual %}
                   {% switch block.type %}
                   {% case "image" %}
@@ -151,8 +151,8 @@
                       </a>
                     </p>
                   </div>
-                  {% elseif block.pageIntro | length() %}
-                  {% set intro = block.pageIntro.intro.all() %}
+                  {% elseif block.pageIntro.one() | length() %}
+                  {% set intro = block.pageIntro.one().intro.all() %}
                   {% for block in intro %}
                   {% switch block.type %}
                   {% case "paragraph" %}
@@ -175,10 +175,10 @@
       {% if prevEntry %}
         <li class="o-layout__item u-1/2@small">
           <article class="o-box o-box--flush c-card-link">
-            {% if prevEntry.pageIntro | length() %}
+            {% if prevEntry.pageIntro.one() | length() %}
             <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-              {% if prevEntry.pageIntro.visual | length() %}
-              {% set visual = prevEntry.pageIntro.visual.all() %}
+              {% if prevEntry.pageIntro.one().visual | length() %}
+              {% set visual = prevEntry.pageIntro.one().visual.all() %}
               {% for block in visual %}
               {% switch block.type %}
               {% case "image" %}
@@ -228,8 +228,8 @@
                   </a>
                 </p>
               </div>
-              {% elseif prevEntry.pageIntro | length() %}
-              {% set intro = prevEntry.pageIntro.intro.all() %}
+              {% elseif prevEntry.pageIntro.one() | length() %}
+              {% set intro = prevEntry.pageIntro.one().intro.all() %}
               {% for block in intro %}
               {% switch block.type %}
               {% case "paragraph" %}
@@ -251,10 +251,10 @@
         {% if loop.last %}
           <li class="o-layout__item u-1/2@small">
             <article class="o-box o-box--flush c-card-link">
-              {% if block.pageIntro | length() %}
+              {% if block.pageIntro.one() | length() %}
               <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-                {% if block.pageIntro.visual | length() %}
-                {% set visual = block.pageIntro.visual.all() %}
+                {% if block.pageIntro.one().visual | length() %}
+                {% set visual = block.pageIntro.one().visual.all() %}
                 {% for block in visual %}
                 {% switch block.type %}
                 {% case "image" %}
@@ -304,8 +304,8 @@
                     </a>
                   </p>
                 </div>
-                {% elseif block.pageIntro | length() %}
-                {% set intro = block.pageIntro.intro.all() %}
+                {% elseif block.pageIntro.one() | length() %}
+                {% set intro = block.pageIntro.one().intro.all() %}
                 {% for block in intro %}
                 {% switch block.type %}
                 {% case "paragraph" %}

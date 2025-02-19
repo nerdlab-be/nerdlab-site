@@ -8,7 +8,7 @@
 #}
 
 {# -- Module -- #}
-{% if entry.pageIntro | length() %}
+{% if entry.pageIntro.one() | length() %}
 <div class="o-row c-hero">
   <div class="o-wrapper o-wrapper--huge c-hero">
     <div class="o-layout o-layout--flush">
@@ -22,55 +22,55 @@
             </a>
           </p>
           {# Page title #}
-          <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
+          <h1 class="c-page-title">{{ entry.pageIntro.one().pageTitle }}</h1>
           {# Details #}
           <ul class="o-list-bare c-list c-list--agenda c-faded">
-            {% if entry.projectDetails.dateStart | length() %}
+            {% if entry.projectDetails.one().dateStart | length() %}
             <li class="o-list-bare__item c-list__item">
-              {% if entry.projectDetails.dateEnd | length %}
-              🗓️ &nbsp;{{ entry.projectDetails.dateStart | date('d F Y') | capitalize }}
-              {% if entry.projectDetails.dateEnd  | date('d F Y') == entry.projectDetails.dateStart  | date('d F Y') %}
+              {% if entry.projectDetails.one().dateEnd | length %}
+              🗓️ &nbsp;{{ entry.projectDetails.one().dateStart | date('d F Y') | capitalize }}
+              {% if entry.projectDetails.one().dateEnd  | date('d F Y') == entry.projectDetails.one().dateStart  | date('d F Y') %}
               {% else %}
               tot
-              {{ entry.projectDetails.dateEnd | date('d F Y') | capitalize }}
+              {{ entry.projectDetails.one().dateEnd | date('d F Y') | capitalize }}
               {% endif %}
               {% else %}
-              🗓️ &nbsp;{{ entry.projectDetails.dateStart | date('d F Y') | capitalize }}
+              🗓️ &nbsp;{{ entry.projectDetails.one().dateStart | date('d F Y') | capitalize }}
               {% endif %}
             </li>
             {% endif %}
-            {% if entry.projectDetails.hourStart | length() %}
+            {% if entry.projectDetails.one().hourStart | length() %}
             <li class="o-list-bare__item c-list__item">
-              {% if entry.projectDetails.hourEnd | length %}
-              ⏰ &nbsp;{{ entry.projectDetails.hourStart | date('H:i') | capitalize }}
-              {% if entry.projectDetails.hourEnd | date('H:i') == entry.projectDetails.hourStart  | date('H:i') %}
+              {% if entry.projectDetails.one().hourEnd | length %}
+              ⏰ &nbsp;{{ entry.projectDetails.one().hourStart | date('H:i') | capitalize }}
+              {% if entry.projectDetails.one().hourEnd | date('H:i') == entry.projectDetails.one().hourStart  | date('H:i') %}
               {% else %}
               tot
-              {{ entry.projectDetails.hourEnd | date('H:i') | capitalize }}
+              {{ entry.projectDetails.one().hourEnd | date('H:i') | capitalize }}
               {% endif %}
               {% else %}
-              ⏰ &nbsp;{{ entry.projectDetails.hourStart | date('H:i')| capitalize }}
+              ⏰ &nbsp;{{ entry.projectDetails.one().hourStart | date('H:i')| capitalize }}
               {% endif %}
             </li>
             {% endif %}
-            {% if entry.projectDetails.location | length() %}
+            {% if entry.projectDetails.one().location | length() %}
             <li class="o-list-bare__item c-list__item">
-              📍 &nbsp;{{ entry.projectDetails.location }}
+              📍 &nbsp;{{ entry.projectDetails.one().location }}
             </li>
             {% endif %}
-            {% if entry.projectDetails.state | length() %}
+            {% if entry.projectDetails.one().state | length() %}
             <li class="o-list-bare__item c-list__item">
-              🏷️ &nbsp;{{ entry.projectDetails.state | capitalize }}
+              🏷️ &nbsp;{{ entry.projectDetails.one().state | capitalize }}
             </li>
             {% endif %}
-            {% if entry.projectDetails.price | length() %}
+            {% if entry.projectDetails.one().price | length() %}
             <li class="o-list-bare__item c-list__item">
-              💶 &nbsp;{{ entry.projectDetails.price }}
+              💶 &nbsp;{{ entry.projectDetails.one().price }}
             </li>
             {% endif %}
-            {% if entry.projectDetails.moreInfo | length() %}
+            {% if entry.projectDetails.one().moreInfo | length() %}
             <li class="o-list-bare__item c-list__item">
-              {% for block in entry.projectDetails.moreInfo.all() %}
+              {% for block in entry.projectDetails.one().moreInfo.all() %}
                 {% switch block.type %}
                 {% case "internalLink" %}
                   {% for link in block.internalLink.all() %}
@@ -84,7 +84,7 @@
             {% endif %}
           </ul>
           <div class="s-editor s-editor--intro">
-            {% set intro = entry.pageIntro.intro.all() %}
+            {% set intro = entry.pageIntro.one().intro.all() %}
             {% for block in intro %}
             {% switch block.type %}
             {% case "paragraph" %}
@@ -114,8 +114,8 @@
       </div>
     </div>
   </div>
-  {% if entry.pageIntro.visual | length() %}
-  {% for block in entry.pageIntro.visual.all() %}
+  {% if entry.pageIntro.one().visual | length() %}
+  {% for block in entry.pageIntro.one().visual.all() %}
   {% switch block.type %}
   {% case "image" %}
     <div class="c-hero__visual">

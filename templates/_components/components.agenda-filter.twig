@@ -26,7 +26,7 @@
 {% set currentTags = item %}
 
 
-{% if entry.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') %}
+{% if entry.eventDetails.one().dateStart|date('Ymd') >= now|date('Ymd') %}
 {% if currentTags == options.tag %}
 <article class="u-divider-small">
   {% if entry.customDate | length() %}

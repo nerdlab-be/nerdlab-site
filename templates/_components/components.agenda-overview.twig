@@ -22,12 +22,12 @@
 {% set pageEntries = craft.entries
   .section('events')
   .all()
-  | supersort('sortAs', "{eventDetails.dateStart|date('Y-m-d')}")
+  | supersort('sortAs', "{eventDetails.one().dateStart|date('Y-m-d')}")
 %}
 
 {% set soon = "false" %}
 {% for event in pageEntries %}
-  {% if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or (event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd')) %}
+  {% if event.eventDetails.one().dateStart|date('Ymd') >= now|date('Ymd') or (event.eventDetails.one().dateEnd|length and event.eventDetails.one().dateEnd|date('Ymd') >= now|date('Ymd')) %}
     {% set soon = "true" %}
   {% endif %}
 {% endfor %}
@@ -39,13 +39,13 @@
     </div>
     <ul class="o-layout c-card-group">
     {% for event in pageEntries %}
-      {% if event.eventDetails.dateStart|date('Ymd') >= now|date('Ymd') or (event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') >= now|date('Ymd')) %}
+      {% if event.eventDetails.one().dateStart|date('Ymd') >= now|date('Ymd') or (event.eventDetails.one().dateEnd|length and event.eventDetails.one().dateEnd|date('Ymd') >= now|date('Ymd')) %}
       <li class="o-layout__item u-1/2@small u-1/3@medium">
         <article class="o-box o-box--flush c-card-link">
-          {% if event.pageIntro | length() %}
+          {% if event.pageIntro.one() | length() %}
           <div class="o-crop o-crop--3:1 u-margin-bottom c-media-border">
-            {% if event.pageIntro.visual | length() %}
-            {% set visual = event.pageIntro.visual.all() %}
+            {% if event.pageIntro.one().visual | length() %}
+            {% set visual = event.pageIntro.one().visual.all() %}
             {% for block in visual %}
             {% switch block.type %}
             {% case "image" %}
@@ -82,28 +82,28 @@
             </h2>
             {# Details #}
             <ul class="o-list-bare c-list c-list--agenda c-faded">
-              {% if event.eventDetails.dateStart | length() %}
+              {% if event.eventDetails.one().dateStart | length() %}
               <li class="o-list-bare__item c-list__item">
-                {% if event.eventDetails.dateEnd | length %}
-                🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
-                {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
+                {% if event.eventDetails.one().dateEnd | length %}
+                🗓️ &nbsp;{{ event.eventDetails.one().dateStart | date('d F Y') | capitalize }}
+                {% if event.eventDetails.one().dateEnd  | date('d F Y') == event.eventDetails.one().dateStart  | date('d F Y') %}
                 {% else %}
                 tot
-                {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}
+                {{ event.eventDetails.one().dateEnd | date('d F Y') | capitalize }}
                 {% endif %}
                 {% else %}
-                🗓️ &nbsp;{{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
+                🗓️ &nbsp;{{ event.eventDetails.one().dateStart | date('d F Y') | capitalize }}
                 {% endif %}
               </li>
               {% endif %}
-              {% if event.eventDetails.location | length() %}
+              {% if event.eventDetails.one().location | length() %}
               <li class="o-list-bare__item c-list__item">
-                📍 &nbsp;{{ event.eventDetails.location }}
+                📍 &nbsp;{{ event.eventDetails.one().location }}
               </li>
               {% endif %}
-              {% if event.eventDetails.state | length() %}
+              {% if event.eventDetails.one().state | length() %}
               <li class="o-list-bare__item c-list__item">
-                🏷️ &nbsp;{{ event.eventDetails.state | capitalize }}
+                🏷️ &nbsp;{{ event.eventDetails.one().state | capitalize }}
               </li>
               {% endif %}
             </ul>

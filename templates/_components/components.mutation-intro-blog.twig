@@ -21,7 +21,7 @@
       <div class="o-layout">
         <div class="o-layout__item u-4/5@small u-2/3@medium u-1/2@large">
           <h1 class="c-section-title">{{ entry.pageIntro.pageTitle }}</h1>
-          {% set intro = entry.pageIntro.intro.all() %}
+          {% set intro = entry.pageIntro.one().intro.all() %}
           {% for block in intro %}
           {% switch block.type %}
           {% case "paragraph" %}

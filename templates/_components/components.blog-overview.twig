@@ -18,10 +18,10 @@
         <article class="o-box o-box--flush c-card-link">
           <div class="o-layout">
             <div class="o-layout__item u-1/3@small u-1/2@large">
-              {% if item.pageIntro | length() %}
+              {% if item.pageIntro.one() | length() %}
               <div class="o-crop o-crop--16:9 c-media-border">
-                {% if item.pageIntro.visual | length() %}
-                {% set visual = item.pageIntro.visual.all() %}
+                {% if item.pageIntro.one().visual | length() %}
+                {% set visual = item.pageIntro.one().visual.all() %}
                 {% for block in visual %}
                 {% switch block.type %}
                 {% case "image" %}
@@ -73,8 +73,8 @@
                     </a>
                   </p>
                 </div>
-                {% elseif item.pageIntro | length() %}
-                {% set intro = item.pageIntro.intro.all() %}
+                {% elseif item.pageIntro.one() | length() %}
+                {% set intro = item.pageIntro.one().intro.all() %}
                 {% for block in intro %}
                 {% switch block.type %}
                 {% case "paragraph" %}

@@ -5,21 +5,21 @@
     <span class="event-name">
       <span class="c-underline">{{ item.title }}</span>
       {% if item.programType == "talk" %}
-      <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
+      <span class="event-label">{{ mutationGlobals.timetableLabels.one().talk }}</span>
       {% elseif item.programType == "talkDebat" %}
-      <span class="event-label">{{ mutationGlobals.timetableLabels.talkDebat }}</span>
+      <span class="event-label">{{ mutationGlobals.timetableLabels.one().talkDebat }}</span>
       {% elseif item.programType == "workshop" %}
-      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }}</span>
+      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.one().workshop }}</span>
       {% elseif item.programType == "workshopDebat" %}
-      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }}</span>
+      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.one().workshopDebat }}</span>
       {% elseif item.programType == "inspiratiesessie" %}
-      <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }}</span>
+      <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.one().inspiratiesessie }}</span>
       {% elseif item.programType == "denktank" %}
-      <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.denktank }}</span>
+      <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.one().denktank }}</span>
       {% elseif item.programType == "expo" %}
-      <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }}</span>
+      <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.one().expo }}</span>
       {% elseif item.programType == "performance" %}
-      <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }}</span>
+      <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.one().performance }}</span>
       {% endif %}
     </span>
   </a>
@@ -31,21 +31,21 @@
     <span class="event-name">
       {{ item.title }}
       {% if item.programType == "talk" %}
-      <span class="event-label">{{ mutationGlobals.timetableLabels.talk }}</span>
+      <span class="event-label">{{ mutationGlobals.timetableLabels.one().talk }}</span>
       {% elseif item.programType == "talkDebat" %}
-      <span class="event-label">{{ mutationGlobals.timetableLabels.talkDebat }}</span>
+      <span class="event-label">{{ mutationGlobals.timetableLabels.one().talkDebat }}</span>
       {% elseif item.programType == "workshop" %}
-      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshop }}</span>
+      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.one().workshop }}</span>
       {% elseif item.programType == "workshopDebat" %}
-      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.workshopDebat }}</span>
+      <span class="event-label event-label--primary">{{ mutationGlobals.timetableLabels.one().workshopDebat }}</span>
       {% elseif item.programType == "inspiratiesessie" %}
-      <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.inspiratiesessie }}</span>
+      <span class="event-label event-label--secondary">{{ mutationGlobals.timetableLabels.one().inspiratiesessie }}</span>
       {% elseif item.programType == "denktank" %}
-      <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.denktank }}</span>
+      <span class="event-label event-label--tertiary">{{ mutationGlobals.timetableLabels.one().denktank }}</span>
       {% elseif item.programType == "expo" %}
-      <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.expo }}</span>
+      <span class="event-label event-label--quarternary">{{ mutationGlobals.timetableLabels.one().expo }}</span>
       {% elseif item.programType == "performance" %}
-      <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.performance }}</span>
+      <span class="event-label event-label--quinary">{{ mutationGlobals.timetableLabels.one().performance }}</span>
       {% endif %}
     </span>
   </a>

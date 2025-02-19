@@ -32,20 +32,20 @@
     </div>
     <ul class="c-para o-list-bare c-list c-list--divider u-margin-top">
     {% for event in pageEntries %}
-      {% if event.eventDetails.dateEnd|length and event.eventDetails.dateEnd|date('Ymd') < now|date('Ymd') or event.eventDetails.dateEnd == null and event.eventDetails.dateStart|date('Ymd') < now|date('Ymd')  %}
+      {% if event.eventDetails.one().dateEnd|length and event.eventDetails.one().dateEnd|date('Ymd') < now|date('Ymd') or event.eventDetails.one().dateEnd == null and event.eventDetails.one().dateStart|date('Ymd') < now|date('Ymd')  %}
       <li class="s-editor s-editor--small o-list-bare__item c-list__item">
         <article class="o-box o-box--flush">
           <h3 class="u-margin-bottom-small">
             <a href="{{ event.url }}">
-              {% if event.eventDetails.dateEnd | length %}
-              {{ event.eventDetails.dateStart | date('d F Y') | capitalize }}
-              {% if event.eventDetails.dateEnd  | date('d F Y') == event.eventDetails.dateStart  | date('d F Y') %}
+              {% if event.eventDetails.one().dateEnd | length %}
+              {{ event.eventDetails.one().dateStart | date('d F Y') | capitalize }}
+              {% if event.eventDetails.one().dateEnd  | date('d F Y') == event.eventDetails.one().dateStart  | date('d F Y') %}
               {% else %}
               tot
-              {{ event.eventDetails.dateEnd | date('d F Y') | capitalize }}:
+              {{ event.eventDetails.one().dateEnd | date('d F Y') | capitalize }}:
               {% endif %}
               {% else %}
-              {{ event.eventDetails.dateStart | date('d F Y') | capitalize }}:
+              {{ event.eventDetails.one().dateStart | date('d F Y') | capitalize }}:
               {% endif %}
               {{ event.title }}
             </a>

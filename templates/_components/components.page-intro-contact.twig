@@ -21,7 +21,7 @@
           <h1 class="c-page-title">{{ entry.pageIntro.pageTitle }}</h1>
           {# Intro #}
           <div class="s-editor s-editor--intro">
-            {% set intro = entry.pageIntro.intro.all() %}
+            {% set intro = entry.pageIntro.one().intro.all() %}
             {% for block in intro %}
             {% switch block.type %}
             {% case "paragraph" %}
