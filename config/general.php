@@ -8,45 +8,37 @@
  * @see \craft\config\GeneralConfig
  */
 
+use craft\config\GeneralConfig;
 use craft\helpers\App;
 
-return [
-    '*' => [
-        // Default Week Start Day (0 = Sunday, 1 = Monday...)
-        'defaultWeekStartDay' => 1,
+return GeneralConfig::create()
+    // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
+    ->defaultWeekStartDay(1)
+    // Prevent generated URLs from including "index.php"
+    ->omitScriptNameInUrls()
+    // Preload Single entries as Twig variables
+    ->preloadSingles()
+    // Prevent user enumeration attacks
+    ->preventUserEnumeration()
 
-        // Whether generated URLs should omit "index.php"
-        'omitScriptNameInUrls' => true,
+    ->securityKey(App::env('SECURITY_KEY'))
 
-        // The URI segment that tells Craft to load the control panel
-        'cpTrigger' => App::env('CP_TRIGGER') ?: 'admin',
+    // Set the @webroot alias so the clear-caches command knows where to find CP resources
+    ->aliases([
+        '@web' => App::env('PRIMARY_SITE_URL'),
+        '@webroot' => dirname(__DIR__) . '/web',
+        '@assetBasePath' => '@web/' . App::env('ASSET_PUBLIC_PATH'),
+        '@assetBasePath' => '@webroot/' . App::env('ASSET_BASE_PATH'),
+        '@assetBaseUrlImages' => '@web/data/images/',
+        '@assetBasePathImages' => '@webroot/data/images/',
+        '@assetBaseUrlVideo' => '@web/data/Video/',
+        '@assetBasePathVideo' => '@webroot/data/Video/',
+        '@mapsApiKey' => App::env('MAPS_API_KEY'),
+    ])
 
-        // The secure key Craft will use for hashing and encrypting data
-        'securityKey' => App::env('SECURITY_KEY'),
+    ->allowAdminChanges(App::env('CRAFT_ALLOW_ADMIN_CHANGES'))
 
-        // Whether Dev Mode should be enabled (see https://craftcms.com/guides/what-dev-mode-does)
-        'devMode' => in_array(App::env('ENVIRONMENT'), ['dev', 'staging']),
+    ->devMode(App::env('CRAFT_DEV_MODE'))
 
-        // Whether administrative changes should be allowed
-        'allowAdminChanges' => in_array(App::env('ENVIRONMENT'), ['dev', 'staging']),
-
-        // Whether crawlers should be allowed to index pages and following links
-        'disallowRobots' => App::env('ENVIRONMENT') !== 'production',
-
-        // Whether image transforms should be generated before page load.
-        'generateTransformsBeforePageLoad' => true,
-
-        // Aliases
-        'aliases' => [
-          '@web' => App::env('PRIMARY_SITE_URL'),
-          '@webroot' => dirname(__DIR__) . '/web',
-          '@assetBasePath' => '@web/' . App::env('ASSET_PUBLIC_PATH'),
-          '@assetBasePath' => '@webroot/' . App::env('ASSET_BASE_PATH'),
-          '@assetBaseUrlImages' => '@web/data/images/',
-          '@assetBasePathImages' => '@webroot/data/images/',
-          '@assetBaseUrlVideo' => '@web/data/Video/',
-          '@assetBasePathVideo' => '@webroot/data/Video/',
-          '@mapsApiKey' => App::env('MAPS_API_KEY'),
-        ]
-    ]
-];
+    ->disallowRobots(App::env('CRAFT_DISALLOW_ROBOTS'))
+;
