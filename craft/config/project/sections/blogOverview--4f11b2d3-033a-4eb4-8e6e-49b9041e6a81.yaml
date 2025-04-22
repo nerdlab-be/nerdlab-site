@@ -11,6 +11,9 @@ previewTargets:
       -
         - urlFormat
         - '{url}'
+      -
+        - refresh
+        - '1'
 propagationMethod: all
 siteSettings:
   1f81a99e-4cd9-41d5-88e5-d85eb389e2ef: # Nerdlab
@@ -22,5 +25,10 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: site-mutation/blog/_index
+    uriFormat: nieuws
+  52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
+    enabledByDefault: true
+    hasUrls: true
+    template: site-mutation\en\blog\_index.twig
     uriFormat: nieuws
 type: single

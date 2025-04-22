@@ -1,0 +1,23 @@
+columnSuffix: buhluzum
+contentColumnType: text
+fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
+handle: mutationfaqanswer
+instructions: null
+name: MutationFaqAnswer
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: f80eb94d-2324-42d8-a607-d1934a8c494d # Default
+  columnType: text
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\ckeditor\Field

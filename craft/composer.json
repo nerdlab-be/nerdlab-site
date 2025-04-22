@@ -1,21 +1,21 @@
 {
   "require": {
-    "craftcms/cms": "^4.0.0",
-    "vlucas/phpdotenv": "^3.3",
-    "craftcms/redactor": "3.0.4",
-    "ether/seo": "4.2.2",
-    "verbb/super-table": "3.0.12 ",
-    "craftcms/ckeditor": "3.8.3",
-    "mmikkel/cp-field-inspect": "1.4.4",
-    "ether/simplemap": "4.0.5",
-    "nystudio107/craft-minify": "4.0.1",
     "clubstudioltd/craft-asset-rev": "7.0.0",
+    "craftcms/ckeditor": "3.12.0",
+    "craftcms/cms": "4.15.0.2",
+    "craftcms/redactor": "3.1.0",
     "craftcms/store-hours": " 3.1.0",
-    "rias/craft-position-fieldtype": "4.0.0",
+    "ether/seo": "4.2.4",
+    "ether/simplemap": "4.0.8",
+    "mmikkel/cp-field-inspect": "1.4.4",
     "nystudio107/craft-cookies": "4.0.1",
-    "xpertbot/craft-wheelform": "3.2.0",
-    "topshelfcraft/wordsmith": "4.4.0",
-    "topshelfcraft/supersort": "4.0.0"
+    "nystudio107/craft-minify": "4.0.1",
+    "rias/craft-position-fieldtype": "4.0.0",
+    "topshelfcraft/supersort": "4.0.0",
+    "topshelfcraft/wordsmith": "4.5.0",
+    "verbb/super-table": "3.0.15",
+    "vlucas/phpdotenv": "^3.3",
+    "xpertbot/craft-wheelform": "3.2.2"
   },
   "autoload": {
     "psr-4": {

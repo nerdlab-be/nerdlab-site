@@ -1,5 +1,5 @@
 fieldLayouts:
-  f2c7c9ab-5b1c-4d9e-af35-faa731235c19:
+  4a203cef-ade3-439d-83d7-c6f6a1f702ff:
     tabs:
       -
         elementCondition: null
@@ -27,75 +27,57 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 7bbb3fc8-0548-4c66-bd2b-3fdf263cffc8
+            uid: ef52e9a3-7a52-48f7-8644-97ea8ba8a2d8
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 20663383-07bd-43ac-a4c3-b0330378ab68 # Intro
+            fieldUid: 07540c64-9a46-4b6b-9d99-0910dec02fd6 # QuestionMutationFAQ
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8b221c0b-1904-4de1-8c19-b88e185adc91
+            uid: 549bc741-8bdd-4a91-8dd7-d3b9705797d3
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 5604263f-fbdc-42bd-9b45-25064091705d # Highlights
+            fieldUid: 71c2d3e6-804c-4a13-bc9a-6f217b9f7fdd # MutationFaqAnswer
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ad1812ee-3e54-430d-b63b-c714b32f5218
+            uid: 03083a20-22a9-4add-bc8a-37296e0ed010
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 9a48807a-fcb4-4455-969f-2b7b9f9aabbe # Info
+            fieldUid: 93d43e72-49c1-4d10-9e48-665b41779ba0 # Event URL
             instructions: null
             label: null
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: eee35e37-4a97-4692-a281-b70b49bf8e1f
+            uid: b589af14-a617-4386-9608-fd70297b8819
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: c573df5b-5d9c-4ad5-8023-3f6bb3cb675a
+        uid: 5eafb32b-84d1-48cd-b2db-2cdaa00b2cb1
         userCondition: null
-      -
-        elementCondition: null
-        elements:
-          -
-            elementCondition: null
-            fieldUid: f84689f7-6038-460e-9fda-f01a17d00956 # SEO
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 00a6b072-07c0-4fb4-a19b-2bfa0980282c
-            userCondition: null
-            warning: null
-            width: 100
-        name: Meta
-        uid: c03c3f4a-0666-4656-916c-372e4c0fb1d2
-        userCondition: null
-handle: mutation
-hasTitleField: true
-name: 'Mutation Festival'
-section: 966ff8eb-d301-42cc-9682-6ff16c2089e8 # Mutation Festival
+handle: faqMutation
+hasTitleField: false
+name: FAQ
+section: 54778e6d-aa8b-4f0d-97fb-5679e552f1c0 # FAQ
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-sortOrder: 1
-titleFormat: '{section.name|raw}'
+sortOrder: 2
+titleFormat: '{questionmutationfaq}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

@@ -1,13 +1,13 @@
 defaultPlacement: end
 enableVersioning: true
-handle: mutationProgram
-name: Programma
+handle: mutationContact
+name: 'Mutation Contact'
 previewTargets:
   -
     __assoc__:
       -
         - label
-        - 'Primaire invoer-pagina'
+        - 'Primary entry page'
       -
         - urlFormat
         - '{url}'
@@ -19,11 +19,11 @@ siteSettings:
   8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
     enabledByDefault: true
     hasUrls: true
-    template: site-mutation\_program.twig
-    uriFormat: program
+    template: site-mutation\_contact.twig
+    uriFormat: contact
   52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
     enabledByDefault: true
     hasUrls: true
-    template: site-mutation\en\_program.twig
-    uriFormat: program
+    template: site-mutation\en\_contact.twig
+    uriFormat: contact
 type: single

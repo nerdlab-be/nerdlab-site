@@ -11,11 +11,19 @@ previewTargets:
       -
         - urlFormat
         - '{url}'
+      -
+        - refresh
+        - '1'
 propagationMethod: all
 siteSettings:
   8e92c4bf-d4fb-49f5-9833-4e91fb775669: # Mutation
     enabledByDefault: true
     hasUrls: true
-    template: site-mutation/blog/_entry
+    template: site-mutation\blog\_entry.twig
+    uriFormat: 'nieuws/{slug}'
+  52a14414-bcd2-4106-8c09-8dec1e08e4ef: # Mutation-En
+    enabledByDefault: true
+    hasUrls: true
+    template: site-mutation\en\blog\_entry.twig
     uriFormat: 'nieuws/{slug}'
 type: channel

@@ -2,217 +2,79 @@ columnSuffix: null
 contentColumnType: string
 fieldGroup: 34dbad60-26d5-4b5d-94c4-6f5c4c9846c0 # Mutation
 handle: timetableLabels
-instructions: ''
+instructions: null
 name: 'Timetable labels'
 searchable: true
 settings:
+  blockTypeFields: 0
+  changedFieldIndicator: 65054785
   columns:
     __assoc__:
       -
-        - 327
+        - e518b0fb-da83-4993-9bee-37c2eb306b45 # Info
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 328
+        - 87615dc1-c11c-43bf-bced-41b61c68c0b8 # Talk
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 280
+        - 68e9ffc7-14c2-46c3-a175-d5a5ee33a615 # Makeathon
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 272
+        - 0d705cce-b32e-42c9-bfd3-fc6588076228 # Workshops
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 261
+        - a5610b26-b83a-428f-959a-31e76dbe90a3 # Workshop en debat
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 269
+        - f074248b-d0eb-4592-8192-b7bf8d8b98f1 # Inspiratiesessie
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 274
+        - 80a4aed9-085e-471c-b781-2dc035e86d05 # Netwerk
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 258
+        - 1ebe5c27-4731-4558-951a-3ec1fb1322e8 # Expo
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 262
+        - 82cba82a-f444-4fb5-bce9-6770a3e700bc # Performance
         -
           __assoc__:
             -
               - width
               - ''
       -
-        - 273
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 268
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 259
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 270
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 267
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 276
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 260
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 257
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 275
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 330
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 329
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 332
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 331
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 266
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 264
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 263
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 271
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 278
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 277
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 279
-        -
-          __assoc__:
-            -
-              - width
-              - ''
-      -
-        - 265
+        - eea75f48-ae3a-4a4d-b068-1d8ac378dc89 # Extra 2
         -
           __assoc__:
             -
@@ -220,13 +82,12 @@ settings:
               - ''
   contentTable: '{{%stc_timetablelabels}}'
   fieldLayout: row
-  maxRows: ''
-  minRows: ''
-  placeholderKey: null
+  maxRows: null
+  minRows: null
   propagationKeyFormat: null
   propagationMethod: all
-  selectionLabel: ''
-  staticField: '1'
+  selectionLabel: null
+  staticField: true
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: verbb\supertable\fields\SuperTableField

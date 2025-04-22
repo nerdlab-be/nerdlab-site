@@ -1,0 +1,108 @@
+changedFieldIndicator: 1197114837
+field: 553a2f1c-7ee0-45c2-8602-7645898feb64 # Timetable Days
+fieldLayouts:
+  face8d3e-35b2-4cde-8169-c162d45c0658:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d7c97fd2-8c66-4f08-a8ab-e3f564396339 # Day One
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 88634fab-f9c6-4dc0-8d05-f4f31ad57b3b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: eec017fe-cc3d-484a-8967-7a474f83d39b # Day Two
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 521a2cf4-7af2-4bcc-bb22-8d07d7fde289
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6146ebdf-a4fe-4149-8cfc-8251531dc42f # Day Three
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a0c71111-afbf-469d-be15-270ac673bedd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 86c45707-46d3-4b6e-b2ce-94456f7e9adf
+        userCondition: null
+fields:
+  6146ebdf-a4fe-4149-8cfc-8251531dc42f: # Day Three
+    columnSuffix: kpbkkmiz
+    contentColumnType: text
+    fieldGroup: null
+    handle: dayThree
+    instructions: null
+    name: 'Day Three'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d7c97fd2-8c66-4f08-a8ab-e3f564396339: # Day One
+    columnSuffix: oxmannzp
+    contentColumnType: text
+    fieldGroup: null
+    handle: dayOne
+    instructions: null
+    name: 'Day One'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  eec017fe-cc3d-484a-8967-7a474f83d39b: # Day Two
+    columnSuffix: mffhmhpk
+    contentColumnType: text
+    fieldGroup: null
+    handle: dayTwo
+    instructions: null
+    name: 'Day Two'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
