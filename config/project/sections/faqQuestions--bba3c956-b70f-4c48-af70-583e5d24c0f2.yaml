@@ -4,6 +4,7 @@ entryTypes:
   -
     uid: 880b8934-3b17-452c-8c55-81c826cd5719 # faqEntry
 handle: faqQuestions
+maxAuthors: 1
 name: 'FAQ Questions'
 propagationMethod: all
 siteSettings:

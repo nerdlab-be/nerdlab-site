@@ -44,7 +44,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Selecteer gerelateerde pagina''s'
+            label: "Selecteer gerelateerde pagina's"
             providesThumbs: true
             required: false
             tip: null
@@ -60,7 +60,7 @@ fieldLayouts:
             handle: null
             includeInCards: false
             instructions: null
-            label: 'Toon alle subpagina''s'
+            label: "Toon alle subpagina's"
             providesThumbs: false
             required: false
             tip: null
@@ -91,7 +91,7 @@ fieldLayouts:
 handle: relatedPages
 hasTitleField: false
 icon: null
-name: 'Gerelateerde pagina''s'
+name: "Gerelateerde pagina's"
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

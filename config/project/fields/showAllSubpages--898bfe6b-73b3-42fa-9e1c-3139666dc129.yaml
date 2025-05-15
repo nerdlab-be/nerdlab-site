@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: showAllSubpages
-instructions: 'Deze setting toont alle onderliggende pagina''s die 1 niveau diep liggen.'
-name: 'Content - Gerelateerde pagina''s - Toon alle subpagina''s'
+instructions: "Deze setting toont alle onderliggende pagina's die 1 niveau diep liggen."
+name: "Content - Gerelateerde pagina's - Toon alle subpagina's"
 searchable: true
 settings:
   default: false

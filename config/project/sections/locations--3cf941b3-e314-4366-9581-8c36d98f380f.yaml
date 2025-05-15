@@ -4,6 +4,7 @@ entryTypes:
   -
     uid: 966b2964-4428-485e-accd-e9e24f26e70a # Locations
 handle: locations
+maxAuthors: 1
 name: Locations
 previewTargets:
   -

@@ -4,6 +4,7 @@ entryTypes:
   -
     uid: 08d3e30e-d260-4747-9eb9-61a163643124 # FAQ
 handle: faqMutation
+maxAuthors: 1
 name: FAQ
 previewTargets:
   -

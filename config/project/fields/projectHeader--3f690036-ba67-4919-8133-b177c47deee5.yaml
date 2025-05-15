@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 handle: projectHeader
 instructions: ''
-name: 'Pagina foto''s'
+name: "Pagina foto's"
 searchable: true
 settings:
   allowSelfRelations: false

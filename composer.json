@@ -1,7 +1,7 @@
 {
   "require": {
-    "craftcms/ckeditor": "4.6.0",
-    "craftcms/cms": "5.6.7",
+    "craftcms/ckeditor": "4.8.0",
+    "craftcms/cms": "5.7.6",
     "craftcms/store-hours": " 4.2.0",
     "ether/seo": "5.0.0",
     "ether/simplemap": "5.0.4",
@@ -12,7 +12,7 @@
     "rias/craft-position-fieldtype": "5.0.0",
     "topshelfcraft/supersort": "5.0.0",
     "topshelfcraft/wordsmith": "5.0.0",
-    "verbb/super-table": "4.0.3",
+    "verbb/super-table": "4.0.4",
     "vlucas/phpdotenv": "^5.4.0",
     "xpertbot/craft-wheelform": "4.0.3"
   },

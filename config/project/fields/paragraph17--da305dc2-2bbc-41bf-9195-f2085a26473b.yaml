@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: paragraph17
 instructions: null
-name: 'Content - Gerelateerde pagina''s - Tekst'
+name: "Content - Gerelateerde pagina's - Tekst"
 searchable: true
 settings:
   availableTransforms: '*'

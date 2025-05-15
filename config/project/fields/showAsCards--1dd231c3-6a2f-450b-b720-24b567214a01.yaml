@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: showAsCards
-instructions: 'Standaard worden deze pagina''s als een lijst getoond. Met deze setting kan je de pagina''s als blok met afbeelding en intro tekst tonen.'
-name: 'Content - Gerelateerde pagina''s - Toon als blokken'
+instructions: "Standaard worden deze pagina's als een lijst getoond. Met deze setting kan je de pagina's als blok met afbeelding en intro tekst tonen."
+name: "Content - Gerelateerde pagina's - Toon als blokken"
 searchable: true
 settings:
   default: false

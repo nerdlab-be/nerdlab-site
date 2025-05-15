@@ -4,6 +4,7 @@ entryTypes:
   -
     uid: 859511a7-fb3e-4e7c-934b-a8a12f1c2d1d # Doormat
 handle: doormat
+maxAuthors: 1
 name: Doormat
 propagationMethod: all
 siteSettings:

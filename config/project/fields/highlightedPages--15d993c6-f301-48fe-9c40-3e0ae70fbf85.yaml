@@ -2,7 +2,7 @@ columnSuffix: null
 contentColumnType: string
 handle: highlightedPages
 instructions: ''
-name: 'Uitgelichte pagina''s'
+name: "Uitgelichte pagina's"
 searchable: true
 settings:
   allowSelfRelations: false

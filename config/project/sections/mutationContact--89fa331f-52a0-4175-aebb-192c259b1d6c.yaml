@@ -4,6 +4,7 @@ entryTypes:
   -
     uid: f49d2866-54a7-456c-a2e9-7d6e564c213d # Mutation Contact
 handle: mutationContact
+maxAuthors: 1
 name: 'Mutation Contact'
 previewTargets:
   -

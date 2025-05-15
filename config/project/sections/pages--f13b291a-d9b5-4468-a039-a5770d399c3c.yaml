@@ -6,7 +6,8 @@ entryTypes:
   -
     uid: 1ebdfedb-5c30-4bd9-8d42-a80c2f36d43f # Contact
 handle: pages
-name: 'Pagina''s'
+maxAuthors: 1
+name: "Pagina's"
 previewTargets:
   -
     __assoc__:

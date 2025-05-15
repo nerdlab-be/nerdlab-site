@@ -1,7 +1,7 @@
 columnSuffix: null
 contentColumnType: string
 handle: tags
-instructions: 'Voeg de pagina''s toe waar dit bericht moet getoond worden.'
+instructions: "Voeg de pagina's toe waar dit bericht moet getoond worden."
 name: 'Wordt getoond op:'
 searchable: true
 settings:

@@ -5,6 +5,7 @@ entryTypes:
     handle: blog
     uid: b43bcced-b822-436f-8c0c-f3a193eb1e1b # Blog
 handle: blogMutation
+maxAuthors: 1
 name: Nieuws
 previewTargets:
   -

@@ -4,6 +4,7 @@ entryTypes:
   -
     uid: 5d201600-9e79-4099-a85a-cec496dffbda # Mutation Festival En
 handle: mutationEn
+maxAuthors: 1
 name: 'Mutation Festival En'
 previewTargets:
   -

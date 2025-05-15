@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: relatedPages
 instructions: null
-name: 'Content - Gerelateerde pagina''s - Selecteer gerelateerde pagina''s'
+name: "Content - Gerelateerde pagina's - Selecteer gerelateerde pagina's"
 searchable: true
 settings:
   allowSelfRelations: false
