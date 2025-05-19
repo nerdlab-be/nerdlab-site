@@ -1,6 +1,6 @@
 {
   "name": "nerdlab",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "private": true,
   "main": "vite.config.js",
@@ -13,7 +13,7 @@
     "icons": "svg-symbols ./src/icons > ./web/assets/images/svg/svg-symbolset.svg"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
+    "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.7",
     "del": "^8.0.0",
     "sass": "^1.89.0",
