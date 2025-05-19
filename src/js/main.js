@@ -1,3 +1,6 @@
+// Module Preload
+import 'vite/modulepreload-polyfill'
+
 // Setup SCSS
 import "../scss/nerdlab.scss";
 
